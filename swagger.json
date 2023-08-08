@@ -553,6 +553,37 @@
           "id": "1gf2i3rnc4gef"
         }
       }
+    },
+    "/1.0.1/administrative/system-calendar": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeSystemCalendarResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.1-administrative-system-calendar",
+        "x-stoplight": {
+          "id": "6zjzyy5nftj2u"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeSystemCalendarRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -11074,6 +11105,234 @@
           "attachments",
           "versions"
         ]
+      },
+      "AdministrativeSystemCalendarRequest": {
+        "title": "AdministrativeSystemCalendarRequest",
+        "x-stoplight": {
+          "id": "dmkddyj0iygpv"
+        },
+        "type": "object",
+        "properties": {
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "fssh6ueegomjq"
+            }
+          },
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "vfqq06m2yw4nj"
+            }
+          }
+        },
+        "required": [
+          "year",
+          "term"
+        ],
+        "x-examples": {
+          "simple": {
+            "year": 2022,
+            "term": 2
+          }
+        }
+      },
+      "AdministrativeSystemCalendarResponse": {
+        "type": "object",
+        "x-examples": {
+          "simple": {
+            "individual_permissions": [
+              {
+                "title": "Pre-final grade",
+                "start_date": "23-06-2023 00:00:00",
+                "end_date": "23-06-2023 00:00:00",
+                "year": 2022,
+                "term": 2,
+                "status": true,
+                "key": "EW",
+                "entry_year": 2020,
+                "permitted": true,
+                "employee": "Kurmangazy Kongratbayev",
+                "program": "Computer Science",
+                "department": "Department of Computer Science",
+                "education_level": "Bachelor",
+                "class": 3
+              }
+            ],
+            "events": [
+              {
+                "title": "Add/Drop",
+                "start_date": "23-06-2023 00:00:00",
+                "end_date": "23-06-2023 00:00:00",
+                "year": 2022,
+                "term": 2,
+                "status": true
+              }
+            ],
+            "course_permissions": [
+              {
+                "course_code": "CSS 216",
+                "section": "01",
+                "assessment": "FIN",
+                "start_date": "23-06-2023 00:00:00",
+                "end_date": "23-06-2023 00:00:00",
+                "year": 2022,
+                "term": 2,
+                "status": true
+              }
+            ]
+          }
+        },
+        "properties": {
+          "individual_permissions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "status": {
+                  "type": "boolean"
+                },
+                "key": {
+                  "type": "string"
+                },
+                "entry_year": {
+                  "type": "integer"
+                },
+                "permitted": {
+                  "type": "boolean"
+                },
+                "employee": {
+                  "type": "string"
+                },
+                "program": {
+                  "type": "string"
+                },
+                "department": {
+                  "type": "string"
+                },
+                "education_level": {
+                  "type": "string"
+                },
+                "class": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "title",
+                "start_date",
+                "end_date",
+                "year",
+                "term",
+                "status",
+                "key",
+                "entry_year",
+                "permitted",
+                "employee",
+                "program",
+                "department",
+                "education_level",
+                "class"
+              ]
+            }
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "status": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "title",
+                "start_date",
+                "end_date",
+                "year",
+                "term",
+                "status"
+              ]
+            }
+          },
+          "course_permissions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "course_code": {
+                  "type": "string"
+                },
+                "section": {
+                  "type": "string"
+                },
+                "assessment": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "status": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "course_code",
+                "section",
+                "assessment",
+                "start_date",
+                "end_date",
+                "year",
+                "term",
+                "status"
+              ]
+            }
+          }
+        },
+        "required": [
+          "individual_permissions",
+          "events",
+          "course_permissions"
+        ],
+        "description": ""
       }
     },
     "securitySchemes": {}
