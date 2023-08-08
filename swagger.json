@@ -693,6 +693,37 @@
           }
         }
       }
+    },
+    "/1.0.0/administrative/resource": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeResourceResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-resource",
+        "x-stoplight": {
+          "id": "0pztynodit9i8"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -12467,6 +12498,172 @@
           "last_page",
           "employees"
         ]
+      },
+      "AdministrativeResourceResponse": {
+        "type": "object",
+        "properties": {
+          "departments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "parent_id": {
+                  "type": "integer"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "positions": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          },
+          "positions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "rules_categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "meta": {
+                  "type": "string"
+                },
+                "details": {
+                  "type": "string"
+                },
+                "language_uuid": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "year_terms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "gate_entry_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "x-examples": {
+          "sample": {
+            "departments": [
+              {
+                "id": 1055,
+                "parent_id": 109,
+                "code": "DEP_INF_SYS",
+                "title": "Department of Information Systems",
+                "year": 2022,
+                "positions": [
+                  1211
+                ]
+              }
+            ],
+            "positions": [
+              {
+                "id": 1211,
+                "title": "Program Coordinator"
+              }
+            ],
+            "rules_categories": [
+              {
+                "uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295",
+                "title": "Guidlines",
+                "description": "Rules Guidlines",
+                "meta": "Meta Info",
+                "details": "Details",
+                "language_uuid": "3844cf53-d302-4a59-bc35-f5501056cfac",
+                "language": "Kazakh",
+                "created_at": "2023-07-03 12:01:58",
+                "updated_at": "2023-07-03 12:58:58"
+              }
+            ],
+            "year_terms": [
+              {
+                "id": 29,
+                "year": 2022,
+                "term": 2,
+                "title": "2022 - 2023 Spring"
+              }
+            ],
+            "gate_entry_types": [
+              {
+                "id": 1,
+                "title": "Tourniquet"
+              }
+            ]
+          }
+        }
       }
     },
     "securitySchemes": {}
