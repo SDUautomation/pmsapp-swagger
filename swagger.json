@@ -12501,120 +12501,6 @@
       },
       "AdministrativeResourceResponse": {
         "type": "object",
-        "properties": {
-          "departments": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "parent_id": {
-                  "type": "integer"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "year": {
-                  "type": "integer"
-                },
-                "positions": {
-                  "type": "array",
-                  "items": {
-                    "type": "integer"
-                  }
-                }
-              }
-            }
-          },
-          "positions": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "rules_categories": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "uuid": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "meta": {
-                  "type": "string"
-                },
-                "details": {
-                  "type": "string"
-                },
-                "language_uuid": {
-                  "type": "string"
-                },
-                "language": {
-                  "type": "string"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "year_terms": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "year": {
-                  "type": "integer"
-                },
-                "term": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "gate_entry_types": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
         "x-examples": {
           "sample": {
             "departments": [
@@ -12663,7 +12549,161 @@
               }
             ]
           }
-        }
+        },
+        "properties": {
+          "departments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "parent_id": {
+                  "type": "integer"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "positions": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "parent_id",
+                "code",
+                "title",
+                "year",
+                "positions"
+              ]
+            }
+          },
+          "positions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "rules_categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "meta": {
+                  "type": "string"
+                },
+                "details": {
+                  "type": "string"
+                },
+                "language_uuid": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uuid",
+                "title",
+                "description",
+                "meta",
+                "details",
+                "language_uuid",
+                "language",
+                "created_at",
+                "updated_at"
+              ]
+            }
+          },
+          "year_terms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "year",
+                "term",
+                "title"
+              ]
+            }
+          },
+          "gate_entry_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          }
+        },
+        "required": [
+          "departments",
+          "positions",
+          "rules_categories",
+          "year_terms",
+          "gate_entry_types"
+        ]
       }
     },
     "securitySchemes": {}
