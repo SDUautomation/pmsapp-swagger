@@ -584,6 +584,37 @@
           }
         }
       }
+    },
+    "/1.0.0/administrative/rules-and-regulations": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeRulesAndRegulationsResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-rules-and-regulations",
+        "x-stoplight": {
+          "id": "o3pdrttot6r5a"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeRulesAndRegulationsRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -11333,6 +11364,267 @@
           "course_permissions"
         ],
         "description": ""
+      },
+      "AdministrativeRulesAndRegulationsResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "uuid": "565309fd-6596-47ca-bea6-ec523bf96056",
+              "details": [
+                {
+                  "uuid": "b13c9bfc-b76e-33e0-aa7d-48e78a3fa89f",
+                  "title": "Nostrum minima consequatur dicta enim nostrum mollitia fugit.",
+                  "content": "Veritatis aliquam esse et qui sunt.",
+                  "image": "https://via.placeholder.com/640x480.png/00aa99?text=quia",
+                  "language_uuid": "466a9446-829c-49bc-ae83-08d1b21e2c9e",
+                  "language": "ru-RU",
+                  "created_at": "2023-08-04 11:24:50",
+                  "updated_at": "2023-08-04 11:24:50"
+                },
+                {
+                  "uuid": "f3ffcec4-4657-3799-8550-3b4f36d646cf",
+                  "title": "Temporibus sed illum sit accusamus laborum dolor animi deleniti.",
+                  "content": "Amet quam qui quam odit placeat.",
+                  "image": "https://via.placeholder.com/640x480.png/00aa11?text=quisquam",
+                  "language_uuid": "234c4e5f-0b59-4659-ba07-0a990cd50541",
+                  "language": "kz-KZ",
+                  "created_at": "2023-08-04 11:24:57",
+                  "updated_at": "2023-08-04 11:24:57"
+                },
+                {
+                  "uuid": "c5ea1ece-0472-38d8-9ca2-8922d0c32b53",
+                  "title": "Dolores et ipsam architecto quod itaque dolor excepturi.",
+                  "content": "Tenetur doloremque sequi sed qui sed voluptatum deserunt.",
+                  "image": "https://via.placeholder.com/640x480.png/007788?text=temporibus",
+                  "language_uuid": "50adce1e-2e97-465a-bec1-9f0485b7f4c8",
+                  "language": "en-EN",
+                  "created_at": "2023-08-04 11:25:02",
+                  "updated_at": "2023-08-04 11:25:02"
+                }
+              ],
+              "categories": [
+                {
+                  "uuid": "e1121369-28af-3f55-82dc-7584aec3aba7",
+                  "title": "Perspiciatis quas quod magnam sunt voluptatem.",
+                  "description": "Corrupti recusandae quas quas animi quis.",
+                  "language_uuid": "466a9446-829c-49bc-ae83-08d1b21e2c9e",
+                  "language": "ru-RU"
+                },
+                {
+                  "uuid": "f4ca3af2-5771-3038-adeb-b842a1ebff27",
+                  "title": "Itaque ut eligendi qui accusamus.",
+                  "description": "Sed aut aspernatur amet iusto.",
+                  "language_uuid": "50adce1e-2e97-465a-bec1-9f0485b7f4c8",
+                  "language": "en-EN"
+                },
+                {
+                  "uuid": "7deae10a-c2ec-3756-a523-ac9b8362324e",
+                  "title": "Autem aut quis occaecati ut consectetur dicta.",
+                  "description": "Est sint magni ipsum numquam cum itaque laudantium dignissimos.",
+                  "language_uuid": "234c4e5f-0b59-4659-ba07-0a990cd50541",
+                  "language": "kz-KZ"
+                }
+              ],
+              "attachments": [
+                {
+                  "uuid": "7ca87e98-491d-3b2e-8932-a557b6dab7b2",
+                  "title": "repudiandae",
+                  "path": "/tmp/faker3lrMBg",
+                  "extension": "ustar",
+                  "size": "59",
+                  "language_uuid": "234c4e5f-0b59-4659-ba07-0a990cd50541",
+                  "language": "kz-KZ"
+                },
+                {
+                  "uuid": "c1ae9878-e734-3295-b2b8-8c72d7f19ed7",
+                  "title": "id",
+                  "path": "/tmp/faker2CItjR",
+                  "extension": "svd",
+                  "size": "70",
+                  "language_uuid": "50adce1e-2e97-465a-bec1-9f0485b7f4c8",
+                  "language": "en-EN"
+                },
+                {
+                  "uuid": "1788a6a6-fa52-318c-8088-0add743a63a1",
+                  "title": "et",
+                  "path": "/tmp/fakere6KEBZ",
+                  "extension": "dir",
+                  "size": "45",
+                  "language_uuid": "466a9446-829c-49bc-ae83-08d1b21e2c9e",
+                  "language": "ru-RU"
+                }
+              ],
+              "created_at": "2023-04-27 02:28:14",
+              "updated_at": "2023-05-19 05:34:01"
+            },
+            {
+              "uuid": "ef537ef4-7f1b-470a-ad6e-a92497eddaf3",
+              "details": [],
+              "categories": [],
+              "attachments": [],
+              "created_at": "2023-05-04 04:25:27",
+              "updated_at": "2023-05-04 04:25:27"
+            },
+            {
+              "uuid": "565309fd-6596-47ca-bea6-ec523bf96057",
+              "details": [],
+              "categories": [],
+              "attachments": [],
+              "created_at": "2023-05-03 16:05:00",
+              "updated_at": "2023-05-03 16:05:02"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "uuid": {
+              "type": "string"
+            },
+            "details": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "uuid": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "content": {
+                    "type": "string"
+                  },
+                  "image": {
+                    "type": "string"
+                  },
+                  "language_uuid": {
+                    "type": "string"
+                  },
+                  "language": {
+                    "type": "string"
+                  },
+                  "created_at": {
+                    "type": "string"
+                  },
+                  "updated_at": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "uuid",
+                  "title",
+                  "content",
+                  "image",
+                  "language_uuid",
+                  "language",
+                  "created_at",
+                  "updated_at"
+                ]
+              }
+            },
+            "categories": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "uuid": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "language_uuid": {
+                    "type": "string"
+                  },
+                  "language": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "uuid",
+                  "title",
+                  "description",
+                  "language_uuid",
+                  "language"
+                ]
+              }
+            },
+            "attachments": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "uuid": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "path": {
+                    "type": "string"
+                  },
+                  "extension": {
+                    "type": "string"
+                  },
+                  "size": {
+                    "type": "string"
+                  },
+                  "language_uuid": {
+                    "type": "string"
+                  },
+                  "language": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "uuid",
+                  "title",
+                  "path",
+                  "extension",
+                  "size",
+                  "language_uuid",
+                  "language"
+                ]
+              }
+            },
+            "created_at": {
+              "type": "string"
+            },
+            "updated_at": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "uuid",
+            "details",
+            "categories",
+            "attachments",
+            "created_at",
+            "updated_at"
+          ]
+        }
+      },
+      "AdministrativeRulesAndRegulationsRequest": {
+        "type": "object",
+        "properties": {
+          "search": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "search": "asdasfadsgfa",
+            "category": "adfblslabdl"
+          }
+        }
       }
     },
     "securitySchemes": {}
