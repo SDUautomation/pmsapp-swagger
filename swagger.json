@@ -12012,6 +12012,307 @@
           }
         }
       },
+      "EmptyResponse": {
+        "title": "EmptyResponse",
+        "x-stoplight": {
+          "id": "2sgwvskhvgraq"
+        },
+        "type": "object",
+        "x-examples": {
+          "Example 1": {}
+        }
+      },
+      "AcademicManageCoursesRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "code": "CSS 105",
+            "year": 2022,
+            "title_kz": "Introduction to Programming",
+            "title_ru": "Introduction to Programming",
+            "title_en": "Introduction to Programming",
+            "department_code": "DEP_COMP_SCC",
+            "period_code": "S",
+            "term": 1,
+            "theory": 1,
+            "practice": 2,
+            "lab": 0,
+            "ects": 5,
+            "equicode": 20120001,
+            "language_code": "EN",
+            "type": "N",
+            "grading_type": "N",
+            "local_code": 1
+          }
+        },
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "title_kz": {
+            "type": "string"
+          },
+          "title_ru": {
+            "type": "string"
+          },
+          "title_en": {
+            "type": "string"
+          },
+          "department_code": {
+            "type": "string"
+          },
+          "period_code": {
+            "type": "string"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "theory": {
+            "type": "integer"
+          },
+          "practice": {
+            "type": "integer"
+          },
+          "lab": {
+            "type": "integer"
+          },
+          "ects": {
+            "type": "integer"
+          },
+          "equicode": {
+            "type": "integer"
+          },
+          "language_code": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "grading_type": {
+            "type": "string"
+          },
+          "local_code": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "code",
+          "year",
+          "title_kz",
+          "title_ru",
+          "title_en",
+          "department_code",
+          "period_code",
+          "theory",
+          "practice",
+          "lab",
+          "ects",
+          "language_code",
+          "type",
+          "grading_type",
+          "local_code"
+        ]
+      },
+      "AcademicManageCoursesResourceResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "terms": [
+              1
+            ],
+            "languages": [
+              {
+                "code": "EN",
+                "title": "English"
+              }
+            ],
+            "types": [
+              {
+                "key": "N",
+                "title": "Normal"
+              }
+            ],
+            "grading_types": [
+              {
+                "key": "PNP",
+                "title": "pass-no-pass"
+              }
+            ],
+            "requisite_types": [
+              {
+                "key": "PR",
+                "title": "Pre-Requisite"
+              }
+            ],
+            "consent_statuses": [
+              {
+                "id": 1,
+                "title": "Not applicable"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "terms": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "title"
+              ]
+            }
+          },
+          "types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "title"
+              ]
+            }
+          },
+          "grading_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "title"
+              ]
+            }
+          },
+          "requisite_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "title"
+              ]
+            }
+          },
+          "consent_statuses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          }
+        },
+        "required": [
+          "terms",
+          "languages",
+          "types",
+          "grading_types",
+          "requisite_types",
+          "consent_statuses"
+        ]
+      },
+      "AcademicManageCoursesResourceDepartmentsResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 1,
+            "code": "DEP_COMP_SCI",
+            "title": "Department of Computer Sciences",
+            "year": 2023,
+            "children": [
+              "string"
+            ],
+            "course_code_prefixes": [
+              "CSS"
+            ]
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "code": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "course_code_prefixes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "code",
+          "title",
+          "year",
+          "children",
+          "course_code_prefixes"
+        ]
+      },
       "AdministrativeStaffsRequest": {
         "title": "AdministrativeStaffsRequest",
         "x-stoplight": {
