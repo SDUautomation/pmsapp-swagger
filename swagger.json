@@ -521,6 +521,38 @@
         },
         "operationId": "get-1.0.0-release-changelog"
       }
+    },
+    "/1.0.0/administrative/rules-and-regulations/{uuid}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "uuid",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeRulesAndRegulationSingleResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-rules-and-regulations-uuid",
+        "x-stoplight": {
+          "id": "1gf2i3rnc4gef"
+        }
+      }
     }
   },
   "components": {
@@ -10765,6 +10797,282 @@
           "rules_and_regulations",
           "syllabus_statistics",
           "moodle_activities"
+        ]
+      },
+      "AdministrativeRulesAndRegulationSingleResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "uuid": "7748-2r29-vj22-vnje",
+            "details": [
+              {
+                "uuid": "7748-2r29-vj22-vnje",
+                "title": "About Scientific Library",
+                "content": "Ғылыми кітапхана дирекциясы (бұдан әрі - Кітапхана)...",
+                "image": "base64 string format",
+                "language_uuid": "8828-wvw1-vw23-9872",
+                "language": "English",
+                "created_at": "27-06-2023 02:03:00",
+                "updated_at": "27-06-2023 03:03:00"
+              }
+            ],
+            "categories": [
+              {
+                "uuid": "7748-2r29-vj22-vnje",
+                "title": "Guidlines",
+                "description": "Guildlines",
+                "language_uuid": "8828-wvw1-vw23-9872",
+                "language": "English"
+              }
+            ],
+            "contents": [
+              {
+                "uuid": "7748-2r29-vj22-vnje",
+                "title": "About Scientific Library",
+                "content": "Ғылыми кітапхана дирекциясы (бұдан әрі - Кітапхана)...",
+                "summary": "Берілген ереже Университеттің кітапхана қызметкерлері мен кітапхана...",
+                "has_summary": true,
+                "order": 3,
+                "language_uuid": "8828-wvw1-vw23-9872",
+                "language": "English",
+                "created_at": "27-06-2023 02:03:00",
+                "updated_at": "27-06-2023 03:03:00"
+              }
+            ],
+            "attachments": [
+              {
+                "uuid": "7748-2r29-vj22-vnje",
+                "title": "About Scientific Library",
+                "path": "pms.sdu.edu.kz/rules-and-regulations/attachments/about-scientific-library/ground-floor.jpg",
+                "size": "1.6 MB",
+                "language_uuid": "8828-wvw1-vw23-9872",
+                "language": "English"
+              }
+            ],
+            "versions": [
+              {
+                "uuid": "7748-2r29-vj22-vnje",
+                "version": "1.0.2",
+                "summary": "This version contains...",
+                "active": true,
+                "language_uuid": "8828-wvw1-vw23-9872",
+                "language": "English",
+                "created_at": "27-06-2023 02:03:00",
+                "updated_at": "27-06-2023 03:03:00"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "uuid": {
+            "type": "string"
+          },
+          "details": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "language_uuid": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uuid",
+                "title",
+                "content",
+                "image",
+                "language_uuid",
+                "language",
+                "created_at",
+                "updated_at"
+              ]
+            }
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "language_uuid": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uuid",
+                "title",
+                "description",
+                "language_uuid",
+                "language"
+              ]
+            }
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "summary": {
+                  "type": "string"
+                },
+                "has_summary": {
+                  "type": "boolean"
+                },
+                "order": {
+                  "type": "integer"
+                },
+                "language_uuid": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uuid",
+                "title",
+                "content",
+                "summary",
+                "has_summary",
+                "order",
+                "language_uuid",
+                "language",
+                "created_at",
+                "updated_at"
+              ]
+            }
+          },
+          "attachments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "string"
+                },
+                "language_uuid": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uuid",
+                "title",
+                "path",
+                "size",
+                "language_uuid",
+                "language"
+              ]
+            }
+          },
+          "versions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "summary": {
+                  "type": "string"
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "language_uuid": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uuid",
+                "version",
+                "summary",
+                "active",
+                "language_uuid",
+                "language",
+                "created_at",
+                "updated_at"
+              ]
+            }
+          }
+        },
+        "required": [
+          "uuid",
+          "details",
+          "categories",
+          "contents",
+          "attachments",
+          "versions"
         ]
       }
     },
