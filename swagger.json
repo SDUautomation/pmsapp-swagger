@@ -694,7 +694,7 @@
         }
       }
     },
-    "/1.0.0/administrative/resource": {
+    "/1.0.0/administrative/resources": {
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
@@ -723,7 +723,8 @@
             }
           }
         }
-      }
+      },
+      "parameters": []
     }
   },
   "components": {
