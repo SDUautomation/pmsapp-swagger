@@ -553,6 +553,53 @@
           "id": "1gf2i3rnc4gef"
         }
       }
+    },
+     "/1.0.0/profile": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileOverviewResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-overview"
+      },
+      "parameters": []
+    },
+    "/1.0.0/administrative/gate-entry": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-administrative-gate-entry",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeGateEntryResponse"
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeGateEntryRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -11074,6 +11121,314 @@
           "attachments",
           "versions"
         ]
+      },
+      "ProfileOverviewResponse": {
+        "type": "object",
+        "x-examples": {
+          "sample": {
+            "cv": {
+              "progress": 67,
+              "filled": [
+                "string"
+              ],
+              "empty": [
+                "string"
+              ]
+            },
+            "personal": {
+              "name": "Zhandos",
+              "surname": "Saparbayev",
+              "username": "zhandos",
+              "name_native": "Zhandos",
+              "surname_native": "Saparbayev",
+              "patronymic_native": "Yerzhanuly",
+              "birth_date": "05-03-2003",
+              "country": "Kazakhstan",
+              "gender": "Male",
+              "degree": "Bachelor",
+              "last_log_date": "14-07-2023 11:27",
+              "last_log_ip": "11.123.12.15",
+              "inner_phone": "87788829586",
+              "mail": "saparbayevzh03@gmail.com",
+              "positions": [
+                {
+                  "title": "Assistant Professor",
+                  "is_main": false
+                }
+              ]
+            },
+            "logs": [
+              {
+                "id": 421,
+                "title": "Contact has updated",
+                "created_at": "2023-07-12 06:21:58",
+                "updated_at": "2023-07-12 06:21:58"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "cv": {
+            "type": "object",
+            "required": [
+              "progress",
+              "filled",
+              "empty"
+            ],
+            "properties": {
+              "progress": {
+                "type": "integer"
+              },
+              "filled": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "empty": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "personal": {
+            "type": "object",
+            "required": [
+              "name",
+              "surname",
+              "username",
+              "name_native",
+              "surname_native",
+              "patronymic_native",
+              "birth_date",
+              "country",
+              "gender",
+              "degree",
+              "last_log_date",
+              "last_log_ip",
+              "inner_phone",
+              "mail",
+              "positions"
+            ],
+            "properties": {
+              "name": {
+                "type": "string"
+              },
+              "surname": {
+                "type": "string"
+              },
+              "username": {
+                "type": "string"
+              },
+              "name_native": {
+                "type": "string"
+              },
+              "surname_native": {
+                "type": "string"
+              },
+              "patronymic_native": {
+                "type": "string"
+              },
+              "birth_date": {
+                "type": "string"
+              },
+              "country": {
+                "type": "string"
+              },
+              "gender": {
+                "type": "string"
+              },
+              "degree": {
+                "type": "string"
+              },
+              "last_log_date": {
+                "type": "string"
+              },
+              "last_log_ip": {
+                "type": "string"
+              },
+              "inner_phone": {
+                "type": "string"
+              },
+              "mail": {
+                "type": "string"
+              },
+              "positions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "is_main": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "title",
+                    "is_main"
+                  ]
+                }
+              }
+            }
+          },
+          "logs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title",
+                "created_at",
+                "updated_at"
+              ]
+            }
+          }
+        },
+        "required": [
+          "cv",
+          "personal",
+          "logs"
+        ]
+      },
+      "AdministrativeGateEntryRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "user_type": "P",
+            "reader_group": 1,
+            "username": "aibolat.batyrov",
+            "department_code": "DEP_INF_SYS",
+            "from_date": "2023-06-19",
+            "due_date": "2023-06-20",
+            "mailer": true
+          }
+        },
+        "properties": {
+          "user_type": {
+            "type": "string",
+            "description": "S - Student, P - Employee",
+            "enum": [
+              "S",
+              "P"
+            ]
+          },
+          "reader_group": {
+            "description": "1 - Tourniquet, 3 - TechnoPark, 4 - Server Room, 5 - Dorm Boys, 6 - Dorm Girls, 7 - Meeting Room",
+            "type": "integer",
+            "enum": [
+              "1",
+              "3",
+              "4",
+              "5",
+              "6",
+              "7"
+            ]
+          },
+          "username": {
+            "type": "string"
+          },
+          "department_code": {
+            "type": "string"
+          },
+          "from_date": {
+            "type": "string"
+          },
+          "due_date": {
+            "type": "string"
+          },
+          "mailer": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "user_type",
+          "reader_group",
+          "from_date"
+        ],
+        "title": ""
+      },
+      "AdministrativeGateEntryResponse": {
+        "type": "object",
+        "properties": {
+          "full_name": {
+            "type": "string"
+          },
+          "user_token": {
+            "type": "string"
+          },
+          "access_id_in": {
+            "type": "string"
+          },
+          "access_id_out": {
+            "type": "string"
+          },
+          "card_number": {
+            "type": "string"
+          },
+          "work_time": {
+            "type": "integer"
+          },
+          "day_of_week": {
+            "type": "integer"
+          },
+          "access_date_in": {
+            "type": "string"
+          },
+          "access_date_out": {
+            "type": "string"
+          },
+          "access_time_in": {
+            "type": "string"
+          },
+          "access_time_out": {
+            "type": "string"
+          },
+          "reader_type_in": {
+            "type": "string"
+          },
+          "reader_type_out": {
+            "type": "string"
+          },
+          "week_day_title": {
+            "type": "string"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "full_name": "Aibolat Batyrov",
+            "user_token": "10939",
+            "access_id_in": "8737373",
+            "access_id_out": "2262838",
+            "card_number": "#VBEVBE022",
+            "work_time": 6,
+            "day_of_week": 2,
+            "access_date_in": "2023-06-27",
+            "access_date_out": "2023-06-29",
+            "access_time_in": "16:38:00",
+            "access_time_out": "17:08:00",
+            "reader_type_in": "Tourniquet",
+            "reader_type_out": "Tourniquet",
+            "week_day_title": "Tuesday"
+          }
+        }
       }
     },
     "securitySchemes": {}
