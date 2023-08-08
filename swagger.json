@@ -662,6 +662,37 @@
           }
         }
       }
+    },
+    "/1.0.0/administrative/staffs": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeStaffsResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-staffs",
+        "x-stoplight": {
+          "id": "i1z8ot8ezc5gw"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeStaffsRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -12280,6 +12311,161 @@
           "year",
           "children",
           "course_code_prefixes"
+        ]
+      },
+      "AdministrativeStaffsRequest": {
+        "title": "AdministrativeStaffsRequest",
+        "x-stoplight": {
+          "id": "4xc2brdkzn9we"
+        },
+        "type": "object",
+        "properties": {
+          "per_page": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "0i79depwjfwpq"
+            }
+          },
+          "offset": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "760cen2zmerss"
+            }
+          },
+          "search": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "awnt3t4l2b61w"
+            }
+          },
+          "department": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "g3xaoh5y97alx"
+            }
+          },
+          "position": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "7qft5eghcxc5b"
+            }
+          },
+          "sub-department": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "jo0xi9rd0vmnj"
+            }
+          }
+        },
+        "required": [
+          "per_page",
+          "offset"
+        ]
+      },
+      "AdministrativeStaffsResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 40,
+            "from": 1,
+            "per_page": 15,
+            "current_page": 2,
+            "last_page": 3,
+            "employees": [
+              {
+                "name": "Aibolat",
+                "surname": "Batyrov",
+                "staff": "Full time",
+                "staff_status": "Working",
+                "outer_email": "aibolat.batyrov@sdu.edu.kz",
+                "inner_phone": 278,
+                "department_positions": [
+                  {
+                    "title": "Automation Department - Developer",
+                    "is_main": true
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "employees": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "surname": {
+                  "type": "string"
+                },
+                "staff": {
+                  "type": "string"
+                },
+                "staff_status": {
+                  "type": "string"
+                },
+                "outer_email": {
+                  "type": "string"
+                },
+                "inner_phone": {
+                  "type": "integer"
+                },
+                "department_positions": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string"
+                      },
+                      "is_main": {
+                        "type": "boolean"
+                      }
+                    },
+                    "required": [
+                      "title",
+                      "is_main"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "name",
+                "surname",
+                "staff",
+                "staff_status",
+                "outer_email",
+                "inner_phone",
+                "department_positions"
+              ]
+            }
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "employees"
         ]
       }
     },
