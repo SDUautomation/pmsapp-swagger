@@ -710,7 +710,7 @@
             }
           }
         },
-        "operationId": "get-1.0.0-administrative-resource",
+        "operationId": "get-1.0.0-administrative-resources",
         "x-stoplight": {
           "id": "0pztynodit9i8"
         },
@@ -722,7 +722,8 @@
               }
             }
           }
-        }
+        },
+        "description": ""
       },
       "parameters": []
     }
