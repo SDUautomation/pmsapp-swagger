@@ -11957,16 +11957,19 @@
             ]
           },
           "username": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "department_code": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "from_date": {
             "type": "string"
           },
           "due_date": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "mailer": {
             "type": "boolean"
