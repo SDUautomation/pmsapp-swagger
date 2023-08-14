@@ -727,71 +727,53 @@
       },
       "parameters": []
     },
-    "/1.0.0/knowledge/posts": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
+    "/1.0.0/administrative/message-board/comments": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-administrative-message-board-comments",
         "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/KnowledgeBaseResponse"
-                }
-              }
-            }
+          "201": {
+            "description": "Created"
           }
         },
-        "operationId": "get-1.0.0-knowledge-posts",
         "x-stoplight": {
-          "id": "g64at3skskwtn"
+          "id": "1edc9e7nlac1m"
         },
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/KnowledgeBaseRequest"
+                "$ref": "#/components/schemas/AdministrativeMessageBoardCommentsPostRequest"
               }
             }
-          }
-        }
-      }
-    },
-    "/1.0.0/knowledge/posts/{post}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
           },
-          "name": "post",
-          "in": "path",
-          "required": true
+          "description": ""
         }
-      ],
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
+      },
+      "parameters": [],
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-administrative-message-board-comments",
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/KnowledgeBaseSingleResponse"
-                }
-              }
-            },
-            "headers": {}
+            "description": "OK"
           }
         },
-        "operationId": "get-1.0.0-knowledge-posts-post",
         "x-stoplight": {
-          "id": "eppmv8wspnl78"
-        }
+          "id": "mv33d621lny5c"
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "number"
+            },
+            "in": "query",
+            "name": "comment"
+          }
+        ]
       }
     },
-    "/1.0.0/knowledge/resources": {
+    "/1.0.0/administrative/message-board/posts": {
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
@@ -801,25 +783,97 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/KnowledgeBaseResourceResponse"
+                  "$ref": "#/components/schemas/AdministrativeMessageBoardPostsGetResponse"
                 }
               }
             }
           }
         },
-        "operationId": "get-1.0.0-knowledge-resources",
+        "operationId": "get-1.0.0-administrative-message-board-posts",
         "x-stoplight": {
-          "id": "k3vkp482lkb0x"
+          "id": "qk83mbyn9jucb"
         },
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ResourceRequest"
+                "$ref": "#/components/schemas/AdministrativeMessageBoardPostsGetRequest"
               }
             }
           }
         }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-administrative-message-board-posts",
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "x-stoplight": {
+          "id": "wzbive6r9f94v"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeMessageBoardPostsPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-administrative-message-board-posts",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "dex7bs1x30us5"
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "number"
+            },
+            "in": "query",
+            "name": "post"
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeMessageBoardPostsPutRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-administrative-message-board-posts",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "fp9abxuaalcqw"
+        },
+        "parameters": [
+          {
+            "schema": {
+              "type": "number"
+            },
+            "in": "query",
+            "name": "post"
+          }
+        ]
       }
     }
   },
@@ -12080,24 +12134,6 @@
       },
       "AdministrativeGateEntryResponse": {
         "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "full_name": "Aibolat Batyrov",
-            "user_token": "10939",
-            "access_id_in": "8737373",
-            "access_id_out": "2262838",
-            "card_number": "#VBEVBE022",
-            "work_time": 6,
-            "day_of_week": 2,
-            "access_date_in": "2023-06-27",
-            "access_date_out": "2023-06-29",
-            "access_time_in": "16:38:00",
-            "access_time_out": "17:08:00",
-            "reader_type_in": "Tourniquet",
-            "reader_type_out": "Tourniquet",
-            "week_day_title": "Tuesday"
-          }
-        },
         "properties": {
           "full_name": {
             "type": "string"
@@ -12142,22 +12178,24 @@
             "type": "string"
           }
         },
-        "required": [
-          "full_name",
-          "user_token",
-          "access_id_in",
-          "access_id_out",
-          "card_number",
-          "work_time",
-          "day_of_week",
-          "access_date_in",
-          "access_date_out",
-          "access_time_in",
-          "access_time_out",
-          "reader_type_in",
-          "reader_type_out",
-          "week_day_title"
-        ]
+        "x-examples": {
+          "Example 1": {
+            "full_name": "Aibolat Batyrov",
+            "user_token": "10939",
+            "access_id_in": "8737373",
+            "access_id_out": "2262838",
+            "card_number": "#VBEVBE022",
+            "work_time": 6,
+            "day_of_week": 2,
+            "access_date_in": "2023-06-27",
+            "access_date_out": "2023-06-29",
+            "access_time_in": "16:38:00",
+            "access_time_out": "17:08:00",
+            "reader_type_in": "Tourniquet",
+            "reader_type_out": "Tourniquet",
+            "week_day_title": "Tuesday"
+          }
+        }
       },
       "EmptyResponse": {
         "title": "EmptyResponse",
@@ -12821,61 +12859,102 @@
           "gate_entry_types"
         ]
       },
-      "KnowledgeBaseRequest": {
+      "AdministrativeMessageBoardCommentsPostRequest": {
         "type": "object",
+        "x-stoplight": {
+          "id": "4273643cce21d"
+        },
         "x-examples": {
           "Example 1": {
-            "offset": 1,
-            "per_page": 15,
-            "search": "DEP_COMP_SCI",
-            "category": "baby",
-            "type": "CODE"
+            "post_id": 987,
+            "content": "Куплю этот MagSafe"
           }
         },
         "properties": {
-          "offset": {
+          "post_id": {
             "type": "integer"
           },
-          "per_page": {
-            "type": "integer"
-          },
-          "search": {
-            "type": "string"
-          },
-          "category": {
-            "type": "string"
-          },
-          "type": {
+          "content": {
             "type": "string"
           }
         },
         "required": [
-          "offset",
-          "per_page"
+          "post_id",
+          "content"
+        ],
+        "title": "",
+        "description": ""
+      },
+      "AdministrativeMessageBoardPostsGetRequest": {
+        "title": "AdministrativeMessageBoardPostsGetRequest",
+        "x-stoplight": {
+          "id": "qv6ipfxvofhoj"
+        },
+        "type": "object",
+        "properties": {
+          "per_page": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "74qk9b6l6kkrh"
+            }
+          },
+          "offset": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "6wmx776e0usbx"
+            }
+          },
+          "search": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "23qjkhgx4lqsj"
+            }
+          },
+          "my_post": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "zjm5h06jri090"
+            }
+          }
+        },
+        "required": [
+          "per_page",
+          "offset"
         ]
       },
-      "KnowledgeBaseResponse": {
+      "AdministrativeMessageBoardPostsGetResponse": {
         "type": "object",
         "x-examples": {
           "Example 1": {
-            "total": 1,
+            "total": 40,
             "from": 1,
             "per_page": 15,
-            "current_page": 1,
-            "last_page": 1,
+            "current_page": 2,
+            "last_page": 3,
             "posts": [
               {
-                "id": 182,
-                "uuid": "99b94128-d8fc-4071-b09f-290261bb07de",
-                "title": "Testing title post from 16:06 2023-07-20",
-                "description": "Description",
-                "language_title": "en-EN",
-                "category_title": "cat2",
-                "contents_count": 2,
-                "views": 35,
-                "published": 1,
-                "created_at": "2023-07-24 14:36:51",
-                "updated_at": "2023-08-13 11:52:32"
+                "id": 987,
+                "username": "arailym.mardemkhanova",
+                "user_full_name": "Araylim Mardemkhanova",
+                "user_photo": "base64 string format",
+                "title": "Продам MagSafe",
+                "content": "Продам MagSafe 2023 года выпуска",
+                "status": 1,
+                "view_count": 12,
+                "last_op_date": "26-06-2023 16:45:00",
+                "last_op_emp_id": 11082,
+                "created_at": "26-06-2023 16:45:00",
+                "comments": [
+                  {
+                    "id": 3222,
+                    "post_id": 987,
+                    "username": "aibolat.batyrov",
+                    "user_full_name": "Aibolat Batyrov",
+                    "user_photo": "base64 string format",
+                    "content": "Куплю MagSafe для iPhone",
+                    "created_at": "26-06-2023 18:49:00"
+                  }
+                ]
               }
             ]
           }
@@ -12904,49 +12983,88 @@
                 "id": {
                   "type": "integer"
                 },
-                "uuid": {
+                "username": {
+                  "type": "string"
+                },
+                "user_full_name": {
+                  "type": "string"
+                },
+                "user_photo": {
                   "type": "string"
                 },
                 "title": {
                   "type": "string"
                 },
-                "description": {
+                "content": {
                   "type": "string"
                 },
-                "language_title": {
-                  "type": "string"
-                },
-                "category_title": {
-                  "type": "string"
-                },
-                "contents_count": {
+                "status": {
                   "type": "integer"
                 },
-                "views": {
+                "view_count": {
                   "type": "integer"
                 },
-                "published": {
+                "last_op_date": {
+                  "type": "string"
+                },
+                "last_op_emp_id": {
                   "type": "integer"
                 },
                 "created_at": {
                   "type": "string"
                 },
-                "updated_at": {
-                  "type": "string"
+                "comments": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "post_id": {
+                        "type": "integer"
+                      },
+                      "username": {
+                        "type": "string"
+                      },
+                      "user_full_name": {
+                        "type": "string"
+                      },
+                      "user_photo": {
+                        "type": "string"
+                      },
+                      "content": {
+                        "type": "string"
+                      },
+                      "created_at": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "post_id",
+                      "username",
+                      "user_full_name",
+                      "user_photo",
+                      "content",
+                      "created_at"
+                    ]
+                  }
                 }
               },
               "required": [
                 "id",
-                "uuid",
+                "username",
+                "user_full_name",
+                "user_photo",
                 "title",
-                "description",
-                "language_title",
-                "category_title",
-                "contents_count",
-                "views",
-                "published",
+                "content",
+                "status",
+                "view_count",
+                "last_op_date",
+                "last_op_emp_id",
                 "created_at",
-                "updated_at"
+                "comments"
               ]
             }
           }
@@ -12958,426 +13076,49 @@
           "current_page",
           "last_page",
           "posts"
-        ]
+        ],
+        "title": ""
       },
-      "KnowledgeBaseSingleResponse": {
+      "AdministrativeMessageBoardPostsPostRequest": {
         "type": "object",
         "x-examples": {
           "Example 1": {
-            "id": 182,
-            "uuid": "99b94128-d8fc-4071-b09f-290261bb07de",
-            "title": "Testing title post from 16:06 2023-07-20",
-            "description": "Description",
-            "details": "details",
-            "meta": "Meta information",
-            "contents_count": 2,
-            "category_title": "cat2",
-            "views": 36,
-            "published": 1,
-            "created_at": "2023-07-24 14:36:51",
-            "updated_at": "2023-08-14 00:01:48",
-            "tags": [
-              {
-                "id": 187,
-                "tag": "#academic"
-              },
-              {
-                "id": 189,
-                "tag": "#grades"
-              }
-            ],
-            "contents": [
-              {
-                "id": 123,
-                "uuid": "99b94128-e4e8-4d1a-bd46-67a219e12f18",
-                "type_uuid": "7b25b455-e13d-4ebb-841d-b88e3b81e95d",
-                "type_title": "Tutorials",
-                "version": "1.0.2",
-                "image": "/var/www/images/slang.png",
-                "video": "/var/www/videos/slang.mp4",
-                "video_type": "MPEG",
-                "content": "Im developing a Laravel API that will host and manage the data for a mobile application.",
-                "active": true,
-                "visible": 1,
-                "alert_type": "Nothing",
-                "alert_text": "Good Morning!"
-              },
-              {
-                "id": 124,
-                "uuid": "99b94147-099d-4d66-93b0-e1c5b9eef3cb",
-                "type_uuid": "7b25b455-e13d-4ebb-841d-b88e3b81e95d",
-                "type_title": "Tutorials",
-                "version": "1.0.2",
-                "image": "/var/www/images/slang.png",
-                "video": "/var/www/videos/slang.mp4",
-                "video_type": "MPEG",
-                "content": "Im developing a Laravel API that will host and manage the data for a mobile application.",
-                "active": true,
-                "visible": 1,
-                "alert_type": "Nothing",
-                "alert_text": "Good Morning!"
-              }
-            ]
+            "title": "Продам курсы по мобилографии",
+            "content": "Продам курсы по мобилографии за 1590 тг, пишите в телеграм"
           }
         },
         "properties": {
-          "id": {
-            "type": "integer"
-          },
-          "uuid": {
-            "type": "string"
-          },
           "title": {
             "type": "string"
           },
-          "description": {
+          "content": {
             "type": "string"
-          },
-          "details": {
-            "type": "string"
-          },
-          "meta": {
-            "type": "string"
-          },
-          "contents_count": {
-            "type": "integer"
-          },
-          "category_title": {
-            "type": "string"
-          },
-          "views": {
-            "type": "integer"
-          },
-          "published": {
-            "type": "integer"
-          },
-          "created_at": {
-            "type": "string"
-          },
-          "updated_at": {
-            "type": "string"
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "tag": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "id",
-                "tag"
-              ]
-            }
-          },
-          "contents": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "type_uuid": {
-                  "type": "string"
-                },
-                "type_title": {
-                  "type": "string"
-                },
-                "version": {
-                  "type": "string"
-                },
-                "image": {
-                  "type": "string"
-                },
-                "video": {
-                  "type": "string"
-                },
-                "video_type": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "active": {
-                  "type": "boolean"
-                },
-                "visible": {
-                  "type": "integer"
-                },
-                "alert_type": {
-                  "type": "string"
-                },
-                "alert_text": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "type_uuid",
-                "type_title",
-                "version",
-                "image",
-                "video",
-                "video_type",
-                "content",
-                "active",
-                "visible",
-                "alert_type",
-                "alert_text"
-              ]
-            }
           }
         },
         "required": [
-          "id",
-          "uuid",
           "title",
-          "description",
-          "details",
-          "meta",
-          "contents_count",
-          "category_title",
-          "views",
-          "published",
-          "created_at",
-          "updated_at",
-          "tags",
-          "contents"
+          "content"
         ]
       },
-      "KnowledgeBaseResourceResponse": {
+      "AdministrativeMessageBoardPostsPutRequest": {
         "type": "object",
         "x-examples": {
           "Example 1": {
-            "types": [
-              {
-                "id": 3,
-                "uuid": "75c610e6-0e28-4559-8644-dfc42ee2be8e",
-                "title": "Guides",
-                "description": "Guidelines of using website",
-                "translation": null
-              },
-              {
-                "id": 4,
-                "uuid": "2b6a7699-49bb-4444-b195-bfb9aa901c6e",
-                "title": "FAQs",
-                "description": "Frequently ask questions",
-                "translation": null
-              },
-              {
-                "id": 5,
-                "uuid": "7b25b455-e13d-4ebb-841d-b88e3b81e95d",
-                "title": "Tutorials",
-                "description": "Tutorial of using academic, administrative, other features (mechanism) of PMS portal",
-                "translation": null
-              }
-            ],
-            "categories": [
-              {
-                "id": "309d315f-e17a-4641-a38f-baf34dfc0d0d",
-                "uuid": "309d315f-e17a-4641-a38f-baf34dfc0d0d",
-                "title": "cat2",
-                "description": "details",
-                "count": 1,
-                "language_title": "en-EN"
-              }
-            ],
-            "statistics": [
-              {
-                "id": 3,
-                "uuid": "75c610e6-0e28-4559-8644-dfc42ee2be8e",
-                "title": "Guides",
-                "count": 0
-              },
-              {
-                "id": 4,
-                "uuid": "2b6a7699-49bb-4444-b195-bfb9aa901c6e",
-                "title": "FAQs",
-                "count": 0
-              },
-              {
-                "id": 5,
-                "uuid": "7b25b455-e13d-4ebb-841d-b88e3b81e95d",
-                "title": "Tutorials",
-                "count": 2
-              }
-            ],
-            "related": [],
-            "popular": [
-              {
-                "id": 182,
-                "uuid": "99b94128-d8fc-4071-b09f-290261bb07de",
-                "title": "Testing title post from 16:06 2023-07-20",
-                "description": "Description",
-                "content_count": 2,
-                "category_title": "cat2",
-                "created_at": "2023-07-24 14:36:51",
-                "updated_at": "2023-08-11 10:51:26",
-                "views": 34
-              }
-            ]
+            "title": "Продам курсы по мобилографии",
+            "content": "Продам курсы по мобилографии за 1590 тг, пишите в телеграм"
           }
         },
         "properties": {
-          "types": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "translation": {
-                  "nullable": true
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "title",
-                "description",
-                "translation"
-              ]
-            }
+          "title": {
+            "type": "string"
           },
-          "categories": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "count": {
-                  "type": "integer"
-                },
-                "language_title": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "title",
-                "description",
-                "count",
-                "language_title"
-              ]
-            }
-          },
-          "statistics": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "count": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "title",
-                "count"
-              ]
-            }
-          },
-          "related": {
-            "type": "array",
-            "items": {
-              "type": "object"
-            }
-          },
-          "popular": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "content_count": {
-                  "type": "integer"
-                },
-                "category_title": {
-                  "type": "string"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
-                },
-                "views": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "title",
-                "description",
-                "content_count",
-                "category_title",
-                "created_at",
-                "updated_at",
-                "views"
-              ]
-            }
+          "content": {
+            "type": "string"
           }
         },
         "required": [
-          "types",
-          "categories",
-          "statistics",
-          "related",
-          "popular"
+          "title",
+          "content"
         ]
       }
     },
