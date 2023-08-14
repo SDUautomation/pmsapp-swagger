@@ -906,6 +906,37 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/manage/curriculum/view": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageCurriculumViewResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-curriculum-view",
+        "x-stoplight": {
+          "id": "xq46mc41f4ahg"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCurriculumViewRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -13403,6 +13434,629 @@
           "requisite_types",
           "tracks",
           "consent_statuses"
+        ]
+      },
+      "AcademicManageCurriculumViewRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "track_id": 973
+          }
+        },
+        "properties": {
+          "track_id": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "track_id"
+        ]
+      },
+      "AcademicManageCurriculumViewResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "information": {
+              "year": 2023,
+              "department": {
+                "id": 1222,
+                "code": "DEP_ECO_BUS",
+                "title": "Department of Economics and Business"
+              },
+              "program": {
+                "code": "11216",
+                "year": 2023,
+                "type": "Degree Program",
+                "title": "Financial Technology",
+                "cipher": "7M04106",
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "title": "SDU Business school"
+                },
+                "education": {
+                  "language": {
+                    "code": "EN",
+                    "title": "English"
+                  },
+                  "type": {
+                    "id": 1,
+                    "title": "Formal"
+                  },
+                  "level": {
+                    "key": "M",
+                    "title": "Master"
+                  }
+                },
+                "tracks": [
+                  {
+                    "id": 973,
+                    "type": "M",
+                    "code": "TRACK0",
+                    "title": "Main Track",
+                    "terms": 3,
+                    "students": null,
+                    "total_credits": 160
+                  }
+                ],
+                "post_degree_type": null
+              },
+              "track": {
+                "id": 973,
+                "type": "Major",
+                "title": "Main Track"
+              },
+              "terms": 3
+            },
+            "core": [
+              {
+                "id": 69135,
+                "course_code": "MDE 555",
+                "track_code": null,
+                "terms": 2,
+                "course_title": "Foreign language (professional)",
+                "theory": 1,
+                "practice": 0,
+                "lab": 0,
+                "credits": 1,
+                "ects": 2,
+                "is_active": true
+              },
+              {
+                "id": 69136,
+                "course_code": "MDE 523",
+                "track_code": null,
+                "terms": 2,
+                "course_title": "Psychology of Management",
+                "theory": 1,
+                "practice": 0,
+                "lab": 0,
+                "credits": 1,
+                "ects": 2,
+                "is_active": true
+              },
+              {
+                "id": 71754,
+                "course_code": "FIN 521",
+                "track_code": null,
+                "terms": 1,
+                "course_title": "Experimental Research Work of Master Student-1",
+                "theory": 0,
+                "practice": 4,
+                "lab": 0,
+                "credits": 4,
+                "ects": 6,
+                "is_active": true
+              },
+              {
+                "id": 71755,
+                "course_code": "FIN 515",
+                "track_code": null,
+                "terms": 1,
+                "course_title": "Database principles and Development",
+                "theory": 2,
+                "practice": 0,
+                "lab": 2,
+                "credits": 3,
+                "ects": 6,
+                "is_active": true
+              },
+              {
+                "id": 71756,
+                "course_code": "FIN 523",
+                "track_code": null,
+                "terms": 3,
+                "course_title": "Registration and Defense of Master's Dissertation",
+                "theory": 4,
+                "practice": 4,
+                "lab": 0,
+                "credits": 8,
+                "ects": 12,
+                "is_active": true
+              },
+              {
+                "id": 71890,
+                "course_code": "FIN 508",
+                "track_code": null,
+                "terms": 2,
+                "course_title": "AI for Fintech",
+                "theory": 2,
+                "practice": 0,
+                "lab": 2,
+                "credits": 4,
+                "ects": 6,
+                "is_active": true
+              },
+              {
+                "id": 71816,
+                "course_code": "FIN 527",
+                "track_code": null,
+                "terms": 3,
+                "course_title": "Blockchain",
+                "theory": 0,
+                "practice": 4,
+                "lab": 0,
+                "credits": 4,
+                "ects": 6,
+                "is_active": true
+              },
+              {
+                "id": 71888,
+                "course_code": "FIN 505",
+                "track_code": null,
+                "terms": 1,
+                "course_title": "Corporate Finance and Valuation",
+                "theory": 2,
+                "practice": 2,
+                "lab": 0,
+                "credits": 4,
+                "ects": 6,
+                "is_active": true
+              },
+              {
+                "id": 71889,
+                "course_code": "FIN 524",
+                "track_code": null,
+                "terms": 2,
+                "course_title": "Experimental Research Work of Master Student-2",
+                "theory": 0,
+                "practice": 2,
+                "lab": 0,
+                "credits": 2,
+                "ects": 3,
+                "is_active": true
+              },
+              {
+                "id": 71891,
+                "course_code": "FIN 506",
+                "track_code": null,
+                "terms": 2,
+                "course_title": "Introduction to Data Mining",
+                "theory": 2,
+                "practice": 2,
+                "lab": 2,
+                "credits": 6,
+                "ects": 9,
+                "is_active": true
+              },
+              {
+                "id": 71892,
+                "course_code": "FIN 504",
+                "track_code": null,
+                "terms": 2,
+                "course_title": "Quantitative Portfolio Analysis",
+                "theory": 2,
+                "practice": 0,
+                "lab": 2,
+                "credits": 4,
+                "ects": 6,
+                "is_active": true
+              },
+              {
+                "id": 71893,
+                "course_code": "FIN 525",
+                "track_code": null,
+                "terms": 3,
+                "course_title": "Experimental Research Work of Master Student-3",
+                "theory": 0,
+                "practice": 6,
+                "lab": 0,
+                "credits": 6,
+                "ects": 9,
+                "is_active": true
+              },
+              {
+                "id": 71492,
+                "course_code": "FIN 512",
+                "track_code": null,
+                "terms": 2,
+                "course_title": "Machine learning",
+                "theory": 2,
+                "practice": 0,
+                "lab": 2,
+                "credits": 4,
+                "ects": 6,
+                "is_active": true
+              },
+              {
+                "id": 72464,
+                "course_code": "FIN 513",
+                "track_code": null,
+                "terms": 1,
+                "course_title": "Introduction to Python",
+                "theory": 2,
+                "practice": 0,
+                "lab": 2,
+                "credits": 4,
+                "ects": 6,
+                "is_active": true
+              },
+              {
+                "id": 71199,
+                "course_code": "FIN 529",
+                "track_code": null,
+                "terms": 3,
+                "course_title": "Applied Regression Analysis",
+                "theory": 1,
+                "practice": 0,
+                "lab": 1,
+                "credits": 2,
+                "ects": 3,
+                "is_active": true
+              },
+              {
+                "id": 68931,
+                "course_code": "MDE 516",
+                "track_code": null,
+                "terms": 1,
+                "course_title": "Management",
+                "theory": 1,
+                "practice": 0,
+                "lab": 0,
+                "credits": 1,
+                "ects": 2,
+                "is_active": true
+              }
+            ],
+            "references": {
+              "one_to_one": [],
+              "one_to_many": [],
+              "many_to_one": []
+            },
+            "electives": {
+              "area": [],
+              "non_area": [],
+              "non_theoretical": [],
+              "requisite_courses": []
+            }
+          }
+        },
+        "properties": {
+          "information": {
+            "type": "object",
+            "required": [
+              "year",
+              "department",
+              "program",
+              "track",
+              "terms"
+            ],
+            "properties": {
+              "year": {
+                "type": "integer"
+              },
+              "department": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "code",
+                  "title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              },
+              "program": {
+                "type": "object",
+                "required": [
+                  "code",
+                  "year",
+                  "type",
+                  "title",
+                  "cipher",
+                  "faculty",
+                  "education",
+                  "tracks",
+                  "post_degree_type"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "integer"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "cipher": {
+                    "type": "string"
+                  },
+                  "faculty": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "code",
+                      "title"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "code": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "education": {
+                    "type": "object",
+                    "required": [
+                      "language",
+                      "type",
+                      "level"
+                    ],
+                    "properties": {
+                      "language": {
+                        "type": "object",
+                        "required": [
+                          "code",
+                          "title"
+                        ],
+                        "properties": {
+                          "code": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "type": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "title"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "level": {
+                        "type": "object",
+                        "required": [
+                          "key",
+                          "title"
+                        ],
+                        "properties": {
+                          "key": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "tracks": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "type": {
+                          "type": "string"
+                        },
+                        "code": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "terms": {
+                          "type": "integer"
+                        },
+                        "students": {
+                          "nullable": true
+                        },
+                        "total_credits": {
+                          "type": "integer"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "type",
+                        "code",
+                        "title",
+                        "terms",
+                        "students",
+                        "total_credits"
+                      ]
+                    }
+                  },
+                  "post_degree_type": {
+                    "nullable": true
+                  }
+                }
+              },
+              "track": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "type",
+                  "title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              },
+              "terms": {
+                "type": "integer"
+              }
+            }
+          },
+          "core": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "course_code": {
+                  "type": "string"
+                },
+                "track_code": {
+                  "nullable": true
+                },
+                "terms": {
+                  "type": "integer"
+                },
+                "course_title": {
+                  "type": "string"
+                },
+                "theory": {
+                  "type": "integer"
+                },
+                "practice": {
+                  "type": "integer"
+                },
+                "lab": {
+                  "type": "integer"
+                },
+                "credits": {
+                  "type": "integer"
+                },
+                "ects": {
+                  "type": "integer"
+                },
+                "is_active": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "id",
+                "course_code",
+                "track_code",
+                "terms",
+                "course_title",
+                "theory",
+                "practice",
+                "lab",
+                "credits",
+                "ects",
+                "is_active"
+              ]
+            }
+          },
+          "references": {
+            "type": "object",
+            "required": [
+              "one_to_one",
+              "one_to_many",
+              "many_to_one"
+            ],
+            "properties": {
+              "one_to_one": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "one_to_many": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "many_to_one": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "electives": {
+            "type": "object",
+            "required": [
+              "area",
+              "non_area",
+              "non_theoretical",
+              "requisite_courses"
+            ],
+            "properties": {
+              "area": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "non_area": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "non_theoretical": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              },
+              "requisite_courses": {
+                "type": "array",
+                "items": {
+                  "type": "object"
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "information",
+          "core",
+          "references",
+          "electives"
         ]
       }
     },
