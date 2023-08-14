@@ -875,6 +875,37 @@
           }
         ]
       }
+    },
+    "/1.0.0/academic/manage/curriculum/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageCurriculumResourcesResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-curriculum-resources",
+        "x-stoplight": {
+          "id": "8hjafro8a81i0"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -13119,6 +13150,259 @@
         "required": [
           "title",
           "content"
+        ]
+      },
+      "AcademicManageCurriculumResourcesResponse": {
+        "type": "object",
+        "x-examples": {
+          "sample": {
+            "elective_names": [
+              {
+                "code": "NTE",
+                "title": "Non Theoretical Elective"
+              },
+              {
+                "code": "AE",
+                "title": "Area elective"
+              },
+              {
+                "code": "NAE",
+                "title": "Non-area elective"
+              },
+              {
+                "code": "RC",
+                "title": "Requisite Courses"
+              }
+            ],
+            "core_types": [
+              {
+                "key": "C",
+                "title": "Core"
+              },
+              {
+                "key": "E",
+                "title": "Elective"
+              }
+            ],
+            "elective_types": [
+              {
+                "key": "R",
+                "title": "Restricted"
+              },
+              {
+                "key": "UR",
+                "title": "Unrestricted"
+              }
+            ],
+            "requisite_types": [
+              {
+                "key": "AR",
+                "title": "Anti Requisite"
+              },
+              {
+                "key": "CR",
+                "title": "Co - Requisite"
+              },
+              {
+                "key": "PR",
+                "title": "Pre - Requisite"
+              }
+            ],
+            "tracks": [
+              {
+                "key": "10401.LAWE",
+                "title": "Law (for engineers)"
+              },
+              {
+                "key": "10401.LAWB",
+                "title": "Law (for Business)"
+              },
+              {
+                "key": "10403.ALE",
+                "title": "Law (for engeneers)"
+              },
+              {
+                "key": "10403.ALB",
+                "title": "Law (for Business)"
+              },
+              {
+                "key": "10107.CS",
+                "title": "Computer Science (for Mathematics and MCM)"
+              },
+              {
+                "key": "10202.PC",
+                "title": "Peace and Conflict"
+              },
+              {
+                "key": "10202.DIR",
+                "title": "Diplomacy and International Relations"
+              },
+              {
+                "key": "10202.IR",
+                "title": "International Relations"
+              },
+              {
+                "key": "10101.AM",
+                "title": "Applied Mathematics"
+              },
+              {
+                "key": "10101.ASAS",
+                "title": "Applied Statistics and Actuarial Sciences"
+              },
+              {
+                "key": "10101.PMAL",
+                "title": "Pure Mathematics/Algebra"
+              },
+              {
+                "key": "10101.PMAN",
+                "title": "Pure Mathematics/Analysis"
+              },
+              {
+                "key": "10301.TDDA",
+                "title": "Teaching design in the digital age"
+              },
+              {
+                "key": "TRACK0",
+                "title": "Main Track"
+              },
+              {
+                "key": "20381.SSN",
+                "title": "Speaking skills and networking"
+              }
+            ],
+            "consent_statuses": [
+              {
+                "id": 0,
+                "title": "Not applicable"
+              },
+              {
+                "id": 1,
+                "title": "Consent of instructors"
+              },
+              {
+                "id": 2,
+                "title": "Consent of department"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "elective_names": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "title"
+              ]
+            }
+          },
+          "core_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "title"
+              ]
+            }
+          },
+          "elective_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "title"
+              ]
+            }
+          },
+          "requisite_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "title"
+              ]
+            }
+          },
+          "tracks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "title"
+              ]
+            }
+          },
+          "consent_statuses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          }
+        },
+        "required": [
+          "elective_names",
+          "core_types",
+          "elective_types",
+          "requisite_types",
+          "tracks",
+          "consent_statuses"
         ]
       }
     },
