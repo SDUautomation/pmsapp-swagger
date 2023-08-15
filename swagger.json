@@ -12899,15 +12899,18 @@
             "items": {
               "type": "object",
               "properties": {
-                "id": {
-                  "type": "integer"
+                "type": {
+                  "type": "integer",
+                  "x-stoplight": {
+                    "id": "xe9uj7wve7lhe"
+                  }
                 },
                 "title": {
                   "type": "string"
                 }
               },
               "required": [
-                "id",
+                "type",
                 "title"
               ]
             }
