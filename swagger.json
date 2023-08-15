@@ -12997,7 +12997,7 @@
               "id": "23qjkhgx4lqsj"
             }
           },
-          "my_post": {
+          "my_posts": {
             "type": "boolean",
             "x-stoplight": {
               "id": "zjm5h06jri090"
