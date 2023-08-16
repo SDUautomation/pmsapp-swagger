@@ -992,6 +992,37 @@
           }
         }
       }
+    },
+    "/1.0.0/profile/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileResourceResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-resources",
+        "x-stoplight": {
+          "id": "ck7xjri5trtdz"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -14220,6 +14251,437 @@
         },
         "required": [
           "type"
+        ]
+      },
+      "ProfileResourceResponse": {
+        "type": "object",
+        "x-examples": {
+          "sample": {
+            "genders": [
+              {
+                "id": 1,
+                "gender": "Female"
+              }
+            ],
+            "languages": [
+              {
+                "id": "KZ",
+                "language": "Kazakh"
+              }
+            ],
+            "language_levels": [
+              {
+                "id": 2,
+                "level": "Pre-Intermediate"
+              }
+            ],
+            "cities": [
+              {
+                "id": 1366,
+                "parent_id": 627,
+                "title": "Taldykorgan"
+              }
+            ],
+            "regions": [
+              {
+                "id": 1366,
+                "parent_id": 627,
+                "title": "Taldykorgan"
+              }
+            ],
+            "provinces": [
+              {
+                "id": 1366,
+                "parent_id": 627,
+                "title": "Taldykorgan"
+              }
+            ],
+            "countries": [
+              {
+                "id": 1366,
+                "parent_id": 627,
+                "title": "Taldykorgan"
+              }
+            ],
+            "companies": [
+              {
+                "id": 2371,
+                "title": "Center for Korean Studies"
+              }
+            ],
+            "employment_types": [
+              {
+                "id": 1,
+                "title": "Full-time"
+              }
+            ],
+            "location_types": [
+              {
+                "id": 1,
+                "title": "On-site"
+              }
+            ],
+            "contact_types": [
+              {
+                "type_id": 1,
+                "title": "87788829586"
+              }
+            ],
+            "edu_levels": [
+              {
+                "code": "B",
+                "title": "Bachelor"
+              }
+            ],
+            "journals": [
+              {
+                "id": 2371,
+                "title": "Center for Korean Studies"
+              }
+            ],
+            "conferences": [
+              {
+                "id": 2371,
+                "title": "Center for Korean Studies"
+              }
+            ],
+            "book_types": [
+              {
+                "id": 1,
+                "title": "Textbook"
+              }
+            ],
+            "organizations": [
+              {
+                "id": 2371,
+                "title": "Center for Korean Studies"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "genders": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "gender": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "gender"
+              ]
+            }
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "language"
+              ]
+            }
+          },
+          "language_levels": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "level": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "level"
+              ]
+            }
+          },
+          "cities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "parent_id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "parent_id",
+                "title"
+              ]
+            }
+          },
+          "regions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "parent_id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "parent_id",
+                "title"
+              ]
+            }
+          },
+          "provinces": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "parent_id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "parent_id",
+                "title"
+              ]
+            }
+          },
+          "countries": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "parent_id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "parent_id",
+                "title"
+              ]
+            }
+          },
+          "companies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "employment_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "location_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "contact_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type_id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type_id",
+                "title"
+              ]
+            }
+          },
+          "edu_levels": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "title"
+              ]
+            }
+          },
+          "journals": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "conferences": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "book_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "organizations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          }
+        },
+        "required": [
+          "genders",
+          "languages",
+          "language_levels",
+          "cities",
+          "regions",
+          "provinces",
+          "countries",
+          "companies",
+          "employment_types",
+          "location_types",
+          "contact_types",
+          "edu_levels",
+          "journals",
+          "conferences",
+          "book_types",
+          "organizations"
         ]
       }
     },
