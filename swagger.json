@@ -937,6 +937,61 @@
           }
         }
       }
+    },
+    "/1.0.0/profile/addresses": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileAddressesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-addresses",
+        "x-stoplight": {
+          "id": "potlhokjtyoue"
+        },
+        "parameters": [],
+        "description": "",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileAddressesGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "parameters": [],
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-addresses",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "cyj7f0l5073ml"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileAddressesPutRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -13185,7 +13240,8 @@
         "required": [
           "title",
           "content"
-        ]
+        ],
+        "title": ""
       },
       "AdministrativeMessageBoardPostsPutRequest": {
         "type": "object",
@@ -14082,6 +14138,85 @@
           "core",
           "references",
           "electives"
+        ]
+      },
+      "ProfileAddressesGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "sample": {
+            "country": 627,
+            "province": 825,
+            "region": 875,
+            "city": 3,
+            "address_line": "Кетпен, М.Жалилов,  Үй:23",
+            "type": "Current address"
+          }
+        },
+        "properties": {
+          "country": {
+            "type": "integer"
+          },
+          "province": {
+            "type": "integer"
+          },
+          "region": {
+            "type": "integer"
+          },
+          "city": {
+            "type": "integer"
+          },
+          "address_line": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "country",
+          "province",
+          "region",
+          "city",
+          "address_line",
+          "type"
+        ],
+        "title": ""
+      },
+      "ProfileAddressesPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "title": "mkr Asyl Arman",
+            "address_id": 118
+          }
+        },
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "address_id": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "title",
+          "address_id"
+        ]
+      },
+      "ProfileAddressesGetRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "type": "current"
+          }
+        },
+        "properties": {
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type"
         ]
       }
     },
