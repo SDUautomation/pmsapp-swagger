@@ -971,16 +971,16 @@
         }
       },
       "parameters": [],
-      "post": {
+      "put": {
         "summary": "",
-        "operationId": "post-1.0.0-profile-addresses",
+        "operationId": "put-1.0.0-profile-addresses",
         "responses": {
           "200": {
             "description": "OK"
           }
         },
         "x-stoplight": {
-          "id": "cyj7f0l5073ml"
+          "id": "s0dxu015uelwh"
         },
         "requestBody": {
           "content": {
