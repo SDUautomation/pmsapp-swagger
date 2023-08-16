@@ -12998,7 +12998,10 @@
             }
           },
           "my_posts": {
-            "type": "boolean",
+            "type": [
+              "boolean",
+              "number"
+            ],
             "x-stoplight": {
               "id": "zjm5h06jri090"
             }
