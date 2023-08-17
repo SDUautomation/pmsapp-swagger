@@ -14412,19 +14412,24 @@
         },
         "properties": {
           "country": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "province": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "region": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "city": {
-            "type": "integer"
+            "type": "integer",
+            "nullable": true
           },
           "address_line": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "type": {
             "type": "string"
