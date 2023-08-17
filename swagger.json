@@ -1117,6 +1117,105 @@
           }
         }
       }
+    },
+    "/1.0.0/knowledge/manage/categories": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KnowledgeManageCategoriesGetResponse"
+                }
+              }
+            },
+            "headers": {}
+          }
+        },
+        "operationId": "get-1.0.0-knowledge-manage-categories",
+        "x-stoplight": {
+          "id": "c33jc3tlyrqhs"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnowledgeManageCategoriesGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-knowledge-manage-categories",
+        "responses": {
+          "201": {
+            "description": "Category is successfully created."
+          }
+        },
+        "x-stoplight": {
+          "id": "qvfo7asamn0zr"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnowledgeManageCategoriesPostRequest"
+              }
+            }
+          }
+        },
+        "description": ""
+      }
+    },
+    "/1.0.0/knowledge/manage/categories/{category}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "category",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-knowledge-manage-categories-category",
+        "responses": {
+          "200": {
+            "description": "Category is successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "ua76c07mr5j3s"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnowledgeManageCategoriesPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-knowledge-manage-categories-category",
+        "responses": {
+          "200": {
+            "description": "Category is successfully deleted."
+          }
+        },
+        "x-stoplight": {
+          "id": "1zl11uvhpgv20"
+        }
+      }
     }
   },
   "components": {
@@ -15335,6 +15434,166 @@
           "statistics",
           "related",
           "popular"
+        ]
+      },
+      "KnowledgeManageCategoriesGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 1,
+            "from": 1,
+            "per_page": 15,
+            "current_page": 1,
+            "last_page": 1,
+            "categories": [
+              {
+                "id": 7,
+                "uuid": "309d315f-e17a-4641-a38f-baf34dfc0d0d",
+                "language_id": 1,
+                "language_short": "en",
+                "title": "cat2",
+                "posts_count": 1,
+                "meta": "meta",
+                "label": "label",
+                "details": "details",
+                "created_at": "2023-03-27 13:24:05",
+                "updated_at": "2023-03-27 13:24:06"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "language_id": {
+                  "type": "integer"
+                },
+                "language_short": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "posts_count": {
+                  "type": "integer"
+                },
+                "meta": {
+                  "type": "string"
+                },
+                "label": {
+                  "type": "string"
+                },
+                "details": {
+                  "type": "string"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "language_id",
+                "language_short",
+                "title",
+                "posts_count",
+                "meta",
+                "label",
+                "details",
+                "created_at",
+                "updated_at"
+              ]
+            }
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "categories"
+        ]
+      },
+      "KnowledgeManageCategoriesGetRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "per_page": 123412,
+            "offset": 12
+          }
+        },
+        "properties": {
+          "per_page": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "per_page",
+          "offset"
+        ]
+      },
+      "KnowledgeManageCategoriesPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "language_id": 3,
+            "title": "Academic operations",
+            "meta": "Ability to process.",
+            "label": "Here are a few of the experiments.",
+            "details": "The feature was quietly included in a list of additions."
+          }
+        },
+        "properties": {
+          "language_id": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "meta": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "language_id",
+          "title"
         ]
       }
     },
