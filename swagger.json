@@ -1216,6 +1216,37 @@
           "id": "1zl11uvhpgv20"
         }
       }
+    },
+    "/1.0.0/knowledge/manage/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KnowledgeManageResourceResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-knowledge-manage-resources",
+        "x-stoplight": {
+          "id": "x8em6og1bcbr4"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnowledgeManageResourceRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -15594,6 +15625,206 @@
         "required": [
           "language_id",
           "title"
+        ]
+      },
+      "KnowledgeManageResourceRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "modules": [
+              "baby"
+            ]
+          }
+        },
+        "properties": {
+          "modules": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "modules"
+        ]
+      },
+      "KnowledgeManageResourceResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "tags": [
+              {
+                "id": 187,
+                "name": "#academic"
+              },
+              {
+                "id": 189,
+                "name": "#grades"
+              }
+            ],
+            "categories": [
+              {
+                "id": 7,
+                "uuid": "309d315f-e17a-4641-a38f-baf34dfc0d0d",
+                "title": "cat2",
+                "description": "details",
+                "posts_count": 1,
+                "language_title": "en-EN"
+              }
+            ],
+            "types": [
+              {
+                "id": 3,
+                "uuid": "75c610e6-0e28-4559-8644-dfc42ee2be8e",
+                "description": "Guidelines of using website",
+                "translation": "это заявление  с помощью которого определяется курс действий. "
+              },
+              {
+                "id": 4,
+                "uuid": "2b6a7699-49bb-4444-b195-bfb9aa901c6e",
+                "description": "Frequently ask questions",
+                "translation": "собрание часто задаваемых вопросов по какой-либо теме и ответов на них"
+              },
+              {
+                "id": 5,
+                "uuid": "7b25b455-e13d-4ebb-841d-b88e3b81e95d",
+                "description": "Tutorial of using academic, administrative, other features (mechanism) of PMS portal",
+                "translation": "Учебное пособие в образовании"
+              }
+            ],
+            "languages": [
+              {
+                "id": 1,
+                "uuid": "50adce1e-2e97-465a-bec1-9f0485b7f4c8",
+                "short": "en",
+                "long": "en-EN"
+              },
+              {
+                "id": 2,
+                "uuid": "466a9446-829c-49bc-ae83-08d1b21e2c9e",
+                "short": "ru",
+                "long": "ru-RU"
+              },
+              {
+                "id": 3,
+                "uuid": "234c4e5f-0b59-4659-ba07-0a990cd50541",
+                "short": "kz",
+                "long": "kz-KZ"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "name"
+              ]
+            }
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "posts_count": {
+                  "type": "integer"
+                },
+                "language_title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "title",
+                "description",
+                "posts_count",
+                "language_title"
+              ]
+            }
+          },
+          "types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "translation": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "description",
+                "translation"
+              ]
+            }
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "short": {
+                  "type": "string"
+                },
+                "long": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "short",
+                "long"
+              ]
+            }
+          }
+        },
+        "required": [
+          "tags",
+          "categories",
+          "types",
+          "languages"
         ]
       }
     },
