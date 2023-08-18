@@ -14428,8 +14428,7 @@
             "nullable": true
           },
           "address_line": {
-            "type": "string",
-            "nullable": true
+            "type": "string"
           },
           "type": {
             "type": "string"
@@ -14442,8 +14441,7 @@
           "city",
           "address_line",
           "type"
-        ],
-        "title": ""
+        ]
       },
       "ProfileAddressesPutRequest": {
         "type": "object",
