@@ -1119,36 +1119,6 @@
       }
     },
     "/1.0.0/knowledge/manage/categories": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/KnowledgeManageCategoriesGetResponse"
-                }
-              }
-            },
-            "headers": {}
-          }
-        },
-        "operationId": "get-1.0.0-knowledge-manage-categories",
-        "x-stoplight": {
-          "id": "c33jc3tlyrqhs"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnowledgeManageCategoriesGetRequest"
-              }
-            }
-          }
-        }
-      },
       "post": {
         "summary": "",
         "operationId": "post-1.0.0-knowledge-manage-categories",
@@ -1170,6 +1140,34 @@
           }
         },
         "description": ""
+      },
+      "get": {
+        "summary": "",
+        "operationId": "get-1.0.0-knowledge-manage-categories",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KnowledgeManageCategoriesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "u238wbix8n7uj"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnowledgeManageCategoriesGetRequest"
+              }
+            }
+          }
+        }
       }
     },
     "/1.0.0/knowledge/manage/categories/{category}": {
