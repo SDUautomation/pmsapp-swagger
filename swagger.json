@@ -1245,6 +1245,124 @@
           }
         }
       }
+    },
+    "/1.0.0/knowledge/manage/posts": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KnowledgeManagePostsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-knowledge-manage-posts",
+        "x-stoplight": {
+          "id": "8h3j2mkibk0d5"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnowledgeManagePostsGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-knowledge-manage-posts",
+        "responses": {
+          "201": {
+            "description": "Post is successfully created."
+          }
+        },
+        "x-stoplight": {
+          "id": "bwxptkohai7me"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnowledgeManagePostsPostRequest"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/1.0.0/knowledge/manage/posts/{post}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "post",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KnowledgeManagePostsSingleGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-knowledge-manage-posts-post",
+        "x-stoplight": {
+          "id": "hyamgd8sdkvdf"
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-knowledge-manage-posts-post",
+        "responses": {
+          "200": {
+            "description": "Post is successfully deleted."
+          }
+        },
+        "x-stoplight": {
+          "id": "e9w9ja0kk3ups"
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-knowledge-manage-posts-post",
+        "responses": {
+          "200": {
+            "description": "Post is successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "xua6n5x2dt4fp"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnowledgeManagePostsPostRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -15826,6 +15944,501 @@
           "categories",
           "types",
           "languages"
+        ]
+      },
+      "KnowledgeManagePostsGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 1,
+            "from": 1,
+            "per_page": 15,
+            "current_page": 1,
+            "last_page": 1,
+            "posts": [
+              {
+                "id": 182,
+                "uuid": "99b94128-d8fc-4071-b09f-290261bb07de",
+                "title": "Testing title post from 16:06 2023-07-20",
+                "description": "Description",
+                "details": "details",
+                "meta": "Meta information",
+                "category_title": "cat2",
+                "category_uuid": "309d315f-e17a-4641-a38f-baf34dfc0d0d",
+                "published": 1,
+                "contents_count": 2,
+                "views": 97,
+                "created_at": "2023-07-24 14:36:51",
+                "updated_at": "2023-08-20 09:53:47",
+                "tags": [
+                  {
+                    "id": 187,
+                    "tag": "#academic"
+                  },
+                  {
+                    "id": 189,
+                    "tag": "#grades"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "posts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "details": {
+                  "type": "string"
+                },
+                "meta": {
+                  "type": "string"
+                },
+                "category_title": {
+                  "type": "string"
+                },
+                "category_uuid": {
+                  "type": "string"
+                },
+                "published": {
+                  "type": "integer"
+                },
+                "contents_count": {
+                  "type": "integer"
+                },
+                "views": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "tags": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "tag": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "tag"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "title",
+                "description",
+                "details",
+                "meta",
+                "category_title",
+                "category_uuid",
+                "published",
+                "contents_count",
+                "views",
+                "created_at",
+                "updated_at",
+                "tags"
+              ]
+            }
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "posts"
+        ]
+      },
+      "KnowledgeManagePostsGetRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "per_page": 21,
+            "offset": 12
+          }
+        },
+        "properties": {
+          "per_page": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "per_page",
+          "offset"
+        ]
+      },
+      "KnowledgeManagePostsPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "category_uuid": "309d315f-e17a-4641-a38f-baf34dfc0d0d",
+            "title": "Testing title post from 16:06 2023-07-20",
+            "description": "Description",
+            "published": true,
+            "meta": "Meta information",
+            "details": "details",
+            "tags": [
+              {
+                "tag": "#academic"
+              },
+              {
+                "tag": "#grades"
+              }
+            ],
+            "contents": [
+              {
+                "type_id": 5,
+                "version": "1.0.2",
+                "image": "/var/www/images/slang.png",
+                "video": "/var/www/videos/slang.mp4",
+                "video_type": "MPEG",
+                "content": "Im developing a Laravel API that will host and manage the data for a mobile application.",
+                "active": true,
+                "visible": true,
+                "alert_type": "Nothing",
+                "alert_text": "Good Morning!"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "category_uuid": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "published": {
+            "type": "boolean"
+          },
+          "meta": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "tag": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "tag"
+              ]
+            }
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type_id": {
+                  "type": "integer"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "video": {
+                  "type": "string"
+                },
+                "video_type": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "visible": {
+                  "type": "boolean"
+                },
+                "alert_type": {
+                  "type": "string"
+                },
+                "alert_text": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "type_id",
+                "version",
+                "image",
+                "video",
+                "video_type",
+                "content",
+                "active",
+                "visible",
+                "alert_type",
+                "alert_text"
+              ]
+            }
+          }
+        },
+        "required": [
+          "category_uuid",
+          "title",
+          "description",
+          "published",
+          "meta",
+          "details",
+          "tags",
+          "contents"
+        ]
+      },
+      "KnowledgeManagePostsSingleGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 182,
+            "uuid": "99b94128-d8fc-4071-b09f-290261bb07de",
+            "title": "Testing title post from 16:06 2023-07-20",
+            "description": "Description",
+            "details": "details",
+            "meta": "Meta information",
+            "category_title": "cat2",
+            "category_uuid": "309d315f-e17a-4641-a38f-baf34dfc0d0d",
+            "published": 1,
+            "contents_count": 2,
+            "views": 98,
+            "created_at": "2023-07-24 14:36:51",
+            "updated_at": "2023-08-20 10:17:10",
+            "tags": [
+              {
+                "id": 187,
+                "tag": "#academic"
+              },
+              {
+                "id": 189,
+                "tag": "#grades"
+              }
+            ],
+            "contents": [
+              {
+                "id": 123,
+                "uuid": "99b94128-e4e8-4d1a-bd46-67a219e12f18",
+                "type_uuid": "7b25b455-e13d-4ebb-841d-b88e3b81e95d",
+                "type_title": "Tutorials",
+                "image": "/var/www/images/slang.png",
+                "video": "/var/www/videos/slang.mp4",
+                "video_type": "MPEG",
+                "content": "Im developing a Laravel API that will host and manage the data for a mobile application.",
+                "active": true,
+                "visible": 1,
+                "version": "1.0.2",
+                "alert_type": "Nothing",
+                "alert_text": "Good Morning!"
+              },
+              {
+                "id": 124,
+                "uuid": "99b94147-099d-4d66-93b0-e1c5b9eef3cb",
+                "type_uuid": "7b25b455-e13d-4ebb-841d-b88e3b81e95d",
+                "type_title": "Tutorials",
+                "image": "/var/www/images/slang.png",
+                "video": "/var/www/videos/slang.mp4",
+                "video_type": "MPEG",
+                "content": "Im developing a Laravel API that will host and manage the data for a mobile application.",
+                "active": true,
+                "visible": 1,
+                "version": "1.0.2",
+                "alert_type": "Nothing",
+                "alert_text": "Good Morning!"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "uuid": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "meta": {
+            "type": "string"
+          },
+          "category_title": {
+            "type": "string"
+          },
+          "category_uuid": {
+            "type": "string"
+          },
+          "published": {
+            "type": "integer"
+          },
+          "contents_count": {
+            "type": "integer"
+          },
+          "views": {
+            "type": "integer"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "tag": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "tag"
+              ]
+            }
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "type_uuid": {
+                  "type": "string"
+                },
+                "type_title": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "video": {
+                  "type": "string"
+                },
+                "video_type": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "visible": {
+                  "type": "integer"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "alert_type": {
+                  "type": "string"
+                },
+                "alert_text": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "type_uuid",
+                "type_title",
+                "image",
+                "video",
+                "video_type",
+                "content",
+                "active",
+                "visible",
+                "version",
+                "alert_type",
+                "alert_text"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "uuid",
+          "title",
+          "description",
+          "details",
+          "meta",
+          "category_title",
+          "category_uuid",
+          "published",
+          "contents_count",
+          "views",
+          "created_at",
+          "updated_at",
+          "tags",
+          "contents"
         ]
       }
     },
