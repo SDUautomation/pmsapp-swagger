@@ -16187,10 +16187,12 @@
             "details": "details",
             "tags": [
               {
-                "id": 2531126
+                "id": 2531126,
+                "tag": "as"
               },
               {
-                "id": 214
+                "id": 214,
+                "tag": "as"
               }
             ],
             "contents": [
@@ -16235,10 +16237,17 @@
               "properties": {
                 "id": {
                   "type": "integer"
+                },
+                "tag": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "zmaejjjwfpsvi"
+                  }
                 }
               },
               "required": [
-                "id"
+                "id",
+                "tag"
               ]
             }
           },
