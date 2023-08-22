@@ -16187,10 +16187,10 @@
             "details": "details",
             "tags": [
               {
-                "tag": "#academic"
+                "id": 2531126
               },
               {
-                "tag": "#grades"
+                "id": 214
               }
             ],
             "contents": [
@@ -16233,12 +16233,12 @@
             "items": {
               "type": "object",
               "properties": {
-                "tag": {
-                  "type": "string"
+                "id": {
+                  "type": "integer"
                 }
               },
               "required": [
-                "tag"
+                "id"
               ]
             }
           },
