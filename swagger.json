@@ -1363,6 +1363,69 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/information/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicInformationResourcesResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-information-resources",
+        "x-stoplight": {
+          "id": "lhqr8ddnpxgx2"
+        },
+        "parameters": [],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicInformationResourcesRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/information/exam-dates": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicInformationExamDatesResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-information-exam-dates",
+        "x-stoplight": {
+          "id": "w6w27rs4rcuqk"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicInformationExamDatesRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -16439,6 +16502,368 @@
           "updated_at",
           "tags",
           "contents"
+        ]
+      },
+      "AcademicInformationResourcesRequest": {
+        "title": "AcademicInformationResourcesRequest",
+        "x-stoplight": {
+          "id": "hs7a4z9q9ck3n"
+        },
+        "type": "object",
+        "properties": {
+          "modules": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "h0pgsg232klb9"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "aec86kaxj6316"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "modules"
+        ]
+      },
+      "AcademicInformationResourcesResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "section_types": [
+              "N"
+            ],
+            "assess_types": [
+              "FIN"
+            ],
+            "schedule": {
+              "specialities": [
+                {
+                  "program_code": "10304",
+                  "language": "English",
+                  "speciality_code": "5B020700",
+                  "title": "Menegement",
+                  "department_id": 1,
+                  "terms": 8
+                }
+              ],
+              "rooms": [
+                {
+                  "id": 1,
+                  "title": "D117",
+                  "building_id": "MAIN"
+                }
+              ],
+              "buildings": [
+                {
+                  "id": "MAIN",
+                  "title": "Main building"
+                }
+              ]
+            },
+            "application_statuses": [
+              {
+                "id": 1,
+                "title": "APPLIED"
+              }
+            ],
+            "elective_names": [
+              {
+                "code": "AE",
+                "title": "Area elective"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "section_types": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "assess_types": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "schedule": {
+            "type": "object",
+            "required": [
+              "specialities",
+              "rooms",
+              "buildings"
+            ],
+            "properties": {
+              "specialities": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "program_code": {
+                      "type": "string"
+                    },
+                    "language": {
+                      "type": "string"
+                    },
+                    "speciality_code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "department_id": {
+                      "type": "integer"
+                    },
+                    "terms": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "program_code",
+                    "language",
+                    "speciality_code",
+                    "title",
+                    "department_id",
+                    "terms"
+                  ]
+                }
+              },
+              "rooms": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "building_id": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "title",
+                    "building_id"
+                  ]
+                }
+              },
+              "buildings": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id"
+                  ]
+                }
+              }
+            }
+          },
+          "application_statuses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "elective_names": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "title"
+              ]
+            }
+          }
+        }
+      },
+      "AcademicInformationExamDatesRequest": {
+        "title": "AcademicInformationExamDatesRequest",
+        "x-stoplight": {
+          "id": "jk8wdhroqw768"
+        },
+        "type": "object",
+        "properties": {
+          "per_page": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "c4sgok7olavt9"
+            }
+          },
+          "offset": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "f6cc0l5wtaefu"
+            }
+          },
+          "department_id": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "k7daynee6grqc"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "h4vj9oo7h8p9e"
+            }
+          },
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "do9e16fvnon8y"
+            }
+          },
+          "instructor_id": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "ncczdewgdhq5d"
+            }
+          },
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "tvk4fdkpkw4d9"
+            }
+          },
+          "section_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "4t0g2zsi4fe8l"
+            }
+          }
+        },
+        "required": [
+          "per_page",
+          "offset",
+          "department_id",
+          "year",
+          "term"
+        ]
+      },
+      "AcademicInformationExamDatesResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 40,
+            "from": 1,
+            "per_page": 15,
+            "current_page": 2,
+            "last_page": 3,
+            "exam_dates": [
+              {
+                "code": "MAT 251",
+                "section": "01",
+                "type": "N",
+                "title": "Probability and Mathematical Statictics",
+                "assessment": "FIN",
+                "exam_date": "2022-12-29",
+                "close_date": "2023-01-06",
+                "instructor": "Larissa Bazarbayeva"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "exam_dates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "section": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "assessment": {
+                  "type": "string"
+                },
+                "exam_date": {
+                  "type": "string"
+                },
+                "close_date": {
+                  "type": "string"
+                },
+                "instructor": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "section",
+                "type",
+                "title",
+                "assessment",
+                "exam_date",
+                "close_date",
+                "instructor"
+              ]
+            }
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "exam_dates"
         ]
       }
     },
