@@ -1426,6 +1426,37 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/information/schedules": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicInformationScheduleResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-information-schedules",
+        "x-stoplight": {
+          "id": "30wzg2k38j5mg"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicInformationScheduleRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -16873,6 +16904,136 @@
           "current_page",
           "last_page",
           "exam_dates"
+        ]
+      },
+      "AcademicInformationScheduleRequest": {
+        "title": "AcademicInformationScheduleRequest",
+        "x-stoplight": {
+          "id": "g0asa026wqjrj"
+        },
+        "type": "object",
+        "properties": {
+          "year": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "ao40wsfiq8pky"
+            }
+          },
+          "term": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "udg58w3kyui45"
+            }
+          },
+          "schedule_by": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "40yxw4khgmwzi"
+            }
+          },
+          "filter": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "0kx5uwg4agd3i"
+            }
+          }
+        },
+        "required": [
+          "year",
+          "term",
+          "schedule_by",
+          "filter"
+        ]
+      },
+      "AcademicInformationScheduleResponse": {
+        "type": "object",
+        "x-examples": {
+          "sample": {
+            "course_code": "CSS 101",
+            "course_instructor": "Arsentiy Zhunussov",
+            "course_title": "Algorithms and Programming",
+            "course_section": "02",
+            "course_type": "N",
+            "day": 1,
+            "start_time": "09:00",
+            "end_time": "09:50",
+            "room": "D117",
+            "department": "Computer Science",
+            "speciality": "Computer Science",
+            "course_language": "EN",
+            "course_credits": 3,
+            "course_ects": 5,
+            "course_quota": 25,
+            "students": 20
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "course_instructor": {
+            "type": "string"
+          },
+          "course_title": {
+            "type": "string"
+          },
+          "course_section": {
+            "type": "string"
+          },
+          "course_type": {
+            "type": "string"
+          },
+          "day": {
+            "type": "integer"
+          },
+          "start_time": {
+            "type": "string"
+          },
+          "end_time": {
+            "type": "string"
+          },
+          "room": {
+            "type": "string"
+          },
+          "department": {
+            "type": "string"
+          },
+          "speciality": {
+            "type": "string"
+          },
+          "course_language": {
+            "type": "string"
+          },
+          "course_credits": {
+            "type": "integer"
+          },
+          "course_ects": {
+            "type": "integer"
+          },
+          "course_quota": {
+            "type": "integer"
+          },
+          "students": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "course_code",
+          "course_instructor",
+          "course_title",
+          "course_section",
+          "course_type",
+          "day",
+          "start_time",
+          "end_time",
+          "room",
+          "department",
+          "speciality",
+          "course_language",
+          "course_credits",
+          "course_ects",
+          "course_quota",
+          "students"
         ]
       }
     },
