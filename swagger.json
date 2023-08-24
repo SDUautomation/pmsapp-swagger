@@ -12717,7 +12717,7 @@
       "AdministrativeGateEntryResponse": {
         "type": "array",
         "x-examples": {
-          "Example 1": [
+          "sample": [
             {
               "full_name": "Aibolat Batyrov",
               "user_token": "10939",
