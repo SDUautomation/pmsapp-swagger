@@ -8541,134 +8541,23 @@
       "AcademicResourceResponse": {
         "type": "object",
         "x-examples": {
-          "sample": {
+          "Example 1": {
             "departments": [
               {
-                "id": 1241,
-                "title": "Continuing Education Center",
-                "code": "10029",
-                "year": 2023,
-                "children": []
-              },
-              {
-                "id": 1270,
-                "title": "SDU Business school",
-                "code": "F_ECO",
-                "year": 2023,
-                "children": [
-                  {
-                    "id": 1222,
-                    "title": "Department of Economics and Business",
-                    "code": "DEP_ECO_BUS",
-                    "year": 2023,
-                    "children": []
-                  }
-                ]
-              },
-              {
-                "id": 1271,
-                "title": "Faculty of education and humanities",
-                "code": "F_PHIL",
-                "year": 2023,
-                "children": [
-                  {
-                    "id": 1238,
-                    "title": "Department of Pedagogy of Natural sciences",
-                    "code": "DEP_PED",
-                    "year": 2023,
-                    "children": []
-                  },
-                  {
-                    "id": 1240,
-                    "title": "Department of Language Education",
-                    "code": "DEP_LANG_EDU",
-                    "year": 2023,
-                    "children": []
-                  },
-                  {
-                    "id": 1293,
-                    "title": "Department of humanities",
-                    "code": "DEP_HUMANITIES",
-                    "year": 2023,
-                    "children": []
-                  }
-                ]
-              },
-              {
-                "id": 1272,
-                "title": "Faculty of Law and Social Sciences",
-                "code": "F_LAW",
-                "year": 2023,
-                "children": [
-                  {
-                    "id": 1273,
-                    "title": "Department of Social Sciences",
-                    "code": "DEP_SOC_SCI",
-                    "year": 2023,
-                    "children": []
-                  },
-                  {
-                    "id": 1274,
-                    "title": "Department of Jurisprudence",
-                    "code": "DEP_JURIS",
-                    "year": 2023,
-                    "children": []
-                  }
-                ]
-              },
-              {
-                "id": 1275,
-                "title": "Center for Multidisciplinary Education",
-                "code": "MDE_CENTER",
-                "year": 2023,
-                "children": []
-              },
-              {
-                "id": 1278,
-                "title": "Faculty of Engineering and Natural Sciences",
-                "code": "F_ENG",
-                "year": 2023,
-                "children": [
-                  {
-                    "id": 1223,
-                    "title": "Department of Computer Sciences",
-                    "code": "DEP_COMP_SCI",
-                    "year": 2023,
-                    "children": []
-                  },
-                  {
-                    "id": 1269,
-                    "title": "Department of Mathematics and Natural Sciences",
-                    "code": "DEP_MATH",
-                    "year": 2023,
-                    "children": []
-                  },
-                  {
-                    "id": 1291,
-                    "title": "Department of Information systems",
-                    "code": "DEP_INF_SYS",
-                    "year": 2023,
-                    "children": []
-                  }
-                ]
-              },
-              {
-                "id": 1281,
-                "title": "Center for Professional Development and Innovation",
-                "code": "CPDI",
-                "year": 2023,
-                "children": []
+                "id": 1,
+                "parent_id": 828,
+                "title": "Department of Humanities",
+                "code": "DEP_HUMANITIES",
+                "year": 2022
               }
             ],
             "instructors": [
               {
-                "id": 10559,
-                "username": "aliya.adilbayeva",
-                "full_name": "Aliya Adilbayeva",
+                "id": 10001,
+                "username": "arsentiy.zhunussov",
+                "full_name": "Arsentiy Zhunussov",
                 "departments": [
-                  1269,
-                  null,
-                  1278
+                  1
                 ]
               }
             ]
@@ -8683,6 +8572,9 @@
                 "id": {
                   "type": "integer"
                 },
+                "parent_id": {
+                  "type": "integer"
+                },
                 "title": {
                   "type": "string"
                 },
@@ -8691,47 +8583,14 @@
                 },
                 "year": {
                   "type": "integer"
-                },
-                "children": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "code": {
-                        "type": "string"
-                      },
-                      "year": {
-                        "type": "integer"
-                      },
-                      "children": {
-                        "type": "array",
-                        "items": {
-                          "type": "object"
-                        }
-                      }
-                    },
-                    "required": [
-                      "id",
-                      "title",
-                      "code",
-                      "year",
-                      "children"
-                    ]
-                  }
                 }
               },
               "required": [
                 "id",
+                "parent_id",
                 "title",
                 "code",
-                "year",
-                "children"
+                "year"
               ]
             }
           },
