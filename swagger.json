@@ -1571,6 +1571,37 @@
           "id": "4ydr35hgoczrn"
         }
       }
+    },
+    "/1.0.0/academic/information/syllabuses": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicInformationSyllabusesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-information-syllabuses",
+        "x-stoplight": {
+          "id": "u1ghtjfrp3e7b"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicInformationSyllabusesGetRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -17556,6 +17587,419 @@
           "content",
           "from",
           "receives"
+        ]
+      },
+      "AcademicInformationSyllabusesGetRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "year": 12312,
+            "per_page": 12124,
+            "offset": 1,
+            "department_id": 12,
+            "course_name": "FUnad",
+            "course_code": "askFMK124",
+            "editor": 123142
+          }
+        },
+        "properties": {
+          "year": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "department_id": {
+            "type": "integer"
+          },
+          "course_name": {
+            "type": "string"
+          },
+          "course_code": {
+            "type": "string"
+          },
+          "editor": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "year",
+          "per_page",
+          "offset",
+          "department_id"
+        ]
+      },
+      "AcademicInformationSyllabusesGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 96,
+            "from": 1,
+            "per_page": 15,
+            "current_page": 1,
+            "last_page": 7,
+            "syllabuses": [
+              {
+                "course": {
+                  "editor": "Meraryslan Meraliyev",
+                  "code": "CSS 634",
+                  "title": "Deep Learning",
+                  "credits": 3,
+                  "ects": 5,
+                  "titles": [
+                    "Deep Learning",
+                    "Терең оқыту",
+                    "Глубокое обучение"
+                  ],
+                  "department_id": 973
+                },
+                "year": 2022,
+                "status": 4,
+                "language": "EN"
+              },
+              {
+                "course": {
+                  "editor": "Selcuk Cankurt",
+                  "code": "INF 337",
+                  "title": "Deep Learning",
+                  "credits": 3,
+                  "ects": 5,
+                  "titles": [
+                    "Deep Learning",
+                    "Терең білім алу",
+                    "Глубокое обучение"
+                  ],
+                  "department_id": 973
+                },
+                "year": 2022,
+                "status": 4,
+                "language": "EN"
+              },
+              {
+                "course": {
+                  "editor": "Cemil Turan",
+                  "code": "CSS 502",
+                  "title": "Methods of Writing MSc Thesis",
+                  "credits": 3,
+                  "ects": 5,
+                  "titles": [
+                    "Methods of Writing MSc Thesis",
+                    "MSc диссертация жазу үшін әдістері",
+                    "Методы написания MSc диссертации"
+                  ],
+                  "department_id": 973
+                },
+                "year": 2022,
+                "status": 4,
+                "language": "EN"
+              },
+              {
+                "course": {
+                  "editor": "Azamat Serek",
+                  "code": "CSS 220",
+                  "title": "Advanced Algorithms",
+                  "credits": 3,
+                  "ects": 5,
+                  "titles": [
+                    "Advanced Algorithms",
+                    "Терендетілген алгоритмдер",
+                    "Продвинутые алгоритмы"
+                  ],
+                  "department_id": 973
+                },
+                "year": 2022,
+                "status": 4,
+                "language": "EN"
+              },
+              {
+                "course": {
+                  "editor": "Zhumaniyaz Mamatnabiyev",
+                  "code": "CSS 641",
+                  "title": "IoT in Industry",
+                  "credits": 3,
+                  "ects": 5,
+                  "titles": [
+                    "IoT in Industry",
+                    "Өнеркәсіптегі IoT",
+                    "IoT в индустрии"
+                  ],
+                  "department_id": 973
+                },
+                "year": 2022,
+                "status": 4,
+                "language": "EN"
+              },
+              {
+                "course": {
+                  "editor": "Marat Urmanov",
+                  "code": "CSS 223",
+                  "title": "C# Object Oriented Programming",
+                  "credits": 3,
+                  "ects": 5,
+                  "titles": [
+                    "C# Object Oriented Programming",
+                    "С# Объектілі бағытталған бағдарламалау",
+                    "С# Объектно-ориентированное программирование"
+                  ],
+                  "department_id": 973
+                },
+                "year": 2022,
+                "status": 4,
+                "language": "EN"
+              },
+              {
+                "course": {
+                  "editor": "Perizat Yessenova",
+                  "code": "CSS 206",
+                  "title": "Database Management Systems 1",
+                  "credits": 3,
+                  "ects": 5,
+                  "titles": [
+                    "Database Management Systems 1",
+                    "Деректер қорын басқару жүйелері 1",
+                    "Системы управления базами данных 1"
+                  ],
+                  "department_id": 973
+                },
+                "year": 2022,
+                "status": 4,
+                "language": "EN"
+              },
+              {
+                "course": {
+                  "editor": "Aziza Aipenova",
+                  "code": "CSS 330",
+                  "title": "Data wrangling and visualization",
+                  "credits": 3,
+                  "ects": 5,
+                  "titles": [
+                    "Data wrangling and visualization",
+                    "Мәліметтерді өңдеу және бейнелеу",
+                    "Обработка данных и визуализация"
+                  ],
+                  "department_id": 973
+                },
+                "year": 2022,
+                "status": 1,
+                "language": "EN"
+              },
+              {
+                "course": {
+                  "editor": "Zhumaniyaz Mamatnabiyev",
+                  "code": "CSS 514",
+                  "title": "Advanced Digital Design",
+                  "credits": 3,
+                  "ects": 5,
+                  "titles": [
+                    "Advanced Digital Design",
+                    "Терендетілген цифрлы схемотехника",
+                    "Продвинутая цифровая схемотехника"
+                  ],
+                  "department_id": 973
+                },
+                "year": 2022,
+                "status": 4,
+                "language": "EN"
+              },
+              {
+                "course": {
+                  "editor": "Bissenbay Dauletbayev",
+                  "code": "CSS 215",
+                  "title": "Introduction to Algorithms",
+                  "credits": 3,
+                  "ects": 5,
+                  "titles": [
+                    "Introduction to Algorithms",
+                    "Алгоритмдерге кіріспе",
+                    "Введение в алгоритмы"
+                  ],
+                  "department_id": 973
+                },
+                "year": 2022,
+                "status": 4,
+                "language": "EN"
+              },
+              {
+                "course": {
+                  "editor": "Galymzhan Momonov",
+                  "code": "CSS 417",
+                  "title": "Linux Administration",
+                  "credits": 3,
+                  "ects": 5,
+                  "titles": [
+                    "Linux Administration",
+                    "Linux басқару",
+                    "Администрирование Linux"
+                  ],
+                  "department_id": 973
+                },
+                "year": 2022,
+                "status": 4,
+                "language": "EN"
+              },
+              {
+                "course": {
+                  "editor": "Yerbol Bugybayev",
+                  "code": "INF 261",
+                  "title": "Game Physics",
+                  "credits": 3,
+                  "ects": 5,
+                  "titles": [
+                    "Game Physics",
+                    "Ойын физикасы",
+                    "Игровая физика"
+                  ],
+                  "department_id": 973
+                },
+                "year": 2022,
+                "status": 4,
+                "language": "EN"
+              },
+              {
+                "course": {
+                  "editor": "Shyngys Adilkhan",
+                  "code": "INF 427",
+                  "title": "Game Development 2",
+                  "credits": 3,
+                  "ects": 5,
+                  "titles": [
+                    "Game Development 2",
+                    "Ойындар жасау 2",
+                    "Разработка игр 2"
+                  ],
+                  "department_id": 973
+                },
+                "year": 2022,
+                "status": 4,
+                "language": "EN"
+              },
+              {
+                "course": {
+                  "editor": "Inkar Shoganova",
+                  "code": "INF 421",
+                  "title": "Security in Computer Networks",
+                  "credits": 3,
+                  "ects": 5,
+                  "titles": [
+                    "Security in Computer Networks",
+                    "Компьютер желілеріндегі қауіпсіздік",
+                    "Безопасность в компьютерных сетях"
+                  ],
+                  "department_id": 973
+                },
+                "year": 2022,
+                "status": 4,
+                "language": "EN"
+              },
+              {
+                "course": {
+                  "editor": "Olzhas Aldabergenov",
+                  "code": "CSS 619",
+                  "title": "Natural Language Processing",
+                  "credits": 3,
+                  "ects": 5,
+                  "titles": [
+                    "Natural Language Processing",
+                    "Табиғи тілді өңдеу",
+                    "Обработка естественного языка"
+                  ],
+                  "department_id": 973
+                },
+                "year": 2022,
+                "status": 4,
+                "language": "EN"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "syllabuses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "course": {
+                  "type": "object",
+                  "required": [
+                    "editor",
+                    "code",
+                    "title",
+                    "credits",
+                    "ects",
+                    "titles",
+                    "department_id"
+                  ],
+                  "properties": {
+                    "editor": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "credits": {
+                      "type": "integer"
+                    },
+                    "ects": {
+                      "type": "integer"
+                    },
+                    "titles": {
+                      "type": "array",
+                      "items": {
+                        "type": "string"
+                      }
+                    },
+                    "department_id": {
+                      "type": "integer"
+                    }
+                  }
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "status": {
+                  "type": "integer"
+                },
+                "language": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "course",
+                "year",
+                "status",
+                "language"
+              ]
+            }
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "syllabuses"
         ]
       }
     },
