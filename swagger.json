@@ -16711,7 +16711,8 @@
                     }
                   },
                   "required": [
-                    "id"
+                    "id",
+                    "title"
                   ]
                 }
               }
@@ -16753,7 +16754,14 @@
               ]
             }
           }
-        }
+        },
+        "required": [
+          "section_types",
+          "assess_types",
+          "schedule",
+          "application_statuses",
+          "elective_names"
+        ]
       },
       "AcademicInformationExamDatesRequest": {
         "title": "AcademicInformationExamDatesRequest",
