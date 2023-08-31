@@ -1602,6 +1602,28 @@
           }
         }
       }
+    },
+    "/1.0.0/profile/biography": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileBiographyResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-biography",
+        "x-stoplight": {
+          "id": "x3jqofj8tg0jk"
+        }
+      }
     }
   },
   "components": {
@@ -12656,7 +12678,8 @@
           "cv",
           "personal",
           "logs"
-        ]
+        ],
+        "title": ""
       },
       "AdministrativeGateEntryRequest": {
         "type": "object",
@@ -18008,6 +18031,22 @@
           "current_page",
           "last_page",
           "syllabuses"
+        ]
+      },
+      "ProfileBiographyResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "biography": "BIOGRAPHY I, Kuanyshbayeva Asem Boranbaevna, a citizen of the Republic of Kazakhstan, February 17, 1977."
+          }
+        },
+        "properties": {
+          "biography": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "biography"
         ]
       }
     },
