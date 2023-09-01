@@ -1613,7 +1613,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/ProfileBiographyResponse"
+                  "$ref": "#/components/schemas/ProfileBiographyGetResponse"
                 }
               }
             }
@@ -1643,6 +1643,85 @@
               }
             }
           }
+        }
+      }
+    },
+    "/1.0.0/profile/children": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileChildrenGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-children",
+        "x-stoplight": {
+          "id": "iv5yz11r139a4"
+        },
+        "requestBody": {
+          "content": {}
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-children",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "nvokormtqegnt"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileChildrenPutRequest"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-children",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "hru94e76mq58f"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileChildrenPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-profile-children",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "65pg4eyhlgqjg"
         }
       }
     }
@@ -18101,8 +18180,11 @@
           "syllabuses"
         ]
       },
-      "ProfileBiographyResponse": {
+      "ProfileBiographyGetResponse": {
         "type": "object",
+        "x-stoplight": {
+          "id": "d327a905807af"
+        },
         "x-examples": {
           "Example 1": {
             "biography": "BIOGRAPHY I, Kuanyshbayeva Asem Boranbaevna, a citizen of the Republic of Kazakhstan, February 17, 1977."
@@ -18131,6 +18213,107 @@
         },
         "required": [
           "biography"
+        ]
+      },
+      "ProfileChildrenGetResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "238c9061bd6a1"
+        },
+        "x-examples": {
+          "Example 1": {
+            "id": 111,
+            "name": "Zhandos",
+            "surname": "Saparbayev",
+            "gender": 1,
+            "birthdate": "2003-02-05"
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "surname": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "integer"
+          },
+          "birthdate": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "name",
+          "surname",
+          "gender",
+          "birthdate"
+        ]
+      },
+      "ProfileChildrenPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "name": "Zhandos",
+            "surname": "Saparbayev",
+            "gender": 1,
+            "birthdate": "2003-02-05"
+          }
+        },
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "surname": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "integer"
+          },
+          "birthdate": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "surname",
+          "gender",
+          "birthdate"
+        ]
+      },
+      "ProfileChildrenPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "name": "Zhandos",
+            "surname": "Saparbayev",
+            "gender": 1,
+            "birthdate": "2003-02-05"
+          }
+        },
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "surname": {
+            "type": "string"
+          },
+          "gender": {
+            "type": "integer"
+          },
+          "birthdate": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "surname",
+          "gender",
+          "birthdate"
         ]
       }
     },
