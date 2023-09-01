@@ -18216,43 +18216,45 @@
         ]
       },
       "ProfileChildrenGetResponse": {
-        "type": "object",
-        "x-stoplight": {
-          "id": "238c9061bd6a1"
-        },
+        "type": "array",
         "x-examples": {
-          "Example 1": {
-            "id": 111,
-            "name": "Zhandos",
-            "surname": "Saparbayev",
-            "gender": 1,
-            "birthdate": "2003-02-05"
-          }
+          "Example 1": [
+            {
+              "id": 111,
+              "name": "Zhandos",
+              "surname": "Saparbayev",
+              "gender": 1,
+              "birthdate": "2003-02-05"
+            }
+          ]
         },
-        "properties": {
-          "id": {
-            "type": "integer"
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "surname": {
+              "type": "string"
+            },
+            "gender": {
+              "type": "integer"
+            },
+            "birthdate": {
+              "type": "string"
+            }
           },
-          "name": {
-            "type": "string"
-          },
-          "surname": {
-            "type": "string"
-          },
-          "gender": {
-            "type": "integer"
-          },
-          "birthdate": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "id",
-          "name",
-          "surname",
-          "gender",
-          "birthdate"
-        ]
+          "required": [
+            "id",
+            "name",
+            "surname",
+            "gender",
+            "birthdate"
+          ]
+        }
       },
       "ProfileChildrenPostRequest": {
         "type": "object",
