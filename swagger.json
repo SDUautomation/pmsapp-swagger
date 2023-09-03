@@ -1512,6 +1512,12 @@
               "schema": {
                 "$ref": "#/components/schemas/ServiceMessageBroadcastPostRequest"
               }
+            },
+            "application/xml": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
             }
           },
           "description": ""
@@ -17587,11 +17593,7 @@
         "required": [
           "subject",
           "content",
-          "from",
-          "type",
-          "programs",
-          "students",
-          "employees"
+          "type"
         ]
       },
       "ServiceMessageBroadcastPostResponse": {
