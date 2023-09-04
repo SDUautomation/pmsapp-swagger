@@ -17236,7 +17236,7 @@
           "id": "8a340a86f470a"
         },
         "x-examples": {
-          "Example 1": {
+          "simple": {
             "courses": [
               {
                 "course_id": 47915,
@@ -17248,6 +17248,44 @@
                   {
                     "id": "200103049",
                     "full_name": "Yernur Shamshadin"
+                  },
+                  {
+                    "id": "200103468",
+                    "full_name": "Yernur Shamshadin"
+                  }
+                ]
+              },
+              {
+                "course_id": 47916,
+                "course_code": "PHY 101",
+                "title": "Physics 101",
+                "section": "02",
+                "type": "L",
+                "students": [
+                  {
+                    "id": "200103050",
+                    "full_name": "Anna Smith"
+                  },
+                  {
+                    "id": "200103469",
+                    "full_name": "John Doe"
+                  }
+                ]
+              },
+              {
+                "course_id": 47917,
+                "course_code": "ENG 201",
+                "title": "English Literature",
+                "section": "03",
+                "type": "S",
+                "students": [
+                  {
+                    "id": "200103051",
+                    "full_name": "Emily Johnson"
+                  },
+                  {
+                    "id": "200103470",
+                    "full_name": "Michael Brown"
                   }
                 ]
               }
@@ -17263,10 +17301,39 @@
                     "education_level": "B"
                   }
                 ]
+              },
+              {
+                "department_code": "DEP_MATH",
+                "list": [
+                  {
+                    "program_code": "10108",
+                    "program_title": "Mathematics",
+                    "education_language": "EN",
+                    "education_level": "B"
+                  },
+                  {
+                    "program_code": "10109",
+                    "program_title": "Applied Mathematics",
+                    "education_language": "EN",
+                    "education_level": "B"
+                  }
+                ]
+              },
+              {
+                "department_code": "DEP_BIO",
+                "list": [
+                  {
+                    "program_code": "10110",
+                    "program_title": "Biology",
+                    "education_language": "EN",
+                    "education_level": "B"
+                  }
+                ]
               }
             ],
             "types": [
-              "sent"
+              "sent",
+              "inbox"
             ],
             "from": [
               {
