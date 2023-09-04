@@ -1654,29 +1654,6 @@
       }
     },
     "/1.0.0/profile/children": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProfileChildrenGetResponse"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-1.0.0-profile-children",
-        "x-stoplight": {
-          "id": "iv5yz11r139a4"
-        },
-        "requestBody": {
-          "content": {}
-        }
-      },
       "put": {
         "summary": "",
         "operationId": "put-1.0.0-profile-children",
@@ -1729,6 +1706,25 @@
         },
         "x-stoplight": {
           "id": "65pg4eyhlgqjg"
+        }
+      },
+      "get": {
+        "summary": "",
+        "operationId": "get-1.0.0-profile-children",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileChildrenGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "6p018o0lhfifk"
         }
       }
     }
