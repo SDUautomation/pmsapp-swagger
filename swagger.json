@@ -1872,6 +1872,27 @@
             }
           }
         }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-manage-syllabus-instructors",
+        "responses": {
+          "200": {
+            "description": "Syllabus Instructor is successfully deleted."
+          }
+        },
+        "x-stoplight": {
+          "id": "lz4bllc03gtrh"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusInstructorsDeleteRequest"
+              }
+            }
+          }
+        }
       }
     },
     "/1.0.0/academic/manage/syllabus/learning-outcomes": {
@@ -1999,16 +2020,447 @@
           }
         },
         "x-stoplight": {
-          "id": "hj1qbw2k1zjpn"
+          "id": "q6891qz6ajose"
         },
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AcademicManagSyllabusWeeklyPlansPostRequest"
+                "$ref": "#/components/schemas/AcademicManageSyllabusWeeklyPlansPostRequest"
               }
             }
           }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/academic-skills/{academicSkill}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "academicSkill",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-manage-syllabus-academic-skills-academicSkill",
+        "responses": {
+          "200": {
+            "description": "Syllabus Academic Skill is successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "3enzxhvc7hi54"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusAcademicSkillsPutRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-manage-syllabus-academic-skills-academicSkill",
+        "responses": {
+          "200": {
+            "description": "Syllabus Academic Skill is successfully deleted."
+          }
+        },
+        "x-stoplight": {
+          "id": "9azlf5uc6jf56"
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/activities/{activity}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "activity",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-manage-syllabus-activities-activity",
+        "responses": {
+          "200": {
+            "description": "Syllabus Activity is successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "hz91iifmx2obo"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusActivitiesPutRequest"
+              }
+            }
+          },
+          "description": ""
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-manage-syllabus-activities-activity",
+        "responses": {
+          "200": {
+            "description": "\t\nSyllabus Activity is successfully deleted."
+          }
+        },
+        "x-stoplight": {
+          "id": "67otlhpxz3qzn"
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/assessments/{assessment}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "assessment",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-manage-syllabus-assessments-assessment",
+        "responses": {
+          "200": {
+            "description": "Syllabus Assessment is successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "qqm0rr2k5lu0n"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusAssessmentsPutRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-manage-syllabus-assessments-assessment",
+        "responses": {
+          "200": {
+            "description": "Syllabus Assessment is successfully deleted."
+          }
+        },
+        "x-stoplight": {
+          "id": "jdwtqevj23u05"
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/delivery-types": {
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-manage-syllabus-delivery-types",
+        "responses": {
+          "200": {
+            "description": "Syllabus Delivery Type is successfully toggled."
+          }
+        },
+        "x-stoplight": {
+          "id": "ojwxpra0w0dcb"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusDeliveryTypesPutRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/descriptions": {
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-manage-syllabus-descriptions",
+        "responses": {
+          "200": {
+            "description": "Syllabus Description is successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "4hluklyjbu6w9"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusDescriptionsPutRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/learning-outcomes/{learningOutcome}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "learningOutcome",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-manage-syllabus-learning-outcomes-learningOutcome",
+        "responses": {
+          "200": {
+            "description": "Syllabus Learning Outcome is successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "ekulcmktpaclv"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusLearningOutcomesPutRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-manage-syllabus-learning-outcomes-learningOutcome",
+        "responses": {
+          "200": {
+            "description": "Syllabus Learning Outcome is successfully deleted."
+          }
+        },
+        "x-stoplight": {
+          "id": "kpw5enc8wcy6x"
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/policies/{policy}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "policy",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-manage-syllabus-policies-policy",
+        "responses": {
+          "200": {
+            "description": "Syllabus Policy is successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "e10ez8x085fij"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusPoliciesPutRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-manage-syllabus-policies-policy",
+        "responses": {
+          "200": {
+            "description": "Syllabus Policy is successfully deleted."
+          }
+        },
+        "x-stoplight": {
+          "id": "3ra7s65kwz61t"
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/readings/{reading}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "reading",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-manage-syllabus-readings-reading",
+        "responses": {
+          "200": {
+            "description": "Syllabus Reading is successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "c2qjow5x8rklv"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusReadingsPutRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-manage-syllabus-readings-reading",
+        "responses": {
+          "200": {
+            "description": "Syllabus Reading is successfully deleted."
+          }
+        },
+        "x-stoplight": {
+          "id": "zcfq4n29qhur0"
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/subject-skills/{subjectSkill}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "subjectSkill",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-manage-syllabus-subject-skills-subjectSkill",
+        "responses": {
+          "200": {
+            "description": "Syllabus Subject Skill is successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "utbr8gx7282uc"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusSubjectSkillsPutRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-manage-syllabus-subject-skills-subjectSkill",
+        "responses": {
+          "200": {
+            "description": "Syllabus Subject Skill is successfully deleted."
+          }
+        },
+        "x-stoplight": {
+          "id": "t5idc8p9byl4g"
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/teaching-methods/{teachingMethod}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "teachingMethod",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-manage-syllabus-teaching-methods-teachingMethod",
+        "responses": {
+          "200": {
+            "description": "Syllabus Teaching Method is successfully deleted."
+          }
+        },
+        "x-stoplight": {
+          "id": "6eguxf0tlpks5"
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/weekly-plans/{weeklyPlan}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "weeklyPlan",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-manage-syllabus-weekly-plans-weeklyPlan",
+        "responses": {
+          "200": {
+            "description": "Syllabus Weekly Plan is successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "8q3u9x9o9edx3"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusWeeklyPlansPutRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-manage-syllabus-weekly-plans-weeklyPlan",
+        "responses": {
+          "200": {
+            "description": "Syllabus Weekly Plan is successfully deleted."
+          }
+        },
+        "x-stoplight": {
+          "id": "m8hsljgpfax7e"
         }
       }
     }
@@ -19928,7 +20380,23 @@
           "type_id"
         ]
       },
-      "AcademicManagSyllabusWeeklyPlansPostRequest": {
+      "AcademicManageSyllabusAcademicSkillsPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "title": "Title"
+          }
+        },
+        "properties": {
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title"
+        ]
+      },
+      "AcademicManageSyllabusWeeklyPlansPostRequest": {
         "type": "object",
         "x-examples": {
           "Example 1": {
@@ -19962,6 +20430,287 @@
           "subject",
           "activity",
           "week_no"
+        ]
+      },
+      "AcademicManageSyllabusActivitiesPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "type_id": 1,
+            "quantity": 1,
+            "hour": 1
+          }
+        },
+        "properties": {
+          "type_id": {
+            "type": "integer"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "hour": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "type_id",
+          "quantity",
+          "hour"
+        ]
+      },
+      "AcademicManageSyllabusAssessmentsPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "assess_type": "FIN",
+            "quantity": 1,
+            "percentage": 20,
+            "description": "Description"
+          }
+        },
+        "properties": {
+          "assess_type": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "percentage": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "assess_type",
+          "quantity",
+          "percentage",
+          "description"
+        ]
+      },
+      "AcademicManageSyllabusDeliveryTypesPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 101",
+            "year": 2022,
+            "type_id": 1,
+            "value": true
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "type_id": {
+            "type": "integer"
+          },
+          "value": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "type_id",
+          "value"
+        ]
+      },
+      "AcademicManageSyllabusDescriptionsPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 101",
+            "year": 2022,
+            "objective": "Objective",
+            "content": "Content",
+            "work_placement": "Work Placement",
+            "components": "Components"
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "objective": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "work_placement": {
+            "type": "string"
+          },
+          "components": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "objective",
+          "content",
+          "work_placement",
+          "components"
+        ]
+      },
+      "AcademicManageSyllabusInstructorsDeleteRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 101",
+            "year": 2022,
+            "instructor_id": 10001
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "instructor_id": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "instructor_id"
+        ],
+        "title": ""
+      },
+      "AcademicManageSyllabusLearningOutcomesPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "action": "Action",
+            "subject": "Subject",
+            "outcome": "Outcome"
+          }
+        },
+        "properties": {
+          "action": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "outcome": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "action",
+          "subject",
+          "outcome"
+        ]
+      },
+      "AcademicManageSyllabusPoliciesPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "policy": "Policy"
+          }
+        },
+        "properties": {
+          "policy": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "policy"
+        ]
+      },
+      "AcademicManageSyllabusReadingsPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "type_id": 1,
+            "authors": "Arsentiy Zhunussov, Aibolat Batyrov",
+            "publisher": "Publisher",
+            "publish_year": 2022,
+            "isbn": "1123-1230123-1231",
+            "url": "example.com",
+            "title": "Title"
+          }
+        },
+        "properties": {
+          "type_id": {
+            "type": "integer"
+          },
+          "authors": {
+            "type": "string"
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "publish_year": {
+            "type": "integer"
+          },
+          "isbn": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type_id",
+          "authors",
+          "publisher",
+          "publish_year",
+          "isbn",
+          "url",
+          "title"
+        ]
+      },
+      "AcademicManageSyllabusSubjectSkillsPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "title": "Title"
+          }
+        },
+        "properties": {
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title"
+        ]
+      },
+      "AcademicManageSyllabusWeeklyPlansPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "subject": "Subject",
+            "activity": "Activity"
+          }
+        },
+        "properties": {
+          "subject": {
+            "type": "string"
+          },
+          "activity": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "subject",
+          "activity"
         ]
       }
     },
