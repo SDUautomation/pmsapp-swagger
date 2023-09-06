@@ -1727,6 +1727,59 @@
           "id": "6p018o0lhfifk"
         }
       }
+    },
+    "/1.0.0/academic/manage/syllabus": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSyllabusGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-syllabus",
+        "x-stoplight": {
+          "id": "5om894q9cu812"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusGetRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSyllabusResourcesResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-syllabus-resources",
+        "x-stoplight": {
+          "id": "tth42r13usfb5"
+        }
+      }
     }
   },
   "components": {
@@ -18385,6 +18438,964 @@
           "surname",
           "gender",
           "birthdate"
+        ]
+      },
+      "AcademicManageSyllabusGetRequest": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "3d24c4bebc56d"
+        },
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 1001",
+            "year": 22
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "course_code",
+          "year"
+        ]
+      },
+      "AcademicManageSyllabusGetResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "0728d64221673"
+        },
+        "x-examples": {
+          "Example 1": {
+            "overview": {
+              "course_code": "CSS 101",
+              "year": 2022,
+              "title": "Algorithms and Programming",
+              "department_code": "DEP_HUMANITIES",
+              "department_title": "Department of Humanities",
+              "faculty_code": "F_ENG",
+              "faculty_title": "Faculty of Engeering and Natural Sciences",
+              "period_code": "1122312",
+              "term": 1,
+              "theory": 1,
+              "practice": 1,
+              "lab": 1,
+              "credits": 3,
+              "ects": 5,
+              "equicode": 190123,
+              "status": 1,
+              "language_title": "English",
+              "language_code": "EN",
+              "type_title": "Normal",
+              "type": "N",
+              "employee_id": 10001,
+              "open_date": "2023-06-29",
+              "open_time": "17:33",
+              "grading_type": "N",
+              "grading": "normal",
+              "local_code": "1"
+            },
+            "delivery_types": [
+              {
+                "id": 1,
+                "value": true
+              }
+            ],
+            "description": {
+              "objective": "Objective",
+              "content": "Content",
+              "components": "Components",
+              "work_placement": "Work placement"
+            },
+            "instructors": [
+              {
+                "full_name": "Arsentiy Zhunussov",
+                "degree": "Bachelor",
+                "contacts": [
+                  {
+                    "type": "E-mail",
+                    "contact": "arsentiy.zhunussov@sdu.edu.kz",
+                    "note": "note"
+                  }
+                ]
+              }
+            ],
+            "academic_skills": [
+              {
+                "id": 1,
+                "title": "Effective communication",
+                "count": 5
+              }
+            ],
+            "subject_skills": [
+              {
+                "id": 1,
+                "title": "Design skills",
+                "count": 5
+              }
+            ],
+            "weekly_plan": [
+              {
+                "id": 1,
+                "week_no": 1,
+                "subject": "Subject",
+                "activity": "Activity",
+                "count": 5
+              }
+            ],
+            "learning_outcomes": [
+              {
+                "id": 1,
+                "outcome": "Outcome",
+                "subject": "Subject",
+                "action": "Action",
+                "count": 5
+              }
+            ],
+            "teaching_methods": [
+              {
+                "id": 1,
+                "title": "Lecture"
+              }
+            ],
+            "readings": [
+              {
+                "id": 1,
+                "type": "Required",
+                "authors": "Arsentiy Zhunussov, Aibolat Batyrov",
+                "title": "Programming Book",
+                "publish_year": 2023,
+                "isbn": "978-0-230-36337-3",
+                "website": "example.com"
+              }
+            ],
+            "assessments": [
+              {
+                "id": 1,
+                "title": "Final Exam",
+                "quantity": 1,
+                "percentage": 20,
+                "description": "Final Exam"
+              }
+            ],
+            "activities": [
+              {
+                "id": 1,
+                "title": "Homework Assignment",
+                "quantity": 1,
+                "hour": 15
+              }
+            ],
+            "policies": [
+              {
+                "id": 1,
+                "title": "Policy"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "overview": {
+            "type": "object",
+            "required": [
+              "course_code",
+              "year",
+              "title",
+              "department_code",
+              "department_title",
+              "faculty_code",
+              "faculty_title",
+              "period_code",
+              "term",
+              "theory",
+              "practice",
+              "lab",
+              "credits",
+              "ects",
+              "equicode",
+              "status",
+              "language_title",
+              "language_code",
+              "type_title",
+              "type",
+              "employee_id",
+              "open_date",
+              "open_time",
+              "grading_type",
+              "grading",
+              "local_code"
+            ],
+            "properties": {
+              "course_code": {
+                "type": "string"
+              },
+              "year": {
+                "type": "integer"
+              },
+              "title": {
+                "type": "string"
+              },
+              "department_code": {
+                "type": "string"
+              },
+              "department_title": {
+                "type": "string"
+              },
+              "faculty_code": {
+                "type": "string"
+              },
+              "faculty_title": {
+                "type": "string"
+              },
+              "period_code": {
+                "type": "string",
+                "nullable": true
+              },
+              "term": {
+                "type": "integer",
+                "nullable": true
+              },
+              "theory": {
+                "type": "integer"
+              },
+              "practice": {
+                "type": "integer"
+              },
+              "lab": {
+                "type": "integer"
+              },
+              "credits": {
+                "type": "integer"
+              },
+              "ects": {
+                "type": "integer"
+              },
+              "equicode": {
+                "type": "integer"
+              },
+              "status": {
+                "type": "integer",
+                "nullable": true
+              },
+              "language_title": {
+                "type": "string"
+              },
+              "language_code": {
+                "type": "string"
+              },
+              "type_title": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              },
+              "employee_id": {
+                "type": "integer",
+                "nullable": true
+              },
+              "open_date": {
+                "type": "string"
+              },
+              "open_time": {
+                "type": "string"
+              },
+              "grading_type": {
+                "type": "string"
+              },
+              "grading": {
+                "type": "string"
+              },
+              "local_code": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          },
+          "delivery_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "value": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "id",
+                "value"
+              ]
+            }
+          },
+          "description": {
+            "type": "object",
+            "required": [
+              "objective",
+              "content",
+              "components",
+              "work_placement"
+            ],
+            "properties": {
+              "objective": {
+                "type": "string",
+                "nullable": true
+              },
+              "content": {
+                "type": "string",
+                "nullable": true
+              },
+              "components": {
+                "type": "string",
+                "nullable": true
+              },
+              "work_placement": {
+                "type": "string",
+                "nullable": true
+              }
+            }
+          },
+          "instructors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "full_name": {
+                  "type": "string"
+                },
+                "degree": {
+                  "type": "string"
+                },
+                "contacts": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string"
+                      },
+                      "contact": {
+                        "type": "string"
+                      },
+                      "note": {
+                        "type": "string",
+                        "nullable": true
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "contact",
+                      "note"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "full_name",
+                "degree",
+                "contacts"
+              ]
+            }
+          },
+          "academic_skills": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "title",
+                "count"
+              ]
+            }
+          },
+          "subject_skills": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "title",
+                "count"
+              ]
+            }
+          },
+          "weekly_plan": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "week_no": {
+                  "type": "integer"
+                },
+                "subject": {
+                  "type": "string"
+                },
+                "activity": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "week_no",
+                "subject",
+                "activity",
+                "count"
+              ]
+            }
+          },
+          "learning_outcomes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "outcome": {
+                  "type": "string"
+                },
+                "subject": {
+                  "type": "string"
+                },
+                "action": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "outcome",
+                "subject",
+                "action",
+                "count"
+              ]
+            }
+          },
+          "teaching_methods": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "readings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string",
+                  "nullable": true
+                },
+                "authors": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "publish_year": {
+                  "type": "integer"
+                },
+                "isbn": {
+                  "type": "string"
+                },
+                "website": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "type",
+                "authors",
+                "title",
+                "publish_year",
+                "isbn",
+                "website"
+              ]
+            }
+          },
+          "assessments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "integer"
+                },
+                "percentage": {
+                  "type": "integer"
+                },
+                "description": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title",
+                "quantity",
+                "percentage",
+                "description"
+              ]
+            }
+          },
+          "activities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "integer"
+                },
+                "hour": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "title",
+                "quantity",
+                "hour"
+              ]
+            }
+          },
+          "policies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          }
+        },
+        "required": [
+          "overview",
+          "delivery_types",
+          "description",
+          "instructors",
+          "academic_skills",
+          "subject_skills",
+          "weekly_plan",
+          "learning_outcomes",
+          "teaching_methods",
+          "readings",
+          "assessments",
+          "activities",
+          "policies"
+        ],
+        "title": ""
+      },
+      "AcademicManageSyllabusResourcesResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "activity_types": [
+              {
+                "id": 1,
+                "title": "Homework Assignment"
+              },
+              {
+                "id": 2,
+                "title": "Quiz"
+              },
+              {
+                "id": 3,
+                "title": "Project"
+              },
+              {
+                "id": 4,
+                "title": "Seminar"
+              },
+              {
+                "id": 5,
+                "title": "Attendance"
+              },
+              {
+                "id": 6,
+                "title": "Laboratory"
+              },
+              {
+                "id": 7,
+                "title": "Application"
+              },
+              {
+                "id": 8,
+                "title": "Field Work"
+              },
+              {
+                "id": 9,
+                "title": "Midterm exam"
+              },
+              {
+                "id": 10,
+                "title": "Final exam"
+              },
+              {
+                "id": 11,
+                "title": "Self-study"
+              },
+              {
+                "id": 12,
+                "title": "Practice"
+              },
+              {
+                "id": 13,
+                "title": "Office hours"
+              }
+            ],
+            "delivery_types": [
+              {
+                "id": 1,
+                "title": "On campus"
+              },
+              {
+                "id": 2,
+                "title": "Online"
+              },
+              {
+                "id": 3,
+                "title": "Hybrid"
+              }
+            ],
+            "reading_types": [
+              {
+                "id": 1,
+                "title": "Required"
+              },
+              {
+                "id": 2,
+                "title": "Recommended"
+              },
+              {
+                "id": 3,
+                "title": "Other"
+              }
+            ],
+            "teaching_method_types": [
+              {
+                "id": 1,
+                "title": "Lecture"
+              },
+              {
+                "id": 2,
+                "title": "Discussion"
+              },
+              {
+                "id": 3,
+                "title": "Question & Answer"
+              },
+              {
+                "id": 4,
+                "title": "Problem Solving"
+              },
+              {
+                "id": 34,
+                "title": "project protection"
+              },
+              {
+                "id": 28,
+                "title": "project method"
+              },
+              {
+                "id": 33,
+                "title": "case studies"
+              },
+              {
+                "id": 53,
+                "title": "Registration"
+              },
+              {
+                "id": 63,
+                "title": "Simulation"
+              },
+              {
+                "id": 89,
+                "title": "норматив"
+              },
+              {
+                "id": 95,
+                "title": "монолог жазу"
+              },
+              {
+                "id": 41,
+                "title": "Quizzes"
+              },
+              {
+                "id": 18,
+                "title": "writing a research paper"
+              },
+              {
+                "id": 29,
+                "title": "brainstorm"
+              },
+              {
+                "id": 44,
+                "title": "Written assignments"
+              },
+              {
+                "id": 73,
+                "title": "Project"
+              },
+              {
+                "id": 74,
+                "title": "solving cases"
+              },
+              {
+                "id": 92,
+                "title": "Seminar"
+              },
+              {
+                "id": 88,
+                "title": "Other"
+              },
+              {
+                "id": 91,
+                "title": "In-class assignments"
+              },
+              {
+                "id": 108,
+                "title": "work in groups"
+              },
+              {
+                "id": 109,
+                "title": "Planning"
+              },
+              {
+                "id": 121,
+                "title": "Demo lesson"
+              },
+              {
+                "id": 26,
+                "title": "video lectures, project"
+              },
+              {
+                "id": 30,
+                "title": "Youtube - Enlite channel"
+              },
+              {
+                "id": 27,
+                "title": "the role games"
+              },
+              {
+                "id": 31,
+                "title": "Presentation"
+              },
+              {
+                "id": 32,
+                "title": "Peer-feedback"
+              },
+              {
+                "id": 35,
+                "title": "Socratic discussions"
+              },
+              {
+                "id": 64,
+                "title": "Experiment"
+              },
+              {
+                "id": 67,
+                "title": "Discussion"
+              },
+              {
+                "id": 86,
+                "title": "Case studies"
+              },
+              {
+                "id": 90,
+                "title": "lesson observation"
+              },
+              {
+                "id": 94,
+                "title": "Practical lesson"
+              },
+              {
+                "id": 99,
+                "title": "Эссе, монолог "
+              },
+              {
+                "id": 102,
+                "title": "museum trips"
+              },
+              {
+                "id": 110,
+                "title": "Video lectures"
+              },
+              {
+                "id": 119,
+                "title": "Discourse"
+              },
+              {
+                "id": 120,
+                "title": "Quizzes"
+              },
+              {
+                "id": 58,
+                "title": "Practice"
+              },
+              {
+                "id": 39,
+                "title": "Essay "
+              },
+              {
+                "id": 51,
+                "title": "dialog"
+              },
+              {
+                "id": 78,
+                "title": "Case analysis"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "activity_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "delivery_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "reading_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "teaching_method_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          }
+        },
+        "required": [
+          "activity_types",
+          "delivery_types",
+          "reading_types",
+          "teaching_method_types"
         ]
       }
     },
