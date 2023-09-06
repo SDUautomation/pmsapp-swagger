@@ -1780,6 +1780,237 @@
           "id": "tth42r13usfb5"
         }
       }
+    },
+    "/1.0.0/academic/manage/syllabus/academic-skills": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-syllabus-academic-skills",
+        "responses": {
+          "201": {
+            "description": "Syllabus Academic Skill is successfully created."
+          }
+        },
+        "x-stoplight": {
+          "id": "aowp6zndpbdnj"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusAcademicSkillsPostRequest"
+              }
+            }
+          },
+          "description": ""
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/activities": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-syllabus-activities",
+        "responses": {
+          "201": {
+            "description": "Syllabus Activity is successfully created."
+          }
+        },
+        "x-stoplight": {
+          "id": "6u2a4mx6frh79"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusActivitiesPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/assessments": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-syllabus-assessments",
+        "responses": {
+          "201": {
+            "description": "Syllabus Assessment is successfully created."
+          }
+        },
+        "x-stoplight": {
+          "id": "wthjy40z6j6i3"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusAssessmentsPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/instructors": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-syllabus-instructors",
+        "responses": {
+          "201": {
+            "description": "Syllabus Instructor is successfully created."
+          }
+        },
+        "x-stoplight": {
+          "id": "10qpdg4rybq79"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusInstructorsPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/learning-outcomes": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-syllabus-learning-outcomes",
+        "responses": {
+          "201": {
+            "description": "Syllabus Learning Outcome is successfully created."
+          }
+        },
+        "x-stoplight": {
+          "id": "oqlloy8nd2syx"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusLearningOutcomesPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/policies": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-syllabus-policies",
+        "responses": {
+          "201": {
+            "description": "Syllabus Policy is successfully created."
+          }
+        },
+        "x-stoplight": {
+          "id": "40ll89m89bavt"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusPoliciesPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/readings": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-syllabus-readings",
+        "responses": {
+          "201": {
+            "description": "Syllabus Reading is successfully created."
+          }
+        },
+        "x-stoplight": {
+          "id": "qjfldm25exsqa"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusReadingsPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/subject-skills": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-syllabus-subject-skills",
+        "responses": {
+          "201": {
+            "description": "Syllabus Subject Skill is successfully created."
+          }
+        },
+        "x-stoplight": {
+          "id": "dvufapg5pzca2"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusSubjectSkillsPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/teaching-methods": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-syllabus-teaching-methods",
+        "responses": {
+          "201": {
+            "description": "Syllabus Teaching Method is successfully created."
+          }
+        },
+        "x-stoplight": {
+          "id": "cxm18ewbopchk"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusTeachingMethodsPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/syllabus/weekly-plans": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-syllabus-weekly-plans",
+        "responses": {
+          "201": {
+            "description": "Syllabus Weekly Plan is successfully created."
+          }
+        },
+        "x-stoplight": {
+          "id": "hj1qbw2k1zjpn"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManagSyllabusWeeklyPlansPostRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -19396,6 +19627,341 @@
           "delivery_types",
           "reading_types",
           "teaching_method_types"
+        ]
+      },
+      "AcademicManageSyllabusAcademicSkillsPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 101",
+            "year": 2022,
+            "title": "Academic Skill Title"
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "title"
+        ]
+      },
+      "AcademicManageSyllabusActivitiesPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 101",
+            "year": "2022",
+            "type_id": 1,
+            "quantity": 1,
+            "hour": 1
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "string"
+          },
+          "type_id": {
+            "type": "integer"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "hour": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "type_id",
+          "quantity",
+          "hour"
+        ]
+      },
+      "AcademicManageSyllabusAssessmentsPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 101",
+            "year": 2022,
+            "assess_type": "FIN",
+            "quantity": 1,
+            "percentage": 20,
+            "description": "Description"
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "assess_type": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "integer"
+          },
+          "percentage": {
+            "type": "integer"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "assess_type",
+          "quantity",
+          "percentage",
+          "description"
+        ]
+      },
+      "AcademicManageSyllabusInstructorsPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 101",
+            "year": 2022,
+            "instructor_id": 10001
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "instructor_id": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "instructor_id"
+        ]
+      },
+      "AcademicManageSyllabusLearningOutcomesPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 101",
+            "year": 2022,
+            "action": "Action",
+            "subject": "Subject",
+            "outcome": "Outcome"
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "action": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "outcome": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "action",
+          "subject",
+          "outcome"
+        ]
+      },
+      "AcademicManageSyllabusPoliciesPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 101",
+            "year": 2022,
+            "policy": "Policy"
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "policy": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "policy"
+        ]
+      },
+      "AcademicManageSyllabusReadingsPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 101",
+            "year": 2022,
+            "type_id": 1,
+            "authors": "Arsentiy Zhunussov, Aibolat Batyrov",
+            "publisher": "Publisher",
+            "publish_year": 2022,
+            "isbn": "1123-1230123-1231",
+            "url": "example.com",
+            "title": "Title"
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "type_id": {
+            "type": "integer"
+          },
+          "authors": {
+            "type": "string"
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "publish_year": {
+            "type": "integer"
+          },
+          "isbn": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "type_id",
+          "authors",
+          "publisher",
+          "publish_year",
+          "isbn",
+          "url",
+          "title"
+        ]
+      },
+      "AcademicManageSyllabusSubjectSkillsPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 101",
+            "year": 2022,
+            "title": "Title"
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "title"
+        ]
+      },
+      "AcademicManageSyllabusTeachingMethodsPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 101",
+            "year": 2022,
+            "type_id": 1
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "type_id": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "type_id"
+        ]
+      },
+      "AcademicManagSyllabusWeeklyPlansPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 101",
+            "year": 2022,
+            "subject": "Subject",
+            "activity": "Activity",
+            "week_no": 1
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "activity": {
+            "type": "string"
+          },
+          "week_no": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "subject",
+          "activity",
+          "week_no"
         ]
       }
     },
