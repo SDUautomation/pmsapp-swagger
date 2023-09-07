@@ -2463,6 +2463,37 @@
           "id": "m8hsljgpfax7e"
         }
       }
+    },
+    "/1.0.0/academic/courses/my": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicCoursesMyResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-courses-my",
+        "x-stoplight": {
+          "id": "y92r7prc1v0bp"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicCoursesMyRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -20712,6 +20743,123 @@
           "subject",
           "activity"
         ]
+      },
+      "AcademicCoursesMyRequest": {
+        "type": "object",
+        "x-examples": {
+          "sample": {
+            "year": 2022,
+            "term": 2
+          }
+        },
+        "properties": {
+          "year": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "year",
+          "term"
+        ]
+      },
+      "AcademicCoursesMyResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "code": "CSS 101",
+              "section": "01",
+              "type": "N",
+              "language": "English",
+              "title_kz": "Introduction to Programming",
+              "title_ru": "Introduction to Programming",
+              "title_en": "Introduction to Programming",
+              "department_code": "DEP_HUMANITIES",
+              "department_title": "Department of Humanities",
+              "specialty_id": "1",
+              "specialty_name": "Management",
+              "theory": 1,
+              "practice": 1,
+              "credits": 1,
+              "ects": 1,
+              "quota": 1
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "section": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "language": {
+              "type": "string"
+            },
+            "title_kz": {
+              "type": "string"
+            },
+            "title_ru": {
+              "type": "string"
+            },
+            "title_en": {
+              "type": "string"
+            },
+            "department_code": {
+              "type": "string"
+            },
+            "department_title": {
+              "type": "string"
+            },
+            "specialty_id": {
+              "type": "string"
+            },
+            "specialty_name": {
+              "type": "string"
+            },
+            "theory": {
+              "type": "integer"
+            },
+            "practice": {
+              "type": "integer"
+            },
+            "credits": {
+              "type": "integer"
+            },
+            "ects": {
+              "type": "integer"
+            },
+            "quota": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "code",
+            "section",
+            "type",
+            "language",
+            "title_kz",
+            "title_ru",
+            "title_en",
+            "department_code",
+            "department_title",
+            "specialty_id",
+            "specialty_name",
+            "theory",
+            "practice",
+            "credits",
+            "ects",
+            "quota"
+          ]
+        }
       }
     },
     "securitySchemes": {}
