@@ -1778,6 +1778,15 @@
         "operationId": "get-1.0.0-academic-manage-syllabus-resources",
         "x-stoplight": {
           "id": "tth42r13usfb5"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusRecourcesRequest"
+              }
+            }
+          }
         }
       }
     },
@@ -1803,6 +1812,34 @@
           },
           "description": ""
         }
+      },
+      "get": {
+        "summary": "",
+        "operationId": "get-1.0.0-academic-manage-syllabus-academic-skills",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSyllabusAcademicSkillsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "zig5d9i3kzch2"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusGetRequest"
+              }
+            }
+          }
+        }
       }
     },
     "/1.0.0/academic/manage/syllabus/activities": {
@@ -1826,6 +1863,34 @@
             }
           }
         }
+      },
+      "get": {
+        "summary": "",
+        "operationId": "get-1.0.0-academic-manage-syllabus-activities",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSyllabusActivitiesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "ampxrpugutnic"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusGetRequest"
+              }
+            }
+          }
+        }
       }
     },
     "/1.0.0/academic/manage/syllabus/assessments": {
@@ -1845,6 +1910,34 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/AcademicManageSyllabusAssessmentsPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "",
+        "operationId": "get-1.0.0-academic-manage-syllabus-assessments",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSyllabusAssessmentsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "vh4kvdpstpcgz"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusGetRequest"
               }
             }
           }
@@ -1893,6 +1986,34 @@
             }
           }
         }
+      },
+      "get": {
+        "summary": "",
+        "operationId": "get-1.0.0-academic-manage-syllabus-instructors",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSyllabusInstructorsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "eakdoc36s3lmx"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusGetRequest"
+              }
+            }
+          }
+        }
       }
     },
     "/1.0.0/academic/manage/syllabus/learning-outcomes": {
@@ -1912,6 +2033,34 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/AcademicManageSyllabusLearningOutcomesPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "",
+        "operationId": "get-1.0.0-academic-manage-syllabus-learning-outcomes",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSyllabusLearningOutcomesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "nqr1v9392fkbn"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusGetRequest"
               }
             }
           }
@@ -1939,6 +2088,34 @@
             }
           }
         }
+      },
+      "get": {
+        "summary": "",
+        "operationId": "get-1.0.0-academic-manage-syllabus-policies",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSyllabusPoliciesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "v2snxmb5f1rw6"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusGetRequest"
+              }
+            }
+          }
+        }
       }
     },
     "/1.0.0/academic/manage/syllabus/readings": {
@@ -1958,6 +2135,34 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/AcademicManageSyllabusReadingsPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "",
+        "operationId": "get-1.0.0-academic-manage-syllabus-readings",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSyllabusReadingsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "lhw9a7pmr4deg"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusGetRequest"
               }
             }
           }
@@ -1985,6 +2190,34 @@
             }
           }
         }
+      },
+      "get": {
+        "summary": "",
+        "operationId": "get-1.0.0-academic-manage-syllabus-subject-skills",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSyllabusSubjectSkillsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "82q0b12sg98qu"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusGetRequest"
+              }
+            }
+          }
+        }
       }
     },
     "/1.0.0/academic/manage/syllabus/teaching-methods": {
@@ -2008,6 +2241,34 @@
             }
           }
         }
+      },
+      "get": {
+        "summary": "",
+        "operationId": "get-1.0.0-academic-manage-syllabus-teaching-methods",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSyllabusTeachingMethodsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "9mvqlkurubg8c"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusGetRequest"
+              }
+            }
+          }
+        }
       }
     },
     "/1.0.0/academic/manage/syllabus/weekly-plans": {
@@ -2027,6 +2288,34 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/AcademicManageSyllabusWeeklyPlansPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "",
+        "operationId": "get-1.0.0-academic-manage-syllabus-weekly-plans",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSyllabusWeeklyPlansGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "q0k6wvswrt4hu"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusGetRequest"
               }
             }
           }
@@ -2062,7 +2351,8 @@
                 "$ref": "#/components/schemas/AcademicManageSyllabusAcademicSkillsPutRequest"
               }
             }
-          }
+          },
+          "description": ""
         }
       },
       "delete": {
@@ -2190,6 +2480,34 @@
             }
           }
         }
+      },
+      "get": {
+        "summary": "",
+        "operationId": "get-1.0.0-academic-manage-syllabus-delivery-types",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSyllabusDeliveryTypesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "5jwedjipt5fs3"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusGetRequest"
+              }
+            }
+          }
+        }
       }
     },
     "/1.0.0/academic/manage/syllabus/descriptions": {
@@ -2212,6 +2530,41 @@
               }
             }
           }
+        }
+      },
+      "get": {
+        "summary": "",
+        "operationId": "get-1.0.0-academic-manage-syllabus-descriptions",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSyllabusDescriptionsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "9u7lbv5ty7tgt"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusGetRequest"
+              }
+            }
+          },
+          "description": ""
         }
       }
     },
@@ -19162,7 +19515,8 @@
         "x-examples": {
           "Example 1": {
             "course_code": "CSS 1001",
-            "year": 22
+            "year": 22,
+            "language": "en-EN"
           }
         },
         "properties": {
@@ -19171,12 +19525,19 @@
           },
           "year": {
             "type": "integer"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "w4tikwug5p178"
+            }
           }
         },
         "required": [
           "course_code",
           "year"
-        ]
+        ],
+        "description": ""
       },
       "AcademicManageSyllabusGetResponse": {
         "type": "object",
@@ -20130,6 +20491,12 @@
           },
           "title": {
             "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "z7yiyprul17dz"
+            }
           }
         },
         "required": [
@@ -20164,6 +20531,12 @@
           },
           "hour": {
             "type": "integer"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "vs1jfmkbc4u19"
+            }
           }
         },
         "required": [
@@ -20204,6 +20577,12 @@
           },
           "description": {
             "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "vaphyy94cas67"
+            }
           }
         },
         "required": [
@@ -20233,6 +20612,12 @@
           },
           "instructor_id": {
             "type": "integer"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "nj7ouscm2lgh1"
+            }
           }
         },
         "required": [
@@ -20267,6 +20652,12 @@
           },
           "outcome": {
             "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "iawc0i0ym4sm3"
+            }
           }
         },
         "required": [
@@ -20295,6 +20686,12 @@
           },
           "policy": {
             "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "krrdggnk1vyn3"
+            }
           }
         },
         "required": [
@@ -20345,6 +20742,12 @@
           },
           "title": {
             "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "227t9uetdac0p"
+            }
           }
         },
         "required": [
@@ -20377,6 +20780,12 @@
           },
           "title": {
             "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ythg5jjv0ss5g"
+            }
           }
         },
         "required": [
@@ -20403,6 +20812,12 @@
           },
           "type_id": {
             "type": "integer"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "16ku3z88l8ovw"
+            }
           }
         },
         "required": [
@@ -20421,6 +20836,12 @@
         "properties": {
           "title": {
             "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "buv5rcm73ri03"
+            }
           }
         },
         "required": [
@@ -20453,6 +20874,12 @@
           },
           "week_no": {
             "type": "integer"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "gjatibedtjw8l"
+            }
           }
         },
         "required": [
@@ -20481,6 +20908,12 @@
           },
           "hour": {
             "type": "integer"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "8x9qpkwsc4m0c"
+            }
           }
         },
         "required": [
@@ -20511,6 +20944,12 @@
           },
           "description": {
             "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "3svrxlx50dhh3"
+            }
           }
         },
         "required": [
@@ -20542,6 +20981,12 @@
           },
           "value": {
             "type": "boolean"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "3j2tahfd37xc3"
+            }
           }
         },
         "required": [
@@ -20581,6 +21026,12 @@
           },
           "components": {
             "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ncfot30pvsd9o"
+            }
           }
         },
         "required": [
@@ -20610,14 +21061,19 @@
           },
           "instructor_id": {
             "type": "integer"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "c84u3zycqa42i"
+            }
           }
         },
         "required": [
           "course_code",
           "year",
           "instructor_id"
-        ],
-        "title": ""
+        ]
       },
       "AcademicManageSyllabusLearningOutcomesPutRequest": {
         "type": "object",
@@ -20637,6 +21093,12 @@
           },
           "outcome": {
             "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ufyllelyj53kd"
+            }
           }
         },
         "required": [
@@ -20655,6 +21117,12 @@
         "properties": {
           "policy": {
             "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "yxdtemlb9z1ut"
+            }
           }
         },
         "required": [
@@ -20695,6 +21163,12 @@
           },
           "title": {
             "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "gdvgd90w20tki"
+            }
           }
         },
         "required": [
@@ -20717,6 +21191,12 @@
         "properties": {
           "title": {
             "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "o7m2w6ygj0870"
+            }
           }
         },
         "required": [
@@ -20737,6 +21217,12 @@
           },
           "activity": {
             "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "nhwdvzlmveyav"
+            }
           }
         },
         "required": [
@@ -20860,6 +21346,550 @@
             "quota"
           ]
         }
+      },
+      "AcademicManageSyllabusRecourcesRequest": {
+        "title": "AcademicManageSyllabusRecourcesRequest",
+        "x-stoplight": {
+          "id": "hab7dwf8jv644"
+        },
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "tx7jss81vini9"
+            }
+          }
+        },
+        "description": ""
+      },
+      "AcademicManageSyllabusAcademicSkillsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 3113,
+              "title": null,
+              "count": 5
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "nullable": true
+            },
+            "count": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "count"
+          ]
+        }
+      },
+      "AcademicManageSyllabusActivitiesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1,
+              "title": "Homework Assignment",
+              "quantity": 1,
+              "hour": 15
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "hour": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "quantity",
+            "hour"
+          ]
+        }
+      },
+      "AcademicManageSyllabusAssessmentsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1,
+              "title": "Final Exam",
+              "quantity": 1,
+              "percentage": 20,
+              "description": "Final Exam"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "quantity": {
+              "type": "integer"
+            },
+            "percentage": {
+              "type": "integer"
+            },
+            "description": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "quantity",
+            "percentage",
+            "description"
+          ]
+        }
+      },
+      "AcademicManageSyllabusInstructorsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "full_name": "Zhumaniyaz Mamatnabiyev",
+              "degree": "Master",
+              "contacts": [
+                {
+                  "type": "E-mail",
+                  "contact": "zhumaniyaz.mamatnabiyev@sdu.edu.kz",
+                  "note": null
+                },
+                {
+                  "type": "E-mail",
+                  "contact": "mamatnabiyev@gmail.com",
+                  "note": null
+                },
+                {
+                  "type": "Mobile phone",
+                  "contact": "87751957474",
+                  "note": null
+                }
+              ]
+            },
+            {
+              "full_name": "Shakhmar Sarsenbay",
+              "degree": "Master",
+              "contacts": [
+                {
+                  "type": "Mobile phone",
+                  "contact": "87087933124",
+                  "note": null
+                }
+              ]
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "full_name": {
+              "type": "string"
+            },
+            "degree": {
+              "type": "string"
+            },
+            "contacts": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "contact": {
+                    "type": "string"
+                  },
+                  "note": {
+                    "type": "string",
+                    "nullable": true
+                  }
+                },
+                "required": [
+                  "type",
+                  "contact",
+                  "note"
+                ]
+              }
+            }
+          },
+          "required": [
+            "full_name",
+            "degree",
+            "contacts"
+          ]
+        }
+      },
+      "AcademicManageSyllabusLearningOutcomesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 4766,
+              "outcome": "Online reading, video lessons and doing practice during lessons",
+              "subject": "Students will be able to create complex devices and systems using microcontrollers and microprocessors, and online simulation.",
+              "action": "Create",
+              "count": 5
+            },
+            {
+              "id": 4767,
+              "outcome": "Read book chapters and articles on websites.",
+              "subject": "Students will be able to choose intermediary devices, protocols, communication tools, cloud platforms, sensors, and actuators required for their projects.",
+              "action": "Choose",
+              "count": 5
+            },
+            {
+              "id": 4768,
+              "outcome": "Find real-world problems and create IoT solutions to the existing problems using knowledge gained through lectures and lab work.",
+              "subject": "Students will be able to apply their solutions in different areas.",
+              "action": "Apply",
+              "count": 5
+            },
+            {
+              "id": 4769,
+              "outcome": "Search web engines for existing solutions similar to problems found and do lab works.",
+              "subject": "Students will be to design IoT solutions to the existing problems.",
+              "action": "Design",
+              "count": 5
+            },
+            {
+              "id": 4770,
+              "outcome": "Review similar works, compare existing products and systems, experiment development boards, sensors and actuators.",
+              "subject": "Students will be able to solve real-world problems using IoT technologies.",
+              "action": "Solve",
+              "count": 5
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "outcome": {
+              "type": "string",
+              "nullable": true
+            },
+            "subject": {
+              "type": "string",
+              "nullable": true
+            },
+            "action": {
+              "type": "string",
+              "nullable": true
+            },
+            "count": {
+              "type": "integer",
+              "nullable": true
+            }
+          },
+          "required": [
+            "id",
+            "outcome",
+            "subject",
+            "action",
+            "count"
+          ]
+        }
+      },
+      "AcademicManageSyllabusPoliciesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 481,
+              "title": "Assignments and will be submitted individually. Project will be conducted as a group work of 3-4 students. All course materials including textbook, lectures, assignments, and project requirements will be available on Moodle platform."
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string",
+              "nullable": true
+            }
+          }
+        }
+      },
+      "AcademicManageSyllabusReadingsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 4037,
+              "type": null,
+              "authors": "Abay Kunanbay",
+              "title": "Kara Sozder",
+              "publisher": "Almaty Kitap",
+              "publish_year": 2018,
+              "isbn": "12312315",
+              "website": "kitap.al.kz"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "type": {
+              "type": "string",
+              "nullable": true
+            },
+            "authors": {
+              "type": "string",
+              "nullable": true
+            },
+            "title": {
+              "type": "string",
+              "nullable": true
+            },
+            "publisher": {
+              "type": "string",
+              "nullable": true
+            },
+            "publish_year": {
+              "type": "integer",
+              "nullable": true
+            },
+            "isbn": {
+              "type": "string",
+              "nullable": true
+            },
+            "website": {
+              "type": "string",
+              "nullable": true
+            }
+          },
+          "required": [
+            "id",
+            "type",
+            "authors",
+            "title",
+            "publisher",
+            "publish_year",
+            "isbn",
+            "website"
+          ]
+        }
+      },
+      "AcademicManageSyllabusSubjectSkillsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 704,
+              "title": "xxxxxxzxzzzzz ssasd  assd as dasd as a zxc zxc zxcv zxcv zxc zx zxcv zxc zxcv tyj turt sew6u 5aeyyw4ehy 5e7 u 6 w45u 45 uy54 y32544 y254 y34 3 434 67",
+              "count": 2
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string",
+              "nullable": true
+            },
+            "count": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "count"
+          ]
+        }
+      },
+      "AcademicManageSyllabusTeachingMethodsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 5144,
+              "title": "Дәріс"
+            },
+            {
+              "id": 5145,
+              "title": "Талқылау"
+            },
+            {
+              "id": 5146,
+              "title": "Сұрақ және жауап"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "title"
+          ]
+        }
+      },
+      "AcademicManageSyllabusWeeklyPlansGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 12113,
+              "week_no": 1,
+              "subject": "xAAAA  C C sd sd   svssd  hhghddf df df h h  g dfg dfg dg g dgdfghgdfhg dfg hdfhgfddfhgdfhg df ddfgh",
+              "activity": "dfhgdfhgdfghdfhgdfgh dfgh dfhg dfgh dfgh dfgh dfgh dfgh dgh dg ddfghdfghhdfhdfghd dfgh dfhg dfghdfghd fgh dgh dfg dgh",
+              "count": 4
+            },
+            {
+              "id": 12114,
+              "week_no": 2,
+              "subject": "xAAAA  C C sd sd   svssd  hhghddf df df h h  g dfg dfg dg g dgdfghgdfhg dfg hdfhgfddfhgdfhg df ddfgh",
+              "activity": "dfhgdfhgdfghdfhgdfgh dfgh dfhg dfgh dfgh dfgh dfgh dfgh dgh dg ddfghdfghhdfhdfghd dfgh dfhg dfghdfghd fgh dgh dfg dgh",
+              "count": 4
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "week_no": {
+              "type": "integer"
+            },
+            "subject": {
+              "type": "string",
+              "nullable": true
+            },
+            "activity": {
+              "type": "string",
+              "nullable": true
+            },
+            "count": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "week_no",
+            "subject",
+            "activity",
+            "count"
+          ]
+        },
+        "title": ""
+      },
+      "AcademicManageSyllabusDeliveryTypesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1,
+              "title": "традиционный",
+              "value": true
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "value": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "value"
+          ]
+        }
+      },
+      "AcademicManageSyllabusDescriptionsGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "objective": "The Internet of Things (IoT) is a foundation stone of the Industry 4.0 revolution. The “things” of IoT are the internet enabled devices that communicate with devices through a network. Data is measured from a physical environment by sensors and devices and transferred to the network. The network type used in the Internet of Things can be either wireless or wired connected. Types of the network are selected according to the aim of the system. IoT devices are implemented in any organization that makes it controlled remotely or automated. This process decreases human power and energy, and creates secure places. IoT systems can be found in retail energy, smart home and smart city projects, consumer applications, healthcare, education, etc.\nThe aim of the course is to understand basic concepts of IoT hardware, networking, and programming, and apply IoT systems and devices in different application areas. Something",
+            "content": null,
+            "components": null,
+            "work_placement": null
+          }
+        },
+        "properties": {
+          "objective": {
+            "type": "string",
+            "nullable": true
+          },
+          "content": {
+            "type": "string",
+            "nullable": true
+          },
+          "components": {
+            "type": "string",
+            "nullable": true
+          },
+          "work_placement": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "required": [
+          "objective",
+          "content",
+          "components",
+          "work_placement"
+        ]
       }
     },
     "securitySchemes": {}
