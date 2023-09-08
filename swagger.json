@@ -2909,6 +2909,17 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/courses/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-1.0.0-academic-courses-resources",
+        "x-stoplight": {
+          "id": "6xeakixvrbxe3"
+        }
+      }
     }
   },
   "components": {
@@ -22400,6 +22411,101 @@
           "grading_type",
           "grading",
           "local_code"
+        ]
+      },
+      "AcademicCoursesResourcesRequest": {
+        "title": "AcademicCoursesResourcesRequest",
+        "x-stoplight": {
+          "id": "a752o7biz97i2"
+        },
+        "type": "object",
+        "properties": {
+          "modules": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "1txla2zt0vcg6"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "jn7gabwdtbmns"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "modules"
+        ]
+      },
+      "AcademicCoursesResourcesResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "my_year_terms": [
+              {
+                "id": 1,
+                "year": 2022,
+                "term": 1
+              }
+            ],
+            "consent_year_terms": [
+              {
+                "id": 1,
+                "year": 2022,
+                "term": 1
+              }
+            ]
+          }
+        },
+        "properties": {
+          "my_year_terms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "year",
+                "term"
+              ]
+            }
+          },
+          "consent_year_terms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "year",
+                "term"
+              ]
+            }
+          }
+        },
+        "required": [
+          "my_year_terms",
+          "consent_year_terms"
         ]
       }
     },
