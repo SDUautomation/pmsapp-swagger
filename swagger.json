@@ -2847,6 +2847,68 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/courses/resources/single": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicCoursesResourcesSingleResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-courses-resources-single",
+        "x-stoplight": {
+          "id": "ho4646shty10i"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicCoursesResourcesSingleRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/courses/overview": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicCoursesOverviewResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-courses-overview",
+        "x-stoplight": {
+          "id": "purxg9um6ppd3"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicCoursesOverviewRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -21889,6 +21951,455 @@
           "content",
           "components",
           "work_placement"
+        ]
+      },
+      "AcademicCoursesResourcesSingleRequest": {
+        "title": "AcademicCoursesResourcesSingleRequest",
+        "x-stoplight": {
+          "id": "fx06kkk4byn4i"
+        },
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "zekskh6uzacgp"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "22nntpxbcq1b7"
+            }
+          },
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "507ddjqvk6b28"
+            }
+          }
+        },
+        "required": [
+          "code",
+          "year",
+          "term"
+        ]
+      },
+      "AcademicCoursesResourcesSingleResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "enrolled": true,
+            "information": {
+              "code": "CSS 101",
+              "language": "English",
+              "title": "Algorithms and Programming",
+              "department_code": "DEP_HUMANITIES",
+              "department_title": "Department of Humanities",
+              "equicode": 123123,
+              "year": 2022,
+              "term": 1,
+              "theory": 1,
+              "practice": 1,
+              "credits": 3,
+              "ects": 5
+            },
+            "sections": [
+              {
+                "section_id": 1,
+                "section": "01-N"
+              }
+            ],
+            "consent_statuses": [
+              {
+                "id": 1,
+                "title": "APPLIED"
+              }
+            ],
+            "instructors": [
+              {
+                "id": 10001,
+                "username": "arsentiy.zhunussov",
+                "name": "Arsentiy",
+                "surname": "Zhunussov",
+                "sections": [
+                  1
+                ]
+              }
+            ],
+            "history_year_terms": [
+              {
+                "year": 2022,
+                "term": 1
+              }
+            ],
+            "syllabus": "string",
+            "assessments": [
+              {
+                "section_id": 1,
+                "assessment_id": 1,
+                "assessment_type": "MT",
+                "assessment_title": "Project",
+                "is_open": true
+              }
+            ]
+          }
+        },
+        "properties": {
+          "enrolled": {
+            "type": "boolean"
+          },
+          "information": {
+            "type": "object",
+            "required": [
+              "code",
+              "language",
+              "title",
+              "department_code",
+              "department_title",
+              "equicode",
+              "year",
+              "term",
+              "theory",
+              "practice",
+              "credits",
+              "ects"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "department_code": {
+                "type": "string"
+              },
+              "department_title": {
+                "type": "string"
+              },
+              "equicode": {
+                "type": "integer"
+              },
+              "year": {
+                "type": "integer"
+              },
+              "term": {
+                "type": "integer"
+              },
+              "theory": {
+                "type": "integer"
+              },
+              "practice": {
+                "type": "integer"
+              },
+              "credits": {
+                "type": "integer"
+              },
+              "ects": {
+                "type": "integer"
+              }
+            }
+          },
+          "sections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "section_id": {
+                  "type": "integer"
+                },
+                "section": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "section_id",
+                "section"
+              ]
+            }
+          },
+          "consent_statuses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "instructors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "surname": {
+                  "type": "string"
+                },
+                "sections": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "username",
+                "name",
+                "surname",
+                "sections"
+              ]
+            }
+          },
+          "history_year_terms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "year",
+                "term"
+              ]
+            }
+          },
+          "syllabus": {
+            "type": "string"
+          },
+          "assessments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "section_id": {
+                  "type": "integer"
+                },
+                "assessment_id": {
+                  "type": "integer"
+                },
+                "assessment_type": {
+                  "type": "string"
+                },
+                "assessment_title": {
+                  "type": "string"
+                },
+                "is_open": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "section_id",
+                "assessment_id",
+                "assessment_type",
+                "assessment_title",
+                "is_open"
+              ]
+            }
+          }
+        },
+        "required": [
+          "enrolled",
+          "information",
+          "sections",
+          "consent_statuses",
+          "instructors",
+          "history_year_terms",
+          "syllabus",
+          "assessments"
+        ]
+      },
+      "AcademicCoursesOverviewRequest": {
+        "title": "AcademicCoursesOverviewRequest",
+        "x-stoplight": {
+          "id": "k514pls363x5v"
+        },
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "9upui0pqm6p3n"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "m32stnhliykgs"
+            }
+          }
+        },
+        "required": [
+          "course_code",
+          "year"
+        ]
+      },
+      "AcademicCoursesOverviewResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "code": "CSS 101",
+            "year": 2022,
+            "title": "Algorithms and Programming",
+            "department_code": "DEP_HUMANITIES",
+            "department_title": "Department of Humanities",
+            "faculty_code": "F_ENG",
+            "faculty_title": "Facultry of Engeneering and Natural Science",
+            "period_code": "123123",
+            "term": 1,
+            "theory": 1,
+            "practice": 1,
+            "lab": 1,
+            "credits": 3,
+            "ects": 5,
+            "equicode": 12312,
+            "status": 1,
+            "language_title": "English",
+            "language_code": "string",
+            "type_title": "Normal",
+            "type": "N",
+            "employee_id": 10001,
+            "open_date": "2023-06-28",
+            "open_time": "02:46:00",
+            "grading_type": "N",
+            "grading": "normal",
+            "local_code": "1"
+          }
+        },
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "department_code": {
+            "type": "string"
+          },
+          "department_title": {
+            "type": "string"
+          },
+          "faculty_code": {
+            "type": "string"
+          },
+          "faculty_title": {
+            "type": "string"
+          },
+          "period_code": {
+            "type": "string"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "theory": {
+            "type": "integer"
+          },
+          "practice": {
+            "type": "integer"
+          },
+          "lab": {
+            "type": "integer"
+          },
+          "credits": {
+            "type": "integer"
+          },
+          "ects": {
+            "type": "integer"
+          },
+          "equicode": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "integer"
+          },
+          "language_title": {
+            "type": "string"
+          },
+          "language_code": {
+            "type": "string"
+          },
+          "type_title": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "employee_id": {
+            "type": "integer"
+          },
+          "open_date": {
+            "type": "string"
+          },
+          "open_time": {
+            "type": "string"
+          },
+          "grading_type": {
+            "type": "string"
+          },
+          "grading": {
+            "type": "string"
+          },
+          "local_code": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "year",
+          "title",
+          "department_code",
+          "department_title",
+          "faculty_code",
+          "faculty_title",
+          "period_code",
+          "term",
+          "theory",
+          "practice",
+          "lab",
+          "credits",
+          "ects",
+          "equicode",
+          "status",
+          "language_title",
+          "language_code",
+          "type_title",
+          "type",
+          "employee_id",
+          "open_date",
+          "open_time",
+          "grading_type",
+          "grading",
+          "local_code"
         ]
       }
     },
