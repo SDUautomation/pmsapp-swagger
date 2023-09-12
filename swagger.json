@@ -2914,10 +2914,30 @@
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
-        "responses": {},
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicCoursesResourcesResponse"
+                }
+              }
+            }
+          }
+        },
         "operationId": "get-1.0.0-academic-courses-resources",
         "x-stoplight": {
           "id": "6xeakixvrbxe3"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceRequest"
+              }
+            }
+          }
         }
       }
     }
@@ -22411,30 +22431,6 @@
           "grading_type",
           "grading",
           "local_code"
-        ]
-      },
-      "AcademicCoursesResourcesRequest": {
-        "title": "AcademicCoursesResourcesRequest",
-        "x-stoplight": {
-          "id": "a752o7biz97i2"
-        },
-        "type": "object",
-        "properties": {
-          "modules": {
-            "type": "array",
-            "x-stoplight": {
-              "id": "1txla2zt0vcg6"
-            },
-            "items": {
-              "x-stoplight": {
-                "id": "jn7gabwdtbmns"
-              },
-              "type": "string"
-            }
-          }
-        },
-        "required": [
-          "modules"
         ]
       },
       "AcademicCoursesResourcesResponse": {
