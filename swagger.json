@@ -22559,12 +22559,26 @@
             "x-stoplight": {
               "id": "78fmm5zohi7zy"
             }
+          },
+          "per_page": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "v6reqt3nt6pr1"
+            }
+          },
+          "offset": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "14ge6kep3xcay"
+            }
           }
         },
         "required": [
           "course_code",
           "year",
-          "term"
+          "term",
+          "per_page",
+          "offset"
         ]
       },
       "AcademicCoursesStudentsResponse": {
