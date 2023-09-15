@@ -2940,6 +2940,37 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/courses/students": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicCoursesStudentsResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-courses-students",
+        "x-stoplight": {
+          "id": "1x6p96i9vy41k"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicCoursesStudentsRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -22295,7 +22326,7 @@
       "AcademicCoursesOverviewResponse": {
         "type": "object",
         "x-examples": {
-          "Example 1": {
+          "": {
             "code": "CSS 101",
             "year": 2022,
             "title": "Algorithms and Programming",
@@ -22502,6 +22533,149 @@
         "required": [
           "my_year_terms",
           "consent_year_terms"
+        ]
+      },
+      "AcademicCoursesStudentsRequest": {
+        "title": "AcademicCoursesStudentsRequest",
+        "x-stoplight": {
+          "id": "zlxy42iztenbl"
+        },
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "bl3woirp2in25"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "cwb7ltov91shb"
+            }
+          },
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "78fmm5zohi7zy"
+            }
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "term"
+        ]
+      },
+      "AcademicCoursesStudentsResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 20,
+            "from": 1,
+            "per_page": 10,
+            "current_page": 1,
+            "last_page": 2,
+            "students": [
+              {
+                "id": "180107149",
+                "name": "Arsentiy",
+                "surname": "Zhunussov",
+                "photo": "PHOTO",
+                "department_id": 1,
+                "speciality_id": 1,
+                "academic_level": "B",
+                "enrolled_sections": [
+                  {
+                    "section_id": 1,
+                    "section": "01-N"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "surname": {
+                  "type": "string"
+                },
+                "photo": {
+                  "type": "string"
+                },
+                "department_id": {
+                  "type": "integer"
+                },
+                "speciality_id": {
+                  "type": "integer"
+                },
+                "academic_level": {
+                  "type": "string"
+                },
+                "enrolled_sections": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "section_id": {
+                        "type": "integer"
+                      },
+                      "section": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "section_id",
+                      "section"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "surname",
+                "photo",
+                "department_id",
+                "speciality_id",
+                "academic_level",
+                "enrolled_sections"
+              ]
+            }
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "students"
         ]
       }
     },
