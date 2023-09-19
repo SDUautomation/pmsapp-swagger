@@ -9986,8 +9986,7 @@
         },
         "required": [
           "modules",
-          "year",
-          "term"
+          "year"
         ]
       },
       "AcademicResourceResponse": {
@@ -19179,279 +19178,56 @@
         "type": "object",
         "x-examples": {
           "Example 1": {
-            "total": 96,
+            "total": 2,
             "from": 1,
-            "per_page": 15,
+            "per_page": 100,
             "current_page": 1,
-            "last_page": 7,
+            "last_page": 1,
             "syllabuses": [
               {
                 "course": {
-                  "editor": "Meraryslan Meraliyev",
-                  "code": "CSS 634",
-                  "title": "Deep Learning",
+                  "editor_id": 11339,
+                  "editor_name": "Maxat Baitugulov",
+                  "code": "INF 345",
+                  "title": "Fundamentals of DevOps",
+                  "theory": 3,
+                  "practice": 3,
+                  "lab": 3,
                   "credits": 3,
                   "ects": 5,
                   "titles": [
-                    "Deep Learning",
-                    "Терең оқыту",
-                    "Глубокое обучение"
+                    "Fundamentals of DevOps",
+                    "DevOps негіздері",
+                    "Основы DevOps"
                   ],
-                  "department_id": 973
+                  "department_id": 973,
+                  "department_name": "Department of Computer Sciences"
                 },
                 "year": 2022,
+                "term": null,
                 "status": 4,
                 "language": "EN"
               },
               {
                 "course": {
-                  "editor": "Selcuk Cankurt",
-                  "code": "INF 337",
-                  "title": "Deep Learning",
-                  "credits": 3,
+                  "editor_id": 10980,
+                  "editor_name": "Nauryzbay Sapargali",
+                  "code": "CSS 105",
+                  "title": "Fundamentals of Programming",
+                  "theory": 4,
+                  "practice": 4,
+                  "lab": 4,
                   "ects": 5,
                   "titles": [
-                    "Deep Learning",
-                    "Терең білім алу",
-                    "Глубокое обучение"
+                    "Fundamentals of Programming",
+                    "Бағдарламалау негіздері",
+                    "Основы программирования"
                   ],
-                  "department_id": 973
+                  "department_id": 973,
+                  "department_name": "Department of Computer Sciences"
                 },
                 "year": 2022,
-                "status": 4,
-                "language": "EN"
-              },
-              {
-                "course": {
-                  "editor": "Cemil Turan",
-                  "code": "CSS 502",
-                  "title": "Methods of Writing MSc Thesis",
-                  "credits": 3,
-                  "ects": 5,
-                  "titles": [
-                    "Methods of Writing MSc Thesis",
-                    "MSc диссертация жазу үшін әдістері",
-                    "Методы написания MSc диссертации"
-                  ],
-                  "department_id": 973
-                },
-                "year": 2022,
-                "status": 4,
-                "language": "EN"
-              },
-              {
-                "course": {
-                  "editor": "Azamat Serek",
-                  "code": "CSS 220",
-                  "title": "Advanced Algorithms",
-                  "credits": 3,
-                  "ects": 5,
-                  "titles": [
-                    "Advanced Algorithms",
-                    "Терендетілген алгоритмдер",
-                    "Продвинутые алгоритмы"
-                  ],
-                  "department_id": 973
-                },
-                "year": 2022,
-                "status": 4,
-                "language": "EN"
-              },
-              {
-                "course": {
-                  "editor": "Zhumaniyaz Mamatnabiyev",
-                  "code": "CSS 641",
-                  "title": "IoT in Industry",
-                  "credits": 3,
-                  "ects": 5,
-                  "titles": [
-                    "IoT in Industry",
-                    "Өнеркәсіптегі IoT",
-                    "IoT в индустрии"
-                  ],
-                  "department_id": 973
-                },
-                "year": 2022,
-                "status": 4,
-                "language": "EN"
-              },
-              {
-                "course": {
-                  "editor": "Marat Urmanov",
-                  "code": "CSS 223",
-                  "title": "C# Object Oriented Programming",
-                  "credits": 3,
-                  "ects": 5,
-                  "titles": [
-                    "C# Object Oriented Programming",
-                    "С# Объектілі бағытталған бағдарламалау",
-                    "С# Объектно-ориентированное программирование"
-                  ],
-                  "department_id": 973
-                },
-                "year": 2022,
-                "status": 4,
-                "language": "EN"
-              },
-              {
-                "course": {
-                  "editor": "Perizat Yessenova",
-                  "code": "CSS 206",
-                  "title": "Database Management Systems 1",
-                  "credits": 3,
-                  "ects": 5,
-                  "titles": [
-                    "Database Management Systems 1",
-                    "Деректер қорын басқару жүйелері 1",
-                    "Системы управления базами данных 1"
-                  ],
-                  "department_id": 973
-                },
-                "year": 2022,
-                "status": 4,
-                "language": "EN"
-              },
-              {
-                "course": {
-                  "editor": "Aziza Aipenova",
-                  "code": "CSS 330",
-                  "title": "Data wrangling and visualization",
-                  "credits": 3,
-                  "ects": 5,
-                  "titles": [
-                    "Data wrangling and visualization",
-                    "Мәліметтерді өңдеу және бейнелеу",
-                    "Обработка данных и визуализация"
-                  ],
-                  "department_id": 973
-                },
-                "year": 2022,
-                "status": 1,
-                "language": "EN"
-              },
-              {
-                "course": {
-                  "editor": "Zhumaniyaz Mamatnabiyev",
-                  "code": "CSS 514",
-                  "title": "Advanced Digital Design",
-                  "credits": 3,
-                  "ects": 5,
-                  "titles": [
-                    "Advanced Digital Design",
-                    "Терендетілген цифрлы схемотехника",
-                    "Продвинутая цифровая схемотехника"
-                  ],
-                  "department_id": 973
-                },
-                "year": 2022,
-                "status": 4,
-                "language": "EN"
-              },
-              {
-                "course": {
-                  "editor": "Bissenbay Dauletbayev",
-                  "code": "CSS 215",
-                  "title": "Introduction to Algorithms",
-                  "credits": 3,
-                  "ects": 5,
-                  "titles": [
-                    "Introduction to Algorithms",
-                    "Алгоритмдерге кіріспе",
-                    "Введение в алгоритмы"
-                  ],
-                  "department_id": 973
-                },
-                "year": 2022,
-                "status": 4,
-                "language": "EN"
-              },
-              {
-                "course": {
-                  "editor": "Galymzhan Momonov",
-                  "code": "CSS 417",
-                  "title": "Linux Administration",
-                  "credits": 3,
-                  "ects": 5,
-                  "titles": [
-                    "Linux Administration",
-                    "Linux басқару",
-                    "Администрирование Linux"
-                  ],
-                  "department_id": 973
-                },
-                "year": 2022,
-                "status": 4,
-                "language": "EN"
-              },
-              {
-                "course": {
-                  "editor": "Yerbol Bugybayev",
-                  "code": "INF 261",
-                  "title": "Game Physics",
-                  "credits": 3,
-                  "ects": 5,
-                  "titles": [
-                    "Game Physics",
-                    "Ойын физикасы",
-                    "Игровая физика"
-                  ],
-                  "department_id": 973
-                },
-                "year": 2022,
-                "status": 4,
-                "language": "EN"
-              },
-              {
-                "course": {
-                  "editor": "Shyngys Adilkhan",
-                  "code": "INF 427",
-                  "title": "Game Development 2",
-                  "credits": 3,
-                  "ects": 5,
-                  "titles": [
-                    "Game Development 2",
-                    "Ойындар жасау 2",
-                    "Разработка игр 2"
-                  ],
-                  "department_id": 973
-                },
-                "year": 2022,
-                "status": 4,
-                "language": "EN"
-              },
-              {
-                "course": {
-                  "editor": "Inkar Shoganova",
-                  "code": "INF 421",
-                  "title": "Security in Computer Networks",
-                  "credits": 3,
-                  "ects": 5,
-                  "titles": [
-                    "Security in Computer Networks",
-                    "Компьютер желілеріндегі қауіпсіздік",
-                    "Безопасность в компьютерных сетях"
-                  ],
-                  "department_id": 973
-                },
-                "year": 2022,
-                "status": 4,
-                "language": "EN"
-              },
-              {
-                "course": {
-                  "editor": "Olzhas Aldabergenov",
-                  "code": "CSS 619",
-                  "title": "Natural Language Processing",
-                  "credits": 3,
-                  "ects": 5,
-                  "titles": [
-                    "Natural Language Processing",
-                    "Табиғи тілді өңдеу",
-                    "Обработка естественного языка"
-                  ],
-                  "department_id": 973
-                },
-                "year": 2022,
+                "term": 1,
                 "status": 4,
                 "language": "EN"
               }
@@ -19482,16 +19258,24 @@
                 "course": {
                   "type": "object",
                   "required": [
-                    "editor",
+                    "editor_id",
+                    "editor_name",
                     "code",
                     "title",
+                    "theory",
                     "credits",
+                    "practice",
+                    "lab",
                     "ects",
                     "titles",
-                    "department_id"
+                    "department_id",
+                    "department_name"
                   ],
                   "properties": {
-                    "editor": {
+                    "editor_id": {
+                      "type": "integer"
+                    },
+                    "editor_name": {
                       "type": "string"
                     },
                     "code": {
@@ -19500,7 +19284,19 @@
                     "title": {
                       "type": "string"
                     },
+                    "theory": {
+                      "type": "integer"
+                    },
                     "credits": {
+                      "type": "integer",
+                      "x-stoplight": {
+                        "id": "2fd3wrazm7ovp"
+                      }
+                    },
+                    "practice": {
+                      "type": "integer"
+                    },
+                    "lab": {
                       "type": "integer"
                     },
                     "ects": {
@@ -19514,11 +19310,18 @@
                     },
                     "department_id": {
                       "type": "integer"
+                    },
+                    "department_name": {
+                      "type": "string"
                     }
                   }
                 },
                 "year": {
                   "type": "integer"
+                },
+                "term": {
+                  "type": "integer",
+                  "nullable": true
                 },
                 "status": {
                   "type": "integer"
@@ -19530,6 +19333,7 @@
               "required": [
                 "course",
                 "year",
+                "term",
                 "status",
                 "language"
               ]
