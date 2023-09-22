@@ -3054,6 +3054,37 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/courses/history": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicCoursesHistoryResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-courses-history",
+        "x-stoplight": {
+          "id": "6bev6lwjgau7p"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicCoursesHistoryRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -22873,6 +22904,405 @@
             "course_students"
           ]
         }
+      },
+      "AcademicCoursesHistoryRequest": {
+        "title": "AcademicCoursesHistoryRequest",
+        "x-stoplight": {
+          "id": "lnlootvmgpigl"
+        },
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "faezefb2r815w"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "w1g7som6i7yp5"
+            }
+          },
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "j9nqm4s6jvz2m"
+            }
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "term"
+        ]
+      },
+      "AcademicCoursesHistoryResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "information": {
+              "code": "CSS 105",
+              "department_code": "DEP_HUMANITIES",
+              "department_title": "Department of Humanities",
+              "faculty_code": "CSS_ENG",
+              "faculty_title": "Faculty of Engeneering",
+              "ects": 5,
+              "lab": 0,
+              "practice": 1,
+              "theory": 2,
+              "language_code": "EN",
+              "language_title": "English",
+              "open_date": "2023-06-23",
+              "open_time": "18:22:00",
+              "period_code": "1231231",
+              "title": "Algorithms and Programming",
+              "term": 1,
+              "year": 2022
+            },
+            "sections": [
+              {
+                "id": 1,
+                "section": "01-N"
+              }
+            ],
+            "attendance": [
+              {
+                "date": "2023-06-23",
+                "time": "18:28:00",
+                "section_id": 1,
+                "room": "D117",
+                "absent_count": 1,
+                "attended_count": 1,
+                "permitted_count": 1
+              }
+            ],
+            "grades": [
+              {
+                "letter": "B+",
+                "students_count": 1
+              }
+            ],
+            "statistics": {
+              "section": {
+                "opened_sections": 1,
+                "average_students_enrolled": 1.2,
+                "minimum_students_enrolled": 1,
+                "maximum_students_enrolled": 1,
+                "average_opened_quota": 1
+              },
+              "grade": {
+                "average": 1,
+                "minimum": 1,
+                "maximum": 1,
+                "median": 1,
+                "mode": 1
+              },
+              "student": {
+                "enrolled_students": 1,
+                "course_passed": 1,
+                "course_failed": 1
+              },
+              "instructors": [
+                {
+                  "type": "N",
+                  "instructors": 1
+                }
+              ],
+              "attendance": {
+                "less_absence": 1,
+                "more_absence": 1,
+                "without_absence": 1,
+                "over_limit_absence": 1
+              }
+            }
+          }
+        },
+        "properties": {
+          "information": {
+            "type": "object",
+            "required": [
+              "code",
+              "department_code",
+              "department_title",
+              "faculty_code",
+              "faculty_title",
+              "ects",
+              "lab",
+              "practice",
+              "theory",
+              "language_code",
+              "language_title",
+              "open_date",
+              "open_time",
+              "period_code",
+              "title",
+              "term",
+              "year"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "department_code": {
+                "type": "string"
+              },
+              "department_title": {
+                "type": "string"
+              },
+              "faculty_code": {
+                "type": "string"
+              },
+              "faculty_title": {
+                "type": "string"
+              },
+              "ects": {
+                "type": "integer"
+              },
+              "lab": {
+                "type": "integer"
+              },
+              "practice": {
+                "type": "integer"
+              },
+              "theory": {
+                "type": "integer"
+              },
+              "language_code": {
+                "type": "string"
+              },
+              "language_title": {
+                "type": "string"
+              },
+              "open_date": {
+                "type": "string"
+              },
+              "open_time": {
+                "type": "string"
+              },
+              "period_code": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "term": {
+                "type": "integer"
+              },
+              "year": {
+                "type": "integer"
+              }
+            }
+          },
+          "sections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "section": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "section"
+              ]
+            }
+          },
+          "attendance": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "time": {
+                  "type": "string"
+                },
+                "section_id": {
+                  "type": "integer"
+                },
+                "room": {
+                  "type": "string"
+                },
+                "absent_count": {
+                  "type": "integer"
+                },
+                "attended_count": {
+                  "type": "integer"
+                },
+                "permitted_count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "date",
+                "time",
+                "section_id",
+                "room",
+                "absent_count",
+                "attended_count",
+                "permitted_count"
+              ]
+            }
+          },
+          "grades": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "letter": {
+                  "type": "string"
+                },
+                "students_count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "letter",
+                "students_count"
+              ]
+            }
+          },
+          "statistics": {
+            "type": "object",
+            "required": [
+              "section",
+              "grade",
+              "student",
+              "instructors",
+              "attendance"
+            ],
+            "properties": {
+              "section": {
+                "type": "object",
+                "required": [
+                  "opened_sections",
+                  "average_students_enrolled",
+                  "minimum_students_enrolled",
+                  "maximum_students_enrolled",
+                  "average_opened_quota"
+                ],
+                "properties": {
+                  "opened_sections": {
+                    "type": "integer"
+                  },
+                  "average_students_enrolled": {
+                    "type": "number"
+                  },
+                  "minimum_students_enrolled": {
+                    "type": "integer"
+                  },
+                  "maximum_students_enrolled": {
+                    "type": "integer"
+                  },
+                  "average_opened_quota": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "grade": {
+                "type": "object",
+                "required": [
+                  "average",
+                  "minimum",
+                  "maximum",
+                  "median",
+                  "mode"
+                ],
+                "properties": {
+                  "average": {
+                    "type": "integer"
+                  },
+                  "minimum": {
+                    "type": "integer"
+                  },
+                  "maximum": {
+                    "type": "integer"
+                  },
+                  "median": {
+                    "type": "integer"
+                  },
+                  "mode": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "student": {
+                "type": "object",
+                "required": [
+                  "enrolled_students",
+                  "course_passed",
+                  "course_failed"
+                ],
+                "properties": {
+                  "enrolled_students": {
+                    "type": "integer"
+                  },
+                  "course_passed": {
+                    "type": "integer"
+                  },
+                  "course_failed": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "instructors": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "instructors": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "instructors"
+                  ]
+                }
+              },
+              "attendance": {
+                "type": "object",
+                "required": [
+                  "less_absence",
+                  "more_absence",
+                  "without_absence",
+                  "over_limit_absence"
+                ],
+                "properties": {
+                  "less_absence": {
+                    "type": "integer"
+                  },
+                  "more_absence": {
+                    "type": "integer"
+                  },
+                  "without_absence": {
+                    "type": "integer"
+                  },
+                  "over_limit_absence": {
+                    "type": "integer"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "information",
+          "sections",
+          "attendance",
+          "grades",
+          "statistics"
+        ],
+        "description": ""
       }
     },
     "securitySchemes": {}
