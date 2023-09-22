@@ -3085,6 +3085,82 @@
           }
         }
       }
+    },
+    "/1.0.0/profile/contacts": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileContactsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-contacts",
+        "x-stoplight": {
+          "id": "qvlsz77laeqwc"
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-contacts",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "bpraqdga05f2c"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileContactsPutRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-contacts",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "jtchkgy86hn04"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileContactsPutRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-profile-contacts",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "v43huctbzjqcs"
+        }
+      }
     }
   },
   "components": {
@@ -23303,6 +23379,64 @@
           "statistics"
         ],
         "description": ""
+      },
+      "ProfileContactsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 13985,
+              "contact": "saparbayevzh03@gmail.com",
+              "type_id": 5,
+              "show_status": false
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "contact": {
+              "type": "string"
+            },
+            "type_id": {
+              "type": "integer"
+            },
+            "show_status": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "id",
+            "contact",
+            "type_id",
+            "show_status"
+          ]
+        },
+        "title": ""
+      },
+      "ProfileContactsPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "type_id": 5,
+            "contact": "saparbayevzh03@gmail.com"
+          }
+        },
+        "properties": {
+          "type_id": {
+            "type": "integer"
+          },
+          "contact": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type_id",
+          "contact"
+        ]
       }
     },
     "securitySchemes": {}
