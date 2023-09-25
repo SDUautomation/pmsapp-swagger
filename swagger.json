@@ -3477,6 +3477,243 @@
           "id": "25drxdpn1nug5"
         }
       }
+    },
+    "/1.0.0/profile/education/conferences": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileEducationConferencesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-education-conferences",
+        "x-stoplight": {
+          "id": "w5l89yuv1occl"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationConferencesGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-education-conferences",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "qolkit05hxz6g"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationConferencesPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-education-conferences",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "d1wvu3fznsxio"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationConferencesPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-profile-education-conferences",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "m68o2jyue8abd"
+        }
+      }
+    },
+    "/1.0.0/profile/education": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileEducationGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-education",
+        "x-stoplight": {
+          "id": "22vim0aihg5an"
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-education",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "n2av77rskscv4"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-education",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "lvcykhvrii1yr"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-profile-education",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "wjoql9uwdacmc"
+        }
+      }
+    },
+    "/1.0.0/profile/education/organizations": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileEducationOrganizationsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-education-organizations",
+        "x-stoplight": {
+          "id": "qlfjuiyigua7h"
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-education-organizations",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "j3x9zpd33sgc2"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationOrganizationsPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-education-organizations",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "fnr26w7x1cauk"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationOrganizationsPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-profile-education-organizations",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "3p7zj9c4ulj7z"
+        }
+      }
     }
   },
   "components": {
@@ -24184,6 +24421,371 @@
         "required": [
           "title",
           "level"
+        ]
+      },
+      "ProfileEducationConferencesGetRequest": {
+        "title": "ProfileEducationConferencesGetRequest",
+        "x-stoplight": {
+          "id": "xlauog7ptba4h"
+        },
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "z9avetyws6org"
+            }
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "ProfileEducationConferencesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 676,
+              "title": "Leadership Profile of Lawyer Candidates in  Kazakhstan",
+              "conference_id": 3042,
+              "authors": "Zhandos Saparbayev",
+              "pages": "145",
+              "url": "URL/for/conference",
+              "country": 681,
+              "published_month": 8,
+              "published_year": 2023
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "conference_id": {
+              "type": "integer"
+            },
+            "authors": {
+              "type": "string"
+            },
+            "pages": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            },
+            "country": {
+              "type": "integer"
+            },
+            "published_month": {
+              "type": "integer"
+            },
+            "published_year": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "conference_id",
+            "authors",
+            "pages",
+            "url",
+            "country",
+            "published_month",
+            "published_year"
+          ]
+        }
+      },
+      "ProfileEducationConferencesPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "type": "international",
+            "title": "Zhandos's conference",
+            "conference_id": 2041,
+            "conference_new": "A new conference",
+            "authors": "Zhandos Saparbayev",
+            "pages": "111",
+            "url": "url/for/conference",
+            "country": 162,
+            "published_month": 7,
+            "published_year": 2023
+          }
+        },
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "conference_id": {
+            "type": "integer"
+          },
+          "conference_new": {
+            "type": "string"
+          },
+          "authors": {
+            "type": "string"
+          },
+          "pages": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "country": {
+            "type": "integer"
+          },
+          "published_month": {
+            "type": "integer"
+          },
+          "published_year": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "type",
+          "title",
+          "conference_id",
+          "conference_new",
+          "authors",
+          "pages",
+          "url",
+          "country",
+          "published_month",
+          "published_year"
+        ]
+      },
+      "ProfileEducationGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1222,
+              "level_id": "M",
+              "university": "SDU",
+              "faculty": "Business school",
+              "country": "Kazakhstan",
+              "speciality": "IS",
+              "cipher": "6N0503",
+              "registration_no": "№258",
+              "diploma_no": "№0018897",
+              "start_date": "2020-09-01",
+              "end_date": "2024-09-01",
+              "is_ongoing": true,
+              "is_honor": false
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "level_id": {
+              "type": "string"
+            },
+            "university": {
+              "type": "string"
+            },
+            "faculty": {
+              "type": "string"
+            },
+            "country": {
+              "type": "string"
+            },
+            "speciality": {
+              "type": "string"
+            },
+            "cipher": {
+              "type": "string"
+            },
+            "registration_no": {
+              "type": "string"
+            },
+            "diploma_no": {
+              "type": "string"
+            },
+            "start_date": {
+              "type": "string"
+            },
+            "end_date": {
+              "type": "string"
+            },
+            "is_ongoing": {
+              "type": "boolean"
+            },
+            "is_honor": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "id",
+            "level_id",
+            "university",
+            "faculty",
+            "country",
+            "speciality",
+            "cipher",
+            "registration_no",
+            "diploma_no",
+            "start_date",
+            "end_date",
+            "is_ongoing",
+            "is_honor"
+          ]
+        }
+      },
+      "ProfileEducationPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "level_id": "M",
+            "university": "SDU",
+            "faculty": "Business school",
+            "speciality": "Information systems",
+            "cipher": "6N0503",
+            "registration_no": "№258",
+            "diploma_no": "№0018897",
+            "start_date": "2020-09-01",
+            "end_date": "2024-09-01",
+            "is_ongoing": true,
+            "is_honor": false
+          }
+        },
+        "properties": {
+          "level_id": {
+            "type": "string"
+          },
+          "university": {
+            "type": "string"
+          },
+          "faculty": {
+            "type": "string"
+          },
+          "speciality": {
+            "type": "string"
+          },
+          "cipher": {
+            "type": "string"
+          },
+          "registration_no": {
+            "type": "string"
+          },
+          "diploma_no": {
+            "type": "string"
+          },
+          "start_date": {
+            "type": "string"
+          },
+          "end_date": {
+            "type": "string"
+          },
+          "is_ongoing": {
+            "type": "boolean"
+          },
+          "is_honor": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "level_id",
+          "university",
+          "faculty",
+          "speciality",
+          "cipher",
+          "registration_no",
+          "diploma_no",
+          "start_date",
+          "end_date",
+          "is_ongoing",
+          "is_honor"
+        ]
+      },
+      "ProfileEducationOrganizationsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 80,
+              "organization": "Zhandos's organization",
+              "is_ongoing": true,
+              "membership_date": "2023-07-06",
+              "end_date": "2024-07-06"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "organization": {
+              "type": "string"
+            },
+            "is_ongoing": {
+              "type": "boolean"
+            },
+            "membership_date": {
+              "type": "string"
+            },
+            "end_date": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "organization",
+            "is_ongoing",
+            "membership_date",
+            "end_date"
+          ]
+        },
+        "title": ""
+      },
+      "ProfileEducationOrganizationsPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "organization": 4144,
+            "organization_new": "Zhandos's organization",
+            "is_ongoing": true,
+            "membership_date": "2023-07-06",
+            "end_date": "2024-07-06"
+          }
+        },
+        "properties": {
+          "organization": {
+            "type": "integer"
+          },
+          "organization_new": {
+            "type": "string"
+          },
+          "is_ongoing": {
+            "type": "boolean"
+          },
+          "membership_date": {
+            "type": "string"
+          },
+          "end_date": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "organization",
+          "organization_new",
+          "is_ongoing",
+          "membership_date",
+          "end_date"
         ]
       }
     },
