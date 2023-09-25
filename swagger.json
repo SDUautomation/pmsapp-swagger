@@ -3714,6 +3714,235 @@
           "id": "3p7zj9c4ulj7z"
         }
       }
+    },
+    "/1.0.0/profile/education/supervisions": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileEducationSupervisionsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-education-supervisions",
+        "x-stoplight": {
+          "id": "s9gmes0skbxzo"
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-education-supervisions",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "bzz8khxys01h0"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationSupervisionsPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-education-supervisions",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "00tub9bvpwhod"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationSupervisionsPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-profile-education-supervisions",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "drbdrkd7i4yk9"
+        }
+      }
+    },
+    "/1.0.0/profile/experiences": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileExperiencesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-experiences",
+        "x-stoplight": {
+          "id": "81wd7g1acz7uq"
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-experiences",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "idzt5e275hj87"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileExperiencesPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-experiences",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "xv0rohojlls6p"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileExperiencesPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-profile-experiences",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "33htul3j5cjmk"
+        }
+      }
+    },
+    "/1.0.0/profile/projects": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileProjectsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-projects",
+        "x-stoplight": {
+          "id": "9wnk8n2vq89mo"
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-projects",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {}
+          }
+        },
+        "x-stoplight": {
+          "id": "2m2r1zuovewzn"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileProjectsPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-projects",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "yda0otbvljrg9"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileProjectsPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-profile-projects",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "euzbcx1vbleon"
+        }
+      }
     }
   },
   "components": {
@@ -24786,6 +25015,412 @@
           "is_ongoing",
           "membership_date",
           "end_date"
+        ]
+      },
+      "ProfileEducationSupervisionsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 6460,
+              "student": "Zhandos Saparbayev",
+              "level_id": "B",
+              "university": "SDU",
+              "topic": "How can we solve any problems easely?",
+              "is_ongoing": true,
+              "start_year": 2023,
+              "defense_year": 2024
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "student": {
+              "type": "string"
+            },
+            "level_id": {
+              "type": "string"
+            },
+            "university": {
+              "type": "string"
+            },
+            "topic": {
+              "type": "string"
+            },
+            "is_ongoing": {
+              "type": "boolean"
+            },
+            "start_year": {
+              "type": "integer"
+            },
+            "defense_year": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "student",
+            "level_id",
+            "university",
+            "topic",
+            "is_ongoing",
+            "start_year",
+            "defense_year"
+          ]
+        }
+      },
+      "ProfileEducationSupervisionsPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "student": "Zhandos Saparbayev",
+            "level_id": "B",
+            "university": "SDU",
+            "topic": "How can we solve any problems easely?",
+            "is_ongoing": true,
+            "start_date": "2023-07-07",
+            "defence_date": "2024-07-07"
+          }
+        },
+        "properties": {
+          "student": {
+            "type": "string"
+          },
+          "level_id": {
+            "type": "string"
+          },
+          "university": {
+            "type": "string"
+          },
+          "topic": {
+            "type": "string"
+          },
+          "is_ongoing": {
+            "type": "boolean"
+          },
+          "start_date": {
+            "type": "string"
+          },
+          "defence_date": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "student",
+          "level_id",
+          "university",
+          "topic",
+          "is_ongoing",
+          "start_date",
+          "defence_date"
+        ]
+      },
+      "ProfileExperiencesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 484,
+              "title": "Part time Assistant",
+              "company_id": 4137,
+              "start_month": 7,
+              "start_year": 2023,
+              "end_month": 7,
+              "end_year": 2024,
+              "country_id": 830,
+              "city_id": 830,
+              "employment_type": 2,
+              "location_id": 2,
+              "is_current_position": true,
+              "industry": "SDU",
+              "description": "Helping for team with project."
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "company_id": {
+              "type": "integer"
+            },
+            "start_month": {
+              "type": "integer"
+            },
+            "start_year": {
+              "type": "integer"
+            },
+            "end_month": {
+              "type": "integer"
+            },
+            "end_year": {
+              "type": "integer"
+            },
+            "country_id": {
+              "type": "integer"
+            },
+            "city_id": {
+              "type": "integer"
+            },
+            "employment_type": {
+              "type": "integer"
+            },
+            "location_id": {
+              "type": "integer"
+            },
+            "is_current_position": {
+              "type": "boolean"
+            },
+            "industry": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "company_id",
+            "start_month",
+            "start_year",
+            "end_month",
+            "end_year",
+            "country_id",
+            "city_id",
+            "employment_type",
+            "location_id",
+            "is_current_position",
+            "industry",
+            "description"
+          ]
+        }
+      },
+      "ProfileExperiencesPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "title": "Part time assistant",
+            "company_id": 4237,
+            "company_new": "A new company",
+            "start_month": 7,
+            "start_year": 2023,
+            "end_month": 7,
+            "end_year": 2024,
+            "city_id": 830,
+            "employment_type": 830,
+            "location_id": 2,
+            "is_current_position": true,
+            "industry": "SDU",
+            "description": "Helping for team with project."
+          }
+        },
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "company_id": {
+            "type": "integer"
+          },
+          "company_new": {
+            "type": "string"
+          },
+          "start_month": {
+            "type": "integer"
+          },
+          "start_year": {
+            "type": "integer"
+          },
+          "end_month": {
+            "type": "integer"
+          },
+          "end_year": {
+            "type": "integer"
+          },
+          "city_id": {
+            "type": "integer"
+          },
+          "employment_type": {
+            "type": "integer"
+          },
+          "location_id": {
+            "type": "integer"
+          },
+          "is_current_position": {
+            "type": "boolean"
+          },
+          "industry": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "company_id",
+          "company_new",
+          "start_month",
+          "start_year",
+          "end_month",
+          "end_year",
+          "city_id",
+          "employment_type",
+          "location_id",
+          "is_current_position",
+          "industry",
+          "description"
+        ]
+      },
+      "ProfileProjectsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 62,
+              "title": "SDU portal for teacher",
+              "sponsor": "Zhandos Saparbayev",
+              "position": "Backend",
+              "description": "PMS helps for teachers",
+              "project_link": "link/for/project",
+              "is_ongoing": true,
+              "start_month": 7,
+              "start_year": 2023,
+              "end_month": 7,
+              "end_year": 2024
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "sponsor": {
+              "type": "string"
+            },
+            "position": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "project_link": {
+              "type": "string"
+            },
+            "is_ongoing": {
+              "type": "boolean"
+            },
+            "start_month": {
+              "type": "integer"
+            },
+            "start_year": {
+              "type": "integer"
+            },
+            "end_month": {
+              "type": "integer"
+            },
+            "end_year": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "sponsor",
+            "position",
+            "description",
+            "project_link",
+            "is_ongoing",
+            "start_month",
+            "start_year",
+            "end_month",
+            "end_year"
+          ]
+        }
+      },
+      "ProfileProjectsPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "title": "SDU portal for teacher",
+            "sponsor": 4145,
+            "sponsor_new": "Zhandos Saparbayev",
+            "position": 4146,
+            "position_new": "Backend",
+            "description": "PMS helps for teachers",
+            "project_link": "link/for/project",
+            "is_ongoing": true,
+            "start_month": 7,
+            "start_year": 2023,
+            "end_month": 7,
+            "end_year": 2024
+          }
+        },
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "sponsor": {
+            "type": "integer"
+          },
+          "sponsor_new": {
+            "type": "string"
+          },
+          "position": {
+            "type": "integer"
+          },
+          "position_new": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "project_link": {
+            "type": "string"
+          },
+          "is_ongoing": {
+            "type": "boolean"
+          },
+          "start_month": {
+            "type": "integer"
+          },
+          "start_year": {
+            "type": "integer"
+          },
+          "end_month": {
+            "type": "integer"
+          },
+          "end_year": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "title",
+          "sponsor",
+          "sponsor_new",
+          "position",
+          "position_new",
+          "description",
+          "project_link",
+          "is_ongoing",
+          "start_month",
+          "start_year",
+          "end_month",
+          "end_year"
         ]
       }
     },
