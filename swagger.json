@@ -3161,6 +3161,167 @@
           "id": "v43huctbzjqcs"
         }
       }
+    },
+    "/1.0.0/profile/certificates": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileCertificatesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-certificates",
+        "x-stoplight": {
+          "id": "xgy1x52y1cx5r"
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-certificates",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "2tqy92tzktvu6"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileCertificatesPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-certificates",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "jdmd67w2g8hb6"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileCertificatesPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-profile-certificates",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "dlwiq7dl2vyap"
+        }
+      }
+    },
+    "/1.0.0/profile/education/articles": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileEducationArticlesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-education-articles",
+        "x-stoplight": {
+          "id": "0z1zngxlay4gr"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationArticlesGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-education-articles",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "qk1d4p4dhzidu"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationArticlesPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-education-articles",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "c1hdja36n4ais"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationArticlesPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-profile-education-articles",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "gxo5n8p1so2d1"
+        }
+      }
     }
   },
   "components": {
@@ -23436,6 +23597,264 @@
         "required": [
           "type_id",
           "contact"
+        ]
+      },
+      "ProfileCertificatesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 596,
+              "title": "Certificate of attendance and best presentation of poster  The 1st NFFA (NanoscienceFoundries and Fine Analysis",
+              "organization_id": 4116,
+              "certified_date": "2016-08-01",
+              "credential_id": "123",
+              "credential_url": "creadential/url",
+              "expired_date": "2024-08-01"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "organization_id": {
+              "type": "integer"
+            },
+            "certified_date": {
+              "type": "string"
+            },
+            "credential_id": {
+              "type": "string"
+            },
+            "credential_url": {
+              "type": "string"
+            },
+            "expired_date": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "organization_id",
+            "certified_date",
+            "credential_id",
+            "credential_url",
+            "expired_date"
+          ]
+        },
+        "title": ""
+      },
+      "ProfileCertificatesPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "title": "The Best Python developer",
+            "organization_id": 2091,
+            "organization_new": "new organization",
+            "certified_date": "2016-08-01",
+            "credential_id": "123",
+            "credential_url": "creadential/url",
+            "expired_date": "2024-08-01"
+          }
+        },
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "organization_id": {
+            "type": "integer"
+          },
+          "organization_new": {
+            "type": "string"
+          },
+          "certified_date": {
+            "type": "string"
+          },
+          "credential_id": {
+            "type": "string"
+          },
+          "credential_url": {
+            "type": "string"
+          },
+          "expired_date": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "organization_id",
+          "organization_new",
+          "certified_date",
+          "credential_id",
+          "credential_url",
+          "expired_date"
+        ]
+      },
+      "ProfileEducationArticlesGetRequest": {
+        "title": "ProfileEducationArticlesGetRequest",
+        "x-stoplight": {
+          "id": "yty2105fqhtad"
+        },
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "qdunwyq57soji"
+            }
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "ProfileEducationArticlesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1,
+              "title": "Article Title",
+              "journal_id": 1,
+              "degree": 1,
+              "series": "Journalism",
+              "authors": "A. Author, B. AnotherAuthor",
+              "pages": "15",
+              "url": "https://example.com",
+              "country": 1,
+              "published_month": 5,
+              "published_year": 2023
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "journal_id": {
+              "type": "integer"
+            },
+            "degree": {
+              "type": "integer"
+            },
+            "series": {
+              "type": "string"
+            },
+            "authors": {
+              "type": "string"
+            },
+            "pages": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            },
+            "country": {
+              "type": "integer"
+            },
+            "published_month": {
+              "type": "integer"
+            },
+            "published_year": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "journal_id",
+            "degree",
+            "series",
+            "authors",
+            "pages",
+            "url",
+            "country",
+            "published_month",
+            "published_year"
+          ]
+        }
+      },
+      "ProfileEducationArticlesPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "type": "international",
+            "title": "Article With Some Big Title",
+            "journal_id": 1,
+            "journal_new": "Journal Title",
+            "degree": 1,
+            "series": "Series of article",
+            "authors": "Authors of article",
+            "pages": "Pages of article",
+            "url": "URL of article",
+            "country": 1,
+            "published_month": 5,
+            "published_year": 2023
+          }
+        },
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "journal_id": {
+            "type": "integer"
+          },
+          "journal_new": {
+            "type": "string"
+          },
+          "degree": {
+            "type": "integer"
+          },
+          "series": {
+            "type": "string"
+          },
+          "authors": {
+            "type": "string"
+          },
+          "pages": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "country": {
+            "type": "integer"
+          },
+          "published_month": {
+            "type": "integer"
+          },
+          "published_year": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "type",
+          "title",
+          "journal_id",
+          "journal_new",
+          "degree",
+          "series",
+          "authors",
+          "pages",
+          "url",
+          "country",
+          "published_month",
+          "published_year"
         ]
       }
     },
