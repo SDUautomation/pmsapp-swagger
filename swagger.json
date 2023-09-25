@@ -3322,6 +3322,161 @@
           "id": "gxo5n8p1so2d1"
         }
       }
+    },
+    "/1.0.0/profile/education/books": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileEducationBooksGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-education-books",
+        "x-stoplight": {
+          "id": "h7j34wn2n6434"
+        },
+        "requestBody": {
+          "content": {}
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-education-books",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "3sb25cx9o6grt"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationBooksPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-education-books",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "omg4tmfqv5c33"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationBooksPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-profile-education-books",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "tn697csl2mj33"
+        }
+      }
+    },
+    "/1.0.0/profile/education/conducted-courses": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileEducationConductedGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-education-conducted-courses",
+        "x-stoplight": {
+          "id": "bbkdt44bzk3vu"
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-education-conducted-courses",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "bpfekrin4463w"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationConductedPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-education-conducted-courses",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "yuzq2gldml8nc"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileEducationConductedPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-profile-education-conducted-courses",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "25drxdpn1nug5"
+        }
+      }
     }
   },
   "components": {
@@ -23855,6 +24010,180 @@
           "country",
           "published_month",
           "published_year"
+        ]
+      },
+      "ProfileEducationBooksGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 979,
+              "title": "Harry Potter",
+              "publisher": "Bloomsbury",
+              "book_type": 2,
+              "authors": "J. K. Rowling",
+              "pages": "223",
+              "url": "http://edu.e-history.kz/kz/publications/view/510",
+              "country": 19,
+              "published_month": 10,
+              "published_year": 2005
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "publisher": {
+              "type": "string"
+            },
+            "book_type": {
+              "type": "integer"
+            },
+            "authors": {
+              "type": "string"
+            },
+            "pages": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            },
+            "country": {
+              "type": "integer"
+            },
+            "published_month": {
+              "type": "integer"
+            },
+            "published_year": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "publisher",
+            "book_type",
+            "authors",
+            "pages",
+            "url",
+            "country",
+            "published_month",
+            "published_year"
+          ]
+        }
+      },
+      "ProfileEducationBooksPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "title": "Harry Potter",
+            "publisher": "Bloomsbury",
+            "book_type": 2,
+            "authors": "J. K. Rowling",
+            "pages": "223",
+            "url": "http://edu.e-history.kz/kz/publications/view/510",
+            "country": 19,
+            "published_month": 10,
+            "published_year": 2005
+          }
+        },
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "book_type": {
+            "type": "integer"
+          },
+          "authors": {
+            "type": "string"
+          },
+          "pages": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "country": {
+            "type": "integer"
+          },
+          "published_month": {
+            "type": "integer"
+          },
+          "published_year": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "title",
+          "publisher",
+          "book_type",
+          "authors",
+          "pages",
+          "url",
+          "country",
+          "published_month",
+          "published_year"
+        ]
+      },
+      "ProfileEducationConductedGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 497,
+              "title": "Phisics",
+              "level": "B"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "level": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "level"
+          ]
+        }
+      },
+      "ProfileEducationConductedPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "title": "Physics",
+            "level": "B"
+          }
+        },
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "level"
         ]
       }
     },
