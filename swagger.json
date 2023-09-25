@@ -25422,6 +25422,367 @@
           "end_month",
           "end_year"
         ]
+      },
+      "ProfileSettingsGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "privacy": {
+              "age": false,
+              "birth_date": false,
+              "gender": false,
+              "marital_status": false,
+              "cell": false,
+              "job_experience": false,
+              "education": false,
+              "theses": false,
+              "publications": false,
+              "projects": false,
+              "organizations": false,
+              "awards": false,
+              "courses": false,
+              "it_skills": false,
+              "language": false,
+              "website": false,
+              "autobiography": false,
+              "research_areas": false
+            },
+            "contact_privacy": [
+              {
+                "id": 123,
+                "contact": "87788829586",
+                "type_id": 1,
+                "show_status": false
+              }
+            ]
+          }
+        },
+        "properties": {
+          "privacy": {
+            "type": "object",
+            "required": [
+              "age",
+              "birth_date",
+              "gender",
+              "marital_status",
+              "cell",
+              "job_experience",
+              "education",
+              "theses",
+              "publications",
+              "projects",
+              "organizations",
+              "awards",
+              "courses",
+              "it_skills",
+              "language",
+              "website",
+              "autobiography",
+              "research_areas"
+            ],
+            "properties": {
+              "age": {
+                "type": "boolean"
+              },
+              "birth_date": {
+                "type": "boolean"
+              },
+              "gender": {
+                "type": "boolean"
+              },
+              "marital_status": {
+                "type": "boolean"
+              },
+              "cell": {
+                "type": "boolean"
+              },
+              "job_experience": {
+                "type": "boolean"
+              },
+              "education": {
+                "type": "boolean"
+              },
+              "theses": {
+                "type": "boolean"
+              },
+              "publications": {
+                "type": "boolean"
+              },
+              "projects": {
+                "type": "boolean"
+              },
+              "organizations": {
+                "type": "boolean"
+              },
+              "awards": {
+                "type": "boolean"
+              },
+              "courses": {
+                "type": "boolean"
+              },
+              "it_skills": {
+                "type": "boolean"
+              },
+              "language": {
+                "type": "boolean"
+              },
+              "website": {
+                "type": "boolean"
+              },
+              "autobiography": {
+                "type": "boolean"
+              },
+              "research_areas": {
+                "type": "boolean"
+              }
+            }
+          },
+          "contact_privacy": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "contact": {
+                  "type": "string"
+                },
+                "type_id": {
+                  "type": "integer"
+                },
+                "show_status": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "id",
+                "contact",
+                "type_id",
+                "show_status"
+              ]
+            }
+          }
+        },
+        "required": [
+          "privacy",
+          "contact_privacy"
+        ]
+      },
+      "ProfileSettingsPasswordsPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "reset": "system",
+            "current_password": "zhandos03",
+            "new_password": "saparbayevzh03",
+            "confirm_password": "saparbayevzh03"
+          }
+        },
+        "properties": {
+          "reset": {
+            "type": "string"
+          },
+          "current_password": {
+            "type": "string"
+          },
+          "new_password": {
+            "type": "string"
+          },
+          "confirm_password": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "reset",
+          "current_password",
+          "new_password",
+          "confirm_password"
+        ]
+      },
+      "ProfileSettingsPasswordResetPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "method": "email",
+            "reset": "system"
+          }
+        },
+        "properties": {
+          "method": {
+            "type": "string"
+          },
+          "reset": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "method",
+          "reset"
+        ]
+      },
+      "ProfileSettingsPhotosPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "photo": "base64 encoded image"
+          }
+        },
+        "properties": {
+          "photo": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "photo"
+        ]
+      },
+      "ProfileSettingsPrivacyContactPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "privacy": [
+              {
+                "id": 49511,
+                "contact_type": 1,
+                "contact": "87788829586",
+                "show_status": true
+              }
+            ]
+          }
+        },
+        "properties": {
+          "privacy": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "contact_type": {
+                  "type": "integer"
+                },
+                "contact": {
+                  "type": "string"
+                },
+                "show_status": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "id",
+                "contact_type",
+                "contact",
+                "show_status"
+              ]
+            }
+          }
+        },
+        "required": [
+          "privacy"
+        ]
+      },
+      "ProfileSettingsPrivaciesPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "age": false,
+            "birth_date": false,
+            "gender": false,
+            "marital_status": false,
+            "cell": false,
+            "job_experience": false,
+            "education": false,
+            "theses": false,
+            "publications": false,
+            "projects": false,
+            "organizations": false,
+            "awards": false,
+            "courses": false,
+            "it_skills": false,
+            "language": false,
+            "website": false,
+            "autobiography": false,
+            "research_areas": false
+          }
+        },
+        "properties": {
+          "age": {
+            "type": "boolean"
+          },
+          "birth_date": {
+            "type": "boolean"
+          },
+          "gender": {
+            "type": "boolean"
+          },
+          "marital_status": {
+            "type": "boolean"
+          },
+          "cell": {
+            "type": "boolean"
+          },
+          "job_experience": {
+            "type": "boolean"
+          },
+          "education": {
+            "type": "boolean"
+          },
+          "theses": {
+            "type": "boolean"
+          },
+          "publications": {
+            "type": "boolean"
+          },
+          "projects": {
+            "type": "boolean"
+          },
+          "organizations": {
+            "type": "boolean"
+          },
+          "awards": {
+            "type": "boolean"
+          },
+          "courses": {
+            "type": "boolean"
+          },
+          "it_skills": {
+            "type": "boolean"
+          },
+          "language": {
+            "type": "boolean"
+          },
+          "website": {
+            "type": "boolean"
+          },
+          "autobiography": {
+            "type": "boolean"
+          },
+          "research_areas": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "age",
+          "birth_date",
+          "gender",
+          "marital_status",
+          "cell",
+          "job_experience",
+          "education",
+          "theses",
+          "publications",
+          "projects",
+          "organizations",
+          "awards",
+          "courses",
+          "it_skills",
+          "language",
+          "website",
+          "autobiography",
+          "research_areas"
+        ]
       }
     },
     "securitySchemes": {}
