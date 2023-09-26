@@ -3324,29 +3324,6 @@
       }
     },
     "/1.0.0/profile/education/books": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ProfileEducationBooksGetResponse"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-1.0.0-profile-education-books",
-        "x-stoplight": {
-          "id": "h7j34wn2n6434"
-        },
-        "requestBody": {
-          "content": {}
-        }
-      },
       "post": {
         "summary": "",
         "operationId": "post-1.0.0-profile-education-books",
@@ -3399,6 +3376,25 @@
         },
         "x-stoplight": {
           "id": "tn697csl2mj33"
+        }
+      },
+      "get": {
+        "summary": "",
+        "operationId": "get-1.0.0-profile-education-books",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileEducationBooksGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "6tm6iu7219gso"
         }
       }
     },
