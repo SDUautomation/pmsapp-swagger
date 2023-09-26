@@ -3884,28 +3884,6 @@
           "id": "9wnk8n2vq89mo"
         }
       },
-      "post": {
-        "summary": "",
-        "operationId": "post-1.0.0-profile-projects",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {}
-          }
-        },
-        "x-stoplight": {
-          "id": "2m2r1zuovewzn"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ProfileProjectsPostRequest"
-              }
-            }
-          }
-        }
-      },
       "put": {
         "summary": "",
         "operationId": "put-1.0.0-profile-projects",
@@ -3937,6 +3915,27 @@
         },
         "x-stoplight": {
           "id": "euzbcx1vbleon"
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-projects",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "gorsb7smfcqd3"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileProjectsPostRequest"
+              }
+            }
+          }
         }
       }
     },
