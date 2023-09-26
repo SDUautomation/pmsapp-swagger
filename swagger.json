@@ -3943,6 +3943,338 @@
           "id": "euzbcx1vbleon"
         }
       }
+    },
+    "/1.0.0/profile/settings": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileSettingsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-settings",
+        "x-stoplight": {
+          "id": "66defdzjwbyun"
+        }
+      }
+    },
+    "/1.0.0/profile/settings/passwords": {
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-settings-passwords",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "n8hf1dwfb5xp6"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileSettingsPasswordsPutRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/profile/settings/passwords/reset-links": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-settings-passwords-reset-links",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "dsgabnea3oa7j"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileSettingsPasswordResetPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/profile/settings/photos": {
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-settings-photos",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "9x9lm55ooeaf6"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileSettingsPhotosPutRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/profile/settings/privacies/contact": {
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-settings-privacies-contact",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "8uky2vtmk6eqq"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileSettingsPrivacyContactPutRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/profile/settings/privacies": {
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-settings-privacies",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "fzf7acuh3q1vv"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileSettingsPrivaciesPutRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/profile/skills/hard-skills": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileSkillsHardGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-skills-hard-skills",
+        "x-stoplight": {
+          "id": "b7e6d4lp7s6nh"
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-skills-hard-skills",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "30ju6d7vnw8cn"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileSkillsHardPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-skills-hard-skills",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "xtyjfs6f5bcco"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileSkillsHardPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-profile-skills-hard-skills",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "uuf5pjpydylzo"
+        }
+      }
+    },
+    "/1.0.0/profile/skills/languages": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileSkillsLanguagesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-skills-languages",
+        "x-stoplight": {
+          "id": "we8qyg6cqutqj"
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-profile-skills-languages",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "7edqlwzvjjq3j"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileSkillsLanguagesPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-skills-languages",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "rl4d0q9rvu25h"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileSkillsLanguagesPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-profile-skills-languages",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "y7owffkf5ixmr"
+        }
+      }
+    },
+    "/1.0.0/profile/skills/interests": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProfileSkillsInterestsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-profile-skills-interests",
+        "x-stoplight": {
+          "id": "n3knjh0p72sjv"
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-profile-skills-interests",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "nlxr94vsdn5wv"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ProfileSkillsInterestsPutRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -25782,6 +26114,147 @@
           "website",
           "autobiography",
           "research_areas"
+        ]
+      },
+      "ProfileSkillsHardGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 28,
+              "skill": "Word, Excel, Internet"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "skill": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "skill"
+          ]
+        }
+      },
+      "ProfileSkillsHardPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "skill": "Word, Excel, Internet"
+          }
+        },
+        "properties": {
+          "skill": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "skill"
+        ]
+      },
+      "ProfileSkillsLanguagesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 141,
+              "language_code": "KZ",
+              "level_id": "6",
+              "is_native": true
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "language_code": {
+              "type": "string"
+            },
+            "level_id": {
+              "type": "string"
+            },
+            "is_native": {
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "id",
+            "language_code",
+            "level_id",
+            "is_native"
+          ]
+        }
+      },
+      "ProfileSkillsLanguagesPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "language": "KZ",
+            "level": 6,
+            "is_native": true
+          }
+        },
+        "properties": {
+          "language": {
+            "type": "string"
+          },
+          "level": {
+            "type": "integer"
+          },
+          "is_native": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "language",
+          "level",
+          "is_native"
+        ]
+      },
+      "ProfileSkillsInterestsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "interest": "Hiking"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "interest": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "interest"
+          ]
+        }
+      },
+      "ProfileSkillsInterestsPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "interest": "Hiking"
+          }
+        },
+        "properties": {
+          "interest": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "interest"
         ]
       }
     },
