@@ -22234,8 +22234,11 @@
           "year": {
             "type": "integer"
           },
-          "type_id": {
-            "type": "integer"
+          "type": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "478xvhkf958f4"
+            }
           },
           "value": {
             "type": "boolean"
@@ -22250,7 +22253,7 @@
         "required": [
           "course_code",
           "year",
-          "type_id",
+          "type",
           "value"
         ]
       },
@@ -22888,8 +22891,7 @@
               "nullable": true
             },
             "count": {
-              "type": "integer",
-              "nullable": true
+              "type": "integer"
             }
           },
           "required": [
@@ -22921,7 +22923,11 @@
               "type": "string",
               "nullable": true
             }
-          }
+          },
+          "required": [
+            "id",
+            "title"
+          ]
         }
       },
       "AcademicManageSyllabusReadingsGetResponse": {
