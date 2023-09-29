@@ -1755,7 +1755,8 @@
                 "$ref": "#/components/schemas/AcademicManageSyllabusGetRequest"
               }
             }
-          }
+          },
+          "description": ""
         }
       }
     },
@@ -21067,6 +21068,12 @@
             "items": {
               "type": "object",
               "properties": {
+                "id": {
+                  "type": "integer",
+                  "x-stoplight": {
+                    "id": "5jwgpy2cbkwy0"
+                  }
+                },
                 "full_name": {
                   "type": "string"
                 },
@@ -21079,10 +21086,12 @@
                     "type": "object",
                     "properties": {
                       "type": {
-                        "type": "string"
+                        "type": "string",
+                        "nullable": true
                       },
                       "contact": {
-                        "type": "string"
+                        "type": "string",
+                        "nullable": true
                       },
                       "note": {
                         "type": "string",
@@ -21098,6 +21107,7 @@
                 }
               },
               "required": [
+                "id",
                 "full_name",
                 "degree",
                 "contacts"
@@ -21113,7 +21123,8 @@
                   "type": "integer"
                 },
                 "title": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "count": {
                   "type": "integer"
@@ -21135,7 +21146,8 @@
                   "type": "integer"
                 },
                 "title": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "count": {
                   "type": "integer"
@@ -21160,10 +21172,12 @@
                   "type": "integer"
                 },
                 "subject": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "activity": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "count": {
                   "type": "integer"
@@ -21187,13 +21201,16 @@
                   "type": "integer"
                 },
                 "outcome": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "subject": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "action": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "count": {
                   "type": "integer"
@@ -21213,16 +21230,16 @@
             "items": {
               "type": "object",
               "properties": {
-                "id": {
-                  "type": "integer"
-                },
                 "title": {
                   "type": "string"
+                },
+                "id": {
+                  "type": "integer"
                 }
               },
               "required": [
-                "id",
-                "title"
+                "title",
+                "id"
               ]
             }
           },
@@ -21239,19 +21256,24 @@
                   "nullable": true
                 },
                 "authors": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "title": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "publish_year": {
-                  "type": "integer"
+                  "type": "integer",
+                  "nullable": true
                 },
                 "isbn": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "website": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 }
               },
               "required": [
@@ -21274,16 +21296,20 @@
                   "type": "integer"
                 },
                 "title": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "quantity": {
-                  "type": "integer"
+                  "type": "integer",
+                  "nullable": true
                 },
                 "percentage": {
-                  "type": "integer"
+                  "type": "integer",
+                  "nullable": true
                 },
                 "description": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 }
               },
               "required": [
@@ -21304,13 +21330,16 @@
                   "type": "integer"
                 },
                 "title": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "quantity": {
-                  "type": "integer"
+                  "type": "integer",
+                  "nullable": true
                 },
                 "hour": {
-                  "type": "integer"
+                  "type": "integer",
+                  "nullable": true
                 }
               },
               "required": [
@@ -21330,7 +21359,8 @@
                   "type": "integer"
                 },
                 "title": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 }
               },
               "required": [
@@ -21355,6 +21385,7 @@
           "activities",
           "policies"
         ],
+        "description": "",
         "title": ""
       },
       "AcademicManageSyllabusResourcesResponse": {
@@ -22243,16 +22274,20 @@
             "type": "integer"
           },
           "objective": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "content": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "work_placement": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "components": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "language": {
             "type": "string",
@@ -22608,6 +22643,7 @@
               "type": "integer"
             },
             "title": {
+              "type": "string",
               "nullable": true
             },
             "count": {
@@ -22640,13 +22676,16 @@
               "type": "integer"
             },
             "title": {
-              "type": "string"
+              "type": "string",
+              "nullable": true
             },
             "quantity": {
-              "type": "integer"
+              "type": "integer",
+              "nullable": true
             },
             "hour": {
-              "type": "integer"
+              "type": "integer",
+              "nullable": true
             }
           },
           "required": [
@@ -22677,16 +22716,20 @@
               "type": "integer"
             },
             "title": {
-              "type": "string"
+              "type": "string",
+              "nullable": true
             },
             "quantity": {
-              "type": "integer"
+              "type": "integer",
+              "nullable": true
             },
             "percentage": {
-              "type": "integer"
+              "type": "integer",
+              "nullable": true
             },
             "description": {
-              "type": "string"
+              "type": "string",
+              "nullable": true
             }
           },
           "required": [
@@ -22739,6 +22782,12 @@
         "items": {
           "type": "object",
           "properties": {
+            "id": {
+              "type": "integer",
+              "x-stoplight": {
+                "id": "o2ske24kag1dl"
+              }
+            },
             "full_name": {
               "type": "string"
             },
@@ -22751,10 +22800,12 @@
                 "type": "object",
                 "properties": {
                   "type": {
-                    "type": "string"
+                    "type": "string",
+                    "nullable": true
                   },
                   "contact": {
-                    "type": "string"
+                    "type": "string",
+                    "nullable": true
                   },
                   "note": {
                     "type": "string",
@@ -22770,6 +22821,7 @@
             }
           },
           "required": [
+            "id",
             "full_name",
             "degree",
             "contacts"
