@@ -21078,7 +21078,8 @@
                   "type": "string"
                 },
                 "degree": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "contacts": {
                   "type": "array",
@@ -21384,9 +21385,7 @@
           "assessments",
           "activities",
           "policies"
-        ],
-        "description": "",
-        "title": ""
+        ]
       },
       "AcademicManageSyllabusResourcesResponse": {
         "type": "object",
@@ -22795,7 +22794,8 @@
               "type": "string"
             },
             "degree": {
-              "type": "string"
+              "type": "string",
+              "nullable": true
             },
             "contacts": {
               "type": "array",
@@ -22829,7 +22829,8 @@
             "degree",
             "contacts"
           ]
-        }
+        },
+        "title": ""
       },
       "AcademicManageSyllabusLearningOutcomesGetResponse": {
         "type": "array",
