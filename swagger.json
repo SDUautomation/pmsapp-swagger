@@ -26396,25 +26396,20 @@
         ]
       },
       "ProfileSkillsInterestsGetResponse": {
-        "type": "array",
+        "type": "object",
         "x-examples": {
-          "Example 1": [
-            {
-              "interest": "Hiking"
-            }
-          ]
+          "Example 1": {
+            "interest": "Hiking"
+          }
         },
-        "items": {
-          "type": "object",
-          "properties": {
-            "interest": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "interest"
-          ]
-        }
+        "properties": {
+          "interest": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "interest"
+        ]
       },
       "ProfileSkillsInterestsPutRequest": {
         "type": "object",
