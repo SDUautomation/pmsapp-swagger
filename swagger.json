@@ -1756,7 +1756,8 @@
                 "$ref": "#/components/schemas/AcademicManageSyllabusGetRequest"
               }
             }
-          }
+          },
+          "description": ""
         }
       }
     },
@@ -21068,11 +21069,18 @@
             "items": {
               "type": "object",
               "properties": {
+                "id": {
+                  "type": "integer",
+                  "x-stoplight": {
+                    "id": "5jwgpy2cbkwy0"
+                  }
+                },
                 "full_name": {
                   "type": "string"
                 },
                 "degree": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "contacts": {
                   "type": "array",
@@ -21080,10 +21088,12 @@
                     "type": "object",
                     "properties": {
                       "type": {
-                        "type": "string"
+                        "type": "string",
+                        "nullable": true
                       },
                       "contact": {
-                        "type": "string"
+                        "type": "string",
+                        "nullable": true
                       },
                       "note": {
                         "type": "string",
@@ -21099,6 +21109,7 @@
                 }
               },
               "required": [
+                "id",
                 "full_name",
                 "degree",
                 "contacts"
@@ -21114,7 +21125,8 @@
                   "type": "integer"
                 },
                 "title": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "count": {
                   "type": "integer"
@@ -21136,7 +21148,8 @@
                   "type": "integer"
                 },
                 "title": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "count": {
                   "type": "integer"
@@ -21161,10 +21174,12 @@
                   "type": "integer"
                 },
                 "subject": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "activity": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "count": {
                   "type": "integer"
@@ -21188,13 +21203,16 @@
                   "type": "integer"
                 },
                 "outcome": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "subject": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "action": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "count": {
                   "type": "integer"
@@ -21214,16 +21232,16 @@
             "items": {
               "type": "object",
               "properties": {
-                "id": {
-                  "type": "integer"
-                },
                 "title": {
                   "type": "string"
+                },
+                "id": {
+                  "type": "integer"
                 }
               },
               "required": [
-                "id",
-                "title"
+                "title",
+                "id"
               ]
             }
           },
@@ -21240,19 +21258,24 @@
                   "nullable": true
                 },
                 "authors": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "title": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "publish_year": {
-                  "type": "integer"
+                  "type": "integer",
+                  "nullable": true
                 },
                 "isbn": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "website": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 }
               },
               "required": [
@@ -21275,16 +21298,20 @@
                   "type": "integer"
                 },
                 "title": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "quantity": {
-                  "type": "integer"
+                  "type": "integer",
+                  "nullable": true
                 },
                 "percentage": {
-                  "type": "integer"
+                  "type": "integer",
+                  "nullable": true
                 },
                 "description": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 }
               },
               "required": [
@@ -21305,13 +21332,16 @@
                   "type": "integer"
                 },
                 "title": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 },
                 "quantity": {
-                  "type": "integer"
+                  "type": "integer",
+                  "nullable": true
                 },
                 "hour": {
-                  "type": "integer"
+                  "type": "integer",
+                  "nullable": true
                 }
               },
               "required": [
@@ -21331,7 +21361,8 @@
                   "type": "integer"
                 },
                 "title": {
-                  "type": "string"
+                  "type": "string",
+                  "nullable": true
                 }
               },
               "required": [
@@ -21355,8 +21386,7 @@
           "assessments",
           "activities",
           "policies"
-        ],
-        "title": ""
+        ]
       },
       "AcademicManageSyllabusResourcesResponse": {
         "type": "object",
@@ -21444,6 +21474,84 @@
                 "title": "Other"
               }
             ],
+            "assess_types": [
+              {
+                "key": "FIN",
+                "title": "Final Exam"
+              },
+              {
+                "key": "QZ",
+                "title": "Quiz"
+              },
+              {
+                "key": "HW",
+                "title": "Homework"
+              },
+              {
+                "key": "MT",
+                "title": "Midterm 1"
+              },
+              {
+                "key": "DVM",
+                "title": "Attendance score"
+              },
+              {
+                "key": "MUE",
+                "title": "Resit Exam"
+              },
+              {
+                "key": "EK",
+                "title": "Extra exam"
+              },
+              {
+                "key": "PRJ",
+                "title": "Project"
+              },
+              {
+                "key": "MSDF",
+                "title": "Midterm 2"
+              },
+              {
+                "key": "IBSDF",
+                "title": "Optional midterm acitvity"
+              },
+              {
+                "key": "RE",
+                "title": "Resit Exam 2"
+              },
+              {
+                "key": "SEM",
+                "title": "Seminar"
+              },
+              {
+                "key": "PRAC",
+                "title": "Practice"
+              },
+              {
+                "key": "LAB",
+                "title": "Laboratory"
+              },
+              {
+                "key": "MID",
+                "title": "Midterm"
+              },
+              {
+                "key": "FW",
+                "title": "Field Work"
+              },
+              {
+                "key": "IWS",
+                "title": "IWS"
+              },
+              {
+                "key": "FA",
+                "title": "Pre-final grade"
+              },
+              {
+                "key": "LMS",
+                "title": "Learning Management System"
+              }
+            ],
             "teaching_method_types": [
               {
                 "id": 1,
@@ -21488,6 +21596,10 @@
               {
                 "id": 95,
                 "title": "монолог жазу"
+              },
+              {
+                "id": 127,
+                "title": "Simulation"
               },
               {
                 "id": 41,
@@ -21536,6 +21648,10 @@
               {
                 "id": 121,
                 "title": "Demo lesson"
+              },
+              {
+                "id": 142,
+                "title": "Editing"
               },
               {
                 "id": 26,
@@ -21602,6 +21718,10 @@
                 "title": "Quizzes"
               },
               {
+                "id": 144,
+                "title": "student's independent work"
+              },
+              {
                 "id": 58,
                 "title": "Practice"
               },
@@ -21616,6 +21736,18 @@
               {
                 "id": 78,
                 "title": "Case analysis"
+              },
+              {
+                "id": 143,
+                "title": "Midterm"
+              },
+              {
+                "id": 128,
+                "title": "Exams"
+              },
+              {
+                "id": 131,
+                "title": "Dialogue"
               }
             ]
           }
@@ -21675,6 +21807,24 @@
               ]
             }
           },
+          "assess_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "key",
+                "title"
+              ]
+            }
+          },
           "teaching_method_types": {
             "type": "array",
             "items": {
@@ -21698,6 +21848,7 @@
           "activity_types",
           "delivery_types",
           "reading_types",
+          "assess_types",
           "teaching_method_types"
         ]
       },
@@ -22204,8 +22355,11 @@
           "year": {
             "type": "integer"
           },
-          "type_id": {
-            "type": "integer"
+          "type": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "478xvhkf958f4"
+            }
           },
           "value": {
             "type": "boolean"
@@ -22220,7 +22374,7 @@
         "required": [
           "course_code",
           "year",
-          "type_id",
+          "type",
           "value"
         ]
       },
@@ -22244,16 +22398,20 @@
             "type": "integer"
           },
           "objective": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "content": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "work_placement": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "components": {
-            "type": "string"
+            "type": "string",
+            "nullable": true
           },
           "language": {
             "type": "string",
@@ -22609,6 +22767,7 @@
               "type": "integer"
             },
             "title": {
+              "type": "string",
               "nullable": true
             },
             "count": {
@@ -22641,13 +22800,16 @@
               "type": "integer"
             },
             "title": {
-              "type": "string"
+              "type": "string",
+              "nullable": true
             },
             "quantity": {
-              "type": "integer"
+              "type": "integer",
+              "nullable": true
             },
             "hour": {
-              "type": "integer"
+              "type": "integer",
+              "nullable": true
             }
           },
           "required": [
@@ -22678,16 +22840,20 @@
               "type": "integer"
             },
             "title": {
-              "type": "string"
+              "type": "string",
+              "nullable": true
             },
             "quantity": {
-              "type": "integer"
+              "type": "integer",
+              "nullable": true
             },
             "percentage": {
-              "type": "integer"
+              "type": "integer",
+              "nullable": true
             },
             "description": {
-              "type": "string"
+              "type": "string",
+              "nullable": true
             }
           },
           "required": [
@@ -22740,11 +22906,18 @@
         "items": {
           "type": "object",
           "properties": {
+            "id": {
+              "type": "integer",
+              "x-stoplight": {
+                "id": "o2ske24kag1dl"
+              }
+            },
             "full_name": {
               "type": "string"
             },
             "degree": {
-              "type": "string"
+              "type": "string",
+              "nullable": true
             },
             "contacts": {
               "type": "array",
@@ -22752,10 +22925,12 @@
                 "type": "object",
                 "properties": {
                   "type": {
-                    "type": "string"
+                    "type": "string",
+                    "nullable": true
                   },
                   "contact": {
-                    "type": "string"
+                    "type": "string",
+                    "nullable": true
                   },
                   "note": {
                     "type": "string",
@@ -22771,11 +22946,13 @@
             }
           },
           "required": [
+            "id",
             "full_name",
             "degree",
             "contacts"
           ]
-        }
+        },
+        "title": ""
       },
       "AcademicManageSyllabusLearningOutcomesGetResponse": {
         "type": "array",
@@ -22837,8 +23014,7 @@
               "nullable": true
             },
             "count": {
-              "type": "integer",
-              "nullable": true
+              "type": "integer"
             }
           },
           "required": [
@@ -22870,7 +23046,11 @@
               "type": "string",
               "nullable": true
             }
-          }
+          },
+          "required": [
+            "id",
+            "title"
+          ]
         }
       },
       "AcademicManageSyllabusReadingsGetResponse": {
@@ -26217,25 +26397,20 @@
         ]
       },
       "ProfileSkillsInterestsGetResponse": {
-        "type": "array",
+        "type": "object",
         "x-examples": {
-          "Example 1": [
-            {
-              "interest": "Hiking"
-            }
-          ]
+          "Example 1": {
+            "interest": "Hiking"
+          }
         },
-        "items": {
-          "type": "object",
-          "properties": {
-            "interest": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "interest"
-          ]
-        }
+        "properties": {
+          "interest": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "interest"
+        ]
       },
       "ProfileSkillsInterestsPutRequest": {
         "type": "object",
