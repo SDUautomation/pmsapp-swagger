@@ -1672,7 +1672,8 @@
                 "$ref": "#/components/schemas/ProfileChildrenPutRequest"
               }
             }
-          }
+          },
+          "description": ""
         }
       },
       "post": {
