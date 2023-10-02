@@ -19227,6 +19227,12 @@
                 },
                 "alert_text": {
                   "type": "string"
+                },
+                "type_id": {
+                  "type": "number",
+                  "x-stoplight": {
+                    "id": "rnxagyllznfoq"
+                  }
                 }
               },
               "required": [
@@ -19242,7 +19248,8 @@
                 "visible",
                 "version",
                 "alert_type",
-                "alert_text"
+                "alert_text",
+                "type_id"
               ]
             }
           }
