@@ -25597,8 +25597,8 @@
             "university": "SDU",
             "topic": "How can we solve any problems easely?",
             "is_ongoing": true,
-            "start_date": "2023-07-07",
-            "defence_date": "2024-07-07"
+            "start_year": 2023,
+            "defence_year": 2024
           }
         },
         "properties": {
@@ -25617,11 +25617,11 @@
           "is_ongoing": {
             "type": "boolean"
           },
-          "start_date": {
-            "type": "string"
+          "start_year": {
+            "type": "integer"
           },
-          "defence_date": {
-            "type": "string"
+          "defence_year": {
+            "type": "integer"
           }
         },
         "required": [
@@ -25630,8 +25630,8 @@
           "university",
           "topic",
           "is_ongoing",
-          "start_date",
-          "defence_date"
+          "start_year",
+          "defence_year"
         ]
       },
       "ProfileExperiencesGetResponse": {
