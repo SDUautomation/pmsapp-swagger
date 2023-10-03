@@ -17414,7 +17414,7 @@
       "ProfileResourceResponse": {
         "type": "object",
         "x-examples": {
-          "sample": {
+          "Example 1": {
             "genders": [
               {
                 "id": 1,
@@ -17510,6 +17510,12 @@
               }
             ],
             "organizations": [
+              {
+                "id": 2371,
+                "title": "Center for Korean Studies"
+              }
+            ],
+            "professions": [
               {
                 "id": 2371,
                 "title": "Center for Korean Studies"
@@ -17821,6 +17827,24 @@
                 "title"
               ]
             }
+          },
+          "professions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
           }
         },
         "required": [
@@ -17839,7 +17863,8 @@
           "journals",
           "conferences",
           "book_types",
-          "organizations"
+          "organizations",
+          "professions"
         ]
       },
       "KnowledgeBaseRequest": {
