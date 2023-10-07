@@ -4356,7 +4356,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AdministrativeEditorRarCategoriesPostRequest"
+                "type": "object"
               }
             }
           }
@@ -26636,20 +26636,30 @@
           "categories"
         ]
       },
-      "AdministrativeEditorRarCategoriesPostRequest": {
-        "title": "AdministrativeEditorRarCategoriesPostRequest",
-        "x-stoplight": {
-          "id": "0382fa4d9f45b"
-        },
+      "AdministrativeEditorRarCategoriesGetRequest": {
         "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "08pvd84czzetp"
-            }
+        "x-examples": {
+          "Example 1": {
+            "keyword": "",
+            "offset": 1,
+            "per_page": 15
           }
-        }
+        },
+        "properties": {
+          "keyword": {
+            "type": "string"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "offset",
+          "per_page"
+        ]
       },
       "AdministrativeEditorRarCategoriesGetResponse": {
         "type": "object",
@@ -26775,40 +26785,6 @@
           "current_page",
           "last_page",
           "categories"
-        ]
-      },
-      "AdministrativeEditorRarCategoriesGetRequest": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "title": "Guides",
-            "description": "Description",
-            "meta": "Guidlines",
-            "details": "Details",
-            "language_uuid": "d22475c7-9800-4f8e-9da9-673015a0c6af"
-          }
-        },
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "meta": {
-            "type": "string"
-          },
-          "details": {
-            "type": "string"
-          },
-          "language_uuid": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "title",
-          "description",
-          "language_uuid"
         ]
       }
     },
