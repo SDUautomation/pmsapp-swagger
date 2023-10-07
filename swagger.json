@@ -4356,7 +4356,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object"
+                "$ref": "#/components/schemas/AdministrativeEditorRarCategoriesPostRequest"
               }
             }
           }
@@ -26785,6 +26785,40 @@
           "current_page",
           "last_page",
           "categories"
+        ]
+      },
+      "AdministrativeEditorRarCategoriesPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "title": "Guides",
+            "description": "Description",
+            "meta": "Guidlines",
+            "details": "Details",
+            "language_uuid": "d22475c7-9800-4f8e-9da9-673015a0c6af"
+          }
+        },
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "meta": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "language_uuid": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "description",
+          "language_uuid"
         ]
       }
     },
