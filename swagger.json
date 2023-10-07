@@ -4272,6 +4272,96 @@
           }
         }
       }
+    },
+    "/1.0.0/administrative/rules-and-regulations/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeEditorRulesAndRegulationsResources"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-rules-and-regulations-resources",
+        "x-stoplight": {
+          "id": "1xi3xcfvwx0t3"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/administrative/rules-and-regulations/categories": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeEditorRarCategoriesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-rules-and-regulations-categories",
+        "x-stoplight": {
+          "id": "kj7jxfqsq6gif"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeEditorRarCategoriesGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-administrative-rules-and-regulations-categories",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmptyResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "ultybes639yrk"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeEditorRarCategoriesPostRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -26458,6 +26548,267 @@
         },
         "required": [
           "interest"
+        ]
+      },
+      "AdministrativeEditorRulesAndRegulationsResources": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "languages": [
+              {
+                "id": 7748,
+                "uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295",
+                "short": "en",
+                "long": "en-EN"
+              }
+            ],
+            "categories": [
+              {
+                "id": 1024,
+                "uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295",
+                "title": "Guidlines",
+                "description": "Guidlines Description",
+                "language_uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "languages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "short": {
+                  "type": "string"
+                },
+                "long": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "short",
+                "long"
+              ]
+            }
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "language_uuid": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "title",
+                "description",
+                "language_uuid"
+              ]
+            }
+          }
+        },
+        "required": [
+          "languages",
+          "categories"
+        ]
+      },
+      "AdministrativeEditorRarCategoriesPostRequest": {
+        "title": "AdministrativeEditorRarCategoriesPostRequest",
+        "x-stoplight": {
+          "id": "0382fa4d9f45b"
+        },
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "08pvd84czzetp"
+            }
+          }
+        }
+      },
+      "AdministrativeEditorRarCategoriesGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 40,
+            "from": 1,
+            "per_page": 15,
+            "current_page": 2,
+            "last_page": 3,
+            "categories": [
+              {
+                "id": 7748,
+                "uuid": "7748-2r29-vj22-vnje",
+                "title": "Guidlines",
+                "description": "Guildlines",
+                "meta": "Meta",
+                "details": "Details",
+                "rules_count": 5,
+                "created_at": "27-06-2023 02:03:00",
+                "updated_at": "27-06-2023 02:03:00",
+                "language": {
+                  "id": 7748,
+                  "uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295",
+                  "short": "en",
+                  "long": "en-EN"
+                }
+              }
+            ]
+          }
+        },
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "meta": {
+                  "type": "string"
+                },
+                "details": {
+                  "type": "string"
+                },
+                "rules_count": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "uuid",
+                    "short",
+                    "long"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "uuid": {
+                      "type": "string"
+                    },
+                    "short": {
+                      "type": "string"
+                    },
+                    "long": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "title",
+                "description",
+                "meta",
+                "details",
+                "rules_count",
+                "created_at",
+                "updated_at",
+                "language"
+              ]
+            }
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "categories"
+        ]
+      },
+      "AdministrativeEditorRarCategoriesGetRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "title": "Guides",
+            "description": "Description",
+            "meta": "Guidlines",
+            "details": "Details",
+            "language_uuid": "d22475c7-9800-4f8e-9da9-673015a0c6af"
+          }
+        },
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "meta": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "language_uuid": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "description",
+          "language_uuid"
         ]
       }
     },
