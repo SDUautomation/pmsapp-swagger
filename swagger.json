@@ -4304,7 +4304,7 @@
         }
       }
     },
-    "/1.0.0/administrative/rules-and-regulations/categories": {
+    "/1.0.0/manage/rules-and-regulations/categories": {
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
@@ -4314,7 +4314,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdministrativeEditorRarCategoriesGetResponse"
+                  "$ref": "#/components/schemas/RarEditorCategoriesGetResponse"
                 }
               }
             }
@@ -4328,7 +4328,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AdministrativeEditorRarCategoriesGetRequest"
+                "$ref": "#/components/schemas/RarEditorCategoriesGetRequest"
               }
             }
           }
@@ -4356,14 +4356,15 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AdministrativeEditorRarCategoriesPostRequest"
+                "$ref": "#/components/schemas/RarEditorCategoriesPostRequest"
               }
             }
           }
         }
-      }
+      },
+      "parameters": []
     },
-    "/1.0.0/administrative/rules-and-regulations/rules": {
+    "/1.0.0/manage/rules-and-regulations/rules": {
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
@@ -4373,7 +4374,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AdministrativeRarRulesGetResponse"
+                  "$ref": "#/components/schemas/RarEditorRulesGetResponse"
                 }
               }
             }
@@ -4387,7 +4388,36 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AdministrativeRulesAndRegulationsRequest"
+                "$ref": "#/components/schemas/RarEditorRulesGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "parameters": [],
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-manage-rules-and-regulations-rules",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmptyResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "sd5br1qbwzt68"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RarEditorRulesPostRequest"
               }
             }
           }
@@ -26667,14 +26697,10 @@
           "categories"
         ]
       },
-      "AdministrativeEditorRarCategoriesGetRequest": {
+      "RarEditorCategoriesGetRequest": {
         "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "keyword": "",
-            "offset": 1,
-            "per_page": 15
-          }
+        "x-stoplight": {
+          "id": "0382fa4d9f45b"
         },
         "properties": {
           "keyword": {
@@ -26687,13 +26713,19 @@
             "type": "integer"
           }
         },
-        "required": [
-          "offset",
-          "per_page"
-        ]
+        "x-examples": {
+          "Example 1": {
+            "keyword": "",
+            "offset": 1,
+            "per_page": 15
+          }
+        }
       },
-      "AdministrativeEditorRarCategoriesGetResponse": {
+      "RarEditorCategoriesGetResponse": {
         "type": "object",
+        "x-stoplight": {
+          "id": "f4f97e73144b7"
+        },
         "x-examples": {
           "Example 1": {
             "total": 40,
@@ -26818,8 +26850,11 @@
           "categories"
         ]
       },
-      "AdministrativeEditorRarCategoriesPostRequest": {
+      "RarEditorCategoriesPostRequest": {
         "type": "object",
+        "x-stoplight": {
+          "id": "277fa33e09d54"
+        },
         "x-examples": {
           "Example 1": {
             "title": "Guides",
@@ -26852,7 +26887,40 @@
           "language_uuid"
         ]
       },
-      "AdministrativeRarRulesGetResponse": {
+      "RarEditorRulesGetRequest": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "a87c26f3f7fb5"
+        },
+        "x-examples": {
+          "Example 1": {
+            "search": "",
+            "category": "",
+            "per_page": 15,
+            "offset": 1
+          }
+        },
+        "properties": {
+          "search": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "per_page",
+          "offset"
+        ],
+        "x-internal": false
+      },
+      "RarEditorRulesGetResponse": {
         "type": "object",
         "x-examples": {
           "Example 1": {
@@ -26866,6 +26934,7 @@
                 "id": 2311,
                 "uuid": "7748-2r29-vj22-vnje",
                 "published": true,
+                "visible": true,
                 "created_at": "27-06-2023 02:03:00",
                 "updated_at": "27-06-2023 03:03:00",
                 "details": [
@@ -26946,6 +27015,9 @@
                   "type": "string"
                 },
                 "published": {
+                  "type": "boolean"
+                },
+                "visible": {
                   "type": "boolean"
                 },
                 "created_at": {
@@ -27125,6 +27197,7 @@
                 "id",
                 "uuid",
                 "published",
+                "visible",
                 "created_at",
                 "updated_at",
                 "details",
@@ -27141,6 +27214,27 @@
           "current_page",
           "last_page",
           "rules"
+        ]
+      },
+      "RarEditorRulesPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "categories": [
+              "fe3a9ca9-5b82-47f8-af1b-de496416c16d"
+            ]
+          }
+        },
+        "properties": {
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "categories"
         ]
       }
     },
