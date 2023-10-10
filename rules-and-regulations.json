@@ -1,0 +1,950 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "de106u9nhh1h8"
+  },
+  "info": {
+    "title": "rules",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/1.0.0/administrative/rules-and-regulations/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeEditorRulesAndRegulationsResources"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-rules-and-regulations-resources",
+        "x-stoplight": {
+          "id": "60mt10fgqeqmb"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ResourceRequest"
+              }
+            }
+          }
+        },
+        "parameters": []
+      }
+    },
+    "/1.0.0/manage/rules-and-regulations/categories": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RarEditorCategoriesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-manage-rules-and-regulations-categories",
+        "x-stoplight": {
+          "id": "a1cakoikmug9c"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RarEditorCategoriesGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-manage-rules-and-regulations-categories",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmptyResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "tl71wyca2djh2"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RarEditorCategoriesPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/manage/rules-and-regulations/rules": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RarEditorRulesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-manage-rules-and-regulations-rules",
+        "x-stoplight": {
+          "id": "oph2krr041d3v"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RarEditorRulesGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-manage-rules-and-regulations-rules",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmptyResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "k07rcvedcs4nh"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RarEditorRulesPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/manage/rules-and-regulations/rules/{rule}/details": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "rule",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-1.0.0-manage-rules-and-regulations-rules-rule-details",
+        "x-stoplight": {
+          "id": "0qmg6ajtmopwk"
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "EmptyResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "a": ""
+          }
+        }
+      },
+      "ResourceRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "modules": [
+              "year-term"
+            ],
+            "limit": -1
+          }
+        },
+        "properties": {
+          "modules": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "limit": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "modules"
+        ]
+      },
+      "AdministrativeEditorRulesAndRegulationsResources": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "languages": [
+              {
+                "id": 7748,
+                "uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295",
+                "short": "en",
+                "long": "en-EN"
+              }
+            ],
+            "categories": [
+              {
+                "id": 1024,
+                "uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295",
+                "title": "Guidlines",
+                "description": "Guidlines Description",
+                "language_uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "languages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "short": {
+                  "type": "string"
+                },
+                "long": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "short",
+                "long"
+              ]
+            }
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "language_uuid": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "title",
+                "description",
+                "language_uuid"
+              ]
+            }
+          }
+        },
+        "required": [
+          "languages",
+          "categories"
+        ]
+      },
+      "RarEditorCategoriesGetRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "keyword": "",
+            "offset": 1,
+            "per_page": 15
+          }
+        },
+        "properties": {
+          "keyword": {
+            "type": "string"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "offset",
+          "per_page"
+        ]
+      },
+      "RarEditorCategoriesGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 40,
+            "from": 1,
+            "per_page": 15,
+            "current_page": 2,
+            "last_page": 3,
+            "categories": [
+              {
+                "id": 7748,
+                "uuid": "7748-2r29-vj22-vnje",
+                "title": "Guidlines",
+                "description": "Guildlines",
+                "meta": "Meta",
+                "details": "Details",
+                "rules_count": 5,
+                "created_at": "27-06-2023 02:03:00",
+                "updated_at": "27-06-2023 02:03:00",
+                "language": {
+                  "id": 7748,
+                  "uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295",
+                  "short": "en",
+                  "long": "en-EN"
+                }
+              }
+            ]
+          }
+        },
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "meta": {
+                  "type": "string"
+                },
+                "details": {
+                  "type": "string"
+                },
+                "rules_count": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "uuid",
+                    "short",
+                    "long"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "uuid": {
+                      "type": "string"
+                    },
+                    "short": {
+                      "type": "string"
+                    },
+                    "long": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "title",
+                "description",
+                "meta",
+                "details",
+                "rules_count",
+                "created_at",
+                "updated_at",
+                "language"
+              ]
+            }
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "categories"
+        ]
+      },
+      "RarEditorCategoriesPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "title": "Guides",
+            "description": "Description",
+            "meta": "Guidlines",
+            "details": "Details",
+            "language_uuid": "d22475c7-9800-4f8e-9da9-673015a0c6af"
+          }
+        },
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "meta": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "language_uuid": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "description",
+          "language_uuid"
+        ]
+      },
+      "RarEditorRulesGetRequest": {
+        "type": "object",
+        "properties": {
+          "search": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "search": "",
+            "category": "",
+            "per_page": 15,
+            "offset": 1
+          }
+        }
+      },
+      "RarEditorRulesGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 40,
+            "from": 1,
+            "per_page": 15,
+            "current_page": 2,
+            "last_page": 3,
+            "rules": [
+              {
+                "id": 2311,
+                "uuid": "7748-2r29-vj22-vnje",
+                "published": true,
+                "visible": true,
+                "created_at": "27-06-2023 02:03:00",
+                "updated_at": "27-06-2023 03:03:00",
+                "details": [
+                  {
+                    "id": 7748,
+                    "uuid": "7748-2r29-vj22-vnje",
+                    "title": "About Scientific Library",
+                    "content": "Ғылыми кітапхана дирекциясы (бұдан әрі - Кітапхана)...",
+                    "image": "base64 string format",
+                    "created_at": "27-06-2023 02:03:00",
+                    "updated_at": "27-06-2023 03:03:00",
+                    "language": {
+                      "id": 7748,
+                      "uuid": "7748-2r29-vj22-vnje",
+                      "short": "en",
+                      "long": "en-EN"
+                    }
+                  }
+                ],
+                "categories": [
+                  {
+                    "id": 7748,
+                    "uuid": "7748-2r29-vj22-vnje",
+                    "title": "Guidlines",
+                    "description": "Guildlines",
+                    "language": {
+                      "id": 7748,
+                      "uuid": "7748-2r29-vj22-vnje",
+                      "short": "en",
+                      "long": "en-EN"
+                    }
+                  }
+                ],
+                "attachments": [
+                  {
+                    "id": 7748,
+                    "uuid": "7748-2r29-vj22-vnje",
+                    "title": "About Scientific Library",
+                    "path": "pms.sdu.edu.kz/rules-and-regulations/attachments/about-scientific-library/ground-floor.jpg",
+                    "size": "1.6 MB",
+                    "language": {
+                      "id": 7748,
+                      "uuid": "7748-2r29-vj22-vnje",
+                      "short": "en",
+                      "long": "en-EN"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "rules": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "published": {
+                  "type": "boolean"
+                },
+                "visible": {
+                  "type": "boolean"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "updated_at": {
+                  "type": "string"
+                },
+                "details": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "uuid": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "content": {
+                        "type": "string"
+                      },
+                      "image": {
+                        "type": "string"
+                      },
+                      "created_at": {
+                        "type": "string"
+                      },
+                      "updated_at": {
+                        "type": "string"
+                      },
+                      "language": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "uuid",
+                          "short",
+                          "long"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "uuid": {
+                            "type": "string"
+                          },
+                          "short": {
+                            "type": "string"
+                          },
+                          "long": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "uuid",
+                      "title",
+                      "content",
+                      "image",
+                      "created_at",
+                      "updated_at",
+                      "language"
+                    ]
+                  }
+                },
+                "categories": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "uuid": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "language": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "uuid",
+                          "short",
+                          "long"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "uuid": {
+                            "type": "string"
+                          },
+                          "short": {
+                            "type": "string"
+                          },
+                          "long": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "uuid",
+                      "title",
+                      "description",
+                      "language"
+                    ]
+                  }
+                },
+                "attachments": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "uuid": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "path": {
+                        "type": "string"
+                      },
+                      "size": {
+                        "type": "string"
+                      },
+                      "language": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "uuid",
+                          "short",
+                          "long"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "uuid": {
+                            "type": "string"
+                          },
+                          "short": {
+                            "type": "string"
+                          },
+                          "long": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "uuid",
+                      "title",
+                      "path",
+                      "size",
+                      "language"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "published",
+                "visible",
+                "created_at",
+                "updated_at",
+                "details",
+                "categories",
+                "attachments"
+              ]
+            }
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "rules"
+        ]
+      },
+      "RarEditorRulesPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "categories": [
+              "fe3a9ca9-5b82-47f8-af1b-de496416c16d"
+            ]
+          }
+        },
+        "properties": {
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "categories"
+        ]
+      },
+      "RarEditorRulesPostDetailsGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 7748,
+            "uuid": "7748-2r29-vj22-vnje",
+            "title": "About Scientific Library",
+            "content": "Ғылыми кітапхана дирекциясы (бұдан әрі - Кітапхана)...",
+            "image": "Rules and Regulations/Linux/en-EN/9a39d795-721d-449b-8ada-7e7440836097.png",
+            "url": "https://drive.google.com/uc?id=1bE5iKqk_LKmrOFcUnwpBQF64tInGshpB&export=media",
+            "created_at": "27-06-2023 02:03:00",
+            "updated_at": "27-06-2023 03:03:00",
+            "language": {
+              "id": 7748,
+              "uuid": "7748-2r29-vj22-vnje",
+              "short": "en",
+              "long": "en-EN"
+            }
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "uuid": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "language": {
+            "type": "object",
+            "required": [
+              "id",
+              "uuid",
+              "short",
+              "long"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "uuid": {
+                "type": "string"
+              },
+              "short": {
+                "type": "string"
+              },
+              "long": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "id",
+          "uuid",
+          "title",
+          "content",
+          "image",
+          "url",
+          "created_at",
+          "updated_at",
+          "language"
+        ]
+      },
+      "RarEditorRulesPostDetailsPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "title": "acsascasc",
+            "content ": "",
+            "language_uuid ": "",
+            "image": "string"
+          }
+        },
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "content ": {
+            "type": "string"
+          },
+          "language_uuid ": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "content ",
+          "language_uuid ",
+          "image"
+        ]
+      }
+    }
+  }
+}
