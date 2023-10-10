@@ -177,10 +177,127 @@
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
-        "responses": {},
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RarEditorRulesPostDetailsGetResponse"
+                }
+              }
+            }
+          }
+        },
         "operationId": "get-1.0.0-manage-rules-and-regulations-rules-rule-details",
         "x-stoplight": {
           "id": "0qmg6ajtmopwk"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmptyResponse"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-manage-rules-and-regulations-rules-rule-details",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmptyResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "90vdy5r0t3rfm"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RarEditorRulesPostDetailsPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/manage/rules-and-regulations/rules/{rule}/attachments": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "rule",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RarEditorRulesPostAttachmentsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-manage-rules-and-regulations-rules-rule-attachments",
+        "x-stoplight": {
+          "id": "0ki02fvfwkozi"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/EmptyResponse"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-manage-rules-and-regulations-rules-rule-attachments",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/EmptyResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "ibxi4swh8rdie"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RarEditorRulesPostAttachmentsPostRequest"
+              }
+            }
+          }
         }
       }
     }
@@ -943,6 +1060,129 @@
           "content ",
           "language_uuid ",
           "image"
+        ]
+      },
+      "RarEditorRulesPostAttachmentsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 7748,
+              "uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295",
+              "title": "Guidlines",
+              "path": "Rules and Regulations/Linux/en-EN/9a39d795-721d-449b-8ada-7e7440836097.pdf",
+              "url": "https://drive.google.com/drive/u/1/folders/1wYvzzmxCXTBAgaVrJ5x-CdWYAIFOa3Rd",
+              "extension": "jpg",
+              "size": "32141",
+              "created_at": "27-06-2023 02:03:00",
+              "updated_at": "27-06-2023 02:03:00",
+              "language": {
+                "id": 7748,
+                "uuid": "7748-2r29-vj22-vnje",
+                "short": "en",
+                "long": "en-EN"
+              }
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "uuid": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "path": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            },
+            "extension": {
+              "type": "string"
+            },
+            "size": {
+              "type": "string"
+            },
+            "created_at": {
+              "type": "string"
+            },
+            "updated_at": {
+              "type": "string"
+            },
+            "language": {
+              "type": "object",
+              "required": [
+                "id",
+                "uuid",
+                "short",
+                "long"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "short": {
+                  "type": "string"
+                },
+                "long": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "required": [
+            "id",
+            "uuid",
+            "title",
+            "path",
+            "url",
+            "extension",
+            "size",
+            "created_at",
+            "updated_at",
+            "language"
+          ]
+        }
+      },
+      "RarEditorRulesPostAttachmentsPostRequest": {
+        "title": "RarEditorRulesPostAttachmentsPostRequest",
+        "x-stoplight": {
+          "id": "dv07u0gzyv46d"
+        },
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "rdgaj0v7na6xk"
+            }
+          },
+          "language_uuid": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "9ci0jkaqma7d8"
+            }
+          },
+          "file": {
+            "type": "object",
+            "x-stoplight": {
+              "id": "yj13kptlgddnf"
+            }
+          }
+        },
+        "required": [
+          "title",
+          "language_uuid",
+          "file"
         ]
       }
     }
