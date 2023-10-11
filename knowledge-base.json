@@ -13,7 +13,7 @@
     }
   ],
   "paths": {
-"/1.0.0/knowledge/posts": {
+    "/1.0.0/knowledge/posts": {
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
@@ -352,11 +352,86 @@
           }
         }
       }
+    },
+    "/1.0.0/knowledge/manage/posts/{post}/contents": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "post",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-knowledge-manage-posts-post-contents",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "yz2rpq358evyz"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnowledgeManagePostsContentsPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-knowledge-manage-posts-post-contents",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "t0siq5fhfprm7"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnowledgeManagePostsContentsPutRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-knowledge-manage-posts-post-contents",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "f1y1hit1hyinm"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnowledgeManagePostsContentsDeleteRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
-     "KnowledgeBaseRequest": {
+      "KnowledgeBaseRequest": {
         "type": "object",
         "x-examples": {
           "Example 1": {
@@ -1445,34 +1520,28 @@
         "type": "object",
         "x-examples": {
           "Example 1": {
-            "category_uuid": "309d315f-e17a-4641-a38f-baf34dfc0d0d",
-            "title": "Testing title post from 16:06 2023-07-20",
-            "description": "Description",
+            "category_uuid": "99b0de60-3517-4ed1-a6cd-01a4d9c74363",
+            "title": "How to create post?",
+            "description": "Tutorial about creating post",
             "published": true,
             "meta": "Meta information",
-            "details": "details",
+            "details": "Laravel API that will host and manage the data for a mobile application.",
             "tags": [
-              {
-                "id": 2531126,
-                "tag": "as"
-              },
-              {
-                "id": 214,
-                "tag": "as"
-              }
+              "#oracle"
             ],
             "contents": [
               {
-                "type_id": 5,
+                "uuid": "99b0de60-3517-4ed1-a6cd-01a4d9c74363",
+                "type_id": 12,
                 "version": "1.0.2",
-                "image": "/var/www/images/slang.png",
-                "video": "/var/www/videos/slang.mp4",
+                "image": "/images/knowledge/post/post.png",
+                "video": "/videos/knowledge/post/post.mp4",
                 "video_type": "MPEG",
-                "content": "Im developing a Laravel API that will host and manage the data for a mobile application.",
+                "content": "Laravel API that will host and manage the data for a mobile application.",
                 "active": true,
                 "visible": true,
-                "alert_type": "Nothing",
-                "alert_text": "Good Morning!"
+                "alert_type": "Danger",
+                "alert_text": "Read now!"
               }
             ]
           }
@@ -1499,22 +1568,7 @@
           "tags": {
             "type": "array",
             "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "tag": {
-                  "type": "string",
-                  "x-stoplight": {
-                    "id": "zmaejjjwfpsvi"
-                  }
-                }
-              },
-              "required": [
-                "id",
-                "tag"
-              ]
+              "type": "string"
             }
           },
           "contents": {
@@ -1522,6 +1576,9 @@
             "items": {
               "type": "object",
               "properties": {
+                "uuid": {
+                  "type": "string"
+                },
                 "type_id": {
                   "type": "integer"
                 },
@@ -1554,6 +1611,7 @@
                 }
               },
               "required": [
+                "uuid",
                 "type_id",
                 "version",
                 "image",
@@ -1573,8 +1631,6 @@
           "title",
           "description",
           "published",
-          "meta",
-          "details",
           "tags",
           "contents"
         ]
@@ -1784,6 +1840,155 @@
           "updated_at",
           "tags",
           "contents"
+        ]
+      },
+      "KnowledgeManagePostsContentsPostRequest": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "type_id": "123",
+              "version": "1.0.0",
+              "image": "/var/www/images/image.png",
+              "video": "/var/www/videos/video.mp4",
+              "video_type": "MPEG",
+              "content": "Laravel API that will host and manage the data for a mobile application.",
+              "active": true,
+              "visible": true,
+              "alert_type": "Danger",
+              "alert_text": "Application died with Runtime Exception"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "type_id": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "image": {
+              "type": "string"
+            },
+            "video": {
+              "type": "string"
+            },
+            "video_type": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            },
+            "active": {
+              "type": "boolean"
+            },
+            "visible": {
+              "type": "boolean"
+            },
+            "alert_type": {
+              "type": "string"
+            },
+            "alert_text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "type_id",
+            "version",
+            "content",
+            "active",
+            "visible"
+          ]
+        },
+        "title": ""
+      },
+      "KnowledgeManagePostsContentsPutRequest": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "uuid": "9d1c23d0-f07a-4178-a945-8b35d1f9870a",
+              "type_id": "123",
+              "version": "1.0.0",
+              "image": "/var/www/images/image.png",
+              "video": "/var/www/videos/video.mp4",
+              "video_type": "MPEG",
+              "content": "Laravel API that will host and manage the data for a mobile application.",
+              "active": true,
+              "visible": true,
+              "alert_type": "Danger",
+              "alert_text": "Application died with Runtime Exception"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "uuid": {
+              "type": "string"
+            },
+            "type_id": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "image": {
+              "type": "string"
+            },
+            "video": {
+              "type": "string"
+            },
+            "video_type": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            },
+            "active": {
+              "type": "boolean"
+            },
+            "visible": {
+              "type": "boolean"
+            },
+            "alert_type": {
+              "type": "string"
+            },
+            "alert_text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "uuid",
+            "type_id",
+            "version",
+            "content",
+            "active",
+            "visible"
+          ]
+        }
+      },
+      "KnowledgeManagePostsContentsDeleteRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "uuid": [
+              "9d1c23d0-f07a-4178-a945-8b35d1f9870a"
+            ]
+          }
+        },
+        "properties": {
+          "uuid": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "uuid"
         ]
       }
     }
