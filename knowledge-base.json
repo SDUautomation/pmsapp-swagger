@@ -1516,125 +1516,6 @@
           "offset"
         ]
       },
-      "KnowledgeManagePostsPostRequest": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "category_uuid": "99b0de60-3517-4ed1-a6cd-01a4d9c74363",
-            "title": "How to create post?",
-            "description": "Tutorial about creating post",
-            "published": true,
-            "meta": "Meta information",
-            "details": "Laravel API that will host and manage the data for a mobile application.",
-            "tags": [
-              "#oracle"
-            ],
-            "contents": [
-              {
-                "uuid": "99b0de60-3517-4ed1-a6cd-01a4d9c74363",
-                "type_id": 12,
-                "version": "1.0.2",
-                "image": "/images/knowledge/post/post.png",
-                "video": "/videos/knowledge/post/post.mp4",
-                "video_type": "MPEG",
-                "content": "Laravel API that will host and manage the data for a mobile application.",
-                "active": true,
-                "visible": true,
-                "alert_type": "Danger",
-                "alert_text": "Read now!"
-              }
-            ]
-          }
-        },
-        "properties": {
-          "category_uuid": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "published": {
-            "type": "boolean"
-          },
-          "meta": {
-            "type": "string"
-          },
-          "details": {
-            "type": "string"
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "contents": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "uuid": {
-                  "type": "string"
-                },
-                "type_id": {
-                  "type": "integer"
-                },
-                "version": {
-                  "type": "string"
-                },
-                "image": {
-                  "type": "string"
-                },
-                "video": {
-                  "type": "string"
-                },
-                "video_type": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "active": {
-                  "type": "boolean"
-                },
-                "visible": {
-                  "type": "boolean"
-                },
-                "alert_type": {
-                  "type": "string"
-                },
-                "alert_text": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "uuid",
-                "type_id",
-                "version",
-                "image",
-                "video",
-                "video_type",
-                "content",
-                "active",
-                "visible",
-                "alert_type",
-                "alert_text"
-              ]
-            }
-          }
-        },
-        "required": [
-          "category_uuid",
-          "title",
-          "description",
-          "published",
-          "tags",
-          "contents"
-        ]
-      },
       "KnowledgeManagePostsSingleGetResponse": {
         "type": "object",
         "x-examples": {
@@ -1989,6 +1870,125 @@
         },
         "required": [
           "uuid"
+        ]
+      },
+      "KnowledgeManagePostsPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "category_uuid": "99b0de60-3517-4ed1-a6cd-01a4d9c74363",
+            "title": "How to create post?",
+            "description": "Tutorial about creating post",
+            "published": true,
+            "meta": "Meta information",
+            "details": "Laravel API that will host and manage the data for a mobile application.",
+            "tags": [
+              "#oracle"
+            ],
+            "contents": [
+              {
+                "uuid": "99b0de60-3517-4ed1-a6cd-01a4d9c74363",
+                "type_id": 12,
+                "version": "1.0.2",
+                "image": "/images/knowledge/post/post.png",
+                "video": "/videos/knowledge/post/post.mp4",
+                "video_type": "MPEG",
+                "content": "Laravel API that will host and manage the data for a mobile application.",
+                "active": true,
+                "visible": true,
+                "alert_type": "Danger",
+                "alert_text": "Read now!"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "category_uuid": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "published": {
+            "type": "boolean"
+          },
+          "meta": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "type_id": {
+                  "type": "integer"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "video": {
+                  "type": "string"
+                },
+                "video_type": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "visible": {
+                  "type": "boolean"
+                },
+                "alert_type": {
+                  "type": "string"
+                },
+                "alert_text": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uuid",
+                "type_id",
+                "version",
+                "image",
+                "video",
+                "video_type",
+                "content",
+                "active",
+                "visible",
+                "alert_type",
+                "alert_text"
+              ]
+            }
+          }
+        },
+        "required": [
+          "category_uuid",
+          "title",
+          "description",
+          "published",
+          "details",
+          "contents"
         ]
       }
     }
