@@ -21851,7 +21851,7 @@
         },
         "type": "object",
         "properties": {
-          "course_code": {
+          "code": {
             "type": "string",
             "x-stoplight": {
               "id": "9upui0pqm6p3n"
@@ -21865,7 +21865,7 @@
           }
         },
         "required": [
-          "course_code",
+          "code",
           "year"
         ]
       },
