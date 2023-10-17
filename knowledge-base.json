@@ -1499,21 +1499,33 @@
         "type": "object",
         "x-examples": {
           "Example 1": {
-            "per_page": 21,
-            "offset": 12
+            "offset": 182,
+            "per_page": 182,
+            "search": "99b94128-d8fc-4071-b09f-290261bb07de",
+            "category": "99b94128-d8fc-4071-b09f-290261bb07de",
+            "type": "99b94128-d8fc-4071-b09f-290261bb07de"
           }
         },
         "properties": {
+          "offset": {
+            "type": "integer"
+          },
           "per_page": {
             "type": "integer"
           },
-          "offset": {
-            "type": "integer"
+          "search": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
           }
         },
         "required": [
-          "per_page",
-          "offset"
+          "offset",
+          "per_page"
         ]
       },
       "KnowledgeManagePostsSingleGetResponse": {
