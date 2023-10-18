@@ -4196,7 +4196,9 @@
               "last_login_date",
               "is_reliable",
               "degree_title",
-              "photo"
+              "photo",
+              "department",
+              "position"
             ],
             "properties": {
               "id": {
@@ -4249,6 +4251,18 @@
               },
               "photo": {
                 "type": "string"
+              },
+              "department": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "g68cp7c5phn7m"
+                }
+              },
+              "position": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "3gm3wckfhk0nj"
+                }
               }
             }
           },
