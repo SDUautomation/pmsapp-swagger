@@ -149,6 +149,32 @@
         "properties": {
           "main_information": {
             "type": "object",
+            "required": [
+              "pws_retrieve_email",
+              "university_mail",
+              "birth_date",
+              "marriage_status",
+              "citizenship",
+              "iin",
+              "iban",
+              "document_type",
+              "document_no",
+              "document_authrority",
+              "document_issue_date",
+              "attestation_type",
+              "attestation_no",
+              "attestation_gpa",
+              "attestation_issue_date",
+              "entrance_exam",
+              "exam_score",
+              "exam_code",
+              "exam_issue_date",
+              "grant_type",
+              "grant_certificate",
+              "preparation_course",
+              "school",
+              "language_skills"
+            ],
             "properties": {
               "pws_retrieve_email": {
                 "type": "string"
@@ -230,7 +256,11 @@
                     "level": {
                       "type": "string"
                     }
-                  }
+                  },
+                  "required": [
+                    "title",
+                    "level"
+                  ]
                 }
               }
             }
@@ -249,7 +279,12 @@
                 "note": {
                   "type": "string"
                 }
-              }
+              },
+              "required": [
+                "type",
+                "contact",
+                "note"
+              ]
             }
           },
           "addresses": {
@@ -275,7 +310,15 @@
                 "type": {
                   "type": "string"
                 }
-              }
+              },
+              "required": [
+                "country",
+                "province",
+                "region",
+                "city",
+                "address_line",
+                "type"
+              ]
             }
           },
           "parent_information": {
@@ -315,10 +358,24 @@
                       "note": {
                         "type": "string"
                       }
-                    }
+                    },
+                    "required": [
+                      "type",
+                      "contact",
+                      "note"
+                    ]
                   }
                 }
-              }
+              },
+              "required": [
+                "parent_type",
+                "name",
+                "surname",
+                "working_place",
+                "profession",
+                "birth_date",
+                "contacts"
+              ]
             }
           },
           "advisor_opinions": {
@@ -335,7 +392,12 @@
                 "content": {
                   "type": "string"
                 }
-              }
+              },
+              "required": [
+                "date",
+                "advisor",
+                "content"
+              ]
             }
           },
           "dissertations": {
@@ -364,7 +426,16 @@
                 "defence_year": {
                   "type": "string"
                 }
-              }
+              },
+              "required": [
+                "title",
+                "reviewer",
+                "education_level",
+                "university",
+                "teacher",
+                "begin_year",
+                "defence_year"
+              ]
             }
           },
           "decisions": {
@@ -387,10 +458,26 @@
                 "description": {
                   "type": "string"
                 }
-              }
+              },
+              "required": [
+                "type",
+                "date",
+                "subject",
+                "decision_no",
+                "description"
+              ]
             }
           }
-        }
+        },
+        "required": [
+          "main_information",
+          "contacts",
+          "addresses",
+          "parent_information",
+          "advisor_opinions",
+          "dissertations",
+          "decisions"
+        ]
       }
     }
   }
