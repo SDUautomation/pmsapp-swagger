@@ -1,0 +1,397 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "o1k8d5etfhhic"
+  },
+  "info": {
+    "title": "academic-single-student",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/1.0.0/academic/students/{student}/information": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleStudentInformationGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-student-information",
+        "x-stoplight": {
+          "id": "df9zjq1vu388p"
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AcademicSingleStudentInformationGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "main_information": {
+              "pws_retrieve_email": "ernurshamshadin@gmail.com",
+              "university_mail": "200103049@stu.sdu.edu.kz",
+              "birth_date": "2003-04-26",
+              "marriage_status": "Single",
+              "citizenship": "Kazakhstan",
+              "iin": "030426551069",
+              "iban": "KZ86125KZT5004100100",
+              "document_type": "Identity card",
+              "document_no": "045831020",
+              "document_authrority": "ҚР ішкі істер министрлігі",
+              "document_issue_date": "2019-05-03",
+              "attestation_type": "Certificate",
+              "attestation_no": "ЖОБ 1624874",
+              "attestation_gpa": 4,
+              "attestation_issue_date": "2020-06-04T00:00:00.000000Z",
+              "entrance_exam": "Unified National Testing",
+              "exam_score": 110,
+              "exam_code": "715390671",
+              "exam_issue_date": "2020-07-07",
+              "grant_type": "State Grant",
+              "grant_certificate": "715390671",
+              "preparation_course": "Достық-Ақтөбе білім беру орталығы",
+              "school": "Казахская средняя общеобразовательная школа №39",
+              "language_skills": [
+                {
+                  "title": "English",
+                  "level": "Upper-Intermediate"
+                }
+              ]
+            },
+            "contacts": [
+              {
+                "type": "Mobile phone",
+                "contact": "87777777777",
+                "note": "for WhatsApp"
+              }
+            ],
+            "addresses": [
+              {
+                "country": 627,
+                "province": 825,
+                "region": 875,
+                "city": 3,
+                "address_line": "Кетпен, М.Жалилов,  Үй:23",
+                "type": "Current address"
+              }
+            ],
+            "parent_information": [
+              {
+                "parent_type": "Mother",
+                "name": "Gulzhan",
+                "surname": "Gulzhanova",
+                "working_place": "Мектеп",
+                "profession": "Мұғалім",
+                "birth_date": "2000-12-31",
+                "contacts": [
+                  {
+                    "type": "Mobile phone",
+                    "contact": "87777777777",
+                    "note": "for WhatsApp"
+                  }
+                ]
+              }
+            ],
+            "advisor_opinions": [
+              {
+                "date": "2023-02-25 22:07:05.000",
+                "advisor": "Ablay Omar",
+                "content": "За этот период обучения проявила способности и активность. Учится очень хорошо и имеет высокие результаты."
+              }
+            ],
+            "dissertations": [
+              {
+                "title": "OQY Academy",
+                "reviewer": "Есей Жеңісұлы",
+                "education_level": "Bachelor",
+                "university": "Suleyman Demirel University",
+                "teacher": "Darmen Kariboz",
+                "begin_year": "2017",
+                "defence_year": "2017"
+              }
+            ],
+            "decisions": [
+              {
+                "type": "Entrance Order",
+                "date": "2020-08-25",
+                "subject": "Оқуға қабылдау жөнінде",
+                "decision_no": "1.1-02/37",
+                "description": "2020 – 2021 оқу жылына 1-курс бакалавр білім алушылары оқуға ҚАБЫЛДАНСЫН.\\r\\n"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "main_information": {
+            "type": "object",
+            "properties": {
+              "pws_retrieve_email": {
+                "type": "string"
+              },
+              "university_mail": {
+                "type": "string"
+              },
+              "birth_date": {
+                "type": "string"
+              },
+              "marriage_status": {
+                "type": "string"
+              },
+              "citizenship": {
+                "type": "string"
+              },
+              "iin": {
+                "type": "string"
+              },
+              "iban": {
+                "type": "string"
+              },
+              "document_type": {
+                "type": "string"
+              },
+              "document_no": {
+                "type": "string"
+              },
+              "document_authrority": {
+                "type": "string"
+              },
+              "document_issue_date": {
+                "type": "string"
+              },
+              "attestation_type": {
+                "type": "string"
+              },
+              "attestation_no": {
+                "type": "string"
+              },
+              "attestation_gpa": {
+                "type": "integer"
+              },
+              "attestation_issue_date": {
+                "type": "string"
+              },
+              "entrance_exam": {
+                "type": "string"
+              },
+              "exam_score": {
+                "type": "integer"
+              },
+              "exam_code": {
+                "type": "string"
+              },
+              "exam_issue_date": {
+                "type": "string"
+              },
+              "grant_type": {
+                "type": "string"
+              },
+              "grant_certificate": {
+                "type": "string"
+              },
+              "preparation_course": {
+                "type": "string"
+              },
+              "school": {
+                "type": "string"
+              },
+              "language_skills": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "level": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "contacts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "contact": {
+                  "type": "string"
+                },
+                "note": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "addresses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "country": {
+                  "type": "integer"
+                },
+                "province": {
+                  "type": "integer"
+                },
+                "region": {
+                  "type": "integer"
+                },
+                "city": {
+                  "type": "integer"
+                },
+                "address_line": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "parent_information": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "parent_type": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "surname": {
+                  "type": "string"
+                },
+                "working_place": {
+                  "type": "string"
+                },
+                "profession": {
+                  "type": "string"
+                },
+                "birth_date": {
+                  "type": "string"
+                },
+                "contacts": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "type": {
+                        "type": "string"
+                      },
+                      "contact": {
+                        "type": "string"
+                      },
+                      "note": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "advisor_opinions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "advisor": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "dissertations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "reviewer": {
+                  "type": "string"
+                },
+                "education_level": {
+                  "type": "string"
+                },
+                "university": {
+                  "type": "string"
+                },
+                "teacher": {
+                  "type": "string"
+                },
+                "begin_year": {
+                  "type": "string"
+                },
+                "defence_year": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "decisions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string"
+                },
+                "date": {
+                  "type": "string"
+                },
+                "subject": {
+                  "type": "string"
+                },
+                "decision_no": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
