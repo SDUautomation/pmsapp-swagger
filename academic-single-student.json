@@ -839,7 +839,8 @@
             "course_quota",
             "course_students"
           ]
-        }
+        },
+        "title": ""
       }
     }
   }
