@@ -44,6 +44,38 @@
           "id": "df9zjq1vu388p"
         }
       }
+    },
+    "/1.0.0/academic/students/resources/{student}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleStudentResourceResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-resources-student",
+        "x-stoplight": {
+          "id": "y5efrvdbhi066"
+        }
+      }
     }
   },
   "components": {
@@ -477,6 +509,172 @@
           "advisor_opinions",
           "dissertations",
           "decisions"
+        ]
+      },
+      "AcademicSingleStudentResourceResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_statuses": [
+              {
+                "status": 1,
+                "title": "TAKEN"
+              }
+            ],
+            "year_terms": [
+              {
+                "year": 2020,
+                "term": 1
+              }
+            ],
+            "tracks": [
+              {
+                "track": "TRACK0",
+                "title": "Main Track"
+              }
+            ],
+            "information": {
+              "id": 200103049,
+              "name": "Yernur",
+              "surname": "Shamshadin",
+              "father_name": "Амандықұлы",
+              "speciality": "Information Systems",
+              "level": "Bachelor",
+              "language": "English",
+              "class": 3,
+              "advisor": "Altynbek Amirzhanov",
+              "status": "Studying",
+              "entrance_year": 2020,
+              "photo": "data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/...",
+              "department": "Department of Computer Science",
+              "last_action": "Entrance Order"
+            }
+          }
+        },
+        "properties": {
+          "course_statuses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "status",
+                "title"
+              ]
+            }
+          },
+          "year_terms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "year",
+                "term"
+              ]
+            }
+          },
+          "tracks": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "track": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "track",
+                "title"
+              ]
+            }
+          },
+          "information": {
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "surname",
+              "father_name",
+              "speciality",
+              "level",
+              "language",
+              "class",
+              "advisor",
+              "status",
+              "entrance_year",
+              "photo",
+              "department",
+              "last_action"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "surname": {
+                "type": "string"
+              },
+              "father_name": {
+                "type": "string"
+              },
+              "speciality": {
+                "type": "string"
+              },
+              "level": {
+                "type": "string"
+              },
+              "language": {
+                "type": "string"
+              },
+              "class": {
+                "type": "integer"
+              },
+              "advisor": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "entrance_year": {
+                "type": "integer"
+              },
+              "photo": {
+                "type": "string"
+              },
+              "department": {
+                "type": "string"
+              },
+              "last_action": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "course_statuses",
+          "year_terms",
+          "tracks",
+          "information"
         ]
       }
     }
