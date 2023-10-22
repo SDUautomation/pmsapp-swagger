@@ -1,0 +1,273 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "oo5t3qq22kbg0"
+  },
+  "info": {
+    "title": "academic-single-course",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/1.0.0/academic/courses/grades": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleCourseGradeResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-courses-grades",
+        "x-stoplight": {
+          "id": "9c0qw8wfvdfpi"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleCourseGradeRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-courses-grades",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "4gsbv8cm5nw9t"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleCourseGradePutRequest"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AcademicSingleCourseGradeResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "student_id": "180107149",
+              "student_name": "Arsentiy",
+              "student_surname": "Zhunussov",
+              "student_photo": "base64 encoded photo",
+              "total_grade": 100,
+              "letter_grade": "A+",
+              "absence_rate": 30,
+              "speciality": {
+                "code": "10103",
+                "year": 2020,
+                "title": "Computer Science"
+              },
+              "block": {
+                "blocked": true,
+                "reason": "Financial block"
+              },
+              "grades": [
+                {
+                  "assessment_id": 1,
+                  "grade": 100,
+                  "is_open": true
+                }
+              ]
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "student_id": {
+              "type": "string"
+            },
+            "student_name": {
+              "type": "string"
+            },
+            "student_surname": {
+              "type": "string"
+            },
+            "student_photo": {
+              "type": "string"
+            },
+            "total_grade": {
+              "type": "integer"
+            },
+            "letter_grade": {
+              "type": "string"
+            },
+            "absence_rate": {
+              "type": "integer"
+            },
+            "speciality": {
+              "type": "object",
+              "required": [
+                "code",
+                "year",
+                "title"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "block": {
+              "type": "object",
+              "required": [
+                "blocked",
+                "reason"
+              ],
+              "properties": {
+                "blocked": {
+                  "type": "boolean"
+                },
+                "reason": {
+                  "type": "string"
+                }
+              }
+            },
+            "grades": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "assessment_id": {
+                    "type": "integer"
+                  },
+                  "grade": {
+                    "type": "integer"
+                  },
+                  "is_open": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "assessment_id",
+                  "grade",
+                  "is_open"
+                ]
+              }
+            }
+          },
+          "required": [
+            "student_id",
+            "student_name",
+            "student_surname",
+            "student_photo",
+            "total_grade",
+            "letter_grade",
+            "absence_rate",
+            "speciality",
+            "block",
+            "grades"
+          ]
+        }
+      },
+      "AcademicSingleCourseGradeRequest": {
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "section": {
+            "type": "string"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS",
+            "year": 2022,
+            "term": 1,
+            "section": "01"
+          }
+        }
+      },
+      "AcademicSingleCourseGradePutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "management_password": "password",
+            "grades": [
+              {
+                "student_id": "180107149",
+                "grade": 100
+              }
+            ]
+          }
+        },
+        "properties": {
+          "management_password": {
+            "type": "string"
+          },
+          "grades": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "student_id": {
+                  "type": "string"
+                },
+                "grade": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "student_id",
+                "grade"
+              ]
+            }
+          }
+        },
+        "required": [
+          "management_password",
+          "grades"
+        ]
+      }
+    }
+  }
+}
