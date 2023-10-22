@@ -118,6 +118,38 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/students/{student}/course-registration": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleStudentCourseRegistraionGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-student-course-registration",
+        "x-stoplight": {
+          "id": "hbaw4d1qop1xq"
+        }
+      }
     }
   },
   "components": {
@@ -841,6 +873,172 @@
           ]
         },
         "title": ""
+      },
+      "AcademicSingleStudentCourseRegistraionGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "confirmed_courses": [
+              {
+                "year": 2022,
+                "term": 2,
+                "course_code": "CSS 375",
+                "course_title": "RedHat - System Administration (I + II)",
+                "lecture_section": "01",
+                "practice_section": "02",
+                "lab_section": "03",
+                "theory": 1,
+                "practice": 2,
+                "credits": 3,
+                "ects": 5,
+                "price": 110000
+              }
+            ],
+            "temporary_courses": [
+              {
+                "year": 2022,
+                "term": 1,
+                "course_code": "CSS 375",
+                "course_title": "RedHat - System Administration (I + II)",
+                "lecture_section": "01",
+                "practice_section": "02",
+                "lab_section": "03",
+                "theory": 1,
+                "practice": 2,
+                "credits": 3,
+                "ects": 5,
+                "price": 110000,
+                "track": "TRACK0"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "confirmed_courses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "course_code": {
+                  "type": "string"
+                },
+                "course_title": {
+                  "type": "string"
+                },
+                "lecture_section": {
+                  "type": "string"
+                },
+                "practice_section": {
+                  "type": "string"
+                },
+                "lab_section": {
+                  "type": "string"
+                },
+                "theory": {
+                  "type": "integer"
+                },
+                "practice": {
+                  "type": "integer"
+                },
+                "credits": {
+                  "type": "integer"
+                },
+                "ects": {
+                  "type": "integer"
+                },
+                "price": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "year",
+                "term",
+                "course_code",
+                "course_title",
+                "lecture_section",
+                "practice_section",
+                "lab_section",
+                "theory",
+                "practice",
+                "credits",
+                "ects",
+                "price"
+              ]
+            }
+          },
+          "temporary_courses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "course_code": {
+                  "type": "string"
+                },
+                "course_title": {
+                  "type": "string"
+                },
+                "lecture_section": {
+                  "type": "string"
+                },
+                "practice_section": {
+                  "type": "string"
+                },
+                "lab_section": {
+                  "type": "string"
+                },
+                "theory": {
+                  "type": "integer"
+                },
+                "practice": {
+                  "type": "integer"
+                },
+                "credits": {
+                  "type": "integer"
+                },
+                "ects": {
+                  "type": "integer"
+                },
+                "price": {
+                  "type": "integer"
+                },
+                "track": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "year",
+                "term",
+                "course_code",
+                "course_title",
+                "lecture_section",
+                "practice_section",
+                "lab_section",
+                "theory",
+                "practice",
+                "credits",
+                "ects",
+                "price",
+                "track"
+              ]
+            }
+          }
+        },
+        "required": [
+          "confirmed_courses",
+          "temporary_courses"
+        ]
       }
     }
   }
