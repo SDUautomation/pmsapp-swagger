@@ -77,48 +77,6 @@
         }
       }
     },
-    "/1.0.0/academic/students/{student}/course-schedule": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "student",
-          "in": "path",
-          "required": true
-        }
-      ],
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "headers": {},
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AcademicSingleStudentScheduleResponse"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-1.0.0-academic-students-student-course-schedule",
-        "x-stoplight": {
-          "id": "ob3tbw0k2szoa"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AcademicSingleStudentScheduleRequest"
-              }
-            }
-          }
-        }
-      }
-    },
     "/1.0.0/academic/students/{student}/course-registration": {
       "parameters": [
         {
@@ -139,7 +97,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AcademicSingleStudentCourseRegistraionGetResponse"
+                  "$ref": "#/components/schemas/AcademicSingleStudentCourseRegistrationGetResponse"
                 }
               }
             }
@@ -148,6 +106,47 @@
         "operationId": "get-1.0.0-academic-students-student-course-registration",
         "x-stoplight": {
           "id": "hbaw4d1qop1xq"
+        }
+      }
+    },
+    "/1.0.0/academic/students/{student}/course-schedule": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleStudentScheduleResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-student-course-schedule",
+        "x-stoplight": {
+          "id": "s8vdf2mpacn08"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleStudentScheduleRequest"
+              }
+            }
+          }
         }
       }
     }
@@ -874,8 +873,11 @@
         },
         "title": ""
       },
-      "AcademicSingleStudentCourseRegistraionGetResponse": {
+      "AcademicSingleStudentCourseRegistrationGetResponse": {
         "type": "object",
+        "x-stoplight": {
+          "id": "801ca919966e0"
+        },
         "x-examples": {
           "Example 1": {
             "confirmed_courses": [
