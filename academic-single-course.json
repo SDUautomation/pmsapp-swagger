@@ -151,6 +151,37 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/courses/attendances/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Resources are loaded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleCourseAttendancesResourcesResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-courses-attendances-resources",
+        "x-stoplight": {
+          "id": "5oqee5gthmicy"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleCourseAttendancesResourcesRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -482,6 +513,479 @@
             102345
           ]
         }
+      },
+      "AcademicSingleCourseAttendancesResourcesRequest": {
+        "title": "AcademicSingleCourseAttendancesResourcesRequest",
+        "x-stoplight": {
+          "id": "abz51pqyk1qus"
+        },
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "wzf0dwj4ghewc"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "ru8u26dsmoxqh"
+            }
+          },
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "cq5yactsihqji"
+            }
+          },
+          "section": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "9uuy974p88zjr"
+            }
+          },
+          "modules": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "3i0iobgrtlr01"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "tv0tvnrndpej9"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "term",
+          "section",
+          "modules"
+        ]
+      },
+      "AcademicSingleCourseAttendancesResourcesResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "absence_limit": 30,
+            "attend_types": [
+              {
+                "id": 1,
+                "title": "Attend"
+              }
+            ],
+            "relocate_types": [
+              {
+                "id": "EMPTY_ROOM",
+                "title": "To the empty room."
+              }
+            ],
+            "room_types": [
+              {
+                "id": "2",
+                "title": "Laboratory"
+              }
+            ],
+            "buildings": [
+              {
+                "id": "ENG",
+                "title": "Engineering Block"
+              }
+            ],
+            "schedule": [
+              {
+                "id": 1,
+                "day": "12 May",
+                "time": "13:00",
+                "conductance": {
+                  "conducted": false,
+                  "description": "The journal was not filled."
+                },
+                "room": {
+                  "id": 121,
+                  "title": "E117"
+                }
+              }
+            ],
+            "students": [
+              {
+                "id": 1,
+                "full_name": "Aibolat Batyrov",
+                "photo": "base64 encoded photo",
+                "speciality": {
+                  "code": "10103",
+                  "year": 2022,
+                  "title": "Information Systems"
+                },
+                "attendance": {
+                  "attend_count": 12,
+                  "absence_count": 1,
+                  "permit_count": 2
+                },
+                "absence_rate": {
+                  "section": 13,
+                  "course": 23
+                },
+                "block": {
+                  "blocked": true,
+                  "reason": "Financial block"
+                }
+              }
+            ],
+            "course": {
+              "code": "CSS 216",
+              "year": 2023,
+              "term": 1,
+              "section": "02",
+              "title": "Mobile Programming",
+              "credits": 5,
+              "week_number": 15,
+              "teaching_hours": 30,
+              "language": {
+                "code": "en",
+                "title": "English"
+              },
+              "department": {
+                "code": "DEP_COMP_SCI",
+                "year": 2020,
+                "title": "Department of Computer Science"
+              },
+              "instructor": {
+                "id": 10987,
+                "full_name": "Aibolat Batyrov"
+              }
+            }
+          }
+        },
+        "properties": {
+          "absence_limit": {
+            "type": "integer"
+          },
+          "attend_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "relocate_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "room_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "buildings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title"
+              ]
+            }
+          },
+          "schedule": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "day": {
+                  "type": "string"
+                },
+                "time": {
+                  "type": "string"
+                },
+                "conductance": {
+                  "type": "object",
+                  "required": [
+                    "conducted",
+                    "description"
+                  ],
+                  "properties": {
+                    "conducted": {
+                      "type": "boolean"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "room": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "day",
+                "time",
+                "conductance",
+                "room"
+              ]
+            }
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "full_name": {
+                  "type": "string"
+                },
+                "photo": {
+                  "type": "string"
+                },
+                "speciality": {
+                  "type": "object",
+                  "required": [
+                    "code",
+                    "year",
+                    "title"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "year": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "attendance": {
+                  "type": "object",
+                  "required": [
+                    "attend_count",
+                    "absence_count",
+                    "permit_count"
+                  ],
+                  "properties": {
+                    "attend_count": {
+                      "type": "integer"
+                    },
+                    "absence_count": {
+                      "type": "integer"
+                    },
+                    "permit_count": {
+                      "type": "integer"
+                    }
+                  }
+                },
+                "absence_rate": {
+                  "type": "object",
+                  "required": [
+                    "section",
+                    "course"
+                  ],
+                  "properties": {
+                    "section": {
+                      "type": "integer"
+                    },
+                    "course": {
+                      "type": "integer"
+                    }
+                  }
+                },
+                "block": {
+                  "type": "object",
+                  "required": [
+                    "blocked",
+                    "reason"
+                  ],
+                  "properties": {
+                    "blocked": {
+                      "type": "boolean"
+                    },
+                    "reason": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "full_name",
+                "photo",
+                "speciality",
+                "attendance",
+                "absence_rate",
+                "block"
+              ]
+            }
+          },
+          "course": {
+            "type": "object",
+            "required": [
+              "code",
+              "year",
+              "term",
+              "section",
+              "title",
+              "credits",
+              "week_number",
+              "teaching_hours",
+              "language",
+              "department",
+              "instructor"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "year": {
+                "type": "integer"
+              },
+              "term": {
+                "type": "integer"
+              },
+              "section": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "credits": {
+                "type": "integer"
+              },
+              "week_number": {
+                "type": "integer"
+              },
+              "teaching_hours": {
+                "type": "integer"
+              },
+              "language": {
+                "type": "object",
+                "required": [
+                  "code",
+                  "title"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              },
+              "department": {
+                "type": "object",
+                "required": [
+                  "code",
+                  "year",
+                  "title"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "integer"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              },
+              "instructor": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "full_name"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "full_name": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "absence_limit",
+          "attend_types",
+          "relocate_types",
+          "room_types",
+          "buildings",
+          "schedule",
+          "students",
+          "course"
+        ]
       }
     }
   }
