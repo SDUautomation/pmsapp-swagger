@@ -72,6 +72,85 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/courses/attendances": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleCourseAttendancesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-courses-attendances",
+        "x-stoplight": {
+          "id": "t7esoeig04afq"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleCourseAttendancesGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-courses-attendances",
+        "responses": {
+          "201": {
+            "description": "Attendance records are successfully created."
+          },
+          "400": {
+            "description": "User doesn't have permission to submit attendance. 2) Not able to set attendance for this semester."
+          }
+        },
+        "x-stoplight": {
+          "id": "hhnh9ydri6n35"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleCourseAttendancesPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-courses-attendances",
+        "responses": {
+          "200": {
+            "description": "Attendance records is successfully deleted."
+          },
+          "400": {
+            "description": "User doesn't have permission to submit attendance. Not able to set attendance for this semester."
+          }
+        },
+        "x-stoplight": {
+          "id": "ckjbq484hsrxr"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleCourseAttendancesDeleteRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -267,6 +346,142 @@
           "management_password",
           "grades"
         ]
+      },
+      "AcademicSingleCourseAttendancesGetRequest": {
+        "title": "AcademicSingleCourseAttendancesGetRequest",
+        "x-stoplight": {
+          "id": "xz5iot4lrcrwv"
+        },
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "17olevpkd26e2"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "ytg3xg3kpjuxb"
+            }
+          },
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "4n9ju7hj1shwr"
+            }
+          },
+          "section": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "m3183q5co749o"
+            }
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "term",
+          "section"
+        ]
+      },
+      "AcademicSingleCourseAttendancesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 121441,
+              "schedule_id": 19981,
+              "student_id": "200103356",
+              "attend_id": 1
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "schedule_id": {
+              "type": "integer"
+            },
+            "student_id": {
+              "type": "string"
+            },
+            "attend_id": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "schedule_id",
+            "student_id",
+            "attend_id"
+          ]
+        }
+      },
+      "AcademicSingleCourseAttendancesPostRequest": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "schedule_id": 24361,
+              "not_conducted": false,
+              "students": [
+                {
+                  "student_id": "200103356",
+                  "attend_id": 1
+                }
+              ]
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "schedule_id": {
+              "type": "integer"
+            },
+            "not_conducted": {
+              "type": "boolean"
+            },
+            "students": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "student_id": {
+                    "type": "string"
+                  },
+                  "attend_id": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "student_id",
+                  "attend_id"
+                ]
+              }
+            }
+          },
+          "required": [
+            "schedule_id",
+            "students"
+          ]
+        }
+      },
+      "AcademicSingleCourseAttendancesDeleteRequest": {
+        "type": "array",
+        "items": {
+          "type": "integer"
+        },
+        "x-examples": {
+          "Example 1": [
+            102345
+          ]
+        }
       }
     }
   }

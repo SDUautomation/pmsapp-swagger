@@ -18029,8 +18029,11 @@
             "course_quota": {
               "type": "integer"
             },
-            "students": {
-              "type": "integer"
+            "course_students": {
+              "type": "integer",
+              "x-stoplight": {
+                "id": "n7q17lla3hbrz"
+              }
             }
           },
           "required": [
@@ -18049,7 +18052,7 @@
             "course_credits",
             "course_ects",
             "course_quota",
-            "students"
+            "course_students"
           ]
         }
       },
