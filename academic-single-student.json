@@ -149,6 +149,88 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/students/{student}/attendance": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleStudentAttendanceGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-student-attendance",
+        "x-stoplight": {
+          "id": "ie33yucrmrs93"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleStudentAttendanceGetRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/students/{student}/attendance/details": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleStudentAttendanceDetailsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-student-attendance-details",
+        "x-stoplight": {
+          "id": "4kcb3ub7qiek2"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleStudentAttendanceDetailsGetRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1040,6 +1122,295 @@
         "required": [
           "confirmed_courses",
           "temporary_courses"
+        ]
+      },
+      "AcademicSingleStudentAttendanceGetRequest": {
+        "title": "AcademicSingleStudentAttendanceGetRequest",
+        "x-stoplight": {
+          "id": "kddg0a4472m1f"
+        },
+        "type": "object",
+        "properties": {
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "tuytcn83dvo0s"
+            }
+          },
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "f9t1hifiw3n7n"
+            }
+          }
+        },
+        "required": [
+          "year",
+          "term"
+        ]
+      },
+      "AcademicSingleStudentAttendanceGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "year": 2022,
+            "term": 1,
+            "absense_limit": 30,
+            "attendance": [
+              {
+                "course_code": "CSS 223",
+                "title": "C# Object Oriented Programming",
+                "credits": 3,
+                "ects": 5,
+                "hours": 45,
+                "attended_count": 41,
+                "absence_count": 4,
+                "permitted_count": 0
+              }
+            ]
+          }
+        },
+        "properties": {
+          "year": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "absense_limit": {
+            "type": "integer"
+          },
+          "attendance": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "course_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "credits": {
+                  "type": "integer"
+                },
+                "ects": {
+                  "type": "integer"
+                },
+                "hours": {
+                  "type": "integer"
+                },
+                "attended_count": {
+                  "type": "integer"
+                },
+                "absence_count": {
+                  "type": "integer"
+                },
+                "permitted_count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "course_code",
+                "title",
+                "credits",
+                "ects",
+                "hours",
+                "attended_count",
+                "absence_count",
+                "permitted_count"
+              ]
+            }
+          }
+        },
+        "required": [
+          "year",
+          "term",
+          "absense_limit",
+          "attendance"
+        ]
+      },
+      "AcademicSingleStudentAttendanceDetailsGetRequest": {
+        "title": "AcademicSingleStudentAttendanceDetailsGetRequest",
+        "x-stoplight": {
+          "id": "0m1v0j8i8lknk"
+        },
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "gx1554eq4chpl"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "l5lxfjfgdq85e"
+            }
+          },
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "p341meninbbsq"
+            }
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "term"
+        ]
+      },
+      "AcademicSingleStudentAttendanceDetailsGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 23342,
+            "year": 2022,
+            "term": 1,
+            "course_code": "CSS 223",
+            "course_title": "C# Object Oriented Programming",
+            "sections": [
+              {
+                "id": 1149365,
+                "section": "03",
+                "instructor": "Mukhtar Bimurat",
+                "type": {
+                  "id": "N",
+                  "title": "Normal"
+                },
+                "records": [
+                  {
+                    "id": 1149365,
+                    "date": "2022-10-03",
+                    "hour": "10:00:00",
+                    "room": "VR 14",
+                    "attendance": {
+                      "id": 14322,
+                      "date": "2022-10-03 14:30:33",
+                      "attend": 1,
+                      "attend_title": "Attended"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "course_code": {
+            "type": "string"
+          },
+          "course_title": {
+            "type": "string"
+          },
+          "sections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "section": {
+                  "type": "string"
+                },
+                "instructor": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "records": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "date": {
+                        "type": "string"
+                      },
+                      "hour": {
+                        "type": "string"
+                      },
+                      "room": {
+                        "type": "string"
+                      },
+                      "attendance": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "date",
+                          "attend",
+                          "attend_title"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "date": {
+                            "type": "string"
+                          },
+                          "attend": {
+                            "type": "integer"
+                          },
+                          "attend_title": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "date",
+                      "hour",
+                      "room",
+                      "attendance"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "section",
+                "instructor",
+                "type",
+                "records"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "year",
+          "term",
+          "course_code",
+          "course_title",
+          "sections"
         ]
       }
     }
