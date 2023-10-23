@@ -339,327 +339,194 @@
         }
       },
       "AcademicInformationConsentRequestGetResponse": {
-        "type": "array",
+        "type": "object",
         "x-examples": {
-          "Example 1": [
-            {
-              "id": 47247,
-              "course_code": "MAT 204",
-              "course_title": "Mathematical analysis 4",
-              "section": "01-N",
-              "teacher": "Birzhan Ayanbayev",
-              "pending_requests_count": 0,
-              "accepted_requests_count": 0,
-              "rejected_requests_count": 10
-            },
-            {
-              "id": 47252,
-              "course_code": "MAT 204",
-              "course_title": "Mathematical analysis 4",
-              "section": "03-N",
-              "teacher": "Birzhan Ayanbayev",
-              "pending_requests_count": 1,
-              "accepted_requests_count": 0,
-              "rejected_requests_count": 5
-            },
-            {
-              "id": 47969,
-              "course_code": "MAT 251",
-              "course_title": "Probability and Mathematical Statictics",
-              "section": "01-N",
-              "teacher": "Larissa Bazarbayeva",
-              "pending_requests_count": 2,
-              "accepted_requests_count": 2,
-              "rejected_requests_count": 3
-            },
-            {
-              "id": 47460,
-              "course_code": "MAT 371",
-              "course_title": "Functional analysis",
-              "section": "02-N",
-              "teacher": "Nurlan Dairbekov",
-              "pending_requests_count": 2,
-              "accepted_requests_count": 7,
-              "rejected_requests_count": 8
-            },
-            {
-              "id": 48406,
-              "course_code": "INF 371",
-              "course_title": "Automation in Testing",
-              "section": "01-N",
-              "teacher": "Alisher Duzmagambetov",
-              "pending_requests_count": 1,
-              "accepted_requests_count": 8,
-              "rejected_requests_count": 2
-            },
-            {
-              "id": 50324,
-              "course_code": "MAT 116",
-              "course_title": "Mathematical analysis 2",
-              "section": "10-N",
-              "teacher": "Kuatkan Zhensikbayev",
-              "pending_requests_count": 12,
-              "accepted_requests_count": 0,
-              "rejected_requests_count": 0
-            },
-            {
-              "id": 47180,
-              "course_code": "MAT 221",
-              "course_title": "Classical mechanics",
-              "section": "02-N",
-              "teacher": "Nail Ussembayev",
-              "pending_requests_count": 1,
-              "accepted_requests_count": 1,
-              "rejected_requests_count": 7
-            },
-            {
-              "id": 47970,
-              "course_code": "MAT 251",
-              "course_title": "Probability and Mathematical Statictics",
-              "section": "02-N",
-              "teacher": "Larissa Bazarbayeva",
-              "pending_requests_count": 1,
-              "accepted_requests_count": 0,
-              "rejected_requests_count": 1
-            },
-            {
-              "id": 46394,
-              "course_code": "MAT 364",
-              "course_title": "Cryptography",
-              "section": "01-N",
-              "teacher": "Nargiza Tazabekova",
-              "pending_requests_count": 0,
-              "accepted_requests_count": 8,
-              "rejected_requests_count": 14
-            },
-            {
-              "id": 47171,
-              "course_code": "MAT 116",
-              "course_title": "Mathematical analysis 2",
-              "section": "02-N",
-              "teacher": "Mukhtar Ismagulov",
-              "pending_requests_count": 8,
-              "accepted_requests_count": 0,
-              "rejected_requests_count": 0
-            },
-            {
-              "id": 47780,
-              "course_code": "CSS 108",
-              "course_title": "Programming Technologies and Educational Practice",
-              "section": "25-N",
-              "teacher": "Ulzhan Mukasheva",
-              "pending_requests_count": 2,
-              "accepted_requests_count": 0,
-              "rejected_requests_count": 0
-            },
-            {
-              "id": 47181,
-              "course_code": "MAT 221",
-              "course_title": "Classical mechanics",
-              "section": "03-N",
-              "teacher": "Nail Ussembayev",
-              "pending_requests_count": 8,
-              "accepted_requests_count": 0,
-              "rejected_requests_count": 7
-            },
-            {
-              "id": 50467,
-              "course_code": "MAT 203",
-              "course_title": "Mathematical analysis 3",
-              "section": "01-N",
-              "teacher": "Damir Kurmanbay",
-              "pending_requests_count": 1,
-              "accepted_requests_count": 1,
-              "rejected_requests_count": 3
-            },
-            {
-              "id": 47248,
-              "course_code": "MAT 204",
-              "course_title": "Mathematical analysis 4",
-              "section": "02-N",
-              "teacher": "Birzhan Ayanbayev",
-              "pending_requests_count": 1,
-              "accepted_requests_count": 0,
-              "rejected_requests_count": 6
-            },
-            {
-              "id": 47971,
-              "course_code": "MAT 251",
-              "course_title": "Probability and Mathematical Statictics",
-              "section": "03-N",
-              "teacher": "Khurshida Patullayeva",
-              "pending_requests_count": 0,
-              "accepted_requests_count": 2,
-              "rejected_requests_count": 4
-            },
-            {
-              "id": 48407,
-              "course_code": "INF 371",
-              "course_title": "Automation in Testing",
-              "section": "02-N",
-              "teacher": "Magzhan Zhailau",
-              "pending_requests_count": 0,
-              "accepted_requests_count": 5,
-              "rejected_requests_count": 0
-            },
-            {
-              "id": 47170,
-              "course_code": "MAT 116",
-              "course_title": "Mathematical analysis 2",
-              "section": "01-N",
-              "teacher": "Mukhtar Ismagulov",
-              "pending_requests_count": 3,
-              "accepted_requests_count": 1,
-              "rejected_requests_count": 0
-            },
-            {
-              "id": 50325,
-              "course_code": "MAT 116",
-              "course_title": "Mathematical analysis 2",
-              "section": "11-N",
-              "teacher": "Kuatkan Zhensikbayev",
-              "pending_requests_count": 7,
-              "accepted_requests_count": 0,
-              "rejected_requests_count": 0
-            },
-            {
-              "id": 47179,
-              "course_code": "MAT 221",
-              "course_title": "Classical mechanics",
-              "section": "01-N",
-              "teacher": "Nail Ussembayev",
-              "pending_requests_count": 6,
-              "accepted_requests_count": 0,
-              "rejected_requests_count": 8
-            },
-            {
-              "id": 47278,
-              "course_code": "MAT 307",
-              "course_title": "Complex analysis",
-              "section": "01-N",
-              "teacher": "Aleksei Kavokin",
-              "pending_requests_count": 1,
-              "accepted_requests_count": 0,
-              "rejected_requests_count": 5
-            },
-            {
-              "id": 47279,
-              "course_code": "MAT 307",
-              "course_title": "Complex analysis",
-              "section": "02-N",
-              "teacher": "Aleksei Kavokin",
-              "pending_requests_count": 1,
-              "accepted_requests_count": 0,
-              "rejected_requests_count": 1
-            },
-            {
-              "id": 47459,
-              "course_code": "MAT 371",
-              "course_title": "Functional analysis",
-              "section": "01-N",
-              "teacher": "Nurlan Dairbekov",
-              "pending_requests_count": 2,
-              "accepted_requests_count": 8,
-              "rejected_requests_count": 5
-            },
-            {
-              "id": 46449,
-              "course_code": "MAT 113",
-              "course_title": "Physics",
-              "section": "02-N",
-              "teacher": "Nail Ussembayev",
-              "pending_requests_count": 0,
-              "accepted_requests_count": 0,
-              "rejected_requests_count": 3
-            },
-            {
-              "id": 46407,
-              "course_code": "MAT 326",
-              "course_title": "Logic and Model theory",
-              "section": "01-N",
-              "teacher": "Bektur Baizhanov",
-              "pending_requests_count": 2,
-              "accepted_requests_count": 2,
-              "rejected_requests_count": 18
-            },
-            {
-              "id": 46448,
-              "course_code": "MAT 113",
-              "course_title": "Physics",
-              "section": "01-N",
-              "teacher": "Nail Ussembayev",
-              "pending_requests_count": 0,
-              "accepted_requests_count": 0,
-              "rejected_requests_count": 5
-            },
-            {
-              "id": 46353,
-              "course_code": "MAT 304",
-              "course_title": "Equations of mathematical physics",
-              "section": "01-N",
-              "teacher": "Gaukhar Arepova",
-              "pending_requests_count": 4,
-              "accepted_requests_count": 6,
-              "rejected_requests_count": 14
-            },
-            {
-              "id": 46354,
-              "course_code": "MAT 304",
-              "course_title": "Equations of mathematical physics",
-              "section": "02-N",
-              "teacher": "Gaukhar Arepova",
-              "pending_requests_count": 2,
-              "accepted_requests_count": 4,
-              "rejected_requests_count": 6
-            }
-          ]
+          "Example 1": {
+            "total": 27,
+            "from": 1,
+            "per_page": 10,
+            "current_page": 1,
+            "last_page": 3,
+            "sections": [
+              {
+                "id": 47247,
+                "course_code": "MAT 204",
+                "course_title": "Mathematical analysis 4",
+                "section": "01-N",
+                "teacher": "Birzhan Ayanbayev",
+                "pending_requests_count": 0,
+                "accepted_requests_count": 0,
+                "rejected_requests_count": 10
+              },
+              {
+                "id": 47252,
+                "course_code": "MAT 204",
+                "course_title": "Mathematical analysis 4",
+                "section": "03-N",
+                "teacher": "Birzhan Ayanbayev",
+                "pending_requests_count": 1,
+                "accepted_requests_count": 0,
+                "rejected_requests_count": 5
+              },
+              {
+                "id": 47969,
+                "course_code": "MAT 251",
+                "course_title": "Probability and Mathematical Statictics",
+                "section": "01-N",
+                "teacher": "Larissa Bazarbayeva",
+                "pending_requests_count": 2,
+                "accepted_requests_count": 2,
+                "rejected_requests_count": 3
+              },
+              {
+                "id": 47460,
+                "course_code": "MAT 371",
+                "course_title": "Functional analysis",
+                "section": "02-N",
+                "teacher": "Nurlan Dairbekov",
+                "pending_requests_count": 2,
+                "accepted_requests_count": 7,
+                "rejected_requests_count": 8
+              },
+              {
+                "id": 48406,
+                "course_code": "INF 371",
+                "course_title": "Automation in Testing",
+                "section": "01-N",
+                "teacher": "Alisher Duzmagambetov",
+                "pending_requests_count": 1,
+                "accepted_requests_count": 8,
+                "rejected_requests_count": 2
+              },
+              {
+                "id": 50324,
+                "course_code": "MAT 116",
+                "course_title": "Mathematical analysis 2",
+                "section": "10-N",
+                "teacher": "Kuatkan Zhensikbayev",
+                "pending_requests_count": 12,
+                "accepted_requests_count": 0,
+                "rejected_requests_count": 0
+              },
+              {
+                "id": 47180,
+                "course_code": "MAT 221",
+                "course_title": "Classical mechanics",
+                "section": "02-N",
+                "teacher": "Nail Ussembayev",
+                "pending_requests_count": 1,
+                "accepted_requests_count": 1,
+                "rejected_requests_count": 7
+              },
+              {
+                "id": 47970,
+                "course_code": "MAT 251",
+                "course_title": "Probability and Mathematical Statictics",
+                "section": "02-N",
+                "teacher": "Larissa Bazarbayeva",
+                "pending_requests_count": 1,
+                "accepted_requests_count": 0,
+                "rejected_requests_count": 1
+              },
+              {
+                "id": 46394,
+                "course_code": "MAT 364",
+                "course_title": "Cryptography",
+                "section": "01-N",
+                "teacher": "Nargiza Tazabekova",
+                "pending_requests_count": 0,
+                "accepted_requests_count": 8,
+                "rejected_requests_count": 14
+              },
+              {
+                "id": 47171,
+                "course_code": "MAT 116",
+                "course_title": "Mathematical analysis 2",
+                "section": "02-N",
+                "teacher": "Mukhtar Ismagulov",
+                "pending_requests_count": 8,
+                "accepted_requests_count": 0,
+                "rejected_requests_count": 0
+              }
+            ]
+          }
         },
-        "items": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "integer"
-            },
-            "course_code": {
-              "type": "string"
-            },
-            "course_title": {
-              "type": "string"
-            },
-            "section": {
-              "type": "string"
-            },
-            "teacher": {
-              "type": "string"
-            },
-            "pending_requests_count": {
-              "type": "integer"
-            },
-            "accepted_requests_count": {
-              "type": "integer"
-            },
-            "rejected_requests_count": {
-              "type": "integer"
-            }
+        "properties": {
+          "total": {
+            "type": "integer"
           },
-          "required": [
-            "id",
-            "course_code",
-            "course_title",
-            "section",
-            "teacher",
-            "pending_requests_count",
-            "accepted_requests_count",
-            "rejected_requests_count"
-          ]
-        }
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "sections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "course_code": {
+                  "type": "string"
+                },
+                "course_title": {
+                  "type": "string"
+                },
+                "section": {
+                  "type": "string"
+                },
+                "teacher": {
+                  "type": "string"
+                },
+                "pending_requests_count": {
+                  "type": "integer"
+                },
+                "accepted_requests_count": {
+                  "type": "integer"
+                },
+                "rejected_requests_count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "id",
+                "course_code",
+                "course_title",
+                "section",
+                "teacher",
+                "pending_requests_count",
+                "accepted_requests_count",
+                "rejected_requests_count"
+              ]
+            }
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "sections"
+        ]
       },
       "AcademicInformationConsentRequestGetRequest": {
         "type": "object",
         "x-examples": {
           "Example 1": {
             "year": 12412,
-            "term": 124
+            "term": 124,
+            "offset": 12,
+            "per_page": 12
           }
         },
         "properties": {
@@ -668,11 +535,19 @@
           },
           "term": {
             "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
           }
         },
         "required": [
           "year",
-          "term"
+          "term",
+          "offset",
+          "per_page"
         ]
       }
     }
