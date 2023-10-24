@@ -336,6 +336,79 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/students/{student}/grades": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleStudentGradesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-student-grades",
+        "x-stoplight": {
+          "id": "mwathmxqy2kwp"
+        }
+      }
+    },
+    "/1.0.0/academic/students/{student}/grades/details": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleStudentGradesDetailsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-student-grades-details",
+        "x-stoplight": {
+          "id": "acm6wimdd6d07"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleStudentAttendanceDetailsGetRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -2004,6 +2077,163 @@
           "payments",
           "discounts",
           "charges"
+        ]
+      },
+      "AcademicSingleStudentGradesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1149365,
+              "course_code": "INF 232",
+              "title": "Web programming: back end",
+              "credits": 3,
+              "ects": 5,
+              "total_grade": 100,
+              "letter_grade": "A",
+              "year": 2021,
+              "term": 2
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "course_code": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "credits": {
+              "type": "integer"
+            },
+            "ects": {
+              "type": "integer"
+            },
+            "total_grade": {
+              "type": "integer"
+            },
+            "letter_grade": {
+              "type": "string"
+            },
+            "year": {
+              "type": "integer"
+            },
+            "term": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "course_code",
+            "title",
+            "credits",
+            "ects",
+            "total_grade",
+            "letter_grade",
+            "year",
+            "term"
+          ]
+        }
+      },
+      "AcademicSingleStudentGradesDetailsGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "INF 232",
+            "title": "Web programming: back end",
+            "year": 2021,
+            "term": 2,
+            "total_grade": 2,
+            "total_letter_grade": "A",
+            "sections": [
+              {
+                "section": "14-N",
+                "instructor_name": "Sher",
+                "instructor_surname": "Dadakhanov"
+              }
+            ],
+            "grades": [
+              {
+                "assessment": "Final Exam",
+                "grade": 100
+              }
+            ]
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "total_grade": {
+            "type": "integer"
+          },
+          "total_letter_grade": {
+            "type": "string"
+          },
+          "sections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "section": {
+                  "type": "string"
+                },
+                "instructor_name": {
+                  "type": "string"
+                },
+                "instructor_surname": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "section",
+                "instructor_name",
+                "instructor_surname"
+              ]
+            }
+          },
+          "grades": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "assessment": {
+                  "type": "string"
+                },
+                "grade": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "assessment",
+                "grade"
+              ]
+            }
+          }
+        },
+        "required": [
+          "course_code",
+          "title",
+          "year",
+          "term",
+          "total_grade",
+          "total_letter_grade",
+          "sections",
+          "grades"
         ]
       }
     }
