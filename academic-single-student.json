@@ -263,6 +263,79 @@
           "id": "t4pllsnf1gsh9"
         }
       }
+    },
+    "/1.0.0/academic/students/{student}/accounting": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleStudentAccountingGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-student-accounting",
+        "x-stoplight": {
+          "id": "m4qa3r8r8c5wm"
+        }
+      }
+    },
+    "/1.0.0/academic/students/{student}/accounting/details": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleStudentAccountingDetailsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-student-accounting-details",
+        "x-stoplight": {
+          "id": "fig0fjgqly53v"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleStudentScheduleRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1704,6 +1777,233 @@
           "courses",
           "elective_sections",
           "references"
+        ]
+      },
+      "AcademicSingleStudentAccountingGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "payment_year": 2020,
+              "payment_term": 1,
+              "entrance_year": 2020,
+              "dep_fee": 22000,
+              "calculated_fee": 0,
+              "balance": 0,
+              "charges": 115000,
+              "total_balance": 115000,
+              "payment_amount": 115000,
+              "remainder": 0,
+              "currency": "KZT",
+              "calc_type": "AUTO",
+              "gpa": 2.65
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "payment_year": {
+              "type": "integer"
+            },
+            "payment_term": {
+              "type": "integer"
+            },
+            "entrance_year": {
+              "type": "integer"
+            },
+            "dep_fee": {
+              "type": "integer"
+            },
+            "calculated_fee": {
+              "type": "integer"
+            },
+            "balance": {
+              "type": "integer"
+            },
+            "charges": {
+              "type": "integer"
+            },
+            "total_balance": {
+              "type": "integer"
+            },
+            "payment_amount": {
+              "type": "integer"
+            },
+            "remainder": {
+              "type": "integer"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "calc_type": {
+              "type": "string"
+            },
+            "gpa": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "payment_year",
+            "payment_term",
+            "entrance_year",
+            "dep_fee",
+            "calculated_fee",
+            "balance",
+            "charges",
+            "total_balance",
+            "payment_amount",
+            "remainder",
+            "currency",
+            "calc_type",
+            "gpa"
+          ]
+        }
+      },
+      "AcademicSingleStudentAccountingDetailsGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "payments": [
+              {
+                "date": "2020-09-02",
+                "title": "Bank payment",
+                "amount": 40000,
+                "remainder": 75000
+              }
+            ],
+            "discounts": [
+              {
+                "year": 2022,
+                "term": 1,
+                "amount": 40000,
+                "calculated_amount": 535000,
+                "percentage": 100,
+                "title": "State Grant",
+                "type": "Grants"
+              }
+            ],
+            "charges": [
+              {
+                "year": 2022,
+                "term": 1,
+                "amount": 40000,
+                "calculated_amount": 535000,
+                "percentage": 100,
+                "title": "State Grant",
+                "type": "Grants"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "payments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "date": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "amount": {
+                  "type": "integer"
+                },
+                "remainder": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "date",
+                "title",
+                "amount",
+                "remainder"
+              ]
+            }
+          },
+          "discounts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "amount": {
+                  "type": "integer"
+                },
+                "calculated_amount": {
+                  "type": "integer"
+                },
+                "percentage": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "year",
+                "term",
+                "amount",
+                "calculated_amount",
+                "percentage",
+                "title",
+                "type"
+              ]
+            }
+          },
+          "charges": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "amount": {
+                  "type": "integer"
+                },
+                "calculated_amount": {
+                  "type": "integer"
+                },
+                "percentage": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "year",
+                "term",
+                "amount",
+                "calculated_amount",
+                "percentage",
+                "title",
+                "type"
+              ]
+            }
+          }
+        },
+        "required": [
+          "payments",
+          "discounts",
+          "charges"
         ]
       }
     }
