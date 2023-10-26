@@ -23853,6 +23853,12 @@
             },
             "defense_year": {
               "type": "integer"
+            },
+            "student_status": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "n1l9bqq1zn4kv"
+              }
             }
           },
           "required": [
@@ -23863,7 +23869,8 @@
             "topic",
             "is_ongoing",
             "start_year",
-            "defense_year"
+            "defense_year",
+            "student_status"
           ]
         }
       },
