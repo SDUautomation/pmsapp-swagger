@@ -409,6 +409,38 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/students/{student}/transcript": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleStudentTranscriptGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-student-transcript",
+        "x-stoplight": {
+          "id": "fbpcj3zbj8tp6"
+        }
+      }
     }
   },
   "components": {
@@ -2234,6 +2266,187 @@
           "total_letter_grade",
           "sections",
           "grades"
+        ]
+      },
+      "AcademicSingleStudentTranscriptGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "information": {
+              "id": "200103357",
+              "full_name": "Abylaikhan Myrzagozy",
+              "education_level": "Bachelor",
+              "entry_date": "2020-09-05",
+              "faculty": "Engineering and Natural Sciences",
+              "speciality": "Information Systems",
+              "education_language": "English",
+              "graduation_date": "2024-07-05"
+            },
+            "courses": [
+              {
+                "course_code": "CEC 101",
+                "course_title": "General English (A1 level)",
+                "credits": 6,
+                "ects": 6,
+                "grade": 100,
+                "grade_letter": "P",
+                "grade_point": 1,
+                "grade_title": "Pass",
+                "year": 2020,
+                "term": 1
+              }
+            ],
+            "gpa": [
+              {
+                "year": 2022,
+                "term": 1,
+                "gpa": 3.32,
+                "ga": 87.19,
+                "ects": 100,
+                "credits": 70,
+                "spa": 3,
+                "sa": 70
+              }
+            ]
+          }
+        },
+        "properties": {
+          "information": {
+            "type": "object",
+            "required": [
+              "id",
+              "full_name",
+              "education_level",
+              "entry_date",
+              "faculty",
+              "speciality",
+              "education_language",
+              "graduation_date"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "full_name": {
+                "type": "string"
+              },
+              "education_level": {
+                "type": "string"
+              },
+              "entry_date": {
+                "type": "string"
+              },
+              "faculty": {
+                "type": "string"
+              },
+              "speciality": {
+                "type": "string"
+              },
+              "education_language": {
+                "type": "string"
+              },
+              "graduation_date": {
+                "type": "string"
+              }
+            }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "course_code": {
+                  "type": "string"
+                },
+                "course_title": {
+                  "type": "string"
+                },
+                "credits": {
+                  "type": "integer"
+                },
+                "ects": {
+                  "type": "integer"
+                },
+                "grade": {
+                  "type": "integer"
+                },
+                "grade_letter": {
+                  "type": "string"
+                },
+                "grade_point": {
+                  "type": "integer"
+                },
+                "grade_title": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "course_code",
+                "course_title",
+                "credits",
+                "ects",
+                "grade",
+                "grade_letter",
+                "grade_point",
+                "grade_title",
+                "year",
+                "term"
+              ]
+            }
+          },
+          "gpa": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "gpa": {
+                  "type": "number"
+                },
+                "ga": {
+                  "type": "number"
+                },
+                "ects": {
+                  "type": "integer"
+                },
+                "credits": {
+                  "type": "integer"
+                },
+                "spa": {
+                  "type": "integer"
+                },
+                "sa": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "year",
+                "term",
+                "gpa",
+                "ga",
+                "ects",
+                "credits",
+                "spa",
+                "sa"
+              ]
+            }
+          }
+        },
+        "required": [
+          "information",
+          "courses",
+          "gpa"
         ]
       }
     }
