@@ -501,7 +501,8 @@
             "schedule_id",
             "students"
           ]
-        }
+        },
+        "title": ""
       },
       "AcademicSingleCourseAttendancesDeleteRequest": {
         "type": "array",

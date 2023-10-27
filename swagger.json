@@ -15542,7 +15542,7 @@
             }
           },
           "sub-department": {
-            "type": "boolean",
+            "type": "number",
             "x-stoplight": {
               "id": "jo0xi9rd0vmnj"
             }
