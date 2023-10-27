@@ -15541,7 +15541,7 @@
               "id": "7qft5eghcxc5b"
             }
           },
-          "sub-department": {
+          "sub_department": {
             "type": "number",
             "x-stoplight": {
               "id": "jo0xi9rd0vmnj"
