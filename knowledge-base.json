@@ -1897,21 +1897,18 @@
             "tags": [
               "#oracle"
             ],
-            "contents": [
-              {
-                "uuid": "99b0de60-3517-4ed1-a6cd-01a4d9c74363",
-                "type_id": 12,
-                "version": "1.0.2",
-                "image": "/images/knowledge/post/post.png",
-                "video": "/videos/knowledge/post/post.mp4",
-                "video_type": "MPEG",
-                "content": "Laravel API that will host and manage the data for a mobile application.",
-                "active": true,
-                "visible": true,
-                "alert_type": "Danger",
-                "alert_text": "Read now!"
-              }
-            ]
+            "content": {
+              "type_id": 12,
+              "version": "1.0.2",
+              "image": "/images/knowledge/post/post.png",
+              "video": "/videos/knowledge/post/post.mp4",
+              "video_type": "MPEG",
+              "content": "Laravel API that will host and manage the data for a mobile application.",
+              "active": true,
+              "visible": true,
+              "alert_type": "Danger",
+              "alert_text": "Read now!"
+            }
           }
         },
         "properties": {
@@ -1939,58 +1936,39 @@
               "type": "string"
             }
           },
-          "contents": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "uuid": {
-                  "type": "string"
-                },
-                "type_id": {
-                  "type": "integer"
-                },
-                "version": {
-                  "type": "string"
-                },
-                "image": {
-                  "type": "string"
-                },
-                "video": {
-                  "type": "string"
-                },
-                "video_type": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "active": {
-                  "type": "boolean"
-                },
-                "visible": {
-                  "type": "boolean"
-                },
-                "alert_type": {
-                  "type": "string"
-                },
-                "alert_text": {
-                  "type": "string"
-                }
+          "content": {
+            "type": "object",
+            "properties": {
+              "type_id": {
+                "type": "integer"
               },
-              "required": [
-                "uuid",
-                "type_id",
-                "version",
-                "image",
-                "video",
-                "video_type",
-                "content",
-                "active",
-                "visible",
-                "alert_type",
-                "alert_text"
-              ]
+              "version": {
+                "type": "string"
+              },
+              "image": {
+                "type": "string"
+              },
+              "video": {
+                "type": "string"
+              },
+              "video_type": {
+                "type": "string"
+              },
+              "content": {
+                "type": "string"
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "visible": {
+                "type": "boolean"
+              },
+              "alert_type": {
+                "type": "string"
+              },
+              "alert_text": {
+                "type": "string"
+              }
             }
           }
         },
@@ -1998,9 +1976,7 @@
           "category_uuid",
           "title",
           "description",
-          "published",
-          "details",
-          "contents"
+          "published"
         ]
       }
     }
