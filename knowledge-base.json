@@ -253,7 +253,7 @@
         },
         "operationId": "get-1.0.0-knowledge-manage-posts",
         "x-stoplight": {
-          "id": "8h3j2mkibk0d5"
+          "id": "c875xphntehc9"
         },
         "requestBody": {
           "content": {
@@ -269,8 +269,11 @@
         "summary": "",
         "operationId": "post-1.0.0-knowledge-manage-posts",
         "responses": {
+          "200": {
+            "description": "OK"
+          },
           "201": {
-            "description": "Post is successfully created.",
+            "description": "Created",
             "content": {
               "application/json": {
                 "schema": {
@@ -281,7 +284,7 @@
           }
         },
         "x-stoplight": {
-          "id": "bwxptkohai7me"
+          "id": "fqvwrmnujs1p2"
         },
         "requestBody": {
           "content": {
@@ -290,8 +293,7 @@
                 "$ref": "#/components/schemas/KnowledgeManagePostsPostRequest"
               }
             }
-          },
-          "description": ""
+          }
         }
       }
     },
@@ -315,7 +317,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/KnowledgeManagePostsSingleGetResponse"
+                  "$ref": "#/components/schemas/KnowledgeManageSinglePostGetResponse"
                 }
               }
             }
@@ -323,19 +325,7 @@
         },
         "operationId": "get-1.0.0-knowledge-manage-posts-post",
         "x-stoplight": {
-          "id": "hyamgd8sdkvdf"
-        }
-      },
-      "delete": {
-        "summary": "",
-        "operationId": "delete-1.0.0-knowledge-manage-posts-post",
-        "responses": {
-          "200": {
-            "description": "Post is successfully deleted."
-          }
-        },
-        "x-stoplight": {
-          "id": "e9w9ja0kk3ups"
+          "id": "kirptbmybtfy5"
         }
       },
       "put": {
@@ -343,20 +333,32 @@
         "operationId": "put-1.0.0-knowledge-manage-posts-post",
         "responses": {
           "200": {
-            "description": "Post is successfully updated."
+            "description": "OK"
           }
         },
         "x-stoplight": {
-          "id": "xua6n5x2dt4fp"
+          "id": "oe7s4zg1v29w5"
         },
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/KnowledgeManagePostsPostRequest"
+                "$ref": "#/components/schemas/KnowledgeManageSinglePostPutRequest"
               }
             }
           }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-knowledge-manage-posts-post",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "7a0ig0o90v41s"
         }
       }
     },
@@ -371,27 +373,6 @@
           "required": true
         }
       ],
-      "post": {
-        "summary": "",
-        "operationId": "post-1.0.0-knowledge-manage-posts-post-contents",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        },
-        "x-stoplight": {
-          "id": "yz2rpq358evyz"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/KnowledgeManagePostsContentsPostRequest"
-              }
-            }
-          }
-        }
-      },
       "put": {
         "summary": "",
         "operationId": "put-1.0.0-knowledge-manage-posts-post-contents",
@@ -401,13 +382,41 @@
           }
         },
         "x-stoplight": {
-          "id": "t0siq5fhfprm7"
+          "id": "ytncnsot7e14w"
         },
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/KnowledgeManagePostsContentsPutRequest"
+                "$ref": "#/components/schemas/KnowledgeManagePostsContentPutRequest"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-knowledge-manage-posts-post-contents",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KnowledgeManagePostsContentPostResponse"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "muvqqnja9jab6"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KnowledgeManagePostsContentPostRequest"
               }
             }
           }
@@ -422,13 +431,13 @@
           }
         },
         "x-stoplight": {
-          "id": "f1y1hit1hyinm"
+          "id": "1ih7ehtw7incj"
         },
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/KnowledgeManagePostsContentsDeleteRequest"
+                "$ref": "#/components/schemas/KnowledgeManagePostsContentDeleteRequest"
               }
             }
           }
@@ -1357,38 +1366,77 @@
           "languages"
         ]
       },
+      "KnowledgeManagePostsGetRequest": {
+        "title": "KnowledgeManagePostsGetRequest",
+        "x-stoplight": {
+          "id": "xxwui6ta75xgy"
+        },
+        "type": "object",
+        "properties": {
+          "per_page": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "5c6mhpk4cx9ps"
+            }
+          },
+          "offset": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "376sa935ef8ul"
+            }
+          },
+          "search": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "621w2xv1unjaz"
+            }
+          },
+          "category": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "n4l8pwuygaule"
+            }
+          },
+          "type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "y9qma4dx85zij"
+            }
+          }
+        },
+        "required": [
+          "per_page",
+          "offset"
+        ]
+      },
       "KnowledgeManagePostsGetResponse": {
         "type": "object",
         "x-examples": {
           "Example 1": {
-            "total": 1,
+            "total": 40,
             "from": 1,
             "per_page": 15,
-            "current_page": 1,
-            "last_page": 1,
+            "current_page": 2,
+            "last_page": 3,
             "posts": [
               {
-                "id": 182,
-                "uuid": "99b94128-d8fc-4071-b09f-290261bb07de",
-                "title": "Testing title post from 16:06 2023-07-20",
-                "description": "Description",
-                "details": "details",
-                "meta": "Meta information",
-                "category_title": "cat2",
-                "category_uuid": "309d315f-e17a-4641-a38f-baf34dfc0d0d",
-                "published": 1,
-                "contents_count": 2,
-                "views": 97,
-                "created_at": "2023-07-24 14:36:51",
-                "updated_at": "2023-08-20 09:53:47",
+                "id": 322,
+                "uuid": "f99fee5e-b4a4-431d-84cc-6138a23b5de5",
+                "title": "FAQ",
+                "description": "The N+1 problem occurs when the data access framework executes N additional SQL queries",
+                "details": "Administrative Operations",
+                "meta": "It is necessary to select users with IDs",
+                "category_title": "FAQ",
+                "category_uuid": "a7bced7e-f62a-4bef-a061-6716b6627ecd",
+                "published": true,
+                "contents_count": 12,
+                "views": 12,
+                "created_at": "26-06-2023 18:49:00",
+                "updated_at": "26-06-2023 19:23:00",
                 "tags": [
                   {
-                    "id": 187,
-                    "tag": "#academic"
-                  },
-                  {
-                    "id": 189,
-                    "tag": "#grades"
+                    "id": 322,
+                    "tag": "#php"
                   }
                 ]
               }
@@ -1441,7 +1489,7 @@
                   "type": "string"
                 },
                 "published": {
-                  "type": "integer"
+                  "type": "boolean"
                 },
                 "contents_count": {
                   "type": "integer"
@@ -1502,395 +1550,6 @@
           "posts"
         ]
       },
-      "KnowledgeManagePostsGetRequest": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "offset": 182,
-            "per_page": 182,
-            "search": "99b94128-d8fc-4071-b09f-290261bb07de",
-            "category": "99b94128-d8fc-4071-b09f-290261bb07de",
-            "type": "99b94128-d8fc-4071-b09f-290261bb07de"
-          }
-        },
-        "properties": {
-          "offset": {
-            "type": "integer"
-          },
-          "per_page": {
-            "type": "integer"
-          },
-          "search": {
-            "type": "string"
-          },
-          "category": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "offset",
-          "per_page"
-        ]
-      },
-      "KnowledgeManagePostsSingleGetResponse": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "id": 182,
-            "uuid": "99b94128-d8fc-4071-b09f-290261bb07de",
-            "title": "Testing title post from 16:06 2023-07-20",
-            "description": "Description",
-            "details": "details",
-            "meta": "Meta information",
-            "category_title": "cat2",
-            "category_uuid": "309d315f-e17a-4641-a38f-baf34dfc0d0d",
-            "published": 1,
-            "contents_count": 2,
-            "views": 98,
-            "created_at": "2023-07-24 14:36:51",
-            "updated_at": "2023-08-20 10:17:10",
-            "tags": [
-              {
-                "id": 187,
-                "tag": "#academic"
-              },
-              {
-                "id": 189,
-                "tag": "#grades"
-              }
-            ],
-            "contents": [
-              {
-                "id": 123,
-                "uuid": "99b94128-e4e8-4d1a-bd46-67a219e12f18",
-                "type_uuid": "7b25b455-e13d-4ebb-841d-b88e3b81e95d",
-                "type_title": "Tutorials",
-                "image": "/var/www/images/slang.png",
-                "video": "/var/www/videos/slang.mp4",
-                "video_type": "MPEG",
-                "content": "Im developing a Laravel API that will host and manage the data for a mobile application.",
-                "active": true,
-                "visible": 1,
-                "version": "1.0.2",
-                "alert_type": "Nothing",
-                "alert_text": "Good Morning!"
-              },
-              {
-                "id": 124,
-                "uuid": "99b94147-099d-4d66-93b0-e1c5b9eef3cb",
-                "type_uuid": "7b25b455-e13d-4ebb-841d-b88e3b81e95d",
-                "type_title": "Tutorials",
-                "image": "/var/www/images/slang.png",
-                "video": "/var/www/videos/slang.mp4",
-                "video_type": "MPEG",
-                "content": "Im developing a Laravel API that will host and manage the data for a mobile application.",
-                "active": true,
-                "visible": 1,
-                "version": "1.0.2",
-                "alert_type": "Nothing",
-                "alert_text": "Good Morning!"
-              }
-            ]
-          }
-        },
-        "properties": {
-          "id": {
-            "type": "integer"
-          },
-          "uuid": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "details": {
-            "type": "string"
-          },
-          "meta": {
-            "type": "string"
-          },
-          "category_title": {
-            "type": "string"
-          },
-          "category_uuid": {
-            "type": "string"
-          },
-          "published": {
-            "type": "integer"
-          },
-          "contents_count": {
-            "type": "integer"
-          },
-          "views": {
-            "type": "integer"
-          },
-          "created_at": {
-            "type": "string"
-          },
-          "updated_at": {
-            "type": "string"
-          },
-          "tags": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "tag": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "id",
-                "tag"
-              ]
-            }
-          },
-          "contents": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "type_uuid": {
-                  "type": "string"
-                },
-                "type_title": {
-                  "type": "string"
-                },
-                "image": {
-                  "type": "string"
-                },
-                "video": {
-                  "type": "string"
-                },
-                "video_type": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "active": {
-                  "type": "boolean"
-                },
-                "visible": {
-                  "type": "integer"
-                },
-                "version": {
-                  "type": "string"
-                },
-                "alert_type": {
-                  "type": "string"
-                },
-                "alert_text": {
-                  "type": "string"
-                },
-                "type_id": {
-                  "type": "number",
-                  "x-stoplight": {
-                    "id": "rnxagyllznfoq"
-                  }
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "type_uuid",
-                "type_title",
-                "image",
-                "video",
-                "video_type",
-                "content",
-                "active",
-                "visible",
-                "version",
-                "alert_type",
-                "alert_text",
-                "type_id"
-              ]
-            }
-          }
-        },
-        "required": [
-          "id",
-          "uuid",
-          "title",
-          "description",
-          "details",
-          "meta",
-          "category_title",
-          "category_uuid",
-          "published",
-          "contents_count",
-          "views",
-          "created_at",
-          "updated_at",
-          "tags",
-          "contents"
-        ]
-      },
-      "KnowledgeManagePostsContentsPostRequest": {
-        "type": "array",
-        "x-examples": {
-          "Example 1": [
-            {
-              "type_id": "123",
-              "version": "1.0.0",
-              "image": "/var/www/images/image.png",
-              "video": "/var/www/videos/video.mp4",
-              "video_type": "MPEG",
-              "content": "Laravel API that will host and manage the data for a mobile application.",
-              "active": true,
-              "visible": true,
-              "alert_type": "Danger",
-              "alert_text": "Application died with Runtime Exception"
-            }
-          ]
-        },
-        "items": {
-          "type": "object",
-          "properties": {
-            "type_id": {
-              "type": "string"
-            },
-            "version": {
-              "type": "string"
-            },
-            "image": {
-              "type": "string"
-            },
-            "video": {
-              "type": "string"
-            },
-            "video_type": {
-              "type": "string"
-            },
-            "content": {
-              "type": "string"
-            },
-            "active": {
-              "type": "boolean"
-            },
-            "visible": {
-              "type": "boolean"
-            },
-            "alert_type": {
-              "type": "string"
-            },
-            "alert_text": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "type_id",
-            "version",
-            "content",
-            "active",
-            "visible"
-          ]
-        },
-        "title": ""
-      },
-      "KnowledgeManagePostsContentsPutRequest": {
-        "type": "array",
-        "x-examples": {
-          "Example 1": [
-            {
-              "uuid": "9d1c23d0-f07a-4178-a945-8b35d1f9870a",
-              "type_id": "123",
-              "version": "1.0.0",
-              "image": "/var/www/images/image.png",
-              "video": "/var/www/videos/video.mp4",
-              "video_type": "MPEG",
-              "content": "Laravel API that will host and manage the data for a mobile application.",
-              "active": true,
-              "visible": true,
-              "alert_type": "Danger",
-              "alert_text": "Application died with Runtime Exception"
-            }
-          ]
-        },
-        "items": {
-          "type": "object",
-          "properties": {
-            "uuid": {
-              "type": "string"
-            },
-            "type_id": {
-              "type": "string"
-            },
-            "version": {
-              "type": "string"
-            },
-            "image": {
-              "type": "string"
-            },
-            "video": {
-              "type": "string"
-            },
-            "video_type": {
-              "type": "string"
-            },
-            "content": {
-              "type": "string"
-            },
-            "active": {
-              "type": "boolean"
-            },
-            "visible": {
-              "type": "boolean"
-            },
-            "alert_type": {
-              "type": "string"
-            },
-            "alert_text": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "uuid",
-            "type_id",
-            "version",
-            "content",
-            "active",
-            "visible"
-          ]
-        }
-      },
-      "KnowledgeManagePostsContentsDeleteRequest": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "uuid": [
-              "9d1c23d0-f07a-4178-a945-8b35d1f9870a"
-            ]
-          }
-        },
-        "properties": {
-          "uuid": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        },
-        "required": [
-          "uuid"
-        ]
-      },
       "KnowledgeManagePostsPostRequest": {
         "type": "object",
         "x-examples": {
@@ -1948,9 +1607,6 @@
             "required": [
               "type_id",
               "version",
-              "image",
-              "video",
-              "video_type",
               "content",
               "active",
               "visible",
@@ -1996,7 +1652,7 @@
           "title",
           "description",
           "published",
-          "details",
+          "tags",
           "content"
         ]
       },
@@ -2184,6 +1840,536 @@
           "updated_at",
           "tags",
           "contents"
+        ]
+      },
+      "KnowledgeManageSinglePostGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 322,
+            "uuid": "f99fee5e-b4a4-431d-84cc-6138a23b5de5",
+            "title": "FAQ",
+            "description": "The N+1 problem occurs when the data access framework executes N additional SQL queries",
+            "details": "Administrative Operations",
+            "meta": "It is necessary to select users with IDs",
+            "category_title": "FAQ",
+            "category_uuid": "a7bced7e-f62a-4bef-a061-6716b6627ecd",
+            "published": true,
+            "contents_count": 12,
+            "views": 12,
+            "created_at": "26-06-2023 18:49:00",
+            "updated_at": "26-06-2023 19:23:00",
+            "tags": [
+              {
+                "id": 322,
+                "tag": "#php"
+              }
+            ],
+            "contents": [
+              {
+                "id": 322,
+                "uuid": "f99fee5e-b4a4-431d-84cc-6138a23b5de5",
+                "type_id": 1,
+                "type_uuid": "f2e24921-ab10-463c-aacf-2208d50e3f51",
+                "type_title": "Tutorials",
+                "image": "/var/www/images/slang.png",
+                "video": "/var/www/images/slang.mp4",
+                "video_type": "MPEG HDR",
+                "content": "Im developing a Laravel API ...",
+                "active": true,
+                "visible": 1,
+                "version": "1.0.0",
+                "alert_type": "Nothing",
+                "alert_text": "Good Morning"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "uuid": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "meta": {
+            "type": "string"
+          },
+          "category_title": {
+            "type": "string"
+          },
+          "category_uuid": {
+            "type": "string"
+          },
+          "published": {
+            "type": "boolean"
+          },
+          "contents_count": {
+            "type": "integer"
+          },
+          "views": {
+            "type": "integer"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "tag": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "tag"
+              ]
+            }
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "type_id": {
+                  "type": "integer"
+                },
+                "type_uuid": {
+                  "type": "string"
+                },
+                "type_title": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "video": {
+                  "type": "string"
+                },
+                "video_type": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "visible": {
+                  "type": "integer"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "alert_type": {
+                  "type": "string"
+                },
+                "alert_text": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "type_id",
+                "type_uuid",
+                "type_title",
+                "image",
+                "video",
+                "video_type",
+                "content",
+                "active",
+                "visible",
+                "version",
+                "alert_type",
+                "alert_text"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "uuid",
+          "title",
+          "description",
+          "details",
+          "meta",
+          "category_title",
+          "category_uuid",
+          "published",
+          "contents_count",
+          "views",
+          "created_at",
+          "updated_at",
+          "tags",
+          "contents"
+        ]
+      },
+      "KnowledgeManageSinglePostPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "category_uuid": "99b0de60-3517-4ed1-a6cd-01a4d9c74363",
+            "title": "How to create post?",
+            "description": "Tutorial about creating post",
+            "published": true,
+            "meta": "Meta information",
+            "details": "Laravel API that will host and manage the data for a mobile application.",
+            "tags": [
+              "#oracle"
+            ],
+            "contents": [
+              {
+                "uuid": "99b0de60-3517-4ed1-a6cd-01a4d9c74363",
+                "type_id": 12,
+                "version": "1.0.2",
+                "image": "/images/knowledge/post/post.png",
+                "video": "/videos/knowledge/post/post.mp4",
+                "video_type": "MPEG",
+                "content": "Laravel API that will host and manage the data for a mobile application.",
+                "active": true,
+                "visible": true,
+                "alert_type": "Danger",
+                "alert_text": "Read now!"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "category_uuid": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "published": {
+            "type": "boolean"
+          },
+          "meta": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "uuid": {
+                  "type": "string"
+                },
+                "type_id": {
+                  "type": "integer"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "video": {
+                  "type": "string"
+                },
+                "video_type": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "visible": {
+                  "type": "boolean"
+                },
+                "alert_type": {
+                  "type": "string"
+                },
+                "alert_text": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "uuid",
+                "type_id",
+                "version",
+                "content",
+                "active",
+                "visible",
+                "alert_type",
+                "alert_text"
+              ]
+            }
+          }
+        },
+        "required": [
+          "category_uuid",
+          "title",
+          "description",
+          "published",
+          "tags",
+          "contents"
+        ]
+      },
+      "KnowledgeManagePostsContentPutRequest": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "uuid": "9d1c23d0-f07a-4178-a945-8b35d1f9870a",
+              "type_id": "123",
+              "version": "1.0.0",
+              "image": "/var/www/images/image.png",
+              "video": "/var/www/videos/video.mp4",
+              "video_type": "MPEG",
+              "content": "Laravel API that will host and manage the data for a mobile application.",
+              "active": true,
+              "visible": true,
+              "alert_type": "Danger",
+              "alert_text": "Application died with Runtime Exception"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "uuid": {
+              "type": "string"
+            },
+            "type_id": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            },
+            "image": {
+              "type": "string"
+            },
+            "video": {
+              "type": "string"
+            },
+            "video_type": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            },
+            "active": {
+              "type": "boolean"
+            },
+            "visible": {
+              "type": "boolean"
+            },
+            "alert_type": {
+              "type": "string"
+            },
+            "alert_text": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "uuid",
+            "type_id",
+            "version",
+            "content",
+            "active",
+            "visible",
+            "alert_type",
+            "alert_text"
+          ]
+        }
+      },
+      "KnowledgeManagePostsContentPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "type_id": 123,
+            "version": "1.0.0",
+            "image": "/var/www/images/image.png",
+            "video": "/var/www/videos/video.mp4",
+            "video_type": "MPEG",
+            "content": "Laravel API that will host and manage the data for a mobile application.",
+            "active": true,
+            "visible": true,
+            "alert_type": "Danger",
+            "alert_text": "Application died with Runtime Exception"
+          }
+        },
+        "properties": {
+          "type_id": {
+            "type": "integer"
+          },
+          "version": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "video": {
+            "type": "string"
+          },
+          "video_type": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "visible": {
+            "type": "boolean"
+          },
+          "alert_type": {
+            "type": "string"
+          },
+          "alert_text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "type_id",
+          "version",
+          "content",
+          "active",
+          "visible",
+          "alert_type",
+          "alert_text"
+        ]
+      },
+      "KnowledgeManagePostsContentPostResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 322,
+            "uuid": "f99fee5e-b4a4-431d-84cc-6138a23b5de5",
+            "type_id": 1,
+            "type_uuid": "f2e24921-ab10-463c-aacf-2208d50e3f51",
+            "type_title": "Tutorials",
+            "image": "/var/www/images/slang.png",
+            "video": "/var/www/images/slang.mp4",
+            "video_type": "MPEG HDR",
+            "content": "Im developing a Laravel API ...",
+            "active": true,
+            "visible": 1,
+            "version": "1.0.0",
+            "alert_type": "Nothing",
+            "alert_text": "Good Morning"
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "uuid": {
+            "type": "string"
+          },
+          "type_id": {
+            "type": "integer"
+          },
+          "type_uuid": {
+            "type": "string"
+          },
+          "type_title": {
+            "type": "string"
+          },
+          "image": {
+            "type": "string"
+          },
+          "video": {
+            "type": "string"
+          },
+          "video_type": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "active": {
+            "type": "boolean"
+          },
+          "visible": {
+            "type": "integer"
+          },
+          "version": {
+            "type": "string"
+          },
+          "alert_type": {
+            "type": "string"
+          },
+          "alert_text": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "uuid",
+          "type_id",
+          "type_uuid",
+          "type_title",
+          "image",
+          "video",
+          "video_type",
+          "content",
+          "active",
+          "visible",
+          "version",
+          "alert_type",
+          "alert_text"
+        ]
+      },
+      "KnowledgeManagePostsContentDeleteRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "uuid": [
+              "9d1c23d0-f07a-4178-a945-8b35d1f9870a"
+            ]
+          }
+        },
+        "properties": {
+          "uuid": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "uuid"
         ]
       }
     }
