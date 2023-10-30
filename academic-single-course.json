@@ -341,18 +341,39 @@
         "type": "object",
         "x-examples": {
           "Example 1": {
-            "management_password": "password",
+            "captcha": {
+              "ct": "ct",
+              "iv": "iv",
+              "s": "s"
+            },
             "grades": [
               {
                 "student_id": "180107149",
+                "absent": false,
                 "grade": 100
               }
             ]
           }
         },
         "properties": {
-          "management_password": {
-            "type": "string"
+          "captcha": {
+            "type": "object",
+            "required": [
+              "ct",
+              "iv",
+              "s"
+            ],
+            "properties": {
+              "ct": {
+                "type": "string"
+              },
+              "iv": {
+                "type": "string"
+              },
+              "s": {
+                "type": "string"
+              }
+            }
           },
           "grades": {
             "type": "array",
@@ -362,19 +383,23 @@
                 "student_id": {
                   "type": "string"
                 },
+                "absent": {
+                  "type": "boolean"
+                },
                 "grade": {
                   "type": "integer"
                 }
               },
               "required": [
                 "student_id",
+                "absent",
                 "grade"
               ]
             }
           }
         },
         "required": [
-          "management_password",
+          "captcha",
           "grades"
         ]
       },
