@@ -270,7 +270,14 @@
         "operationId": "post-1.0.0-knowledge-manage-posts",
         "responses": {
           "201": {
-            "description": "Post is successfully created."
+            "description": "Post is successfully created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KnowledgeManagePostsPostResponse"
+                }
+              }
+            }
           }
         },
         "x-stoplight": {
@@ -1938,6 +1945,18 @@
           },
           "content": {
             "type": "object",
+            "required": [
+              "type_id",
+              "version",
+              "image",
+              "video",
+              "video_type",
+              "content",
+              "active",
+              "visible",
+              "alert_type",
+              "alert_text"
+            ],
             "properties": {
               "type_id": {
                 "type": "integer"
@@ -1976,7 +1995,195 @@
           "category_uuid",
           "title",
           "description",
-          "published"
+          "published",
+          "details",
+          "content"
+        ]
+      },
+      "KnowledgeManagePostsPostResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 322,
+            "uuid": "f99fee5e-b4a4-431d-84cc-6138a23b5de5",
+            "title": "FAQ",
+            "description": "The N+1 problem occurs when the data access framework executes N additional SQL queries",
+            "details": "Administrative Operations",
+            "meta": "It is necessary to select users with IDs",
+            "category_title": "FAQ",
+            "category_uuid": "a7bced7e-f62a-4bef-a061-6716b6627ecd",
+            "published": true,
+            "contents_count": 12,
+            "views": 12,
+            "created_at": "26-06-2023 18:49:00",
+            "updated_at": "26-06-2023 19:23:00",
+            "tags": [
+              {
+                "id": 322,
+                "tag": "#php"
+              }
+            ],
+            "contents": [
+              {
+                "id": 322,
+                "uuid": "f99fee5e-b4a4-431d-84cc-6138a23b5de5",
+                "type_id": 1,
+                "type_uuid": "f2e24921-ab10-463c-aacf-2208d50e3f51",
+                "type_title": "Tutorials",
+                "image": "/var/www/images/slang.png",
+                "video": "/var/www/images/slang.mp4",
+                "video_type": "MPEG HDR",
+                "content": "Im developing a Laravel API ...",
+                "active": true,
+                "visible": 1,
+                "version": "1.0.0",
+                "alert_type": "Nothing",
+                "alert_text": "Good Morning"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "uuid": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "details": {
+            "type": "string"
+          },
+          "meta": {
+            "type": "string"
+          },
+          "category_title": {
+            "type": "string"
+          },
+          "category_uuid": {
+            "type": "string"
+          },
+          "published": {
+            "type": "boolean"
+          },
+          "contents_count": {
+            "type": "integer"
+          },
+          "views": {
+            "type": "integer"
+          },
+          "created_at": {
+            "type": "string"
+          },
+          "updated_at": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "tag": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "tag"
+              ]
+            }
+          },
+          "contents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "uuid": {
+                  "type": "string"
+                },
+                "type_id": {
+                  "type": "integer"
+                },
+                "type_uuid": {
+                  "type": "string"
+                },
+                "type_title": {
+                  "type": "string"
+                },
+                "image": {
+                  "type": "string"
+                },
+                "video": {
+                  "type": "string"
+                },
+                "video_type": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "active": {
+                  "type": "boolean"
+                },
+                "visible": {
+                  "type": "integer"
+                },
+                "version": {
+                  "type": "string"
+                },
+                "alert_type": {
+                  "type": "string"
+                },
+                "alert_text": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "uuid",
+                "type_id",
+                "type_uuid",
+                "type_title",
+                "image",
+                "video",
+                "video_type",
+                "content",
+                "active",
+                "visible",
+                "version",
+                "alert_type",
+                "alert_text"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "uuid",
+          "title",
+          "description",
+          "details",
+          "meta",
+          "category_title",
+          "category_uuid",
+          "published",
+          "contents_count",
+          "views",
+          "created_at",
+          "updated_at",
+          "tags",
+          "contents"
         ]
       }
     }
