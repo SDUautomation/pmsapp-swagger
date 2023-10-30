@@ -964,11 +964,18 @@
                 },
                 "title": {
                   "type": "string"
+                },
+                "id": {
+                  "type": "number",
+                  "x-stoplight": {
+                    "id": "rn5rcumhofkqi"
+                  }
                 }
               },
               "required": [
                 "track",
-                "title"
+                "title",
+                "id"
               ]
             }
           },
