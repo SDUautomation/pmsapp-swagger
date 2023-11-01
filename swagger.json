@@ -17184,7 +17184,10 @@
           "electives": {
             "type": "object",
             "required": [
-              "area"
+              "area",
+              "non_area",
+              "non_theoretical",
+              "requisite_courses"
             ],
             "properties": {
               "area": {
@@ -17264,7 +17267,9 @@
                           "year",
                           "type",
                           "expr",
-                          "cr_enabled"
+                          "cr_enabled",
+                          "program_code",
+                          "track"
                         ]
                       }
                     }
@@ -17356,10 +17361,35 @@
                           "track": {
                             "type": "string"
                           }
-                        }
+                        },
+                        "required": [
+                          "id",
+                          "course_code",
+                          "year",
+                          "type",
+                          "expr",
+                          "cr_enabled",
+                          "program_code",
+                          "track"
+                        ]
                       }
                     }
-                  }
+                  },
+                  "required": [
+                    "id",
+                    "code",
+                    "track",
+                    "term",
+                    "title",
+                    "practice",
+                    "lab",
+                    "credits",
+                    "ects",
+                    "type",
+                    "elective",
+                    "is_active",
+                    "requisites"
+                  ]
                 }
               },
               "non_theoretical": {
@@ -17432,10 +17462,35 @@
                           "track": {
                             "type": "string"
                           }
-                        }
+                        },
+                        "required": [
+                          "id",
+                          "course_code",
+                          "year",
+                          "type",
+                          "expr",
+                          "cr_enabled",
+                          "program_code",
+                          "track"
+                        ]
                       }
                     }
-                  }
+                  },
+                  "required": [
+                    "id",
+                    "code",
+                    "track",
+                    "term",
+                    "title",
+                    "practice",
+                    "lab",
+                    "credits",
+                    "ects",
+                    "type",
+                    "elective",
+                    "is_active",
+                    "requisites"
+                  ]
                 }
               },
               "requisite_courses": {
@@ -17508,10 +17563,29 @@
                           "track": {
                             "type": "string"
                           }
-                        }
+                        },
+                        "required": [
+                          "id",
+                          "course_code"
+                        ]
                       }
                     }
-                  }
+                  },
+                  "required": [
+                    "id",
+                    "code",
+                    "track",
+                    "term",
+                    "title",
+                    "practice",
+                    "lab",
+                    "credits",
+                    "ects",
+                    "type",
+                    "elective",
+                    "is_active",
+                    "requisites"
+                  ]
                 }
               }
             }
