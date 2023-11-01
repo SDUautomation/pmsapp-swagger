@@ -954,10 +954,13 @@
               ]
             }
           },
-          "tracks": {
+          "program_tracks": {
             "type": "array",
             "items": {
               "type": "object",
+              "x-stoplight": {
+                "id": "tiyi0ovd4w7jr"
+              },
               "properties": {
                 "track": {
                   "type": "string"
@@ -1046,7 +1049,7 @@
         "required": [
           "course_statuses",
           "year_terms",
-          "tracks",
+          "program_tracks",
           "information"
         ]
       },
