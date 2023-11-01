@@ -17007,6 +17007,12 @@
                             "is_active"
                           ]
                         }
+                      },
+                      "theory": {
+                        "type": "number",
+                        "x-stoplight": {
+                          "id": "tw59vqu4u9dk7"
+                        }
                       }
                     },
                     "required": [
@@ -17022,7 +17028,8 @@
                       "is_active",
                       "is_theoretical",
                       "requisites",
-                      "references"
+                      "references",
+                      "theory"
                     ]
                   }
                 }
@@ -17272,6 +17279,12 @@
                           "track"
                         ]
                       }
+                    },
+                    "theory": {
+                      "type": "number",
+                      "x-stoplight": {
+                        "id": "yjvivmidbrp5u"
+                      }
                     }
                   },
                   "required": [
@@ -17287,7 +17300,8 @@
                     "type",
                     "elective",
                     "is_active",
-                    "requisites"
+                    "requisites",
+                    "theory"
                   ]
                 }
               },
@@ -17373,6 +17387,12 @@
                           "track"
                         ]
                       }
+                    },
+                    "theory": {
+                      "type": "number",
+                      "x-stoplight": {
+                        "id": "pbr9ik4yyhia3"
+                      }
                     }
                   },
                   "required": [
@@ -17388,7 +17408,8 @@
                     "type",
                     "elective",
                     "is_active",
-                    "requisites"
+                    "requisites",
+                    "theory"
                   ]
                 }
               },
@@ -17474,6 +17495,12 @@
                           "track"
                         ]
                       }
+                    },
+                    "theory": {
+                      "type": "number",
+                      "x-stoplight": {
+                        "id": "nauvtyj69t0hl"
+                      }
                     }
                   },
                   "required": [
@@ -17489,7 +17516,8 @@
                     "type",
                     "elective",
                     "is_active",
-                    "requisites"
+                    "requisites",
+                    "theory"
                   ]
                 }
               },
@@ -17566,8 +17594,20 @@
                         },
                         "required": [
                           "id",
-                          "course_code"
+                          "course_code",
+                          "year",
+                          "type",
+                          "expr",
+                          "cr_enabled",
+                          "program_code",
+                          "track"
                         ]
+                      }
+                    },
+                    "theory": {
+                      "type": "number",
+                      "x-stoplight": {
+                        "id": "z08gabqcoweah"
                       }
                     }
                   },
@@ -17584,7 +17624,8 @@
                     "type",
                     "elective",
                     "is_active",
-                    "requisites"
+                    "requisites",
+                    "theory"
                   ]
                 }
               }
