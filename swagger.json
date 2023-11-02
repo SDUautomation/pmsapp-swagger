@@ -3932,6 +3932,37 @@
           }
         }
       }
+    },
+    "/1.0.0/administrative/gate-entry/my": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeGateEntryResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-gate-entry-my",
+        "x-stoplight": {
+          "id": "flkrdiao43fwn"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeGateEntryMyRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -9561,6 +9592,12 @@
                   },
                   "post_degree_type": {
                     "nullable": true
+                  },
+                  "duration_in_terms": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "puma61kgbeork"
+                    }
                   }
                 },
                 "required": [
@@ -9572,7 +9609,8 @@
                   "faculty",
                   "education",
                   "tracks",
-                  "post_degree_type"
+                  "post_degree_type",
+                  "duration_in_terms"
                 ]
               }
             }
@@ -10778,6 +10816,36 @@
                   "type": "string"
                 }
               }
+            },
+            "duration_in_terms": {
+              "type": "number",
+              "x-stoplight": {
+                "id": "poq7jw70advmv"
+              }
+            },
+            "type": {
+              "type": "object",
+              "x-stoplight": {
+                "id": "97cw5p9mtuiyk"
+              },
+              "required": [
+                "key",
+                "title"
+              ],
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "5wxx3u3a53u5d"
+                  }
+                },
+                "title": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "sj996ihy4lnfr"
+                  }
+                }
+              }
             }
           },
           "required": [
@@ -10788,7 +10856,9 @@
             "cipher",
             "post_degree_type",
             "department",
-            "faculty"
+            "faculty",
+            "duration_in_terms",
+            "type"
           ]
         }
       },
@@ -25348,6 +25418,36 @@
         },
         "required": [
           "interest"
+        ]
+      },
+      "AdministrativeGateEntryMyRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "reader_group": 1,
+            "from_date": "2023-06-19",
+            "due_date": "2023-06-20",
+            "mailer": true
+          }
+        },
+        "properties": {
+          "reader_group": {
+            "type": "integer"
+          },
+          "from_date": {
+            "type": "string"
+          },
+          "due_date": {
+            "type": "string"
+          },
+          "mailer": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "reader_group",
+          "from_date",
+          "due_date"
         ]
       }
     },
