@@ -1177,9 +1177,6 @@
       },
       "AcademicSingleStudentCourseRegistrationGetResponse": {
         "type": "object",
-        "x-stoplight": {
-          "id": "801ca919966e0"
-        },
         "x-examples": {
           "Example 1": {
             "confirmed_courses": [
@@ -1213,6 +1210,17 @@
                 "ects": 5,
                 "price": 110000,
                 "track": "TRACK0"
+              }
+            ],
+            "course_registration_status": {
+              "student_register_opened": true,
+              "advisor_confirm_opened": true
+            },
+            "confirm_statuses": [
+              {
+                "status": true,
+                "title": "ADVISOR CONFIRMED",
+                "reject_message": "id=3 -> you should use the reject message"
               }
             ]
           }
@@ -1337,11 +1345,50 @@
                 "track"
               ]
             }
+          },
+          "course_registration_status": {
+            "type": "object",
+            "required": [
+              "student_register_opened",
+              "advisor_confirm_opened"
+            ],
+            "properties": {
+              "student_register_opened": {
+                "type": "boolean"
+              },
+              "advisor_confirm_opened": {
+                "type": "boolean"
+              }
+            }
+          },
+          "confirm_statuses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "boolean"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "reject_message": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "status",
+                "title",
+                "reject_message"
+              ]
+            }
           }
         },
         "required": [
           "confirmed_courses",
-          "temporary_courses"
+          "temporary_courses",
+          "course_registration_status",
+          "confirm_statuses"
         ]
       },
       "AcademicSingleStudentAttendanceGetRequest": {
