@@ -1362,25 +1362,31 @@
             }
           },
           "confirm_statuses": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "status": {
-                  "type": "boolean"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "reject_message": {
-                  "type": "string"
+            "type": "object",
+            "required": [
+              "id",
+              "title",
+              "reject_message"
+            ],
+            "properties": {
+              "id": {
+                "type": "number",
+                "x-stoplight": {
+                  "id": "4xs5a962769np"
                 }
               },
-              "required": [
-                "status",
-                "title",
-                "reject_message"
-              ]
+              "title": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "2i9060lz0t28r"
+                }
+              },
+              "reject_message": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "sg4hlsr5qnjpf"
+                }
+              }
             }
           }
         },
