@@ -15788,9 +15788,6 @@
                 "id": {
                   "type": "integer"
                 },
-                "parent_id": {
-                  "type": "integer"
-                },
                 "code": {
                   "type": "string"
                 },
@@ -15805,15 +15802,27 @@
                   "items": {
                     "type": "integer"
                   }
+                },
+                "children": {
+                  "type": "array",
+                  "x-stoplight": {
+                    "id": "1nu7oml13laut"
+                  },
+                  "items": {
+                    "x-stoplight": {
+                      "id": "odp7x3k9izasz"
+                    },
+                    "type": "object"
+                  }
                 }
               },
               "required": [
                 "id",
-                "parent_id",
                 "code",
                 "title",
                 "year",
-                "positions"
+                "positions",
+                "children"
               ]
             }
           },
