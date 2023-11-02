@@ -3934,9 +3934,9 @@
       }
     },
     "/1.0.0/administrative/gate-entry/my": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-administrative-gate-entry-my",
         "responses": {
           "200": {
             "description": "OK",
@@ -3949,9 +3949,8 @@
             }
           }
         },
-        "operationId": "get-1.0.0-administrative-gate-entry-my",
         "x-stoplight": {
-          "id": "flkrdiao43fwn"
+          "id": "4kfrkd4k2oatt"
         },
         "requestBody": {
           "content": {
