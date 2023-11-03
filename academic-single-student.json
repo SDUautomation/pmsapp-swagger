@@ -1361,13 +1361,15 @@
               }
             }
           },
-          "confirm_statuses": {
+          "confirm_status": {
             "type": "object",
             "required": [
               "id",
-              "title",
-              "reject_message"
+              "title"
             ],
+            "x-stoplight": {
+              "id": "auaos7iiajdp1"
+            },
             "properties": {
               "id": {
                 "type": "number",
@@ -1380,12 +1382,6 @@
                 "x-stoplight": {
                   "id": "2i9060lz0t28r"
                 }
-              },
-              "reject_message": {
-                "type": "string",
-                "x-stoplight": {
-                  "id": "sg4hlsr5qnjpf"
-                }
               }
             }
           }
@@ -1394,7 +1390,7 @@
           "confirmed_courses",
           "temporary_courses",
           "course_registration_status",
-          "confirm_statuses"
+          "confirm_status"
         ]
       },
       "AcademicSingleStudentAttendanceGetRequest": {
