@@ -1,0 +1,1190 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "a9q4rlteyjh76"
+  },
+  "info": {
+    "title": "section-management",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/1.0.0/academic/manage/sections/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              },
+              "application/xml": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionManagementResourceGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-sections-resources",
+        "x-stoplight": {
+          "id": "ti31eh75a8nra"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SectionManagementResourceGetRequest"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SectionManagementResourceGetRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "modules": [
+              "baby"
+            ]
+          }
+        },
+        "properties": {
+          "modules": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "modules"
+        ]
+      },
+      "SectionManagementResourceGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "programs": [
+              {
+                "code": "11104",
+                "year": 2016,
+                "title": "Computing Systems and Software",
+                "cipher": "6M070400",
+                "terms_count": 4,
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 288,
+                  "code": "DEP_COMP_SCI",
+                  "year": 2016,
+                  "title": "Computer Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10106",
+                "year": 2016,
+                "title": "Information Systems",
+                "cipher": "5B070300",
+                "terms_count": 8,
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 894,
+                  "code": "DEP_INF_SYS",
+                  "year": 2016,
+                  "title": "Information Systems"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10104",
+                "year": 2016,
+                "title": "Computing Systems and Software",
+                "cipher": "5B070400",
+                "terms_count": 8,
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 288,
+                  "code": "DEP_COMP_SCI",
+                  "year": 2016,
+                  "title": "Computer Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "11108",
+                "year": 2018,
+                "title": "Mathematics",
+                "cipher": "6M060100",
+                "terms_count": 4,
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 477,
+                  "code": "DEP_MATH",
+                  "year": 2018,
+                  "title": "Department of Mathematics and Natural Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10108",
+                "year": 2018,
+                "title": "Mathematics",
+                "cipher": "5B060100",
+                "terms_count": 8,
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 477,
+                  "code": "DEP_MATH",
+                  "year": 2018,
+                  "title": "Department of Mathematics and Natural Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10111",
+                "year": 2018,
+                "title": "Mathematics",
+                "cipher": "5B060100",
+                "terms_count": 6,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 477,
+                  "code": "DEP_MATH",
+                  "year": 2018,
+                  "title": "Department of Mathematics and Natural Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10113",
+                "year": 2021,
+                "title": "Information Systems",
+                "cipher": "6B06101",
+                "terms_count": 6,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 890,
+                  "code": "DEP_INF_SYS",
+                  "year": 2021,
+                  "title": "Department of Information systems"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10117",
+                "year": 2021,
+                "title": "Computer Science",
+                "cipher": "6B06102",
+                "terms_count": 6,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 770,
+                  "code": "DEP_COMP_SCI",
+                  "year": 2021,
+                  "title": "Department of Computer Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10119",
+                "year": 2021,
+                "title": "Mathematical and Computer Modeling",
+                "cipher": "6B06103",
+                "terms_count": 6,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 827,
+                  "code": "DEP_MATH",
+                  "year": 2021,
+                  "title": "Department of Mathematics and Natural Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10109",
+                "year": 2023,
+                "title": "Mathematical and Computer Modeling",
+                "cipher": "6B06103",
+                "terms_count": 8,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1269,
+                  "code": "DEP_MATH",
+                  "year": 2023,
+                  "title": "Department of Mathematics and Natural Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "11117",
+                "year": 2023,
+                "title": "Data Science",
+                "cipher": "7M06104",
+                "terms_count": 3,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1223,
+                  "code": "DEP_COMP_SCI",
+                  "year": 2023,
+                  "title": "Department of Computer Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "11111",
+                "year": 2023,
+                "title": "Financial Mathematics",
+                "cipher": "7M05402",
+                "terms_count": 3,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1269,
+                  "code": "DEP_MATH",
+                  "year": 2023,
+                  "title": "Department of Mathematics and Natural Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "11101",
+                "year": 2023,
+                "title": "Mathematics",
+                "cipher": "7M05401",
+                "terms_count": 4,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1269,
+                  "code": "DEP_MATH",
+                  "year": 2023,
+                  "title": "Department of Mathematics and Natural Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "12108",
+                "year": 2023,
+                "title": "Mathematics",
+                "cipher": "8D05402",
+                "terms_count": 6,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "DR",
+                  "title": "Doctorate"
+                },
+                "department": {
+                  "id": 1269,
+                  "code": "DEP_MATH",
+                  "year": 2023,
+                  "title": "Department of Mathematics and Natural Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10112",
+                "year": 2023,
+                "title": "Software Engineering",
+                "cipher": "6B06105",
+                "terms_count": 8,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1291,
+                  "code": "DEP_INF_SYS",
+                  "year": 2023,
+                  "title": "Department of Information systems"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10118",
+                "year": 2023,
+                "title": "Software Engineering",
+                "cipher": "6B06105",
+                "terms_count": 8,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1291,
+                  "code": "DEP_INF_SYS",
+                  "year": 2023,
+                  "title": "Department of Information systems"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10120",
+                "year": 2023,
+                "title": "Business information systems",
+                "cipher": "6B06101",
+                "terms_count": 8,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1291,
+                  "code": "DEP_INF_SYS",
+                  "year": 2023,
+                  "title": "Department of Information systems"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "11112",
+                "year": 2023,
+                "title": "Software Engineering",
+                "cipher": "7М06105",
+                "terms_count": 3,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1223,
+                  "code": "DEP_COMP_SCI",
+                  "year": 2023,
+                  "title": "Department of Computer Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "11103",
+                "year": 2023,
+                "title": "Information Systems",
+                "cipher": "7M06101",
+                "terms_count": 4,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1291,
+                  "code": "DEP_INF_SYS",
+                  "year": 2023,
+                  "title": "Department of Information systems"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "12107",
+                "year": 2023,
+                "title": "Computer Science",
+                "cipher": "8D06102",
+                "terms_count": 6,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "DR",
+                  "title": "Doctorate"
+                },
+                "department": {
+                  "id": 1223,
+                  "code": "DEP_COMP_SCI",
+                  "year": 2023,
+                  "title": "Department of Computer Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "11107",
+                "year": 2023,
+                "title": "Computer Science",
+                "cipher": "7M06102",
+                "terms_count": 4,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1223,
+                  "code": "DEP_COMP_SCI",
+                  "year": 2023,
+                  "title": "Department of Computer Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "12101",
+                "year": 2023,
+                "title": "Mathematics",
+                "cipher": "8D05401",
+                "terms_count": 6,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "DR",
+                  "title": "Doctorate"
+                },
+                "department": {
+                  "id": 1269,
+                  "code": "DEP_MATH",
+                  "year": 2023,
+                  "title": "Department of Mathematics and Natural Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10103",
+                "year": 2023,
+                "title": "Information Systems",
+                "cipher": "6B06101",
+                "terms_count": 8,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1291,
+                  "code": "DEP_INF_SYS",
+                  "year": 2023,
+                  "title": "Department of Information systems"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10107",
+                "year": 2023,
+                "title": "Computer Science",
+                "cipher": "6B06102",
+                "terms_count": 8,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1223,
+                  "code": "DEP_COMP_SCI",
+                  "year": 2023,
+                  "title": "Department of Computer Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10101",
+                "year": 2023,
+                "title": "Mathematics",
+                "cipher": "6B05401",
+                "terms_count": 8,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1269,
+                  "code": "DEP_MATH",
+                  "year": 2023,
+                  "title": "Department of Mathematics and Natural Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10183",
+                "year": 2023,
+                "title": "Statistics and Data Science",
+                "cipher": "6B05402",
+                "terms_count": 8,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1269,
+                  "code": "DEP_MATH",
+                  "year": 2023,
+                  "title": "Department of Mathematics and Natural Sciences"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              },
+              {
+                "code": "10110",
+                "year": 2023,
+                "title": "Multimedia Sciences",
+                "cipher": "6B06104",
+                "terms_count": 8,
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1291,
+                  "code": "DEP_INF_SYS",
+                  "year": 2023,
+                  "title": "Department of Information systems"
+                },
+                "faculty": {
+                  "id": 1278,
+                  "code": "F_ENG",
+                  "year": 2023,
+                  "title": "Faculty of Engineering and Natural Sciences"
+                }
+              }
+            ],
+            "departments": [
+              {
+                "id": 1222,
+                "code": "DEP_ECO_BUS",
+                "year": 2023,
+                "title": "Department of Economics and Business"
+              },
+              {
+                "id": 1223,
+                "code": "DEP_COMP_SCI",
+                "year": 2023,
+                "title": "Department of Computer Sciences"
+              },
+              {
+                "id": 1238,
+                "code": "DEP_PED",
+                "year": 2023,
+                "title": "Department of Pedagogy of Natural sciences"
+              },
+              {
+                "id": 1240,
+                "code": "DEP_LANG_EDU",
+                "year": 2023,
+                "title": "Department of Language Education"
+              },
+              {
+                "id": 1241,
+                "code": "10029",
+                "year": 2023,
+                "title": "Continuing Education Center"
+              },
+              {
+                "id": 1269,
+                "code": "DEP_MATH",
+                "year": 2023,
+                "title": "Department of Mathematics and Natural Sciences"
+              },
+              {
+                "id": 1273,
+                "code": "DEP_SOC_SCI",
+                "year": 2023,
+                "title": "Department of Social Sciences"
+              },
+              {
+                "id": 1274,
+                "code": "DEP_JURIS",
+                "year": 2023,
+                "title": "Department of Jurisprudence"
+              },
+              {
+                "id": 1275,
+                "code": "MDE_CENTER",
+                "year": 2023,
+                "title": "Center for Multidisciplinary Education"
+              },
+              {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "year": 2023,
+                "title": "Distance Learning division"
+              },
+              {
+                "id": 1291,
+                "code": "DEP_INF_SYS",
+                "year": 2023,
+                "title": "Department of Information systems"
+              },
+              {
+                "id": 1293,
+                "code": "DEP_HUMANITIES",
+                "year": 2023,
+                "title": "Department of humanities"
+              }
+            ],
+            "request_statuses": [
+              {
+                "id": 1,
+                "status": "New"
+              },
+              {
+                "id": 3,
+                "status": "Rejected"
+              }
+            ],
+            "attendance_types": [
+              {
+                "id": 0,
+                "type": "Not required"
+              },
+              {
+                "id": 1,
+                "type": "First time"
+              },
+              {
+                "id": 2,
+                "type": "Required"
+              }
+            ],
+            "payment_methods": [
+              {
+                "id": 0,
+                "method": "Normal"
+              },
+              {
+                "id": 1,
+                "method": "Paid_Section"
+              },
+              {
+                "id": 2,
+                "method": "Free_Charge"
+              }
+            ],
+            "section_types": [
+              {
+                "id": "N",
+                "type": "Theory"
+              },
+              {
+                "id": "L",
+                "type": "Laboratory"
+              },
+              {
+                "id": "P",
+                "type": "Practice"
+              }
+            ],
+            "implementation_modes": [
+              {
+                "id": 0,
+                "mode": "Normal"
+              },
+              {
+                "id": 1,
+                "mode": "Package_Course"
+              }
+            ]
+          }
+        },
+        "properties": {
+          "programs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "cipher": {
+                  "type": "string"
+                },
+                "terms_count": {
+                  "type": "integer"
+                },
+                "language": {
+                  "type": "object",
+                  "required": [
+                    "code",
+                    "name"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "name": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "education_level": {
+                  "type": "object",
+                  "required": [
+                    "code",
+                    "title"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "department": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "code",
+                    "year",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "year": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "faculty": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "code",
+                    "year",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "year": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "required": [
+                "code",
+                "year",
+                "title",
+                "cipher",
+                "terms_count",
+                "language",
+                "education_level",
+                "department",
+                "faculty"
+              ]
+            }
+          },
+          "departments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "code",
+                "year",
+                "title"
+              ]
+            }
+          },
+          "request_statuses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "status": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "status"
+              ]
+            }
+          },
+          "attendance_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "type"
+              ]
+            }
+          },
+          "payment_methods": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "method": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "method"
+              ]
+            }
+          },
+          "section_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "type"
+              ]
+            }
+          },
+          "implementation_modes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "mode": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "mode"
+              ]
+            }
+          }
+        },
+        "required": [
+          "programs",
+          "departments",
+          "request_statuses",
+          "attendance_types",
+          "payment_methods",
+          "section_types",
+          "implementation_modes"
+        ]
+      }
+    }
+  }
+}
