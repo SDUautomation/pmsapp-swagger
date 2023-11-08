@@ -49,6 +49,37 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/manage/sections/requests": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionManagementRequestGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-sections-requests",
+        "x-stoplight": {
+          "id": "ul13u80rauf2o"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SectionManagementRequestGetRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1184,6 +1215,181 @@
           "section_types",
           "implementation_modes"
         ]
+      },
+      "SectionManagementRequestGetRequest": {
+        "title": "SectionManagementRequestGetRequest",
+        "x-stoplight": {
+          "id": "ljohsc621myse"
+        },
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "x3soxrrf6dglr"
+            }
+          },
+          "program_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "vjauilp6eys04"
+            }
+          },
+          "program_year": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "b7tsyd0yc35kk"
+            }
+          },
+          "term": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "mb77egs9qqwwh"
+            }
+          },
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "5u9g56zzbqhjl"
+            }
+          },
+          "course_year": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "sj8rkh0k7jqvj"
+            }
+          },
+          "status": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "szkh6sozfevxj"
+            }
+          }
+        },
+        "required": [
+          "type"
+        ]
+      },
+      "SectionManagementRequestGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 201,
+              "quota": 80,
+              "met": 65,
+              "create_date": "2022-06-07 15:00:09",
+              "status": 1,
+              "note": "For Management students",
+              "reject_message": "Will be reorginized",
+              "course": {
+                "code": "CSS 216",
+                "year": 2022,
+                "title": "Mobile Programming"
+              },
+              "program": {
+                "code": "10103",
+                "year": 2020,
+                "title": "Information Systems"
+              },
+              "author": {
+                "id": 10559,
+                "full_name": "Bimurat Mukhtar"
+              }
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "quota": {
+              "type": "integer"
+            },
+            "met": {
+              "type": "integer"
+            },
+            "create_date": {
+              "type": "string"
+            },
+            "status": {
+              "type": "integer"
+            },
+            "note": {
+              "type": "string"
+            },
+            "reject_message": {
+              "type": "string"
+            },
+            "course": {
+              "type": "object",
+              "required": [
+                "code",
+                "year",
+                "title"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "program": {
+              "type": "object",
+              "required": [
+                "code",
+                "year",
+                "title"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "author": {
+              "type": "object",
+              "required": [
+                "id",
+                "full_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "full_name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "required": [
+            "id",
+            "quota",
+            "met",
+            "create_date",
+            "status",
+            "note",
+            "reject_message",
+            "course",
+            "program",
+            "author"
+          ]
+        }
       }
     }
   }
