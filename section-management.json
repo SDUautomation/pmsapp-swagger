@@ -80,6 +80,37 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/manage/sections/courses": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionManagementRequestCourseGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-sections-courses",
+        "x-stoplight": {
+          "id": "hpu97zlfz9spb"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SectionManagementRequestCourseGetRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1388,6 +1419,456 @@
             "course",
             "program",
             "author"
+          ]
+        }
+      },
+      "SectionManagementRequestCourseGetRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "request_by": "asdasd",
+            "program_code": "asfasf",
+            "year": 214,
+            "period_number": 124,
+            "course_code": 124124,
+            "title": "asdasd",
+            "track": "asfasf"
+          }
+        },
+        "properties": {
+          "request_by": {
+            "type": "string"
+          },
+          "program_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "period_number": {
+            "type": "integer"
+          },
+          "course_code": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "track": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "request_by"
+        ]
+      },
+      "SectionManagementRequestCourseGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "code": "CSS 507",
+              "year": 2022,
+              "title": "Data Сollection, Wrangling, Analysis and Visualization",
+              "equicode": 20185448,
+              "term": 1,
+              "theory": 2,
+              "practice": "(1 + 0)",
+              "ects": 5,
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": {
+                "id": "TRACK0",
+                "title": "Main Track"
+              },
+              "course_type": {
+                "id": "E",
+                "title": "Elective"
+              },
+              "elective_type": {
+                "id": "AE",
+                "title": "Area elective"
+              },
+              "offers": [
+                {
+                  "id": 121234,
+                  "note": "Can open section for IS, CS students",
+                  "date": "2020-08-05 15:41:51",
+                  "author": {
+                    "id": 10559,
+                    "full_name": "Mukhtar Bimurat"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "N",
+                  "courses": [
+                    {
+                      "code": "INF 138",
+                      "year": 2022,
+                      "title": "Mathematics for Information Systems 2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "code": "MAT 505",
+              "year": 2022,
+              "title": "Quantitative finance",
+              "equicode": 20196592,
+              "term": null,
+              "theory": 2,
+              "practice": "(1 + 0)",
+              "ects": 5,
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": null,
+              "course_type": {
+                "id": "C",
+                "title": "Core"
+              },
+              "elective_type": null,
+              "offers": [],
+              "references": []
+            },
+            {
+              "code": "MAT 506",
+              "year": 2022,
+              "title": "Financial markets and securities",
+              "equicode": 20196593,
+              "term": null,
+              "theory": 2,
+              "practice": "(1 + 0)",
+              "ects": 5,
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": null,
+              "course_type": {
+                "id": "C",
+                "title": "Core"
+              },
+              "elective_type": null,
+              "offers": [],
+              "references": []
+            },
+            {
+              "code": "MAT 508",
+              "year": 2022,
+              "title": "Fixed assets",
+              "equicode": 20196594,
+              "term": null,
+              "theory": 2,
+              "practice": "(1 + 0)",
+              "ects": 5,
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": null,
+              "course_type": {
+                "id": "E",
+                "title": "Elective"
+              },
+              "elective_type": {
+                "id": "AE",
+                "title": "Area elective"
+              },
+              "offers": [],
+              "references": []
+            },
+            {
+              "code": "MAT 513",
+              "year": 2022,
+              "title": "Applied mathematical programming",
+              "equicode": 20185485,
+              "term": 2,
+              "theory": 2,
+              "practice": "(1 + 0)",
+              "ects": 5,
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": null,
+              "course_type": {
+                "id": "C",
+                "title": "Core"
+              },
+              "elective_type": null,
+              "offers": [],
+              "references": []
+            },
+            {
+              "code": "MAT 515",
+              "year": 2022,
+              "title": "Partial differential equations and its applications",
+              "equicode": 20185487,
+              "term": null,
+              "theory": 2,
+              "practice": "(1 + 0)",
+              "ects": 5,
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": null,
+              "course_type": {
+                "id": "C",
+                "title": "Core"
+              },
+              "elective_type": null,
+              "offers": [],
+              "references": []
+            },
+            {
+              "code": "MAT 524",
+              "year": 2022,
+              "title": "Neural networks",
+              "equicode": 20175091,
+              "term": 2,
+              "theory": 2,
+              "practice": "(0 + 1)",
+              "ects": 5,
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": null,
+              "course_type": {
+                "id": "E",
+                "title": "Elective"
+              },
+              "elective_type": {
+                "id": "AE",
+                "title": "Area elective"
+              },
+              "offers": [],
+              "references": []
+            },
+            {
+              "code": "MAT 674",
+              "year": 2022,
+              "title": "Research work for the Master's Degree including an internship and a Master's Thesis 2",
+              "equicode": 20196373,
+              "term": 2,
+              "theory": 0,
+              "practice": "(3 + 0)",
+              "ects": 5,
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": null,
+              "course_type": {
+                "id": "C",
+                "title": "Core"
+              },
+              "elective_type": null,
+              "offers": [],
+              "references": []
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "year": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "equicode": {
+              "type": "integer"
+            },
+            "term": {
+              "type": "integer"
+            },
+            "theory": {
+              "type": "integer"
+            },
+            "practice": {
+              "type": "string"
+            },
+            "ects": {
+              "type": "integer"
+            },
+            "program": {
+              "type": "object",
+              "required": [
+                "code",
+                "year",
+                "title"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "track": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "nullable": true,
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "course_type": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "elective_type": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "nullable": true,
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "offers": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "note": {
+                    "type": "string"
+                  },
+                  "date": {
+                    "type": "string"
+                  },
+                  "author": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "full_name"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "full_name": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "id",
+                  "note",
+                  "date",
+                  "author"
+                ]
+              }
+            },
+            "references": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "courses": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "year": {
+                          "type": "integer"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "code",
+                        "year",
+                        "title"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "type",
+                  "courses"
+                ]
+              }
+            }
+          },
+          "required": [
+            "code",
+            "year",
+            "title",
+            "equicode",
+            "term",
+            "theory",
+            "practice",
+            "ects",
+            "program",
+            "track",
+            "course_type",
+            "elective_type",
+            "offers",
+            "references"
           ]
         }
       }
