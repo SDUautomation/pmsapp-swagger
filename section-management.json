@@ -79,6 +79,28 @@
             }
           }
         }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-sections-requests",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "xqjafltdy4z9u"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SectionManagementRequestPostRequest"
+              }
+            }
+          },
+          "description": ""
+        }
       }
     },
     "/1.0.0/academic/manage/sections/courses": {
@@ -1870,6 +1892,51 @@
             "offers",
             "references"
           ]
+        }
+      },
+      "SectionManagementRequestPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "asd",
+            "course_year": 124124124,
+            "term": 124,
+            "program_code": "sdagasdg",
+            "program_year": 124124,
+            "period_number": 12412,
+            "quota": 124,
+            "curriculum_id": 12,
+            "note": "basfhasfh"
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "course_year": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "program_code": {
+            "type": "string"
+          },
+          "program_year": {
+            "type": "integer"
+          },
+          "period_number": {
+            "type": "integer"
+          },
+          "quota": {
+            "type": "integer"
+          },
+          "curriculum_id": {
+            "type": "integer"
+          },
+          "note": {
+            "type": "string"
+          }
         }
       }
     }
