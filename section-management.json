@@ -133,6 +133,38 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/manage/sections/requests/{request}/quotas": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "request",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionManagementRequestsRequestGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-sections-requests-request-quotas",
+        "x-stoplight": {
+          "id": "kse4ib71y78xt"
+        }
+      }
     }
   },
   "components": {
@@ -1938,6 +1970,137 @@
             "type": "string"
           }
         }
+      },
+      "SectionManagementRequestsRequestGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 201,
+            "total_quota": 20,
+            "registered_count": 5,
+            "reserves_count": 3,
+            "available_quota": 15,
+            "date": "2022-06-07 15:00:09",
+            "program": {
+              "code": "10103",
+              "year": 2020,
+              "title": "Information Systems"
+            },
+            "sections": [
+              {
+                "id": 3241,
+                "title": "01",
+                "type": {
+                  "id": "N",
+                  "title": "Theory"
+                },
+                "instructor": {
+                  "id": 10559,
+                  "full_name": "Mukhtar Bimurat"
+                }
+              }
+            ]
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "total_quota": {
+            "type": "integer"
+          },
+          "registered_count": {
+            "type": "integer"
+          },
+          "reserves_count": {
+            "type": "integer"
+          },
+          "available_quota": {
+            "type": "integer"
+          },
+          "date": {
+            "type": "string"
+          },
+          "program": {
+            "type": "object",
+            "required": [
+              "code",
+              "year",
+              "title"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "year": {
+                "type": "integer"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          },
+          "sections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "instructor": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "full_name"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "full_name": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "title",
+                "type",
+                "instructor"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "total_quota",
+          "registered_count",
+          "reserves_count",
+          "available_quota",
+          "date",
+          "program",
+          "sections"
+        ]
       }
     }
   }
