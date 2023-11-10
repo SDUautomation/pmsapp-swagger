@@ -1550,6 +1550,7 @@
               "title": "Data Сollection, Wrangling, Analysis and Visualization",
               "equicode": 20185448,
               "term": 1,
+              "id": 2,
               "theory": 2,
               "practice": "(1 + 0)",
               "ects": 5,
@@ -1766,6 +1767,12 @@
         "items": {
           "type": "object",
           "properties": {
+            "id": {
+              "type": "integer",
+              "x-stoplight": {
+                "id": "yhnhh2hx2oirv"
+              }
+            },
             "code": {
               "type": "string"
             },
@@ -1873,15 +1880,15 @@
                   "author": {
                     "type": "object",
                     "required": [
-                      "id",
-                      "full_name"
+                      "full_name",
+                      "id"
                     ],
                     "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
                       "full_name": {
                         "type": "string"
+                      },
+                      "id": {
+                        "type": "integer"
                       }
                     }
                   }
@@ -1933,6 +1940,7 @@
             }
           },
           "required": [
+            "id",
             "code",
             "year",
             "title",
