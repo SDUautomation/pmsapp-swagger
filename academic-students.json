@@ -147,6 +147,12 @@
           },
           "offset": {
             "type": "integer"
+          },
+          "iin": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "92dnffqbclnyn"
+            }
           }
         },
         "required": [
