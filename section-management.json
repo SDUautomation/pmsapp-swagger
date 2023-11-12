@@ -23,8 +23,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "object",
-                  "properties": {}
+                  "$ref": "#/components/schemas/SectionManagementResourceGetResponse"
                 }
               },
               "application/xml": {
@@ -220,11 +219,174 @@
           "Example 1": {
             "programs": [
               {
-                "code": "11104",
-                "year": 2016,
-                "title": "Computing Systems and Software",
-                "cipher": "6M070400",
+                "code": "10325",
+                "active_year": 2018,
+                "title": "Journalism",
+                "cipher": "5B050400",
                 "terms_count": 4,
+                "years": [
+                  2016,
+                  2017,
+                  2018
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 481,
+                  "code": "DEP_SOC_SCI",
+                  "year": 2018,
+                  "title": "Department of Social Sciences"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10421",
+                "active_year": 2018,
+                "title": "Jurisprudence",
+                "cipher": "5B030100",
+                "terms_count": 4,
+                "years": [
+                  2016,
+                  2017,
+                  2018
+                ],
+                "language": {
+                  "code": "RU",
+                  "name": "Russian"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 482,
+                  "code": "DEP_JURIS",
+                  "year": 2018,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10412",
+                "active_year": 2018,
+                "title": "History",
+                "cipher": "5B020300",
+                "terms_count": 6,
+                "years": [
+                  2016,
+                  2017,
+                  2018
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 481,
+                  "code": "DEP_SOC_SCI",
+                  "year": 2018,
+                  "title": "Department of Social Sciences"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10220",
+                "active_year": 2018,
+                "title": "International Law",
+                "cipher": "5B030200",
+                "terms_count": 6,
+                "years": [
+                  2016,
+                  2017,
+                  2018
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 482,
+                  "code": "DEP_JURIS",
+                  "year": 2018,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "11403",
+                "active_year": 2018,
+                "title": "Jurisprudence",
+                "cipher": "6M030100",
+                "terms_count": 2,
+                "years": [
+                  2017,
+                  2018
+                ],
+                "language": {
+                  "code": "RU",
+                  "name": "Russian"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 482,
+                  "code": "DEP_JURIS",
+                  "year": 2018,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "11404",
+                "active_year": 2018,
+                "title": "Jurisprudence",
+                "cipher": "6M030100",
+                "terms_count": 2,
+                "years": [
+                  2017,
+                  2018
+                ],
                 "language": {
                   "code": "KZ",
                   "name": "Kazakh"
@@ -234,267 +396,29 @@
                   "title": "Master"
                 },
                 "department": {
-                  "id": 288,
-                  "code": "DEP_COMP_SCI",
-                  "year": 2016,
-                  "title": "Computer Sciences"
-                },
-                "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
-                  "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
-                }
-              },
-              {
-                "code": "10106",
-                "year": 2016,
-                "title": "Information Systems",
-                "cipher": "5B070300",
-                "terms_count": 8,
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 894,
-                  "code": "DEP_INF_SYS",
-                  "year": 2016,
-                  "title": "Information Systems"
-                },
-                "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
-                  "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
-                }
-              },
-              {
-                "code": "10104",
-                "year": 2016,
-                "title": "Computing Systems and Software",
-                "cipher": "5B070400",
-                "terms_count": 8,
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 288,
-                  "code": "DEP_COMP_SCI",
-                  "year": 2016,
-                  "title": "Computer Sciences"
-                },
-                "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
-                  "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
-                }
-              },
-              {
-                "code": "11108",
-                "year": 2018,
-                "title": "Mathematics",
-                "cipher": "6M060100",
-                "terms_count": 4,
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 477,
-                  "code": "DEP_MATH",
+                  "id": 482,
+                  "code": "DEP_JURIS",
                   "year": 2018,
-                  "title": "Department of Mathematics and Natural Sciences"
+                  "title": "Department of Jurisprudence"
                 },
                 "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
+                  "id": 1272,
+                  "code": "F_LAW",
                   "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
+                  "title": "Faculty of Law and Social Sciences"
                 }
               },
               {
-                "code": "10108",
-                "year": 2018,
-                "title": "Mathematics",
-                "cipher": "5B060100",
-                "terms_count": 8,
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 477,
-                  "code": "DEP_MATH",
-                  "year": 2018,
-                  "title": "Department of Mathematics and Natural Sciences"
-                },
-                "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
-                  "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
-                }
-              },
-              {
-                "code": "10111",
-                "year": 2018,
-                "title": "Mathematics",
-                "cipher": "5B060100",
-                "terms_count": 6,
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 477,
-                  "code": "DEP_MATH",
-                  "year": 2018,
-                  "title": "Department of Mathematics and Natural Sciences"
-                },
-                "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
-                  "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
-                }
-              },
-              {
-                "code": "10113",
-                "year": 2021,
-                "title": "Information Systems",
-                "cipher": "6B06101",
-                "terms_count": 6,
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 890,
-                  "code": "DEP_INF_SYS",
-                  "year": 2021,
-                  "title": "Department of Information systems"
-                },
-                "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
-                  "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
-                }
-              },
-              {
-                "code": "10117",
-                "year": 2021,
-                "title": "Computer Science",
-                "cipher": "6B06102",
-                "terms_count": 6,
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 770,
-                  "code": "DEP_COMP_SCI",
-                  "year": 2021,
-                  "title": "Department of Computer Sciences"
-                },
-                "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
-                  "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
-                }
-              },
-              {
-                "code": "10119",
-                "year": 2021,
-                "title": "Mathematical and Computer Modeling",
-                "cipher": "6B06103",
-                "terms_count": 6,
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 827,
-                  "code": "DEP_MATH",
-                  "year": 2021,
-                  "title": "Department of Mathematics and Natural Sciences"
-                },
-                "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
-                  "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
-                }
-              },
-              {
-                "code": "10109",
-                "year": 2023,
-                "title": "Mathematical and Computer Modeling",
-                "cipher": "6B06103",
-                "terms_count": 8,
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1269,
-                  "code": "DEP_MATH",
-                  "year": 2023,
-                  "title": "Department of Mathematics and Natural Sciences"
-                },
-                "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
-                  "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
-                }
-              },
-              {
-                "code": "11117",
-                "year": 2023,
-                "title": "Data Science",
-                "cipher": "7M06104",
+                "code": "11306",
+                "active_year": 2022,
+                "title": "Data Journalism",
+                "cipher": "7M03202",
                 "terms_count": 3,
+                "years": [
+                  2020,
+                  2021,
+                  2022
+                ],
                 "language": {
                   "code": "EN",
                   "name": "English"
@@ -504,105 +428,651 @@
                   "title": "Master"
                 },
                 "department": {
-                  "id": 1223,
-                  "code": "DEP_COMP_SCI",
-                  "year": 2023,
-                  "title": "Department of Computer Sciences"
+                  "id": 1033,
+                  "code": "DEP_SOC_SCI",
+                  "year": 2022,
+                  "title": "Department of Social Sciences"
                 },
                 "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
+                  "id": 1272,
+                  "code": "F_LAW",
                   "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
+                  "title": "Faculty of Law and Social Sciences"
                 }
               },
               {
-                "code": "11111",
-                "year": 2023,
-                "title": "Financial Mathematics",
-                "cipher": "7M05402",
-                "terms_count": 3,
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1269,
-                  "code": "DEP_MATH",
-                  "year": 2023,
-                  "title": "Department of Mathematics and Natural Sciences"
-                },
-                "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
-                  "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
-                }
-              },
-              {
-                "code": "11101",
-                "year": 2023,
-                "title": "Mathematics",
-                "cipher": "7M05401",
-                "terms_count": 4,
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1269,
-                  "code": "DEP_MATH",
-                  "year": 2023,
-                  "title": "Department of Mathematics and Natural Sciences"
-                },
-                "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
-                  "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
-                }
-              },
-              {
-                "code": "12108",
-                "year": 2023,
-                "title": "Mathematics",
-                "cipher": "8D05402",
+                "code": "10315",
+                "active_year": 2021,
+                "title": "Journalism (TV and Multimedia)",
+                "cipher": "6B03201",
                 "terms_count": 6,
+                "years": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 831,
+                  "code": "DEP_SOC_SCI",
+                  "year": 2021,
+                  "title": "Department of Social Sciences"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10415",
+                "active_year": 2021,
+                "title": "International Law",
+                "cipher": "6B04202",
+                "terms_count": 6,
+                "years": [
+                  2020,
+                  2021
+                ],
                 "language": {
                   "code": "EN",
                   "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 832,
+                  "code": "DEP_JURIS",
+                  "year": 2021,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10212",
+                "active_year": 2021,
+                "title": "International Relations ",
+                "cipher": "6B03101",
+                "terms_count": 6,
+                "years": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 831,
+                  "code": "DEP_SOC_SCI",
+                  "year": 2021,
+                  "title": "Department of Social Sciences"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10411",
+                "active_year": 2021,
+                "title": "Applied law",
+                "cipher": "6B04201",
+                "terms_count": 6,
+                "years": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 832,
+                  "code": "DEP_JURIS",
+                  "year": 2021,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10413",
+                "active_year": 2021,
+                "title": "Applied law",
+                "cipher": "6B04201",
+                "terms_count": 6,
+                "years": [
+                  2019,
+                  2020,
+                  2021
+                ],
+                "language": {
+                  "code": "RU",
+                  "name": "Russian"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 832,
+                  "code": "DEP_JURIS",
+                  "year": 2021,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "11305",
+                "active_year": 2022,
+                "title": "Data Journalism",
+                "cipher": "7M03202",
+                "terms_count": 3,
+                "years": [
+                  2020,
+                  2021,
+                  2022
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1033,
+                  "code": "DEP_SOC_SCI",
+                  "year": 2022,
+                  "title": "Department of Social Sciences"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10409",
+                "active_year": 2023,
+                "title": "Regional Studies (Russia: language, diplomacy, culture)",
+                "cipher": "6B03102",
+                "terms_count": 8,
+                "years": [
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1273,
+                  "code": "DEP_SOC_SCI",
+                  "year": 2023,
+                  "title": "Department of Social Sciences"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "11316",
+                "active_year": 2023,
+                "title": "Multimedia Journalism",
+                "cipher": "7M03203",
+                "terms_count": 2,
+                "years": [
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1273,
+                  "code": "DEP_SOC_SCI",
+                  "year": 2023,
+                  "title": "Department of Social Sciences"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "11308",
+                "active_year": 2023,
+                "title": "Media Studies and Journalism",
+                "cipher": "7M03201",
+                "terms_count": 4,
+                "years": [
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1273,
+                  "code": "DEP_SOC_SCI",
+                  "year": 2023,
+                  "title": "Department of Social Sciences"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10441",
+                "active_year": 2023,
+                "title": "Applied law",
+                "cipher": "6B04201",
+                "terms_count": 4,
+                "years": [
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1274,
+                  "code": "DEP_JURIS",
+                  "year": 2023,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10442",
+                "active_year": 2023,
+                "title": "Applied law",
+                "cipher": "6B04201",
+                "terms_count": 4,
+                "years": [
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "RU",
+                  "name": "Russian"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1274,
+                  "code": "DEP_JURIS",
+                  "year": 2023,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10445",
+                "active_year": 2023,
+                "title": "International Law",
+                "cipher": "6B04202",
+                "terms_count": 4,
+                "years": [
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1274,
+                  "code": "DEP_JURIS",
+                  "year": 2023,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10401",
+                "active_year": 2023,
+                "title": "Applied law",
+                "cipher": "6B04201",
+                "terms_count": 8,
+                "years": [
+                  2012,
+                  2013,
+                  2014,
+                  2015,
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1274,
+                  "code": "DEP_JURIS",
+                  "year": 2023,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "11408",
+                "active_year": 2023,
+                "title": "Public Law",
+                "cipher": "7M04203",
+                "terms_count": 4,
+                "years": [
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "RU",
+                  "name": "Russian"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1274,
+                  "code": "DEP_JURIS",
+                  "year": 2023,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10403",
+                "active_year": 2023,
+                "title": "Applied law",
+                "cipher": "6B04201",
+                "terms_count": 8,
+                "years": [
+                  2012,
+                  2013,
+                  2014,
+                  2015,
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "RU",
+                  "name": "Russian"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1274,
+                  "code": "DEP_JURIS",
+                  "year": 2023,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "11407",
+                "active_year": 2023,
+                "title": "Public Law",
+                "cipher": "7M04203",
+                "terms_count": 4,
+                "years": [
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1274,
+                  "code": "DEP_JURIS",
+                  "year": 2023,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "12401",
+                "active_year": 2023,
+                "title": "Applied law",
+                "cipher": "8D04201",
+                "terms_count": 6,
+                "years": [
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
                 },
                 "education_level": {
                   "code": "DR",
                   "title": "Doctorate"
                 },
                 "department": {
-                  "id": 1269,
-                  "code": "DEP_MATH",
+                  "id": 1274,
+                  "code": "DEP_JURIS",
                   "year": 2023,
-                  "title": "Department of Mathematics and Natural Sciences"
+                  "title": "Department of Jurisprudence"
                 },
                 "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
+                  "id": 1272,
+                  "code": "F_LAW",
                   "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
+                  "title": "Faculty of Law and Social Sciences"
                 }
               },
               {
-                "code": "10112",
-                "year": 2023,
-                "title": "Software Engineering",
-                "cipher": "6B06105",
+                "code": "12403",
+                "active_year": 2023,
+                "title": "Applied law",
+                "cipher": "8D04201",
+                "terms_count": 6,
+                "years": [
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "RU",
+                  "name": "Russian"
+                },
+                "education_level": {
+                  "code": "DR",
+                  "title": "Doctorate"
+                },
+                "department": {
+                  "id": 1274,
+                  "code": "DEP_JURIS",
+                  "year": 2023,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10309",
+                "active_year": 2023,
+                "title": "Journalism (TV and Multimedia)",
+                "cipher": "6B03201",
                 "terms_count": 8,
+                "years": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
                 "language": {
                   "code": "EN",
                   "name": "English"
@@ -612,24 +1082,34 @@
                   "title": "Bachelor"
                 },
                 "department": {
-                  "id": 1291,
-                  "code": "DEP_INF_SYS",
+                  "id": 1273,
+                  "code": "DEP_SOC_SCI",
                   "year": 2023,
-                  "title": "Department of Information systems"
+                  "title": "Department of Social Sciences"
                 },
                 "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
+                  "id": 1272,
+                  "code": "F_LAW",
                   "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
+                  "title": "Faculty of Law and Social Sciences"
                 }
               },
               {
-                "code": "10118",
-                "year": 2023,
-                "title": "Software Engineering",
-                "cipher": "6B06105",
+                "code": "10210",
+                "active_year": 2023,
+                "title": "International Law",
+                "cipher": "6B04202",
                 "terms_count": 8,
+                "years": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
                 "language": {
                   "code": "EN",
                   "name": "English"
@@ -639,24 +1119,256 @@
                   "title": "Bachelor"
                 },
                 "department": {
-                  "id": 1291,
-                  "code": "DEP_INF_SYS",
+                  "id": 1274,
+                  "code": "DEP_JURIS",
                   "year": 2023,
-                  "title": "Department of Information systems"
+                  "title": "Department of Jurisprudence"
                 },
                 "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
+                  "id": 1272,
+                  "code": "F_LAW",
                   "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
+                  "title": "Faculty of Law and Social Sciences"
                 }
               },
               {
-                "code": "10120",
-                "year": 2023,
-                "title": "Business information systems",
-                "cipher": "6B06101",
+                "code": "11402",
+                "active_year": 2023,
+                "title": "Private Law",
+                "cipher": "7M04201",
+                "terms_count": 4,
+                "years": [
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "RU",
+                  "name": "Russian"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1274,
+                  "code": "DEP_JURIS",
+                  "year": 2023,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "11401",
+                "active_year": 2023,
+                "title": "Private Law",
+                "cipher": "7M04201",
+                "terms_count": 4,
+                "years": [
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1274,
+                  "code": "DEP_JURIS",
+                  "year": 2023,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "11405",
+                "active_year": 2023,
+                "title": "Information Technology Law",
+                "cipher": "7M04202",
+                "terms_count": 4,
+                "years": [
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "RU",
+                  "name": "Russian"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1274,
+                  "code": "DEP_JURIS",
+                  "year": 2023,
+                  "title": "Department of Jurisprudence"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10402",
+                "active_year": 2023,
+                "title": "History",
+                "cipher": "6B02201",
                 "terms_count": 8,
+                "years": [
+                  2012,
+                  2013,
+                  2014,
+                  2015,
+                  2016,
+                  2017,
+                  2018,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1273,
+                  "code": "DEP_SOC_SCI",
+                  "year": 2023,
+                  "title": "Department of Social Sciences"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "11345",
+                "active_year": 2023,
+                "title": "Data Journalism",
+                "cipher": "7M03204",
+                "terms_count": 4,
+                "years": [
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1273,
+                  "code": "DEP_SOC_SCI",
+                  "year": 2023,
+                  "title": "Department of Social Sciences"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10305",
+                "active_year": 2023,
+                "title": "Journalism (TV and Multimedia)",
+                "cipher": "6B03201",
+                "terms_count": 8,
+                "years": [
+                  2012,
+                  2013,
+                  2014,
+                  2015,
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1273,
+                  "code": "DEP_SOC_SCI",
+                  "year": 2023,
+                  "title": "Department of Social Sciences"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10202",
+                "active_year": 2023,
+                "title": "International Relations ",
+                "cipher": "6B03101",
+                "terms_count": 8,
+                "years": [
+                  2012,
+                  2013,
+                  2014,
+                  2015,
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
                 "language": {
                   "code": "EN",
                   "name": "English"
@@ -666,51 +1378,64 @@
                   "title": "Bachelor"
                 },
                 "department": {
-                  "id": 1291,
-                  "code": "DEP_INF_SYS",
+                  "id": 1273,
+                  "code": "DEP_SOC_SCI",
                   "year": 2023,
-                  "title": "Department of Information systems"
+                  "title": "Department of Social Sciences"
                 },
                 "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
+                  "id": 1272,
+                  "code": "F_LAW",
                   "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
+                  "title": "Faculty of Law and Social Sciences"
                 }
               },
               {
-                "code": "11112",
-                "year": 2023,
-                "title": "Software Engineering",
-                "cipher": "7М06105",
+                "code": "11406",
+                "active_year": 2023,
+                "title": "Information Technology Law",
+                "cipher": "7M04202",
                 "terms_count": 3,
+                "years": [
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
                 "language": {
-                  "code": "EN",
-                  "name": "English"
+                  "code": "RU",
+                  "name": "Russian"
                 },
                 "education_level": {
                   "code": "M",
                   "title": "Master"
                 },
                 "department": {
-                  "id": 1223,
-                  "code": "DEP_COMP_SCI",
+                  "id": 1274,
+                  "code": "DEP_JURIS",
                   "year": 2023,
-                  "title": "Department of Computer Sciences"
+                  "title": "Department of Jurisprudence"
                 },
                 "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
+                  "id": 1272,
+                  "code": "F_LAW",
                   "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
+                  "title": "Faculty of Law and Social Sciences"
                 }
               },
               {
-                "code": "11103",
-                "year": 2023,
-                "title": "Information Systems",
-                "cipher": "7M06101",
+                "code": "11309",
+                "active_year": 2023,
+                "title": "Media Studies and Journalism",
+                "cipher": "7M03201",
                 "terms_count": 4,
+                "years": [
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
                 "language": {
                   "code": "EN",
                   "name": "English"
@@ -720,105 +1445,93 @@
                   "title": "Master"
                 },
                 "department": {
-                  "id": 1291,
-                  "code": "DEP_INF_SYS",
+                  "id": 1273,
+                  "code": "DEP_SOC_SCI",
                   "year": 2023,
-                  "title": "Department of Information systems"
+                  "title": "Department of Social Sciences"
                 },
                 "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
+                  "id": 1272,
+                  "code": "F_LAW",
                   "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
+                  "title": "Faculty of Law and Social Sciences"
                 }
               },
               {
-                "code": "12107",
-                "year": 2023,
-                "title": "Computer Science",
-                "cipher": "8D06102",
-                "terms_count": 6,
+                "code": "11315",
+                "active_year": 2023,
+                "title": "Multimedia Journalism",
+                "cipher": "7M03203",
+                "terms_count": 2,
+                "years": [
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
                 "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "DR",
-                  "title": "Doctorate"
-                },
-                "department": {
-                  "id": 1223,
-                  "code": "DEP_COMP_SCI",
-                  "year": 2023,
-                  "title": "Department of Computer Sciences"
-                },
-                "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
-                  "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
-                }
-              },
-              {
-                "code": "11107",
-                "year": 2023,
-                "title": "Computer Science",
-                "cipher": "7M06102",
-                "terms_count": 4,
-                "language": {
-                  "code": "EN",
-                  "name": "English"
+                  "code": "KZ",
+                  "name": "Kazakh"
                 },
                 "education_level": {
                   "code": "M",
                   "title": "Master"
                 },
                 "department": {
-                  "id": 1223,
-                  "code": "DEP_COMP_SCI",
+                  "id": 1273,
+                  "code": "DEP_SOC_SCI",
                   "year": 2023,
-                  "title": "Department of Computer Sciences"
+                  "title": "Department of Social Sciences"
                 },
                 "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
+                  "id": 1272,
+                  "code": "F_LAW",
                   "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
+                  "title": "Faculty of Law and Social Sciences"
                 }
               },
               {
-                "code": "12101",
-                "year": 2023,
-                "title": "Mathematics",
-                "cipher": "8D05401",
-                "terms_count": 6,
+                "code": "10484",
+                "active_year": 2023,
+                "title": "Law of Public administration",
+                "cipher": "6В04203",
+                "terms_count": 8,
+                "years": [
+                  2021,
+                  2022,
+                  2023
+                ],
                 "language": {
-                  "code": "EN",
-                  "name": "English"
+                  "code": "KZ",
+                  "name": "Kazakh"
                 },
                 "education_level": {
-                  "code": "DR",
-                  "title": "Doctorate"
+                  "code": "B",
+                  "title": "Bachelor"
                 },
                 "department": {
-                  "id": 1269,
-                  "code": "DEP_MATH",
+                  "id": 1274,
+                  "code": "DEP_JURIS",
                   "year": 2023,
-                  "title": "Department of Mathematics and Natural Sciences"
+                  "title": "Department of Jurisprudence"
                 },
                 "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
+                  "id": 1272,
+                  "code": "F_LAW",
                   "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
+                  "title": "Faculty of Law and Social Sciences"
                 }
               },
               {
-                "code": "10103",
-                "year": 2023,
-                "title": "Information Systems",
-                "cipher": "6B06101",
+                "code": "10323",
+                "active_year": 2023,
+                "title": "Journalism and Design",
+                "cipher": "6В03202",
                 "terms_count": 8,
+                "years": [
+                  2022,
+                  2023
+                ],
                 "language": {
                   "code": "EN",
                   "name": "English"
@@ -828,24 +1541,59 @@
                   "title": "Bachelor"
                 },
                 "department": {
-                  "id": 1291,
-                  "code": "DEP_INF_SYS",
+                  "id": 1273,
+                  "code": "DEP_SOC_SCI",
                   "year": 2023,
-                  "title": "Department of Information systems"
+                  "title": "Department of Social Sciences"
                 },
                 "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
+                  "id": 1272,
+                  "code": "F_LAW",
                   "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
+                  "title": "Faculty of Law and Social Sciences"
                 }
               },
               {
-                "code": "10107",
-                "year": 2023,
-                "title": "Computer Science",
-                "cipher": "6B06102",
+                "code": "10326",
+                "active_year": 2023,
+                "title": "Journalism and Design",
+                "cipher": "6В03202",
                 "terms_count": 8,
+                "years": [
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1273,
+                  "code": "DEP_SOC_SCI",
+                  "year": 2023,
+                  "title": "Department of Social Sciences"
+                },
+                "faculty": {
+                  "id": 1272,
+                  "code": "F_LAW",
+                  "year": 2023,
+                  "title": "Faculty of Law and Social Sciences"
+                }
+              },
+              {
+                "code": "10327",
+                "active_year": 2023,
+                "title": "Journalism and Public Communications",
+                "cipher": "6В03203",
+                "terms_count": 8,
+                "years": [
+                  2022,
+                  2023
+                ],
                 "language": {
                   "code": "EN",
                   "name": "English"
@@ -855,97 +1603,47 @@
                   "title": "Bachelor"
                 },
                 "department": {
-                  "id": 1223,
-                  "code": "DEP_COMP_SCI",
+                  "id": 1273,
+                  "code": "DEP_SOC_SCI",
                   "year": 2023,
-                  "title": "Department of Computer Sciences"
+                  "title": "Department of Social Sciences"
                 },
                 "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
+                  "id": 1272,
+                  "code": "F_LAW",
                   "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
+                  "title": "Faculty of Law and Social Sciences"
                 }
               },
               {
-                "code": "10101",
-                "year": 2023,
-                "title": "Mathematics",
-                "cipher": "6B05401",
+                "code": "10328",
+                "active_year": 2023,
+                "title": "Journalism and Public Communications",
+                "cipher": "6В03203",
                 "terms_count": 8,
+                "years": [
+                  2022,
+                  2023
+                ],
                 "language": {
-                  "code": "EN",
-                  "name": "English"
+                  "code": "KZ",
+                  "name": "Kazakh"
                 },
                 "education_level": {
                   "code": "B",
                   "title": "Bachelor"
                 },
                 "department": {
-                  "id": 1269,
-                  "code": "DEP_MATH",
+                  "id": 1273,
+                  "code": "DEP_SOC_SCI",
                   "year": 2023,
-                  "title": "Department of Mathematics and Natural Sciences"
+                  "title": "Department of Social Sciences"
                 },
                 "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
+                  "id": 1272,
+                  "code": "F_LAW",
                   "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
-                }
-              },
-              {
-                "code": "10183",
-                "year": 2023,
-                "title": "Statistics and Data Science",
-                "cipher": "6B05402",
-                "terms_count": 8,
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1269,
-                  "code": "DEP_MATH",
-                  "year": 2023,
-                  "title": "Department of Mathematics and Natural Sciences"
-                },
-                "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
-                  "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
-                }
-              },
-              {
-                "code": "10110",
-                "year": 2023,
-                "title": "Multimedia Sciences",
-                "cipher": "6B06104",
-                "terms_count": 8,
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1291,
-                  "code": "DEP_INF_SYS",
-                  "year": 2023,
-                  "title": "Department of Information systems"
-                },
-                "faculty": {
-                  "id": 1278,
-                  "code": "F_ENG",
-                  "year": 2023,
-                  "title": "Faculty of Engineering and Natural Sciences"
+                  "title": "Faculty of Law and Social Sciences"
                 }
               }
             ],
@@ -1026,11 +1724,15 @@
             "request_statuses": [
               {
                 "id": 1,
-                "status": "New"
+                "title": "New"
+              },
+              {
+                "id": 2,
+                "title": "Met"
               },
               {
                 "id": 3,
-                "status": "Rejected"
+                "title": "Rejected"
               }
             ],
             "attendance_types": [
@@ -1096,7 +1798,7 @@
                 "code": {
                   "type": "string"
                 },
-                "year": {
+                "active_year": {
                   "type": "integer"
                 },
                 "title": {
@@ -1107,6 +1809,12 @@
                 },
                 "terms_count": {
                   "type": "integer"
+                },
+                "years": {
+                  "type": "array",
+                  "items": {
+                    "type": "integer"
+                  }
                 },
                 "language": {
                   "type": "object",
@@ -1187,10 +1895,11 @@
               },
               "required": [
                 "code",
-                "year",
+                "active_year",
                 "title",
                 "cipher",
                 "terms_count",
+                "years",
                 "language",
                 "education_level",
                 "department",
@@ -1233,10 +1942,7 @@
                   "type": "integer"
                 },
                 "title": {
-                  "type": "string",
-                  "x-stoplight": {
-                    "id": "ln2kmkttr2xlx"
-                  }
+                  "type": "string"
                 }
               },
               "required": [
