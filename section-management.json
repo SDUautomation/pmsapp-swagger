@@ -2257,6 +2257,12 @@
           },
           "track": {
             "type": "string"
+          },
+          "course_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "pbwvttaneqtld"
+            }
           }
         },
         "required": [
