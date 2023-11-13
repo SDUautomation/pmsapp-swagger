@@ -2862,6 +2862,16 @@
                     "full_name": "Mukhtar Bimurat"
                   }
                 }
+              ],
+              "reserves": [
+                {
+                  "id": 231,
+                  "date": "2023-08-18 16:57:00",
+                  "student": {
+                    "id": "200103356",
+                    "full_name": "Aibolat Batyrov"
+                  }
+                }
               ]
             }
           ]
@@ -2955,6 +2965,40 @@
                   "instructor"
                 ]
               }
+            },
+            "reserves": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "date": {
+                    "type": "string"
+                  },
+                  "student": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "full_name"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "full_name": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "id",
+                  "date",
+                  "student"
+                ]
+              }
             }
           },
           "required": [
@@ -2965,7 +3009,8 @@
             "available_quota",
             "date",
             "program",
-            "sections"
+            "sections",
+            "reserves"
           ]
         }
       },
