@@ -188,6 +188,107 @@
           "id": "npvk8r0k98ubk"
         }
       }
+    },
+    "/1.0.0/academic/manage/sections/requests/{request}/quotas/{quota}/reserves": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "request",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "quota",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionManagementRequestsQuotasReservesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-sections-requests-request-quotas-quota-reserves",
+        "x-stoplight": {
+          "id": "fxi4wmzryhzpy"
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-sections-requests-request-quotas-quota-reserves",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "1ui1u52sjmxpz"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SectionManagementRequestsQuotasReservesPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/sections/requests/{request}/quotas/{quota}/reserves/{reserve}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "request",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "quota",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "reserve",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-manage-sections-requests-request-quotas-quota-reserves-reserve",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "04ad8qm841zb0"
+        }
+      }
     }
   },
   "components": {
@@ -2867,6 +2968,74 @@
             "sections"
           ]
         }
+      },
+      "SectionManagementRequestsQuotasReservesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 231,
+              "date": "2023-08-18 16:57:00",
+              "student": {
+                "id": "200103356",
+                "full_name": "Aibolat Batyrov"
+              }
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "date": {
+              "type": "string"
+            },
+            "student": {
+              "type": "object",
+              "required": [
+                "id",
+                "full_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "full_name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "required": [
+            "id",
+            "date",
+            "student"
+          ]
+        },
+        "title": ""
+      },
+      "SectionManagementRequestsQuotasReservesPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "students": [
+              "200103356"
+            ]
+          }
+        },
+        "properties": {
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "students"
+        ]
       }
     }
   }
