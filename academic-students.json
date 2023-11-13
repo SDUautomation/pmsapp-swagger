@@ -719,6 +719,12 @@
             "x-stoplight": {
               "id": "7y7vrpx499o0w"
             }
+          },
+          "keyword": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "uj0nqdzl080wm"
+            }
           }
         },
         "required": [
