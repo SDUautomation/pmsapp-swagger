@@ -342,7 +342,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AcademicManageSectionsGetResponse"
+                  "$ref": "#/components/schemas/SectionManagementSectionsGetResponse"
                 }
               }
             }
@@ -356,7 +356,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AcademicManageSectionsGetRequest"
+                "$ref": "#/components/schemas/SectionManagementSectionsGetRequest"
               }
             }
           }
@@ -377,7 +377,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AcademicManageSectionsPostRequest"
+                "$ref": "#/components/schemas/SectionManagementSectionsPostRequest"
               }
             }
           }
@@ -404,7 +404,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AcademicManageSectionsSingleSectionGetResponse"
+                  "$ref": "#/components/schemas/SectionManagementSectionsSingleSectionGetResponse"
                 }
               }
             }
@@ -430,7 +430,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AcademicManageSectionsPostRequest"
+                "$ref": "#/components/schemas/SectionManagementSectionsPostRequest"
               }
             }
           }
@@ -469,7 +469,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AcademicManageSectionsQuotasGetResponse"
+                  "$ref": "#/components/schemas/SectionManagementSectionsQuotasGetResponse"
                 }
               }
             }
@@ -495,7 +495,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AcademicManageSectionsQuotasPostRequest"
+                "$ref": "#/components/schemas/SectionManagementSectionsQuotasPostRequest"
               }
             }
           }
@@ -568,7 +568,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AcademicManageRequestsQuotasPutRequest"
+                "$ref": "#/components/schemas/SectionManagementRequestsQuotasPutRequest"
               }
             }
           }
@@ -3310,7 +3310,7 @@
           "students"
         ]
       },
-      "AcademicManageSectionsGetRequest": {
+      "SectionManagementSectionsGetRequest": {
         "title": "AcademicManageSectionsGetRequest",
         "x-stoplight": {
           "id": "5bqk6vmrpry2l"
@@ -3342,8 +3342,11 @@
           "term"
         ]
       },
-      "AcademicManageSectionsGetResponse": {
+      "SectionManagementSectionsGetResponse": {
         "type": "array",
+        "x-stoplight": {
+          "id": "1f3a57004f038"
+        },
         "x-examples": {
           "Example 1": [
             {
@@ -3493,8 +3496,11 @@
           ]
         }
       },
-      "AcademicManageSectionsPostRequest": {
+      "SectionManagementSectionsPostRequest": {
         "type": "object",
+        "x-stoplight": {
+          "id": "c43fd82efb139"
+        },
         "x-examples": {
           "Example 1": {
             "course_code": "CSS 216",
@@ -3559,8 +3565,11 @@
           "weeks_count"
         ]
       },
-      "AcademicManageSectionsSingleSectionGetResponse": {
+      "SectionManagementSectionsSingleSectionGetResponse": {
         "type": "object",
+        "x-stoplight": {
+          "id": "1048e4b41b67d"
+        },
         "x-examples": {
           "Example 1": {
             "id": 45879,
@@ -3755,7 +3764,7 @@
           "payment_method"
         ]
       },
-      "AcademicManageSectionsQuotasGetResponse": {
+      "SectionManagementSectionsQuotasGetResponse": {
         "type": "array",
         "x-stoplight": {
           "id": "4ad28d45ba206"
@@ -3839,7 +3848,7 @@
           ]
         }
       },
-      "AcademicManageSectionsQuotasPostRequest": {
+      "SectionManagementSectionsQuotasPostRequest": {
         "type": "object",
         "x-stoplight": {
           "id": "9e0ad99912d4a"
@@ -3909,7 +3918,7 @@
           "quota"
         ]
       },
-      "AcademicManageRequestsQuotasPutRequest": {
+      "SectionManagementRequestsQuotasPutRequest": {
         "title": "AcademicManageRequestsQuotasPutRequest",
         "x-stoplight": {
           "id": "zl00kqdqfa8tg"
