@@ -153,7 +153,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/SectionManagementRequestsRequestGetResponse"
+                  "$ref": "#/components/schemas/SectionManagementRequestsQuotasGetResponse"
                 }
               }
             }
@@ -162,6 +162,27 @@
         "operationId": "get-1.0.0-academic-manage-sections-requests-request-quotas",
         "x-stoplight": {
           "id": "kse4ib71y78xt"
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-sections-requests-request-quotas",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "sq1p0078k2ld3"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SectionManagementRequestsQuotasPostRequest"
+              }
+            }
+          }
         }
       }
     },
@@ -186,6 +207,27 @@
         },
         "x-stoplight": {
           "id": "npvk8r0k98ubk"
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-manage-sections-requests-request",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "bx6ix72wfqzhx"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SectionManagementRequestPostRequest"
+              }
+            }
+          }
         }
       }
     },
@@ -287,6 +329,261 @@
         },
         "x-stoplight": {
           "id": "04ad8qm841zb0"
+        }
+      }
+    },
+    "/1.0.0/academic/manage/sections": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSectionsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-sections",
+        "x-stoplight": {
+          "id": "gt5s4q4szxmly"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSectionsGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-sections",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "jeet5uhs7qtzb"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSectionsPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/sections/{section}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "section",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSectionsSingleSectionGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-sections-section",
+        "x-stoplight": {
+          "id": "pqh2s6ag37jtv"
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-manage-sections-section",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "1aq5uca33ffw5"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSectionsPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-manage-sections-section",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "sba2zk043r1k1"
+        }
+      }
+    },
+    "/1.0.0/academic/manage/sections/{section}/quotas": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "section",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageSectionsQuotasGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-sections-section-quotas",
+        "x-stoplight": {
+          "id": "glhwcrdj9km7h"
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-sections-section-quotas",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "mzmpk1hu1hysp"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSectionsQuotasPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/sections/{section}/quotas/{quota}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "section",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "quota",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-manage-sections-section-quotas-quota",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "rd3cd9kkv6nau"
+        }
+      }
+    },
+    "/1.0.0/academic/manage/sections/requests/{request}/quotas/{quota}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "request",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "quota",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-manage-sections-requests-request-quotas-quota",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "zb98jndmqysn7"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageRequestsQuotasPutRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-manage-sections-requests-request-quotas-quota",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "c68a22c9una2w"
         }
       }
     }
@@ -2235,6 +2532,10 @@
             },
             "status": {
               "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
               "properties": {
                 "id": {
                   "type": "integer",
@@ -2363,6 +2664,24 @@
             "type": "string",
             "x-stoplight": {
               "id": "pbwvttaneqtld"
+            }
+          },
+          "program_year": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "ww4yegvvipwma"
+            }
+          },
+          "department_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "disj0c0c5lymt"
+            }
+          },
+          "term": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "9u0fnwapv5g0h"
             }
           }
         },
@@ -2792,15 +3111,17 @@
         "type": "object",
         "x-examples": {
           "Example 1": {
-            "course_code": "asd",
-            "course_year": 124124124,
-            "term": 124,
-            "program_code": "sdagasdg",
-            "program_year": 124124,
-            "period_number": 12412,
-            "quota": 124,
-            "curriculum_id": 12,
-            "note": "basfhasfh"
+            "course_code": "CSS 216",
+            "course_year": 2022,
+            "term": 1,
+            "program_code": "10103",
+            "program_year": 2020,
+            "period_number": 5,
+            "quota": 80,
+            "curriculum_id": 105632,
+            "note": "For IS Students",
+            "status": 1,
+            "reject_message": "Request is invalid"
           }
         },
         "properties": {
@@ -2830,11 +3151,20 @@
           },
           "note": {
             "type": "string"
+          },
+          "status": {
+            "type": "integer"
+          },
+          "reject_message": {
+            "type": "string"
           }
         }
       },
-      "SectionManagementRequestsRequestGetResponse": {
+      "SectionManagementRequestsQuotasGetResponse": {
         "type": "array",
+        "x-stoplight": {
+          "id": "bfc0badf42ba1"
+        },
         "x-examples": {
           "Example 1": [
             {
@@ -3080,6 +3410,623 @@
         },
         "required": [
           "students"
+        ]
+      },
+      "AcademicManageSectionsGetRequest": {
+        "title": "AcademicManageSectionsGetRequest",
+        "x-stoplight": {
+          "id": "5bqk6vmrpry2l"
+        },
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "6ejmqb47w6q0a"
+            }
+          },
+          "year": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "3fj7ekvfxf30r"
+            }
+          },
+          "term": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "btczgmf7kbf14"
+            }
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "term"
+        ]
+      },
+      "AcademicManageSectionsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 45879,
+              "section": "01",
+              "name": "01-N",
+              "note": "For IS students",
+              "weeks_count": 15,
+              "type": {
+                "id": "N",
+                "title": "Theory"
+              },
+              "course": {
+                "code": "CSS 216",
+                "year": 2023,
+                "title": "Mobile Programming"
+              },
+              "program": {
+                "code": "10103",
+                "year": 2020,
+                "title": "Information Systems"
+              },
+              "instructor": {
+                "id": 10559,
+                "full_name": "Mukhtar Bimurat"
+              },
+              "grade_submitter": {
+                "id": 10559,
+                "full_name": "Mukhtar Bimurat"
+              }
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "section": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "weeks_count": {
+              "type": "integer"
+            },
+            "type": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "course": {
+              "type": "object",
+              "required": [
+                "code",
+                "year",
+                "title"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "program": {
+              "type": "object",
+              "required": [
+                "code",
+                "year",
+                "title"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "instructor": {
+              "type": "object",
+              "required": [
+                "id",
+                "full_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "full_name": {
+                  "type": "string"
+                }
+              }
+            },
+            "grade_submitter": {
+              "type": "object",
+              "required": [
+                "id",
+                "full_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "full_name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "required": [
+            "id",
+            "section",
+            "name",
+            "note",
+            "weeks_count",
+            "type",
+            "course",
+            "program",
+            "instructor",
+            "grade_submitter"
+          ]
+        }
+      },
+      "AcademicManageSectionsPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 216",
+            "year": 2022,
+            "term": 1,
+            "section_type": "N",
+            "instructor_id": 10559,
+            "grade_submitter_id": 10559,
+            "message": "For IS students",
+            "implementation_mode": 0,
+            "payment_method": 0,
+            "attend_type": 2,
+            "weeks_count": 15
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "section_type": {
+            "type": "string"
+          },
+          "instructor_id": {
+            "type": "integer"
+          },
+          "grade_submitter_id": {
+            "type": "integer"
+          },
+          "message": {
+            "type": "string"
+          },
+          "implementation_mode": {
+            "type": "integer"
+          },
+          "payment_method": {
+            "type": "integer"
+          },
+          "attend_type": {
+            "type": "integer"
+          },
+          "weeks_count": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "term",
+          "section_type",
+          "instructor_id",
+          "grade_submitter_id",
+          "message",
+          "implementation_mode",
+          "payment_method",
+          "attend_type",
+          "weeks_count"
+        ]
+      },
+      "AcademicManageSectionsSingleSectionGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 45879,
+            "section": "01",
+            "term": 1,
+            "name": "01-N",
+            "note": "For IS students",
+            "weeks_count": 15,
+            "credits": 5,
+            "last_modified": "15:08, 02 Aug 2023",
+            "type": {
+              "id": "N",
+              "title": "Theory"
+            },
+            "course": {
+              "code": "CSS 216",
+              "year": 2023,
+              "title": "Mobile Programming"
+            },
+            "instructor": {
+              "id": 10559,
+              "full_name": "Mukhtar Bimurat"
+            },
+            "grade_submitter": {
+              "id": 10559,
+              "full_name": "Mukhtar Bimurat"
+            },
+            "attendance_type": {
+              "id": 2,
+              "type": "Required"
+            },
+            "implementation_mode": {
+              "id": 0,
+              "mode": "Normal"
+            },
+            "payment_method": {
+              "id": 0,
+              "method": "Normal"
+            }
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "section": {
+            "type": "string"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          },
+          "weeks_count": {
+            "type": "integer"
+          },
+          "credits": {
+            "type": "integer"
+          },
+          "last_modified": {
+            "type": "string"
+          },
+          "type": {
+            "type": "object",
+            "required": [
+              "id",
+              "title"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          },
+          "course": {
+            "type": "object",
+            "required": [
+              "code",
+              "year",
+              "title"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "year": {
+                "type": "integer"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          },
+          "instructor": {
+            "type": "object",
+            "required": [
+              "id",
+              "full_name"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "full_name": {
+                "type": "string"
+              }
+            }
+          },
+          "grade_submitter": {
+            "type": "object",
+            "required": [
+              "id",
+              "full_name"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "full_name": {
+                "type": "string"
+              }
+            }
+          },
+          "attendance_type": {
+            "type": "object",
+            "required": [
+              "id",
+              "type"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          },
+          "implementation_mode": {
+            "type": "object",
+            "required": [
+              "id",
+              "mode"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "mode": {
+                "type": "string"
+              }
+            }
+          },
+          "payment_method": {
+            "type": "object",
+            "required": [
+              "id",
+              "method"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "method": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "id",
+          "section",
+          "term",
+          "name",
+          "note",
+          "weeks_count",
+          "credits",
+          "last_modified",
+          "type",
+          "course",
+          "instructor",
+          "grade_submitter",
+          "attendance_type",
+          "implementation_mode",
+          "payment_method"
+        ]
+      },
+      "AcademicManageSectionsQuotasGetResponse": {
+        "type": "array",
+        "x-stoplight": {
+          "id": "4ad28d45ba206"
+        },
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 45879,
+              "quota": 20,
+              "date": "2023-09-22 13:23:00",
+              "program": {
+                "code": "10103",
+                "year": 2020,
+                "title": "Information Systems"
+              },
+              "reserved_program": {
+                "code": "10103",
+                "year": 2020,
+                "title": "Information Systems"
+              }
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "quota": {
+              "type": "integer"
+            },
+            "date": {
+              "type": "string"
+            },
+            "program": {
+              "type": "object",
+              "required": [
+                "code",
+                "year",
+                "title"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "reserved_program": {
+              "type": "object",
+              "required": [
+                "code",
+                "year",
+                "title"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "required": [
+            "id",
+            "quota",
+            "date",
+            "program",
+            "reserved_program"
+          ]
+        }
+      },
+      "AcademicManageSectionsQuotasPostRequest": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "9e0ad99912d4a"
+        },
+        "x-examples": {
+          "Example 1": {
+            "program_code": "10103",
+            "theory_section": 50222,
+            "practice_section": 50322,
+            "lab_section": 50432,
+            "quota": 25
+          }
+        },
+        "properties": {
+          "program_code": {
+            "type": "string"
+          },
+          "theory_section": {
+            "type": "integer"
+          },
+          "practice_section": {
+            "type": "integer"
+          },
+          "lab_section": {
+            "type": "integer"
+          },
+          "quota": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "program_code",
+          "theory_section",
+          "practice_section",
+          "lab_section",
+          "quota"
+        ]
+      },
+      "SectionManagementRequestsQuotasPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "theory_section_id": 22133,
+            "practice_section_id": 22311,
+            "lab_section_id": 111144,
+            "quota": 80
+          }
+        },
+        "properties": {
+          "theory_section_id": {
+            "type": "integer"
+          },
+          "practice_section_id": {
+            "type": "integer"
+          },
+          "lab_section_id": {
+            "type": "integer"
+          },
+          "quota": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "theory_section_id",
+          "practice_section_id",
+          "lab_section_id",
+          "quota"
+        ]
+      },
+      "AcademicManageRequestsQuotasPutRequest": {
+        "title": "AcademicManageRequestsQuotasPutRequest",
+        "x-stoplight": {
+          "id": "zl00kqdqfa8tg"
+        },
+        "type": "object",
+        "properties": {
+          "quota": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "d68d9fhw0j1gk"
+            }
+          }
+        },
+        "required": [
+          "quota"
         ]
       }
     }
