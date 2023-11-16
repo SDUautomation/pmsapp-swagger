@@ -605,10 +605,24 @@
             "items": {
               "type": "string"
             }
+          },
+          "year": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "tug1msyyd4hr5"
+            }
+          },
+          "term": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "kqcb2lit48fma"
+            }
           }
         },
         "required": [
-          "modules"
+          "modules",
+          "year",
+          "term"
         ]
       },
       "SectionManagementResourceGetResponse": {
@@ -617,636 +631,393 @@
           "Example 1": {
             "programs": [
               {
-                "code": "10325",
-                "active_year": 2018,
-                "title": "Journalism",
-                "cipher": "5B050400",
-                "terms_count": 4,
-                "years": [
-                  2016,
-                  2017,
-                  2018
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 481,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2018,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10421",
-                "active_year": 2018,
-                "title": "Jurisprudence",
-                "cipher": "5B030100",
-                "terms_count": 4,
-                "years": [
-                  2016,
-                  2017,
-                  2018
-                ],
-                "language": {
-                  "code": "RU",
-                  "name": "Russian"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 482,
-                  "code": "DEP_JURIS",
-                  "year": 2018,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10412",
-                "active_year": 2018,
-                "title": "History",
-                "cipher": "5B020300",
-                "terms_count": 6,
-                "years": [
-                  2016,
-                  2017,
-                  2018
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 481,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2018,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10220",
-                "active_year": 2018,
-                "title": "International Law",
-                "cipher": "5B030200",
-                "terms_count": 6,
-                "years": [
-                  2016,
-                  2017,
-                  2018
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 482,
-                  "code": "DEP_JURIS",
-                  "year": 2018,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "11403",
-                "active_year": 2018,
-                "title": "Jurisprudence",
-                "cipher": "6M030100",
-                "terms_count": 2,
-                "years": [
-                  2017,
-                  2018
-                ],
-                "language": {
-                  "code": "RU",
-                  "name": "Russian"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 482,
-                  "code": "DEP_JURIS",
-                  "year": 2018,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "11404",
-                "active_year": 2018,
-                "title": "Jurisprudence",
-                "cipher": "6M030100",
-                "terms_count": 2,
-                "years": [
-                  2017,
-                  2018
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 482,
-                  "code": "DEP_JURIS",
-                  "year": 2018,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "11306",
-                "active_year": 2022,
-                "title": "Data Journalism",
-                "cipher": "7M03202",
-                "terms_count": 3,
-                "years": [
-                  2020,
-                  2021,
-                  2022
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1033,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2022,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10315",
-                "active_year": 2021,
-                "title": "Journalism (TV and Multimedia)",
-                "cipher": "6B03201",
-                "terms_count": 6,
-                "years": [
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 831,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2021,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10415",
-                "active_year": 2021,
-                "title": "International Law",
-                "cipher": "6B04202",
-                "terms_count": 6,
-                "years": [
-                  2020,
-                  2021
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 832,
-                  "code": "DEP_JURIS",
-                  "year": 2021,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10212",
-                "active_year": 2021,
-                "title": "International Relations ",
-                "cipher": "6B03101",
-                "terms_count": 6,
-                "years": [
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 831,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2021,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10411",
-                "active_year": 2021,
-                "title": "Applied law",
-                "cipher": "6B04201",
-                "terms_count": 6,
-                "years": [
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 832,
-                  "code": "DEP_JURIS",
-                  "year": 2021,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10413",
-                "active_year": 2021,
-                "title": "Applied law",
-                "cipher": "6B04201",
-                "terms_count": 6,
-                "years": [
-                  2019,
-                  2020,
-                  2021
-                ],
-                "language": {
-                  "code": "RU",
-                  "name": "Russian"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 832,
-                  "code": "DEP_JURIS",
-                  "year": 2021,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "11305",
-                "active_year": 2022,
-                "title": "Data Journalism",
-                "cipher": "7M03202",
-                "terms_count": 3,
-                "years": [
-                  2020,
-                  2021,
-                  2022
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1033,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2022,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10409",
-                "active_year": 2023,
-                "title": "Regional Studies (Russia: language, diplomacy, culture)",
-                "cipher": "6B03102",
-                "terms_count": 8,
-                "years": [
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1273,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2023,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "11316",
-                "active_year": 2023,
-                "title": "Multimedia Journalism",
-                "cipher": "7M03203",
-                "terms_count": 2,
-                "years": [
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1273,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2023,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "11308",
-                "active_year": 2023,
-                "title": "Media Studies and Journalism",
-                "cipher": "7M03201",
-                "terms_count": 4,
-                "years": [
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1273,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2023,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10441",
-                "active_year": 2023,
-                "title": "Applied law",
-                "cipher": "6B04201",
-                "terms_count": 4,
-                "years": [
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1274,
-                  "code": "DEP_JURIS",
-                  "year": 2023,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10442",
-                "active_year": 2023,
-                "title": "Applied law",
-                "cipher": "6B04201",
-                "terms_count": 4,
-                "years": [
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "RU",
-                  "name": "Russian"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1274,
-                  "code": "DEP_JURIS",
-                  "year": 2023,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10445",
-                "active_year": 2023,
-                "title": "International Law",
-                "cipher": "6B04202",
-                "terms_count": 4,
-                "years": [
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1274,
-                  "code": "DEP_JURIS",
-                  "year": 2023,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10401",
-                "active_year": 2023,
-                "title": "Applied law",
-                "cipher": "6B04201",
+                "code": "10206",
+                "active_year": 2016,
+                "title": "Finance ",
+                "cipher": "5B050900",
                 "terms_count": 8,
                 "years": [
                   2012,
                   2013,
                   2014,
+                  2015,
+                  2016
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 285,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2016,
+                  "title": "Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "10209",
+                "active_year": 2016,
+                "title": "Finance ",
+                "cipher": "5B050900",
+                "terms_count": 8,
+                "years": [
+                  2014,
+                  2015,
+                  2016
+                ],
+                "language": {
+                  "code": "RU",
+                  "name": "Russian"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 285,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2016,
+                  "title": "Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "10208",
+                "active_year": 2016,
+                "title": "Accounting and Audit ",
+                "cipher": "5B050800",
+                "terms_count": 8,
+                "years": [
+                  2012,
+                  2013,
+                  2014,
+                  2015,
+                  2016
+                ],
+                "language": {
+                  "code": "KZ",
+                  "name": "Kazakh"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 285,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2016,
+                  "title": "Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "10215",
+                "active_year": 2021,
+                "title": "Economics ",
+                "cipher": "6B04101",
+                "terms_count": 6,
+                "years": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 769,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2021,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "10214",
+                "active_year": 2021,
+                "title": "Finance ",
+                "cipher": "6B04104",
+                "terms_count": 6,
+                "years": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 769,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2021,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "10217",
+                "active_year": 2021,
+                "title": "Accounting and Audit ",
+                "cipher": "6B04103",
+                "terms_count": 6,
+                "years": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 769,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2021,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "10213",
+                "active_year": 2021,
+                "title": "Management ",
+                "cipher": "6B04102",
+                "terms_count": 6,
+                "years": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 769,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2021,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "10211",
+                "active_year": 2021,
+                "title": "Digital Marketing",
+                "cipher": "6B04105",
+                "terms_count": 6,
+                "years": [
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 769,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2021,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "11216",
+                "active_year": 2023,
+                "title": "Financial Technology",
+                "cipher": "7M04106",
+                "terms_count": 3,
+                "years": [
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2023,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "11213",
+                "active_year": 2023,
+                "title": "Management",
+                "cipher": "7M04102",
+                "terms_count": 2,
+                "years": [
                   2015,
                   2016,
                   2017,
@@ -1258,71 +1029,199 @@
                   2023
                 ],
                 "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1274,
-                  "code": "DEP_JURIS",
-                  "year": 2023,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "11408",
-                "active_year": 2023,
-                "title": "Public Law",
-                "cipher": "7M04203",
-                "terms_count": 4,
-                "years": [
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "RU",
-                  "name": "Russian"
+                  "code": "EN",
+                  "name": "English"
                 },
                 "education_level": {
                   "code": "M",
                   "title": "Master"
                 },
                 "department": {
-                  "id": 1274,
-                  "code": "DEP_JURIS",
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
                   "year": 2023,
-                  "title": "Department of Jurisprudence"
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 },
                 "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
+                  "id": 1270,
+                  "code": "F_ECO",
                   "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 }
               },
               {
-                "code": "10403",
+                "code": "11223",
                 "active_year": 2023,
-                "title": "Applied law",
-                "cipher": "6B04201",
-                "terms_count": 8,
+                "title": "Economics and Business Analytics",
+                "cipher": "7M04110",
+                "terms_count": 4,
+                "years": [
+                  2023
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2023,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "11219",
+                "active_year": 2023,
+                "title": "Project Management",
+                "cipher": "7M04109",
+                "terms_count": 4,
+                "years": [
+                  2023
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2023,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "11243",
+                "active_year": 2023,
+                "title": "Economics and Data Analysis",
+                "cipher": "7M04103",
+                "terms_count": 4,
+                "years": [
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2023,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "11205",
+                "active_year": 2023,
+                "title": "Digital Transformation Management",
+                "cipher": "7M04108",
+                "terms_count": 2,
+                "years": [
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2023,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "12203",
+                "active_year": 2023,
+                "title": "Management",
+                "cipher": "8D04101",
+                "terms_count": 6,
                 "years": [
                   2012,
                   2013,
-                  2014,
-                  2015,
                   2016,
                   2017,
                   2018,
@@ -1333,135 +1232,44 @@
                   2023
                 ],
                 "language": {
-                  "code": "RU",
-                  "name": "Russian"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1274,
-                  "code": "DEP_JURIS",
-                  "year": 2023,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "11407",
-                "active_year": 2023,
-                "title": "Public Law",
-                "cipher": "7M04203",
-                "terms_count": 4,
-                "years": [
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1274,
-                  "code": "DEP_JURIS",
-                  "year": 2023,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "12401",
-                "active_year": 2023,
-                "title": "Applied law",
-                "cipher": "8D04201",
-                "terms_count": 6,
-                "years": [
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
+                  "code": "EN",
+                  "name": "English"
                 },
                 "education_level": {
                   "code": "DR",
                   "title": "Doctorate"
                 },
                 "department": {
-                  "id": 1274,
-                  "code": "DEP_JURIS",
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
                   "year": 2023,
-                  "title": "Department of Jurisprudence"
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 },
                 "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
+                  "id": 1270,
+                  "code": "F_ECO",
                   "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 }
               },
               {
-                "code": "12403",
+                "code": "11202",
                 "active_year": 2023,
-                "title": "Applied law",
-                "cipher": "8D04201",
-                "terms_count": 6,
+                "title": "Economics ",
+                "cipher": "7M04101",
+                "terms_count": 4,
                 "years": [
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "RU",
-                  "name": "Russian"
-                },
-                "education_level": {
-                  "code": "DR",
-                  "title": "Doctorate"
-                },
-                "department": {
-                  "id": 1274,
-                  "code": "DEP_JURIS",
-                  "year": 2023,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10309",
-                "active_year": 2023,
-                "title": "Journalism (TV and Multimedia)",
-                "cipher": "6B03201",
-                "terms_count": 8,
-                "years": [
+                  2012,
+                  2014,
+                  2015,
                   2016,
                   2017,
                   2018,
@@ -1476,282 +1284,35 @@
                   "name": "English"
                 },
                 "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1273,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2023,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10210",
-                "active_year": 2023,
-                "title": "International Law",
-                "cipher": "6B04202",
-                "terms_count": 8,
-                "years": [
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1274,
-                  "code": "DEP_JURIS",
-                  "year": 2023,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "11402",
-                "active_year": 2023,
-                "title": "Private Law",
-                "cipher": "7M04201",
-                "terms_count": 4,
-                "years": [
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "RU",
-                  "name": "Russian"
-                },
-                "education_level": {
                   "code": "M",
                   "title": "Master"
                 },
                 "department": {
-                  "id": 1274,
-                  "code": "DEP_JURIS",
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
                   "year": 2023,
-                  "title": "Department of Jurisprudence"
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 },
                 "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
+                  "id": 1270,
+                  "code": "F_ECO",
                   "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 }
               },
               {
-                "code": "11401",
+                "code": "10205",
                 "active_year": 2023,
-                "title": "Private Law",
-                "cipher": "7M04201",
-                "terms_count": 4,
-                "years": [
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1274,
-                  "code": "DEP_JURIS",
-                  "year": 2023,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "11405",
-                "active_year": 2023,
-                "title": "Information Technology Law",
-                "cipher": "7M04202",
-                "terms_count": 4,
-                "years": [
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "RU",
-                  "name": "Russian"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1274,
-                  "code": "DEP_JURIS",
-                  "year": 2023,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10402",
-                "active_year": 2023,
-                "title": "History",
-                "cipher": "6B02201",
-                "terms_count": 8,
-                "years": [
-                  2012,
-                  2013,
-                  2014,
-                  2015,
-                  2016,
-                  2017,
-                  2018,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1273,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2023,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "11345",
-                "active_year": 2023,
-                "title": "Data Journalism",
-                "cipher": "7M03204",
-                "terms_count": 4,
-                "years": [
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1273,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2023,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10305",
-                "active_year": 2023,
-                "title": "Journalism (TV and Multimedia)",
-                "cipher": "6B03201",
-                "terms_count": 8,
-                "years": [
-                  2012,
-                  2013,
-                  2014,
-                  2015,
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1273,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2023,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10202",
-                "active_year": 2023,
-                "title": "International Relations ",
-                "cipher": "6B03101",
+                "title": "Economics ",
+                "cipher": "6B04101",
                 "terms_count": 8,
                 "years": [
                   2012,
@@ -1776,93 +1337,364 @@
                   "title": "Bachelor"
                 },
                 "department": {
-                  "id": 1273,
-                  "code": "DEP_SOC_SCI",
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
                   "year": 2023,
-                  "title": "Department of Social Sciences"
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 },
                 "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
+                  "id": 1270,
+                  "code": "F_ECO",
                   "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 }
               },
               {
-                "code": "11406",
+                "code": "11201",
                 "active_year": 2023,
-                "title": "Information Technology Law",
-                "cipher": "7M04202",
-                "terms_count": 3,
-                "years": [
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "RU",
-                  "name": "Russian"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1274,
-                  "code": "DEP_JURIS",
-                  "year": 2023,
-                  "title": "Department of Jurisprudence"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "11309",
-                "active_year": 2023,
-                "title": "Media Studies and Journalism",
-                "cipher": "7M03201",
-                "terms_count": 4,
-                "years": [
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1273,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2023,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "11315",
-                "active_year": 2023,
-                "title": "Multimedia Journalism",
-                "cipher": "7M03203",
+                "title": "Economics ",
+                "cipher": "7M04101",
                 "terms_count": 2,
                 "years": [
+                  2015,
+                  2016,
+                  2017,
+                  2018,
+                  2019,
                   2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2023,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "10204",
+                "active_year": 2023,
+                "title": "Finance ",
+                "cipher": "6B04104",
+                "terms_count": 8,
+                "years": [
+                  2012,
+                  2013,
+                  2014,
+                  2015,
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2023,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "10207",
+                "active_year": 2023,
+                "title": "Accounting and Audit ",
+                "cipher": "6B04103",
+                "terms_count": 8,
+                "years": [
+                  2012,
+                  2013,
+                  2014,
+                  2015,
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2023,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "10203",
+                "active_year": 2023,
+                "title": "Management ",
+                "cipher": "6B04102",
+                "terms_count": 8,
+                "years": [
+                  2012,
+                  2013,
+                  2014,
+                  2015,
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2023,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "10224",
+                "active_year": 2023,
+                "title": "Finance ",
+                "cipher": "6B04104",
+                "terms_count": 4,
+                "years": [
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2023,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "11203",
+                "active_year": 2023,
+                "title": "Management",
+                "cipher": "7M04102",
+                "terms_count": 4,
+                "years": [
+                  2012,
+                  2015,
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2023,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "10201",
+                "active_year": 2023,
+                "title": "Digital Marketing",
+                "cipher": "6B04105",
+                "terms_count": 8,
+                "years": [
+                  2012,
+                  2013,
+                  2014,
+                  2015,
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "EN",
+                  "name": "English"
+                },
+                "education_level": {
+                  "code": "B",
+                  "title": "Bachelor"
+                },
+                "department": {
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2023,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "11221",
+                "active_year": 2023,
+                "title": "Management in healthcare",
+                "cipher": "7М04105",
+                "terms_count": 2,
+                "years": [
                   2021,
                   2022,
                   2023
@@ -1876,24 +1708,72 @@
                   "title": "Master"
                 },
                 "department": {
-                  "id": 1273,
-                  "code": "DEP_SOC_SCI",
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
                   "year": 2023,
-                  "title": "Department of Social Sciences"
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 },
                 "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
+                  "id": 1270,
+                  "code": "F_ECO",
                   "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 }
               },
               {
-                "code": "10484",
+                "code": "11222",
                 "active_year": 2023,
-                "title": "Law of Public administration",
-                "cipher": "6В04203",
-                "terms_count": 8,
+                "title": "Management in healthcare",
+                "cipher": "7М04105",
+                "terms_count": 2,
+                "years": [
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "RU",
+                  "name": "Russian"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2023,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "11241",
+                "active_year": 2023,
+                "title": "Management in healthcare",
+                "cipher": "7М04104",
+                "terms_count": 4,
                 "years": [
                   2021,
                   2022,
@@ -1904,27 +1784,75 @@
                   "name": "Kazakh"
                 },
                 "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
+                  "code": "M",
+                  "title": "Master"
                 },
                 "department": {
-                  "id": 1274,
-                  "code": "DEP_JURIS",
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
                   "year": 2023,
-                  "title": "Department of Jurisprudence"
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 },
                 "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
+                  "id": 1270,
+                  "code": "F_ECO",
                   "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 }
               },
               {
-                "code": "10323",
+                "code": "11242",
                 "active_year": 2023,
-                "title": "Journalism and Design",
-                "cipher": "6В03202",
+                "title": "Management in healthcare",
+                "cipher": "7М04104",
+                "terms_count": 4,
+                "years": [
+                  2021,
+                  2022,
+                  2023
+                ],
+                "language": {
+                  "code": "RU",
+                  "name": "Russian"
+                },
+                "education_level": {
+                  "code": "M",
+                  "title": "Master"
+                },
+                "department": {
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
+                  "year": 2023,
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                },
+                "faculty": {
+                  "id": 1270,
+                  "code": "F_ECO",
+                  "year": 2023,
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
+                }
+              },
+              {
+                "code": "10218",
+                "active_year": 2023,
+                "title": "Management ",
+                "cipher": "6B04102",
                 "terms_count": 8,
                 "years": [
                   2022,
@@ -1939,55 +1867,32 @@
                   "title": "Bachelor"
                 },
                 "department": {
-                  "id": 1273,
-                  "code": "DEP_SOC_SCI",
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
                   "year": 2023,
-                  "title": "Department of Social Sciences"
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 },
                 "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
+                  "id": 1270,
+                  "code": "F_ECO",
                   "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 }
               },
               {
-                "code": "10326",
+                "code": "11204",
                 "active_year": 2023,
-                "title": "Journalism and Design",
-                "cipher": "6В03202",
-                "terms_count": 8,
-                "years": [
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1273,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2023,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10327",
-                "active_year": 2023,
-                "title": "Journalism and Public Communications",
-                "cipher": "6В03203",
-                "terms_count": 8,
+                "title": "Financial Technology",
+                "cipher": "7M04107",
+                "terms_count": 4,
                 "years": [
                   2022,
                   2023
@@ -1997,126 +1902,71 @@
                   "name": "English"
                 },
                 "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
+                  "code": "M",
+                  "title": "Master"
                 },
                 "department": {
-                  "id": 1273,
-                  "code": "DEP_SOC_SCI",
+                  "id": 1222,
+                  "code": "DEP_ECO_BUS",
                   "year": 2023,
-                  "title": "Department of Social Sciences"
+                  "title": "Department of Economics and Business",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 },
                 "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
+                  "id": 1270,
+                  "code": "F_ECO",
                   "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
-                }
-              },
-              {
-                "code": "10328",
-                "active_year": 2023,
-                "title": "Journalism and Public Communications",
-                "cipher": "6В03203",
-                "terms_count": 8,
-                "years": [
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1273,
-                  "code": "DEP_SOC_SCI",
-                  "year": 2023,
-                  "title": "Department of Social Sciences"
-                },
-                "faculty": {
-                  "id": 1272,
-                  "code": "F_LAW",
-                  "year": 2023,
-                  "title": "Faculty of Law and Social Sciences"
+                  "title": "SDU Business school",
+                  "new_count": null,
+                  "met_count": null,
+                  "reserved_count": null,
+                  "rejected_count": null
                 }
               }
             ],
             "departments": [
               {
+                "id": 22,
+                "code": "DEP_ECO",
+                "year": 2015,
+                "title": "Economics and Finance",
+                "new_count": 0,
+                "met_count": 0,
+                "reserved_count": 0,
+                "rejected_count": 0
+              },
+              {
+                "id": 23,
+                "code": "DEP_MNG",
+                "year": 2015,
+                "title": "Management and Marketing",
+                "new_count": 0,
+                "met_count": 0,
+                "reserved_count": 0,
+                "rejected_count": 0
+              },
+              {
+                "id": 24,
+                "code": "DEP_INT_REL",
+                "year": 2015,
+                "title": "International Relations",
+                "new_count": 0,
+                "met_count": 0,
+                "reserved_count": 0,
+                "rejected_count": 0
+              },
+              {
                 "id": 1222,
                 "code": "DEP_ECO_BUS",
                 "year": 2023,
-                "title": "Department of Economics and Business"
-              },
-              {
-                "id": 1223,
-                "code": "DEP_COMP_SCI",
-                "year": 2023,
-                "title": "Department of Computer Sciences"
-              },
-              {
-                "id": 1238,
-                "code": "DEP_PED",
-                "year": 2023,
-                "title": "Department of Pedagogy of Natural sciences"
-              },
-              {
-                "id": 1240,
-                "code": "DEP_LANG_EDU",
-                "year": 2023,
-                "title": "Department of Language Education"
-              },
-              {
-                "id": 1241,
-                "code": "10029",
-                "year": 2023,
-                "title": "Continuing Education Center"
-              },
-              {
-                "id": 1269,
-                "code": "DEP_MATH",
-                "year": 2023,
-                "title": "Department of Mathematics and Natural Sciences"
-              },
-              {
-                "id": 1273,
-                "code": "DEP_SOC_SCI",
-                "year": 2023,
-                "title": "Department of Social Sciences"
-              },
-              {
-                "id": 1274,
-                "code": "DEP_JURIS",
-                "year": 2023,
-                "title": "Department of Jurisprudence"
-              },
-              {
-                "id": 1275,
-                "code": "MDE_CENTER",
-                "year": 2023,
-                "title": "Center for Multidisciplinary Education"
-              },
-              {
-                "id": 1285,
-                "code": "CPDI_DLD",
-                "year": 2023,
-                "title": "Distance Learning division"
-              },
-              {
-                "id": 1291,
-                "code": "DEP_INF_SYS",
-                "year": 2023,
-                "title": "Department of Information systems"
-              },
-              {
-                "id": 1293,
-                "code": "DEP_HUMANITIES",
-                "year": 2023,
-                "title": "Department of humanities"
+                "title": "Department of Economics and Business",
+                "new_count": 0,
+                "met_count": 150,
+                "reserved_count": 61,
+                "rejected_count": 0
               }
             ],
             "request_statuses": [
@@ -2250,7 +2100,11 @@
                     "id",
                     "code",
                     "year",
-                    "title"
+                    "title",
+                    "new_count",
+                    "met_count",
+                    "reserved_count",
+                    "rejected_count"
                   ],
                   "properties": {
                     "id": {
@@ -2264,6 +2118,18 @@
                     },
                     "title": {
                       "type": "string"
+                    },
+                    "new_count": {
+                      "nullable": true
+                    },
+                    "met_count": {
+                      "nullable": true
+                    },
+                    "reserved_count": {
+                      "nullable": true
+                    },
+                    "rejected_count": {
+                      "nullable": true
                     }
                   }
                 },
@@ -2273,7 +2139,11 @@
                     "id",
                     "code",
                     "year",
-                    "title"
+                    "title",
+                    "new_count",
+                    "met_count",
+                    "reserved_count",
+                    "rejected_count"
                   ],
                   "properties": {
                     "id": {
@@ -2287,6 +2157,18 @@
                     },
                     "title": {
                       "type": "string"
+                    },
+                    "new_count": {
+                      "nullable": true
+                    },
+                    "met_count": {
+                      "nullable": true
+                    },
+                    "reserved_count": {
+                      "nullable": true
+                    },
+                    "rejected_count": {
+                      "nullable": true
                     }
                   }
                 }
@@ -2321,13 +2203,29 @@
                 },
                 "title": {
                   "type": "string"
+                },
+                "new_count": {
+                  "type": "integer"
+                },
+                "met_count": {
+                  "type": "integer"
+                },
+                "reserved_count": {
+                  "type": "integer"
+                },
+                "rejected_count": {
+                  "type": "integer"
                 }
               },
               "required": [
                 "id",
                 "code",
                 "year",
-                "title"
+                "title",
+                "new_count",
+                "met_count",
+                "reserved_count",
+                "rejected_count"
               ]
             }
           },
