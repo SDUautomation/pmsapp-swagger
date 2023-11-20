@@ -586,6 +586,60 @@
           "id": "c68a22c9una2w"
         }
       }
+    },
+    "/1.0.0/academic/manage/sections/offers": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-sections-offers",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "cfmrm2vllh5k7"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SectionManagementOfferPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/sections/courses/statistics": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionManagementCoursesStatisticsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-sections-courses-statistics",
+        "x-stoplight": {
+          "id": "x5gykip92zq2b"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SectionManagementCoursesStatisticsGetRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -3934,6 +3988,109 @@
         },
         "required": [
           "quota"
+        ]
+      },
+      "SectionManagementOfferPostRequest": {
+        "title": "SectionManagementOfferPostRequest",
+        "x-stoplight": {
+          "id": "q7dane3f7fyqx"
+        },
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "2gpoteqfgpo3j"
+            }
+          },
+          "year": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "3og33qzfyzc7r"
+            }
+          },
+          "note": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "sa1cnvd37y2ux"
+            }
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "note"
+        ]
+      },
+      "SectionManagementCoursesStatisticsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "class": 3,
+              "enrolled": 497,
+              "passed": 233,
+              "failed": 13,
+              "wish_list": 6,
+              "will_take": 8
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "class": {
+              "type": "integer"
+            },
+            "enrolled": {
+              "type": "integer"
+            },
+            "passed": {
+              "type": "integer"
+            },
+            "failed": {
+              "type": "integer"
+            },
+            "wish_list": {
+              "type": "integer"
+            },
+            "will_take": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "class",
+            "enrolled",
+            "passed",
+            "failed",
+            "wish_list",
+            "will_take"
+          ]
+        }
+      },
+      "SectionManagementCoursesStatisticsGetRequest": {
+        "title": "SectionManagementCoursesStatisticsGetRequest",
+        "x-stoplight": {
+          "id": "9m6qhganb5j7e"
+        },
+        "type": "object",
+        "properties": {
+          "equicode": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "xpzlauv5dqurk"
+            }
+          },
+          "program_code": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "rh9kwe2j3zc20"
+            }
+          }
+        },
+        "required": [
+          "equicode",
+          "program_code"
         ]
       }
     }
