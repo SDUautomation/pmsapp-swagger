@@ -72,6 +72,28 @@
         }
       },
       "parameters": []
+    },
+    "/1.0.0/student/me": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/StudentMeResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-student-me",
+        "x-stoplight": {
+          "id": "3pm2s4ko5flmt"
+        }
+      }
     }
   },
   "components": {
@@ -136,6 +158,342 @@
           "expires_in",
           "log_id",
           "needs_change_password"
+        ]
+      },
+      "StudentMeResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "information": {
+              "id": 200103356,
+              "name": "Aibolat",
+              "surname": "Batyrov",
+              "name_native": "Айболат",
+              "surname_native": "Батыров",
+              "patronymic": "Абайұлы",
+              "status": "Studying",
+              "inner_email": "200103356@stu.sdu.edu.kz",
+              "outer_email": "aibolat.batyrov.03@gmail.com",
+              "birth_date": "2003-01-12",
+              "last_ip": "10.8.175.227",
+              "last_device": "Mozilla/5.0 ...",
+              "last_login_date": "2023-11-17 17:43:00",
+              "is_reliable": true,
+              "degree_title": "Bachelor",
+              "interface_language": "en",
+              "photo": "base64_encoded_string",
+              "advisor": {
+                "id": 11078,
+                "full_name": "Shyngys Adilkhan"
+              },
+              "speciality": {
+                "code": "DEP_INF_SYS",
+                "year": 2022,
+                "title": "Department of Computer Science",
+                "education_language": {
+                  "code": "EN",
+                  "title": "English"
+                },
+                "department": {
+                  "id": 985,
+                  "code": "DEP_INF_SYS",
+                  "year": 2022,
+                  "title": "Department of Information Systems"
+                }
+              }
+            },
+            "events": [
+              {
+                "title": "Title",
+                "start_date": "2023-06-14",
+                "start_time": "17:56:00",
+                "end_date": "2023-06-14",
+                "end_time": "17:56:00",
+                "is_open": true
+              }
+            ],
+            "permissions": {
+              "individual": [
+                {
+                  "key": "key",
+                  "title": "Title",
+                  "start_date": "2023-06-14",
+                  "start_time": "17:59:00",
+                  "end_date": "2023-06-14",
+                  "end_time": "17:59:00",
+                  "is_blocking": false,
+                  "student_id": "200103356",
+                  "program_code": "code",
+                  "department_code": "DEP_CODE",
+                  "class": 1,
+                  "education_level": "Medium",
+                  "is_open": true
+                }
+              ]
+            }
+          }
+        },
+        "properties": {
+          "information": {
+            "type": "object",
+            "required": [
+              "id",
+              "name",
+              "surname",
+              "name_native",
+              "surname_native",
+              "patronymic",
+              "status",
+              "inner_email",
+              "outer_email",
+              "birth_date",
+              "last_ip",
+              "last_device",
+              "last_login_date",
+              "is_reliable",
+              "degree_title",
+              "interface_language",
+              "photo",
+              "advisor",
+              "speciality"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "surname": {
+                "type": "string"
+              },
+              "name_native": {
+                "type": "string"
+              },
+              "surname_native": {
+                "type": "string"
+              },
+              "patronymic": {
+                "type": "string"
+              },
+              "status": {
+                "type": "string"
+              },
+              "inner_email": {
+                "type": "string"
+              },
+              "outer_email": {
+                "type": "string"
+              },
+              "birth_date": {
+                "type": "string"
+              },
+              "last_ip": {
+                "type": "string"
+              },
+              "last_device": {
+                "type": "string"
+              },
+              "last_login_date": {
+                "type": "string"
+              },
+              "is_reliable": {
+                "type": "boolean"
+              },
+              "degree_title": {
+                "type": "string"
+              },
+              "interface_language": {
+                "type": "string"
+              },
+              "photo": {
+                "type": "string"
+              },
+              "advisor": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "full_name"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "full_name": {
+                    "type": "string"
+                  }
+                }
+              },
+              "speciality": {
+                "type": "object",
+                "required": [
+                  "code",
+                  "year",
+                  "title",
+                  "education_language",
+                  "department"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "integer"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "education_language": {
+                    "type": "object",
+                    "required": [
+                      "code",
+                      "title"
+                    ],
+                    "properties": {
+                      "code": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "department": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "code",
+                      "year",
+                      "title"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "code": {
+                        "type": "string"
+                      },
+                      "year": {
+                        "type": "integer"
+                      },
+                      "title": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "start_time": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "end_time": {
+                  "type": "string"
+                },
+                "is_open": {
+                  "type": "boolean"
+                }
+              },
+              "required": [
+                "title",
+                "start_date",
+                "start_time",
+                "end_date",
+                "end_time",
+                "is_open"
+              ]
+            }
+          },
+          "permissions": {
+            "type": "object",
+            "required": [
+              "individual"
+            ],
+            "properties": {
+              "individual": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "start_date": {
+                      "type": "string"
+                    },
+                    "start_time": {
+                      "type": "string"
+                    },
+                    "end_date": {
+                      "type": "string"
+                    },
+                    "end_time": {
+                      "type": "string"
+                    },
+                    "is_blocking": {
+                      "type": "boolean"
+                    },
+                    "student_id": {
+                      "type": "string"
+                    },
+                    "program_code": {
+                      "type": "string"
+                    },
+                    "department_code": {
+                      "type": "string"
+                    },
+                    "class": {
+                      "type": "integer"
+                    },
+                    "education_level": {
+                      "type": "string"
+                    },
+                    "is_open": {
+                      "type": "boolean"
+                    }
+                  },
+                  "required": [
+                    "key",
+                    "title",
+                    "start_date",
+                    "start_time",
+                    "end_date",
+                    "end_time",
+                    "is_blocking",
+                    "student_id",
+                    "program_code",
+                    "department_code",
+                    "class",
+                    "education_level",
+                    "is_open"
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "required": [
+          "information",
+          "events",
+          "permissions"
         ]
       }
     }
