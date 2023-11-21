@@ -529,15 +529,25 @@
         "title": ""
       },
       "AcademicSingleCourseAttendancesDeleteRequest": {
-        "type": "array",
-        "items": {
-          "type": "integer"
-        },
+        "type": "object",
         "x-examples": {
-          "Example 1": [
-            102345
-          ]
-        }
+          "Example 1": {
+            "schedules": [
+              102345
+            ]
+          }
+        },
+        "properties": {
+          "schedules": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "required": [
+          "schedules"
+        ]
       },
       "AcademicSingleCourseAttendancesResourcesRequest": {
         "title": "AcademicSingleCourseAttendancesResourcesRequest",
