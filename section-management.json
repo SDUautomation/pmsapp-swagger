@@ -685,145 +685,16 @@
           "Example 1": {
             "programs": [
               {
-                "code": "10206",
-                "active_year": 2016,
-                "title": "Finance ",
-                "cipher": "5B050900",
+                "code": "10103",
+                "active_year": 2022,
+                "title": "Information Systems",
+                "cipher": "6B1103",
                 "terms_count": 8,
                 "years": [
-                  2012,
-                  2013,
-                  2014,
-                  2015,
-                  2016
+                  0
                 ],
                 "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 285,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2016,
-                  "title": "Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "10209",
-                "active_year": 2016,
-                "title": "Finance ",
-                "cipher": "5B050900",
-                "terms_count": 8,
-                "years": [
-                  2014,
-                  2015,
-                  2016
-                ],
-                "language": {
-                  "code": "RU",
-                  "name": "Russian"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 285,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2016,
-                  "title": "Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "10208",
-                "active_year": 2016,
-                "title": "Accounting and Audit ",
-                "cipher": "5B050800",
-                "terms_count": 8,
-                "years": [
-                  2012,
-                  2013,
-                  2014,
-                  2015,
-                  2016
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 285,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2016,
-                  "title": "Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "10215",
-                "active_year": 2021,
-                "title": "Economics ",
-                "cipher": "6B04101",
-                "terms_count": 6,
-                "years": [
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021
-                ],
-                "language": {
-                  "code": "EN",
+                  "code": "en",
                   "name": "English"
                 },
                 "education_level": {
@@ -831,1207 +702,40 @@
                   "title": "Bachelor"
                 },
                 "department": {
-                  "id": 769,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2021,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
+                  "id": 985,
+                  "code": "DEP_INF_SYS",
+                  "year": 2022,
+                  "title": "Department of Information Systems",
+                  "new_count": 12,
+                  "met_count": 20,
+                  "reserved_count": 5,
+                  "rejected_count": 1
                 },
                 "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "10214",
-                "active_year": 2021,
-                "title": "Finance ",
-                "cipher": "6B04104",
-                "terms_count": 6,
-                "years": [
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 769,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2021,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "10217",
-                "active_year": 2021,
-                "title": "Accounting and Audit ",
-                "cipher": "6B04103",
-                "terms_count": 6,
-                "years": [
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 769,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2021,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "10213",
-                "active_year": 2021,
-                "title": "Management ",
-                "cipher": "6B04102",
-                "terms_count": 6,
-                "years": [
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 769,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2021,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "10211",
-                "active_year": 2021,
-                "title": "Digital Marketing",
-                "cipher": "6B04105",
-                "terms_count": 6,
-                "years": [
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 769,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2021,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "11216",
-                "active_year": 2023,
-                "title": "Financial Technology",
-                "cipher": "7M04106",
-                "terms_count": 3,
-                "years": [
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "11213",
-                "active_year": 2023,
-                "title": "Management",
-                "cipher": "7M04102",
-                "terms_count": 2,
-                "years": [
-                  2015,
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "11223",
-                "active_year": 2023,
-                "title": "Economics and Business Analytics",
-                "cipher": "7M04110",
-                "terms_count": 4,
-                "years": [
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "11219",
-                "active_year": 2023,
-                "title": "Project Management",
-                "cipher": "7M04109",
-                "terms_count": 4,
-                "years": [
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "11243",
-                "active_year": 2023,
-                "title": "Economics and Data Analysis",
-                "cipher": "7M04103",
-                "terms_count": 4,
-                "years": [
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "11205",
-                "active_year": 2023,
-                "title": "Digital Transformation Management",
-                "cipher": "7M04108",
-                "terms_count": 2,
-                "years": [
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "12203",
-                "active_year": 2023,
-                "title": "Management",
-                "cipher": "8D04101",
-                "terms_count": 6,
-                "years": [
-                  2012,
-                  2013,
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "DR",
-                  "title": "Doctorate"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "11202",
-                "active_year": 2023,
-                "title": "Economics ",
-                "cipher": "7M04101",
-                "terms_count": 4,
-                "years": [
-                  2012,
-                  2014,
-                  2015,
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "10205",
-                "active_year": 2023,
-                "title": "Economics ",
-                "cipher": "6B04101",
-                "terms_count": 8,
-                "years": [
-                  2012,
-                  2013,
-                  2014,
-                  2015,
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "11201",
-                "active_year": 2023,
-                "title": "Economics ",
-                "cipher": "7M04101",
-                "terms_count": 2,
-                "years": [
-                  2015,
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "10204",
-                "active_year": 2023,
-                "title": "Finance ",
-                "cipher": "6B04104",
-                "terms_count": 8,
-                "years": [
-                  2012,
-                  2013,
-                  2014,
-                  2015,
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "10207",
-                "active_year": 2023,
-                "title": "Accounting and Audit ",
-                "cipher": "6B04103",
-                "terms_count": 8,
-                "years": [
-                  2012,
-                  2013,
-                  2014,
-                  2015,
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "10203",
-                "active_year": 2023,
-                "title": "Management ",
-                "cipher": "6B04102",
-                "terms_count": 8,
-                "years": [
-                  2012,
-                  2013,
-                  2014,
-                  2015,
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "10224",
-                "active_year": 2023,
-                "title": "Finance ",
-                "cipher": "6B04104",
-                "terms_count": 4,
-                "years": [
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "11203",
-                "active_year": 2023,
-                "title": "Management",
-                "cipher": "7M04102",
-                "terms_count": 4,
-                "years": [
-                  2012,
-                  2015,
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "10201",
-                "active_year": 2023,
-                "title": "Digital Marketing",
-                "cipher": "6B04105",
-                "terms_count": 8,
-                "years": [
-                  2012,
-                  2013,
-                  2014,
-                  2015,
-                  2016,
-                  2017,
-                  2018,
-                  2019,
-                  2020,
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "11221",
-                "active_year": 2023,
-                "title": "Management in healthcare",
-                "cipher": "7М04105",
-                "terms_count": 2,
-                "years": [
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "11222",
-                "active_year": 2023,
-                "title": "Management in healthcare",
-                "cipher": "7М04105",
-                "terms_count": 2,
-                "years": [
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "RU",
-                  "name": "Russian"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "11241",
-                "active_year": 2023,
-                "title": "Management in healthcare",
-                "cipher": "7М04104",
-                "terms_count": 4,
-                "years": [
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "KZ",
-                  "name": "Kazakh"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "11242",
-                "active_year": 2023,
-                "title": "Management in healthcare",
-                "cipher": "7М04104",
-                "terms_count": 4,
-                "years": [
-                  2021,
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "RU",
-                  "name": "Russian"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "10218",
-                "active_year": 2023,
-                "title": "Management ",
-                "cipher": "6B04102",
-                "terms_count": 8,
-                "years": [
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "B",
-                  "title": "Bachelor"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                }
-              },
-              {
-                "code": "11204",
-                "active_year": 2023,
-                "title": "Financial Technology",
-                "cipher": "7M04107",
-                "terms_count": 4,
-                "years": [
-                  2022,
-                  2023
-                ],
-                "language": {
-                  "code": "EN",
-                  "name": "English"
-                },
-                "education_level": {
-                  "code": "M",
-                  "title": "Master"
-                },
-                "department": {
-                  "id": 1222,
-                  "code": "DEP_ECO_BUS",
-                  "year": 2023,
-                  "title": "Department of Economics and Business",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
-                },
-                "faculty": {
-                  "id": 1270,
-                  "code": "F_ECO",
-                  "year": 2023,
-                  "title": "SDU Business school",
-                  "new_count": null,
-                  "met_count": null,
-                  "reserved_count": null,
-                  "rejected_count": null
+                  "id": 985,
+                  "code": "DEP_INF_SYS",
+                  "year": 2022,
+                  "title": "Department of Information Systems",
+                  "new_count": 12,
+                  "met_count": 20,
+                  "reserved_count": 5,
+                  "rejected_count": 1
                 }
               }
             ],
             "departments": [
               {
-                "id": 22,
-                "code": "DEP_ECO",
-                "year": 2015,
-                "title": "Economics and Finance",
-                "new_count": 0,
-                "met_count": 0,
-                "reserved_count": 0,
-                "rejected_count": 0
-              },
-              {
-                "id": 23,
-                "code": "DEP_MNG",
-                "year": 2015,
-                "title": "Management and Marketing",
-                "new_count": 0,
-                "met_count": 0,
-                "reserved_count": 0,
-                "rejected_count": 0
-              },
-              {
-                "id": 24,
-                "code": "DEP_INT_REL",
-                "year": 2015,
-                "title": "International Relations",
-                "new_count": 0,
-                "met_count": 0,
-                "reserved_count": 0,
-                "rejected_count": 0
-              },
-              {
-                "id": 1222,
-                "code": "DEP_ECO_BUS",
-                "year": 2023,
-                "title": "Department of Economics and Business",
-                "new_count": 0,
-                "met_count": 150,
-                "reserved_count": 61,
-                "rejected_count": 0
+                "id": 985,
+                "code": "DEP_INF_SYS",
+                "year": 2022,
+                "title": "Department of Information Systems",
+                "new_count": 12,
+                "met_count": 20,
+                "reserved_count": 5,
+                "rejected_count": 1
               }
             ],
             "request_statuses": [
-              {
-                "id": 1,
-                "title": "New"
-              },
-              {
-                "id": 2,
-                "title": "Met"
-              },
               {
                 "id": 3,
                 "title": "Rejected"
@@ -2039,54 +743,36 @@
             ],
             "attendance_types": [
               {
-                "id": 0,
-                "type": "Not required"
-              },
-              {
-                "id": 1,
-                "type": "First time"
-              },
-              {
                 "id": 2,
                 "type": "Required"
               }
             ],
             "payment_methods": [
               {
-                "id": 0,
-                "method": "Normal"
-              },
-              {
                 "id": 1,
-                "method": "Paid_Section"
-              },
-              {
-                "id": 2,
-                "method": "Free_Charge"
+                "method": "Normal"
               }
             ],
             "section_types": [
               {
                 "id": "N",
                 "type": "Theory"
-              },
-              {
-                "id": "L",
-                "type": "Laboratory"
-              },
-              {
-                "id": "P",
-                "type": "Practice"
               }
             ],
             "implementation_modes": [
               {
-                "id": 0,
-                "mode": "Normal"
-              },
-              {
                 "id": 1,
-                "mode": "Package_Course"
+                "mode": "Package Course"
+              }
+            ],
+            "instructors": [
+              {
+                "id": 11670,
+                "full_name": "Aibolat Batyrov",
+                "state": {
+                  "id": 1,
+                  "title": "Working"
+                }
               }
             ]
           }
@@ -2174,16 +860,16 @@
                       "type": "string"
                     },
                     "new_count": {
-                      "nullable": true
+                      "type": "integer"
                     },
                     "met_count": {
-                      "nullable": true
+                      "type": "integer"
                     },
                     "reserved_count": {
-                      "nullable": true
+                      "type": "integer"
                     },
                     "rejected_count": {
-                      "nullable": true
+                      "type": "integer"
                     }
                   }
                 },
@@ -2213,16 +899,16 @@
                       "type": "string"
                     },
                     "new_count": {
-                      "nullable": true
+                      "type": "integer"
                     },
                     "met_count": {
-                      "nullable": true
+                      "type": "integer"
                     },
                     "reserved_count": {
-                      "nullable": true
+                      "type": "integer"
                     },
                     "rejected_count": {
-                      "nullable": true
+                      "type": "integer"
                     }
                   }
                 }
@@ -2372,6 +1058,40 @@
                 "mode"
               ]
             }
+          },
+          "instructors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "full_name": {
+                  "type": "string"
+                },
+                "state": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "full_name",
+                "state"
+              ]
+            }
           }
         },
         "required": [
@@ -2381,7 +1101,8 @@
           "attendance_types",
           "payment_methods",
           "section_types",
-          "implementation_modes"
+          "implementation_modes",
+          "instructors"
         ]
       },
       "SectionManagementRequestGetRequest": {
