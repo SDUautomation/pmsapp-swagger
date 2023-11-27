@@ -640,6 +640,37 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/manage/sections/quotas": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionManagementSectionsQuotasGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-sections-quotas",
+        "x-stoplight": {
+          "id": "msasi731x2p4m"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SectionManagementSectionsQuotasGetRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -2582,6 +2613,7 @@
                 "year",
                 "title"
               ],
+              "nullable": true,
               "properties": {
                 "code": {
                   "type": "string"
@@ -2812,6 +2844,32 @@
         "required": [
           "equicode",
           "program_code"
+        ]
+      },
+      "SectionManagementSectionsQuotasGetRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "sexy",
+            "course_year": 2023,
+            "term": 1
+          }
+        },
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "course_year": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "course_code",
+          "course_year",
+          "term"
         ]
       }
     }
