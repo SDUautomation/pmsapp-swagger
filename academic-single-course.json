@@ -150,6 +150,27 @@
             }
           }
         }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-courses-attendances",
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "x-stoplight": {
+          "id": "qnbsayiwlu3tu"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleCourseAttendancePutRequest"
+              }
+            }
+          }
+        }
       }
     },
     "/1.0.0/academic/courses/attendances/resources": {
@@ -1020,6 +1041,47 @@
           "schedule",
           "students",
           "course"
+        ]
+      },
+      "AcademicSingleCourseAttendancePutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "schedule_id": 24361,
+            "students": [
+              {
+                "student_id": "200103356",
+                "attend_id": 1
+              }
+            ]
+          }
+        },
+        "properties": {
+          "schedule_id": {
+            "type": "integer"
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "student_id": {
+                  "type": "string"
+                },
+                "attend_id": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "student_id",
+                "attend_id"
+              ]
+            }
+          }
+        },
+        "required": [
+          "schedule_id",
+          "students"
         ]
       }
     }
