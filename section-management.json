@@ -671,6 +671,39 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/manage/sections/offers/{offer}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "offer",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "offer",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "delete": {
+        "summary": "Your DELETE endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "delete-1.0.0-academic-manage-sections-offers-offer",
+        "x-stoplight": {
+          "id": "o2tw54f8amwwh"
+        }
+      }
     }
   },
   "components": {
