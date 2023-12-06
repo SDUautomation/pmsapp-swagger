@@ -1,0 +1,2239 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "1jn7lc0qmiezg"
+  },
+  "info": {
+    "title": "schedule-management",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/1.0.0/academic/manage/schedules/programs": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScheduleManagementProgramsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-schedules-programs",
+        "x-stoplight": {
+          "id": "zeiqm2g2pasgq"
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ScheduleManagementProgramsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "code": "10101",
+              "title": "Mathematics",
+              "cipher": "6B05401",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "10102",
+              "title": "Mathematics",
+              "cipher": "5B010900",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10103",
+              "title": "Information Systems",
+              "cipher": "6B06101",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "10104",
+              "title": "Computing Systems and Software",
+              "cipher": "5B070400",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "10105",
+              "title": "Mathematics(pedagogy)",
+              "cipher": "6B01501",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10106",
+              "title": "Information Systems",
+              "cipher": "5B070300",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "10107",
+              "title": "Computer Science",
+              "cipher": "6B06102",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "10108",
+              "title": "Mathematics",
+              "cipher": "5B060100",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "10109",
+              "title": "Mathematical and Computer Modeling",
+              "cipher": "6B06103",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "10111",
+              "title": "Mathematics",
+              "cipher": "5B060100",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "10113",
+              "title": "Information Systems",
+              "cipher": "6B06101",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "10115",
+              "title": "Mathematics(pedagogy)",
+              "cipher": "6B01501",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10117",
+              "title": "Computer Science",
+              "cipher": "6B06102",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "10119",
+              "title": "Mathematical and Computer Modeling",
+              "cipher": "6B06103",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "10201",
+              "title": "Digital Marketing",
+              "cipher": "6B04105",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "10202",
+              "title": "International Relations ",
+              "cipher": "6B03101",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10203",
+              "title": "Management ",
+              "cipher": "6B04102",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "10204",
+              "title": "Finance ",
+              "cipher": "6B04104",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "10205",
+              "title": "Economics ",
+              "cipher": "6B04101",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "10206",
+              "title": "Finance ",
+              "cipher": "5B050900",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "10207",
+              "title": "Accounting and Audit ",
+              "cipher": "6B04103",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "10208",
+              "title": "Accounting and Audit ",
+              "cipher": "5B050800",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "10209",
+              "title": "Finance ",
+              "cipher": "5B050900",
+              "terms": 8,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "10210",
+              "title": "International Law",
+              "cipher": "6B04202",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10211",
+              "title": "Digital Marketing",
+              "cipher": "6B04105",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "10212",
+              "title": "International Relations ",
+              "cipher": "6B03101",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10213",
+              "title": "Management ",
+              "cipher": "6B04102",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "10214",
+              "title": "Finance ",
+              "cipher": "6B04104",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "10215",
+              "title": "Economics ",
+              "cipher": "6B04101",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "10217",
+              "title": "Accounting and Audit ",
+              "cipher": "6B04103",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "10220",
+              "title": "International Law",
+              "cipher": "5B030200",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10224",
+              "title": "Finance ",
+              "cipher": "6B04104",
+              "terms": 4,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "10301",
+              "title": "Kazakh Language and Literature",
+              "cipher": "6B01701",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10302",
+              "title": "Foreign Language: Two Foreign Languages",
+              "cipher": "6B01702",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10303",
+              "title": "Philology",
+              "cipher": "6B02301",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10304",
+              "title": "Translation Studies",
+              "cipher": "6B02302",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10305",
+              "title": "Journalism (TV and Multimedia)",
+              "cipher": "6B03201",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10306",
+              "title": "Foreign Philology",
+              "cipher": "6B02303",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10307",
+              "title": "Foreign Languages : Two Foreign Languages(Turkish)",
+              "cipher": "5B011901",
+              "terms": 8,
+              "language": {
+                "code": "TR",
+                "title": "Turkish"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10308",
+              "title": "Foreign Philology",
+              "cipher": "5B021000",
+              "terms": 8,
+              "language": {
+                "code": "TR",
+                "title": "Turkish"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10309",
+              "title": "Journalism (TV and Multimedia)",
+              "cipher": "6B03201",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10310",
+              "title": "Chemistry-Biology",
+              "cipher": "6B01502",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10311",
+              "title": "Kazakh Language and Literature",
+              "cipher": "6B01701",
+              "terms": 6,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10312",
+              "title": "Foreign Language: Two Foreign Languages",
+              "cipher": "6B01702",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10313",
+              "title": "Philology",
+              "cipher": "5B020500",
+              "terms": 6,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10314",
+              "title": "Translation Studies",
+              "cipher": "6B02302",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10315",
+              "title": "Journalism (TV and Multimedia)",
+              "cipher": "6B03201",
+              "terms": 6,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10316",
+              "title": "Foreign Philology",
+              "cipher": "6B02303",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10317",
+              "title": "Physics-Informatics",
+              "cipher": "6B01503",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10318",
+              "title": "Foreign Philology",
+              "cipher": "5B021000",
+              "terms": 6,
+              "language": {
+                "code": "TR",
+                "title": "Turkish"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10319",
+              "title": "Chemistry-Biology",
+              "cipher": "6B01502",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10320",
+              "title": "Physics-Informatics",
+              "cipher": "6B01503",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10321",
+              "title": "Kazakh Language and Literature",
+              "cipher": "5B011700",
+              "terms": 4,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10322",
+              "title": "Foreign Language: Two Foreign Languages",
+              "cipher": "5B011900",
+              "terms": 4,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10324",
+              "title": "Translation Studies",
+              "cipher": "5B020700",
+              "terms": 4,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10325",
+              "title": "Journalism",
+              "cipher": "5B050400",
+              "terms": 4,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10380",
+              "title": "Preschool training and education",
+              "cipher": "6B01201",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10381",
+              "title": "Pedagogy and psychology",
+              "cipher": "6B01101",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10383",
+              "title": "Pedagogy and psychology",
+              "cipher": "6B01101",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10384",
+              "title": "Social pedagogy and self-knowledge based on values",
+              "cipher": "6B01801",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10386",
+              "title": "Social pedagogy and self-knowledge based on values",
+              "cipher": "6B01801",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10387",
+              "title": "Pedagogics and Methods of Primary Education",
+              "cipher": "6B01301",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10401",
+              "title": "Applied law",
+              "cipher": "6B04201",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10402",
+              "title": "History",
+              "cipher": "6B02201",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10403",
+              "title": "Applied law",
+              "cipher": "6B04201",
+              "terms": 8,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10409",
+              "title": "Regional Studies (Russia: language, diplomacy, culture)",
+              "cipher": "6B03102",
+              "terms": 8,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10411",
+              "title": "Applied law",
+              "cipher": "6B04201",
+              "terms": 6,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10412",
+              "title": "History",
+              "cipher": "5B020300",
+              "terms": 6,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10413",
+              "title": "Applied law",
+              "cipher": "6B04201",
+              "terms": 6,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10415",
+              "title": "International Law",
+              "cipher": "6B04202",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10421",
+              "title": "Jurisprudence",
+              "cipher": "5B030100",
+              "terms": 4,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10441",
+              "title": "Applied law",
+              "cipher": "6B04201",
+              "terms": 4,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10442",
+              "title": "Applied law",
+              "cipher": "6B04201",
+              "terms": 4,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10445",
+              "title": "International Law",
+              "cipher": "6B04202",
+              "terms": 4,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "10481",
+              "title": "History(pedagogy)",
+              "cipher": "6B01601",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "10484",
+              "title": "Law of Public administration",
+              "cipher": "6В04203",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "11101",
+              "title": "Mathematics",
+              "cipher": "7M05401",
+              "terms": 4,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "11102",
+              "title": "Mathematics",
+              "cipher": "6M010900",
+              "terms": 4,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "11104",
+              "title": "Computing Systems and Software",
+              "cipher": "6M070400",
+              "terms": 4,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "11105",
+              "title": "Mathematics",
+              "cipher": "7M01501",
+              "terms": 4,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "11107",
+              "title": "Computer Science",
+              "cipher": "7M06102",
+              "terms": 4,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "11108",
+              "title": "Mathematics",
+              "cipher": "6M060100",
+              "terms": 4,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "11111",
+              "title": "Financial Mathematics",
+              "cipher": "7M05402",
+              "terms": 3,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "11117",
+              "title": "Data Science",
+              "cipher": "7M06104",
+              "terms": 3,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "11201",
+              "title": "Economics ",
+              "cipher": "7M04101",
+              "terms": 2,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "11202",
+              "title": "Economics ",
+              "cipher": "7M04101",
+              "terms": 4,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "11203",
+              "title": "Management",
+              "cipher": "7M04102",
+              "terms": 4,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "11213",
+              "title": "Management",
+              "cipher": "7M04102",
+              "terms": 2,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "11216",
+              "title": "Financial Technology",
+              "cipher": "7M04106",
+              "terms": 3,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "11243",
+              "title": "Economics and Data Analysis",
+              "cipher": "7M04103",
+              "terms": 4,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "11301",
+              "title": "Kazakh Language and Literature",
+              "cipher": "7M01701",
+              "terms": 4,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "11302",
+              "title": "Foreign Language: Two Foreign Languages",
+              "cipher": "7M01702",
+              "terms": 4,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "11303",
+              "title": "Foreign Language: Two Foreign Languages",
+              "cipher": "7M01702",
+              "terms": 4,
+              "language": {
+                "code": "TR",
+                "title": "Turkish"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "11304",
+              "title": "Foreign Language: Two Foreign Languages",
+              "cipher": "6M011900",
+              "terms": 3,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "11305",
+              "title": "Data Journalism",
+              "cipher": "7M03202",
+              "terms": 3,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "11306",
+              "title": "Data Journalism",
+              "cipher": "7M03202",
+              "terms": 3,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "11308",
+              "title": "Media Studies and Journalism",
+              "cipher": "7M03201",
+              "terms": 4,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "11309",
+              "title": "Media Studies and Journalism",
+              "cipher": "7M03201",
+              "terms": 4,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "11311",
+              "title": "Kazakh Language and Literature",
+              "cipher": "6M011700",
+              "terms": 3,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "11313",
+              "title": "Foreign Language: Two Foreign Languages",
+              "cipher": "6M011900",
+              "terms": 3,
+              "language": {
+                "code": "TR",
+                "title": "Turkish"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "11315",
+              "title": "Multimedia Journalism",
+              "cipher": "7M03203",
+              "terms": 2,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "11316",
+              "title": "Multimedia Journalism",
+              "cipher": "7M03203",
+              "terms": 2,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "11323",
+              "title": "Foreign Language: Two Foreign Languages",
+              "cipher": "7M01702",
+              "terms": 3,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "11343",
+              "title": "Chemistry",
+              "cipher": "7M01502",
+              "terms": 4,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "11345",
+              "title": "Data Journalism",
+              "cipher": "7M03204",
+              "terms": 4,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "11346",
+              "title": "Physics",
+              "cipher": "7M01503",
+              "terms": 4,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "11401",
+              "title": "Private Law",
+              "cipher": "7M04201",
+              "terms": 4,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "11402",
+              "title": "Private Law",
+              "cipher": "7M04201",
+              "terms": 4,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "11403",
+              "title": "Jurisprudence",
+              "cipher": "6M030100",
+              "terms": 2,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "11404",
+              "title": "Jurisprudence",
+              "cipher": "6M030100",
+              "terms": 2,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "11405",
+              "title": "Information Technology Law",
+              "cipher": "7M04202",
+              "terms": 4,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "11406",
+              "title": "Information Technology Law",
+              "cipher": "7M04202",
+              "terms": 3,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "11407",
+              "title": "Public Law",
+              "cipher": "7M04203",
+              "terms": 4,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "11408",
+              "title": "Public Law",
+              "cipher": "7M04203",
+              "terms": 4,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "12101",
+              "title": "Mathematics",
+              "cipher": "8D05401",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "12105",
+              "title": "Mathematics",
+              "cipher": "8D01501",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "12107",
+              "title": "Computer Science",
+              "cipher": "8D06102",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1278,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences"
+              }
+            },
+            {
+              "code": "12203",
+              "title": "Management",
+              "cipher": "8D04101",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1270,
+                "code": "F_ECO",
+                "title": "SDU Business school"
+              }
+            },
+            {
+              "code": "12301",
+              "title": "Kazakh Language and Literature",
+              "cipher": "8D01701",
+              "terms": 6,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "12302",
+              "title": "Foreign Language: Two Foreign Languages",
+              "cipher": "8D01702",
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "12401",
+              "title": "Applied law",
+              "cipher": "8D04201",
+              "terms": 6,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "12403",
+              "title": "Applied law",
+              "cipher": "8D04201",
+              "terms": 6,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1272,
+                "code": "F_LAW",
+                "title": "Faculty of Law and Social Sciences"
+              }
+            },
+            {
+              "code": "19900",
+              "title": "Language School",
+              "cipher": null,
+              "terms": 4,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1275,
+                "code": "MDE_CENTER",
+                "title": "Center for Multidisciplinary Education"
+              }
+            },
+            {
+              "code": "19901",
+              "title": "Language School",
+              "cipher": null,
+              "terms": 6,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1275,
+                "code": "MDE_CENTER",
+                "title": "Center for Multidisciplinary Education"
+              }
+            },
+            {
+              "code": "19902",
+              "title": "Language School",
+              "cipher": null,
+              "terms": 6,
+              "language": {
+                "code": "TR",
+                "title": "Turkish"
+              },
+              "faculty": {
+                "id": 1275,
+                "code": "MDE_CENTER",
+                "title": "Center for Multidisciplinary Education"
+              }
+            },
+            {
+              "code": "19903",
+              "title": "Language School",
+              "cipher": null,
+              "terms": 4,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1275,
+                "code": "MDE_CENTER",
+                "title": "Center for Multidisciplinary Education"
+              }
+            },
+            {
+              "code": "20381",
+              "title": "Applied\nphilology",
+              "cipher": "6B02304",
+              "terms": 8,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1271,
+                "code": "F_PHIL",
+                "title": "Faculty of education and humanities"
+              }
+            },
+            {
+              "code": "99321",
+              "title": "Preparation of English language teachers",
+              "cipher": "6B01704",
+              "terms": 2,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "title": "Distance Learning division"
+              }
+            },
+            {
+              "code": "99322",
+              "title": "Preparation of English language teachers",
+              "cipher": "6B01704",
+              "terms": 2,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "title": "Distance Learning division"
+              }
+            },
+            {
+              "code": "99323",
+              "title": "Preparation of English language teachers",
+              "cipher": "6B01704",
+              "terms": 2,
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "faculty": {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "title": "Distance Learning division"
+              }
+            },
+            {
+              "code": "99421",
+              "title": "Preparation of Kazakh language teachers",
+              "cipher": "6B01703",
+              "terms": 2,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "title": "Distance Learning division"
+              }
+            },
+            {
+              "code": "99422",
+              "title": "Preparation of Kazakh language teachers",
+              "cipher": "6B01703",
+              "terms": 2,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "title": "Distance Learning division"
+              }
+            },
+            {
+              "code": "99521",
+              "title": "Preparation of informatics teachers",
+              "cipher": "6B01508",
+              "terms": 2,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "title": "Distance Learning division"
+              }
+            },
+            {
+              "code": "99522",
+              "title": "Preparation of informatics teachers",
+              "cipher": "6B01508",
+              "terms": 2,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "title": "Distance Learning division"
+              }
+            },
+            {
+              "code": "99621",
+              "title": "Preparation of Biology teachers",
+              "cipher": "6B01507",
+              "terms": 2,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "title": "Distance Learning division"
+              }
+            },
+            {
+              "code": "99622",
+              "title": "Preparation of Biology teachers",
+              "cipher": "6B01507",
+              "terms": 2,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "title": "Distance Learning division"
+              }
+            },
+            {
+              "code": "99721",
+              "title": "Preparation of chemistry teachers",
+              "cipher": "6B01506",
+              "terms": 2,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "title": "Distance Learning division"
+              }
+            },
+            {
+              "code": "99722",
+              "title": "Preparation of chemistry teachers",
+              "cipher": "6B01506",
+              "terms": 2,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "title": "Distance Learning division"
+              }
+            },
+            {
+              "code": "99821",
+              "title": "Preparation of Maths teachers",
+              "cipher": "6B01505",
+              "terms": 2,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "title": "Distance Learning division"
+              }
+            },
+            {
+              "code": "99822",
+              "title": "Preparation of Maths teachers",
+              "cipher": "6B01505",
+              "terms": 2,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "title": "Distance Learning division"
+              }
+            },
+            {
+              "code": "99921",
+              "title": "Preparation of Physics teachers",
+              "cipher": "6B01504",
+              "terms": 2,
+              "language": {
+                "code": "KZ",
+                "title": "Kazakh"
+              },
+              "faculty": {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "title": "Distance Learning division"
+              }
+            },
+            {
+              "code": "99922",
+              "title": "Preparation of Physics teachers",
+              "cipher": "6B01504",
+              "terms": 2,
+              "language": {
+                "code": "RU",
+                "title": "Russian"
+              },
+              "faculty": {
+                "id": 1285,
+                "code": "CPDI_DLD",
+                "title": "Distance Learning division"
+              }
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "cipher": {
+              "type": "string"
+            },
+            "terms": {
+              "type": "integer"
+            },
+            "language": {
+              "type": "object",
+              "required": [
+                "code",
+                "title"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "faculty": {
+              "type": "object",
+              "required": [
+                "id",
+                "code",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "required": [
+            "code",
+            "title",
+            "cipher",
+            "terms",
+            "language",
+            "faculty"
+          ]
+        }
+      }
+    }
+  }
+}
