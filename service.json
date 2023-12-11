@@ -1,0 +1,202 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "5hfq56eadfv4c"
+  },
+  "info": {
+    "title": "service",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/1.0.0/service/manage/languages/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Language resources are successfully retrieved.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceManageLanguagesResourcesResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-service-manage-languages-resources",
+        "x-stoplight": {
+          "id": "cu9nu10ndxyjk"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceManageLanguagesResourcesRequest"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ServiceManageLanguagesResourcesRequest": {
+        "title": "ServiceManageLanguagesResourcesRequest",
+        "x-stoplight": {
+          "id": "4ouoz723t9sy4"
+        },
+        "type": "object",
+        "properties": {
+          "modules ": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "0hlvybmutxwqe"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "dyoftr2j84yqa"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "modules "
+        ]
+      },
+      "ServiceManageLanguagesResourcesResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "language_levels": [
+              {
+                "id": 4,
+                "title": "Upper-Intermediate",
+                "code": "B2"
+              }
+            ],
+            "languages": [
+              {
+                "id": "KZ",
+                "language": "Kazakh"
+              }
+            ],
+            "departments": [
+              {
+                "program_code": "98000",
+                "language": "EN",
+                "cipher": "6B01705",
+                "title": "Finance",
+                "period_count": 8
+              }
+            ],
+            "years": [
+              {
+                "year": 2023
+              }
+            ]
+          }
+        },
+        "properties": {
+          "language_levels": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "title",
+                "code"
+              ]
+            }
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "language"
+              ]
+            }
+          },
+          "departments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "program_code": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                },
+                "cipher": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "period_count": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "program_code",
+                "language",
+                "cipher",
+                "title",
+                "period_count"
+              ]
+            }
+          },
+          "years": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "year": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "year"
+              ]
+            }
+          }
+        },
+        "required": [
+          "language_levels",
+          "languages",
+          "departments",
+          "years"
+        ]
+      }
+    }
+  }
+}
