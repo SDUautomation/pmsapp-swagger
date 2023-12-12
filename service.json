@@ -43,6 +43,49 @@
           }
         }
       }
+    },
+    "/1.0.0/service/manage/locks": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Locks are successfully retrieved.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceManageLocksGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-service-manage-locks",
+        "x-stoplight": {
+          "id": "mjpsqdzj87ff9"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceManageLocksGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-service-manage-locks",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "7lmr7sivhy5zd"
+        }
+      }
     }
   },
   "components": {
@@ -195,6 +238,196 @@
           "languages",
           "departments",
           "years"
+        ]
+      },
+      "ServiceManageLocksGetRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "per_page": 10,
+            "offset": 1,
+            "locked": false,
+            "department_id": 1,
+            "speciality_id": 1,
+            "education_level": "B",
+            "student_id": "200103049",
+            "name": "Yernur",
+            "surname": "Shamshadin",
+            "entrance_year": 2023
+          }
+        },
+        "properties": {
+          "per_page": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "locked": {
+            "type": "boolean"
+          },
+          "department_id": {
+            "type": "integer"
+          },
+          "speciality_id": {
+            "type": "integer"
+          },
+          "education_level": {
+            "type": "string"
+          },
+          "student_id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "surname": {
+            "type": "string"
+          },
+          "entrance_year": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "per_page",
+          "offset",
+          "department_id"
+        ]
+      },
+      "ServiceManageLocksGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 20,
+            "from": 1,
+            "per_page": 10,
+            "current_page": 1,
+            "last_page": 2,
+            "students": [
+              {
+                "id": 200103049,
+                "name": "Yernur",
+                "surname": "Shamshadin",
+                "education_level": "Bachelor",
+                "entrance_year": 2020,
+                "department": "Department of Computer Sciences",
+                "speciality": "Information Systems",
+                "locking_status": true,
+                "locks": [
+                  {
+                    "id": 1,
+                    "is_active": true,
+                    "requester_department_code": "DEP_COMP_SCI",
+                    "requester_department_title": "Department of Computer Sciences",
+                    "start_date": "2022-01-01 00:00:00",
+                    "end_date": "2022-01-01 00:00:00"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "surname": {
+                  "type": "string"
+                },
+                "education_level": {
+                  "type": "string"
+                },
+                "entrance_year": {
+                  "type": "integer"
+                },
+                "department": {
+                  "type": "string"
+                },
+                "speciality": {
+                  "type": "string"
+                },
+                "locking_status": {
+                  "type": "boolean"
+                },
+                "locks": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "is_active": {
+                        "type": "boolean"
+                      },
+                      "requester_department_code": {
+                        "type": "string"
+                      },
+                      "requester_department_title": {
+                        "type": "string"
+                      },
+                      "start_date": {
+                        "type": "string"
+                      },
+                      "end_date": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "is_active",
+                      "requester_department_code",
+                      "requester_department_title",
+                      "start_date",
+                      "end_date"
+                    ]
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "name",
+                "surname",
+                "education_level",
+                "entrance_year",
+                "department",
+                "speciality",
+                "locking_status",
+                "locks"
+              ]
+            }
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "students"
         ]
       }
     }
