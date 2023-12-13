@@ -3962,6 +3962,60 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/manage/syllabus/instructors/moodle-link/{instructor}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "instructor",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-manage-syllabus-instructors-moodle-link-instructor",
+        "responses": {
+          "200": {
+            "description": "Link of Instructor syllabus is successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "57mnd5y3fjl5o"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusInstructorsMoodleLinkPutRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-manage-syllabus-instructors-moodle-link-instructor",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "ipcia213qsujv"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageSyllabusInstructorsMoodleLinkPutRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -21936,16 +21990,22 @@
                   "note"
                 ]
               }
+            },
+            "moodle_link": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "wjj9tqfzw7ogm"
+              }
             }
           },
           "required": [
             "id",
             "full_name",
             "degree",
-            "contacts"
+            "contacts",
+            "moodle_link"
           ]
-        },
-        "title": ""
+        }
       },
       "AcademicManageSyllabusLearningOutcomesGetResponse": {
         "type": "array",
@@ -25456,6 +25516,22 @@
           "reader_group",
           "from_date",
           "due_date"
+        ]
+      },
+      "AcademicManageSyllabusInstructorsMoodleLinkPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "moodle_link": "https://moodle.sdu.edu.kz/zhandos.saparbayev"
+          }
+        },
+        "properties": {
+          "moodle_link": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "moodle_link"
         ]
       }
     },
