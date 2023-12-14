@@ -563,10 +563,7 @@
         },
         "properties": {
           "schedule_id": {
-            "type": "array",
-            "items": {
-              "type": "integer"
-            }
+            "type": "integer"
           },
           "students": {
             "type": "array",
