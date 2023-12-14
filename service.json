@@ -84,6 +84,15 @@
         },
         "x-stoplight": {
           "id": "7lmr7sivhy5zd"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceManageLocksPostRequest"
+              }
+            }
+          }
         }
       }
     },
