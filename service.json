@@ -75,15 +75,43 @@
         }
       },
       "post": {
-        "summary": "",
+        "summary": "Your POST endpoint",
         "operationId": "post-1.0.0-service-manage-locks",
         "responses": {
-          "200": {
-            "description": "OK"
+          "201": {
+            "description": "Locks are successfully created."
           }
         },
         "x-stoplight": {
           "id": "7lmr7sivhy5zd"
+        }
+      }
+    },
+    "/1.0.0/service/manage/locks/toggle": {
+      "put": {
+        "summary": "Your PUT endpoint",
+        "operationId": "put-1.0.0-service-manage-locks-toggle",
+        "responses": {
+          "200": {
+            "description": "Locks active status are successfully changed."
+          }
+        },
+        "x-stoplight": {
+          "id": "79o39qvjb7q8z"
+        }
+      }
+    },
+    "/1.0.0/service/manage/locks/reschedule": {
+      "put": {
+        "summary": "Your PUT endpoint",
+        "operationId": "put-1.0.0-service-manage-locks-reschedule",
+        "responses": {
+          "200": {
+            "description": "Locks are successfully rescheduled."
+          }
+        },
+        "x-stoplight": {
+          "id": "2j0u6s5z8s0w5"
         }
       }
     }
@@ -292,7 +320,8 @@
           "per_page",
           "offset",
           "department_id"
-        ]
+        ],
+        "title": ""
       },
       "ServiceManageLocksGetResponse": {
         "type": "object",
@@ -429,6 +458,109 @@
           "last_page",
           "students"
         ]
+      },
+      "ServiceManageLocksPostRequest": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "ac351314d9431"
+        },
+        "x-examples": {
+          "Example 1": {
+            "students": [
+              "200103049"
+            ],
+            "requester_department_code": "DEP_COMP_SCI",
+            "start_date": "2023-06-23",
+            "end_date": "2023-06-30"
+          }
+        },
+        "title": "ServiceManageLocksPostRequest",
+        "properties": {
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "requester_department_code": {
+            "type": "string"
+          },
+          "start_date": {
+            "type": "string"
+          },
+          "end_date": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "students",
+          "requester_department_code",
+          "start_date",
+          "end_date"
+        ]
+      },
+      "ServiceManageLocksTogglePutRequest": {
+        "type": "object",
+        "properties": {
+          "locks": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "locks": [
+              1
+            ],
+            "is_active": true
+          }
+        }
+      },
+      "ServiceManageLocksTogglePutResponse": {
+        "title": "ServiceManageLocksTogglePutResponse",
+        "x-stoplight": {
+          "id": "y8m2n7v47x7q8"
+        },
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "3z0wpm5qvtju1"
+            }
+          }
+        }
+      },
+      "ServiceManageLocksRescheduleRequest": {
+        "type": "object",
+        "properties": {
+          "locks": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "start_date": {
+            "type": "string"
+          },
+          "end_date": {
+            "type": "string"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "locks": [
+              1
+            ],
+            "start_date": "2023-06-23",
+            "end_date": "2023-06-30"
+          }
+        }
       }
     }
   }
