@@ -561,6 +561,13 @@
             "end_date": "2023-06-30"
           }
         }
+      },
+      "ServiceManageLocksPostResponse": {
+        "title": "ServiceManageLocksPostResponse",
+        "x-stoplight": {
+          "id": "734yjhonybdyc"
+        },
+        "type": "object"
       }
     }
   }
