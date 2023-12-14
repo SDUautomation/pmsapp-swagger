@@ -519,7 +519,8 @@
             ],
             "is_active": true
           }
-        }
+        },
+        "title": ""
       },
       "ServiceManageLocksTogglePutResponse": {
         "title": "ServiceManageLocksTogglePutResponse",
@@ -560,7 +561,8 @@
             "start_date": "2023-06-23",
             "end_date": "2023-06-30"
           }
-        }
+        },
+        "title": ""
       },
       "ServiceManageLocksPostResponse": {
         "title": "ServiceManageLocksPostResponse",
