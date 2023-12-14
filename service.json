@@ -112,6 +112,15 @@
         },
         "x-stoplight": {
           "id": "2j0u6s5z8s0w5"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceManageLocksRescheduleRequest"
+              }
+            }
+          }
         }
       }
     }
