@@ -142,6 +142,17 @@
         },
         "x-extension-1": null
       }
+    },
+    "/test": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-test",
+        "x-stoplight": {
+          "id": "gpo9bfkwmxu6j"
+        }
+      }
     }
   },
   "components": {
