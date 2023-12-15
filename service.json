@@ -143,14 +143,177 @@
         "x-extension-1": null
       }
     },
-    "/test": {
+    "/1.0.0/service/manage/languages/applicants": {
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
-        "responses": {},
-        "operationId": "get-test",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceManageLanguagesApplicantsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-service-manage-languages-applicants",
         "x-stoplight": {
-          "id": "gpo9bfkwmxu6j"
+          "id": "fz4sagh0ok26o"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceManageLanguagesApplicantsGetRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/service/manage/languages/applicants/{applicant}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "applicant",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-service-manage-languages-applicants-applicant",
+        "responses": {
+          "200": {
+            "description": "Applicant's language level is successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "9c01ubjlvca6x"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceManageLanguagesSingleApplicantPutRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/service/manage/languages/applicants/bulk": {
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-service-manage-languages-applicants-bulk",
+        "responses": {
+          "200": {
+            "description": "Applicants language levels are successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "hj3sea3usf8tk"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceManageLanguagesApplicantsBulkPutRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/service/manage/languages/students": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceManageLanguagesStudentsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-service-manage-languages-students",
+        "x-stoplight": {
+          "id": "ygsfzd2qjtcl7"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceManageLanguagesStudentsGetRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/service/manage/languages/students/{student}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-service-manage-languages-students-student",
+        "responses": {
+          "200": {
+            "description": "Student's language level is successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "mexxsf0jsaoh4"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceManageLanguagesSingleStudentPutRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/service/manage/languages/students/bulk": {
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-service-manage-languages-students-bulk",
+        "responses": {
+          "200": {
+            "description": "Students language levels are successfully updated."
+          }
+        },
+        "x-stoplight": {
+          "id": "2w298a52xwkw9"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceManageLanguagesStudentsBulkPutRequest"
+              }
+            }
+          }
         }
       }
     }
@@ -609,6 +772,448 @@
           "id": "734yjhonybdyc"
         },
         "type": "object"
+      },
+      "ServiceManageLanguagesSingleApplicantPutRequest": {
+        "title": "ServiceManageLanguagesSingleApplicantPutRequest",
+        "x-stoplight": {
+          "id": "3c1cfqce3ri2k"
+        },
+        "type": "object",
+        "properties": {
+          "applicant": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "vua9bygk21hl6"
+            }
+          }
+        }
+      },
+      "ServiceManageLanguagesApplicantsGetRequest": {
+        "title": "ServiceManageLanguagesApplicantsGetRequest",
+        "x-stoplight": {
+          "id": "ghl9l9nfmgwff"
+        },
+        "type": "object",
+        "properties": {
+          "iin": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "26pl5rq73kii1"
+            }
+          },
+          "language_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "xph6z5rt0oalz"
+            }
+          },
+          "program_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "idkzv6v7wwtus"
+            }
+          },
+          "entrance_year": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "0l40eomrrkra9"
+            }
+          },
+          "name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "yejkveogw51m1"
+            }
+          },
+          "surname": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "atqvvk6voz8af"
+            }
+          },
+          "no_level": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "nea3qc551xui0"
+            }
+          },
+          "per_page": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "t1lodpb8a37ot"
+            }
+          },
+          "offset": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "f4q8xrmbmj56t"
+            }
+          }
+        },
+        "required": [
+          "language_code",
+          "program_code",
+          "entrance_year",
+          "per_page",
+          "offset"
+        ]
+      },
+      "ServiceManageLanguagesApplicantsBulkPutRequest": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "47c14a8b1ee5d"
+        },
+        "properties": {
+          "applicants": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "language": {
+            "type": "string"
+          },
+          "level_id": {
+            "type": "integer"
+          },
+          "completed": {
+            "type": "boolean"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "applicants": [
+              4009
+            ],
+            "language": "EN",
+            "level_id": 5,
+            "completed": true
+          }
+        },
+        "title": ""
+      },
+      "ServiceManageLanguagesApplicantsGetResponse": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "applicants": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "full_name": {
+                  "type": "string"
+                },
+                "program_code": {
+                  "type": "string"
+                },
+                "languages": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "language_code": {
+                        "type": "string"
+                      },
+                      "code": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "completed": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "total": 40,
+            "from": 1,
+            "per_page": 15,
+            "current_page": 2,
+            "last_page": 3,
+            "applicants": [
+              {
+                "id": 40,
+                "full_name": "Zhandos Saparbayev",
+                "program_code": "10103",
+                "languages": [
+                  {
+                    "id": 4,
+                    "language_code": "EN",
+                    "code": "B2",
+                    "title": "Upper-Intermediate",
+                    "completed": true
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "title": ""
+      },
+      "ServiceManageLanguagesStudentsGetRequest": {
+        "title": "ServiceManageLanguagesStudentsGetRequest",
+        "x-stoplight": {
+          "id": "x8nzwbipshbz6"
+        },
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "458shwruwjzuv"
+            }
+          },
+          "language_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "lpo72dhjb9hs2"
+            }
+          },
+          "program_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "rgp6psj25hxcv"
+            }
+          },
+          "entrance_year": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "ln4789ipvbmtf"
+            }
+          },
+          "name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "bqnnjnhujhf3x"
+            }
+          },
+          "surname": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "h1gpvk009ln27"
+            }
+          },
+          "no_level": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ugc2xki5umz4s"
+            }
+          },
+          "per_page": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "chef4eqe8y8px"
+            }
+          },
+          "offset": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "kmxv1ibotvico"
+            }
+          }
+        },
+        "required": [
+          "language_code",
+          "program_code",
+          "entrance_year",
+          "per_page",
+          "offset"
+        ]
+      },
+      "ServiceManageLanguagesStudentsGetResponse": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "full_name": {
+                  "type": "string"
+                },
+                "class": {
+                  "type": "integer"
+                },
+                "specialty": {
+                  "type": "object",
+                  "properties": {
+                    "program_code": {
+                      "type": "string"
+                    },
+                    "language": {
+                      "type": "string"
+                    },
+                    "speciality_code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "department_id": {
+                      "type": "integer"
+                    },
+                    "terms": {
+                      "type": "integer"
+                    }
+                  }
+                },
+                "languages": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "language_code": {
+                        "type": "string"
+                      },
+                      "code": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "completed": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "total": 40,
+            "from": 1,
+            "per_page": 15,
+            "current_page": 2,
+            "last_page": 3,
+            "students": [
+              {
+                "id": "200103201",
+                "full_name": "Zhandos Saparbayev",
+                "class": 4,
+                "specialty": {
+                  "program_code": "10103",
+                  "language": "English",
+                  "speciality_code": "6B06101",
+                  "title": "Information Systems",
+                  "department_id": 1051,
+                  "terms": 8
+                },
+                "languages": [
+                  {
+                    "id": 4,
+                    "language_code": "EN",
+                    "code": "B2",
+                    "title": "Upper-Intermediate",
+                    "completed": true
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "ServiceManageLanguagesSingleStudentPutRequest": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string"
+          },
+          "level_id": {
+            "type": "integer"
+          },
+          "completed": {
+            "type": "boolean"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "language": "EN",
+            "level_id": 5,
+            "completed": true
+          }
+        }
+      },
+      "ServiceManageLanguagesStudentsBulkPutRequest": {
+        "type": "object",
+        "properties": {
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "language": {
+            "type": "string"
+          },
+          "level_id": {
+            "type": "integer"
+          },
+          "completed": {
+            "type": "boolean"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "students": [
+              "200103201"
+            ],
+            "language": "EN",
+            "level_id": 5,
+            "completed": true
+          }
+        }
       }
     }
   }
