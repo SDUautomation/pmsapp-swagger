@@ -894,6 +894,31 @@
       },
       "ServiceManageLanguagesApplicantsGetResponse": {
         "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 40,
+            "from": 1,
+            "per_page": 15,
+            "current_page": 2,
+            "last_page": 3,
+            "applicants": [
+              {
+                "id": 40,
+                "full_name": "Zhandos Saparbayev",
+                "program_code": "10103",
+                "languages": [
+                  {
+                    "id": 4,
+                    "language_code": "EN",
+                    "code": "B2",
+                    "title": "Upper-Intermediate",
+                    "completed": true
+                  }
+                ]
+              }
+            ]
+          }
+        },
         "properties": {
           "total": {
             "type": "integer"
@@ -944,39 +969,34 @@
                       "completed": {
                         "type": "boolean"
                       }
-                    }
+                    },
+                    "required": [
+                      "id",
+                      "language_code",
+                      "code",
+                      "title",
+                      "completed"
+                    ]
                   }
                 }
-              }
+              },
+              "required": [
+                "id",
+                "full_name",
+                "program_code",
+                "languages"
+              ]
             }
           }
         },
-        "x-examples": {
-          "Example 1": {
-            "total": 40,
-            "from": 1,
-            "per_page": 15,
-            "current_page": 2,
-            "last_page": 3,
-            "applicants": [
-              {
-                "id": 40,
-                "full_name": "Zhandos Saparbayev",
-                "program_code": "10103",
-                "languages": [
-                  {
-                    "id": 4,
-                    "language_code": "EN",
-                    "code": "B2",
-                    "title": "Upper-Intermediate",
-                    "completed": true
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        "title": ""
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "applicants"
+        ]
       },
       "ServiceManageLanguagesStudentsGetRequest": {
         "title": "ServiceManageLanguagesStudentsGetRequest",
@@ -1050,6 +1070,39 @@
       },
       "ServiceManageLanguagesStudentsGetResponse": {
         "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 40,
+            "from": 1,
+            "per_page": 15,
+            "current_page": 2,
+            "last_page": 3,
+            "students": [
+              {
+                "id": "200103201",
+                "full_name": "Zhandos Saparbayev",
+                "class": 4,
+                "specialty": {
+                  "program_code": "10103",
+                  "language": "English",
+                  "speciality_code": "6B06101",
+                  "title": "Information Systems",
+                  "department_id": 1051,
+                  "terms": 8
+                },
+                "languages": [
+                  {
+                    "id": 4,
+                    "language_code": "EN",
+                    "code": "B2",
+                    "title": "Upper-Intermediate",
+                    "completed": true
+                  }
+                ]
+              }
+            ]
+          }
+        },
         "properties": {
           "total": {
             "type": "integer"
@@ -1082,6 +1135,14 @@
                 },
                 "specialty": {
                   "type": "object",
+                  "required": [
+                    "program_code",
+                    "language",
+                    "speciality_code",
+                    "title",
+                    "department_id",
+                    "terms"
+                  ],
                   "properties": {
                     "program_code": {
                       "type": "string"
@@ -1123,46 +1184,35 @@
                       "completed": {
                         "type": "boolean"
                       }
-                    }
+                    },
+                    "required": [
+                      "id",
+                      "language_code",
+                      "code",
+                      "title",
+                      "completed"
+                    ]
                   }
                 }
-              }
+              },
+              "required": [
+                "id",
+                "full_name",
+                "class",
+                "specialty",
+                "languages"
+              ]
             }
           }
         },
-        "x-examples": {
-          "Example 1": {
-            "total": 40,
-            "from": 1,
-            "per_page": 15,
-            "current_page": 2,
-            "last_page": 3,
-            "students": [
-              {
-                "id": "200103201",
-                "full_name": "Zhandos Saparbayev",
-                "class": 4,
-                "specialty": {
-                  "program_code": "10103",
-                  "language": "English",
-                  "speciality_code": "6B06101",
-                  "title": "Information Systems",
-                  "department_id": 1051,
-                  "terms": 8
-                },
-                "languages": [
-                  {
-                    "id": 4,
-                    "language_code": "EN",
-                    "code": "B2",
-                    "title": "Upper-Intermediate",
-                    "completed": true
-                  }
-                ]
-              }
-            ]
-          }
-        }
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "students"
+        ]
       },
       "ServiceManageLanguagesSingleStudentPutRequest": {
         "type": "object",
