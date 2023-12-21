@@ -34,6 +34,70 @@
           "id": "zeiqm2g2pasgq"
         }
       }
+    },
+    "/1.0.0/academic/manage/schedules/sections": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "headers": {},
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScheduleManagementSectionsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-schedules-sections",
+        "x-stoplight": {
+          "id": "m29jbv5zxhpcu"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScheduleManagementSectionsGetRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/schedules/sections/{section}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "section",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScheduleManagementSingleSectionGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-schedules-sections-section",
+        "x-stoplight": {
+          "id": "ly2c6myqee26x"
+        }
+      }
     }
   },
   "components": {
@@ -2232,7 +2296,566 @@
             "language",
             "faculty"
           ]
-        }
+        },
+        "title": ""
+      },
+      "ScheduleManagementSectionsGetRequest": {
+        "title": "ScheduleManagementSectionsGetRequest",
+        "x-stoplight": {
+          "id": "ibm0ere5tv8yu"
+        },
+        "type": "object",
+        "properties": {
+          "program_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "7chl3ae3oxs6c"
+            }
+          },
+          "year": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "hkcv7xdj52gn6"
+            }
+          },
+          "term": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "wd2z6lxe78ion"
+            }
+          },
+          "offset": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "76392eo91z3o2"
+            }
+          },
+          "per_page": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "aicw735mzcvfr"
+            }
+          }
+        },
+        "required": [
+          "program_code",
+          "year",
+          "term",
+          "offset",
+          "per_page"
+        ]
+      },
+      "ScheduleManagementSectionsGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 20,
+            "from": 1,
+            "per_page": 10,
+            "current_page": 1,
+            "last_page": 2,
+            "sections": [
+              {
+                "id": 51177,
+                "year": 2022,
+                "term": 1,
+                "section": "30",
+                "comment": "15 топ Экономика",
+                "hours": 30,
+                "departments_codes": [
+                  "DEP_ECO_BUS"
+                ],
+                "schedules": {
+                  "termly": 0,
+                  "weekly": 0
+                },
+                "quotas": {
+                  "opened": 1,
+                  "requested": 0,
+                  "reserved": 0
+                },
+                "course": {
+                  "code": "ECO 315",
+                  "title": "Introduction to Python",
+                  "theory": 1,
+                  "practice": 2,
+                  "lab": 0,
+                  "type": {
+                    "key": "N",
+                    "title": "Normal"
+                  },
+                  "language": {
+                    "code": "EN",
+                    "title": "English"
+                  },
+                  "department": {
+                    "id": 1,
+                    "code": "DEP_HUMANITIES",
+                    "title": "Department of Humanities"
+                  }
+                },
+                "type": {
+                  "key": "N",
+                  "title": "Theory"
+                },
+                "teacher": {
+                  "id": 10926,
+                  "full_name": "Bakhtiyor Meraliyev"
+                }
+              }
+            ]
+          }
+        },
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "sections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "section": {
+                  "type": "string"
+                },
+                "comment": {
+                  "type": "string"
+                },
+                "hours": {
+                  "type": "integer"
+                },
+                "departments_codes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "schedules": {
+                  "type": "object",
+                  "required": [
+                    "termly",
+                    "weekly"
+                  ],
+                  "properties": {
+                    "termly": {
+                      "type": "integer"
+                    },
+                    "weekly": {
+                      "type": "integer"
+                    }
+                  }
+                },
+                "quotas": {
+                  "type": "object",
+                  "required": [
+                    "opened",
+                    "requested",
+                    "reserved"
+                  ],
+                  "properties": {
+                    "opened": {
+                      "type": "integer"
+                    },
+                    "requested": {
+                      "type": "integer"
+                    },
+                    "reserved": {
+                      "type": "integer"
+                    }
+                  }
+                },
+                "course": {
+                  "type": "object",
+                  "required": [
+                    "code",
+                    "title",
+                    "theory",
+                    "practice",
+                    "lab",
+                    "type",
+                    "language",
+                    "department"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "theory": {
+                      "type": "integer"
+                    },
+                    "practice": {
+                      "type": "integer"
+                    },
+                    "lab": {
+                      "type": "integer"
+                    },
+                    "type": {
+                      "type": "object",
+                      "required": [
+                        "key",
+                        "title"
+                      ],
+                      "properties": {
+                        "key": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "language": {
+                      "type": "object",
+                      "required": [
+                        "code",
+                        "title"
+                      ],
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "department": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "code",
+                        "title"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "code": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                },
+                "type": {
+                  "type": "object",
+                  "required": [
+                    "key",
+                    "title"
+                  ],
+                  "properties": {
+                    "key": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "teacher": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "full_name"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "full_name": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "required": [
+                "id",
+                "year",
+                "term",
+                "section",
+                "comment",
+                "hours",
+                "departments_codes",
+                "schedules",
+                "quotas",
+                "course",
+                "type",
+                "teacher"
+              ]
+            }
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "sections"
+        ]
+      },
+      "ScheduleManagementSingleSectionGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 48167,
+            "year": 2022,
+            "term": 2,
+            "section": "01",
+            "weeks": 15,
+            "hours": 15,
+            "quotas": 64,
+            "is_package": false,
+            "implementation_mode": "Normal",
+            "comment": "CS 3 kurs",
+            "programs": 0,
+            "total_hours": 73730,
+            "credits": 3,
+            "type": {
+              "key": "N",
+              "title": "Theory"
+            },
+            "course": {
+              "code": "ECO 315",
+              "title": "Introduction to Python",
+              "theory": 1,
+              "practice": 2,
+              "lab": 0,
+              "type": {
+                "key": "N",
+                "title": "Normal"
+              },
+              "language": {
+                "code": "EN",
+                "title": "English"
+              },
+              "department": {
+                "id": 1,
+                "code": "DEP_HUMANITIES",
+                "title": "Department of Humanities"
+              }
+            },
+            "teacher": {
+              "id": 10926,
+              "full_name": "Bakhtiyor Meraliyev"
+            },
+            "attendance_type": {
+              "id": 2,
+              "type": "Required"
+            }
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "section": {
+            "type": "string"
+          },
+          "weeks": {
+            "type": "integer"
+          },
+          "hours": {
+            "type": "integer"
+          },
+          "quotas": {
+            "type": "integer"
+          },
+          "is_package": {
+            "type": "boolean"
+          },
+          "implementation_mode": {
+            "type": "string"
+          },
+          "comment": {
+            "type": "string"
+          },
+          "programs": {
+            "type": "integer"
+          },
+          "total_hours": {
+            "type": "integer"
+          },
+          "credits": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "object",
+            "required": [
+              "key",
+              "title"
+            ],
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          },
+          "course": {
+            "type": "object",
+            "required": [
+              "code",
+              "title",
+              "theory",
+              "practice",
+              "lab",
+              "type",
+              "language",
+              "department"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "theory": {
+                "type": "integer"
+              },
+              "practice": {
+                "type": "integer"
+              },
+              "lab": {
+                "type": "integer"
+              },
+              "type": {
+                "type": "object",
+                "required": [
+                  "key",
+                  "title"
+                ],
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              },
+              "language": {
+                "type": "object",
+                "required": [
+                  "code",
+                  "title"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              },
+              "department": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "code",
+                  "title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "teacher": {
+            "type": "object",
+            "required": [
+              "id",
+              "full_name"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "full_name": {
+                "type": "string"
+              }
+            }
+          },
+          "attendance_type": {
+            "type": "object",
+            "required": [
+              "id",
+              "type"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "required": [
+          "id",
+          "year",
+          "term",
+          "section",
+          "weeks",
+          "hours",
+          "quotas",
+          "is_package",
+          "implementation_mode",
+          "comment",
+          "programs",
+          "total_hours",
+          "credits",
+          "type",
+          "course",
+          "teacher",
+          "attendance_type"
+        ]
       }
     }
   }
