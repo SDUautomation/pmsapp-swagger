@@ -98,6 +98,59 @@
           "id": "ly2c6myqee26x"
         }
       }
+    },
+    "/1.0.0/academic/manage/schedules/sections/{section}/programs": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "section",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScheduleManagementSingleSectionProgramsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-schedules-sections-section-programs",
+        "x-stoplight": {
+          "id": "fu3x3k9s0vv33"
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-schedules-sections-section-programs",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "u9kzv5ijaqhyc"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScheduleManagementSingleSectionProgramsPostRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -2855,6 +2908,108 @@
           "course",
           "teacher",
           "attendance_type"
+        ]
+      },
+      "ScheduleManagementSingleSectionProgramsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 30326,
+              "title": "Proqram 1",
+              "start_date": "2023-01-25",
+              "end_date": "2023-05-03",
+              "is_main": true,
+              "schedules": {
+                "termly": 15,
+                "weekly": 1
+              },
+              "rooms": [
+                "E221 - [L.T. D2]"
+              ]
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "start_date": {
+              "type": "string"
+            },
+            "end_date": {
+              "type": "string"
+            },
+            "is_main": {
+              "type": "boolean"
+            },
+            "schedules": {
+              "type": "object",
+              "required": [
+                "termly",
+                "weekly"
+              ],
+              "properties": {
+                "termly": {
+                  "type": "integer"
+                },
+                "weekly": {
+                  "type": "integer"
+                }
+              }
+            },
+            "rooms": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "id",
+            "title",
+            "start_date",
+            "end_date",
+            "is_main",
+            "schedules",
+            "rooms"
+          ]
+        }
+      },
+      "ScheduleManagementSingleSectionProgramsPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "title": "Program 1",
+            "is_main": true,
+            "start_date": "2023-01-23",
+            "end_date": "2023-05-13"
+          }
+        },
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "is_main": {
+            "type": "boolean"
+          },
+          "start_date": {
+            "type": "string"
+          },
+          "end_date": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "is_main",
+          "start_date",
+          "end_date"
         ]
       }
     }
