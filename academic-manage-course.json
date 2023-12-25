@@ -1,0 +1,175 @@
+{
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "f3zlqo4mwysfh"
+  },
+  "info": {
+    "title": "academic-manage-course",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/1.0.0/academic/manage/courses/search": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageCourseSearchResponse",
+                  "x-examples": {
+                    "Example 1": {
+                      "code": "CSS 101",
+                      "year": 2022,
+                      "term": 1,
+                      "title": "Introduction to Programming",
+                      "title_kz": "Introduction to Programming",
+                      "title_ru": "Introduction to Programming",
+                      "title_en": "Introduction to Programming",
+                      "department_code": "DEP_HUMANITIES",
+                      "period_code": "S",
+                      "theory": 1,
+                      "practice": 1,
+                      "credits": 1,
+                      "ects": 1,
+                      "equicode": 20120001,
+                      "type": "N"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-courses-search",
+        "x-stoplight": {
+          "id": "ct4ub785a5jav"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCourseSearchRequest"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AcademicManageCourseSearchRequest": {
+        "title": "AcademicManageCourseSearchRequest",
+        "x-stoplight": {
+          "id": "mx6rkk8fk2i4f"
+        },
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "pzrf2x8br6ewo"
+            }
+          }
+        },
+        "required": [
+          "code"
+        ]
+      },
+      "AcademicManageCourseSearchResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "code": "CSS 101",
+            "year": 2022,
+            "term": 1,
+            "title": "Introduction to Programming",
+            "title_kz": "Introduction to Programming",
+            "title_ru": "Introduction to Programming",
+            "title_en": "Introduction to Programming",
+            "department_code": "DEP_HUMANITIES",
+            "period_code": "S",
+            "theory": 1,
+            "practice": 1,
+            "credits": 1,
+            "ects": 1,
+            "equicode": 20120001,
+            "type": "N"
+          }
+        },
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "title_kz": {
+            "type": "string"
+          },
+          "title_ru": {
+            "type": "string"
+          },
+          "title_en": {
+            "type": "string"
+          },
+          "department_code": {
+            "type": "string"
+          },
+          "period_code": {
+            "type": "string"
+          },
+          "theory": {
+            "type": "integer"
+          },
+          "practice": {
+            "type": "integer"
+          },
+          "credits": {
+            "type": "integer"
+          },
+          "ects": {
+            "type": "integer"
+          },
+          "equicode": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "year",
+          "term",
+          "title",
+          "title_kz",
+          "title_ru",
+          "title_en",
+          "department_code",
+          "period_code",
+          "theory",
+          "practice",
+          "credits",
+          "ects",
+          "equicode",
+          "type"
+        ]
+      }
+    }
+  }
+}
