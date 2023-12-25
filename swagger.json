@@ -11172,7 +11172,6 @@
         "required": [
           "offset",
           "per_page",
-          "department_code",
           "year"
         ]
       },
