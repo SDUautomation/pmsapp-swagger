@@ -11167,12 +11167,6 @@
           },
           "equicode": {
             "type": "string"
-          },
-          "new": {
-            "type": "number",
-            "x-stoplight": {
-              "id": "1xwm1wgybkzee"
-            }
           }
         },
         "required": [

@@ -681,14 +681,6 @@
           "name": "offer",
           "in": "path",
           "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "offer",
-          "in": "path",
-          "required": true
         }
       ],
       "delete": {
