@@ -255,7 +255,11 @@
             }
           }
         },
-        "responses": {},
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
         "servers": [
           {
             "url": "http://localhost:3000"
