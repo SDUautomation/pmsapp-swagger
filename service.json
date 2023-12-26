@@ -1331,42 +1331,6 @@
       },
       "ServiceManageLockResourcesResponse": {
         "type": "object",
-        "properties": {
-          "departments": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "code": {
-                  "type": "string"
-                },
-                "year": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "specialities": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "code": {
-                  "type": "string"
-                },
-                "year": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
         "x-examples": {
           "Example 1": {
             "departments": [
@@ -1387,7 +1351,57 @@
         },
         "x-stoplight": {
           "id": "q11tqx3tr7pgm"
-        }
+        },
+        "properties": {
+          "departments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "year",
+                "title"
+              ]
+            }
+          },
+          "specialities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "year",
+                "title"
+              ]
+            }
+          }
+        },
+        "required": [
+          "departments",
+          "specialities"
+        ]
       }
     }
   }
