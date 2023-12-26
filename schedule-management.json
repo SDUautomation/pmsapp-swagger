@@ -1,11 +1,11 @@
 {
   "openapi": "3.0.0",
   "x-stoplight": {
-    "id": "1jn7lc0qmiezg"
+    "id": "entzuznotqh7z"
   },
   "info": {
-    "title": "schedule-management",
-    "version": "1.0"
+    "version": "1.0",
+    "title": "schedule-management"
   },
   "servers": [
     {
@@ -16,7 +16,7 @@
     "/1.0.0/academic/manage/schedules/programs": {
       "get": {
         "summary": "Your GET endpoint",
-        "tags": [],
+        "operationId": "get-1.0.0-academic-manage-schedules-programs",
         "responses": {
           "200": {
             "description": "OK",
@@ -29,20 +29,32 @@
             }
           }
         },
-        "operationId": "get-1.0.0-academic-manage-schedules-programs",
+        "servers": [
+          {
+            "url": "http://localhost:3000"
+          }
+        ],
         "x-stoplight": {
-          "id": "zeiqm2g2pasgq"
+          "id": "aecc5x1enpeab"
         }
       }
     },
     "/1.0.0/academic/manage/schedules/sections": {
       "get": {
         "summary": "Your GET endpoint",
-        "tags": [],
+        "operationId": "get-1.0.0-academic-manage-schedules-sections",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScheduleManagementSectionsGetRequest"
+              }
+            }
+          }
+        },
         "responses": {
           "200": {
             "description": "OK",
-            "headers": {},
             "content": {
               "application/json": {
                 "schema": {
@@ -52,35 +64,30 @@
             }
           }
         },
-        "operationId": "get-1.0.0-academic-manage-schedules-sections",
-        "x-stoplight": {
-          "id": "m29jbv5zxhpcu"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ScheduleManagementSectionsGetRequest"
-              }
-            }
+        "servers": [
+          {
+            "url": "http://localhost:3000"
           }
+        ],
+        "x-stoplight": {
+          "id": "65jtnyhgmpna2"
         }
       }
     },
     "/1.0.0/academic/manage/schedules/sections/{section}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "section",
-          "in": "path",
-          "required": true
-        }
-      ],
       "get": {
         "summary": "Your GET endpoint",
-        "tags": [],
+        "operationId": "get-1.0.0-academic-manage-schedules-sections-section",
+        "parameters": [
+          {
+            "name": "section",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -93,26 +100,30 @@
             }
           }
         },
-        "operationId": "get-1.0.0-academic-manage-schedules-sections-section",
+        "servers": [
+          {
+            "url": "http://localhost:3000"
+          }
+        ],
         "x-stoplight": {
-          "id": "ly2c6myqee26x"
+          "id": "d8w9i4b8loqkg"
         }
       }
     },
     "/1.0.0/academic/manage/schedules/sections/{section}/programs": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "section",
-          "in": "path",
-          "required": true
-        }
-      ],
       "get": {
         "summary": "Your GET endpoint",
-        "tags": [],
+        "operationId": "get-1.0.0-academic-manage-schedules-sections-section-programs",
+        "parameters": [
+          {
+            "name": "section",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -125,22 +136,28 @@
             }
           }
         },
-        "operationId": "get-1.0.0-academic-manage-schedules-sections-section-programs",
+        "servers": [
+          {
+            "url": "http://localhost:3000"
+          }
+        ],
         "x-stoplight": {
-          "id": "fu3x3k9s0vv33"
+          "id": "mx14rf51y3ijc"
         }
       },
       "post": {
         "summary": "",
         "operationId": "post-1.0.0-academic-manage-schedules-sections-section-programs",
-        "responses": {
-          "200": {
-            "description": "OK"
+        "parameters": [
+          {
+            "name": "section",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
           }
-        },
-        "x-stoplight": {
-          "id": "u9kzv5ijaqhyc"
-        },
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -149,6 +166,103 @@
               }
             }
           }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost:3000"
+          }
+        ],
+        "x-stoplight": {
+          "id": "qu2zs3n2sfjur"
+        }
+      }
+    },
+    "/1.0.0/academic/manage/schedules/sections/{section}/programs/{program}": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "operationId": "get-1.0.0-academic-manage-schedules-sections-section-programs-program",
+        "parameters": [
+          {
+            "name": "section",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "program",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ScheduleManagement1Section1ProgramGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "servers": [
+          {
+            "url": "http://localhost:3000"
+          }
+        ],
+        "x-stoplight": {
+          "id": "uwm7g0d8lvck7"
+        }
+      },
+      "put": {
+        "summary": "Your PUT endpoint",
+        "operationId": "put-1.0.0-academic-manage-schedules-sections-section-programs-program",
+        "parameters": [
+          {
+            "name": "section",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "program",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ScheduleManagement1Section1ProgramPutRequest"
+              }
+            }
+          }
+        },
+        "responses": {},
+        "servers": [
+          {
+            "url": "http://localhost:3000"
+          }
+        ],
+        "x-stoplight": {
+          "id": "qlybrmj3z4vyg"
         }
       }
     }
@@ -157,6 +271,65 @@
     "schemas": {
       "ScheduleManagementProgramsGetResponse": {
         "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "cipher": {
+              "type": "string"
+            },
+            "terms": {
+              "type": "integer"
+            },
+            "language": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "title"
+              ]
+            },
+            "faculty": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "id",
+                "code",
+                "title"
+              ]
+            }
+          },
+          "required": [
+            "code",
+            "title",
+            "cipher",
+            "terms",
+            "language",
+            "faculty"
+          ]
+        },
         "x-examples": {
           "Example 1": [
             {
@@ -2291,103 +2464,28 @@
             }
           ]
         },
-        "items": {
-          "type": "object",
-          "properties": {
-            "code": {
-              "type": "string"
-            },
-            "title": {
-              "type": "string"
-            },
-            "cipher": {
-              "type": "string"
-            },
-            "terms": {
-              "type": "integer"
-            },
-            "language": {
-              "type": "object",
-              "required": [
-                "code",
-                "title"
-              ],
-              "properties": {
-                "code": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                }
-              }
-            },
-            "faculty": {
-              "type": "object",
-              "required": [
-                "id",
-                "code",
-                "title"
-              ],
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "required": [
-            "code",
-            "title",
-            "cipher",
-            "terms",
-            "language",
-            "faculty"
-          ]
-        },
-        "title": ""
+        "x-stoplight": {
+          "id": "j1ej4v3abldku"
+        }
       },
       "ScheduleManagementSectionsGetRequest": {
-        "title": "ScheduleManagementSectionsGetRequest",
-        "x-stoplight": {
-          "id": "ibm0ere5tv8yu"
-        },
         "type": "object",
+        "title": "ScheduleManagementSectionsGetRequest",
         "properties": {
           "program_code": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "7chl3ae3oxs6c"
-            }
+            "type": "string"
           },
           "year": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "hkcv7xdj52gn6"
-            }
+            "type": "integer"
           },
           "term": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "wd2z6lxe78ion"
-            }
+            "type": "integer"
           },
           "offset": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "76392eo91z3o2"
-            }
+            "type": "integer"
           },
           "per_page": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "aicw735mzcvfr"
-            }
+            "type": "integer"
           }
         },
         "required": [
@@ -2396,10 +2494,227 @@
           "term",
           "offset",
           "per_page"
-        ]
+        ],
+        "x-stoplight": {
+          "id": "0yx9xfv54s8tj"
+        }
       },
       "ScheduleManagementSectionsGetResponse": {
         "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "sections": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "section": {
+                  "type": "string"
+                },
+                "comment": {
+                  "type": "string"
+                },
+                "hours": {
+                  "type": "integer"
+                },
+                "departments_codes": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "schedules": {
+                  "type": "object",
+                  "properties": {
+                    "termly": {
+                      "type": "integer"
+                    },
+                    "weekly": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "termly",
+                    "weekly"
+                  ]
+                },
+                "quotas": {
+                  "type": "object",
+                  "properties": {
+                    "opened": {
+                      "type": "integer"
+                    },
+                    "requested": {
+                      "type": "integer"
+                    },
+                    "reserved": {
+                      "type": "integer"
+                    }
+                  },
+                  "required": [
+                    "opened",
+                    "requested",
+                    "reserved"
+                  ]
+                },
+                "course": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "theory": {
+                      "type": "integer"
+                    },
+                    "practice": {
+                      "type": "integer"
+                    },
+                    "lab": {
+                      "type": "integer"
+                    },
+                    "type": {
+                      "type": "object",
+                      "properties": {
+                        "key": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "key",
+                        "title"
+                      ]
+                    },
+                    "language": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "code",
+                        "title"
+                      ]
+                    },
+                    "department": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "code": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "id",
+                        "code",
+                        "title"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "code",
+                    "title",
+                    "theory",
+                    "practice",
+                    "lab",
+                    "type",
+                    "language",
+                    "department"
+                  ]
+                },
+                "type": {
+                  "type": "object",
+                  "properties": {
+                    "key": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "key",
+                    "title"
+                  ]
+                },
+                "teacher": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "full_name": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "full_name"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "year",
+                "term",
+                "section",
+                "comment",
+                "hours",
+                "departments_codes",
+                "schedules",
+                "quotas",
+                "course",
+                "type",
+                "teacher"
+              ]
+            }
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "sections"
+        ],
         "x-examples": {
           "Example 1": {
             "total": 20,
@@ -2459,223 +2774,196 @@
             ]
           }
         },
-        "properties": {
-          "total": {
-            "type": "integer"
-          },
-          "from": {
-            "type": "integer"
-          },
-          "per_page": {
-            "type": "integer"
-          },
-          "current_page": {
-            "type": "integer"
-          },
-          "last_page": {
-            "type": "integer"
-          },
-          "sections": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "year": {
-                  "type": "integer"
-                },
-                "term": {
-                  "type": "integer"
-                },
-                "section": {
-                  "type": "string"
-                },
-                "comment": {
-                  "type": "string"
-                },
-                "hours": {
-                  "type": "integer"
-                },
-                "departments_codes": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "schedules": {
-                  "type": "object",
-                  "required": [
-                    "termly",
-                    "weekly"
-                  ],
-                  "properties": {
-                    "termly": {
-                      "type": "integer"
-                    },
-                    "weekly": {
-                      "type": "integer"
-                    }
-                  }
-                },
-                "quotas": {
-                  "type": "object",
-                  "required": [
-                    "opened",
-                    "requested",
-                    "reserved"
-                  ],
-                  "properties": {
-                    "opened": {
-                      "type": "integer"
-                    },
-                    "requested": {
-                      "type": "integer"
-                    },
-                    "reserved": {
-                      "type": "integer"
-                    }
-                  }
-                },
-                "course": {
-                  "type": "object",
-                  "required": [
-                    "code",
-                    "title",
-                    "theory",
-                    "practice",
-                    "lab",
-                    "type",
-                    "language",
-                    "department"
-                  ],
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "title": {
-                      "type": "string"
-                    },
-                    "theory": {
-                      "type": "integer"
-                    },
-                    "practice": {
-                      "type": "integer"
-                    },
-                    "lab": {
-                      "type": "integer"
-                    },
-                    "type": {
-                      "type": "object",
-                      "required": [
-                        "key",
-                        "title"
-                      ],
-                      "properties": {
-                        "key": {
-                          "type": "string"
-                        },
-                        "title": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "language": {
-                      "type": "object",
-                      "required": [
-                        "code",
-                        "title"
-                      ],
-                      "properties": {
-                        "code": {
-                          "type": "string"
-                        },
-                        "title": {
-                          "type": "string"
-                        }
-                      }
-                    },
-                    "department": {
-                      "type": "object",
-                      "required": [
-                        "id",
-                        "code",
-                        "title"
-                      ],
-                      "properties": {
-                        "id": {
-                          "type": "integer"
-                        },
-                        "code": {
-                          "type": "string"
-                        },
-                        "title": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                },
-                "type": {
-                  "type": "object",
-                  "required": [
-                    "key",
-                    "title"
-                  ],
-                  "properties": {
-                    "key": {
-                      "type": "string"
-                    },
-                    "title": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "teacher": {
-                  "type": "object",
-                  "required": [
-                    "id",
-                    "full_name"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "full_name": {
-                      "type": "string"
-                    }
-                  }
-                }
-              },
-              "required": [
-                "id",
-                "year",
-                "term",
-                "section",
-                "comment",
-                "hours",
-                "departments_codes",
-                "schedules",
-                "quotas",
-                "course",
-                "type",
-                "teacher"
-              ]
-            }
-          }
-        },
-        "required": [
-          "total",
-          "from",
-          "per_page",
-          "current_page",
-          "last_page",
-          "sections"
-        ]
+        "x-stoplight": {
+          "id": "pmbe7mcujfgm1"
+        }
       },
       "ScheduleManagementSingleSectionGetResponse": {
         "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "section": {
+            "type": "string"
+          },
+          "weeks": {
+            "type": "integer"
+          },
+          "hours": {
+            "type": "integer"
+          },
+          "quotas": {
+            "type": "integer"
+          },
+          "is_package": {
+            "type": "boolean"
+          },
+          "implementation_mode": {
+            "type": "string"
+          },
+          "comment": {
+            "type": "string"
+          },
+          "programs": {
+            "type": "integer"
+          },
+          "total_hours": {
+            "type": "integer"
+          },
+          "credits": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "key",
+              "title"
+            ]
+          },
+          "course": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "theory": {
+                "type": "integer"
+              },
+              "practice": {
+                "type": "integer"
+              },
+              "lab": {
+                "type": "integer"
+              },
+              "type": {
+                "type": "object",
+                "properties": {
+                  "key": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "key",
+                  "title"
+                ]
+              },
+              "language": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "code",
+                  "title"
+                ]
+              },
+              "department": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "id",
+                  "code",
+                  "title"
+                ]
+              }
+            },
+            "required": [
+              "code",
+              "title",
+              "theory",
+              "practice",
+              "lab",
+              "type",
+              "language",
+              "department"
+            ]
+          },
+          "teacher": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "full_name": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "full_name"
+            ]
+          },
+          "attendance_type": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "id",
+              "type"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "year",
+          "term",
+          "section",
+          "weeks",
+          "hours",
+          "quotas",
+          "is_package",
+          "implementation_mode",
+          "comment",
+          "programs",
+          "total_hours",
+          "credits",
+          "type",
+          "course",
+          "teacher",
+          "attendance_type"
+        ],
         "x-examples": {
           "Example 1": {
             "id": 48167,
@@ -2725,211 +3013,12 @@
             }
           }
         },
-        "properties": {
-          "id": {
-            "type": "integer"
-          },
-          "year": {
-            "type": "integer"
-          },
-          "term": {
-            "type": "integer"
-          },
-          "section": {
-            "type": "string"
-          },
-          "weeks": {
-            "type": "integer"
-          },
-          "hours": {
-            "type": "integer"
-          },
-          "quotas": {
-            "type": "integer"
-          },
-          "is_package": {
-            "type": "boolean"
-          },
-          "implementation_mode": {
-            "type": "string"
-          },
-          "comment": {
-            "type": "string"
-          },
-          "programs": {
-            "type": "integer"
-          },
-          "total_hours": {
-            "type": "integer"
-          },
-          "credits": {
-            "type": "integer"
-          },
-          "type": {
-            "type": "object",
-            "required": [
-              "key",
-              "title"
-            ],
-            "properties": {
-              "key": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              }
-            }
-          },
-          "course": {
-            "type": "object",
-            "required": [
-              "code",
-              "title",
-              "theory",
-              "practice",
-              "lab",
-              "type",
-              "language",
-              "department"
-            ],
-            "properties": {
-              "code": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "theory": {
-                "type": "integer"
-              },
-              "practice": {
-                "type": "integer"
-              },
-              "lab": {
-                "type": "integer"
-              },
-              "type": {
-                "type": "object",
-                "required": [
-                  "key",
-                  "title"
-                ],
-                "properties": {
-                  "key": {
-                    "type": "string"
-                  },
-                  "title": {
-                    "type": "string"
-                  }
-                }
-              },
-              "language": {
-                "type": "object",
-                "required": [
-                  "code",
-                  "title"
-                ],
-                "properties": {
-                  "code": {
-                    "type": "string"
-                  },
-                  "title": {
-                    "type": "string"
-                  }
-                }
-              },
-              "department": {
-                "type": "object",
-                "required": [
-                  "id",
-                  "code",
-                  "title"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "integer"
-                  },
-                  "code": {
-                    "type": "string"
-                  },
-                  "title": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "teacher": {
-            "type": "object",
-            "required": [
-              "id",
-              "full_name"
-            ],
-            "properties": {
-              "id": {
-                "type": "integer"
-              },
-              "full_name": {
-                "type": "string"
-              }
-            }
-          },
-          "attendance_type": {
-            "type": "object",
-            "required": [
-              "id",
-              "type"
-            ],
-            "properties": {
-              "id": {
-                "type": "integer"
-              },
-              "type": {
-                "type": "string"
-              }
-            }
-          }
-        },
-        "required": [
-          "id",
-          "year",
-          "term",
-          "section",
-          "weeks",
-          "hours",
-          "quotas",
-          "is_package",
-          "implementation_mode",
-          "comment",
-          "programs",
-          "total_hours",
-          "credits",
-          "type",
-          "course",
-          "teacher",
-          "attendance_type"
-        ]
+        "x-stoplight": {
+          "id": "mgqo3a1bh88yv"
+        }
       },
       "ScheduleManagementSingleSectionProgramsGetResponse": {
         "type": "array",
-        "x-examples": {
-          "Example 1": [
-            {
-              "id": 30326,
-              "title": "Proqram 1",
-              "start_date": "2023-01-25",
-              "end_date": "2023-05-03",
-              "is_main": true,
-              "schedules": {
-                "termly": 15,
-                "weekly": 1
-              },
-              "rooms": [
-                "E221 - [L.T. D2]"
-              ]
-            }
-          ]
-        },
         "items": {
           "type": "object",
           "properties": {
@@ -2950,10 +3039,6 @@
             },
             "schedules": {
               "type": "object",
-              "required": [
-                "termly",
-                "weekly"
-              ],
               "properties": {
                 "termly": {
                   "type": "integer"
@@ -2961,7 +3046,11 @@
                 "weekly": {
                   "type": "integer"
                 }
-              }
+              },
+              "required": [
+                "termly",
+                "weekly"
+              ]
             },
             "rooms": {
               "type": "array",
@@ -2979,18 +3068,31 @@
             "schedules",
             "rooms"
           ]
+        },
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 30326,
+              "title": "Proqram 1",
+              "start_date": "2023-01-25",
+              "end_date": "2023-05-03",
+              "is_main": true,
+              "schedules": {
+                "termly": 15,
+                "weekly": 1
+              },
+              "rooms": [
+                "E221 - [L.T. D2]"
+              ]
+            }
+          ]
+        },
+        "x-stoplight": {
+          "id": "5uyxxhyqu75fm"
         }
       },
       "ScheduleManagementSingleSectionProgramsPostRequest": {
         "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "title": "Program 1",
-            "is_main": true,
-            "start_date": "2023-01-23",
-            "end_date": "2023-05-13"
-          }
-        },
         "properties": {
           "title": {
             "type": "string"
@@ -3010,7 +3112,171 @@
           "is_main",
           "start_date",
           "end_date"
-        ]
+        ],
+        "x-examples": {
+          "Example 1": {
+            "title": "Program 1",
+            "is_main": true,
+            "start_date": "2023-01-23",
+            "end_date": "2023-05-13"
+          }
+        },
+        "x-stoplight": {
+          "id": "4u8eyepc92mnu"
+        }
+      },
+      "ScheduleManagement1Section1ProgramGetResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "start_date": {
+            "type": "string"
+          },
+          "end_date": {
+            "type": "string"
+          },
+          "is_main": {
+            "type": "boolean"
+          },
+          "schedules": {
+            "type": "object",
+            "properties": {
+              "termly": {
+                "type": "integer"
+              },
+              "weekly": {
+                "type": "integer"
+              }
+            },
+            "required": [
+              "termly",
+              "weekly"
+            ]
+          },
+          "has_schedules": {
+            "type": "boolean"
+          },
+          "rooms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "building": {
+                  "type": "string"
+                },
+                "room": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "id",
+                    "title",
+                    "code"
+                  ]
+                }
+              },
+              "required": [
+                "id",
+                "building",
+                "room",
+                "description",
+                "type"
+              ]
+            }
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "start_date",
+          "end_date",
+          "is_main",
+          "schedules",
+          "has_schedules",
+          "rooms"
+        ],
+        "x-examples": {
+          "Example 1": {
+            "id": 30326,
+            "title": "Proqram 1",
+            "start_date": "2023-01-25",
+            "end_date": "2023-05-03",
+            "is_main": true,
+            "schedules": {
+              "termly": 15,
+              "weekly": 1
+            },
+            "has_schedules": true,
+            "rooms": [
+              {
+                "id": 43,
+                "building": "LAW",
+                "room": "D101",
+                "description": "LAW 101",
+                "type": {
+                  "id": 1,
+                  "title": "Classroom",
+                  "code": "CLASS"
+                }
+              }
+            ]
+          }
+        },
+        "x-stoplight": {
+          "id": "3eb73edrr8d4t"
+        }
+      },
+      "ScheduleManagement1Section1ProgramPutRequest": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "start_date": {
+            "type": "string"
+          },
+          "end_date": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "start_date",
+          "end_date"
+        ],
+        "x-examples": {
+          "Example 1": {
+            "title": "Program 1",
+            "start_date": "2023-01-23",
+            "end_date": "2023-05-13"
+          }
+        },
+        "x-stoplight": {
+          "id": "bezsneokwiwt0"
+        }
       }
     }
   }
