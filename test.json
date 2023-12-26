@@ -1,0 +1,81 @@
+{
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "nk5w2tc0mrlcp"
+  },
+  "info": {
+    "title": "test",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/1.0.0/testMe": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TestMeResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-testMe",
+        "x-stoplight": {
+          "id": "n36b6g0behmht"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "ws3zqnzdp93tc"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "TestMeResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "id": 1,
+            "year": 2022,
+            "term": 1
+          }
+        }
+      }
+    }
+  }
+}
