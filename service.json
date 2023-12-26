@@ -1,7 +1,7 @@
 {
   "openapi": "3.0.0",
   "x-stoplight": {
-    "id": "5hfq56eadfv4c"
+    "id": "3zbyic8oqqnrv"
   },
   "info": {
     "title": "service",
@@ -31,7 +31,7 @@
         },
         "operationId": "get-1.0.0-service-manage-languages-resources",
         "x-stoplight": {
-          "id": "cu9nu10ndxyjk"
+          "id": "tlo2bqb0qbr48"
         },
         "requestBody": {
           "content": {
@@ -62,7 +62,7 @@
         },
         "operationId": "get-1.0.0-service-manage-locks",
         "x-stoplight": {
-          "id": "mjpsqdzj87ff9"
+          "id": "h2euo95k9hhnm"
         },
         "requestBody": {
           "content": {
@@ -83,7 +83,7 @@
           }
         },
         "x-stoplight": {
-          "id": "7lmr7sivhy5zd"
+          "id": "h10u9pwat6mfi"
         },
         "requestBody": {
           "content": {
@@ -106,7 +106,7 @@
           }
         },
         "x-stoplight": {
-          "id": "79o39qvjb7q8z"
+          "id": "9096rmwxqx3q6"
         },
         "requestBody": {
           "content": {
@@ -129,7 +129,7 @@
           }
         },
         "x-stoplight": {
-          "id": "2j0u6s5z8s0w5"
+          "id": "80cv6mjgrpzpj"
         },
         "requestBody": {
           "content": {
@@ -161,7 +161,7 @@
         },
         "operationId": "get-1.0.0-service-manage-languages-applicants",
         "x-stoplight": {
-          "id": "fz4sagh0ok26o"
+          "id": "3z06xp2nbavmy"
         },
         "requestBody": {
           "content": {
@@ -194,7 +194,7 @@
           }
         },
         "x-stoplight": {
-          "id": "9c01ubjlvca6x"
+          "id": "yrdvjkb3hxi0g"
         },
         "requestBody": {
           "content": {
@@ -217,7 +217,7 @@
           }
         },
         "x-stoplight": {
-          "id": "hj3sea3usf8tk"
+          "id": "rgimjuyvq3aoy"
         },
         "requestBody": {
           "content": {
@@ -248,7 +248,7 @@
         },
         "operationId": "get-1.0.0-service-manage-languages-students",
         "x-stoplight": {
-          "id": "ygsfzd2qjtcl7"
+          "id": "lt7owatskpzys"
         },
         "requestBody": {
           "content": {
@@ -281,7 +281,7 @@
           }
         },
         "x-stoplight": {
-          "id": "mexxsf0jsaoh4"
+          "id": "u2sqls61ukw7n"
         },
         "requestBody": {
           "content": {
@@ -304,7 +304,7 @@
           }
         },
         "x-stoplight": {
-          "id": "2w298a52xwkw9"
+          "id": "9gu012v58x6ps"
         },
         "requestBody": {
           "content": {
@@ -316,34 +316,47 @@
           }
         }
       }
+    },
+    "/1.0.0/service/manage/lock/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Lock management resources are successfully retrieved.",
+            "headers": {
+              "header-0": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "header-1": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceManageLockResourcesResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-service-manage-lock-resources",
+        "x-stoplight": {
+          "id": "i9w0tq2jd9rft"
+        },
+        "x-extension-1": null,
+        "x-extension-2": null,
+        "x-extension-3": null
+      }
     }
   },
   "components": {
     "schemas": {
-      "ServiceManageLanguagesResourcesRequest": {
-        "title": "ServiceManageLanguagesResourcesRequest",
-        "x-stoplight": {
-          "id": "4ouoz723t9sy4"
-        },
-        "type": "object",
-        "properties": {
-          "modules ": {
-            "type": "array",
-            "x-stoplight": {
-              "id": "0hlvybmutxwqe"
-            },
-            "items": {
-              "x-stoplight": {
-                "id": "dyoftr2j84yqa"
-              },
-              "type": "string"
-            }
-          }
-        },
-        "required": [
-          "modules "
-        ]
-      },
       "ServiceManageLanguagesResourcesResponse": {
         "type": "object",
         "x-examples": {
@@ -468,6 +481,33 @@
           "languages",
           "departments",
           "years"
+        ],
+        "x-stoplight": {
+          "id": "9r8odw170c61h"
+        }
+      },
+      "ServiceManageLanguagesResourcesRequest": {
+        "title": "ServiceManageLanguagesResourcesRequest",
+        "x-stoplight": {
+          "id": "ug08abds59poq"
+        },
+        "type": "object",
+        "properties": {
+          "modules ": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "0hlvybmutxwqe"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "dyoftr2j84yqa"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "modules "
         ]
       },
       "ServiceManageLocksGetRequest": {
@@ -523,7 +563,10 @@
           "offset",
           "department_id"
         ],
-        "title": ""
+        "title": "",
+        "x-stoplight": {
+          "id": "tstwva1kpbnit"
+        }
       },
       "ServiceManageLocksGetResponse": {
         "type": "object",
@@ -659,12 +702,15 @@
           "current_page",
           "last_page",
           "students"
-        ]
+        ],
+        "x-stoplight": {
+          "id": "6hwln6a66i8zl"
+        }
       },
       "ServiceManageLocksPostRequest": {
         "type": "object",
         "x-stoplight": {
-          "id": "ac351314d9431"
+          "id": "tlsgqoryet07i"
         },
         "x-examples": {
           "Example 1": {
@@ -722,12 +768,15 @@
             "is_active": true
           }
         },
-        "title": ""
+        "title": "",
+        "x-stoplight": {
+          "id": "fkufv2zbck6qc"
+        }
       },
       "ServiceManageLocksTogglePutResponse": {
         "title": "ServiceManageLocksTogglePutResponse",
         "x-stoplight": {
-          "id": "y8m2n7v47x7q8"
+          "id": "pbk6l5eu2lqw4"
         },
         "type": "object",
         "properties": {
@@ -764,19 +813,22 @@
             "end_date": "2023-06-30"
           }
         },
-        "title": ""
+        "title": "",
+        "x-stoplight": {
+          "id": "kyte1daun9j1e"
+        }
       },
       "ServiceManageLocksPostResponse": {
         "title": "ServiceManageLocksPostResponse",
         "x-stoplight": {
-          "id": "734yjhonybdyc"
+          "id": "1gxbq91n46o6e"
         },
         "type": "object"
       },
       "ServiceManageLanguagesSingleApplicantPutRequest": {
         "title": "ServiceManageLanguagesSingleApplicantPutRequest",
         "x-stoplight": {
-          "id": "3c1cfqce3ri2k"
+          "id": "acofx0vwdo43s"
         },
         "type": "object",
         "properties": {
@@ -791,7 +843,7 @@
       "ServiceManageLanguagesApplicantsGetRequest": {
         "title": "ServiceManageLanguagesApplicantsGetRequest",
         "x-stoplight": {
-          "id": "ghl9l9nfmgwff"
+          "id": "sk1jyeb57xzsn"
         },
         "type": "object",
         "properties": {
@@ -861,7 +913,7 @@
       "ServiceManageLanguagesApplicantsBulkPutRequest": {
         "type": "object",
         "x-stoplight": {
-          "id": "47c14a8b1ee5d"
+          "id": "axcsmgs73r06q"
         },
         "properties": {
           "applicants": {
@@ -996,12 +1048,15 @@
           "current_page",
           "last_page",
           "applicants"
-        ]
+        ],
+        "x-stoplight": {
+          "id": "y4nde7h3omqdc"
+        }
       },
       "ServiceManageLanguagesStudentsGetRequest": {
         "title": "ServiceManageLanguagesStudentsGetRequest",
         "x-stoplight": {
-          "id": "x8nzwbipshbz6"
+          "id": "l5r6rqxjp12vt"
         },
         "type": "object",
         "properties": {
@@ -1212,7 +1267,10 @@
           "current_page",
           "last_page",
           "students"
-        ]
+        ],
+        "x-stoplight": {
+          "id": "5oth75gmm2p4x"
+        }
       },
       "ServiceManageLanguagesSingleStudentPutRequest": {
         "type": "object",
@@ -1233,6 +1291,9 @@
             "level_id": 5,
             "completed": true
           }
+        },
+        "x-stoplight": {
+          "id": "siv04yqxkm336"
         }
       },
       "ServiceManageLanguagesStudentsBulkPutRequest": {
@@ -1263,6 +1324,69 @@
             "level_id": 5,
             "completed": true
           }
+        },
+        "x-stoplight": {
+          "id": "bgzcve4v8uhja"
+        }
+      },
+      "ServiceManageLockResourcesResponse": {
+        "type": "object",
+        "properties": {
+          "departments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "specialities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "departments": [
+              {
+                "code": "DEP_COMP_SCI",
+                "year": 2020,
+                "title": "Department of Computer Science"
+              }
+            ],
+            "specialities": [
+              {
+                "code": "10103",
+                "year": 2020,
+                "title": "Information Systems"
+              }
+            ]
+          }
+        },
+        "x-stoplight": {
+          "id": "q11tqx3tr7pgm"
         }
       }
     }
