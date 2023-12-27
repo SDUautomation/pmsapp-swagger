@@ -15472,7 +15472,18 @@
           "terms": {
             "type": "array",
             "items": {
-              "type": "integer"
+              "type": "object",
+              "properties": {
+                "term": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "y13fuiiniwisc"
+                  }
+                }
+              },
+              "required": [
+                "term"
+              ]
             }
           },
           "languages": {
