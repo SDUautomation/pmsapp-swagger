@@ -64,15 +64,6 @@
       }
     },
     "/1.0.0/academic/manage/courses": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {},
-        "operationId": "get-1.0.0-academic-manage-courses",
-        "x-stoplight": {
-          "id": "qotp0l3mn6zun"
-        }
-      },
       "post": {
         "summary": "",
         "operationId": "post-1.0.0-academic-manage-courses",
