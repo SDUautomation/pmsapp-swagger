@@ -1684,15 +1684,264 @@
       },
       "AcademicSingleStudentCurriculumGetResponse": {
         "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "information": {
+              "year": 2022,
+              "department": {
+                "id": 1,
+                "code": "DEP_HUMANITIES",
+                "title": "Department of Humanities"
+              },
+              "program": {
+                "code": "11107",
+                "year": 2022,
+                "type": "Major",
+                "title": "Mathematics",
+                "cipher": "5B011900",
+                "faculty": {
+                  "id": 1,
+                  "code": "DEP_HUMANITIES",
+                  "title": "Department of Humanities"
+                },
+                "education": {
+                  "language": {
+                    "code": "EN",
+                    "title": "English"
+                  },
+                  "type": {
+                    "id": 1,
+                    "title": "Formal"
+                  },
+                  "level": {
+                    "key": "B",
+                    "title": "Bachelor"
+                  }
+                },
+                "tracks": [
+                  {
+                    "type": "Major",
+                    "code": "TRACK0",
+                    "title": "Main Track",
+                    "terms": 8,
+                    "students": 368,
+                    "total_credits": 240
+                  }
+                ],
+                "post_degree_type": {
+                  "key": "DD",
+                  "title": "Double Diploma"
+                },
+                "duration_in_terms": 8
+              },
+              "track": {
+                "id": 1,
+                "type": "Major",
+                "title": "Main Track"
+              },
+              "terms": 8
+            },
+            "groups": [
+              {
+                "term": 1,
+                "items": [
+                  {
+                    "course_code": "INF 313",
+                    "title": "Computer networks 1",
+                    "theory": 1,
+                    "practice": "(0 + 0)",
+                    "credits": "3",
+                    "ects": 5,
+                    "requisite": "PR",
+                    "term": 4,
+                    "course_type": "C",
+                    "elective_type": "NAE",
+                    "details": [
+                      {
+                        "grade": 100,
+                        "letter_grade": "A",
+                        "course_status": 2
+                      }
+                    ],
+                    "references": [
+                      {
+                        "id": 1,
+                        "curriculum_id": 1,
+                        "course_code": "CSS 101",
+                        "course_title": "Physics 1",
+                        "equicode": "20174856",
+                        "reference_code": "CSS 111",
+                        "reference_title": "Physics 1",
+                        "type": "N",
+                        "is_active": true
+                      }
+                    ],
+                    "requisites": [
+                      {
+                        "id": 1009,
+                        "course_code": "CSS 671",
+                        "year": "2022",
+                        "type": "PR",
+                        "expr": "A+B",
+                        "cr_enabled": "2",
+                        "program_code": "11107",
+                        "track": "TRACK0"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "elective_sections": [
+              {
+                "area": [
+                  {
+                    "course_code": "XXX XXX",
+                    "title": "Elective (INF 324/CSS 417/CSS 345/INF 323/ INF 314/INF 376 /INF 328)",
+                    "theory": 2,
+                    "practice": "(1 + 0)",
+                    "credits": "3",
+                    "ects": 5,
+                    "term": 5,
+                    "elective_type": "AE",
+                    "details": [
+                      {
+                        "course_code": "INF 313",
+                        "grade": 100,
+                        "letter_grade": "A",
+                        "course_status": 2
+                      }
+                    ]
+                  }
+                ],
+                "non_area": [
+                  {
+                    "course_code": "XXX XXX",
+                    "title": "Elective (INF 324/CSS 417/CSS 345/INF 323/ INF 314/INF 376 /INF 328)",
+                    "theory": 2,
+                    "practice": "(1 + 0)",
+                    "credits": "3",
+                    "ects": 5,
+                    "term": 5,
+                    "elective_type": "AE",
+                    "details": [
+                      {
+                        "course_code": "INF 313",
+                        "grade": 100,
+                        "letter_grade": "A",
+                        "course_status": 2
+                      }
+                    ]
+                  }
+                ],
+                "non_theoretical": [
+                  {
+                    "course_code": "XXX XXX",
+                    "title": "Elective (INF 324/CSS 417/CSS 345/INF 323/ INF 314/INF 376 /INF 328)",
+                    "theory": 2,
+                    "practice": "(1 + 0)",
+                    "credits": "3",
+                    "ects": 5,
+                    "term": 5,
+                    "elective_type": "AE",
+                    "details": [
+                      {
+                        "course_code": "INF 313",
+                        "grade": 100,
+                        "letter_grade": "A",
+                        "course_status": 2
+                      }
+                    ]
+                  }
+                ],
+                "requisite_courses": [
+                  {
+                    "course_code": "XXX XXX",
+                    "title": "Elective (INF 324/CSS 417/CSS 345/INF 323/ INF 314/INF 376 /INF 328)",
+                    "theory": 2,
+                    "practice": "(1 + 0)",
+                    "credits": "3",
+                    "ects": 5,
+                    "term": 5,
+                    "elective_type": "AE",
+                    "details": [
+                      {
+                        "course_code": "INF 313",
+                        "grade": 100,
+                        "letter_grade": "A",
+                        "course_status": 2
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "references": [
+              {
+                "one_to_one": [
+                  {
+                    "id": 1,
+                    "curriculum_id": 1,
+                    "course_code": "CSS 101",
+                    "course_title": "Physics 1",
+                    "equicode": "20174856",
+                    "reference_code": "CSS 111",
+                    "reference_title": "Physics 1",
+                    "type": "N",
+                    "is_active": true
+                  }
+                ],
+                "one_to_many": [
+                  {
+                    "id": 1,
+                    "curriculum_id": 1,
+                    "course_code": "CSS 101",
+                    "course_title": "Physics 1",
+                    "equicode": "20174856",
+                    "reference_code": "CSS 111",
+                    "reference_title": "Physics 1",
+                    "type": "N",
+                    "is_active": true
+                  }
+                ],
+                "many_to_one": [
+                  {
+                    "id": 1,
+                    "curriculum_id": 1,
+                    "course_code": "CSS 101",
+                    "course_title": "Physics 1",
+                    "equicode": "20174856",
+                    "reference_code": "CSS 111",
+                    "reference_title": "Physics 1",
+                    "type": "N",
+                    "is_active": true
+                  }
+                ]
+              }
+            ]
+          }
+        },
         "properties": {
           "information": {
             "type": "object",
+            "required": [
+              "year",
+              "department",
+              "program",
+              "track",
+              "terms"
+            ],
             "properties": {
               "year": {
                 "type": "integer"
               },
               "department": {
                 "type": "object",
+                "required": [
+                  "id",
+                  "code",
+                  "title"
+                ],
                 "properties": {
                   "id": {
                     "type": "integer"
@@ -1707,6 +1956,18 @@
               },
               "program": {
                 "type": "object",
+                "required": [
+                  "code",
+                  "year",
+                  "type",
+                  "title",
+                  "cipher",
+                  "faculty",
+                  "education",
+                  "tracks",
+                  "post_degree_type",
+                  "duration_in_terms"
+                ],
                 "properties": {
                   "code": {
                     "type": "string"
@@ -1725,6 +1986,11 @@
                   },
                   "faculty": {
                     "type": "object",
+                    "required": [
+                      "id",
+                      "code",
+                      "title"
+                    ],
                     "properties": {
                       "id": {
                         "type": "integer"
@@ -1739,9 +2005,18 @@
                   },
                   "education": {
                     "type": "object",
+                    "required": [
+                      "language",
+                      "type",
+                      "level"
+                    ],
                     "properties": {
                       "language": {
                         "type": "object",
+                        "required": [
+                          "code",
+                          "title"
+                        ],
                         "properties": {
                           "code": {
                             "type": "string"
@@ -1753,6 +2028,10 @@
                       },
                       "type": {
                         "type": "object",
+                        "required": [
+                          "id",
+                          "title"
+                        ],
                         "properties": {
                           "id": {
                             "type": "integer"
@@ -1764,6 +2043,10 @@
                       },
                       "level": {
                         "type": "object",
+                        "required": [
+                          "key",
+                          "title"
+                        ],
                         "properties": {
                           "key": {
                             "type": "string"
@@ -1798,11 +2081,23 @@
                         "total_credits": {
                           "type": "integer"
                         }
-                      }
+                      },
+                      "required": [
+                        "type",
+                        "code",
+                        "title",
+                        "terms",
+                        "students",
+                        "total_credits"
+                      ]
                     }
                   },
                   "post_degree_type": {
                     "type": "object",
+                    "required": [
+                      "key",
+                      "title"
+                    ],
                     "properties": {
                       "key": {
                         "type": "string"
@@ -1819,6 +2114,11 @@
               },
               "track": {
                 "type": "object",
+                "required": [
+                  "id",
+                  "type",
+                  "title"
+                ],
                 "properties": {
                   "id": {
                     "type": "integer"
@@ -2299,243 +2599,13 @@
             }
           }
         },
-        "x-examples": {
-          "Example 1": {
-            "information": {
-              "year": 2022,
-              "department": {
-                "id": 1,
-                "code": "DEP_HUMANITIES",
-                "title": "Department of Humanities"
-              },
-              "program": {
-                "code": "11107",
-                "year": 2022,
-                "type": "Major",
-                "title": "Mathematics",
-                "cipher": "5B011900",
-                "faculty": {
-                  "id": 1,
-                  "code": "DEP_HUMANITIES",
-                  "title": "Department of Humanities"
-                },
-                "education": {
-                  "language": {
-                    "code": "EN",
-                    "title": "English"
-                  },
-                  "type": {
-                    "id": 1,
-                    "title": "Formal"
-                  },
-                  "level": {
-                    "key": "B",
-                    "title": "Bachelor"
-                  }
-                },
-                "tracks": [
-                  {
-                    "type": "Major",
-                    "code": "TRACK0",
-                    "title": "Main Track",
-                    "terms": 8,
-                    "students": 368,
-                    "total_credits": 240
-                  }
-                ],
-                "post_degree_type": {
-                  "key": "DD",
-                  "title": "Double Diploma"
-                },
-                "duration_in_terms": 8
-              },
-              "track": {
-                "id": 1,
-                "type": "Major",
-                "title": "Main Track"
-              },
-              "terms": 8
-            },
-            "groups": [
-              {
-                "term": 1,
-                "items": [
-                  {
-                    "course_code": "INF 313",
-                    "title": "Computer networks 1",
-                    "theory": 1,
-                    "practice": "(0 + 0)",
-                    "credits": "3",
-                    "ects": 5,
-                    "requisite": "PR",
-                    "term": 4,
-                    "course_type": "C",
-                    "elective_type": "NAE",
-                    "details": [
-                      {
-                        "grade": 100,
-                        "letter_grade": "A",
-                        "course_status": 2
-                      }
-                    ],
-                    "references": [
-                      {
-                        "id": 1,
-                        "curriculum_id": 1,
-                        "course_code": "CSS 101",
-                        "course_title": "Physics 1",
-                        "equicode": "20174856",
-                        "reference_code": "CSS 111",
-                        "reference_title": "Physics 1",
-                        "type": "N",
-                        "is_active": true
-                      }
-                    ],
-                    "requisites": [
-                      {
-                        "id": 1009,
-                        "course_code": "CSS 671",
-                        "year": "2022",
-                        "type": "PR",
-                        "expr": "A+B",
-                        "cr_enabled": "2",
-                        "program_code": "11107",
-                        "track": "TRACK0"
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "elective_sections": [
-              {
-                "area": [
-                  {
-                    "course_code": "XXX XXX",
-                    "title": "Elective (INF 324/CSS 417/CSS 345/INF 323/ INF 314/INF 376 /INF 328)",
-                    "theory": 2,
-                    "practice": "(1 + 0)",
-                    "credits": "3",
-                    "ects": 5,
-                    "term": 5,
-                    "elective_type": "AE",
-                    "details": [
-                      {
-                        "course_code": "INF 313",
-                        "grade": 100,
-                        "letter_grade": "A",
-                        "course_status": 2
-                      }
-                    ]
-                  }
-                ],
-                "non_area": [
-                  {
-                    "course_code": "XXX XXX",
-                    "title": "Elective (INF 324/CSS 417/CSS 345/INF 323/ INF 314/INF 376 /INF 328)",
-                    "theory": 2,
-                    "practice": "(1 + 0)",
-                    "credits": "3",
-                    "ects": 5,
-                    "term": 5,
-                    "elective_type": "AE",
-                    "details": [
-                      {
-                        "course_code": "INF 313",
-                        "grade": 100,
-                        "letter_grade": "A",
-                        "course_status": 2
-                      }
-                    ]
-                  }
-                ],
-                "non_theoretical": [
-                  {
-                    "course_code": "XXX XXX",
-                    "title": "Elective (INF 324/CSS 417/CSS 345/INF 323/ INF 314/INF 376 /INF 328)",
-                    "theory": 2,
-                    "practice": "(1 + 0)",
-                    "credits": "3",
-                    "ects": 5,
-                    "term": 5,
-                    "elective_type": "AE",
-                    "details": [
-                      {
-                        "course_code": "INF 313",
-                        "grade": 100,
-                        "letter_grade": "A",
-                        "course_status": 2
-                      }
-                    ]
-                  }
-                ],
-                "requisite_courses": [
-                  {
-                    "course_code": "XXX XXX",
-                    "title": "Elective (INF 324/CSS 417/CSS 345/INF 323/ INF 314/INF 376 /INF 328)",
-                    "theory": 2,
-                    "practice": "(1 + 0)",
-                    "credits": "3",
-                    "ects": 5,
-                    "term": 5,
-                    "elective_type": "AE",
-                    "details": [
-                      {
-                        "course_code": "INF 313",
-                        "grade": 100,
-                        "letter_grade": "A",
-                        "course_status": 2
-                      }
-                    ]
-                  }
-                ]
-              }
-            ],
-            "references": [
-              {
-                "one_to_one": [
-                  {
-                    "id": 1,
-                    "curriculum_id": 1,
-                    "course_code": "CSS 101",
-                    "course_title": "Physics 1",
-                    "equicode": "20174856",
-                    "reference_code": "CSS 111",
-                    "reference_title": "Physics 1",
-                    "type": "N",
-                    "is_active": true
-                  }
-                ],
-                "one_to_many": [
-                  {
-                    "id": 1,
-                    "curriculum_id": 1,
-                    "course_code": "CSS 101",
-                    "course_title": "Physics 1",
-                    "equicode": "20174856",
-                    "reference_code": "CSS 111",
-                    "reference_title": "Physics 1",
-                    "type": "N",
-                    "is_active": true
-                  }
-                ],
-                "many_to_one": [
-                  {
-                    "id": 1,
-                    "curriculum_id": 1,
-                    "course_code": "CSS 101",
-                    "course_title": "Physics 1",
-                    "equicode": "20174856",
-                    "reference_code": "CSS 111",
-                    "reference_title": "Physics 1",
-                    "type": "N",
-                    "is_active": true
-                  }
-                ]
-              }
-            ]
-          }
-        }
+        "required": [
+          "information",
+          "groups",
+          "elective_sections",
+          "references"
+        ],
+        "x-internal": false
       },
       "AcademicSingleStudentAccountingGetResponse": {
         "type": "array",
