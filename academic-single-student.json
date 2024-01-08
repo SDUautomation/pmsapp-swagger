@@ -1921,6 +1921,7 @@
             ]
           }
         },
+        "x-internal": false,
         "properties": {
           "information": {
             "type": "object",
@@ -2193,7 +2194,12 @@
                             "course_status": {
                               "type": "integer"
                             }
-                          }
+                          },
+                          "required": [
+                            "grade",
+                            "letter_grade",
+                            "course_status"
+                          ]
                         }
                       },
                       "references": {
@@ -2228,7 +2234,18 @@
                             "is_active": {
                               "type": "boolean"
                             }
-                          }
+                          },
+                          "required": [
+                            "id",
+                            "curriculum_id",
+                            "course_code",
+                            "course_title",
+                            "equicode",
+                            "reference_code",
+                            "reference_title",
+                            "type",
+                            "is_active"
+                          ]
                         }
                       },
                       "requisites": {
@@ -2260,13 +2277,42 @@
                             "track": {
                               "type": "string"
                             }
-                          }
+                          },
+                          "required": [
+                            "id",
+                            "course_code",
+                            "year",
+                            "type",
+                            "expr",
+                            "cr_enabled",
+                            "program_code",
+                            "track"
+                          ]
                         }
                       }
-                    }
+                    },
+                    "required": [
+                      "course_code",
+                      "title",
+                      "theory",
+                      "practice",
+                      "credits",
+                      "ects",
+                      "requisite",
+                      "term",
+                      "course_type",
+                      "elective_type",
+                      "details",
+                      "references",
+                      "requisites"
+                    ]
                   }
                 }
-              }
+              },
+              "required": [
+                "term",
+                "items"
+              ]
             }
           },
           "elective_sections": {
@@ -2320,10 +2366,27 @@
                             "course_status": {
                               "type": "integer"
                             }
-                          }
+                          },
+                          "required": [
+                            "course_code",
+                            "grade",
+                            "letter_grade",
+                            "course_status"
+                          ]
                         }
                       }
-                    }
+                    },
+                    "required": [
+                      "course_code",
+                      "title",
+                      "theory",
+                      "practice",
+                      "credits",
+                      "ects",
+                      "term",
+                      "elective_type",
+                      "details"
+                    ]
                   }
                 },
                 "non_area": {
@@ -2372,10 +2435,27 @@
                             "course_status": {
                               "type": "integer"
                             }
-                          }
+                          },
+                          "required": [
+                            "course_code",
+                            "grade",
+                            "letter_grade",
+                            "course_status"
+                          ]
                         }
                       }
-                    }
+                    },
+                    "required": [
+                      "course_code",
+                      "title",
+                      "theory",
+                      "practice",
+                      "credits",
+                      "ects",
+                      "term",
+                      "elective_type",
+                      "details"
+                    ]
                   }
                 },
                 "non_theoretical": {
@@ -2424,10 +2504,27 @@
                             "course_status": {
                               "type": "integer"
                             }
-                          }
+                          },
+                          "required": [
+                            "course_code",
+                            "grade",
+                            "letter_grade",
+                            "course_status"
+                          ]
                         }
                       }
-                    }
+                    },
+                    "required": [
+                      "course_code",
+                      "title",
+                      "theory",
+                      "practice",
+                      "credits",
+                      "ects",
+                      "term",
+                      "elective_type",
+                      "details"
+                    ]
                   }
                 },
                 "requisite_courses": {
@@ -2476,13 +2573,36 @@
                             "course_status": {
                               "type": "integer"
                             }
-                          }
+                          },
+                          "required": [
+                            "course_code",
+                            "grade",
+                            "letter_grade",
+                            "course_status"
+                          ]
                         }
                       }
-                    }
+                    },
+                    "required": [
+                      "course_code",
+                      "title",
+                      "theory",
+                      "practice",
+                      "credits",
+                      "ects",
+                      "term",
+                      "elective_type",
+                      "details"
+                    ]
                   }
                 }
-              }
+              },
+              "required": [
+                "area",
+                "non_area",
+                "non_theoretical",
+                "requisite_courses"
+              ]
             }
           },
           "references": {
@@ -2522,7 +2642,18 @@
                       "is_active": {
                         "type": "boolean"
                       }
-                    }
+                    },
+                    "required": [
+                      "id",
+                      "curriculum_id",
+                      "course_code",
+                      "course_title",
+                      "equicode",
+                      "reference_code",
+                      "reference_title",
+                      "type",
+                      "is_active"
+                    ]
                   }
                 },
                 "one_to_many": {
@@ -2557,7 +2688,18 @@
                       "is_active": {
                         "type": "boolean"
                       }
-                    }
+                    },
+                    "required": [
+                      "id",
+                      "curriculum_id",
+                      "course_code",
+                      "course_title",
+                      "equicode",
+                      "reference_code",
+                      "reference_title",
+                      "type",
+                      "is_active"
+                    ]
                   }
                 },
                 "many_to_one": {
@@ -2592,10 +2734,26 @@
                       "is_active": {
                         "type": "boolean"
                       }
-                    }
+                    },
+                    "required": [
+                      "id",
+                      "curriculum_id",
+                      "course_code",
+                      "course_title",
+                      "equicode",
+                      "reference_code",
+                      "reference_title",
+                      "type",
+                      "is_active"
+                    ]
                   }
                 }
-              }
+              },
+              "required": [
+                "one_to_one",
+                "one_to_many",
+                "many_to_one"
+              ]
             }
           }
         },
@@ -2604,8 +2762,7 @@
           "groups",
           "elective_sections",
           "references"
-        ],
-        "x-internal": false
+        ]
       },
       "AcademicSingleStudentAccountingGetResponse": {
         "type": "array",
