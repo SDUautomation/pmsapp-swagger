@@ -143,10 +143,17 @@
             "x-stoplight": {
               "id": "pzrf2x8br6ewo"
             }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "gv9s2kc28ftuu"
+            }
           }
         },
         "required": [
-          "code"
+          "code",
+          "year"
         ]
       },
       "AcademicManageCourseSearchResponse": {
