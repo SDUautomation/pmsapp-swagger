@@ -580,12 +580,18 @@
         },
         "properties": {
           "terms": {
-            "type": "object",
-            "properties": {
-              "term": {
-                "type": "integer",
-                "x-stoplight": {
-                  "id": "dqvbpetxnlv4q"
+            "type": "array",
+            "items": {
+              "x-stoplight": {
+                "id": "y2f8g1vzr70y8"
+              },
+              "type": "object",
+              "properties": {
+                "term": {
+                  "type": "number",
+                  "x-stoplight": {
+                    "id": "nqvxfhe6kxxb4"
+                  }
                 }
               }
             }
