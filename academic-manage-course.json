@@ -580,9 +580,14 @@
         },
         "properties": {
           "terms": {
-            "type": "array",
-            "items": {
-              "type": "integer"
+            "type": "object",
+            "properties": {
+              "term": {
+                "type": "integer",
+                "x-stoplight": {
+                  "id": "dqvbpetxnlv4q"
+                }
+              }
             }
           },
           "languages": {
