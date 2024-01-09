@@ -222,6 +222,48 @@
           },
           "type": {
             "type": "string"
+          },
+          "language": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "4thug2u9inct4"
+            }
+          },
+          "lab": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "ulrtl45nzgmzk"
+            }
+          },
+          "local_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "u8nl0e1v81enm"
+            }
+          },
+          "grading_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "vmny2htviumwv"
+            }
+          },
+          "description_en": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "q1eixargv7y6f"
+            }
+          },
+          "description_ru": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ki5e6yzvszfjs"
+            }
+          },
+          "description_kz": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "gr40z7co7w5hh"
+            }
           }
         },
         "required": [
@@ -239,7 +281,10 @@
           "credits",
           "ects",
           "equicode",
-          "type"
+          "type",
+          "language",
+          "lab",
+          "local_code"
         ]
       },
       "AcademicManageCoursePostRequest": {
