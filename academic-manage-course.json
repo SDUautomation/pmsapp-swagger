@@ -689,10 +689,13 @@
               ]
             }
           },
-          "course_prefix": {
+          "course_prefixes": {
             "type": "array",
             "items": {
               "type": "object",
+              "x-stoplight": {
+                "id": "welent58rge7j"
+              },
               "properties": {
                 "id": {
                   "type": "integer"
@@ -715,7 +718,7 @@
           "grading_types",
           "requisite_types",
           "consent_statuses",
-          "course_prefix"
+          "course_prefixes"
         ]
       }
     }
