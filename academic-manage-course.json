@@ -593,7 +593,10 @@
                     "id": "nqvxfhe6kxxb4"
                   }
                 }
-              }
+              },
+              "required": [
+                "term"
+              ]
             }
           },
           "languages": {
