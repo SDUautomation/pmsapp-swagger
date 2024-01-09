@@ -127,6 +127,28 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/manage/courses/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageCourseResourceResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-courses-resources",
+        "x-stoplight": {
+          "id": "sye4qvj7dmj0c"
+        }
+      }
     }
   },
   "components": {
@@ -510,6 +532,144 @@
           "course_code",
           "year"
         ]
+      },
+      "AcademicManageCourseResourceResponse": {
+        "type": "object",
+        "properties": {
+          "terms": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "grading_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "requisite_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "consent_statuses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "course_prefix": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "course_prefix": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "terms": [
+              1
+            ],
+            "languages": [
+              {
+                "code": "EN",
+                "title": "English"
+              }
+            ],
+            "types": [
+              {
+                "key": "N",
+                "title": "Normal"
+              }
+            ],
+            "grading_types": [
+              {
+                "key": "PNP",
+                "title": "pass-no-pass"
+              }
+            ],
+            "requisite_types": [
+              {
+                "key": "PR",
+                "title": "Pre-Requisite"
+              }
+            ],
+            "consent_statuses": [
+              {
+                "id": 1,
+                "title": "Not applicable"
+              }
+            ],
+            "course_prefix": [
+              {
+                "id": 1,
+                "course_prefix": "ACC"
+              }
+            ]
+          }
+        }
       }
     }
   }
