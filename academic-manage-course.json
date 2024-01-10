@@ -179,139 +179,135 @@
         ]
       },
       "AcademicManageCourseSearchResponse": {
-        "type": "object",
+        "type": "array",
         "x-examples": {
-          "Example 1": {
-            "code": "CSS 101",
-            "year": 2022,
-            "term": 1,
-            "title": "Introduction to Programming",
-            "title_kz": "Introduction to Programming",
-            "title_ru": "Introduction to Programming",
-            "title_en": "Introduction to Programming",
-            "department_code": "DEP_HUMANITIES",
-            "period_code": "S",
-            "theory": 1,
-            "practice": 1,
-            "credits": 1,
-            "ects": 1,
-            "equicode": 20120001,
-            "type": "N"
-          }
+          "Example 1": [
+            {
+              "code": "CSS 101",
+              "year": 2022,
+              "term": 1,
+              "title": "Introduction to Programming",
+              "title_kz": "Introduction to Programming",
+              "title_ru": "Introduction to Programming",
+              "title_en": "Introduction to Programming",
+              "department_code": "DEP_HUMANITIES",
+              "period_code": "S",
+              "theory": 1,
+              "practice": 1,
+              "credits": 1,
+              "ects": 1,
+              "equicode": 20120001,
+              "type": "N",
+              "local_code": "AGT 6308",
+              "lang_code": "KZ",
+              "grading_type": "N",
+              "description_en": "Some text",
+              "description_kz": "Бір текст",
+              "description_ru": "Какой-то текст"
+            }
+          ]
         },
-        "properties": {
-          "code": {
-            "type": "string"
-          },
-          "year": {
-            "type": "integer"
-          },
-          "term": {
-            "type": "integer"
-          },
-          "title": {
-            "type": "string"
-          },
-          "title_kz": {
-            "type": "string"
-          },
-          "title_ru": {
-            "type": "string"
-          },
-          "title_en": {
-            "type": "string"
-          },
-          "department_code": {
-            "type": "string"
-          },
-          "period_code": {
-            "type": "string"
-          },
-          "theory": {
-            "type": "integer"
-          },
-          "practice": {
-            "type": "integer"
-          },
-          "credits": {
-            "type": "integer"
-          },
-          "ects": {
-            "type": "integer"
-          },
-          "equicode": {
-            "type": "integer"
-          },
-          "type": {
-            "type": "string"
-          },
-          "language": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "4thug2u9inct4"
+        "items": {
+          "type": "object",
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "year": {
+              "type": "integer"
+            },
+            "term": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "title_kz": {
+              "type": "string"
+            },
+            "title_ru": {
+              "type": "string"
+            },
+            "title_en": {
+              "type": "string"
+            },
+            "department_code": {
+              "type": "string"
+            },
+            "period_code": {
+              "type": "string"
+            },
+            "theory": {
+              "type": "integer"
+            },
+            "practice": {
+              "type": "integer"
+            },
+            "credits": {
+              "type": "integer"
+            },
+            "ects": {
+              "type": "integer"
+            },
+            "equicode": {
+              "type": "integer"
+            },
+            "type": {
+              "type": "string"
+            },
+            "local_code": {
+              "type": "string"
+            },
+            "language": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "5js4078bq89b4"
+              }
+            },
+            "grading_type": {
+              "type": "string"
+            },
+            "description_en": {
+              "type": "string"
+            },
+            "description_kz": {
+              "type": "string"
+            },
+            "description_ru": {
+              "type": "string"
+            },
+            "lab": {
+              "type": "number",
+              "x-stoplight": {
+                "id": "z2bjz2we5b0ot"
+              }
             }
           },
-          "lab": {
-            "type": "number",
-            "x-stoplight": {
-              "id": "ulrtl45nzgmzk"
-            }
-          },
-          "local_code": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "u8nl0e1v81enm"
-            }
-          },
-          "grading_type": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "vmny2htviumwv"
-            }
-          },
-          "description_en": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "q1eixargv7y6f"
-            }
-          },
-          "description_ru": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "ki5e6yzvszfjs"
-            }
-          },
-          "description_kz": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "gr40z7co7w5hh"
-            }
-          }
-        },
-        "required": [
-          "code",
-          "year",
-          "term",
-          "title",
-          "title_kz",
-          "title_ru",
-          "title_en",
-          "department_code",
-          "period_code",
-          "theory",
-          "practice",
-          "credits",
-          "ects",
-          "equicode",
-          "type",
-          "language",
-          "lab",
-          "local_code",
-          "grading_type",
-          "description_en",
-          "description_ru",
-          "description_kz"
-        ]
+          "required": [
+            "code",
+            "year",
+            "term",
+            "title",
+            "title_kz",
+            "title_ru",
+            "title_en",
+            "department_code",
+            "period_code",
+            "theory",
+            "practice",
+            "credits",
+            "ects",
+            "equicode",
+            "type",
+            "local_code",
+            "language",
+            "grading_type",
+            "description_en",
+            "description_kz",
+            "description_ru",
+            "lab"
+          ]
+        }
       },
       "AcademicManageCoursePostRequest": {
         "type": "object",
