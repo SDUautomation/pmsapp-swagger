@@ -149,6 +149,30 @@
           "id": "sye4qvj7dmj0c"
         }
       }
+    },
+    "/1.0.0/academic/manage/courses/requisites/items": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-courses-requisites",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "i3b16xp3ovt98"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCourseRequisiteItemPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "parameters": []
     }
   },
   "components": {
@@ -716,6 +740,47 @@
           "consent_statuses",
           "course_prefixes"
         ]
+      },
+      "AcademicManageCourseRequisiteItemPostRequest": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "d4a4ad627aff6"
+        },
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 105",
+            "course_year": 2022,
+            "requisite_type": "AR",
+            "item_code": "CSS 356",
+            "item_year": 2022
+          }
+        },
+        "x-internal": false,
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "course_year": {
+            "type": "integer"
+          },
+          "requisite_type": {
+            "type": "string"
+          },
+          "item_code": {
+            "type": "string"
+          },
+          "item_year": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "course_code",
+          "course_year",
+          "requisite_type",
+          "item_code",
+          "item_year"
+        ],
+        "title": "AcademicManageCourseRequisiteItemPostRequest"
       }
     }
   }
