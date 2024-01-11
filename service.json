@@ -37,7 +37,6 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/ServiceManageLanguagesResourcesRequest"
               }
             }
           }
@@ -486,30 +485,6 @@
           "id": "9r8odw170c61h"
         }
       },
-      "ServiceManageLanguagesResourcesRequest": {
-        "title": "ServiceManageLanguagesResourcesRequest",
-        "x-stoplight": {
-          "id": "ug08abds59poq"
-        },
-        "type": "object",
-        "properties": {
-          "modules ": {
-            "type": "array",
-            "x-stoplight": {
-              "id": "0hlvybmutxwqe"
-            },
-            "items": {
-              "x-stoplight": {
-                "id": "dyoftr2j84yqa"
-              },
-              "type": "string"
-            }
-          }
-        },
-        "required": [
-          "modules "
-        ]
-      },
       "ServiceManageLocksGetRequest": {
         "type": "object",
         "x-examples": {
@@ -908,7 +883,8 @@
           "entrance_year",
           "per_page",
           "offset"
-        ]
+        ],
+        "description": ""
       },
       "ServiceManageLanguagesApplicantsBulkPutRequest": {
         "type": "object",
