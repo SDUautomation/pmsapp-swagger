@@ -37,11 +37,14 @@
           "content": {
             "application/json": {
               "schema": {
-              }
+                "type": "object"
+              },
+              "examples": {}
             }
           }
         }
-      }
+      },
+      "parameters": []
     },
     "/1.0.0/service/manage/locks": {
       "get": {
@@ -483,7 +486,9 @@
         ],
         "x-stoplight": {
           "id": "9r8odw170c61h"
-        }
+        },
+        "title": "",
+        "x-internal": false
       },
       "ServiceManageLocksGetRequest": {
         "type": "object",
@@ -1270,7 +1275,8 @@
         },
         "x-stoplight": {
           "id": "siv04yqxkm336"
-        }
+        },
+        "title": ""
       },
       "ServiceManageLanguagesStudentsBulkPutRequest": {
         "type": "object",
@@ -1377,6 +1383,30 @@
         "required": [
           "departments",
           "specialities"
+        ]
+      },
+      "ServiceManageLanguagesResourceRequest": {
+        "title": "ServiceManageLanguagesResourceRequest",
+        "x-stoplight": {
+          "id": "jp0ae2bub4vxs"
+        },
+        "type": "object",
+        "properties": {
+          "modules ": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "gurgctmls40np"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "vj8ionnm31bn8"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "modules "
         ]
       }
     }
