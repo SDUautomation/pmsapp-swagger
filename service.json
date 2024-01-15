@@ -15,7 +15,7 @@
   "paths": {
     "/1.0.0/service/manage/languages/resources": {
       "get": {
-        "summary": "Your GET endpoint",
+        "summary": "getServiceManageLanguagesResources",
         "tags": [],
         "responses": {
           "200": {
