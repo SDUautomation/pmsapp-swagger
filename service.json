@@ -238,7 +238,7 @@
         "tags": [],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Students are successfully retrieved.",
             "content": {
               "application/json": {
                 "schema": {
