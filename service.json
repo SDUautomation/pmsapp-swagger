@@ -816,9 +816,6 @@
           }
         },
         "properties": {
-          "applicant": {
-            "type": "string"
-          },
           "language": {
             "type": "string"
           },
@@ -830,7 +827,6 @@
           }
         },
         "required": [
-          "applicant",
           "language",
           "level_id",
           "completed"
@@ -1282,12 +1278,6 @@
           "id": "siv04yqxkm336"
         },
         "properties": {
-          "student": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "r05m4jtvbmmwu"
-            }
-          },
           "language": {
             "type": "string"
           },
@@ -1299,7 +1289,6 @@
           }
         },
         "required": [
-          "student",
           "language",
           "level_id",
           "completed"
