@@ -331,6 +331,44 @@
           }
         }
       }
+    },
+    "/1.0.0/manage/rules-and-regulations/{rule}/publish": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "rule",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "rule",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "put-1.0.0-manage-rules-and-regulations-rule-publish",
+        "x-stoplight": {
+          "id": "w8g24m0srh9f4"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RarEditorRulesPublishPutRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1083,7 +1121,7 @@
             "type": "string"
           },
           "image": {
-            "type": "string"
+            "type": "object"
           }
         },
         "required": [
@@ -1324,6 +1362,24 @@
         },
         "required": [
           "modules"
+        ]
+      },
+      "RarEditorRulesPublishPutRequest": {
+        "title": "RarEditorRulesPublishPutRequest",
+        "x-stoplight": {
+          "id": "8dwg790njdydp"
+        },
+        "type": "object",
+        "properties": {
+          "published": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "23mih8xzx6kbf"
+            }
+          }
+        },
+        "required": [
+          "published"
         ]
       }
     }
