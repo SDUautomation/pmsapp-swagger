@@ -806,19 +806,35 @@
         "type": "object"
       },
       "ServiceManageLanguagesSingleApplicantPutRequest": {
-        "title": "ServiceManageLanguagesSingleApplicantPutRequest",
-        "x-stoplight": {
-          "id": "acofx0vwdo43s"
-        },
         "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "applicant": "23421",
+            "language": "EN",
+            "level_id": 5,
+            "completed": true
+          }
+        },
         "properties": {
           "applicant": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "vua9bygk21hl6"
-            }
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "level_id": {
+            "type": "integer"
+          },
+          "completed": {
+            "type": "boolean"
           }
-        }
+        },
+        "required": [
+          "applicant",
+          "language",
+          "level_id",
+          "completed"
+        ]
       },
       "ServiceManageLanguagesApplicantsGetRequest": {
         "title": "ServiceManageLanguagesApplicantsGetRequest",
@@ -1255,17 +1271,6 @@
       },
       "ServiceManageLanguagesSingleStudentPutRequest": {
         "type": "object",
-        "properties": {
-          "language": {
-            "type": "string"
-          },
-          "level_id": {
-            "type": "integer"
-          },
-          "completed": {
-            "type": "boolean"
-          }
-        },
         "x-examples": {
           "Example 1": {
             "language": "EN",
@@ -1276,7 +1281,29 @@
         "x-stoplight": {
           "id": "siv04yqxkm336"
         },
-        "title": ""
+        "properties": {
+          "student": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "r05m4jtvbmmwu"
+            }
+          },
+          "language": {
+            "type": "string"
+          },
+          "level_id": {
+            "type": "integer"
+          },
+          "completed": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "student",
+          "language",
+          "level_id",
+          "completed"
+        ]
       },
       "ServiceManageLanguagesStudentsBulkPutRequest": {
         "type": "object",
