@@ -341,14 +341,6 @@
           "name": "rule",
           "in": "path",
           "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "rule",
-          "in": "path",
-          "required": true
         }
       ],
       "put": {
