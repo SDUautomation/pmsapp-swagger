@@ -371,6 +371,24 @@
               "x-stoplight": {
                 "id": "z2bjz2we5b0ot"
               }
+            },
+            "ar_requisite": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "kj4jevqlhln1f"
+              }
+            },
+            "pr_requisite": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "1jpyt7aw8sugr"
+              }
+            },
+            "cr_requisite": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "r97012ocji87u"
+              }
             }
           },
           "required": [
@@ -395,7 +413,10 @@
             "description_en",
             "description_kz",
             "description_ru",
-            "lab"
+            "lab",
+            "ar_requisite",
+            "pr_requisite",
+            "cr_requisite"
           ]
         }
       },
