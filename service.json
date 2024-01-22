@@ -950,14 +950,24 @@
               {
                 "id": 40,
                 "full_name": "Zhandos Saparbayev",
-                "program_code": "10103",
-                "languages": [
+                "entrance_year": "2020",
+                "language": [
                   {
                     "id": 4,
                     "language_code": "EN",
                     "code": "B2",
                     "title": "Upper-Intermediate",
                     "completed": true
+                  }
+                ],
+                "speciality": [
+                  {
+                    "program_code": "10103",
+                    "language": "English",
+                    "speciality_code": "6B06101",
+                    "title": "Information Systems",
+                    "department_id": 1051,
+                    "terms": 8
                   }
                 ]
               }
@@ -991,10 +1001,10 @@
                 "full_name": {
                   "type": "string"
                 },
-                "program_code": {
+                "entrance_year": {
                   "type": "string"
                 },
-                "languages": {
+                "language": {
                   "type": "array",
                   "items": {
                     "type": "object",
@@ -1023,13 +1033,48 @@
                       "completed"
                     ]
                   }
+                },
+                "speciality": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "program_code": {
+                        "type": "string"
+                      },
+                      "language": {
+                        "type": "string"
+                      },
+                      "speciality_code": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "department_id": {
+                        "type": "integer"
+                      },
+                      "terms": {
+                        "type": "integer"
+                      }
+                    },
+                    "required": [
+                      "program_code",
+                      "language",
+                      "speciality_code",
+                      "title",
+                      "department_id",
+                      "terms"
+                    ]
+                  }
                 }
               },
               "required": [
                 "id",
                 "full_name",
-                "program_code",
-                "languages"
+                "entrance_year",
+                "language",
+                "speciality"
               ]
             }
           }
@@ -1041,10 +1086,7 @@
           "current_page",
           "last_page",
           "applicants"
-        ],
-        "x-stoplight": {
-          "id": "y4nde7h3omqdc"
-        }
+        ]
       },
       "ServiceManageLanguagesStudentsGetRequest": {
         "title": "ServiceManageLanguagesStudentsGetRequest",
