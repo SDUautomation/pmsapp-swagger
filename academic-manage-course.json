@@ -216,6 +216,29 @@
         }
       },
       "parameters": []
+    },
+    "/1.0.0/academic/manage/courses/description": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-courses-description",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "x90vpndkntyrw"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCourseDescriptionPostRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -940,6 +963,42 @@
           "item_year"
         ],
         "title": "AcademicManageCourseRequisiteItemPostRequest"
+      },
+      "AcademicManageCourseDescriptionPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "code": "CSS 105",
+            "year": 2022,
+            "description_en": "Some description about Course",
+            "description_ru": "Какая то информация о курсе",
+            "description_kz": "Курс туралы ақпарат"
+          }
+        },
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "description_en": {
+            "type": "string"
+          },
+          "description_ru": {
+            "type": "string"
+          },
+          "description_kz": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "year",
+          "description_en",
+          "description_ru",
+          "description_kz"
+        ]
       }
     }
   }
