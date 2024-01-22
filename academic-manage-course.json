@@ -150,6 +150,49 @@
         }
       }
     },
+    "/1.0.0/academic/manage/courses/requisites": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageCourseRequisiteGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-courses-requisites",
+        "x-stoplight": {
+          "id": "2y8iv5lr1hekb"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCourseRequisiteGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-courses-requisites",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "2xprt82d3s26b"
+        }
+      }
+    },
     "/1.0.0/academic/manage/courses/requisites/items": {
       "post": {
         "summary": "",
@@ -739,6 +782,122 @@
           "requisite_types",
           "consent_statuses",
           "course_prefixes"
+        ]
+      },
+      "AcademicManageCourseRequisiteGetRequest": {
+        "title": "AcademicManageCourseRequisiteGetRequest",
+        "x-stoplight": {
+          "id": "8uw5kywvc2g3d"
+        },
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "f480v026dbwmt"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "oihro82rwibr7"
+            }
+          },
+          "program_code": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "l0fhuy5iue993"
+            }
+          }
+        }
+      },
+      "AcademicManageCourseRequisiteGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 1,
+            "program_code": "10304",
+            "type": "PR",
+            "cr_enabled": true,
+            "expression": "A+B",
+            "requisite": "CSS 101 and CSS 107"
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "program_code": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "cr_enabled": {
+            "type": "boolean"
+          },
+          "expression": {
+            "type": "string"
+          },
+          "requisite": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "program_code",
+          "type",
+          "cr_enabled",
+          "expression",
+          "requisite"
+        ]
+      },
+      "AcademicManageCourseRequisitePostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 1,
+            "course_code": "CSS 101",
+            "year": 2022,
+            "type": "PR",
+            "expression": "A+B",
+            "cr_enabled": true,
+            "track": "10107.CS",
+            "program_code": "10293"
+          }
+        },
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string"
+          },
+          "expression": {
+            "type": "string"
+          },
+          "cr_enabled": {
+            "type": "boolean"
+          },
+          "track": {
+            "type": "string"
+          },
+          "program_code": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "type",
+          "expression",
+          "cr_enabled"
         ]
       },
       "AcademicManageCourseRequisiteItemPostRequest": {
