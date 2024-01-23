@@ -353,7 +353,25 @@
         },
         "x-extension-1": null,
         "x-extension-2": null,
-        "x-extension-3": null
+        "x-extension-3": null,
+        "x-extension-4": null,
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceManageLocksResourceRequest"
+              },
+              "examples": {
+                "Example 1": {
+                  "value": {}
+                },
+                "Example 2": {
+                  "value": {}
+                }
+              }
+            }
+          }
+        }
       }
     }
   },
@@ -1464,8 +1482,9 @@
           "id": "jp0ae2bub4vxs"
         },
         "type": "object",
+        "x-internal": false,
         "properties": {
-          "modules ": {
+          "modules": {
             "type": "array",
             "x-stoplight": {
               "id": "gurgctmls40np"
@@ -1479,9 +1498,29 @@
           }
         },
         "required": [
-          "modules "
-        ],
-        "x-internal": false
+          "modules"
+        ]
+      },
+      "ServiceManageLocksResourceRequest": {
+        "title": "ServiceManageLocksResourceRequest",
+        "x-stoplight": {
+          "id": "ihtzxsicto095"
+        },
+        "type": "object",
+        "properties": {
+          "modules": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "4ix0f6hoevlvq"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "svhblpjchl09a"
+              },
+              "type": "string"
+            }
+          }
+        }
       }
     }
   }
