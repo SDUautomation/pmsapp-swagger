@@ -13,56 +13,6 @@
     }
   ],
   "paths": {
-    "/1.0.0/academic/manage/courses/search": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AcademicManageCourseSearchResponse",
-                  "x-examples": {
-                    "Example 1": {
-                      "code": "CSS 101",
-                      "year": 2022,
-                      "term": 1,
-                      "title": "Introduction to Programming",
-                      "title_kz": "Introduction to Programming",
-                      "title_ru": "Introduction to Programming",
-                      "title_en": "Introduction to Programming",
-                      "department_code": "DEP_HUMANITIES",
-                      "period_code": "S",
-                      "theory": 1,
-                      "practice": 1,
-                      "credits": 1,
-                      "ects": 1,
-                      "equicode": 20120001,
-                      "type": "N"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-1.0.0-academic-manage-courses-search",
-        "x-stoplight": {
-          "id": "ct4ub785a5jav"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AcademicManageCourseSearchRequest"
-              }
-            }
-          }
-        }
-      }
-    },
     "/1.0.0/academic/manage/courses": {
       "post": {
         "summary": "",
@@ -128,6 +78,56 @@
         }
       }
     },
+    "/1.0.0/academic/manage/courses/search": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageCourseSearchResponse",
+                  "x-examples": {
+                    "Example 1": {
+                      "code": "CSS 101",
+                      "year": 2022,
+                      "term": 1,
+                      "title": "Introduction to Programming",
+                      "title_kz": "Introduction to Programming",
+                      "title_ru": "Introduction to Programming",
+                      "title_en": "Introduction to Programming",
+                      "department_code": "DEP_HUMANITIES",
+                      "period_code": "S",
+                      "theory": 1,
+                      "practice": 1,
+                      "credits": 1,
+                      "ects": 1,
+                      "equicode": 20120001,
+                      "type": "N"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-courses-search",
+        "x-stoplight": {
+          "id": "ct4ub785a5jav"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCourseSearchRequest"
+              }
+            }
+          }
+        }
+      }
+    },
     "/1.0.0/academic/manage/courses/resources": {
       "get": {
         "summary": "Your GET endpoint",
@@ -147,6 +147,29 @@
         "operationId": "get-1.0.0-academic-manage-courses-resources",
         "x-stoplight": {
           "id": "sye4qvj7dmj0c"
+        }
+      }
+    },
+    "/1.0.0/academic/manage/courses/description": {
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-manage-courses-description",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "x-stoplight": {
+          "id": "x90vpndkntyrw"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCourseDescriptionPostRequest"
+              }
+            }
+          }
         }
       }
     },
@@ -190,10 +213,48 @@
         },
         "x-stoplight": {
           "id": "2xprt82d3s26b"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCourseRequisitePostRequest"
+              }
+            }
+          }
         }
       }
     },
     "/1.0.0/academic/manage/courses/requisites/items": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageCourseRequisiteItemsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-courses-requisites-items",
+        "x-stoplight": {
+          "id": "vy29vz2yfgnsu"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCourseRequisiteItemsGetRequest"
+              }
+            }
+          }
+        }
+      },
       "post": {
         "summary": "",
         "operationId": "post-1.0.0-academic-manage-courses-requisites",
@@ -217,26 +278,64 @@
       },
       "parameters": []
     },
-    "/1.0.0/academic/manage/courses/description": {
-      "post": {
-        "summary": "",
-        "operationId": "post-1.0.0-academic-manage-courses-description",
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
+    "/1.0.0/academic/manage/courses/requisites/{requisite}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "requisite",
+          "in": "path",
+          "required": true
         },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "requisite",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "delete": {
+        "summary": "Your DELETE endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "delete-1.0.0-academic-manage-courses-requisites-requisite",
         "x-stoplight": {
-          "id": "x90vpndkntyrw"
+          "id": "drwsqszp3q779"
         },
         "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AcademicManageCourseDescriptionPostRequest"
-              }
-            }
-          }
+          "content": {}
+        }
+      }
+    },
+    "/1.0.0/academic/manage/courses/requisites/items/{item}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "item",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "item",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "delete": {
+        "summary": "Your DELETE endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "delete-1.0.0-academic-manage-courses-requisites-items-item",
+        "x-stoplight": {
+          "id": "3e7ggw43wqu80"
         }
       }
     }
@@ -828,6 +927,42 @@
           "course_prefixes"
         ]
       },
+      "AcademicManageCourseDescriptionPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "code": "CSS 105",
+            "year": 2022,
+            "description_en": "Some description about Course",
+            "description_ru": "Какая то информация о курсе",
+            "description_kz": "Курс туралы ақпарат"
+          }
+        },
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "description_en": {
+            "type": "string"
+          },
+          "description_ru": {
+            "type": "string"
+          },
+          "description_kz": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "year",
+          "description_en",
+          "description_ru",
+          "description_kz"
+        ]
+      },
       "AcademicManageCourseRequisiteGetRequest": {
         "title": "AcademicManageCourseRequisiteGetRequest",
         "x-stoplight": {
@@ -851,6 +986,12 @@
             "type": "number",
             "x-stoplight": {
               "id": "l0fhuy5iue993"
+            }
+          },
+          "requisite_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "mq92e9zqcdmkg"
             }
           }
         }
@@ -878,13 +1019,51 @@
             "type": "string"
           },
           "cr_enabled": {
-            "type": "boolean"
+            "type": "number"
           },
           "expression": {
             "type": "string"
           },
           "requisite": {
             "type": "string"
+          },
+          "additional_info": {
+            "type": "object",
+            "x-stoplight": {
+              "id": "0ubjtyy2vou53"
+            },
+            "required": [
+              "program_code",
+              "speciality",
+              "requisite_expression",
+              "consent_status"
+            ],
+            "properties": {
+              "program_code": {
+                "type": "number",
+                "x-stoplight": {
+                  "id": "ujigh2iv0bff4"
+                }
+              },
+              "speciality": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "5k2kdin5gdg5p"
+                }
+              },
+              "requisite_expression": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "h25dy25jgg8lh"
+                }
+              },
+              "consent_status": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "h4z9y7bj1obqn"
+                }
+              }
+            }
           }
         },
         "required": [
@@ -893,7 +1072,8 @@
           "type",
           "cr_enabled",
           "expression",
-          "requisite"
+          "requisite",
+          "additional_info"
         ]
       },
       "AcademicManageCourseRequisitePostRequest": {
@@ -985,40 +1165,87 @@
         ],
         "title": "AcademicManageCourseRequisiteItemPostRequest"
       },
-      "AcademicManageCourseDescriptionPostRequest": {
+      "AcademicManageCourseRequisiteItemsGetRequest": {
+        "title": "AcademicManageCourseRequisiteItemsGetRequest",
+        "x-stoplight": {
+          "id": "iz3kdn76tal7e"
+        },
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "6t3xqihmcq4mz"
+            }
+          },
+          "course_year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "5h1la1wi2wwmm"
+            }
+          },
+          "requisite_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "wfaz0hg2xe6ob"
+            }
+          }
+        }
+      },
+      "AcademicManageCourseRequisiteItemsGetResponse": {
         "type": "object",
         "x-examples": {
           "Example 1": {
-            "code": "CSS 105",
+            "id": 1,
+            "requisite_id": 1,
+            "type": "PR",
+            "expression": "A+B",
+            "cr_enabled": true,
+            "course_code": "CSS 101",
             "year": 2022,
-            "description_en": "Some description about Course",
-            "description_ru": "Какая то информация о курсе",
-            "description_kz": "Курс туралы ақпарат"
+            "key": "A",
+            "title": "Algorithms and Programming"
           }
         },
         "properties": {
-          "code": {
+          "id": {
+            "type": "integer"
+          },
+          "requisite_id": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string"
+          },
+          "expression": {
+            "type": "string"
+          },
+          "cr_enabled": {
+            "type": "number"
+          },
+          "course_code": {
             "type": "string"
           },
           "year": {
             "type": "integer"
           },
-          "description_en": {
+          "key": {
             "type": "string"
           },
-          "description_ru": {
-            "type": "string"
-          },
-          "description_kz": {
+          "title": {
             "type": "string"
           }
         },
         "required": [
-          "code",
+          "id",
+          "requisite_id",
+          "type",
+          "expression",
+          "cr_enabled",
+          "course_code",
           "year",
-          "description_en",
-          "description_ru",
-          "description_kz"
+          "key",
+          "title"
         ]
       }
     }
