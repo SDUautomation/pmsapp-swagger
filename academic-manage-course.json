@@ -223,6 +223,32 @@
             }
           }
         }
+      },
+      "delete": {
+        "summary": "Your DELETE endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "delete-1.0.0-academic-manage-courses-requisites",
+        "x-stoplight": {
+          "id": "grw52ceo43tp1"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "item": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "256pi2hasnjnu"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/1.0.0/academic/manage/courses/requisites/items": {
@@ -276,66 +302,34 @@
           }
         }
       },
-      "parameters": []
-    },
-    "/1.0.0/academic/manage/courses/requisites/{requisite}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "requisite",
-          "in": "path",
-          "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "requisite",
-          "in": "path",
-          "required": true
-        }
-      ],
+      "parameters": [],
       "delete": {
         "summary": "Your DELETE endpoint",
         "tags": [],
         "responses": {},
-        "operationId": "delete-1.0.0-academic-manage-courses-requisites-requisite",
+        "operationId": "delete-1.0.0-academic-manage-courses-requisites-items",
         "x-stoplight": {
-          "id": "drwsqszp3q779"
+          "id": "7q606uog67quy"
         },
         "requestBody": {
-          "content": {}
-        }
-      }
-    },
-    "/1.0.0/academic/manage/courses/requisites/items/{item}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "item",
-          "in": "path",
-          "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "item",
-          "in": "path",
-          "required": true
-        }
-      ],
-      "delete": {
-        "summary": "Your DELETE endpoint",
-        "tags": [],
-        "responses": {},
-        "operationId": "delete-1.0.0-academic-manage-courses-requisites-items-item",
-        "x-stoplight": {
-          "id": "3e7ggw43wqu80"
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "requisite": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "widk1xaxik3x6"
+                    }
+                  }
+                },
+                "required": [
+                  "requisite"
+                ]
+              }
+            }
+          }
         }
       }
     }
