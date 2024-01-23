@@ -496,14 +496,15 @@
           "Example 1": {
             "per_page": 10,
             "offset": 1,
-            "locked": false,
-            "department_id": 1,
-            "speciality_id": 1,
+            "department_code": "1",
+            "speciality_code": 1,
             "education_level": "B",
+            "requested_by": "DEP_COMP_SCI",
             "student_id": "200103049",
             "name": "Yernur",
             "surname": "Shamshadin",
-            "entrance_year": 2023
+            "entrance_year": 2023,
+            "class": 1
           }
         },
         "properties": {
@@ -513,16 +514,16 @@
           "offset": {
             "type": "integer"
           },
-          "locked": {
-            "type": "boolean"
+          "department_code": {
+            "type": "string"
           },
-          "department_id": {
-            "type": "integer"
-          },
-          "speciality_id": {
+          "speciality_code": {
             "type": "integer"
           },
           "education_level": {
+            "type": "string"
+          },
+          "requested_by": {
             "type": "string"
           },
           "student_id": {
@@ -536,17 +537,17 @@
           },
           "entrance_year": {
             "type": "integer"
+          },
+          "class": {
+            "type": "integer"
           }
         },
         "required": [
           "per_page",
           "offset",
-          "department_id"
-        ],
-        "title": "",
-        "x-stoplight": {
-          "id": "tstwva1kpbnit"
-        }
+          "department_code",
+          "entrance_year"
+        ]
       },
       "ServiceManageLocksGetResponse": {
         "type": "object",
@@ -566,7 +567,6 @@
                 "entrance_year": 2020,
                 "department": "Department of Computer Sciences",
                 "speciality": "Information Systems",
-                "locking_status": true,
                 "locks": [
                   {
                     "id": 1,
@@ -623,9 +623,6 @@
                 "speciality": {
                   "type": "string"
                 },
-                "locking_status": {
-                  "type": "boolean"
-                },
                 "locks": {
                   "type": "array",
                   "items": {
@@ -669,7 +666,6 @@
                 "entrance_year",
                 "department",
                 "speciality",
-                "locking_status",
                 "locks"
               ]
             }
@@ -682,10 +678,7 @@
           "current_page",
           "last_page",
           "students"
-        ],
-        "x-stoplight": {
-          "id": "6hwln6a66i8zl"
-        }
+        ]
       },
       "ServiceManageLocksPostRequest": {
         "type": "object",
@@ -1386,11 +1379,14 @@
                 "year": 2020,
                 "title": "Information Systems"
               }
+            ],
+            "requestedBy": [
+              {
+                "code": "DEP_COMP_SCI",
+                "title": "Department of Computer Science"
+              }
             ]
           }
-        },
-        "x-stoplight": {
-          "id": "q11tqx3tr7pgm"
         },
         "properties": {
           "departments": {
@@ -1436,11 +1432,30 @@
                 "title"
               ]
             }
+          },
+          "requestedBy": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "code",
+                "title"
+              ]
+            }
           }
         },
         "required": [
           "departments",
-          "specialities"
+          "specialities",
+          "requestedBy"
         ]
       },
       "ServiceManageLanguagesResourceRequest": {
