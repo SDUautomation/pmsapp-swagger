@@ -236,15 +236,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "item": {
-                    "type": "number",
-                    "x-stoplight": {
-                      "id": "256pi2hasnjnu"
-                    }
-                  }
-                }
+                "$ref": "#/components/schemas/AcademicManageCourseRequisiteDeleteRequest"
               }
             }
           }
@@ -315,18 +307,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "requisite": {
-                    "type": "number",
-                    "x-stoplight": {
-                      "id": "widk1xaxik3x6"
-                    }
-                  }
-                },
-                "required": [
-                  "requisite"
-                ]
+                "$ref": "#/components/schemas/AcademicManageCourseRequisiteItemsDeleteRequest"
               }
             }
           }
@@ -1118,46 +1099,20 @@
           "cr_enabled"
         ]
       },
-      "AcademicManageCourseRequisiteItemPostRequest": {
-        "type": "object",
+      "AcademicManageCourseRequisiteDeleteRequest": {
+        "title": "AcademicManageCourseRequisiteDeleteRequest",
         "x-stoplight": {
-          "id": "d4a4ad627aff6"
+          "id": "z5d6kkpvl786u"
         },
-        "x-examples": {
-          "Example 1": {
-            "course_code": "CSS 105",
-            "course_year": 2022,
-            "requisite_type": "AR",
-            "item_code": "CSS 356",
-            "item_year": 2022
-          }
-        },
-        "x-internal": false,
+        "type": "object",
         "properties": {
-          "course_code": {
-            "type": "string"
-          },
-          "course_year": {
-            "type": "integer"
-          },
-          "requisite_type": {
-            "type": "string"
-          },
-          "item_code": {
-            "type": "string"
-          },
-          "item_year": {
-            "type": "integer"
+          "id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "4icczk9fwtxcz"
+            }
           }
-        },
-        "required": [
-          "course_code",
-          "course_year",
-          "requisite_type",
-          "item_code",
-          "item_year"
-        ],
-        "title": "AcademicManageCourseRequisiteItemPostRequest"
+        }
       },
       "AcademicManageCourseRequisiteItemsGetRequest": {
         "title": "AcademicManageCourseRequisiteItemsGetRequest",
@@ -1241,6 +1196,62 @@
           "key",
           "title"
         ]
+      },
+      "AcademicManageCourseRequisiteItemsPostRequest": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "d4a4ad627aff6"
+        },
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 105",
+            "course_year": 2022,
+            "requisite_type": "AR",
+            "item_code": "CSS 356",
+            "item_year": 2022
+          }
+        },
+        "x-internal": false,
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "course_year": {
+            "type": "integer"
+          },
+          "requisite_type": {
+            "type": "string"
+          },
+          "item_code": {
+            "type": "string"
+          },
+          "item_year": {
+            "type": "integer"
+          }
+        },
+        "required": [
+          "course_code",
+          "course_year",
+          "requisite_type",
+          "item_code",
+          "item_year"
+        ],
+        "title": "AcademicManageCourseRequisiteItemPostRequest"
+      },
+      "AcademicManageCourseRequisiteItemsDeleteRequest": {
+        "title": "AcademicManageCourseRequisiteItemDeleteRequest",
+        "x-stoplight": {
+          "id": "twgi03ixv8whv"
+        },
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "88uthnvvbroa8"
+            }
+          }
+        }
       }
     }
   }
