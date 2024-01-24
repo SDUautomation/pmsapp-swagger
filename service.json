@@ -564,6 +564,7 @@
           "per_page",
           "offset",
           "department_code",
+          "requested_by",
           "entrance_year"
         ]
       },
