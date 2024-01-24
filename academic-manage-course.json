@@ -1182,7 +1182,6 @@
           }
         },
         "required": [
-          "id",
           "requisite_id",
           "type",
           "expression",
