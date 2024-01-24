@@ -5,7 +5,8 @@
   },
   "info": {
     "title": "academic-information",
-    "version": "1.0"
+    "version": "1.0",
+    "description": ""
   },
   "servers": [
     {
@@ -41,7 +42,8 @@
               }
             }
           }
-        }
+        },
+        "description": "test-desc"
       }
     }
   },
