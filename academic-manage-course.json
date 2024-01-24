@@ -288,7 +288,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AcademicManageCourseRequisiteItemPostRequest"
+                "$ref": "#/components/schemas/AcademicManageCourseRequisiteItemsPostRequest"
               }
             }
           }
