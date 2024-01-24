@@ -11171,8 +11171,7 @@
         },
         "required": [
           "offset",
-          "per_page",
-          "year"
+          "per_page"
         ]
       },
       "AcademicCoursesResponse": {
