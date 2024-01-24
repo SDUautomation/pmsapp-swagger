@@ -11463,11 +11463,30 @@
                     "type": "integer"
                   }
                 }
-              }
+              },
+              "required": [
+                "code",
+                "language",
+                "title_kz",
+                "title_ru",
+                "title_en",
+                "department_code",
+                "department_title",
+                "theory",
+                "practice",
+                "credits",
+                "ects",
+                "terms"
+              ]
             }
           }
         },
         "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
           "courses"
         ]
       },
