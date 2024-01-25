@@ -965,84 +965,95 @@
         ]
       },
       "AcademicManageCourseRequisiteGetResponse": {
-        "type": "object",
+        "type": "array",
         "x-examples": {
-          "Example 1": {
-            "id": 1,
-            "program_code": "10304",
-            "type": "PR",
-            "cr_enabled": true,
-            "expression": "A+B",
-            "requisite": "CSS 101 and CSS 107"
-          }
+          "Example 1": [
+            {
+              "id": 1,
+              "program_code": "10304",
+              "type": "PR",
+              "cr_enabled": true,
+              "expression": "A+B",
+              "requisite": "CSS 101 and CSS 107"
+            }
+          ]
         },
-        "properties": {
-          "id": {
-            "type": "integer"
-          },
-          "program_code": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string"
-          },
-          "cr_enabled": {
-            "type": "number"
-          },
-          "expression": {
-            "type": "string"
-          },
-          "requisite": {
-            "type": "string"
-          },
-          "additional_info": {
-            "type": "object",
-            "x-stoplight": {
-              "id": "0ubjtyy2vou53"
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
             },
-            "required": [
-              "program_code",
-              "speciality",
-              "requisite_expression",
-              "consent_status"
-            ],
-            "properties": {
-              "program_code": {
-                "type": "number",
-                "x-stoplight": {
-                  "id": "ujigh2iv0bff4"
-                }
+            "program_code": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "cr_enabled": {
+              "type": "boolean"
+            },
+            "expression": {
+              "type": "string"
+            },
+            "requisite": {
+              "type": "string"
+            },
+            "additional_info": {
+              "type": "array",
+              "x-stoplight": {
+                "id": "mjs6cq7b5rte8"
               },
-              "speciality": {
-                "type": "string",
+              "items": {
                 "x-stoplight": {
-                  "id": "5k2kdin5gdg5p"
-                }
-              },
-              "requisite_expression": {
-                "type": "string",
-                "x-stoplight": {
-                  "id": "h25dy25jgg8lh"
-                }
-              },
-              "consent_status": {
-                "type": "string",
-                "x-stoplight": {
-                  "id": "h4z9y7bj1obqn"
-                }
+                  "id": "1sfcdcb3kyz14"
+                },
+                "type": "object",
+                "properties": {
+                  "program_code": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "t1ux16dwro1iu"
+                    }
+                  },
+                  "speciality": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "0bm3ey60nzkc3"
+                    }
+                  },
+                  "requisite_expresssion": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "xaj7uifew1z2e"
+                    }
+                  },
+                  "consent_status": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "pef6vp7h46s0s"
+                    }
+                  }
+                },
+                "required": [
+                  "program_code",
+                  "speciality",
+                  "requisite_expresssion",
+                  "consent_status"
+                ]
               }
             }
-          }
-        },
-        "required": [
-          "id",
-          "program_code",
-          "type",
-          "cr_enabled",
-          "expression",
-          "requisite",
-          "additional_info"
-        ]
+          },
+          "required": [
+            "id",
+            "program_code",
+            "type",
+            "cr_enabled",
+            "expression",
+            "requisite",
+            "additional_info"
+          ]
+        }
       },
       "AcademicManageCourseRequisitePostRequest": {
         "type": "object",
@@ -1138,60 +1149,65 @@
         }
       },
       "AcademicManageCourseRequisiteItemsGetResponse": {
-        "type": "object",
+        "type": "array",
         "x-examples": {
-          "Example 1": {
-            "id": 1,
-            "requisite_id": 1,
-            "type": "PR",
-            "expression": "A+B",
-            "cr_enabled": true,
-            "course_code": "CSS 101",
-            "year": 2022,
-            "key": "A",
-            "title": "Algorithms and Programming"
-          }
+          "Example 1": [
+            {
+              "id": 1,
+              "requisite_id": 1,
+              "type": "PR",
+              "expression": "A+B",
+              "cr_enabled": true,
+              "course_code": "CSS 101",
+              "year": 2022,
+              "key": "A",
+              "title": "Algorithms and Programming"
+            }
+          ]
         },
-        "properties": {
-          "id": {
-            "type": "integer"
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "requisite_id": {
+              "type": "integer"
+            },
+            "type": {
+              "type": "string"
+            },
+            "expression": {
+              "type": "string"
+            },
+            "cr_enabled": {
+              "type": "boolean"
+            },
+            "course_code": {
+              "type": "string"
+            },
+            "year": {
+              "type": "integer"
+            },
+            "key": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
           },
-          "requisite_id": {
-            "type": "integer"
-          },
-          "type": {
-            "type": "string"
-          },
-          "expression": {
-            "type": "string"
-          },
-          "cr_enabled": {
-            "type": "number"
-          },
-          "course_code": {
-            "type": "string"
-          },
-          "year": {
-            "type": "integer"
-          },
-          "key": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "id",
-          "requisite_id",
-          "type",
-          "expression",
-          "cr_enabled",
-          "course_code",
-          "year",
-          "key",
-          "title"
-        ]
+          "required": [
+            "id",
+            "requisite_id",
+            "type",
+            "expression",
+            "cr_enabled",
+            "course_code",
+            "year",
+            "key",
+            "title"
+          ]
+        }
       },
       "AcademicManageCourseRequisiteItemsPostRequest": {
         "type": "object",
