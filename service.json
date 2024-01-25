@@ -963,15 +963,8 @@
                 "id": 40,
                 "full_name": "Zhandos Saparbayev",
                 "entrance_year": "2020",
-                "language": [
-                  {
-                    "id": 4,
-                    "language_code": "EN",
-                    "code": "B2",
-                    "title": "Upper-Intermediate",
-                    "completed": true
-                  }
-                ],
+                "language_level_id": 5,
+                "completed": true,
                 "speciality": [
                   {
                     "program_code": "10103",
@@ -1016,35 +1009,11 @@
                 "entrance_year": {
                   "type": "string"
                 },
-                "language": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "language_code": {
-                        "type": "string"
-                      },
-                      "code": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "completed": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "id",
-                      "language_code",
-                      "code",
-                      "title",
-                      "completed"
-                    ]
-                  }
+                "language_level_id": {
+                  "type": "integer"
+                },
+                "completed": {
+                  "type": "boolean"
                 },
                 "speciality": {
                   "type": "array",
@@ -1085,7 +1054,8 @@
                 "id",
                 "full_name",
                 "entrance_year",
-                "language",
+                "language_level_id",
+                "completed",
                 "speciality"
               ]
             }
@@ -1184,6 +1154,8 @@
                 "id": "200103201",
                 "full_name": "Zhandos Saparbayev",
                 "class": 4,
+                "language_level_id": 5,
+                "completed": true,
                 "specialty": {
                   "program_code": "10103",
                   "language": "English",
@@ -1191,16 +1163,7 @@
                   "title": "Information Systems",
                   "department_id": 1051,
                   "terms": 8
-                },
-                "languages": [
-                  {
-                    "id": 4,
-                    "language_code": "EN",
-                    "code": "B2",
-                    "title": "Upper-Intermediate",
-                    "completed": true
-                  }
-                ]
+                }
               }
             ]
           }
@@ -1235,6 +1198,12 @@
                 "class": {
                   "type": "integer"
                 },
+                "language_level_id": {
+                  "type": "integer"
+                },
+                "completed": {
+                  "type": "boolean"
+                },
                 "specialty": {
                   "type": "object",
                   "required": [
@@ -1265,44 +1234,15 @@
                       "type": "integer"
                     }
                   }
-                },
-                "languages": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "language_code": {
-                        "type": "string"
-                      },
-                      "code": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "completed": {
-                        "type": "boolean"
-                      }
-                    },
-                    "required": [
-                      "id",
-                      "language_code",
-                      "code",
-                      "title",
-                      "completed"
-                    ]
-                  }
                 }
               },
               "required": [
                 "id",
                 "full_name",
                 "class",
-                "specialty",
-                "languages"
+                "language_level_id",
+                "completed",
+                "specialty"
               ]
             }
           }
@@ -1314,10 +1254,7 @@
           "current_page",
           "last_page",
           "students"
-        ],
-        "x-stoplight": {
-          "id": "5oth75gmm2p4x"
-        }
+        ]
       },
       "ServiceManageLanguagesSingleStudentPutRequest": {
         "type": "object",
