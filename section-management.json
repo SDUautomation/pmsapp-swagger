@@ -1675,6 +1675,12 @@
             "ects": {
               "type": "integer"
             },
+            "credits": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "uwpwlgdm5zl5l"
+              }
+            },
             "program": {
               "type": "object",
               "required": [
@@ -1827,6 +1833,7 @@
             "theory",
             "practice",
             "ects",
+            "credits",
             "program",
             "track",
             "course_type",
