@@ -895,7 +895,7 @@
             }
           },
           "no_level": {
-            "type": "number",
+            "type": "boolean",
             "x-stoplight": {
               "id": "nea3qc551xui0"
             }
@@ -1120,7 +1120,7 @@
             }
           },
           "no_level": {
-            "type": "number",
+            "type": "boolean",
             "x-stoplight": {
               "id": "ugc2xki5umz4s"
             }
