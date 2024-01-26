@@ -850,6 +850,13 @@
           "id": "sk1jyeb57xzsn"
         },
         "type": "object",
+        "required": [
+          "language_code",
+          "program_code",
+          "entrance_year",
+          "per_page",
+          "offset"
+        ],
         "properties": {
           "iin": {
             "type": "string",
@@ -888,7 +895,7 @@
             }
           },
           "no_level": {
-            "type": "string",
+            "type": "number",
             "x-stoplight": {
               "id": "nea3qc551xui0"
             }
@@ -905,15 +912,7 @@
               "id": "f4q8xrmbmj56t"
             }
           }
-        },
-        "required": [
-          "language_code",
-          "program_code",
-          "entrance_year",
-          "per_page",
-          "offset"
-        ],
-        "description": ""
+        }
       },
       "ServiceManageLanguagesApplicantsBulkPutRequest": {
         "type": "object",
@@ -1076,6 +1075,13 @@
           "id": "l5r6rqxjp12vt"
         },
         "type": "object",
+        "required": [
+          "language_code",
+          "program_code",
+          "entrance_year",
+          "per_page",
+          "offset"
+        ],
         "properties": {
           "id": {
             "type": "string",
@@ -1114,7 +1120,7 @@
             }
           },
           "no_level": {
-            "type": "string",
+            "type": "number",
             "x-stoplight": {
               "id": "ugc2xki5umz4s"
             }
@@ -1131,14 +1137,7 @@
               "id": "kmxv1ibotvico"
             }
           }
-        },
-        "required": [
-          "language_code",
-          "program_code",
-          "entrance_year",
-          "per_page",
-          "offset"
-        ]
+        }
       },
       "ServiceManageLanguagesStudentsGetResponse": {
         "type": "object",
