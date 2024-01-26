@@ -1167,6 +1167,9 @@
           "id": "ljohsc621myse"
         },
         "type": "object",
+        "required": [
+          "type"
+        ],
         "properties": {
           "type": {
             "type": "string",
@@ -1209,11 +1212,14 @@
             "x-stoplight": {
               "id": "szkh6sozfevxj"
             }
+          },
+          "year": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "uh2lqr0o14r80"
+            }
           }
-        },
-        "required": [
-          "type"
-        ]
+        }
       },
       "SectionManagementRequestGetResponse": {
         "type": "array",
