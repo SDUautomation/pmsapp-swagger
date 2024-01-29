@@ -1168,10 +1168,7 @@
         },
         "type": "object",
         "required": [
-          "type",
-          "term",
-          "course_code",
-          "course_year"
+          "type"
         ],
         "properties": {
           "type": {
