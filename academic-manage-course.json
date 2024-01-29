@@ -946,13 +946,27 @@
         },
         "type": "object",
         "required": [
-          "requisite_id"
+          "course_code",
+          "year",
+          "requisite_type"
         ],
         "properties": {
-          "requisite_id": {
-            "type": "number",
+          "course_code": {
+            "type": "string",
             "x-stoplight": {
               "id": "f480v026dbwmt"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "xdq5qf1ge5309"
+            }
+          },
+          "requisite_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "9twx01ntuahru"
             }
           }
         }
@@ -1120,23 +1134,14 @@
           "id": "iz3kdn76tal7e"
         },
         "type": "object",
+        "required": [
+          "requisite_id"
+        ],
         "properties": {
-          "course_code": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "6t3xqihmcq4mz"
-            }
-          },
-          "course_year": {
+          "requisite_id": {
             "type": "number",
             "x-stoplight": {
-              "id": "5h1la1wi2wwmm"
-            }
-          },
-          "requisite_type": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "wfaz0hg2xe6ob"
+              "id": "6t3xqihmcq4mz"
             }
           }
         }
