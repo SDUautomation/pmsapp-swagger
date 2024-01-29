@@ -11403,6 +11403,14 @@
             ]
           }
         },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "courses"
+        ],
         "properties": {
           "total": {
             "type": "integer"
@@ -11423,6 +11431,21 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "code",
+                "language",
+                "title_kz",
+                "title_ru",
+                "title_en",
+                "department_code",
+                "department_title",
+                "theory",
+                "practice",
+                "credits",
+                "ects",
+                "terms",
+                "year"
+              ],
               "properties": {
                 "code": {
                   "type": "string"
@@ -11462,33 +11485,17 @@
                   "items": {
                     "type": "integer"
                   }
+                },
+                "year": {
+                  "type": "number",
+                  "x-stoplight": {
+                    "id": "ueycbl7rqtme3"
+                  }
                 }
-              },
-              "required": [
-                "code",
-                "language",
-                "title_kz",
-                "title_ru",
-                "title_en",
-                "department_code",
-                "department_title",
-                "theory",
-                "practice",
-                "credits",
-                "ects",
-                "terms"
-              ]
+              }
             }
           }
-        },
-        "required": [
-          "total",
-          "from",
-          "per_page",
-          "current_page",
-          "last_page",
-          "courses"
-        ]
+        }
       },
       "ReleaseChangelogResponse": {
         "type": "array",
