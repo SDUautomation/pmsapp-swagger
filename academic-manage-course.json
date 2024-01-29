@@ -987,6 +987,15 @@
         },
         "items": {
           "type": "object",
+          "required": [
+            "id",
+            "program_code",
+            "type",
+            "cr_enabled",
+            "expression",
+            "requisite",
+            "additional_info"
+          ],
           "properties": {
             "id": {
               "type": "integer"
@@ -998,7 +1007,7 @@
               "type": "string"
             },
             "cr_enabled": {
-              "type": "boolean"
+              "type": "number"
             },
             "expression": {
               "type": "string"
@@ -1016,6 +1025,12 @@
                   "id": "1sfcdcb3kyz14"
                 },
                 "type": "object",
+                "required": [
+                  "program_code",
+                  "speciality",
+                  "requisite_expresssion",
+                  "consent_status"
+                ],
                 "properties": {
                   "program_code": {
                     "type": "number",
@@ -1041,25 +1056,10 @@
                       "id": "pef6vp7h46s0s"
                     }
                   }
-                },
-                "required": [
-                  "program_code",
-                  "speciality",
-                  "requisite_expresssion",
-                  "consent_status"
-                ]
+                }
               }
             }
-          },
-          "required": [
-            "id",
-            "program_code",
-            "type",
-            "cr_enabled",
-            "expression",
-            "requisite",
-            "additional_info"
-          ]
+          }
         }
       },
       "AcademicManageCourseRequisitePostRequest": {
@@ -1076,6 +1076,13 @@
             "program_code": "10293"
           }
         },
+        "required": [
+          "course_code",
+          "year",
+          "type",
+          "expression",
+          "cr_enabled"
+        ],
         "properties": {
           "id": {
             "type": "integer"
@@ -1093,7 +1100,7 @@
             "type": "string"
           },
           "cr_enabled": {
-            "type": "boolean"
+            "type": "number"
           },
           "track": {
             "type": "string"
@@ -1101,14 +1108,7 @@
           "program_code": {
             "type": "string"
           }
-        },
-        "required": [
-          "course_code",
-          "year",
-          "type",
-          "expression",
-          "cr_enabled"
-        ]
+        }
       },
       "AcademicManageCourseRequisiteDeleteRequest": {
         "title": "AcademicManageCourseRequisiteDeleteRequest",
@@ -1243,6 +1243,24 @@
         ],
         "title": "AcademicManageCourseRequisiteItemPostRequest"
       },
+      "AcademicManageCourseRequisiteItemsDeleteRequest": {
+        "title": "AcademicManageCourseRequisiteItemDeleteRequest",
+        "x-stoplight": {
+          "id": "twgi03ixv8whv"
+        },
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "88uthnvvbroa8"
+            }
+          }
+        },
+        "required": [
+          "id"
+        ]
+      },
       "AcademicManageCourseRequisiteItemsPostResponse": {
         "title": "AcademicManageCourseItemPostResponse",
         "x-stoplight": {
@@ -1261,18 +1279,15 @@
           }
         }
       },
-      "AcademicManageCourseRequisiteItemsDeleteRequest": {
+      "AcademicManageCourseRequisiteItemsDeleteRequest - copy": {
         "title": "AcademicManageCourseRequisiteItemDeleteRequest",
         "x-stoplight": {
-          "id": "twgi03ixv8whv"
+          "id": "sg1orej8ijlpf"
         },
         "type": "object",
         "properties": {
           "id": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "88uthnvvbroa8"
-            }
+            "type": "string"
           }
         },
         "required": [
