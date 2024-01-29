@@ -208,7 +208,14 @@
         "operationId": "post-1.0.0-academic-manage-courses-requisites",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageCourseRequisiteItemsPostResponse"
+                }
+              }
+            }
           }
         },
         "x-stoplight": {
@@ -1249,6 +1256,24 @@
           "item_year"
         ],
         "title": "AcademicManageCourseRequisiteItemPostRequest"
+      },
+      "AcademicManageCourseRequisiteItemsPostResponse": {
+        "title": "AcademicManageCourseItemPostResponse",
+        "x-stoplight": {
+          "id": "iys7z89xi40n4"
+        },
+        "type": "object",
+        "required": [
+          "requisite_id"
+        ],
+        "properties": {
+          "requisite_id": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "dv41mhz020ssa"
+            }
+          }
+        }
       },
       "AcademicManageCourseRequisiteItemsDeleteRequest": {
         "title": "AcademicManageCourseRequisiteItemDeleteRequest",
