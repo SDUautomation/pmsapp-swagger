@@ -1400,7 +1400,7 @@
                     ],
                     "properties": {
                       "id": {
-                        "type": "number",
+                        "type": "string",
                         "x-stoplight": {
                           "id": "bgr3u880tu5yz"
                         }
@@ -2033,6 +2033,17 @@
         },
         "items": {
           "type": "object",
+          "required": [
+            "id",
+            "total_quota",
+            "registered_count",
+            "reserves_count",
+            "available_quota",
+            "date",
+            "program",
+            "sections",
+            "reserves"
+          ],
           "properties": {
             "id": {
               "type": "integer"
@@ -2075,6 +2086,12 @@
               "type": "array",
               "items": {
                 "type": "object",
+                "required": [
+                  "id",
+                  "title",
+                  "type",
+                  "instructor"
+                ],
                 "properties": {
                   "id": {
                     "type": "integer"
@@ -2112,19 +2129,18 @@
                       }
                     }
                   }
-                },
-                "required": [
-                  "id",
-                  "title",
-                  "type",
-                  "instructor"
-                ]
+                }
               }
             },
             "reserves": {
               "type": "array",
               "items": {
                 "type": "object",
+                "required": [
+                  "id",
+                  "date",
+                  "student"
+                ],
                 "properties": {
                   "id": {
                     "type": "integer"
@@ -2147,26 +2163,10 @@
                       }
                     }
                   }
-                },
-                "required": [
-                  "id",
-                  "date",
-                  "student"
-                ]
+                }
               }
             }
-          },
-          "required": [
-            "id",
-            "total_quota",
-            "registered_count",
-            "reserves_count",
-            "available_quota",
-            "date",
-            "program",
-            "sections",
-            "reserves"
-          ]
+          }
         }
       },
       "SectionManagementRequestsQuotasReservesGetResponse": {
