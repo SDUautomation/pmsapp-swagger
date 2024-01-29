@@ -1252,6 +1252,18 @@
         },
         "items": {
           "type": "object",
+          "required": [
+            "id",
+            "quota",
+            "met",
+            "create_date",
+            "status",
+            "note",
+            "reject_message",
+            "course",
+            "program",
+            "author"
+          ],
           "properties": {
             "id": {
               "type": "integer"
@@ -1344,20 +1356,88 @@
                   "type": "string"
                 }
               }
+            },
+            "sections": {
+              "type": "array",
+              "x-stoplight": {
+                "id": "s9rjo37yn0jla"
+              },
+              "items": {
+                "x-stoplight": {
+                  "id": "bvc76rarbnyeo"
+                },
+                "type": "object",
+                "required": [
+                  "id",
+                  "title",
+                  "type",
+                  "instructor"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "jkgbjj6yxx4ob"
+                    }
+                  },
+                  "title": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "ab4iozar2qlrc"
+                    }
+                  },
+                  "type": {
+                    "type": "object",
+                    "x-stoplight": {
+                      "id": "jkm57r641q5s5"
+                    },
+                    "required": [
+                      "id",
+                      "title"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "number",
+                        "x-stoplight": {
+                          "id": "bgr3u880tu5yz"
+                        }
+                      },
+                      "title": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "1lnd0bu4s40zo"
+                        }
+                      }
+                    }
+                  },
+                  "instructor": {
+                    "type": "object",
+                    "x-stoplight": {
+                      "id": "5gq04skpk2p6y"
+                    },
+                    "required": [
+                      "id",
+                      "full_name"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "number",
+                        "x-stoplight": {
+                          "id": "dv2yv7nxjxyv5"
+                        }
+                      },
+                      "full_name": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "4jy2vbmjxp6pl"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
-          },
-          "required": [
-            "id",
-            "quota",
-            "met",
-            "create_date",
-            "status",
-            "note",
-            "reject_message",
-            "course",
-            "program",
-            "author"
-          ]
+          }
         }
       },
       "SectionManagementRequestCourseGetRequest": {
@@ -2905,7 +2985,8 @@
           "course_code",
           "course_year",
           "term"
-        ]
+        ],
+        "title": ""
       }
     }
   }
