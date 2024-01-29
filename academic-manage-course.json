@@ -945,31 +945,17 @@
           "id": "8uw5kywvc2g3d"
         },
         "type": "object",
+        "required": [
+          "requisite_id"
+        ],
         "properties": {
-          "course_code": {
-            "type": "string",
+          "requisite_id": {
+            "type": "number",
             "x-stoplight": {
               "id": "f480v026dbwmt"
             }
-          },
-          "year": {
-            "type": "number",
-            "x-stoplight": {
-              "id": "oihro82rwibr7"
-            }
-          },
-          "requisite_type": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "mq92e9zqcdmkg"
-            }
           }
-        },
-        "required": [
-          "course_code",
-          "year",
-          "requisite_type"
-        ]
+        }
       },
       "AcademicManageCourseRequisiteGetResponse": {
         "type": "array",
