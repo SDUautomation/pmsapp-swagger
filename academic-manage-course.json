@@ -689,8 +689,12 @@
           "id": "0w05tcczo8iqh"
         },
         "type": "object",
+        "required": [
+          "code",
+          "year"
+        ],
         "properties": {
-          "course_code": {
+          "code": {
             "type": "string",
             "x-stoplight": {
               "id": "o5ms9l6jrtbe8"
@@ -702,11 +706,7 @@
               "id": "uyhe840m2l9lq"
             }
           }
-        },
-        "required": [
-          "course_code",
-          "year"
-        ]
+        }
       },
       "AcademicManageCourseResourceResponse": {
         "type": "object",
