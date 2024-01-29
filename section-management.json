@@ -2690,30 +2690,65 @@
       },
       "SectionManagementSectionsQuotasGetResponse": {
         "type": "array",
-        "x-stoplight": {
-          "id": "4ad28d45ba206"
-        },
         "x-examples": {
           "Example 1": [
             {
-              "id": 45879,
-              "quota": 20,
-              "date": "2023-09-22 13:23:00",
-              "program": {
-                "code": "10103",
-                "year": 2020,
-                "title": "Information Systems"
+              "id": 52894,
+              "quota": 3,
+              "date": "2023-09-13 15:14:15",
+              "author": {
+                "id": 10559,
+                "full_name": "Aliya Adilbayeva"
               },
-              "reserved_program": {
-                "code": "10103",
-                "year": 2020,
-                "title": "Information Systems"
-              }
+              "program": {
+                "code": "10117",
+                "year": 2016,
+                "title": "Computing Systems and Software"
+              },
+              "reserved": {
+                "code": "10117",
+                "year": 2016,
+                "title": "Computing Systems and Software"
+              },
+              "sections": [
+                {
+                  "id": 51432,
+                  "title": "01",
+                  "type": {
+                    "id": "N",
+                    "title": "Theory"
+                  },
+                  "instructor": {
+                    "id": 10980,
+                    "full_name": "Nauryzbay Sapargali"
+                  }
+                },
+                {
+                  "id": 51439,
+                  "title": "04",
+                  "type": {
+                    "id": "L",
+                    "title": "Laboratory"
+                  },
+                  "instructor": {
+                    "id": 10836,
+                    "full_name": "Akerke Alseitova"
+                  }
+                }
+              ]
             }
           ]
         },
         "items": {
           "type": "object",
+          "required": [
+            "id",
+            "quota",
+            "date",
+            "author",
+            "reserved",
+            "sections"
+          ],
           "properties": {
             "id": {
               "type": "integer"
@@ -2724,6 +2759,21 @@
             "date": {
               "type": "string"
             },
+            "author": {
+              "type": "object",
+              "required": [
+                "id",
+                "full_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "full_name": {
+                  "type": "string"
+                }
+              }
+            },
             "program": {
               "type": "object",
               "required": [
@@ -2731,7 +2781,6 @@
                 "year",
                 "title"
               ],
-              "nullable": true,
               "properties": {
                 "code": {
                   "type": "string"
@@ -2744,7 +2793,7 @@
                 }
               }
             },
-            "reserved_program": {
+            "reserved": {
               "type": "object",
               "required": [
                 "code",
@@ -2762,15 +2811,58 @@
                   "type": "string"
                 }
               }
+            },
+            "sections": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "title",
+                  "type",
+                  "instructor"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "title"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "instructor": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "full_name"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "full_name": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
             }
-          },
-          "required": [
-            "id",
-            "quota",
-            "date",
-            "program",
-            "reserved_program"
-          ]
+          }
         }
       },
       "SectionManagementSectionsQuotasPostRequest": {
