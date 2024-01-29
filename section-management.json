@@ -1171,7 +1171,7 @@
           "type",
           "term",
           "course_code",
-          "year"
+          "course_year"
         ],
         "properties": {
           "type": {
