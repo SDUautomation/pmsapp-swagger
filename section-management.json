@@ -2742,6 +2742,9 @@
             "quota": 80
           }
         },
+        "required": [
+          "quota"
+        ],
         "properties": {
           "theory_section_id": {
             "type": "integer"
@@ -2755,13 +2758,7 @@
           "quota": {
             "type": "integer"
           }
-        },
-        "required": [
-          "theory_section_id",
-          "practice_section_id",
-          "lab_section_id",
-          "quota"
-        ]
+        }
       },
       "SectionManagementRequestsQuotasPutRequest": {
         "title": "AcademicManageRequestsQuotasPutRequest",
