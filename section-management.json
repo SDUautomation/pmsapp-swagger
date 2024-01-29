@@ -3072,13 +3072,7 @@
           "term": {
             "type": "integer"
           }
-        },
-        "required": [
-          "course_code",
-          "course_year",
-          "term"
-        ],
-        "title": ""
+        }
       }
     }
   }
