@@ -1147,64 +1147,59 @@
         }
       },
       "AcademicManageCourseRequisiteItemsGetResponse": {
-        "type": "array",
+        "type": "object",
         "x-examples": {
-          "Example 1": [
-            {
-              "id": 1,
-              "requisite_id": 1,
-              "type": "PR",
-              "expression": "A+B",
-              "cr_enabled": true,
-              "course_code": "CSS 101",
-              "year": 2022,
-              "key": "A",
-              "title": "Algorithms and Programming"
-            }
-          ]
+          "Example 1": {
+            "id": 1,
+            "requisite_id": 1,
+            "type": "PR",
+            "expression": "A+B",
+            "cr_enabled": true,
+            "course_code": "CSS 101",
+            "year": 2022,
+            "key": "A",
+            "title": "Algorithms and Programming"
+          }
         },
-        "items": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "integer"
-            },
-            "requisite_id": {
-              "type": "integer"
-            },
-            "type": {
-              "type": "string"
-            },
-            "expression": {
-              "type": "string"
-            },
-            "cr_enabled": {
-              "type": "boolean"
-            },
-            "course_code": {
-              "type": "string"
-            },
-            "year": {
-              "type": "integer"
-            },
-            "key": {
-              "type": "string"
-            },
-            "title": {
-              "type": "string"
-            }
+        "required": [
+          "id",
+          "requisite_id",
+          "type",
+          "expression",
+          "cr_enabled",
+          "course_code",
+          "year",
+          "key",
+          "title"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
           },
-          "required": [
-            "id",
-            "requisite_id",
-            "type",
-            "expression",
-            "cr_enabled",
-            "course_code",
-            "year",
-            "key",
-            "title"
-          ]
+          "requisite_id": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string"
+          },
+          "expression": {
+            "type": "string"
+          },
+          "cr_enabled": {
+            "type": "number"
+          },
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "key": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
         }
       },
       "AcademicManageCourseRequisiteItemsPostRequest": {
