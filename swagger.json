@@ -18525,7 +18525,8 @@
           "department_id",
           "year",
           "term"
-        ]
+        ],
+        "description": ""
       },
       "AcademicInformationExamDatesResponse": {
         "type": "object",
@@ -18538,6 +18539,7 @@
             "last_page": 3,
             "exam_dates": [
               {
+                "id": 1732628,
                 "code": "MAT 251",
                 "section": "01",
                 "type": "N",
@@ -18545,11 +18547,20 @@
                 "assessment": "FIN",
                 "exam_date": "2022-12-29",
                 "close_date": "2023-01-06",
+                "can_edit": true,
                 "instructor": "Larissa Bazarbayeva"
               }
             ]
           }
         },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "exam_dates"
+        ],
         "properties": {
           "total": {
             "type": "integer"
@@ -18570,7 +18581,22 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "code",
+                "section",
+                "type",
+                "title",
+                "assessment",
+                "exam_date",
+                "close_date",
+                "can_edit",
+                "instructor"
+              ],
               "properties": {
+                "id": {
+                  "type": "integer"
+                },
                 "code": {
                   "type": "string"
                 },
@@ -18592,31 +18618,16 @@
                 "close_date": {
                   "type": "string"
                 },
+                "can_edit": {
+                  "type": "boolean"
+                },
                 "instructor": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "code",
-                "section",
-                "type",
-                "title",
-                "assessment",
-                "exam_date",
-                "close_date",
-                "instructor"
-              ]
+              }
             }
           }
-        },
-        "required": [
-          "total",
-          "from",
-          "per_page",
-          "current_page",
-          "last_page",
-          "exam_dates"
-        ]
+        }
       },
       "AcademicInformationScheduleRequest": {
         "title": "AcademicInformationScheduleRequest",
