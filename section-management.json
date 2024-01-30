@@ -696,6 +696,37 @@
           "id": "o2tw54f8amwwh"
         }
       }
+    },
+    "/1.0.0/academic/manage/sections/reserved-quotas": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SectionManagementReservedProgramsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-sections-reserved-quotas",
+        "x-stoplight": {
+          "id": "k2ijcj6nzidbk"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SectionManagementReservedProgramsGetRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -3071,6 +3102,128 @@
           },
           "term": {
             "type": "integer"
+          }
+        }
+      },
+      "SectionManagementReservedProgramsGetRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS 108",
+            "course_year": 2023,
+            "term": 1
+          }
+        },
+        "required": [
+          "course_code",
+          "course_year",
+          "term"
+        ],
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "course_year": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          }
+        }
+      },
+      "SectionManagementReservedProgramsGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": null,
+            "quota": null,
+            "met": 15,
+            "create_date": "null",
+            "note": "null",
+            "reject_message": "null",
+            "status": {
+              "id": 3,
+              "title": "Rejected"
+            },
+            "course": null,
+            "program": {
+              "code": "10103",
+              "year": 2020,
+              "title": "Information Systems"
+            },
+            "author": null
+          }
+        },
+        "required": [
+          "id",
+          "quota",
+          "met",
+          "create_date",
+          "note",
+          "reject_message",
+          "status",
+          "course",
+          "program",
+          "author"
+        ],
+        "properties": {
+          "id": {
+            "nullable": true
+          },
+          "quota": {
+            "nullable": true
+          },
+          "met": {
+            "type": "integer"
+          },
+          "create_date": {
+            "type": "string"
+          },
+          "note": {
+            "type": "string"
+          },
+          "reject_message": {
+            "type": "string"
+          },
+          "status": {
+            "type": "object",
+            "required": [
+              "id",
+              "title"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          },
+          "course": {
+            "nullable": true
+          },
+          "program": {
+            "type": "object",
+            "required": [
+              "code",
+              "year",
+              "title"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "year": {
+                "type": "integer"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          },
+          "author": {
+            "nullable": true
           }
         }
       }
