@@ -2785,7 +2785,8 @@
             "date",
             "author",
             "reserved",
-            "sections"
+            "sections",
+            "is_reserved"
           ],
           "properties": {
             "id": {
