@@ -3102,6 +3102,12 @@
           },
           "term": {
             "type": "integer"
+          },
+          "program_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "pomz3fua16yi0"
+            }
           }
         }
       },
