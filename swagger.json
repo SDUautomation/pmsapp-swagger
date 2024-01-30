@@ -4057,14 +4057,6 @@
           "name": "assessment",
           "in": "path",
           "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "assessment",
-          "in": "path",
-          "required": true
         }
       ],
       "put": {
