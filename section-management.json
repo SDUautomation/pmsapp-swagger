@@ -2070,7 +2070,8 @@
             "date",
             "program",
             "sections",
-            "reserves"
+            "reserves",
+            "is_reserved"
           ],
           "properties": {
             "id": {
@@ -2192,6 +2193,12 @@
                     }
                   }
                 }
+              }
+            },
+            "is_reserved": {
+              "type": "boolean",
+              "x-stoplight": {
+                "id": "648o82fja6wfn"
               }
             }
           }
@@ -2891,6 +2898,12 @@
                     }
                   }
                 }
+              }
+            },
+            "is_reserved": {
+              "type": "boolean",
+              "x-stoplight": {
+                "id": "k85vq5b3avxtp"
               }
             }
           }
