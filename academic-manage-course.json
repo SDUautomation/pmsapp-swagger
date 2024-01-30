@@ -285,7 +285,14 @@
         "operationId": "post-1.0.0-academic-manage-courses-requisites",
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageCourseRequisiteItemsPostResponse"
+                }
+              }
+            }
           }
         },
         "x-stoplight": {
@@ -1237,24 +1244,6 @@
         ],
         "title": "AcademicManageCourseRequisiteItemPostRequest"
       },
-      "AcademicManageCourseRequisiteItemsDeleteRequest": {
-        "title": "AcademicManageCourseRequisiteItemDeleteRequest",
-        "x-stoplight": {
-          "id": "twgi03ixv8whv"
-        },
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "88uthnvvbroa8"
-            }
-          }
-        },
-        "required": [
-          "id"
-        ]
-      },
       "AcademicManageCourseRequisiteItemsPostResponse": {
         "title": "AcademicManageCourseItemPostResponse",
         "x-stoplight": {
@@ -1272,6 +1261,24 @@
             }
           }
         }
+      },
+      "AcademicManageCourseRequisiteItemsDeleteRequest": {
+        "title": "AcademicManageCourseRequisiteItemDeleteRequest",
+        "x-stoplight": {
+          "id": "twgi03ixv8whv"
+        },
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "88uthnvvbroa8"
+            }
+          }
+        },
+        "required": [
+          "id"
+        ]
       }
     }
   }
