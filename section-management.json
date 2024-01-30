@@ -3132,98 +3132,104 @@
         }
       },
       "SectionManagementReservedProgramsGetResponse": {
-        "type": "object",
+        "type": "array",
         "x-examples": {
-          "Example 1": {
-            "id": null,
-            "quota": null,
-            "met": 15,
-            "create_date": "null",
-            "note": "null",
-            "reject_message": "null",
-            "status": {
-              "id": 3,
-              "title": "Rejected"
-            },
-            "course": null,
-            "program": {
-              "code": "10103",
-              "year": 2020,
-              "title": "Information Systems"
-            },
-            "author": null
-          }
+          "Example 1": [
+            {
+              "id": null,
+              "quota": null,
+              "met": 15,
+              "create_date": "null",
+              "note": "null",
+              "reject_message": "null",
+              "status": {
+                "id": 3,
+                "title": "Rejected"
+              },
+              "course": null,
+              "program": {
+                "code": "10103",
+                "year": 2020,
+                "title": "Information Systems"
+              },
+              "author": null
+            }
+          ]
         },
-        "required": [
-          "id",
-          "quota",
-          "met",
-          "create_date",
-          "note",
-          "reject_message",
-          "status",
-          "course",
-          "program",
-          "author"
-        ],
-        "properties": {
-          "id": {
-            "nullable": true
-          },
-          "quota": {
-            "nullable": true
-          },
-          "met": {
-            "type": "integer"
-          },
-          "create_date": {
-            "type": "string"
-          },
-          "note": {
-            "type": "string"
-          },
-          "reject_message": {
-            "type": "string"
-          },
-          "status": {
-            "type": "object",
-            "required": [
-              "id",
-              "title"
-            ],
-            "properties": {
-              "id": {
-                "type": "integer"
-              },
-              "title": {
-                "type": "string"
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "quota",
+            "met",
+            "create_date",
+            "note",
+            "reject_message",
+            "status",
+            "course",
+            "program",
+            "author"
+          ],
+          "properties": {
+            "id": {
+              "type": "number",
+              "nullable": true
+            },
+            "quota": {
+              "nullable": true
+            },
+            "met": {
+              "type": "integer"
+            },
+            "create_date": {
+              "type": "string"
+            },
+            "note": {
+              "type": "string"
+            },
+            "reject_message": {
+              "type": "string"
+            },
+            "status": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
               }
-            }
-          },
-          "course": {
-            "nullable": true
-          },
-          "program": {
-            "type": "object",
-            "required": [
-              "code",
-              "year",
-              "title"
-            ],
-            "properties": {
-              "code": {
-                "type": "string"
-              },
-              "year": {
-                "type": "integer"
-              },
-              "title": {
-                "type": "string"
+            },
+            "course": {
+              "nullable": true
+            },
+            "program": {
+              "type": "object",
+              "required": [
+                "code",
+                "year",
+                "title"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
               }
+            },
+            "author": {
+              "nullable": true
             }
-          },
-          "author": {
-            "nullable": true
           }
         }
       }
