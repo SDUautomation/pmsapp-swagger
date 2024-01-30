@@ -1062,7 +1062,7 @@
         "tags": [],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "",
             "content": {
               "application/json": {
                 "schema": {
@@ -1082,6 +1082,37 @@
               "schema": {
                 "$ref": "#/components/schemas/AcademicInformationExamDatesRequest"
               }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Exam dates are successfully updated.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicInformationExamDatesPutResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "put-1.0.0-academic-information-exam-dates",
+        "x-stoplight": {
+          "id": "2qiuxt4we066g"
+        },
+        "description": "",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicInformationExamDatesPutRequest"
+              },
+              "examples": {}
             }
           }
         }
@@ -4016,6 +4047,55 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/information/exam-dates/{assessment}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "assessment",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "assessment",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Exam date is successfully updated.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicInformationExamDatesAssessmentPutResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "put-1.0.0-academic-information-exam-dates-assessment",
+        "x-stoplight": {
+          "id": "t8jvy1uipbtw9"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicInformationExamDatesAssessmentPutRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -4541,6 +4621,21 @@
           "permissions"
         ]
       },
+      "ResetPasswordResponse": {
+        "title": "ResetPasswordResponse",
+        "x-stoplight": {
+          "id": "9bb38e3ite7bc"
+        },
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ql8383jrl7k77"
+            }
+          }
+        }
+      },
       "ResetPasswordRequest": {
         "type": "object",
         "x-examples": {
@@ -4566,21 +4661,6 @@
           "new_password",
           "confirm_password"
         ]
-      },
-      "ResetPasswordResponse": {
-        "title": "ResetPasswordResponse",
-        "x-stoplight": {
-          "id": "9bb38e3ite7bc"
-        },
-        "type": "object",
-        "properties": {
-          "message": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "ql8383jrl7k77"
-            }
-          }
-        }
       },
       "CheckTokenRequest": {
         "type": "object",
@@ -25392,6 +25472,82 @@
         "required": [
           "moodle_link"
         ]
+      },
+      "AcademicInformationExamDatesPutRequest": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "assessment_id": 103828,
+              "exam_date": "2024-01-24"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "assessment_id",
+            "exam_date"
+          ],
+          "properties": {
+            "assessment_id": {
+              "type": "integer"
+            },
+            "exam_date": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "AcademicInformationExamDatesPutResponse": {
+        "title": "AcademicInformationExamDatesPutResponse",
+        "x-stoplight": {
+          "id": "f56z799nghwci"
+        },
+        "type": "object",
+        "properties": {
+          "message": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "vxgm02uasp62o"
+            }
+          }
+        }
+      },
+      "AcademicInformationExamDatesAssessmentPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "exam_date": "2024-01-24"
+          }
+        },
+        "required": [
+          "exam_date"
+        ],
+        "properties": {
+          "exam_date": {
+            "type": "string"
+          }
+        },
+        "title": ""
+      },
+      "AcademicInformationExamDatesAssessmentPutResponse": {
+        "title": "AcademicInformationExamDatesAssessmentPutResponse",
+        "x-stoplight": {
+          "id": "iwozi2w3of7sb"
+        },
+        "type": "object",
+        "required": [
+          "message"
+        ],
+        "properties": {
+          "message": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "zcskerh8hhl5t"
+            }
+          }
+        }
       }
     },
     "securitySchemes": {}
