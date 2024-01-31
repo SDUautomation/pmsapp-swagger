@@ -1073,9 +1073,7 @@
           }
         },
         "required": [
-          "course_code",
-          "year",
-          "type",
+          "id",
           "expression",
           "cr_enabled"
         ],
