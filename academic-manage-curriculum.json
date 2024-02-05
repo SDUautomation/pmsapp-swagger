@@ -47,7 +47,7 @@
   },
   "components": {
     "schemas": {
-      "AcademicManageCurriculumSearchRequest": {
+      "AcademicManageCurriculumCourseSearchRequest": {
         "title": "AcademicManageCurriculumSearchRequest",
         "x-stoplight": {
           "id": "f9gdh1s2i0q6z"
@@ -68,7 +68,7 @@
           }
         }
       },
-      "AcademicManageCurriculumSearchResponse": {
+      "AcademicManageCurriculumCourseSearchResponse": {
         "type": "object",
         "properties": {
           "code": {
