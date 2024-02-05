@@ -43,6 +43,30 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/manage/curriculum/core": {
+      "post": {
+        "summary": "create course",
+        "tags": [],
+        "responses": {
+          "201": {
+            "description": "Course is successfully created."
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-curriculum-core",
+        "x-stoplight": {
+          "id": "bubn7gabod7gs"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCurriculumCourseCreateRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -145,6 +169,43 @@
         },
         "x-stoplight": {
           "id": "u0yd17ez30bxa"
+        }
+      },
+      "AcademicManageCurriculumCourseCreateRequest": {
+        "type": "object",
+        "properties": {
+          "program_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "track_code": {
+            "type": "string"
+          },
+          "course_code": {
+            "type": "string"
+          },
+          "terms": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string"
+          },
+          "elective_type": {
+            "type": "string"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "program_code": "11107",
+            "year": 2022,
+            "track_code": "TRACK0",
+            "course_code": "CSS 101",
+            "terms": 8,
+            "type": "C",
+            "elective_type": "AE"
+          }
         }
       }
     }
