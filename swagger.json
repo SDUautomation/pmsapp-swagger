@@ -18506,102 +18506,67 @@
         }
       },
       "AcademicInformationExamDatesResponse": {
-        "type": "object",
+        "type": "array",
         "x-examples": {
-          "Example 1": {
-            "total": 40,
-            "from": 1,
-            "per_page": 15,
-            "current_page": 2,
-            "last_page": 3,
-            "exam_dates": [
-              {
-                "id": 1732628,
-                "code": "MAT 251",
-                "section": "01",
-                "type": "N",
-                "title": "Probability and Mathematical Statictics",
-                "assessment": "FIN",
-                "exam_date": "2022-12-29",
-                "close_date": "2023-01-06",
-                "can_edit": true,
-                "instructor": "Larissa Bazarbayeva"
-              }
-            ]
-          }
+          "Example 1": [
+            {
+              "id": 1732628,
+              "code": "MAT 251",
+              "section": "01",
+              "type": "N",
+              "title": "Probability and Mathematical Statictics",
+              "assessment": "FIN",
+              "exam_date": "2022-12-29",
+              "close_date": "2023-01-06",
+              "can_edit": true,
+              "instructor": "Larissa Bazarbayeva"
+            }
+          ]
         },
-        "required": [
-          "total",
-          "from",
-          "per_page",
-          "current_page",
-          "last_page",
-          "exam_dates"
-        ],
-        "properties": {
-          "total": {
-            "type": "integer"
-          },
-          "from": {
-            "type": "integer"
-          },
-          "per_page": {
-            "type": "integer"
-          },
-          "current_page": {
-            "type": "integer"
-          },
-          "last_page": {
-            "type": "integer"
-          },
-          "exam_dates": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "code",
-                "section",
-                "type",
-                "title",
-                "assessment",
-                "exam_date",
-                "close_date",
-                "can_edit",
-                "instructor"
-              ],
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "section": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "assessment": {
-                  "type": "string"
-                },
-                "exam_date": {
-                  "type": "string"
-                },
-                "close_date": {
-                  "type": "string"
-                },
-                "can_edit": {
-                  "type": "boolean"
-                },
-                "instructor": {
-                  "type": "string"
-                }
-              }
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "code",
+            "section",
+            "type",
+            "title",
+            "assessment",
+            "exam_date",
+            "close_date",
+            "can_edit",
+            "instructor"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "code": {
+              "type": "string"
+            },
+            "section": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "assessment": {
+              "type": "string"
+            },
+            "exam_date": {
+              "type": "string"
+            },
+            "close_date": {
+              "type": "string"
+            },
+            "can_edit": {
+              "type": "boolean"
+            },
+            "instructor": {
+              "type": "string"
             }
           }
         }
