@@ -1,0 +1,152 @@
+{
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "o01qbqef0119q"
+  },
+  "info": {
+    "title": "academic-manage-curriculum",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/1.0.0/academic/manage/curriculum/search": {
+      "get": {
+        "summary": "find course",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageCurriculumSearchResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-curriculum-search",
+        "x-stoplight": {
+          "id": "qhr4b7xj8vc8v"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCurriculumSearchRequest"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AcademicManageCurriculumSearchRequest": {
+        "title": "AcademicManageCurriculumSearchRequest",
+        "x-stoplight": {
+          "id": "f9gdh1s2i0q6z"
+        },
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "d80osjyfmatqf"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "s6xi7jmcdmh5i"
+            }
+          }
+        }
+      },
+      "AcademicManageCurriculumSearchResponse": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "department": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "code": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          },
+          "period_code": {
+            "type": "string"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string"
+          },
+          "equicode": {
+            "type": "string"
+          },
+          "theory": {
+            "type": "integer"
+          },
+          "practice": {
+            "type": "integer"
+          },
+          "lab": {
+            "type": "integer"
+          },
+          "credits": {
+            "type": "integer"
+          },
+          "ects": {
+            "type": "integer"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "code": "SPS 205",
+            "year": 2022,
+            "title": "Professional oriented foreign language",
+            "department": {
+              "id": 1,
+              "code": "DEP_HUMANITIES",
+              "title": "Department of Humanities"
+            },
+            "period_code": "1021312",
+            "term": 1,
+            "type": "N",
+            "equicode": "20207432",
+            "theory": 1,
+            "practice": 2,
+            "lab": 0,
+            "credits": 3,
+            "ects": 5
+          }
+        },
+        "x-stoplight": {
+          "id": "u0yd17ez30bxa"
+        }
+      }
+    }
+  }
+}
