@@ -22336,6 +22336,16 @@
             ]
           }
         },
+        "required": [
+          "enrolled",
+          "information",
+          "sections",
+          "consent_statuses",
+          "instructors",
+          "history_year_terms",
+          "syllabus",
+          "assessments"
+        ],
         "properties": {
           "enrolled": {
             "type": "boolean"
@@ -22399,6 +22409,10 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "section_id",
+                "section"
+              ],
               "properties": {
                 "section_id": {
                   "type": "integer"
@@ -22406,17 +22420,17 @@
                 "section": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "section_id",
-                "section"
-              ]
+              }
             }
           },
           "consent_statuses": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -22424,17 +22438,20 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "title"
-              ]
+              }
             }
           },
           "instructors": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "username",
+                "name",
+                "surname",
+                "sections"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -22454,20 +22471,17 @@
                     "type": "integer"
                   }
                 }
-              },
-              "required": [
-                "id",
-                "username",
-                "name",
-                "surname",
-                "sections"
-              ]
+              }
             }
           },
           "history_year_terms": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "year",
+                "term"
+              ],
               "properties": {
                 "year": {
                   "type": "integer"
@@ -22475,11 +22489,7 @@
                 "term": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "year",
-                "term"
-              ]
+              }
             }
           },
           "syllabus": {
@@ -22489,6 +22499,14 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "section_id",
+                "assessment_id",
+                "assessment_type",
+                "assessment_title",
+                "is_open",
+                "graded"
+              ],
               "properties": {
                 "section_id": {
                   "type": "integer"
@@ -22504,28 +22522,17 @@
                 },
                 "is_open": {
                   "type": "boolean"
+                },
+                "graded": {
+                  "type": "boolean",
+                  "x-stoplight": {
+                    "id": "608nm63u69lru"
+                  }
                 }
-              },
-              "required": [
-                "section_id",
-                "assessment_id",
-                "assessment_type",
-                "assessment_title",
-                "is_open"
-              ]
+              }
             }
           }
-        },
-        "required": [
-          "enrolled",
-          "information",
-          "sections",
-          "consent_statuses",
-          "instructors",
-          "history_year_terms",
-          "syllabus",
-          "assessments"
-        ]
+        }
       },
       "AcademicCoursesOverviewRequest": {
         "title": "AcademicCoursesOverviewRequest",
