@@ -67,6 +67,37 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/manage/curriculum/tracks/:track": {
+      "get": {
+        "summary": "get track by id",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageCurriculumTrackResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-curriculum-tracks-:track",
+        "x-stoplight": {
+          "id": "22bei21dny4xp"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCurriculumTrackRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -205,6 +236,84 @@
             "terms": 8,
             "type": "C",
             "elective_type": "AE"
+          }
+        }
+      },
+      "AcademicManageCurriculumTrackResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "message": "academic.manage.curriculum.domain.track.show_message",
+            "data": {
+              "id": 1,
+              "code": "TRACK0",
+              "title": "Main Track",
+              "terms": 8,
+              "is_main": true,
+              "students": null,
+              "program": {
+                "code": "10101",
+                "year": 2012,
+                "type": "Degree Program"
+              }
+            }
+          }
+        },
+        "properties": {
+          "message": {
+            "type": "string"
+          },
+          "data": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "code": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "terms": {
+                "type": "integer"
+              },
+              "is_main": {
+                "type": "boolean"
+              },
+              "students": {
+                "type": [
+                  "integer"
+                ]
+              },
+              "program": {
+                "type": "object",
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "integer"
+                  },
+                  "type": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "AcademicManageCurriculumTrackRequest": {
+        "type": "object",
+        "properties": {
+          "track": {
+            "type": "integer"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "track": 1
           }
         }
       }
