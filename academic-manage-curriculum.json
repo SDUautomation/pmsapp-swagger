@@ -23,7 +23,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AcademicManageCurriculumSearchResponse"
+                  "$ref": "#/components/schemas/AcademicManageCurriculumCourseSearchResponse"
                 }
               }
             }
@@ -37,7 +37,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AcademicManageCurriculumSearchRequest"
+                "$ref": "#/components/schemas/AcademicManageCurriculumCourseSearchRequest"
               }
             }
           }
