@@ -223,6 +223,27 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/courses/attendance/relocates/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-1.0.0-academic-courses-attendance-relocates-resources",
+        "x-stoplight": {
+          "id": "vu2hyj0lo3384"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1115,11 +1136,211 @@
           "id": "fpo8tbf4i73o8"
         },
         "type": "object",
+        "required": [
+          "building_id",
+          "date"
+        ],
         "properties": {
-          "yo": {
-            "type": "string",
+          "building_id": {
+            "type": "number",
             "x-stoplight": {
               "id": "ohi3z9awas31f"
+            }
+          },
+          "date": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "tgdk0x3iqyg6g"
+            }
+          }
+        }
+      },
+      "AcademicSingleCourseAttendanceRelocatesGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "rooms": [
+              {
+                "id": 12831,
+                "title": "E107",
+                "quota": 20,
+                "floor": 1,
+                "building": {
+                  "id": "ENG",
+                  "title": "Engineering Block"
+                },
+                "type": {
+                  "id": 2,
+                  "title": "Laboratory"
+                }
+              }
+            ],
+            "hours": [
+              {
+                "id": 362,
+                "start_time": "09:00",
+                "end_time": "09:50"
+              }
+            ],
+            "lessons": [
+              {
+                "lesson_hour_id": 654,
+                "room_id": 2,
+                "course_code": "INF 389",
+                "course_title": "AWS cloud",
+                "teacher_name": "Maksat Galiyev",
+                "teacher_id": 10960
+              }
+            ]
+          }
+        },
+        "required": [
+          "hours",
+          "lessons"
+        ],
+        "properties": {
+          "rooms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title",
+                "quota",
+                "floor",
+                "building",
+                "type"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "quota": {
+                  "type": "integer"
+                },
+                "floor": {
+                  "type": "integer"
+                },
+                "building": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "type": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "hours": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "start_time",
+                "end_time"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "start_time": {
+                  "type": "string"
+                },
+                "end_time": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "lessons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "lesson_hour_id",
+                "room_id",
+                "course_code",
+                "course_title",
+                "teacher_name",
+                "teacher_id"
+              ],
+              "properties": {
+                "lesson_hour_id": {
+                  "type": "integer"
+                },
+                "room_id": {
+                  "type": "integer"
+                },
+                "course_code": {
+                  "type": "string"
+                },
+                "course_title": {
+                  "type": "string"
+                },
+                "teacher_name": {
+                  "type": "string"
+                },
+                "teacher_id": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      },
+      "AcademicSingleCourseAttendanceRelocatesResourceGetRequest": {
+        "title": "AcademicSingleCourseAttendanceRelocatesresourceGetRequest",
+        "x-stoplight": {
+          "id": "dbxf50wj8p2o0"
+        },
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "cnrc5tkpuo0r5"
+            }
+          }
+        }
+      },
+      "AcademicSingleCourseAttendanceRelocatesResourceGetResponse": {
+        "title": "AcademicSingleCourseRelocatesResourceGetResponse",
+        "x-stoplight": {
+          "id": "qmmbufomm8jv8"
+        },
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "sna4k2yyx14t1"
             }
           }
         }
