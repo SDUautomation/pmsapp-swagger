@@ -1560,6 +1560,16 @@
       },
       "AcademicSingleCourseGradeStatisticsGetRequest": {
         "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "grades": [
+              75
+            ]
+          }
+        },
+        "required": [
+          "grades"
+        ],
         "properties": {
           "grades": {
             "type": "array",
@@ -1567,19 +1577,24 @@
               "type": "integer"
             }
           }
-        },
-        "x-examples": {
-          "Example 1": {
-            "grades": [
-              75
-            ]
-          }
         }
       },
       "AcademicSingleCourseGradeStatisticsGetResponse": {
         "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "letter": "B+",
+              "percent": 31.82
+            }
+          ]
+        },
         "items": {
           "type": "object",
+          "required": [
+            "letter",
+            "percent"
+          ],
           "properties": {
             "letter": {
               "type": "string"
@@ -1588,14 +1603,6 @@
               "type": "number"
             }
           }
-        },
-        "x-examples": {
-          "Example 1": [
-            {
-              "letter": "B+",
-              "percent": 31.82
-            }
-          ]
         }
       }
     }
