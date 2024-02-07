@@ -61,7 +61,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AcademicManageCurriculumCourseCreateRequest"
+                "$ref": "#/components/schemas/AcademicManageCurriculumAddCourseRequest"
               }
             }
           }
