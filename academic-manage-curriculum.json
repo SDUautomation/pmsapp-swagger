@@ -46,7 +46,7 @@
     },
     "/1.0.0/academic/manage/curriculum/core": {
       "post": {
-        "summary": "create course",
+        "summary": "add course to track",
         "tags": [],
         "responses": {
           "201": {
@@ -65,7 +65,8 @@
               }
             }
           }
-        }
+        },
+        "description": "{\n  \"track_id\": 1,\n  \"course_code\": \"CSS 101\",\n  \"terms\": 8,\n  \"type\": \"C\",\n  \"elective_type\": \"AE\"\n}"
       }
     },
     "/1.0.0/academic/manage/curriculum/tracks/:track": {
@@ -325,17 +326,27 @@
           }
         }
       },
-      "AcademicManageCurriculumCourseCreateRequest": {
+      "AcademicManageCurriculumAddCourseRequest": {
         "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "track_id": 1,
+            "course_code": "CSS 101",
+            "terms": 8,
+            "type": "C",
+            "elective_type": "AE"
+          }
+        },
+        "required": [
+          "track_id",
+          "course_code",
+          "terms",
+          "type",
+          "elective_type"
+        ],
         "properties": {
-          "program_code": {
-            "type": "string"
-          },
-          "year": {
+          "track_id": {
             "type": "integer"
-          },
-          "track_code": {
-            "type": "string"
           },
           "course_code": {
             "type": "string"
@@ -348,17 +359,6 @@
           },
           "elective_type": {
             "type": "string"
-          }
-        },
-        "x-examples": {
-          "Example 1": {
-            "program_code": "11107",
-            "year": 2022,
-            "track_code": "TRACK0",
-            "course_code": "CSS 101",
-            "terms": 8,
-            "type": "C",
-            "elective_type": "AE"
           }
         }
       },
