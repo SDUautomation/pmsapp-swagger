@@ -265,6 +265,81 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/courses/grades/{assesment}/statistics": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "assesment",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "post": {
+        "summary": "Your POST endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "letter": {
+                        "type": "string"
+                      },
+                      "percent": {
+                        "type": "number"
+                      }
+                    }
+                  },
+                  "x-examples": {
+                    "Example 1": [
+                      {
+                        "letter": "B+",
+                        "percent": 31.82
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        },
+        "operationId": "post-1.0.0-academic-courses-grades-assesment-statistics",
+        "x-stoplight": {
+          "id": "xhny9ywxb0mws"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "grades": {
+                    "type": "array",
+                    "items": {
+                      "type": "integer"
+                    }
+                  }
+                },
+                "x-examples": {
+                  "Example 1": {
+                    "grades": [
+                      75
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
