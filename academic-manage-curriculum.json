@@ -241,65 +241,48 @@
       },
       "AcademicManageCurriculumTrackResponse": {
         "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "message": "academic.manage.curriculum.domain.track.show_message",
-            "data": {
-              "id": 1,
-              "code": "TRACK0",
-              "title": "Main Track",
-              "terms": 8,
-              "is_main": true,
-              "students": null,
-              "program": {
-                "code": "10101",
-                "year": 2012,
-                "type": "Degree Program"
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "code": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "terms": {
+            "type": "integer"
+          },
+          "students": {
+            "type": "integer"
+          },
+          "program": {
+            "type": "object",
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "year": {
+                "type": "integer"
+              },
+              "type": {
+                "type": "string"
               }
             }
           }
         },
-        "properties": {
-          "message": {
-            "type": "string"
-          },
-          "data": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "integer"
-              },
-              "code": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "terms": {
-                "type": "integer"
-              },
-              "is_main": {
-                "type": "boolean"
-              },
-              "students": {
-                "type": [
-                  "integer"
-                ]
-              },
-              "program": {
-                "type": "object",
-                "properties": {
-                  "code": {
-                    "type": "string"
-                  },
-                  "year": {
-                    "type": "integer"
-                  },
-                  "type": {
-                    "type": "string"
-                  }
-                }
-              }
+        "x-examples": {
+          "Example 1": {
+            "id": 1,
+            "code": "TRACK0",
+            "title": "Main Track",
+            "terms": 8,
+            "students": 368,
+            "program": {
+              "code": "11107",
+              "year": 2022,
+              "type": "Major"
             }
           }
         }
