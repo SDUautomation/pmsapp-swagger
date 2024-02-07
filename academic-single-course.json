@@ -378,6 +378,8 @@
         "items": {
           "type": "object",
           "required": [
+            "student_id",
+            "student_name",
             "student_surname",
             "student_photo",
             "total_grade",
