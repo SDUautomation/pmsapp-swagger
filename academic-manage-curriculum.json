@@ -103,23 +103,27 @@
   "components": {
     "schemas": {
       "AcademicManageCurriculumCourseSearchRequest": {
-        "title": "AcademicManageCurriculumSearchRequest",
-        "x-stoplight": {
-          "id": "f9gdh1s2i0q6z"
-        },
         "type": "object",
         "properties": {
           "course_code": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "d80osjyfmatqf"
-            }
+            "type": "string"
           },
           "year": {
-            "type": "number",
-            "x-stoplight": {
-              "id": "s6xi7jmcdmh5i"
-            }
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "course_code": "",
+            "year": 1,
+            "per_page": 20,
+            "offset": 1
           }
         }
       },
