@@ -212,6 +212,15 @@
         "operationId": "get-1.0.0-academic-courses-attendances-relocates",
         "x-stoplight": {
           "id": "e7pxvn3k774f0"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleCourseAttendanceRelocatesGetRequest"
+              }
+            }
+          }
         }
       }
     }
@@ -1099,6 +1108,21 @@
           "schedule_id",
           "students"
         ]
+      },
+      "AcademicSingleCourseAttendanceRelocatesGetRequest": {
+        "title": "AcademicSingleCourseAttendanceRelocatesGetRequest",
+        "x-stoplight": {
+          "id": "fpo8tbf4i73o8"
+        },
+        "type": "object",
+        "properties": {
+          "yo": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ohi3z9awas31f"
+            }
+          }
+        }
       }
     }
   }
