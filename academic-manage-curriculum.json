@@ -182,6 +182,11 @@
           }
         },
         "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
           "courses"
         ],
         "properties": {
@@ -205,10 +210,23 @@
             "items": {
               "type": "object",
               "required": [
+                "code",
+                "year",
+                "title",
                 "department",
                 "faculty",
+                "period_code",
+                "theory",
+                "practice",
+                "lab",
+                "credits",
+                "ects",
+                "equicode",
+                "status",
                 "language",
                 "type",
+                "open_date",
+                "open_time",
                 "grading"
               ],
               "properties": {
@@ -223,6 +241,11 @@
                 },
                 "department": {
                   "type": "object",
+                  "required": [
+                    "id",
+                    "code",
+                    "title"
+                  ],
                   "properties": {
                     "id": {
                       "type": "integer"
@@ -237,6 +260,11 @@
                 },
                 "faculty": {
                   "type": "object",
+                  "required": [
+                    "id",
+                    "code",
+                    "title"
+                  ],
                   "properties": {
                     "id": {
                       "type": "integer"
@@ -278,6 +306,10 @@
                 },
                 "language": {
                   "type": "object",
+                  "required": [
+                    "code",
+                    "title"
+                  ],
                   "properties": {
                     "code": {
                       "type": "string"
@@ -289,6 +321,10 @@
                 },
                 "type": {
                   "type": "object",
+                  "required": [
+                    "key",
+                    "title"
+                  ],
                   "properties": {
                     "key": {
                       "type": "string"
@@ -309,6 +345,10 @@
                 },
                 "grading": {
                   "type": "object",
+                  "required": [
+                    "key",
+                    "title"
+                  ],
                   "properties": {
                     "key": {
                       "type": "string"
