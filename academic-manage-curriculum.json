@@ -129,6 +129,63 @@
       },
       "AcademicManageCurriculumCourseSearchResponse": {
         "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "message": "Courses are successfully returned.",
+            "data": {
+              "total": 1,
+              "from": 1,
+              "per_page": 1,
+              "current_page": 1,
+              "last_page": 1,
+              "courses": [
+                {
+                  "code": "CSS 101",
+                  "year": 2023,
+                  "title": "Algorithms and Programming",
+                  "department": {
+                    "id": 1223,
+                    "code": "DEP_COMP_SCI",
+                    "title": "Department of Computer Sciences"
+                  },
+                  "faculty": {
+                    "id": 1278,
+                    "code": "F_ENG",
+                    "title": "Faculty of Engineering and Natural Sciences"
+                  },
+                  "period_code": "S",
+                  "term": null,
+                  "theory": 2,
+                  "practice": 0,
+                  "lab": 2,
+                  "credits": 3,
+                  "ects": 6,
+                  "equicode": 20120040,
+                  "status": 0,
+                  "language": {
+                    "code": "KZ",
+                    "title": "Kazakh"
+                  },
+                  "type": {
+                    "key": "N",
+                    "title": "Normal"
+                  },
+                  "employee_id": null,
+                  "open_date": "2023-04-04",
+                  "open_time": "14:32:37",
+                  "grading": {
+                    "key": "N",
+                    "title": "normal"
+                  },
+                  "local_code": null
+                }
+              ]
+            }
+          }
+        },
+        "required": [
+          "data"
+        ],
         "properties": {
           "message": {
             "type": "string"
@@ -268,60 +325,6 @@
                   }
                 }
               }
-            }
-          }
-        },
-        "x-examples": {
-          "Example 1": {
-            "message": "Courses are successfully returned.",
-            "data": {
-              "total": 1,
-              "from": 1,
-              "per_page": 1,
-              "current_page": 1,
-              "last_page": 1,
-              "courses": [
-                {
-                  "code": "CSS 101",
-                  "year": 2023,
-                  "title": "Algorithms and Programming",
-                  "department": {
-                    "id": 1223,
-                    "code": "DEP_COMP_SCI",
-                    "title": "Department of Computer Sciences"
-                  },
-                  "faculty": {
-                    "id": 1278,
-                    "code": "F_ENG",
-                    "title": "Faculty of Engineering and Natural Sciences"
-                  },
-                  "period_code": "S",
-                  "term": null,
-                  "theory": 2,
-                  "practice": 0,
-                  "lab": 2,
-                  "credits": 3,
-                  "ects": 6,
-                  "equicode": 20120040,
-                  "status": 0,
-                  "language": {
-                    "code": "KZ",
-                    "title": "Kazakh"
-                  },
-                  "type": {
-                    "key": "N",
-                    "title": "Normal"
-                  },
-                  "employee_id": null,
-                  "open_date": "2023-04-04",
-                  "open_time": "14:32:37",
-                  "grading": {
-                    "key": "N",
-                    "title": "normal"
-                  },
-                  "local_code": null
-                }
-              ]
             }
           }
         }
