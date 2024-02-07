@@ -208,7 +208,18 @@
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
-        "responses": {},
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleCourseAttendanceRelocatesGetResponse"
+                }
+              }
+            }
+          }
+        },
         "operationId": "get-1.0.0-academic-courses-attendances-relocates",
         "x-stoplight": {
           "id": "e7pxvn3k774f0"
@@ -228,7 +239,18 @@
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
-        "responses": {},
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleCourseAttendanceRelocatesResourceGetResponse"
+                }
+              }
+            }
+          }
+        },
         "operationId": "get-1.0.0-academic-courses-attendance-relocates-resources",
         "x-stoplight": {
           "id": "vu2hyj0lo3384"
@@ -237,8 +259,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {}
+                "$ref": "#/components/schemas/AcademicSingleCourseAttendanceRelocatesResourceGetRequest"
               }
             }
           }
@@ -1321,26 +1342,175 @@
           "id": "dbxf50wj8p2o0"
         },
         "type": "object",
+        "required": [
+          "modules",
+          "building_ud",
+          "date"
+        ],
         "properties": {
-          "id": {
-            "type": "string",
+          "modules": {
+            "type": "array",
             "x-stoplight": {
               "id": "cnrc5tkpuo0r5"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "v8g6fermwfv21"
+              },
+              "type": "string"
+            }
+          },
+          "building_ud": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "7atolxg0iwscx"
+            }
+          },
+          "date": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "f24ljyjzblecl"
             }
           }
         }
       },
       "AcademicSingleCourseAttendanceRelocatesResourceGetResponse": {
-        "title": "AcademicSingleCourseRelocatesResourceGetResponse",
-        "x-stoplight": {
-          "id": "qmmbufomm8jv8"
-        },
         "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "rooms": [
+              {
+                "id": 12831,
+                "title": "E107",
+                "quota": 20,
+                "floor": 1,
+                "building": {
+                  "id": "ENG",
+                  "title": "Engineering Block"
+                },
+                "type": {
+                  "id": 2,
+                  "title": "Laboratory"
+                }
+              }
+            ],
+            "buildings": [
+              {
+                "id": "ENG",
+                "title": "Engineering Block"
+              }
+            ],
+            "lesson_hours": [
+              {
+                "id": 362,
+                "start_time": "09:00",
+                "end_time": "09:50"
+              }
+            ]
+          }
+        },
+        "required": [
+          "rooms",
+          "buildings",
+          "lesson_hours"
+        ],
         "properties": {
-          "id": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "sna4k2yyx14t1"
+          "rooms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title",
+                "quota",
+                "floor",
+                "building",
+                "type"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "quota": {
+                  "type": "integer"
+                },
+                "floor": {
+                  "type": "integer"
+                },
+                "building": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "type": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "buildings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "lesson_hours": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "start_time",
+                "end_time"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "start_time": {
+                  "type": "string"
+                },
+                "end_time": {
+                  "type": "string"
+                }
+              }
             }
           }
         }
