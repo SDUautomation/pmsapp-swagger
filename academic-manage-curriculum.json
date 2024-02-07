@@ -364,6 +364,27 @@
       },
       "AcademicManageCurriculumTrackResponse": {
         "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 1,
+            "code": "TRACK0",
+            "title": "Main Track",
+            "terms": 8,
+            "students": 368,
+            "program": {
+              "code": "11107",
+              "year": 2022,
+              "type": "Major"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "code",
+          "title",
+          "terms",
+          "program"
+        ],
         "properties": {
           "id": {
             "type": "integer"
@@ -382,6 +403,11 @@
           },
           "program": {
             "type": "object",
+            "required": [
+              "code",
+              "year",
+              "type"
+            ],
             "properties": {
               "code": {
                 "type": "string"
@@ -392,20 +418,6 @@
               "type": {
                 "type": "string"
               }
-            }
-          }
-        },
-        "x-examples": {
-          "Example 1": {
-            "id": 1,
-            "code": "TRACK0",
-            "title": "Main Track",
-            "terms": 8,
-            "students": 368,
-            "program": {
-              "code": "11107",
-              "year": 2022,
-              "type": "Major"
             }
           }
         }
