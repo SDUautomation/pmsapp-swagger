@@ -286,26 +286,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "letter": {
-                        "type": "string"
-                      },
-                      "percent": {
-                        "type": "number"
-                      }
-                    }
-                  },
-                  "x-examples": {
-                    "Example 1": [
-                      {
-                        "letter": "B+",
-                        "percent": 31.82
-                      }
-                    ]
-                  }
+                  "$ref": "#/components/schemas/AcademicSingleCourseGradeStatisticsGetResponse"
                 }
               }
             }
@@ -319,22 +300,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {
-                  "grades": {
-                    "type": "array",
-                    "items": {
-                      "type": "integer"
-                    }
-                  }
-                },
-                "x-examples": {
-                  "Example 1": {
-                    "grades": [
-                      75
-                    ]
-                  }
-                }
+                "$ref": "#/components/schemas/AcademicSingleCourseGradeStatisticsGetRequest"
               }
             }
           }
@@ -1590,6 +1556,46 @@
               }
             }
           }
+        }
+      },
+      "AcademicSingleCourseGradeStatisticsGetRequest": {
+        "type": "object",
+        "properties": {
+          "grades": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "grades": [
+              75
+            ]
+          }
+        }
+      },
+      "AcademicSingleCourseGradeStatisticsGetResponse": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "letter": {
+              "type": "string"
+            },
+            "percent": {
+              "type": "number"
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": [
+            {
+              "letter": "B+",
+              "percent": 31.82
+            }
+          ]
         }
       }
     }
