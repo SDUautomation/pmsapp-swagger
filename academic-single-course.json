@@ -203,6 +203,26 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/courses/attendances/relocates": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-1.0.0-academic-courses-attendances-relocates",
+        "x-stoplight": {
+          "id": "e7pxvn3k774f0"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleCourseAttendanceRelocatesGetRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -240,6 +260,16 @@
         },
         "items": {
           "type": "object",
+          "required": [
+            "student_surname",
+            "student_photo",
+            "total_grade",
+            "letter_grade",
+            "absence_rate",
+            "speciality",
+            "block",
+            "grades"
+          ],
           "properties": {
             "student_id": {
               "type": "string"
@@ -300,6 +330,11 @@
               "type": "array",
               "items": {
                 "type": "object",
+                "required": [
+                  "assessment_id",
+                  "grade",
+                  "is_open"
+                ],
                 "properties": {
                   "assessment_id": {
                     "type": "integer"
@@ -310,27 +345,10 @@
                   "is_open": {
                     "type": "boolean"
                   }
-                },
-                "required": [
-                  "assessment_id",
-                  "grade",
-                  "is_open"
-                ]
+                }
               }
             }
-          },
-          "required": [
-            "student_id",
-            "student_name",
-            "student_surname",
-            "student_photo",
-            "total_grade",
-            "letter_grade",
-            "absence_rate",
-            "speciality",
-            "block",
-            "grades"
-          ]
+          }
         }
       },
       "AcademicSingleCourseGradeRequest": {
@@ -1090,6 +1108,21 @@
           "schedule_id",
           "students"
         ]
+      },
+      "AcademicSingleCourseAttendanceRelocatesGetRequest": {
+        "title": "AcademicSingleCourseAttendanceRelocatesGetRequest",
+        "x-stoplight": {
+          "id": "fpo8tbf4i73o8"
+        },
+        "type": "object",
+        "properties": {
+          "yo": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ohi3z9awas31f"
+            }
+          }
+        }
       }
     }
   }
