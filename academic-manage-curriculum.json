@@ -341,8 +341,7 @@
           "track_id",
           "course_code",
           "terms",
-          "type",
-          "elective_type"
+          "type"
         ],
         "properties": {
           "track_id": {
