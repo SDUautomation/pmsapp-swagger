@@ -130,80 +130,200 @@
       "AcademicManageCurriculumCourseSearchResponse": {
         "type": "object",
         "properties": {
-          "code": {
+          "message": {
             "type": "string"
           },
-          "year": {
-            "type": "integer"
-          },
-          "title": {
-            "type": "string"
-          },
-          "department": {
+          "data": {
             "type": "object",
             "properties": {
-              "id": {
+              "total": {
                 "type": "integer"
               },
-              "code": {
-                "type": "string"
+              "from": {
+                "type": "integer"
               },
-              "title": {
-                "type": "string"
+              "per_page": {
+                "type": "integer"
+              },
+              "current_page": {
+                "type": "integer"
+              },
+              "last_page": {
+                "type": "integer"
+              },
+              "courses": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "year": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "department": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "code": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "faculty": {
+                      "type": "object",
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "code": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "period_code": {
+                      "type": "string"
+                    },
+                    "term": {
+                      "type": "null"
+                    },
+                    "theory": {
+                      "type": "integer"
+                    },
+                    "practice": {
+                      "type": "integer"
+                    },
+                    "lab": {
+                      "type": "integer"
+                    },
+                    "credits": {
+                      "type": "integer"
+                    },
+                    "ects": {
+                      "type": "integer"
+                    },
+                    "equicode": {
+                      "type": "integer"
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "language": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "type": {
+                      "type": "object",
+                      "properties": {
+                        "key": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "employee_id": {
+                      "type": "null"
+                    },
+                    "open_date": {
+                      "type": "string"
+                    },
+                    "open_time": {
+                      "type": "string"
+                    },
+                    "grading": {
+                      "type": "object",
+                      "properties": {
+                        "key": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "local_code": {
+                      "type": "null"
+                    }
+                  }
+                }
               }
             }
-          },
-          "period_code": {
-            "type": "string"
-          },
-          "term": {
-            "type": "integer"
-          },
-          "type": {
-            "type": "string"
-          },
-          "equicode": {
-            "type": "string"
-          },
-          "theory": {
-            "type": "integer"
-          },
-          "practice": {
-            "type": "integer"
-          },
-          "lab": {
-            "type": "integer"
-          },
-          "credits": {
-            "type": "integer"
-          },
-          "ects": {
-            "type": "integer"
           }
         },
         "x-examples": {
           "Example 1": {
-            "code": "SPS 205",
-            "year": 2022,
-            "title": "Professional oriented foreign language",
-            "department": {
-              "id": 1,
-              "code": "DEP_HUMANITIES",
-              "title": "Department of Humanities"
-            },
-            "period_code": "1021312",
-            "term": 1,
-            "type": "N",
-            "equicode": "20207432",
-            "theory": 1,
-            "practice": 2,
-            "lab": 0,
-            "credits": 3,
-            "ects": 5
+            "message": "Courses are successfully returned.",
+            "data": {
+              "total": 1,
+              "from": 1,
+              "per_page": 1,
+              "current_page": 1,
+              "last_page": 1,
+              "courses": [
+                {
+                  "code": "CSS 101",
+                  "year": 2023,
+                  "title": "Algorithms and Programming",
+                  "department": {
+                    "id": 1223,
+                    "code": "DEP_COMP_SCI",
+                    "title": "Department of Computer Sciences"
+                  },
+                  "faculty": {
+                    "id": 1278,
+                    "code": "F_ENG",
+                    "title": "Faculty of Engineering and Natural Sciences"
+                  },
+                  "period_code": "S",
+                  "term": null,
+                  "theory": 2,
+                  "practice": 0,
+                  "lab": 2,
+                  "credits": 3,
+                  "ects": 6,
+                  "equicode": 20120040,
+                  "status": 0,
+                  "language": {
+                    "code": "KZ",
+                    "title": "Kazakh"
+                  },
+                  "type": {
+                    "key": "N",
+                    "title": "Normal"
+                  },
+                  "employee_id": null,
+                  "open_date": "2023-04-04",
+                  "open_time": "14:32:37",
+                  "grading": {
+                    "key": "N",
+                    "title": "normal"
+                  },
+                  "local_code": null
+                }
+              ]
+            }
           }
-        },
-        "x-stoplight": {
-          "id": "u0yd17ez30bxa"
         }
       },
       "AcademicManageCurriculumCourseCreateRequest": {
