@@ -246,8 +246,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
-                "properties": {}
+                "$ref": "#/components/schemas/AcademicSingleCourseAttendanceRelocatePutRequest"
               }
             }
           }
@@ -1213,6 +1212,75 @@
           "students"
         ]
       },
+      "AcademicSingleCourseAttendanceRelocatePutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "captcha": {
+              "ct": "ct",
+              "iv": "iv",
+              "s": "s"
+            },
+            "course_schedule_id": 1617005,
+            "date": "2024-01-31",
+            "lesson_hour_id": 374,
+            "room_id": 49,
+            "claim_message": "Message to teacher",
+            "move_all": false,
+            "relocate_type": "bosYere"
+          }
+        },
+        "required": [
+          "captcha",
+          "course_schedule_id",
+          "date",
+          "lesson_hour_id",
+          "room_id",
+          "relocate_type"
+        ],
+        "properties": {
+          "captcha": {
+            "type": "object",
+            "required": [
+              "ct",
+              "iv",
+              "s"
+            ],
+            "properties": {
+              "ct": {
+                "type": "string"
+              },
+              "iv": {
+                "type": "string"
+              },
+              "s": {
+                "type": "string"
+              }
+            }
+          },
+          "course_schedule_id": {
+            "type": "integer"
+          },
+          "date": {
+            "type": "string"
+          },
+          "lesson_hour_id": {
+            "type": "integer"
+          },
+          "room_id": {
+            "type": "integer"
+          },
+          "claim_message": {
+            "type": "string"
+          },
+          "move_all": {
+            "type": "boolean"
+          },
+          "relocate_type": {
+            "type": "string"
+          }
+        }
+      },
       "AcademicSingleCourseAttendanceRelocatesGetRequest": {
         "title": "AcademicSingleCourseAttendanceRelocatesGetRequest",
         "x-stoplight": {
@@ -1578,27 +1646,6 @@
           }
         }
       },
-      "AcademicSingleCourseGradeStatisticsGetRequest": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "grades": [
-              75
-            ]
-          }
-        },
-        "required": [
-          "grades"
-        ],
-        "properties": {
-          "grades": {
-            "type": "array",
-            "items": {
-              "type": "integer"
-            }
-          }
-        }
-      },
       "AcademicSingleCourseGradeStatisticsGetResponse": {
         "type": "array",
         "x-examples": {
@@ -1625,72 +1672,24 @@
           }
         }
       },
-      "AcademicSingleCourseAttendanceRelocatePutRequest": {
+      "AcademicSingleCourseGradeStatisticsGetRequest": {
         "type": "object",
         "x-examples": {
           "Example 1": {
-            "captcha": {
-              "ct": "ct",
-              "iv": "iv",
-              "s": "s"
-            },
-            "course_schedule_id": 1617005,
-            "date": "2024-01-31",
-            "lesson_hour_id": 374,
-            "room_id": 49,
-            "claim_message": "Message to teacher",
-            "move_all": false,
-            "relocate_type": "bosYere"
+            "grades": [
+              75
+            ]
           }
         },
         "required": [
-          "captcha",
-          "course_schedule_id",
-          "date",
-          "lesson_hour_id",
-          "room_id",
-          "relocate_type"
+          "grades"
         ],
         "properties": {
-          "captcha": {
-            "type": "object",
-            "required": [
-              "ct",
-              "iv",
-              "s"
-            ],
-            "properties": {
-              "ct": {
-                "type": "string"
-              },
-              "iv": {
-                "type": "string"
-              },
-              "s": {
-                "type": "string"
-              }
+          "grades": {
+            "type": "array",
+            "items": {
+              "type": "integer"
             }
-          },
-          "course_schedule_id": {
-            "type": "integer"
-          },
-          "date": {
-            "type": "string"
-          },
-          "lesson_hour_id": {
-            "type": "integer"
-          },
-          "room_id": {
-            "type": "integer"
-          },
-          "claim_message": {
-            "type": "string"
-          },
-          "move_all": {
-            "type": "boolean"
-          },
-          "relocate_type": {
-            "type": "string"
           }
         }
       }
