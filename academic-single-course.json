@@ -844,6 +844,16 @@
             }
           }
         },
+        "required": [
+          "absence_limit",
+          "attend_types",
+          "relocate_types",
+          "room_types",
+          "buildings",
+          "schedule",
+          "students",
+          "course"
+        ],
         "properties": {
           "absence_limit": {
             "type": "integer"
@@ -852,6 +862,10 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -859,17 +873,17 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "title"
-              ]
+              }
             }
           },
           "relocate_types": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
               "properties": {
                 "id": {
                   "type": "string"
@@ -877,17 +891,17 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "title"
-              ]
+              }
             }
           },
           "room_types": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
               "properties": {
                 "id": {
                   "type": "string"
@@ -895,17 +909,17 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "title"
-              ]
+              }
             }
           },
           "buildings": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
               "properties": {
                 "id": {
                   "type": "string"
@@ -913,17 +927,20 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "title"
-              ]
+              }
             }
           },
           "schedule": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "day",
+                "time",
+                "conductance",
+                "room"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -953,7 +970,8 @@
                   "type": "object",
                   "required": [
                     "id",
-                    "title"
+                    "title",
+                    "building_id"
                   ],
                   "properties": {
                     "id": {
@@ -961,23 +979,31 @@
                     },
                     "title": {
                       "type": "string"
+                    },
+                    "building_id": {
+                      "type": "integer",
+                      "x-stoplight": {
+                        "id": "a4xr2uzll54l4"
+                      }
                     }
                   }
                 }
-              },
-              "required": [
-                "id",
-                "day",
-                "time",
-                "conductance",
-                "room"
-              ]
+              }
             }
           },
           "students": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "full_name",
+                "photo",
+                "speciality",
+                "attendance",
+                "absence_rate",
+                "block"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -1056,16 +1082,7 @@
                     }
                   }
                 }
-              },
-              "required": [
-                "id",
-                "full_name",
-                "photo",
-                "speciality",
-                "attendance",
-                "absence_rate",
-                "block"
-              ]
+              }
             }
           },
           "course": {
@@ -1159,17 +1176,7 @@
               }
             }
           }
-        },
-        "required": [
-          "absence_limit",
-          "attend_types",
-          "relocate_types",
-          "room_types",
-          "buildings",
-          "schedule",
-          "students",
-          "course"
-        ]
+        }
       },
       "AcademicSingleCourseAttendancePutRequest": {
         "type": "object",
