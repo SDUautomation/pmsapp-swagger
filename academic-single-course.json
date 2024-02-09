@@ -1660,7 +1660,8 @@
           "type": "object",
           "required": [
             "letter",
-            "percent"
+            "percent",
+            "range"
           ],
           "properties": {
             "letter": {
@@ -1668,6 +1669,12 @@
             },
             "percent": {
               "type": "number"
+            },
+            "range": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "bb5smw0mj3dgc"
+              }
             }
           }
         }
