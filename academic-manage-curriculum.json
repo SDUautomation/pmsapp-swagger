@@ -68,6 +68,15 @@
           }
         },
         "description": "{\n  \"track_id\": 1,\n  \"course_code\": \"CSS 101\",\n  \"terms\": 8,\n  \"type\": \"C\",\n  \"elective_type\": \"AE\"\n}"
+      },
+      "get": {
+        "summary": "Get academical core courses",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-1.0.0-academic-manage-curriculum-core",
+        "x-stoplight": {
+          "id": "mso8npz98ra27"
+        }
       }
     },
     "/1.0.0/academic/manage/curriculum/tracks/:track": {
@@ -665,6 +674,214 @@
             },
             "ects": {
               "type": "integer"
+            }
+          }
+        }
+      },
+      "AcademicManageCurriculumCoreCoursesRequest": {
+        "type": "object",
+        "properties": {
+          "track_id": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "track_id": 1,
+            "term": 1
+          }
+        }
+      },
+      "AcademicManageCurriculumCoreCoursesResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1,
+              "code": "CSS 105",
+              "track": "11107.CS",
+              "term": 5,
+              "title": "Fundamentals of Programming",
+              "theory": 1,
+              "practice": 1,
+              "lab": 0,
+              "credits": 3,
+              "ects": 5,
+              "is_active": true,
+              "is_theoretical": true,
+              "requisites": [
+                {
+                  "id": 1009,
+                  "course_code": "CSS 671",
+                  "year": "2022",
+                  "type": "PR",
+                  "expr": "A+B",
+                  "cr_enabled": "2",
+                  "program_code": "11107",
+                  "track": "TRACK0"
+                }
+              ],
+              "references": [
+                {
+                  "id": 1,
+                  "curriculum_id": 1,
+                  "course_code": "CSS 101",
+                  "course_title": "Physics 1",
+                  "equicode": "20174856",
+                  "reference_code": "CSS 111",
+                  "reference_title": "Physics 1",
+                  "type": "N",
+                  "is_active": true
+                }
+              ]
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "code",
+            "track",
+            "term",
+            "title",
+            "theory",
+            "practice",
+            "lab",
+            "credits",
+            "ects",
+            "is_active",
+            "is_theoretical",
+            "requisites",
+            "references"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "code": {
+              "type": "string"
+            },
+            "track": {
+              "type": "string"
+            },
+            "term": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "theory": {
+              "type": "integer"
+            },
+            "practice": {
+              "type": "integer"
+            },
+            "lab": {
+              "type": "integer"
+            },
+            "credits": {
+              "type": "integer"
+            },
+            "ects": {
+              "type": "integer"
+            },
+            "is_active": {
+              "type": "boolean"
+            },
+            "is_theoretical": {
+              "type": "boolean"
+            },
+            "requisites": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "course_code",
+                  "year",
+                  "type",
+                  "expr",
+                  "cr_enabled",
+                  "program_code",
+                  "track"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "course_code": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "expr": {
+                    "type": "string"
+                  },
+                  "cr_enabled": {
+                    "type": "string"
+                  },
+                  "program_code": {
+                    "type": "string"
+                  },
+                  "track": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "references": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "curriculum_id",
+                  "course_code",
+                  "course_title",
+                  "equicode",
+                  "reference_code",
+                  "reference_title",
+                  "type",
+                  "is_active"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "curriculum_id": {
+                    "type": "integer"
+                  },
+                  "course_code": {
+                    "type": "string"
+                  },
+                  "course_title": {
+                    "type": "string"
+                  },
+                  "equicode": {
+                    "type": "string"
+                  },
+                  "reference_code": {
+                    "type": "string"
+                  },
+                  "reference_title": {
+                    "type": "string"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "is_active": {
+                    "type": "boolean"
+                  }
+                }
+              }
             }
           }
         }
