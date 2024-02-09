@@ -13,7 +13,7 @@
     }
   ],
   "paths": {
-    "/1.0.0/academic/manage/curriculum/search": {
+    "/1.0.0/academic/manage/curriculum/courses/search": {
       "get": {
         "summary": "find course",
         "tags": [],
@@ -42,7 +42,8 @@
             }
           }
         }
-      }
+      },
+      "parameters": []
     },
     "/1.0.0/academic/manage/curriculum/core": {
       "post": {
@@ -94,6 +95,37 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/AcademicManageCurriculumTrackRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/curriculum/courses": {
+      "get": {
+        "summary": "Get service courses offered from other Departments",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageCurriculumCoursesResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-curriculum-courses",
+        "x-stoplight": {
+          "id": "inlq76ppb8jr0"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCurriculumCoursesRequest"
               }
             }
           }
@@ -471,6 +503,133 @@
         "x-examples": {
           "Example 1": {
             "track": 1
+          }
+        }
+      },
+      "AcademicManageCurriculumCoursesRequest": {
+        "title": "AcademicManageCurriculumCourseRequest",
+        "x-stoplight": {
+          "id": "f2wkjy9fpgjqj"
+        },
+        "type": "object",
+        "required": [
+          "program_code",
+          "year"
+        ],
+        "properties": {
+          "program_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "htiv9rhtcw4uj"
+            }
+          },
+          "year": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "wp1lfqvnmn30l"
+            }
+          },
+          "": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "lz6shcf6cickq"
+            }
+          }
+        }
+      },
+      "AcademicManageCurriculumCoursesResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "code": "SPS 205",
+            "year": 2022,
+            "title": "Professional oriented foreign language",
+            "department": {
+              "id": 1,
+              "code": "DEP_HUMANITIES",
+              "title": "Department of Humanities"
+            },
+            "period_code": "1021312",
+            "term": 1,
+            "type": "N",
+            "equicode": "20207432",
+            "theory": 1,
+            "practice": 2,
+            "lab": 0,
+            "credits": 3,
+            "ects": 5
+          }
+        },
+        "required": [
+          "code",
+          "year",
+          "title",
+          "department",
+          "period_code",
+          "term",
+          "type",
+          "equicode",
+          "theory",
+          "practice",
+          "lab",
+          "credits",
+          "ects"
+        ],
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "department": {
+            "type": "object",
+            "required": [
+              "id",
+              "code",
+              "title"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "code": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          },
+          "period_code": {
+            "type": "string"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "type": {
+            "type": "string"
+          },
+          "equicode": {
+            "type": "string"
+          },
+          "theory": {
+            "type": "integer"
+          },
+          "practice": {
+            "type": "integer"
+          },
+          "lab": {
+            "type": "integer"
+          },
+          "credits": {
+            "type": "integer"
+          },
+          "ects": {
+            "type": "integer"
           }
         }
       }
