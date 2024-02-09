@@ -538,98 +538,103 @@
         }
       },
       "AcademicManageCurriculumCoursesResponse": {
-        "type": "object",
+        "type": "array",
         "x-examples": {
-          "Example 1": {
-            "code": "SPS 205",
-            "year": 2022,
-            "title": "Professional oriented foreign language",
-            "department": {
-              "id": 1,
-              "code": "DEP_HUMANITIES",
-              "title": "Department of Humanities"
-            },
-            "period_code": "1021312",
-            "term": 1,
-            "type": "N",
-            "equicode": "20207432",
-            "theory": 1,
-            "practice": 2,
-            "lab": 0,
-            "credits": 3,
-            "ects": 5
-          }
-        },
-        "required": [
-          "code",
-          "year",
-          "title",
-          "department",
-          "period_code",
-          "term",
-          "type",
-          "equicode",
-          "theory",
-          "practice",
-          "lab",
-          "credits",
-          "ects"
-        ],
-        "properties": {
-          "code": {
-            "type": "string"
-          },
-          "year": {
-            "type": "integer"
-          },
-          "title": {
-            "type": "string"
-          },
-          "department": {
-            "type": "object",
-            "required": [
-              "id",
-              "code",
-              "title"
-            ],
-            "properties": {
-              "id": {
-                "type": "integer"
+          "Example 1": [
+            {
+              "code": "SPS 205",
+              "year": 2022,
+              "title": "Professional oriented foreign language",
+              "department": {
+                "id": 1,
+                "code": "DEP_HUMANITIES",
+                "title": "Department of Humanities"
               },
-              "code": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              }
+              "period_code": "1021312",
+              "term": 1,
+              "type": "N",
+              "equicode": "20207432",
+              "theory": 1,
+              "practice": 2,
+              "lab": 0,
+              "credits": 3,
+              "ects": 5
             }
-          },
-          "period_code": {
-            "type": "string"
-          },
-          "term": {
-            "type": "integer"
-          },
-          "type": {
-            "type": "string"
-          },
-          "equicode": {
-            "type": "string"
-          },
-          "theory": {
-            "type": "integer"
-          },
-          "practice": {
-            "type": "integer"
-          },
-          "lab": {
-            "type": "integer"
-          },
-          "credits": {
-            "type": "integer"
-          },
-          "ects": {
-            "type": "integer"
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "code",
+            "year",
+            "title",
+            "department",
+            "period_code",
+            "term",
+            "type",
+            "equicode",
+            "theory",
+            "practice",
+            "lab",
+            "credits",
+            "ects"
+          ],
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "year": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "department": {
+              "type": "object",
+              "required": [
+                "id",
+                "code",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "period_code": {
+              "type": "string"
+            },
+            "term": {
+              "type": "integer"
+            },
+            "type": {
+              "type": "string"
+            },
+            "equicode": {
+              "type": "string"
+            },
+            "theory": {
+              "type": "integer"
+            },
+            "practice": {
+              "type": "integer"
+            },
+            "lab": {
+              "type": "integer"
+            },
+            "credits": {
+              "type": "integer"
+            },
+            "ects": {
+              "type": "integer"
+            }
           }
         }
       }
