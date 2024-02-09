@@ -75,6 +75,15 @@
         "operationId": "get-1.0.0-academic-information-consent-requests-sections-section",
         "x-stoplight": {
           "id": "kx5dh0fep704o"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicInformationConsentRequestSectionsGetRequest"
+              }
+            }
+          }
         }
       }
     }
@@ -384,6 +393,22 @@
             "type": "string"
           },
           "status": {
+            "type": "integer"
+          }
+        }
+      },
+      "AcademicInformationConsentRequestSectionsGetRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "section": 51738
+          }
+        },
+        "required": [
+          "section"
+        ],
+        "properties": {
+          "section": {
             "type": "integer"
           }
         }
