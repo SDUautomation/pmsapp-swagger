@@ -324,6 +324,34 @@
         "x-stoplight": {
           "id": "8f3191ceb2836"
         },
+        "x-examples": {
+          "Example 1": {
+            "id": 1,
+            "student_id": "180107149",
+            "student_name": "Arsentiy Zhunussov",
+            "level": "Bachelor",
+            "class": 1,
+            "speciality": "Computer Science",
+            "section": "01-N",
+            "type": "PR",
+            "date": "2023-06-18",
+            "message": "Message",
+            "status": 1
+          }
+        },
+        "required": [
+          "id",
+          "student_id",
+          "student_name",
+          "level",
+          "class",
+          "speciality",
+          "section",
+          "type",
+          "date",
+          "message",
+          "status"
+        ],
         "properties": {
           "id": {
             "type": "integer"
@@ -357,21 +385,6 @@
           },
           "status": {
             "type": "integer"
-          }
-        },
-        "x-examples": {
-          "Example 1": {
-            "id": 1,
-            "student_id": "180107149",
-            "student_name": "Arsentiy Zhunussov",
-            "level": "Bachelor",
-            "class": 1,
-            "speciality": "Computer Science",
-            "section": "01-N",
-            "type": "PR",
-            "date": "2023-06-18",
-            "message": "Message",
-            "status": 1
           }
         }
       }
