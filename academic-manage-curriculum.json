@@ -441,11 +441,17 @@
             "code": "TRACK0",
             "title": "Main Track",
             "terms": 8,
+            "is_main": true,
             "students": 368,
             "program": {
               "code": "11107",
               "year": 2022,
-              "type": "Major"
+              "type": "Major",
+              "department": {
+                "id": 1,
+                "code": "DEP_HUMANITIES",
+                "title": "Department of Humanities"
+              }
             }
           }
         },
@@ -454,6 +460,8 @@
           "code",
           "title",
           "terms",
+          "is_main",
+          "students",
           "program"
         ],
         "properties": {
@@ -469,6 +477,9 @@
           "terms": {
             "type": "integer"
           },
+          "is_main": {
+            "type": "boolean"
+          },
           "students": {
             "type": "integer"
           },
@@ -477,7 +488,8 @@
             "required": [
               "code",
               "year",
-              "type"
+              "type",
+              "department"
             ],
             "properties": {
               "code": {
@@ -488,6 +500,25 @@
               },
               "type": {
                 "type": "string"
+              },
+              "department": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "code",
+                  "title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
               }
             }
           }
@@ -524,7 +555,7 @@
             }
           },
           "year": {
-            "type": "string",
+            "type": "number",
             "x-stoplight": {
               "id": "wp1lfqvnmn30l"
             }
