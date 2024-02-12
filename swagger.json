@@ -21623,6 +21623,7 @@
         "items": {
           "type": "object",
           "required": [
+            "id",
             "code",
             "section",
             "type",
@@ -21642,6 +21643,12 @@
             "bell_curve_enabled"
           ],
           "properties": {
+            "id": {
+              "type": "number",
+              "x-stoplight": {
+                "id": "1g0ft2rdofhxc"
+              }
+            },
             "code": {
               "type": "string"
             },
