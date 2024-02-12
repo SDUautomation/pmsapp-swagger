@@ -22720,11 +22720,21 @@
             ]
           }
         },
+        "required": [
+          "my_year_terms",
+          "consent_year_terms",
+          "is_bell_curve_selection_period"
+        ],
         "properties": {
           "my_year_terms": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "year",
+                "term"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -22735,18 +22745,18 @@
                 "term": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "id",
-                "year",
-                "term"
-              ]
+              }
             }
           },
           "consent_year_terms": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "year",
+                "term"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -22757,19 +22767,16 @@
                 "term": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "id",
-                "year",
-                "term"
-              ]
+              }
+            }
+          },
+          "is_bell_curve_selection_period": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "68prdjn60cmkx"
             }
           }
-        },
-        "required": [
-          "my_year_terms",
-          "consent_year_terms"
-        ]
+        }
       },
       "AcademicCoursesStudentsRequest": {
         "title": "AcademicCoursesStudentsRequest",
