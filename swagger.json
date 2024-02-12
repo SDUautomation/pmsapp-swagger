@@ -4088,6 +4088,26 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/courses/bell-curve": {
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "put-1.0.0-academic-courses-bell-curve",
+        "x-stoplight": {
+          "id": "1pct40oa3axhd"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicCoursesBellCurvePutRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -25520,6 +25540,27 @@
             "x-stoplight": {
               "id": "zcskerh8hhl5t"
             }
+          }
+        }
+      },
+      "AcademicCoursesBellCurvePutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "section_id": 24361,
+            "enable": true
+          }
+        },
+        "required": [
+          "section_id",
+          "enable"
+        ],
+        "properties": {
+          "section_id": {
+            "type": "integer"
+          },
+          "enable": {
+            "type": "boolean"
           }
         }
       }
