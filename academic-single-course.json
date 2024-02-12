@@ -981,7 +981,7 @@
                       "type": "string"
                     },
                     "building_id": {
-                      "type": "integer",
+                      "type": "string",
                       "x-stoplight": {
                         "id": "a4xr2uzll54l4"
                       }
