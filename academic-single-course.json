@@ -1300,7 +1300,7 @@
         ],
         "properties": {
           "building_id": {
-            "type": "number",
+            "type": "string",
             "x-stoplight": {
               "id": "ohi3z9awas31f"
             }
