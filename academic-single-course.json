@@ -1482,7 +1482,7 @@
         "type": "object",
         "required": [
           "modules",
-          "building_ud",
+          "building_id",
           "date"
         ],
         "properties": {
@@ -1498,7 +1498,7 @@
               "type": "string"
             }
           },
-          "building_ud": {
+          "building_id": {
             "type": "string",
             "x-stoplight": {
               "id": "7atolxg0iwscx"
