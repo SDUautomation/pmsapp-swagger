@@ -59,13 +59,13 @@
         ],
         "properties": {
           "year": {
-            "type": "string",
+            "type": "number",
             "x-stoplight": {
               "id": "1g2xpqnp2h3px"
             }
           },
           "term": {
-            "type": "string",
+            "type": "number",
             "x-stoplight": {
               "id": "fdbguavwh2dkq"
             }
