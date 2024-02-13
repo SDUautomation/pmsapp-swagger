@@ -324,6 +324,26 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/courses/attendances/reset": {
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "put-1.0.0-academic-courses-attendances-reset",
+        "x-stoplight": {
+          "id": "nh8hmc0t4scrx"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleCourseAttendancesResetRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1697,6 +1717,24 @@
             "items": {
               "type": "integer"
             }
+          }
+        }
+      },
+      "AcademicSingleCourseAttendancesResetRequest": {
+        "type": "object",
+        "properties": {
+          "schedules": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "schedules": [
+              102345
+            ]
           }
         }
       }
