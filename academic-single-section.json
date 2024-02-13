@@ -1,0 +1,19 @@
+{
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "gvva50q5zhx13"
+  },
+  "info": {
+    "title": "academic-single-section",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {},
+  "components": {
+    "schemas": {}
+  }
+}
