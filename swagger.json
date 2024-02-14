@@ -16264,7 +16264,9 @@
         },
         "required": [
           "elective_names",
+          "core_types",
           "elective_types",
+          "consent_statuses",
           "course_prefixes"
         ],
         "properties": {
