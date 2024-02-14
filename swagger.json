@@ -22868,148 +22868,78 @@
           "id": "ke4acpprc5csy"
         },
         "type": "object",
+        "required": [
+          "section_id"
+        ],
         "properties": {
-          "course_code": {
-            "type": "string",
+          "section_id": {
+            "type": "number",
             "x-stoplight": {
-              "id": "tabo48s05seu1"
-            }
-          },
-          "year": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "zs4ub4kncbuu8"
-            }
-          },
-          "term": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "a58xan508zizl"
-            }
-          },
-          "section": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "sia8uwkyeynn9"
-            }
-          },
-          "per_page": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "prgcxfi0meyu5"
-            }
-          },
-          "offset": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "p01i61bpiecd3"
+              "id": "dq0aw8m8rfhl0"
             }
           }
-        },
-        "required": [
-          "course_code",
-          "year",
-          "term",
-          "section",
-          "per_page",
-          "offset"
-        ]
+        }
       },
       "AcademicCoursesConsentRequestsGetResponse": {
-        "type": "object",
+        "type": "array",
         "x-examples": {
-          "Example 1": {
-            "total": 20,
-            "from": 1,
-            "per_page": 10,
-            "current_page": 1,
-            "last_page": 2,
-            "consent_requests": [
-              {
-                "id": 1,
-                "student_id": "180107149",
-                "student_name": "Arsentiy Zhunussov",
-                "level": "Bachelor",
-                "class": 1,
-                "type": "PR",
-                "date": "2023-06-18",
-                "message": "Message",
-                "status": 1
-              }
-            ]
-          }
+          "Example 1": [
+            {
+              "id": 1,
+              "student_id": "180107149",
+              "student_name": "Arsentiy Zhunussov",
+              "level": "Bachelor",
+              "class": 1,
+              "type": "PR",
+              "date": "2023-06-18",
+              "message": "Message",
+              "status": 1
+            }
+          ]
         },
-        "properties": {
-          "total": {
-            "type": "integer"
-          },
-          "from": {
-            "type": "integer"
-          },
-          "per_page": {
-            "type": "integer"
-          },
-          "current_page": {
-            "type": "integer"
-          },
-          "last_page": {
-            "type": "integer"
-          },
-          "consent_requests": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "student_id": {
-                  "type": "string"
-                },
-                "student_name": {
-                  "type": "string"
-                },
-                "level": {
-                  "type": "string"
-                },
-                "class": {
-                  "type": "integer"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "date": {
-                  "type": "string"
-                },
-                "message": {
-                  "type": "string"
-                },
-                "status": {
-                  "type": "integer"
-                }
-              },
-              "required": [
-                "id",
-                "student_id",
-                "student_name",
-                "level",
-                "class",
-                "type",
-                "date",
-                "message",
-                "status"
-              ]
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "student_id",
+            "student_name",
+            "level",
+            "class",
+            "type",
+            "date",
+            "message",
+            "status"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "student_id": {
+              "type": "string"
+            },
+            "student_name": {
+              "type": "string"
+            },
+            "level": {
+              "type": "string"
+            },
+            "class": {
+              "type": "integer"
+            },
+            "type": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string"
+            },
+            "status": {
+              "type": "integer"
             }
           }
-        },
-        "required": [
-          "total",
-          "from",
-          "per_page",
-          "current_page",
-          "last_page",
-          "consent_requests"
-        ]
+        }
       },
       "AcademicCoursesConsentRequestsPutRequest": {
         "title": "AcademicCoursesConsentRequestsPutRequest",
