@@ -22779,45 +22779,17 @@
           "id": "zlxy42iztenbl"
         },
         "type": "object",
+        "required": [
+          "section_id"
+        ],
         "properties": {
-          "course_code": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "bl3woirp2in25"
-            }
-          },
-          "year": {
+          "section_id": {
             "type": "number",
             "x-stoplight": {
-              "id": "cwb7ltov91shb"
-            }
-          },
-          "term": {
-            "type": "number",
-            "x-stoplight": {
-              "id": "78fmm5zohi7zy"
-            }
-          },
-          "per_page": {
-            "type": "number",
-            "x-stoplight": {
-              "id": "v6reqt3nt6pr1"
-            }
-          },
-          "offset": {
-            "type": "number",
-            "x-stoplight": {
-              "id": "14ge6kep3xcay"
+              "id": "gv8lh2qk90o9w"
             }
           }
-        },
-        "required": [
-          "course_code",
-          "year",
-          "term",
-          "per_page",
-          "offset"
-        ]
+        }
       },
       "AcademicCoursesStudentsResponse": {
         "type": "array",
