@@ -755,6 +755,7 @@
             "ects",
             "is_active",
             "is_theoretical",
+            "is_slot",
             "requisites",
             "references"
           ],
@@ -794,6 +795,12 @@
             },
             "is_theoretical": {
               "type": "boolean"
+            },
+            "is_slot": {
+              "type": "boolean",
+              "x-stoplight": {
+                "id": "exu7yxkd0dv3h"
+              }
             },
             "requisites": {
               "type": "array",
