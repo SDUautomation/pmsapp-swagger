@@ -22820,115 +22820,75 @@
         ]
       },
       "AcademicCoursesStudentsResponse": {
-        "type": "object",
+        "type": "array",
         "x-examples": {
-          "Example 1": {
-            "total": 20,
-            "from": 1,
-            "per_page": 10,
-            "current_page": 1,
-            "last_page": 2,
-            "students": [
-              {
-                "id": "180107149",
-                "name": "Arsentiy",
-                "surname": "Zhunussov",
-                "photo": "PHOTO",
-                "department_id": 1,
-                "speciality_id": 1,
-                "academic_level": "B",
-                "enrolled_sections": [
-                  {
-                    "section_id": 1,
-                    "section": "01-N"
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        "properties": {
-          "total": {
-            "type": "integer"
-          },
-          "from": {
-            "type": "integer"
-          },
-          "per_page": {
-            "type": "integer"
-          },
-          "current_page": {
-            "type": "integer"
-          },
-          "last_page": {
-            "type": "integer"
-          },
-          "students": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "surname": {
-                  "type": "string"
-                },
-                "photo": {
-                  "type": "string"
-                },
-                "department_id": {
-                  "type": "integer"
-                },
-                "speciality_id": {
-                  "type": "integer"
-                },
-                "academic_level": {
-                  "type": "string"
-                },
-                "enrolled_sections": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "section_id": {
-                        "type": "integer"
-                      },
-                      "section": {
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "section_id",
-                      "section"
-                    ]
-                  }
+          "Example 1": [
+            {
+              "id": "180107149",
+              "name": "Arsentiy",
+              "surname": "Zhunussov",
+              "photo": "PHOTO",
+              "speciality_name": "speciality",
+              "academic_level": "B",
+              "enrolled_sections": [
+                {
+                  "section_id": 1,
+                  "section": "01-N"
                 }
-              },
-              "required": [
-                "id",
-                "name",
-                "surname",
-                "photo",
-                "department_id",
-                "speciality_id",
-                "academic_level",
-                "enrolled_sections"
               ]
             }
-          }
+          ]
         },
-        "required": [
-          "total",
-          "from",
-          "per_page",
-          "current_page",
-          "last_page",
-          "students"
-        ]
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "name",
+            "surname",
+            "photo",
+            "speciality_name",
+            "academic_level",
+            "enrolled_sections"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "surname": {
+              "type": "string"
+            },
+            "photo": {
+              "type": "string"
+            },
+            "speciality_name": {
+              "type": "string"
+            },
+            "academic_level": {
+              "type": "string"
+            },
+            "enrolled_sections": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "section_id",
+                  "section"
+                ],
+                "properties": {
+                  "section_id": {
+                    "type": "integer"
+                  },
+                  "section": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
       },
       "AcademicCoursesConsentRequestsGetRequest": {
         "title": "AcademicCoursesConsentRequestsGetRequest",
