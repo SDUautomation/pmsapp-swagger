@@ -930,6 +930,9 @@
           "id": "zjbpunf37cc2i"
         },
         "type": "object",
+        "required": [
+          "id"
+        ],
         "properties": {
           "id": {
             "type": "number",
@@ -1014,7 +1017,9 @@
           "is_active",
           "is_theoretical",
           "type",
-          "elective_type"
+          "elective_type",
+          "track",
+          "requisites"
         ],
         "properties": {
           "id": {
