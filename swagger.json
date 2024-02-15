@@ -22322,8 +22322,7 @@
               "type": "object",
               "required": [
                 "section_id",
-                "section",
-                "bell_curve_enabled"
+                "section"
               ],
               "properties": {
                 "section_id": {
@@ -22331,12 +22330,6 @@
                 },
                 "section": {
                   "type": "string"
-                },
-                "bell_curve_enabled": {
-                  "type": "boolean",
-                  "x-stoplight": {
-                    "id": "eg9i0n61mwdxz"
-                  }
                 }
               }
             }
