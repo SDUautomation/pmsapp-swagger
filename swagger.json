@@ -16233,12 +16233,6 @@
                 "title": "Core"
               }
             ],
-            "elective_types": [
-              {
-                "key": "R",
-                "title": "Restricted"
-              }
-            ],
             "requisite_types": [
               {
                 "key": "AR",
@@ -16259,15 +16253,30 @@
             ],
             "course_prefixes": [
               "CSS"
+            ],
+            "languages": [
+              {
+                "language_code": "KZ",
+                "title": "Kazakh"
+              }
+            ],
+            "section_types": [
+              {
+                "key": "N",
+                "credit_rate": 1
+              }
             ]
           }
         },
         "required": [
           "elective_names",
           "core_types",
-          "elective_types",
+          "requisite_types",
+          "tracks",
           "consent_statuses",
-          "course_prefixes"
+          "course_prefixes",
+          "languages",
+          "section_types"
         ],
         "properties": {
           "elective_names": {
@@ -16289,24 +16298,6 @@
             }
           },
           "core_types": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "key",
-                "title"
-              ],
-              "properties": {
-                "key": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "elective_types": {
             "type": "array",
             "items": {
               "type": "object",
@@ -16382,6 +16373,42 @@
             "type": "array",
             "items": {
               "type": "string"
+            }
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "language_code",
+                "title"
+              ],
+              "properties": {
+                "language_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "section_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "key",
+                "credit_rate"
+              ],
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "credit_rate": {
+                  "type": "integer"
+                }
+              }
             }
           }
         }
