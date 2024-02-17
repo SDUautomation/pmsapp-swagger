@@ -324,6 +324,26 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/courses/attendances/reset": {
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "put-1.0.0-academic-courses-attendances-reset",
+        "x-stoplight": {
+          "id": "nh8hmc0t4scrx"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleCourseAttendancesResetRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -844,6 +864,16 @@
             }
           }
         },
+        "required": [
+          "absence_limit",
+          "attend_types",
+          "relocate_types",
+          "room_types",
+          "buildings",
+          "schedule",
+          "students",
+          "course"
+        ],
         "properties": {
           "absence_limit": {
             "type": "integer"
@@ -852,6 +882,10 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -859,17 +893,17 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "title"
-              ]
+              }
             }
           },
           "relocate_types": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
               "properties": {
                 "id": {
                   "type": "string"
@@ -877,17 +911,17 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "title"
-              ]
+              }
             }
           },
           "room_types": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
               "properties": {
                 "id": {
                   "type": "string"
@@ -895,17 +929,17 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "title"
-              ]
+              }
             }
           },
           "buildings": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
               "properties": {
                 "id": {
                   "type": "string"
@@ -913,17 +947,20 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "title"
-              ]
+              }
             }
           },
           "schedule": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "day",
+                "time",
+                "conductance",
+                "room"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -953,7 +990,8 @@
                   "type": "object",
                   "required": [
                     "id",
-                    "title"
+                    "title",
+                    "building_id"
                   ],
                   "properties": {
                     "id": {
@@ -961,23 +999,31 @@
                     },
                     "title": {
                       "type": "string"
+                    },
+                    "building_id": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "a4xr2uzll54l4"
+                      }
                     }
                   }
                 }
-              },
-              "required": [
-                "id",
-                "day",
-                "time",
-                "conductance",
-                "room"
-              ]
+              }
             }
           },
           "students": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "full_name",
+                "photo",
+                "speciality",
+                "attendance",
+                "absence_rate",
+                "block"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -1056,16 +1102,7 @@
                     }
                   }
                 }
-              },
-              "required": [
-                "id",
-                "full_name",
-                "photo",
-                "speciality",
-                "attendance",
-                "absence_rate",
-                "block"
-              ]
+              }
             }
           },
           "course": {
@@ -1159,17 +1196,7 @@
               }
             }
           }
-        },
-        "required": [
-          "absence_limit",
-          "attend_types",
-          "relocate_types",
-          "room_types",
-          "buildings",
-          "schedule",
-          "students",
-          "course"
-        ]
+        }
       },
       "AcademicSingleCourseAttendancePutRequest": {
         "type": "object",
@@ -1293,7 +1320,7 @@
         ],
         "properties": {
           "building_id": {
-            "type": "number",
+            "type": "string",
             "x-stoplight": {
               "id": "ohi3z9awas31f"
             }
@@ -1475,7 +1502,7 @@
         "type": "object",
         "required": [
           "modules",
-          "building_ud",
+          "building_id",
           "date"
         ],
         "properties": {
@@ -1491,7 +1518,7 @@
               "type": "string"
             }
           },
-          "building_ud": {
+          "building_id": {
             "type": "string",
             "x-stoplight": {
               "id": "7atolxg0iwscx"
@@ -1697,6 +1724,24 @@
             "items": {
               "type": "integer"
             }
+          }
+        }
+      },
+      "AcademicSingleCourseAttendancesResetRequest": {
+        "type": "object",
+        "properties": {
+          "schedules": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "schedules": [
+              102345
+            ]
           }
         }
       }
