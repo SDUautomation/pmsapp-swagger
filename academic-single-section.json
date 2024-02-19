@@ -1,0 +1,1785 @@
+{
+  "openapi": "3.0.0",
+  "x-stoplight": {
+    "id": "odo98p3hhddzw"
+  },
+  "info": {
+    "title": "academic-single-course",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/1.0.0/academic/courses/grades": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleSectionGradeResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-courses-grades",
+        "x-stoplight": {
+          "id": "kxiqu12yux3de"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleSectionGradeRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-courses-grades",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "gicc6r40lrg91"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleSectionGradePutRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/courses/attendances": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleSectionAttendancesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-courses-attendances",
+        "x-stoplight": {
+          "id": "kkf8kwgr4tsen"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleSectionAttendancesGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "",
+        "operationId": "post-1.0.0-academic-courses-attendances",
+        "responses": {
+          "201": {
+            "description": "Attendance records are successfully created."
+          },
+          "400": {
+            "description": "User doesn't have permission to submit attendance. 2) Not able to set attendance for this semester."
+          }
+        },
+        "x-stoplight": {
+          "id": "13ydop0vb9ep6"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleSectionAttendancesPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "",
+        "operationId": "delete-1.0.0-academic-courses-attendances",
+        "responses": {
+          "200": {
+            "description": "Attendance records is successfully deleted."
+          },
+          "400": {
+            "description": "User doesn't have permission to submit attendance. Not able to set attendance for this semester."
+          }
+        },
+        "x-stoplight": {
+          "id": "ic6609nq340a1"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleSectionAttendancesDeleteRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "",
+        "operationId": "put-1.0.0-academic-courses-attendances",
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        },
+        "x-stoplight": {
+          "id": "26jh4sx81igvn"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleSectionAttendancePutRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/courses/attendances/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Resources are loaded.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleSectionAttendancesResourcesResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-courses-attendances-resources",
+        "x-stoplight": {
+          "id": "pyx1qegdgraim"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleSectionAttendancesResourcesRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/courses/attendances/relocates": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleSectionAttendanceRelocatesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-courses-attendances-relocates",
+        "x-stoplight": {
+          "id": "lz9c9ilybyoju"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleSectionAttendanceRelocatesGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "put-1.0.0-academic-courses-attendances-relocates",
+        "x-stoplight": {
+          "id": "d9537r8ww5d3v"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleSectionAttendanceRelocatePutRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/courses/attendance/relocates/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleSectionAttendanceRelocatesResourceGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-courses-attendance-relocates-resources",
+        "x-stoplight": {
+          "id": "ovd968qmojoau"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleSectionAttendanceRelocatesResourceGetRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/courses/grades/{assesment}/statistics": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "assesment",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "post": {
+        "summary": "Your POST endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleSectionGradeStatisticsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "post-1.0.0-academic-courses-grades-assesment-statistics",
+        "x-stoplight": {
+          "id": "kbrd2ua88hgve"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleSectionGradeStatisticsGetRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/courses/attendances/reset": {
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "put-1.0.0-academic-courses-attendances-reset",
+        "x-stoplight": {
+          "id": "9bi0ratlz8bun"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleSectionAttendancesResetRequest"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AcademicSingleSectionGradeResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "student_id": "180107149",
+              "student_name": "Arsentiy",
+              "student_surname": "Zhunussov",
+              "student_photo": "base64 encoded photo",
+              "total_grade": 100,
+              "letter_grade": "A+",
+              "absence_rate": 30,
+              "speciality": {
+                "code": "10103",
+                "year": 2020,
+                "title": "Computer Science"
+              },
+              "block": {
+                "blocked": true,
+                "reason": "Financial block"
+              },
+              "grades": [
+                {
+                  "assessment_id": 1,
+                  "grade": 100,
+                  "is_open": true
+                }
+              ]
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "student_id",
+            "student_name",
+            "student_surname",
+            "student_photo",
+            "total_grade",
+            "letter_grade",
+            "absence_rate",
+            "speciality",
+            "block",
+            "grades"
+          ],
+          "properties": {
+            "student_id": {
+              "type": "string"
+            },
+            "student_name": {
+              "type": "string"
+            },
+            "student_surname": {
+              "type": "string"
+            },
+            "student_photo": {
+              "type": "string"
+            },
+            "total_grade": {
+              "type": "integer"
+            },
+            "letter_grade": {
+              "type": "string"
+            },
+            "absence_rate": {
+              "type": "integer"
+            },
+            "speciality": {
+              "type": "object",
+              "required": [
+                "code",
+                "year",
+                "title"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "block": {
+              "type": "object",
+              "required": [
+                "blocked",
+                "reason"
+              ],
+              "properties": {
+                "blocked": {
+                  "type": "boolean"
+                },
+                "reason": {
+                  "type": "string"
+                }
+              }
+            },
+            "grades": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "assessment_id",
+                  "grade",
+                  "is_open"
+                ],
+                "properties": {
+                  "assessment_id": {
+                    "type": "integer"
+                  },
+                  "grade": {
+                    "type": "integer"
+                  },
+                  "is_open": {
+                    "type": "boolean"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "4i25hi52e112s"
+        }
+      },
+      "AcademicSingleSectionGradeRequest": {
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string"
+          },
+          "year": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "section": {
+            "type": "string"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "course_code": "CSS",
+            "year": 2022,
+            "term": 1,
+            "section": "01"
+          }
+        },
+        "x-stoplight": {
+          "id": "mwsaf1udw8l2k"
+        }
+      },
+      "AcademicSingleSectionGradePutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "captcha": {
+              "ct": "ct",
+              "iv": "iv",
+              "s": "s"
+            },
+            "grades": [
+              {
+                "student_id": "180107149",
+                "absent": false,
+                "grade": 100
+              }
+            ]
+          }
+        },
+        "properties": {
+          "captcha": {
+            "type": "object",
+            "required": [
+              "ct",
+              "iv",
+              "s"
+            ],
+            "properties": {
+              "ct": {
+                "type": "string"
+              },
+              "iv": {
+                "type": "string"
+              },
+              "s": {
+                "type": "string"
+              }
+            }
+          },
+          "grades": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "student_id": {
+                  "type": "string"
+                },
+                "absent": {
+                  "type": "boolean"
+                },
+                "grade": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "student_id",
+                "grade"
+              ]
+            }
+          }
+        },
+        "required": [
+          "captcha",
+          "grades"
+        ],
+        "x-stoplight": {
+          "id": "hybki9gujicjs"
+        }
+      },
+      "AcademicSingleSectionAttendancesGetRequest": {
+        "title": "AcademicSingleCourseAttendancesGetRequest",
+        "x-stoplight": {
+          "id": "h47ztiz1u5u76"
+        },
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "17olevpkd26e2"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "ytg3xg3kpjuxb"
+            }
+          },
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "4n9ju7hj1shwr"
+            }
+          },
+          "section": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "m3183q5co749o"
+            }
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "term",
+          "section"
+        ]
+      },
+      "AcademicSingleSectionAttendancesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 121441,
+              "schedule_id": 19981,
+              "student_id": "200103356",
+              "attend_id": 1
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "schedule_id": {
+              "type": "integer"
+            },
+            "student_id": {
+              "type": "string"
+            },
+            "attend_id": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "id",
+            "schedule_id",
+            "student_id",
+            "attend_id"
+          ]
+        },
+        "x-stoplight": {
+          "id": "lrizig9vjjobq"
+        }
+      },
+      "AcademicSingleSectionAttendancesPostRequest": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "schedule_id": 24361,
+              "not_conducted": false,
+              "students": [
+                {
+                  "student_id": "200103356",
+                  "attend_id": 1
+                }
+              ]
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "properties": {
+            "schedule_id": {
+              "type": "integer"
+            },
+            "not_conducted": {
+              "type": "boolean"
+            },
+            "students": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "student_id": {
+                    "type": "string"
+                  },
+                  "attend_id": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "student_id",
+                  "attend_id"
+                ]
+              }
+            }
+          },
+          "required": [
+            "schedule_id",
+            "students"
+          ]
+        },
+        "title": "",
+        "x-stoplight": {
+          "id": "2zxj0yb7e50sr"
+        }
+      },
+      "AcademicSingleSectionAttendancesDeleteRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "schedule_id": [
+              1234
+            ],
+            "students": [
+              "1245"
+            ]
+          }
+        },
+        "properties": {
+          "schedule_id": {
+            "type": "integer"
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "schedule_id",
+          "students"
+        ],
+        "x-stoplight": {
+          "id": "76fpip60qi2u6"
+        }
+      },
+      "AcademicSingleSectionAttendancesResourcesRequest": {
+        "title": "AcademicSingleCourseAttendancesResourcesRequest",
+        "x-stoplight": {
+          "id": "2vwov1cjf5fmb"
+        },
+        "type": "object",
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "wzf0dwj4ghewc"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "ru8u26dsmoxqh"
+            }
+          },
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "cq5yactsihqji"
+            }
+          },
+          "section": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "9uuy974p88zjr"
+            }
+          },
+          "modules": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "3i0iobgrtlr01"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "tv0tvnrndpej9"
+              },
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "course_code",
+          "year",
+          "term",
+          "section",
+          "modules"
+        ]
+      },
+      "AcademicSingleSectionAttendancesResourcesResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "absence_limit": 30,
+            "attend_types": [
+              {
+                "id": 1,
+                "title": "Attend"
+              }
+            ],
+            "relocate_types": [
+              {
+                "id": "EMPTY_ROOM",
+                "title": "To the empty room."
+              }
+            ],
+            "room_types": [
+              {
+                "id": "2",
+                "title": "Laboratory"
+              }
+            ],
+            "buildings": [
+              {
+                "id": "ENG",
+                "title": "Engineering Block"
+              }
+            ],
+            "schedule": [
+              {
+                "id": 1,
+                "day": "12 May",
+                "time": "13:00",
+                "conductance": {
+                  "conducted": false,
+                  "description": "The journal was not filled."
+                },
+                "room": {
+                  "id": 121,
+                  "title": "E117"
+                }
+              }
+            ],
+            "students": [
+              {
+                "id": 1,
+                "full_name": "Aibolat Batyrov",
+                "photo": "base64 encoded photo",
+                "speciality": {
+                  "code": "10103",
+                  "year": 2022,
+                  "title": "Information Systems"
+                },
+                "attendance": {
+                  "attend_count": 12,
+                  "absence_count": 1,
+                  "permit_count": 2
+                },
+                "absence_rate": {
+                  "section": 13,
+                  "course": 23
+                },
+                "block": {
+                  "blocked": true,
+                  "reason": "Financial block"
+                }
+              }
+            ],
+            "course": {
+              "code": "CSS 216",
+              "year": 2023,
+              "term": 1,
+              "section": "02",
+              "title": "Mobile Programming",
+              "credits": 5,
+              "week_number": 15,
+              "teaching_hours": 30,
+              "language": {
+                "code": "en",
+                "title": "English"
+              },
+              "department": {
+                "code": "DEP_COMP_SCI",
+                "year": 2020,
+                "title": "Department of Computer Science"
+              },
+              "instructor": {
+                "id": 10987,
+                "full_name": "Aibolat Batyrov"
+              }
+            }
+          }
+        },
+        "required": [
+          "absence_limit",
+          "attend_types",
+          "relocate_types",
+          "room_types",
+          "buildings",
+          "schedule",
+          "students",
+          "course"
+        ],
+        "properties": {
+          "absence_limit": {
+            "type": "integer"
+          },
+          "attend_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "relocate_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "room_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "buildings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "schedule": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "day",
+                "time",
+                "conductance",
+                "room"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "day": {
+                  "type": "string"
+                },
+                "time": {
+                  "type": "string"
+                },
+                "conductance": {
+                  "type": "object",
+                  "required": [
+                    "conducted",
+                    "description"
+                  ],
+                  "properties": {
+                    "conducted": {
+                      "type": "boolean"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "room": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title",
+                    "building_id"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "building_id": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "a4xr2uzll54l4"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "full_name",
+                "photo",
+                "speciality",
+                "attendance",
+                "absence_rate",
+                "block"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "full_name": {
+                  "type": "string"
+                },
+                "photo": {
+                  "type": "string"
+                },
+                "speciality": {
+                  "type": "object",
+                  "required": [
+                    "code",
+                    "year",
+                    "title"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "year": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "attendance": {
+                  "type": "object",
+                  "required": [
+                    "attend_count",
+                    "absence_count",
+                    "permit_count"
+                  ],
+                  "properties": {
+                    "attend_count": {
+                      "type": "integer"
+                    },
+                    "absence_count": {
+                      "type": "integer"
+                    },
+                    "permit_count": {
+                      "type": "integer"
+                    }
+                  }
+                },
+                "absence_rate": {
+                  "type": "object",
+                  "required": [
+                    "section",
+                    "course"
+                  ],
+                  "properties": {
+                    "section": {
+                      "type": "integer"
+                    },
+                    "course": {
+                      "type": "integer"
+                    }
+                  }
+                },
+                "block": {
+                  "type": "object",
+                  "required": [
+                    "blocked",
+                    "reason"
+                  ],
+                  "properties": {
+                    "blocked": {
+                      "type": "boolean"
+                    },
+                    "reason": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "course": {
+            "type": "object",
+            "required": [
+              "code",
+              "year",
+              "term",
+              "section",
+              "title",
+              "credits",
+              "week_number",
+              "teaching_hours",
+              "language",
+              "department",
+              "instructor"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "year": {
+                "type": "integer"
+              },
+              "term": {
+                "type": "integer"
+              },
+              "section": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "credits": {
+                "type": "integer"
+              },
+              "week_number": {
+                "type": "integer"
+              },
+              "teaching_hours": {
+                "type": "integer"
+              },
+              "language": {
+                "type": "object",
+                "required": [
+                  "code",
+                  "title"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              },
+              "department": {
+                "type": "object",
+                "required": [
+                  "code",
+                  "year",
+                  "title"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "integer"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              },
+              "instructor": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "full_name"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "full_name": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "yz66vtxcd6lrs"
+        }
+      },
+      "AcademicSingleSectionAttendancePutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "schedule_id": 24361,
+            "students": [
+              {
+                "student_id": "200103356",
+                "attend_id": 1
+              }
+            ]
+          }
+        },
+        "properties": {
+          "schedule_id": {
+            "type": "integer"
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "student_id": {
+                  "type": "string"
+                },
+                "attend_id": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "student_id",
+                "attend_id"
+              ]
+            }
+          }
+        },
+        "required": [
+          "schedule_id",
+          "students"
+        ],
+        "x-stoplight": {
+          "id": "tmg1z75daydua"
+        }
+      },
+      "AcademicSingleSectionAttendanceRelocatePutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "captcha": {
+              "ct": "ct",
+              "iv": "iv",
+              "s": "s"
+            },
+            "course_schedule_id": 1617005,
+            "date": "2024-01-31",
+            "lesson_hour_id": 374,
+            "room_id": 49,
+            "claim_message": "Message to teacher",
+            "move_all": false,
+            "relocate_type": "bosYere"
+          }
+        },
+        "required": [
+          "captcha",
+          "course_schedule_id",
+          "date",
+          "lesson_hour_id",
+          "room_id",
+          "relocate_type"
+        ],
+        "properties": {
+          "captcha": {
+            "type": "object",
+            "required": [
+              "ct",
+              "iv",
+              "s"
+            ],
+            "properties": {
+              "ct": {
+                "type": "string"
+              },
+              "iv": {
+                "type": "string"
+              },
+              "s": {
+                "type": "string"
+              }
+            }
+          },
+          "course_schedule_id": {
+            "type": "integer"
+          },
+          "date": {
+            "type": "string"
+          },
+          "lesson_hour_id": {
+            "type": "integer"
+          },
+          "room_id": {
+            "type": "integer"
+          },
+          "claim_message": {
+            "type": "string"
+          },
+          "move_all": {
+            "type": "boolean"
+          },
+          "relocate_type": {
+            "type": "string"
+          }
+        },
+        "x-stoplight": {
+          "id": "wr6jzkc187dum"
+        }
+      },
+      "AcademicSingleSectionAttendanceRelocatesGetRequest": {
+        "title": "AcademicSingleCourseAttendanceRelocatesGetRequest",
+        "x-stoplight": {
+          "id": "m9xwef1wt227l"
+        },
+        "type": "object",
+        "required": [
+          "building_id",
+          "date"
+        ],
+        "properties": {
+          "building_id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ohi3z9awas31f"
+            }
+          },
+          "date": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "tgdk0x3iqyg6g"
+            }
+          }
+        }
+      },
+      "AcademicSingleSectionAttendanceRelocatesGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "rooms": [
+              {
+                "id": 12831,
+                "title": "E107",
+                "quota": 20,
+                "floor": 1,
+                "building": {
+                  "id": "ENG",
+                  "title": "Engineering Block"
+                },
+                "type": {
+                  "id": 2,
+                  "title": "Laboratory"
+                }
+              }
+            ],
+            "hours": [
+              {
+                "id": 362,
+                "start_time": "09:00",
+                "end_time": "09:50"
+              }
+            ],
+            "lessons": [
+              {
+                "lesson_hour_id": 654,
+                "room_id": 2,
+                "course_code": "INF 389",
+                "course_title": "AWS cloud",
+                "teacher_name": "Maksat Galiyev",
+                "teacher_id": 10960
+              }
+            ]
+          }
+        },
+        "required": [
+          "rooms",
+          "hours",
+          "lessons"
+        ],
+        "properties": {
+          "rooms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title",
+                "quota",
+                "floor",
+                "building",
+                "type"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "quota": {
+                  "type": "integer"
+                },
+                "floor": {
+                  "type": "integer"
+                },
+                "building": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "type": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "hours": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "start_time",
+                "end_time"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "start_time": {
+                  "type": "string"
+                },
+                "end_time": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "lessons": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "lesson_hour_id",
+                "room_id",
+                "course_code",
+                "course_title",
+                "teacher_name",
+                "teacher_id"
+              ],
+              "properties": {
+                "lesson_hour_id": {
+                  "type": "integer"
+                },
+                "room_id": {
+                  "type": "integer"
+                },
+                "course_code": {
+                  "type": "string"
+                },
+                "course_title": {
+                  "type": "string"
+                },
+                "teacher_name": {
+                  "type": "string"
+                },
+                "teacher_id": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "knkhryhjh3po3"
+        }
+      },
+      "AcademicSingleSectionAttendanceRelocatesResourceGetRequest": {
+        "title": "AcademicSingleCourseAttendanceRelocatesresourceGetRequest",
+        "x-stoplight": {
+          "id": "4g0kdkj3a4mjv"
+        },
+        "type": "object",
+        "required": [
+          "modules",
+          "building_id",
+          "date"
+        ],
+        "properties": {
+          "modules": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "cnrc5tkpuo0r5"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "v8g6fermwfv21"
+              },
+              "type": "string"
+            }
+          },
+          "building_id": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "7atolxg0iwscx"
+            }
+          },
+          "date": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "f24ljyjzblecl"
+            }
+          }
+        }
+      },
+      "AcademicSingleSectionAttendanceRelocatesResourceGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "rooms": [
+              {
+                "id": 12831,
+                "title": "E107",
+                "quota": 20,
+                "floor": 1,
+                "building": {
+                  "id": "ENG",
+                  "title": "Engineering Block"
+                },
+                "type": {
+                  "id": 2,
+                  "title": "Laboratory"
+                }
+              }
+            ],
+            "buildings": [
+              {
+                "id": "ENG",
+                "title": "Engineering Block"
+              }
+            ],
+            "lesson_hours": [
+              {
+                "id": 362,
+                "start_time": "09:00",
+                "end_time": "09:50"
+              }
+            ]
+          }
+        },
+        "required": [
+          "rooms",
+          "buildings",
+          "lesson_hours"
+        ],
+        "properties": {
+          "rooms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title",
+                "quota",
+                "floor",
+                "building",
+                "type"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "quota": {
+                  "type": "integer"
+                },
+                "floor": {
+                  "type": "integer"
+                },
+                "building": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "type": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "buildings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "lesson_hours": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "start_time",
+                "end_time"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "start_time": {
+                  "type": "string"
+                },
+                "end_time": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "62zrj6xyyrtll"
+        }
+      },
+      "AcademicSingleSectionGradeStatisticsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "letter": "B+",
+              "percent": 31.82
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "letter",
+            "percent"
+          ],
+          "properties": {
+            "letter": {
+              "type": "string"
+            },
+            "percent": {
+              "type": "number"
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "75brgk0k9sbry"
+        }
+      },
+      "AcademicSingleSectionGradeStatisticsGetRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "grades": [
+              75
+            ]
+          }
+        },
+        "required": [
+          "grades"
+        ],
+        "properties": {
+          "grades": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "x-stoplight": {
+          "id": "opwxleywomrje"
+        }
+      },
+      "AcademicSingleSectionAttendancesResetRequest": {
+        "type": "object",
+        "properties": {
+          "schedules": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "schedules": [
+              102345
+            ]
+          }
+        },
+        "x-stoplight": {
+          "id": "9ob9r2t07r73l"
+        }
+      }
+    }
+  }
+}
