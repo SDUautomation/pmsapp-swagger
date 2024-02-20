@@ -4110,12 +4110,12 @@
       }
     },
     "/1.0.0/administrative/gate-entry/resource": {
-      "post": {
-        "summary": "GateEntryResource",
+      "get": {
+        "summary": "getGateEntryResource",
         "tags": [],
         "responses": {
           "200": {
-            "description": "Gate Entry Records are successfully returned.",
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4125,9 +4125,9 @@
             }
           }
         },
-        "operationId": "post-1.0.0-administrative-gate-entry-resource",
+        "operationId": "get-1.0.0-administrative-gate-entry-resource",
         "x-stoplight": {
-          "id": "b98o8m4xtrcdq"
+          "id": "w5psousrectov"
         },
         "requestBody": {
           "content": {
@@ -25386,14 +25386,49 @@
                 "department_id": 1234,
                 "parent_id": 1234
               }
+            ],
+            "faculties": [
+              {
+                "department_code": "F_ENG",
+                "title": "Department",
+                "department_id": 1234,
+                "parent_id": 1234
+              }
             ]
           }
         },
         "required": [
-          "departments"
+          "departments",
+          "faculties"
         ],
         "properties": {
           "departments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "department_code",
+                "title",
+                "department_id",
+                "parent_id"
+              ],
+              "properties": {
+                "department_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "department_id": {
+                  "type": "integer"
+                },
+                "parent_id": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "faculties": {
             "type": "array",
             "items": {
               "type": "object",
