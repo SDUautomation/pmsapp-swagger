@@ -4130,13 +4130,7 @@
           "id": "w5psousrectov"
         },
         "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AdministrativeGateEntryResourceRequest"
-              }
-            }
-          }
+          "content": {}
         }
       }
     }
