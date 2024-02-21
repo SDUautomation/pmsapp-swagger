@@ -22422,8 +22422,7 @@
                 "assessment_id",
                 "assessment_type",
                 "assessment_title",
-                "is_open",
-                "graded"
+                "is_open"
               ],
               "properties": {
                 "section_id": {
@@ -22440,12 +22439,6 @@
                 },
                 "is_open": {
                   "type": "boolean"
-                },
-                "graded": {
-                  "type": "boolean",
-                  "x-stoplight": {
-                    "id": "608nm63u69lru"
-                  }
                 }
               }
             }
