@@ -4115,7 +4115,7 @@
         "tags": [],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Gate Entry Records are successfully returned.",
             "content": {
               "application/json": {
                 "schema": {
@@ -4134,6 +4134,37 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/AdministrativeGateEntryResourceRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/administrative/gate-entry/resource/users": {
+      "get": {
+        "summary": "gate-entry-resource-users",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Gate Entry users are successfully returned.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeGateEntryResourceUsersResponce"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-gate-entry-resource-users",
+        "x-stoplight": {
+          "id": "pfp1fc44kjsgi"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeGateEntryResourceUsersRequest"
               }
             }
           }
@@ -25453,6 +25484,41 @@
                 }
               }
             }
+          }
+        }
+      },
+      "AdministrativeGateEntryResourceUsersRequest": {
+        "type": "object",
+        "properties": {
+          "department": {
+            "type": "string"
+          },
+          "user_type": {
+            "type": "string"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "department": "F_ENG",
+            "user_type": "P"
+          }
+        },
+        "title": ""
+      },
+      "AdministrativeGateEntryResourceUsersResponce": {
+        "type": "object",
+        "properties": {
+          "user_id": {
+            "type": "integer"
+          },
+          "full_name": {
+            "type": "string"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "user_id": 11002,
+            "full_name": "Akberdiyev Daulet"
           }
         }
       }
