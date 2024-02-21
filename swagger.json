@@ -25489,6 +25489,16 @@
       },
       "AdministrativeGateEntryResourceUsersRequest": {
         "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "department": "F_ENG",
+            "user_type": "P"
+          }
+        },
+        "required": [
+          "department",
+          "user_type"
+        ],
         "properties": {
           "department": {
             "type": "string"
@@ -25496,19 +25506,24 @@
           "user_type": {
             "type": "string"
           }
-        },
-        "x-examples": {
-          "Example 1": {
-            "department": "F_ENG",
-            "user_type": "P"
-          }
-        },
-        "title": ""
+        }
       },
       "AdministrativeGateEntryResourceUsersResponce": {
         "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "user_id": 11002,
+              "full_name": "Akberdiyev Daulet"
+            }
+          ]
+        },
         "items": {
           "type": "object",
+          "required": [
+            "user_id",
+            "full_name"
+          ],
           "properties": {
             "user_id": {
               "type": "integer"
@@ -25517,14 +25532,6 @@
               "type": "string"
             }
           }
-        },
-        "x-examples": {
-          "Example 1": [
-            {
-              "user_id": 11002,
-              "full_name": "Akberdiyev Daulet"
-            }
-          ]
         }
       }
     },
