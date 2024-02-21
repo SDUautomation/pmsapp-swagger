@@ -25506,20 +25506,25 @@
         "title": ""
       },
       "AdministrativeGateEntryResourceUsersResponce": {
-        "type": "object",
-        "properties": {
-          "user_id": {
-            "type": "integer"
-          },
-          "full_name": {
-            "type": "string"
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "user_id": {
+              "type": "integer"
+            },
+            "full_name": {
+              "type": "string"
+            }
           }
         },
         "x-examples": {
-          "Example 1": {
-            "user_id": 11002,
-            "full_name": "Akberdiyev Daulet"
-          }
+          "Example 1": [
+            {
+              "user_id": 11002,
+              "full_name": "Akberdiyev Daulet"
+            }
+          ]
         }
       }
     },
