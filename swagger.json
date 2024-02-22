@@ -22644,7 +22644,7 @@
                 "id",
                 "year",
                 "term",
-                "is_bell_curve_selection_period"
+                "bell_curve_is_active"
               ],
               "properties": {
                 "id": {
@@ -22656,7 +22656,7 @@
                 "term": {
                   "type": "integer"
                 },
-                "is_bell_curve_selection_period": {
+                "bell_curve_is_active": {
                   "type": "boolean",
                   "x-stoplight": {
                     "id": "gvqafasdxq8ie"
