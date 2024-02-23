@@ -4170,6 +4170,37 @@
           }
         }
       }
+    },
+    "/1.0.0/administrative/gate-entry/send-mail": {
+      "post": {
+        "summary": "gate-entry-send-mail",
+        "tags": [],
+        "responses": {
+          "201": {
+            "description": "Gate Entry records is successfully sent to email",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeGateEntrySendMailResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "post-1.0.0-administrative-gate-entry-send-mail",
+        "x-stoplight": {
+          "id": "bjqpw1te7kqb3"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeGateEntrySendMailRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -25531,6 +25562,54 @@
             "full_name": {
               "type": "string"
             }
+          }
+        }
+      },
+      "AdministrativeGateEntrySendMailRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "reader_group": 1,
+            "employee_id": 11060,
+            "from_date": "2023-06-19",
+            "due_date": "2023-06-20"
+          }
+        },
+        "required": [
+          "reader_group",
+          "employee_id",
+          "from_date",
+          "due_date"
+        ],
+        "properties": {
+          "reader_group": {
+            "type": "integer"
+          },
+          "employee_id": {
+            "type": "integer"
+          },
+          "from_date": {
+            "type": "string"
+          },
+          "due_date": {
+            "type": "string"
+          }
+        },
+        "title": ""
+      },
+      "AdministrativeGateEntrySendMailResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "85eec5be73e48"
+        },
+        "properties": {
+          "message": {
+            "type": "string"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "message": "Gate Entry records is successfully sent to email - aibolat.batyrov@sdu.edu.kz"
           }
         }
       }
