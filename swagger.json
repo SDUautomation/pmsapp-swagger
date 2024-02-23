@@ -25602,14 +25602,17 @@
         "x-stoplight": {
           "id": "85eec5be73e48"
         },
-        "properties": {
-          "message": {
-            "type": "string"
-          }
-        },
         "x-examples": {
           "Example 1": {
             "message": "Gate Entry records is successfully sent to email - aibolat.batyrov@sdu.edu.kz"
+          }
+        },
+        "required": [
+          "message"
+        ],
+        "properties": {
+          "message": {
+            "type": "string"
           }
         }
       }
