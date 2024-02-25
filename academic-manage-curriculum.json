@@ -1406,7 +1406,7 @@
               "is_theoretical",
               "is_restricted",
               "for_all_tracks",
-              "lang_code",
+              "language_code",
               "elective_code",
               "track"
             ],
@@ -1456,8 +1456,11 @@
               "for_all_tracks": {
                 "type": "boolean"
               },
-              "lang_code": {
-                "type": "string"
+              "language_code": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "n1a2fvhca1evt"
+                }
               },
               "elective_code": {
                 "type": "string"
