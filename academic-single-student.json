@@ -2350,7 +2350,7 @@
                   "items": {
                     "type": "object",
                     "required": [
-                      "course_code",
+                      "code",
                       "title",
                       "theory",
                       "practice",
@@ -2361,8 +2361,11 @@
                       "details"
                     ],
                     "properties": {
-                      "course_code": {
-                        "type": "string"
+                      "code": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "amombvw76rjx1"
+                        }
                       },
                       "title": {
                         "type": "string"
@@ -2426,7 +2429,7 @@
                   "items": {
                     "type": "object",
                     "required": [
-                      "course_code",
+                      "code",
                       "title",
                       "theory",
                       "practice",
@@ -2437,8 +2440,11 @@
                       "details"
                     ],
                     "properties": {
-                      "course_code": {
-                        "type": "string"
+                      "code": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "uv330eekepu1f"
+                        }
                       },
                       "title": {
                         "type": "string"
@@ -2502,7 +2508,7 @@
                   "items": {
                     "type": "object",
                     "required": [
-                      "course_code",
+                      "code",
                       "title",
                       "theory",
                       "practice",
@@ -2513,8 +2519,11 @@
                       "details"
                     ],
                     "properties": {
-                      "course_code": {
-                        "type": "string"
+                      "code": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "i0hzy80jlvp6x"
+                        }
                       },
                       "title": {
                         "type": "string"
@@ -2578,7 +2587,7 @@
                   "items": {
                     "type": "object",
                     "required": [
-                      "course_code",
+                      "code",
                       "title",
                       "theory",
                       "practice",
@@ -2589,8 +2598,11 @@
                       "details"
                     ],
                     "properties": {
-                      "course_code": {
-                        "type": "string"
+                      "code": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "qh5uwus9cs8ig"
+                        }
                       },
                       "title": {
                         "type": "string"
