@@ -1954,6 +1954,154 @@
             ]
           }
         }
+      },
+      "AcademicManageCurriculumGetCoreCoursesForReferenceResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "courses": [
+              {
+                "id": 76891,
+                "code": "CSS 201",
+                "title": "Fundamentals of Programming"
+              }
+            ],
+            "track": {
+              "id": 76891,
+              "code": "TRACK0",
+              "title": "Main Track",
+              "program": [
+                {
+                  "code": "10207",
+                  "year": 2023,
+                  "type": "Degree Program",
+                  "department": [
+                    {
+                      "id": 10207,
+                      "code": "DEP_ECO_BUS",
+                      "title": "Department of Economics and Business"
+                    }
+                  ]
+                }
+              ]
+            },
+            "info": {
+              "already_exists_years": [
+                2019,
+                2020,
+                2023
+              ]
+            }
+          }
+        },
+        "required": [
+          "courses",
+          "track",
+          "info"
+        ],
+        "properties": {
+          "courses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "code",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "track": {
+            "type": "object",
+            "required": [
+              "id",
+              "code",
+              "title",
+              "program"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "code": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "program": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "code",
+                    "year",
+                    "type",
+                    "department"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "year": {
+                      "type": "integer"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "department": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "code",
+                          "title"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "code": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "info": {
+            "type": "object",
+            "required": [
+              "already_exists_years"
+            ],
+            "properties": {
+              "already_exists_years": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
