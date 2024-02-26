@@ -1684,618 +1684,6 @@
       },
       "AcademicSingleStudentCurriculumGetResponse": {
         "type": "object",
-        "properties": {
-          "information": {
-            "type": "object",
-            "properties": {
-              "year": {
-                "type": "integer"
-              },
-              "department": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "integer"
-                  },
-                  "code": {
-                    "type": "string"
-                  },
-                  "title": {
-                    "type": "string"
-                  }
-                }
-              },
-              "program": {
-                "type": "object",
-                "properties": {
-                  "code": {
-                    "type": "string"
-                  },
-                  "year": {
-                    "type": "integer"
-                  },
-                  "type": {
-                    "type": "string"
-                  },
-                  "title": {
-                    "type": "string"
-                  },
-                  "cipher": {
-                    "type": "string"
-                  },
-                  "faculty": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "code": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      }
-                    }
-                  },
-                  "education": {
-                    "type": "object",
-                    "properties": {
-                      "language": {
-                        "type": "object",
-                        "properties": {
-                          "code": {
-                            "type": "string"
-                          },
-                          "title": {
-                            "type": "string"
-                          }
-                        }
-                      },
-                      "type": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "title": {
-                            "type": "string"
-                          }
-                        }
-                      },
-                      "level": {
-                        "type": "object",
-                        "properties": {
-                          "key": {
-                            "type": "string"
-                          },
-                          "title": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "tracks": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "type": {
-                          "type": "string"
-                        },
-                        "code": {
-                          "type": "string"
-                        },
-                        "title": {
-                          "type": "string"
-                        },
-                        "terms": {
-                          "type": "integer"
-                        },
-                        "students": {
-                          "type": "integer"
-                        },
-                        "total_credits": {
-                          "type": "integer"
-                        }
-                      }
-                    }
-                  },
-                  "post_degree_type": {
-                    "type": "object",
-                    "properties": {
-                      "key": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      }
-                    }
-                  },
-                  "duration_in_terms": {
-                    "type": "integer"
-                  }
-                }
-              },
-              "track": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "integer"
-                  },
-                  "type": {
-                    "type": "string"
-                  },
-                  "title": {
-                    "type": "string"
-                  }
-                }
-              },
-              "terms": {
-                "type": "integer"
-              }
-            }
-          },
-          "groups": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "term": {
-                  "type": "integer"
-                },
-                "items": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "course_code": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "theory": {
-                        "type": "integer"
-                      },
-                      "practice": {
-                        "type": "string"
-                      },
-                      "credits": {
-                        "type": "string"
-                      },
-                      "ects": {
-                        "type": "integer"
-                      },
-                      "requisite": {
-                        "type": "string"
-                      },
-                      "term": {
-                        "type": "integer"
-                      },
-                      "course_type": {
-                        "type": "string"
-                      },
-                      "elective_type": {
-                        "type": "string"
-                      },
-                      "details": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "properties": {
-                            "grade": {
-                              "type": "integer"
-                            },
-                            "letter_grade": {
-                              "type": "string"
-                            },
-                            "course_status": {
-                              "type": "integer"
-                            }
-                          }
-                        }
-                      },
-                      "references": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "curriculum_id": {
-                              "type": "integer"
-                            },
-                            "course_code": {
-                              "type": "string"
-                            },
-                            "course_title": {
-                              "type": "string"
-                            },
-                            "equicode": {
-                              "type": "string"
-                            },
-                            "reference_code": {
-                              "type": "string"
-                            },
-                            "reference_title": {
-                              "type": "string"
-                            },
-                            "type": {
-                              "type": "string"
-                            },
-                            "is_active": {
-                              "type": "boolean"
-                            }
-                          }
-                        }
-                      },
-                      "requisites": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "properties": {
-                            "id": {
-                              "type": "integer"
-                            },
-                            "course_code": {
-                              "type": "string"
-                            },
-                            "year": {
-                              "type": "string"
-                            },
-                            "type": {
-                              "type": "string"
-                            },
-                            "expr": {
-                              "type": "string"
-                            },
-                            "cr_enabled": {
-                              "type": "string"
-                            },
-                            "program_code": {
-                              "type": "string"
-                            },
-                            "track": {
-                              "type": "string"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "elective_sections": {
-            "type": "object",
-            "properties": {
-              "area": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "title": {
-                      "type": "string"
-                    },
-                    "theory": {
-                      "type": "integer"
-                    },
-                    "practice": {
-                      "type": "string"
-                    },
-                    "credits": {
-                      "type": "string"
-                    },
-                    "ects": {
-                      "type": "integer"
-                    },
-                    "term": {
-                      "type": "integer"
-                    },
-                    "elective_type": {
-                      "type": "string"
-                    },
-                    "details": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "course_code": {
-                            "type": "string"
-                          },
-                          "grade": {
-                            "type": "integer"
-                          },
-                          "letter_grade": {
-                            "type": "string"
-                          },
-                          "status": {
-                            "type": "integer"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "non_area": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "title": {
-                      "type": "string"
-                    },
-                    "theory": {
-                      "type": "integer"
-                    },
-                    "practice": {
-                      "type": "string"
-                    },
-                    "credits": {
-                      "type": "string"
-                    },
-                    "ects": {
-                      "type": "integer"
-                    },
-                    "term": {
-                      "type": "integer"
-                    },
-                    "elective_type": {
-                      "type": "string"
-                    },
-                    "details": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "course_code": {
-                            "type": "string"
-                          },
-                          "grade": {
-                            "type": "integer"
-                          },
-                          "letter_grade": {
-                            "type": "string"
-                          },
-                          "status": {
-                            "type": "integer"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "non_theoretical": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "title": {
-                      "type": "string"
-                    },
-                    "theory": {
-                      "type": "integer"
-                    },
-                    "practice": {
-                      "type": "string"
-                    },
-                    "credits": {
-                      "type": "string"
-                    },
-                    "ects": {
-                      "type": "integer"
-                    },
-                    "term": {
-                      "type": "integer"
-                    },
-                    "elective_type": {
-                      "type": "string"
-                    },
-                    "details": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "course_code": {
-                            "type": "string"
-                          },
-                          "grade": {
-                            "type": "integer"
-                          },
-                          "letter_grade": {
-                            "type": "string"
-                          },
-                          "status": {
-                            "type": "integer"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              },
-              "requisite_courses": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "code": {
-                      "type": "string"
-                    },
-                    "title": {
-                      "type": "string"
-                    },
-                    "theory": {
-                      "type": "integer"
-                    },
-                    "practice": {
-                      "type": "string"
-                    },
-                    "credits": {
-                      "type": "string"
-                    },
-                    "ects": {
-                      "type": "integer"
-                    },
-                    "term": {
-                      "type": "integer"
-                    },
-                    "elective_type": {
-                      "type": "string"
-                    },
-                    "details": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "course_code": {
-                            "type": "string"
-                          },
-                          "grade": {
-                            "type": "integer"
-                          },
-                          "letter_grade": {
-                            "type": "string"
-                          },
-                          "status": {
-                            "type": "integer"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "references": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "one_to_one": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "curriculum_id": {
-                        "type": "integer"
-                      },
-                      "course_code": {
-                        "type": "string"
-                      },
-                      "course_title": {
-                        "type": "string"
-                      },
-                      "equicode": {
-                        "type": "string"
-                      },
-                      "reference_code": {
-                        "type": "string"
-                      },
-                      "reference_title": {
-                        "type": "string"
-                      },
-                      "type": {
-                        "type": "string"
-                      },
-                      "is_active": {
-                        "type": "boolean"
-                      }
-                    }
-                  }
-                },
-                "one_to_many": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "curriculum_id": {
-                        "type": "integer"
-                      },
-                      "course_code": {
-                        "type": "string"
-                      },
-                      "course_title": {
-                        "type": "string"
-                      },
-                      "equicode": {
-                        "type": "string"
-                      },
-                      "reference_code": {
-                        "type": "string"
-                      },
-                      "reference_title": {
-                        "type": "string"
-                      },
-                      "type": {
-                        "type": "string"
-                      },
-                      "is_active": {
-                        "type": "boolean"
-                      }
-                    }
-                  }
-                },
-                "many_to_one": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "curriculum_id": {
-                        "type": "integer"
-                      },
-                      "course_code": {
-                        "type": "string"
-                      },
-                      "course_title": {
-                        "type": "string"
-                      },
-                      "equicode": {
-                        "type": "string"
-                      },
-                      "reference_code": {
-                        "type": "string"
-                      },
-                      "reference_title": {
-                        "type": "string"
-                      },
-                      "type": {
-                        "type": "string"
-                      },
-                      "is_active": {
-                        "type": "boolean"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
         "x-examples": {
           "Example 1": {
             "information": {
@@ -2529,6 +1917,843 @@
                 ]
               }
             ]
+          }
+        },
+        "required": [
+          "information",
+          "groups",
+          "elective_sections",
+          "references"
+        ],
+        "properties": {
+          "information": {
+            "type": "object",
+            "required": [
+              "year",
+              "department",
+              "program",
+              "track",
+              "terms"
+            ],
+            "properties": {
+              "year": {
+                "type": "integer"
+              },
+              "department": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "code",
+                  "title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              },
+              "program": {
+                "type": "object",
+                "required": [
+                  "code",
+                  "year",
+                  "type",
+                  "title",
+                  "cipher",
+                  "faculty",
+                  "education",
+                  "tracks",
+                  "post_degree_type",
+                  "duration_in_terms"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string"
+                  },
+                  "year": {
+                    "type": "integer"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "cipher": {
+                    "type": "string"
+                  },
+                  "faculty": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "code",
+                      "title"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "code": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "education": {
+                    "type": "object",
+                    "required": [
+                      "language",
+                      "type",
+                      "level"
+                    ],
+                    "properties": {
+                      "language": {
+                        "type": "object",
+                        "required": [
+                          "code",
+                          "title"
+                        ],
+                        "properties": {
+                          "code": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "type": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "title"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "level": {
+                        "type": "object",
+                        "required": [
+                          "key",
+                          "title"
+                        ],
+                        "properties": {
+                          "key": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "tracks": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "type",
+                        "code",
+                        "title",
+                        "terms",
+                        "students",
+                        "total_credits"
+                      ],
+                      "properties": {
+                        "type": {
+                          "type": "string"
+                        },
+                        "code": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "terms": {
+                          "type": "integer"
+                        },
+                        "students": {
+                          "type": "integer"
+                        },
+                        "total_credits": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  },
+                  "post_degree_type": {
+                    "type": "object",
+                    "required": [
+                      "key",
+                      "title"
+                    ],
+                    "properties": {
+                      "key": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      }
+                    }
+                  },
+                  "duration_in_terms": {
+                    "type": "integer"
+                  }
+                }
+              },
+              "track": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "type",
+                  "title"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "type": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              },
+              "terms": {
+                "type": "integer"
+              }
+            }
+          },
+          "groups": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "term",
+                "items"
+              ],
+              "properties": {
+                "term": {
+                  "type": "integer"
+                },
+                "items": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "course_code",
+                      "title",
+                      "theory",
+                      "practice",
+                      "credits",
+                      "ects",
+                      "requisite",
+                      "term",
+                      "course_type",
+                      "elective_type",
+                      "details",
+                      "references",
+                      "requisites"
+                    ],
+                    "properties": {
+                      "course_code": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "theory": {
+                        "type": "integer"
+                      },
+                      "practice": {
+                        "type": "string"
+                      },
+                      "credits": {
+                        "type": "string"
+                      },
+                      "ects": {
+                        "type": "integer"
+                      },
+                      "requisite": {
+                        "type": "string"
+                      },
+                      "term": {
+                        "type": "integer"
+                      },
+                      "course_type": {
+                        "type": "string"
+                      },
+                      "elective_type": {
+                        "type": "string"
+                      },
+                      "details": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "grade",
+                            "letter_grade",
+                            "course_status"
+                          ],
+                          "properties": {
+                            "grade": {
+                              "type": "integer"
+                            },
+                            "letter_grade": {
+                              "type": "string"
+                            },
+                            "course_status": {
+                              "type": "integer"
+                            }
+                          }
+                        }
+                      },
+                      "references": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "id",
+                            "curriculum_id",
+                            "course_code",
+                            "course_title",
+                            "equicode",
+                            "reference_code",
+                            "reference_title",
+                            "type",
+                            "is_active"
+                          ],
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "curriculum_id": {
+                              "type": "integer"
+                            },
+                            "course_code": {
+                              "type": "string"
+                            },
+                            "course_title": {
+                              "type": "string"
+                            },
+                            "equicode": {
+                              "type": "string"
+                            },
+                            "reference_code": {
+                              "type": "string"
+                            },
+                            "reference_title": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "type": "string"
+                            },
+                            "is_active": {
+                              "type": "boolean"
+                            }
+                          }
+                        }
+                      },
+                      "requisites": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "id",
+                            "course_code",
+                            "year",
+                            "type",
+                            "expr",
+                            "cr_enabled",
+                            "program_code",
+                            "track"
+                          ],
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "course_code": {
+                              "type": "string"
+                            },
+                            "year": {
+                              "type": "string"
+                            },
+                            "type": {
+                              "type": "string"
+                            },
+                            "expr": {
+                              "type": "string"
+                            },
+                            "cr_enabled": {
+                              "type": "string"
+                            },
+                            "program_code": {
+                              "type": "string"
+                            },
+                            "track": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "elective_sections": {
+            "type": "object",
+            "required": [
+              "area",
+              "non_area",
+              "non_theoretical",
+              "requisite_courses"
+            ],
+            "properties": {
+              "area": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "code",
+                    "title",
+                    "theory",
+                    "practice",
+                    "credits",
+                    "ects",
+                    "term",
+                    "elective_type",
+                    "details"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "theory": {
+                      "type": "integer"
+                    },
+                    "practice": {
+                      "type": "string"
+                    },
+                    "credits": {
+                      "type": "string"
+                    },
+                    "ects": {
+                      "type": "integer"
+                    },
+                    "term": {
+                      "type": "integer"
+                    },
+                    "elective_type": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "course_code",
+                          "grade",
+                          "letter_grade",
+                          "status"
+                        ],
+                        "properties": {
+                          "course_code": {
+                            "type": "string"
+                          },
+                          "grade": {
+                            "type": "integer"
+                          },
+                          "letter_grade": {
+                            "type": "string"
+                          },
+                          "status": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "non_area": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "code",
+                    "title",
+                    "theory",
+                    "practice",
+                    "credits",
+                    "ects",
+                    "term",
+                    "elective_type",
+                    "details"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "theory": {
+                      "type": "integer"
+                    },
+                    "practice": {
+                      "type": "string"
+                    },
+                    "credits": {
+                      "type": "string"
+                    },
+                    "ects": {
+                      "type": "integer"
+                    },
+                    "term": {
+                      "type": "integer"
+                    },
+                    "elective_type": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "course_code",
+                          "grade",
+                          "letter_grade",
+                          "status"
+                        ],
+                        "properties": {
+                          "course_code": {
+                            "type": "string"
+                          },
+                          "grade": {
+                            "type": "integer"
+                          },
+                          "letter_grade": {
+                            "type": "string"
+                          },
+                          "status": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "non_theoretical": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "code",
+                    "title",
+                    "theory",
+                    "practice",
+                    "credits",
+                    "ects",
+                    "term",
+                    "elective_type",
+                    "details"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "theory": {
+                      "type": "integer"
+                    },
+                    "practice": {
+                      "type": "string"
+                    },
+                    "credits": {
+                      "type": "string"
+                    },
+                    "ects": {
+                      "type": "integer"
+                    },
+                    "term": {
+                      "type": "integer"
+                    },
+                    "elective_type": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "course_code",
+                          "grade",
+                          "letter_grade",
+                          "status"
+                        ],
+                        "properties": {
+                          "course_code": {
+                            "type": "string"
+                          },
+                          "grade": {
+                            "type": "integer"
+                          },
+                          "letter_grade": {
+                            "type": "string"
+                          },
+                          "status": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "requisite_courses": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "code",
+                    "title",
+                    "theory",
+                    "practice",
+                    "credits",
+                    "ects",
+                    "term",
+                    "elective_type",
+                    "details"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "theory": {
+                      "type": "integer"
+                    },
+                    "practice": {
+                      "type": "string"
+                    },
+                    "credits": {
+                      "type": "string"
+                    },
+                    "ects": {
+                      "type": "integer"
+                    },
+                    "term": {
+                      "type": "integer"
+                    },
+                    "elective_type": {
+                      "type": "string"
+                    },
+                    "details": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "course_code",
+                          "grade",
+                          "letter_grade",
+                          "status"
+                        ],
+                        "properties": {
+                          "course_code": {
+                            "type": "string"
+                          },
+                          "grade": {
+                            "type": "integer"
+                          },
+                          "letter_grade": {
+                            "type": "string"
+                          },
+                          "status": {
+                            "type": "integer"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "references": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "one_to_many",
+                "many_to_one"
+              ],
+              "properties": {
+                "one_to_one": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "curriculum_id",
+                      "course_code",
+                      "course_title",
+                      "equicode",
+                      "reference_code",
+                      "reference_title",
+                      "type",
+                      "is_active"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "curriculum_id": {
+                        "type": "integer"
+                      },
+                      "course_code": {
+                        "type": "string"
+                      },
+                      "course_title": {
+                        "type": "string"
+                      },
+                      "equicode": {
+                        "type": "string"
+                      },
+                      "reference_code": {
+                        "type": "string"
+                      },
+                      "reference_title": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "is_active": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                },
+                "one_to_many": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "curriculum_id",
+                      "course_code",
+                      "course_title",
+                      "equicode",
+                      "reference_code",
+                      "reference_title",
+                      "type",
+                      "is_active"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "curriculum_id": {
+                        "type": "integer"
+                      },
+                      "course_code": {
+                        "type": "string"
+                      },
+                      "course_title": {
+                        "type": "string"
+                      },
+                      "equicode": {
+                        "type": "string"
+                      },
+                      "reference_code": {
+                        "type": "string"
+                      },
+                      "reference_title": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "is_active": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                },
+                "many_to_one": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "curriculum_id",
+                      "course_code",
+                      "course_title",
+                      "equicode",
+                      "reference_code",
+                      "reference_title",
+                      "type",
+                      "is_active"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "curriculum_id": {
+                        "type": "integer"
+                      },
+                      "course_code": {
+                        "type": "string"
+                      },
+                      "course_title": {
+                        "type": "string"
+                      },
+                      "equicode": {
+                        "type": "string"
+                      },
+                      "reference_code": {
+                        "type": "string"
+                      },
+                      "reference_title": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "is_active": {
+                        "type": "boolean"
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       },
