@@ -15413,7 +15413,8 @@
           "mailer": {
             "type": "boolean"
           }
-        }
+        },
+        "title": ""
       },
       "AdministrativeGateEntryResponse": {
         "type": "array",
