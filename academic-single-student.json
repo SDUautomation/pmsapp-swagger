@@ -2150,7 +2150,7 @@
               ],
               "properties": {
                 "term": {
-                  "type": "integer"
+                  "type": "string"
                 },
                 "items": {
                   "type": "array",
@@ -2185,7 +2185,7 @@
                         "type": "string"
                       },
                       "credits": {
-                        "type": "string"
+                        "type": "number"
                       },
                       "ects": {
                         "type": "integer"
@@ -2266,7 +2266,7 @@
                               "type": "string"
                             },
                             "equicode": {
-                              "type": "string"
+                              "type": "number"
                             },
                             "reference_code": {
                               "type": "string"
