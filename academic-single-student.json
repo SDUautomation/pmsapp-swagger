@@ -2230,6 +2230,12 @@
                               "x-stoplight": {
                                 "id": "p2f338lwri6hh"
                               }
+                            },
+                            "course_code": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "hn968mzln4bd7"
+                              }
                             }
                           }
                         }
