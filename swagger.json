@@ -15412,83 +15412,88 @@
         }
       },
       "AdministrativeGateEntryResponse": {
-        "type": "object",
+        "type": "array",
         "x-examples": {
-          "Example 1": {
-            "full_name": "Aibolat Batyrov",
-            "user_token": "10939",
-            "access_id_in": "8737373",
-            "access_id_out": "2262838",
-            "card_number": "#VBEVBE022",
-            "work_time": 6,
-            "day_of_week": 2,
-            "access_date_in": "2023-06-27",
-            "access_date_out": "2023-06-29",
-            "access_time_in": "16:38:00",
-            "access_time_out": "17:08:00",
-            "reader_type_in": "Tourniquet",
-            "reader_type_out": "Tourniquet",
-            "week_day_title": "Tuesday"
-          }
+          "Example 1": [
+            {
+              "full_name": "Aibolat Batyrov",
+              "user_token": "10939",
+              "access_id_in": "8737373",
+              "access_id_out": "2262838",
+              "card_number": "#VBEVBE022",
+              "work_time": 6,
+              "day_of_week": 2,
+              "access_date_in": "2023-06-27",
+              "access_date_out": "2023-06-29",
+              "access_time_in": "16:38:00",
+              "access_time_out": "17:08:00",
+              "reader_type_in": "Tourniquet",
+              "reader_type_out": "Tourniquet",
+              "week_day_title": "Tuesday"
+            }
+          ]
         },
-        "required": [
-          "full_name",
-          "user_token",
-          "access_id_in",
-          "access_id_out",
-          "card_number",
-          "work_time",
-          "day_of_week",
-          "access_date_in",
-          "access_date_out",
-          "access_time_in",
-          "access_time_out",
-          "reader_type_in",
-          "reader_type_out",
-          "week_day_title"
-        ],
-        "properties": {
-          "full_name": {
-            "type": "string"
-          },
-          "user_token": {
-            "type": "string"
-          },
-          "access_id_in": {
-            "type": "string"
-          },
-          "access_id_out": {
-            "type": "string"
-          },
-          "card_number": {
-            "type": "string"
-          },
-          "work_time": {
-            "type": "integer"
-          },
-          "day_of_week": {
-            "type": "integer"
-          },
-          "access_date_in": {
-            "type": "string"
-          },
-          "access_date_out": {
-            "type": "string"
-          },
-          "access_time_in": {
-            "type": "string"
-          },
-          "access_time_out": {
-            "type": "string"
-          },
-          "reader_type_in": {
-            "type": "string"
-          },
-          "reader_type_out": {
-            "type": "string"
-          },
-          "week_day_title": {
-            "type": "string"
+        "items": {
+          "type": "object",
+          "required": [
+            "full_name",
+            "user_token",
+            "access_id_in",
+            "access_id_out",
+            "card_number",
+            "work_time",
+            "day_of_week",
+            "access_date_in",
+            "access_date_out",
+            "access_time_in",
+            "access_time_out",
+            "reader_type_in",
+            "reader_type_out",
+            "week_day_title"
+          ],
+          "properties": {
+            "full_name": {
+              "type": "string"
+            },
+            "user_token": {
+              "type": "string"
+            },
+            "access_id_in": {
+              "type": "string"
+            },
+            "access_id_out": {
+              "type": "string"
+            },
+            "card_number": {
+              "type": "string"
+            },
+            "work_time": {
+              "type": "integer"
+            },
+            "day_of_week": {
+              "type": "integer"
+            },
+            "access_date_in": {
+              "type": "string"
+            },
+            "access_date_out": {
+              "type": "string"
+            },
+            "access_time_in": {
+              "type": "string"
+            },
+            "access_time_out": {
+              "type": "string"
+            },
+            "reader_type_in": {
+              "type": "string"
+            },
+            "reader_type_out": {
+              "type": "string"
+            },
+            "week_day_title": {
+              "type": "string"
+            }
           }
         }
       },
