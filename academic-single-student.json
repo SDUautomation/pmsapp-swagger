@@ -2209,7 +2209,8 @@
                           "required": [
                             "grade",
                             "letter_grade",
-                            "course_status"
+                            "course_status",
+                            "registration_date"
                           ],
                           "properties": {
                             "grade": {
@@ -2220,6 +2221,18 @@
                             },
                             "course_status": {
                               "type": "integer"
+                            },
+                            "course_code": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "dnef6vkrqoild"
+                              }
+                            },
+                            "registration_date": {
+                              "type": "string",
+                              "x-stoplight": {
+                                "id": "vz9vpxkrh9kqp"
+                              }
                             }
                           }
                         }
@@ -2375,7 +2388,8 @@
                           "course_code",
                           "grade",
                           "letter_grade",
-                          "status"
+                          "status",
+                          "registration_date"
                         ],
                         "properties": {
                           "course_code": {
@@ -2389,6 +2403,12 @@
                           },
                           "status": {
                             "type": "integer"
+                          },
+                          "registration_date": {
+                            "type": "string",
+                            "x-stoplight": {
+                              "id": "nku8eujol7iol"
+                            }
                           }
                         }
                       }
@@ -2444,7 +2464,8 @@
                           "course_code",
                           "grade",
                           "letter_grade",
-                          "status"
+                          "status",
+                          "registration_date"
                         ],
                         "properties": {
                           "course_code": {
@@ -2458,6 +2479,12 @@
                           },
                           "status": {
                             "type": "integer"
+                          },
+                          "registration_date": {
+                            "type": "string",
+                            "x-stoplight": {
+                              "id": "561dkom694ked"
+                            }
                           }
                         }
                       }
@@ -2513,7 +2540,8 @@
                           "course_code",
                           "grade",
                           "letter_grade",
-                          "status"
+                          "status",
+                          "registration_date"
                         ],
                         "properties": {
                           "course_code": {
@@ -2527,6 +2555,12 @@
                           },
                           "status": {
                             "type": "integer"
+                          },
+                          "registration_date": {
+                            "type": "string",
+                            "x-stoplight": {
+                              "id": "bv83wzmvlpsat"
+                            }
                           }
                         }
                       }
@@ -2582,7 +2616,8 @@
                           "course_code",
                           "grade",
                           "letter_grade",
-                          "status"
+                          "status",
+                          "registration_date"
                         ],
                         "properties": {
                           "course_code": {
@@ -2596,6 +2631,12 @@
                           },
                           "status": {
                             "type": "integer"
+                          },
+                          "registration_date": {
+                            "type": "string",
+                            "x-stoplight": {
+                              "id": "49eypwnwdg4nc"
+                            }
                           }
                         }
                       }
