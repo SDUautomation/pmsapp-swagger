@@ -1926,6 +1926,34 @@
           }
         },
         "description": ""
+      },
+      "AcademicManageCurriculumGetCoreCoursesForReferenceRequest": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "46be7394b3db9"
+        },
+        "properties": {
+          "track_id": {
+            "type": "integer"
+          },
+          "curricula_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "track_id": 123,
+            "curricula_ids": [
+              [
+                76591,
+                76591
+              ]
+            ]
+          }
+        }
       }
     }
   }
