@@ -2335,341 +2335,479 @@
             }
           },
           "elective_sections": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "area",
-                "non_area",
-                "non_theoretical",
-                "requisite_courses"
-              ],
-              "properties": {
-                "area": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "code",
-                      "title",
-                      "theory",
-                      "practice",
-                      "credits",
-                      "ects",
-                      "term",
-                      "elective_type",
-                      "details"
-                    ],
-                    "properties": {
-                      "code": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "amombvw76rjx1"
-                        }
+            "type": "object",
+            "required": [
+              "area"
+            ],
+            "properties": {
+              "area": {
+                "type": "object",
+                "x-stoplight": {
+                  "id": "umqk2dhmlqyc5"
+                },
+                "required": [
+                  "code",
+                  "credits",
+                  "details",
+                  "ects",
+                  "elective_type",
+                  "practice",
+                  "term",
+                  "theory",
+                  "title"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "wgyaq0ivt1pcc"
+                    }
+                  },
+                  "credits": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "u8iqx7flbm2dn"
+                    }
+                  },
+                  "details": {
+                    "type": "array",
+                    "x-stoplight": {
+                      "id": "ccvr6x4qzc1cd"
+                    },
+                    "items": {
+                      "x-stoplight": {
+                        "id": "0rtvgpz9jeifi"
                       },
-                      "title": {
-                        "type": "string"
-                      },
-                      "theory": {
-                        "type": "integer"
-                      },
-                      "practice": {
-                        "type": "string"
-                      },
-                      "credits": {
-                        "type": "string"
-                      },
-                      "ects": {
-                        "type": "integer"
-                      },
-                      "term": {
-                        "type": "integer"
-                      },
-                      "elective_type": {
-                        "type": "string"
-                      },
-                      "details": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "required": [
-                            "course_code",
-                            "grade",
-                            "letter_grade",
-                            "status",
-                            "registration_date"
-                          ],
-                          "properties": {
-                            "course_code": {
-                              "type": "string"
-                            },
-                            "grade": {
-                              "type": "integer"
-                            },
-                            "letter_grade": {
-                              "type": "string"
-                            },
-                            "status": {
-                              "type": "integer",
-                              "x-stoplight": {
-                                "id": "d50156v2uyik0"
-                              }
-                            },
-                            "registration_date": {
-                              "type": "string",
-                              "x-stoplight": {
-                                "id": "u7v3ous4cghrd"
-                              }
-                            }
+                      "type": "object",
+                      "required": [
+                        "course_code",
+                        "grade",
+                        "letter_grade",
+                        "registration_date",
+                        "status"
+                      ],
+                      "properties": {
+                        "course_code": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "204j34x2p7szi"
+                          }
+                        },
+                        "grade": {
+                          "type": "number",
+                          "x-stoplight": {
+                            "id": "nhui4w5smh2ey"
+                          }
+                        },
+                        "letter_grade": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "deyb8dz02s0kg"
+                          }
+                        },
+                        "registration_date": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "ewon4y1sjz58n"
+                          }
+                        },
+                        "status": {
+                          "type": "number",
+                          "x-stoplight": {
+                            "id": "7a0rg4vn2qzj8"
                           }
                         }
                       }
                     }
+                  },
+                  "ects": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "1p0vryuvy9hqd"
+                    }
+                  },
+                  "elective_type": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "javfenl5ys53a"
+                    }
+                  },
+                  "practice": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "sugl8ayhfeey1"
+                    }
+                  },
+                  "term": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "jve268t1c3nfd"
+                    }
+                  },
+                  "theory": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "5miiwb4ln4waq"
+                    }
+                  },
+                  "title": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "jpq4nvgjj0tjb"
+                    }
                   }
+                }
+              },
+              "requisite_courses": {
+                "type": "object",
+                "x-stoplight": {
+                  "id": "83lh6goegqco5"
                 },
-                "non_area": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "code",
-                      "title",
-                      "theory",
-                      "practice",
-                      "credits",
-                      "ects",
-                      "term",
-                      "elective_type",
-                      "details"
-                    ],
-                    "properties": {
-                      "code": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "uv330eekepu1f"
-                        }
+                "required": [
+                  "code",
+                  "credits",
+                  "details",
+                  "ects",
+                  "elective_type",
+                  "practice",
+                  "term",
+                  "theory",
+                  "title"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "e4b7suy2689u3"
+                    }
+                  },
+                  "credits": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "t4q42oy19zizr"
+                    }
+                  },
+                  "details": {
+                    "type": "array",
+                    "x-stoplight": {
+                      "id": "nhaeyy9i9zrk7"
+                    },
+                    "items": {
+                      "x-stoplight": {
+                        "id": "hhto4rihn4pmx"
                       },
-                      "title": {
-                        "type": "string"
-                      },
-                      "theory": {
-                        "type": "integer"
-                      },
-                      "practice": {
-                        "type": "string"
-                      },
-                      "credits": {
-                        "type": "string"
-                      },
-                      "ects": {
-                        "type": "integer"
-                      },
-                      "term": {
-                        "type": "integer"
-                      },
-                      "elective_type": {
-                        "type": "string"
-                      },
-                      "details": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "required": [
-                            "course_code",
-                            "grade",
-                            "letter_grade",
-                            "status",
-                            "registration_date"
-                          ],
-                          "properties": {
-                            "course_code": {
-                              "type": "string"
-                            },
-                            "grade": {
-                              "type": "integer"
-                            },
-                            "letter_grade": {
-                              "type": "string"
-                            },
-                            "status": {
-                              "type": "integer",
-                              "x-stoplight": {
-                                "id": "hdmbidpuz0b51"
-                              }
-                            },
-                            "registration_date": {
-                              "type": "string",
-                              "x-stoplight": {
-                                "id": "fu9isann93e2u"
-                              }
-                            }
+                      "type": "object",
+                      "required": [
+                        "course_code",
+                        "grade",
+                        "letter_grade",
+                        "registration_date",
+                        "status"
+                      ],
+                      "properties": {
+                        "course_code": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "961y3y8kwuu6g"
+                          }
+                        },
+                        "grade": {
+                          "type": "number",
+                          "x-stoplight": {
+                            "id": "6ms96ym8ze097"
+                          }
+                        },
+                        "letter_grade": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "v8vnpy3shmphd"
+                          }
+                        },
+                        "registration_date": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "hrt2dp2kfc4h7"
+                          }
+                        },
+                        "status": {
+                          "type": "number",
+                          "x-stoplight": {
+                            "id": "8lj384wvt7s19"
                           }
                         }
                       }
                     }
+                  },
+                  "ects": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "1rehn8oekwiqy"
+                    }
+                  },
+                  "elective_type": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "gb061qsxw1s2u"
+                    }
+                  },
+                  "practice": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "317zf1vzuvri6"
+                    }
+                  },
+                  "term": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "jaj1uqqsmsyht"
+                    }
+                  },
+                  "theory": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "80uqvro6twt0s"
+                    }
+                  },
+                  "title": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "r78p5y0skbhqa"
+                    }
                   }
+                }
+              },
+              "non_area": {
+                "type": "object",
+                "x-stoplight": {
+                  "id": "64a30fa0bo7hk"
                 },
-                "non_theoretical": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "code",
-                      "title",
-                      "theory",
-                      "practice",
-                      "credits",
-                      "ects",
-                      "term",
-                      "elective_type",
-                      "details"
-                    ],
-                    "properties": {
-                      "code": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "i0hzy80jlvp6x"
-                        }
+                "required": [
+                  "code",
+                  "credits",
+                  "details",
+                  "ects",
+                  "elective_type",
+                  "practice",
+                  "term",
+                  "theory",
+                  "title"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "fhbrzsn87sixw"
+                    }
+                  },
+                  "credits": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "ytruy0zu8spq6"
+                    }
+                  },
+                  "details": {
+                    "type": "array",
+                    "x-stoplight": {
+                      "id": "rus2vc62uilsp"
+                    },
+                    "items": {
+                      "x-stoplight": {
+                        "id": "kx9qzp888b77a"
                       },
-                      "title": {
-                        "type": "string"
-                      },
-                      "theory": {
-                        "type": "integer"
-                      },
-                      "practice": {
-                        "type": "string"
-                      },
-                      "credits": {
-                        "type": "string"
-                      },
-                      "ects": {
-                        "type": "integer"
-                      },
-                      "term": {
-                        "type": "integer"
-                      },
-                      "elective_type": {
-                        "type": "string"
-                      },
-                      "details": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "required": [
-                            "course_code",
-                            "grade",
-                            "letter_grade",
-                            "status",
-                            "registration_date"
-                          ],
-                          "properties": {
-                            "course_code": {
-                              "type": "string"
-                            },
-                            "grade": {
-                              "type": "integer"
-                            },
-                            "letter_grade": {
-                              "type": "string"
-                            },
-                            "status": {
-                              "type": "integer",
-                              "x-stoplight": {
-                                "id": "bsc3rmc5uy2kw"
-                              }
-                            },
-                            "registration_date": {
-                              "type": "string",
-                              "x-stoplight": {
-                                "id": "sgtaxtab0c913"
-                              }
-                            }
+                      "type": "object",
+                      "required": [
+                        "course_code",
+                        "grade",
+                        "letter_grade",
+                        "registration_date",
+                        "status"
+                      ],
+                      "properties": {
+                        "course_code": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "axlri42po1b08"
+                          }
+                        },
+                        "grade": {
+                          "type": "number",
+                          "x-stoplight": {
+                            "id": "yjv54nqm74tau"
+                          }
+                        },
+                        "letter_grade": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "xzd4bciv01isu"
+                          }
+                        },
+                        "registration_date": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "qllsfaoj0jt09"
+                          }
+                        },
+                        "status": {
+                          "type": "number",
+                          "x-stoplight": {
+                            "id": "i4hlouhrl04g6"
                           }
                         }
                       }
                     }
+                  },
+                  "ects": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "q4qerkr6mavge"
+                    }
+                  },
+                  "elective_type": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "157ht3dujpoct"
+                    }
+                  },
+                  "practice": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "pgmjsfi9hpq4s"
+                    }
+                  },
+                  "term": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "dfc7hf2ij7cw7"
+                    }
+                  },
+                  "theory": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "8z8zqxbua1hpy"
+                    }
+                  },
+                  "title": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "yjyyz2sjm4ksm"
+                    }
                   }
+                }
+              },
+              "non_theoretical": {
+                "type": "object",
+                "x-stoplight": {
+                  "id": "20049vbin4573"
                 },
-                "requisite_courses": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "code",
-                      "title",
-                      "theory",
-                      "practice",
-                      "credits",
-                      "ects",
-                      "term",
-                      "elective_type",
-                      "details"
-                    ],
-                    "properties": {
-                      "code": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "qh5uwus9cs8ig"
-                        }
+                "required": [
+                  "code",
+                  "credits",
+                  "details",
+                  "ects",
+                  "elective_type",
+                  "practice",
+                  "term",
+                  "theory",
+                  "title"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "ahaihicaf0957"
+                    }
+                  },
+                  "credits": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "kzj6o02e23o2f"
+                    }
+                  },
+                  "details": {
+                    "type": "array",
+                    "x-stoplight": {
+                      "id": "5tmn2w2j2e5gy"
+                    },
+                    "items": {
+                      "x-stoplight": {
+                        "id": "kofaxmjz18lzj"
                       },
-                      "title": {
-                        "type": "string"
-                      },
-                      "theory": {
-                        "type": "integer"
-                      },
-                      "practice": {
-                        "type": "string"
-                      },
-                      "credits": {
-                        "type": "string"
-                      },
-                      "ects": {
-                        "type": "integer"
-                      },
-                      "term": {
-                        "type": "integer"
-                      },
-                      "elective_type": {
-                        "type": "string"
-                      },
-                      "details": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "required": [
-                            "course_code",
-                            "grade",
-                            "letter_grade",
-                            "status",
-                            "registration_date"
-                          ],
-                          "properties": {
-                            "course_code": {
-                              "type": "string"
-                            },
-                            "grade": {
-                              "type": "integer"
-                            },
-                            "letter_grade": {
-                              "type": "string"
-                            },
-                            "status": {
-                              "type": "integer",
-                              "x-stoplight": {
-                                "id": "dhrrwrbwntxaf"
-                              }
-                            },
-                            "registration_date": {
-                              "type": "string",
-                              "x-stoplight": {
-                                "id": "106d5372kab65"
-                              }
-                            }
+                      "type": "object",
+                      "required": [
+                        "course_code",
+                        "grade",
+                        "letter_grade",
+                        "registration_date",
+                        "status"
+                      ],
+                      "properties": {
+                        "course_code": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "hio791ej6oa3s"
+                          }
+                        },
+                        "grade": {
+                          "type": "number",
+                          "x-stoplight": {
+                            "id": "ygptwked35460"
+                          }
+                        },
+                        "letter_grade": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "iqtnyvx9y2o8e"
+                          }
+                        },
+                        "registration_date": {
+                          "type": "string",
+                          "x-stoplight": {
+                            "id": "xopol5nvqcayj"
+                          }
+                        },
+                        "status": {
+                          "type": "number",
+                          "x-stoplight": {
+                            "id": "v8xd3rfdfmt59"
                           }
                         }
                       }
+                    }
+                  },
+                  "ects": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "awk4v1xc453x0"
+                    }
+                  },
+                  "elective_type": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "xvimohq6ig7dj"
+                    }
+                  },
+                  "practice": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "6acfb9suisowj"
+                    }
+                  },
+                  "term": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "aij3t45cpa9cp"
+                    }
+                  },
+                  "theory": {
+                    "type": "number",
+                    "x-stoplight": {
+                      "id": "itflvlbuoe2am"
+                    }
+                  },
+                  "title": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "5m7oi3r5e9bq2"
                     }
                   }
                 }
