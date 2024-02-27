@@ -2120,6 +2120,19 @@
             }
           }
         }
+      },
+      "AcademicManageCurriculumPutReferenceRequest": {
+        "type": "object",
+        "properties": {
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "is_active": true
+          }
+        }
       }
     }
   }
