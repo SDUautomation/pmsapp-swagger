@@ -2041,44 +2041,62 @@
                 "type": "string"
               },
               "program": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "required": [
-                    "code",
-                    "year",
-                    "type",
-                    "department"
-                  ],
-                  "properties": {
-                    "code": {
-                      "type": "string"
+                "type": "object",
+                "x-stoplight": {
+                  "id": "6lhn3a3ene5cd"
+                },
+                "required": [
+                  "code",
+                  "year",
+                  "type",
+                  "department"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "odxrjtk67xujm"
+                    }
+                  },
+                  "year": {
+                    "type": "integer",
+                    "x-stoplight": {
+                      "id": "wp7uxwvkh1a0g"
+                    }
+                  },
+                  "type": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "qm28eowgcode3"
+                    }
+                  },
+                  "department": {
+                    "type": "object",
+                    "x-stoplight": {
+                      "id": "j7oy31ykmcjqj"
                     },
-                    "year": {
-                      "type": "integer"
-                    },
-                    "type": {
-                      "type": "string"
-                    },
-                    "department": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "id",
-                          "code",
-                          "title"
-                        ],
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "code": {
-                            "type": "string"
-                          },
-                          "title": {
-                            "type": "string"
-                          }
+                    "required": [
+                      "id",
+                      "code",
+                      "title"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer",
+                        "x-stoplight": {
+                          "id": "do9a2ivauz89u"
+                        }
+                      },
+                      "code": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "a49flghg2kje7"
+                        }
+                      },
+                      "title": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "ys73tt4xvlumf"
                         }
                       }
                     }
