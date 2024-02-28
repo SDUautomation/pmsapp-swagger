@@ -4108,6 +4108,99 @@
           }
         }
       }
+    },
+    "/1.0.0/administrative/gate-entry/resource": {
+      "get": {
+        "summary": "getGateEntryResource",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Gate Entry Records are successfully returned.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeGateEntryResourceResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-gate-entry-resource",
+        "x-stoplight": {
+          "id": "w5psousrectov"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeGateEntryResourceRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/administrative/gate-entry/resource/users": {
+      "get": {
+        "summary": "gate-entry-resource-users",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Gate Entry users are successfully returned.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeGateEntryResourceUsersResponce"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-gate-entry-resource-users",
+        "x-stoplight": {
+          "id": "pfp1fc44kjsgi"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeGateEntryResourceUsersRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/administrative/gate-entry/send-mail": {
+      "post": {
+        "summary": "gate-entry-send-mail",
+        "tags": [],
+        "responses": {
+          "201": {
+            "description": "Gate Entry records is successfully sent to email",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeGateEntrySendMailResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "post-1.0.0-administrative-gate-entry-send-mail",
+        "x-stoplight": {
+          "id": "bjqpw1te7kqb3"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeGateEntrySendMailRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -16233,12 +16326,6 @@
                 "title": "Core"
               }
             ],
-            "elective_types": [
-              {
-                "key": "R",
-                "title": "Restricted"
-              }
-            ],
             "requisite_types": [
               {
                 "key": "AR",
@@ -16259,15 +16346,30 @@
             ],
             "course_prefixes": [
               "CSS"
+            ],
+            "languages": [
+              {
+                "language_code": "KZ",
+                "title": "Kazakh"
+              }
+            ],
+            "section_types": [
+              {
+                "key": "N",
+                "credit_rate": 1
+              }
             ]
           }
         },
         "required": [
           "elective_names",
           "core_types",
-          "elective_types",
+          "requisite_types",
+          "tracks",
           "consent_statuses",
-          "course_prefixes"
+          "course_prefixes",
+          "languages",
+          "section_types"
         ],
         "properties": {
           "elective_names": {
@@ -16289,24 +16391,6 @@
             }
           },
           "core_types": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "key",
-                "title"
-              ],
-              "properties": {
-                "key": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "elective_types": {
             "type": "array",
             "items": {
               "type": "object",
@@ -16382,6 +16466,42 @@
             "type": "array",
             "items": {
               "type": "string"
+            }
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "language_code",
+                "title"
+              ],
+              "properties": {
+                "language_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "section_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "key",
+                "credit_rate"
+              ],
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "credit_rate": {
+                  "type": "integer"
+                }
+              }
             }
           }
         }
@@ -25307,6 +25427,192 @@
           },
           "enable": {
             "type": "boolean"
+          }
+        }
+      },
+      "AdministrativeGateEntryResourceRequest": {
+        "title": "AdministrativeGateEntryResourceRequest",
+        "x-stoplight": {
+          "id": "vuj9eqny0nns1"
+        },
+        "type": "object"
+      },
+      "AdministrativeGateEntryResourceResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "departments": [
+              {
+                "department_code": "F_ENG",
+                "title": "Department",
+                "department_id": 1234,
+                "parent_id": 1234
+              }
+            ],
+            "faculties": [
+              {
+                "department_code": "F_ENG",
+                "title": "Department",
+                "department_id": 1234,
+                "parent_id": 1234
+              }
+            ]
+          }
+        },
+        "required": [
+          "departments",
+          "faculties"
+        ],
+        "properties": {
+          "departments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "department_code",
+                "title",
+                "department_id",
+                "parent_id"
+              ],
+              "properties": {
+                "department_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "department_id": {
+                  "type": "integer"
+                },
+                "parent_id": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "faculties": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "department_code",
+                "title",
+                "department_id",
+                "parent_id"
+              ],
+              "properties": {
+                "department_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "department_id": {
+                  "type": "integer"
+                },
+                "parent_id": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      },
+      "AdministrativeGateEntryResourceUsersRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "department": "F_ENG",
+            "user_type": "P"
+          }
+        },
+        "required": [
+          "department",
+          "user_type"
+        ],
+        "properties": {
+          "department": {
+            "type": "string"
+          },
+          "user_type": {
+            "type": "string"
+          }
+        }
+      },
+      "AdministrativeGateEntryResourceUsersResponce": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "user_id": 11002,
+              "full_name": "Akberdiyev Daulet"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "user_id",
+            "full_name"
+          ],
+          "properties": {
+            "user_id": {
+              "type": "integer"
+            },
+            "full_name": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "AdministrativeGateEntrySendMailRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "reader_group": 1,
+            "employee_id": 11060,
+            "from_date": "2023-06-19",
+            "due_date": "2023-06-20"
+          }
+        },
+        "required": [
+          "reader_group",
+          "employee_id",
+          "from_date",
+          "due_date"
+        ],
+        "properties": {
+          "reader_group": {
+            "type": "integer"
+          },
+          "employee_id": {
+            "type": "integer"
+          },
+          "from_date": {
+            "type": "string"
+          },
+          "due_date": {
+            "type": "string"
+          }
+        },
+        "title": ""
+      },
+      "AdministrativeGateEntrySendMailResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "85eec5be73e48"
+        },
+        "x-examples": {
+          "Example 1": {
+            "message": "Gate Entry records is successfully sent to email - aibolat.batyrov@sdu.edu.kz"
+          }
+        },
+        "required": [
+          "message"
+        ],
+        "properties": {
+          "message": {
+            "type": "string"
           }
         }
       }

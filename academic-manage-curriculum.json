@@ -171,6 +171,60 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/manage/curriculum/electives/:id": {
+      "get": {
+        "summary": "get elective slot info",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageCurriculumElectiveGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-academic-manage-curriculum-electives-:id",
+        "x-stoplight": {
+          "id": "oow2u6oscb1td"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCurriculumElectiveGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "parameters": [],
+      "post": {
+        "summary": "Create elective slot",
+        "tags": [],
+        "responses": {
+          "201": {
+            "description": "Course is successfully created."
+          }
+        },
+        "operationId": "post-1.0.0-academic-manage-curriculum-electives-:id",
+        "x-stoplight": {
+          "id": "xmzsngxz1lulv"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCurriculumElectivePostRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1217,6 +1271,866 @@
                 }
               }
             }
+          }
+        },
+        "title": ""
+      },
+      "AcademicManageCurriculumCorePutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "type": "C",
+            "is_active": true,
+            "term": 8,
+            "track_code": "TRACK0",
+            "elective_type": "AE"
+          }
+        },
+        "required": [
+          "type",
+          "is_active",
+          "track_code"
+        ],
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "track_code": {
+            "type": "string"
+          },
+          "elective_type": {
+            "type": "string"
+          }
+        }
+      },
+      "AcademicManageCurriculumElectiveGetRequest": {
+        "title": "AcademicManageCurriculumElectiveGetRequest",
+        "x-stoplight": {
+          "id": "os8cz86aba9bc"
+        },
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "9jamxjsb8ut92"
+            }
+          }
+        }
+      },
+      "AcademicManageCurriculumElectiveGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "elective_course": {
+              "id": 1,
+              "code": "CSS 105",
+              "term": 5,
+              "title_en": "Elective 1 (MAN 567/MAN 555)",
+              "title_kz": "Таңдау 1 (MAN 567/MAN 555)",
+              "title_ru": "Эллектив 1 (MAN 567/MAN 555)",
+              "theory": 1,
+              "practice": 1,
+              "lab": 0,
+              "credits": 3,
+              "ects": 5,
+              "is_active": true,
+              "is_theoretical": true,
+              "is_restricted": true,
+              "for_all_tracks": true,
+              "lang_code": "KZ",
+              "elective_code": "AE",
+              "track": {
+                "id": 1,
+                "code": "TRACK0",
+                "title": "Main Track",
+                "terms": 8,
+                "is_main": true,
+                "students": 368,
+                "program": {
+                  "code": "11107",
+                  "year": 2022,
+                  "type": "Major",
+                  "department": {
+                    "id": 1,
+                    "code": "DEP_HUMANITIES",
+                    "title": "Department of Humanities"
+                  }
+                }
+              }
+            },
+            "area_electives": [
+              {
+                "curriculum_id": 11234,
+                "course_code": "CSS 105",
+                "title": "Foreign Language 1",
+                "theory": 2,
+                "practice": 0,
+                "lab": 1,
+                "credits": 3,
+                "ects": 5,
+                "language_code": "KZ",
+                "period_number": 3,
+                "e_groups": "XXX XX9@TEST",
+                "in_group": true
+              }
+            ],
+            "non_areaElectives": [
+              {
+                "curriculum_id": 11234,
+                "course_code": "CSS 105",
+                "title": "Foreign Language 1",
+                "theory": 2,
+                "practice": 0,
+                "lab": 1,
+                "credits": 3,
+                "ects": 5,
+                "language_code": "KZ",
+                "period_number": 3,
+                "e_groups": "XXX XX9@TEST",
+                "in_group": true
+              }
+            ],
+            "non_theoretical_electives": [
+              {
+                "curriculum_id": 11234,
+                "course_code": "CSS 105",
+                "title": "Foreign Language 1",
+                "theory": 2,
+                "practice": 0,
+                "lab": 1,
+                "credits": 3,
+                "ects": 5,
+                "language_code": "KZ",
+                "period_number": 3,
+                "e_groups": "XXX XX9@TEST",
+                "in_group": true
+              }
+            ]
+          }
+        },
+        "required": [
+          "elective_course",
+          "area_electives",
+          "non_areaElectives",
+          "non_theoretical_electives"
+        ],
+        "properties": {
+          "elective_course": {
+            "type": "object",
+            "required": [
+              "id",
+              "code",
+              "term",
+              "title_en",
+              "title_kz",
+              "title_ru",
+              "theory",
+              "practice",
+              "lab",
+              "credits",
+              "ects",
+              "is_active",
+              "is_theoretical",
+              "is_restricted",
+              "for_all_tracks",
+              "language_code",
+              "elective_code",
+              "track"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "code": {
+                "type": "string"
+              },
+              "term": {
+                "type": "integer"
+              },
+              "title_en": {
+                "type": "string"
+              },
+              "title_kz": {
+                "type": "string"
+              },
+              "title_ru": {
+                "type": "string"
+              },
+              "theory": {
+                "type": "integer"
+              },
+              "practice": {
+                "type": "integer"
+              },
+              "lab": {
+                "type": "integer"
+              },
+              "credits": {
+                "type": "integer"
+              },
+              "ects": {
+                "type": "integer"
+              },
+              "is_active": {
+                "type": "boolean"
+              },
+              "is_theoretical": {
+                "type": "boolean"
+              },
+              "is_restricted": {
+                "type": "boolean"
+              },
+              "for_all_tracks": {
+                "type": "boolean"
+              },
+              "language_code": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "n1a2fvhca1evt"
+                }
+              },
+              "elective_code": {
+                "type": "string"
+              },
+              "track": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "code",
+                  "title",
+                  "terms",
+                  "is_main",
+                  "students",
+                  "program"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "terms": {
+                    "type": "integer"
+                  },
+                  "is_main": {
+                    "type": "boolean"
+                  },
+                  "students": {
+                    "type": "integer"
+                  },
+                  "program": {
+                    "type": "object",
+                    "required": [
+                      "code",
+                      "year",
+                      "type",
+                      "department"
+                    ],
+                    "properties": {
+                      "code": {
+                        "type": "string"
+                      },
+                      "year": {
+                        "type": "integer"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "department": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "code",
+                          "title"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "code": {
+                            "type": "string"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "area_electives": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "curriculum_id",
+                "course_code",
+                "title",
+                "theory",
+                "practice",
+                "lab",
+                "credits",
+                "ects",
+                "language_code",
+                "period_number",
+                "e_groups",
+                "in_group"
+              ],
+              "properties": {
+                "curriculum_id": {
+                  "type": "integer"
+                },
+                "course_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "theory": {
+                  "type": "integer"
+                },
+                "practice": {
+                  "type": "integer"
+                },
+                "lab": {
+                  "type": "integer"
+                },
+                "credits": {
+                  "type": "integer"
+                },
+                "ects": {
+                  "type": "integer"
+                },
+                "language_code": {
+                  "type": "string"
+                },
+                "period_number": {
+                  "type": "integer"
+                },
+                "e_groups": {
+                  "type": "string"
+                },
+                "in_group": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "non_areaElectives": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "curriculum_id",
+                "course_code",
+                "title",
+                "theory",
+                "practice",
+                "lab",
+                "credits",
+                "ects",
+                "language_code",
+                "period_number",
+                "e_groups",
+                "in_group"
+              ],
+              "properties": {
+                "curriculum_id": {
+                  "type": "integer"
+                },
+                "course_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "theory": {
+                  "type": "integer"
+                },
+                "practice": {
+                  "type": "integer"
+                },
+                "lab": {
+                  "type": "integer"
+                },
+                "credits": {
+                  "type": "integer"
+                },
+                "ects": {
+                  "type": "integer"
+                },
+                "language_code": {
+                  "type": "string"
+                },
+                "period_number": {
+                  "type": "integer"
+                },
+                "e_groups": {
+                  "type": "string"
+                },
+                "in_group": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "non_theoretical_electives": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "curriculum_id",
+                "course_code",
+                "title",
+                "theory",
+                "practice",
+                "lab",
+                "credits",
+                "ects",
+                "language_code",
+                "period_number",
+                "e_groups",
+                "in_group"
+              ],
+              "properties": {
+                "curriculum_id": {
+                  "type": "integer"
+                },
+                "course_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "theory": {
+                  "type": "integer"
+                },
+                "practice": {
+                  "type": "integer"
+                },
+                "lab": {
+                  "type": "integer"
+                },
+                "credits": {
+                  "type": "integer"
+                },
+                "ects": {
+                  "type": "integer"
+                },
+                "language_code": {
+                  "type": "string"
+                },
+                "period_number": {
+                  "type": "integer"
+                },
+                "e_groups": {
+                  "type": "string"
+                },
+                "in_group": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        }
+      },
+      "AcademicManageCurriculumElectivePostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "track_id": 1,
+            "term": 1,
+            "course_code": "XXX 2XX",
+            "title_kz": "Таңдау 1 (MAN 567/MAN 555)",
+            "title_ru": "Эллектив 1 (MAN 567/MAN 555)",
+            "title_en": "Elective 1 (MAN 567/MAN 555)",
+            "theory": 1,
+            "practice": 2,
+            "lab": 0,
+            "ects": 5,
+            "is_restricted": true,
+            "elective_code": "AE",
+            "language_code": "EN",
+            "for_all_tracks": true,
+            "courses_slot": 41129
+          }
+        },
+        "required": [
+          "track_id",
+          "term",
+          "course_code",
+          "title_kz",
+          "title_ru",
+          "title_en",
+          "theory",
+          "practice",
+          "lab",
+          "ects",
+          "is_restricted",
+          "elective_code",
+          "language_code",
+          "for_all_tracks"
+        ],
+        "properties": {
+          "track_id": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "course_code": {
+            "type": "string"
+          },
+          "title_kz": {
+            "type": "string"
+          },
+          "title_ru": {
+            "type": "string"
+          },
+          "title_en": {
+            "type": "string"
+          },
+          "theory": {
+            "type": "integer"
+          },
+          "practice": {
+            "type": "integer"
+          },
+          "lab": {
+            "type": "integer"
+          },
+          "ects": {
+            "type": "integer"
+          },
+          "is_restricted": {
+            "type": "boolean"
+          },
+          "elective_code": {
+            "type": "string"
+          },
+          "language_code": {
+            "type": "string"
+          },
+          "for_all_tracks": {
+            "type": "boolean"
+          },
+          "courses_slot": {
+            "type": "integer",
+            "description": "Это id-s электив курсов которые будут в этом слоте"
+          }
+        },
+        "title": ""
+      },
+      "AcademicManageCurriculumElectivePutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "track_id": 1,
+            "term": 1,
+            "course_code": "XXX 2XX",
+            "title_kz": "Таңдау 1 (MAN 567/MAN 555)",
+            "title_ru": "Эллектив 1 (MAN 567/MAN 555)",
+            "title_en": "Elective 1 (MAN 567/MAN 555)",
+            "theory": 1,
+            "practice": 2,
+            "lab": 0,
+            "ects": 5,
+            "is_restricted": true,
+            "elective_code": "AE",
+            "language_code": "EN",
+            "for_all_tracks": true,
+            "courses_slot": [
+              41129
+            ]
+          }
+        },
+        "required": [
+          "track_id",
+          "term",
+          "course_code",
+          "title_kz",
+          "title_ru",
+          "title_en",
+          "theory",
+          "practice",
+          "lab",
+          "ects",
+          "is_restricted",
+          "elective_code",
+          "language_code",
+          "for_all_tracks",
+          "courses_slot"
+        ],
+        "properties": {
+          "track_id": {
+            "type": "integer"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "course_code": {
+            "type": "string"
+          },
+          "title_kz": {
+            "type": "string"
+          },
+          "title_ru": {
+            "type": "string"
+          },
+          "title_en": {
+            "type": "string"
+          },
+          "theory": {
+            "type": "integer"
+          },
+          "practice": {
+            "type": "integer"
+          },
+          "lab": {
+            "type": "integer"
+          },
+          "ects": {
+            "type": "integer"
+          },
+          "is_restricted": {
+            "type": "boolean"
+          },
+          "elective_code": {
+            "type": "string"
+          },
+          "language_code": {
+            "type": "string"
+          },
+          "for_all_tracks": {
+            "type": "boolean"
+          },
+          "courses_slot": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "description": ""
+      },
+      "AcademicManageCurriculumGetCoreCoursesForReferenceRequest": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "46be7394b3db9"
+        },
+        "properties": {
+          "track_id": {
+            "type": "integer"
+          },
+          "curricula_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "track_id": 123,
+            "curricula_ids": [
+              [
+                76591,
+                76591
+              ]
+            ]
+          }
+        }
+      },
+      "AcademicManageCurriculumGetCoreCoursesForReferenceResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "courses": [
+              {
+                "id": 76891,
+                "code": "CSS 201",
+                "title": "Fundamentals of Programming"
+              }
+            ],
+            "track": {
+              "id": 76891,
+              "code": "TRACK0",
+              "title": "Main Track",
+              "program": [
+                {
+                  "code": "10207",
+                  "year": 2023,
+                  "type": "Degree Program",
+                  "department": [
+                    {
+                      "id": 10207,
+                      "code": "DEP_ECO_BUS",
+                      "title": "Department of Economics and Business"
+                    }
+                  ]
+                }
+              ]
+            },
+            "info": {
+              "already_exists_years": [
+                2019,
+                2020,
+                2023
+              ]
+            }
+          }
+        },
+        "required": [
+          "courses",
+          "track",
+          "info"
+        ],
+        "properties": {
+          "courses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "code",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "track": {
+            "type": "object",
+            "required": [
+              "id",
+              "code",
+              "title",
+              "program"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "code": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              },
+              "program": {
+                "type": "object",
+                "x-stoplight": {
+                  "id": "6lhn3a3ene5cd"
+                },
+                "required": [
+                  "code",
+                  "year",
+                  "type",
+                  "department"
+                ],
+                "properties": {
+                  "code": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "odxrjtk67xujm"
+                    }
+                  },
+                  "year": {
+                    "type": "integer",
+                    "x-stoplight": {
+                      "id": "wp7uxwvkh1a0g"
+                    }
+                  },
+                  "type": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "qm28eowgcode3"
+                    }
+                  },
+                  "department": {
+                    "type": "object",
+                    "x-stoplight": {
+                      "id": "j7oy31ykmcjqj"
+                    },
+                    "required": [
+                      "id",
+                      "code",
+                      "title"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer",
+                        "x-stoplight": {
+                          "id": "do9a2ivauz89u"
+                        }
+                      },
+                      "code": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "a49flghg2kje7"
+                        }
+                      },
+                      "title": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "ys73tt4xvlumf"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "info": {
+            "type": "object",
+            "required": [
+              "already_exists_years"
+            ],
+            "properties": {
+              "already_exists_years": {
+                "type": "array",
+                "items": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        }
+      },
+      "AcademicManageCurriculumPutReferenceRequest": {
+        "type": "object",
+        "properties": {
+          "is_active": {
+            "type": "boolean"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "is_active": true
           }
         }
       }
