@@ -2160,7 +2160,7 @@
           "equicodes": {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "integer"
             }
           },
           "apply_all_years": {
