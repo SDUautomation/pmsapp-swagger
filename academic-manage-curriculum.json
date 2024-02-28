@@ -2137,7 +2137,7 @@
           "equicodes": {
             "type": "array",
             "items": {
-              "type": "integer"
+              "type": "string"
             }
           },
           "apply_all_years": {
