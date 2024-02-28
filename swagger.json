@@ -16782,6 +16782,12 @@
             }
           }
         },
+        "required": [
+          "information",
+          "groups",
+          "references",
+          "electives"
+        ],
         "properties": {
           "information": {
             "type": "object",
@@ -16922,6 +16928,14 @@
                     "type": "array",
                     "items": {
                       "type": "object",
+                      "required": [
+                        "type",
+                        "code",
+                        "title",
+                        "terms",
+                        "students",
+                        "total_credits"
+                      ],
                       "properties": {
                         "type": {
                           "type": "string"
@@ -16941,15 +16955,7 @@
                         "total_credits": {
                           "type": "integer"
                         }
-                      },
-                      "required": [
-                        "type",
-                        "code",
-                        "title",
-                        "terms",
-                        "students",
-                        "total_credits"
-                      ]
+                      }
                     }
                   },
                   "post_degree_type": {
@@ -16997,6 +17003,10 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "term",
+                "items"
+              ],
               "properties": {
                 "term": {
                   "type": "integer"
@@ -17005,6 +17015,23 @@
                   "type": "array",
                   "items": {
                     "type": "object",
+                    "required": [
+                      "id",
+                      "code",
+                      "track",
+                      "term",
+                      "title",
+                      "practice",
+                      "lab",
+                      "credits",
+                      "ects",
+                      "is_active",
+                      "is_theoretical",
+                      "requisites",
+                      "references",
+                      "theory",
+                      "is_slot"
+                    ],
                     "properties": {
                       "id": {
                         "type": "integer"
@@ -17043,6 +17070,16 @@
                         "type": "array",
                         "items": {
                           "type": "object",
+                          "required": [
+                            "id",
+                            "course_code",
+                            "year",
+                            "type",
+                            "expr",
+                            "cr_enabled",
+                            "program_code",
+                            "track"
+                          ],
                           "properties": {
                             "id": {
                               "type": "integer"
@@ -17068,23 +17105,24 @@
                             "track": {
                               "type": "string"
                             }
-                          },
-                          "required": [
-                            "id",
-                            "course_code",
-                            "year",
-                            "type",
-                            "expr",
-                            "cr_enabled",
-                            "program_code",
-                            "track"
-                          ]
+                          }
                         }
                       },
                       "references": {
                         "type": "array",
                         "items": {
                           "type": "object",
+                          "required": [
+                            "id",
+                            "curriculum_id",
+                            "course_code",
+                            "course_title",
+                            "equicode",
+                            "reference_code",
+                            "reference_title",
+                            "type",
+                            "is_active"
+                          ],
                           "properties": {
                             "id": {
                               "type": "integer"
@@ -17113,18 +17151,7 @@
                             "is_active": {
                               "type": "boolean"
                             }
-                          },
-                          "required": [
-                            "id",
-                            "curriculum_id",
-                            "course_code",
-                            "course_title",
-                            "equicode",
-                            "reference_code",
-                            "reference_title",
-                            "type",
-                            "is_active"
-                          ]
+                          }
                         }
                       },
                       "theory": {
@@ -17132,31 +17159,17 @@
                         "x-stoplight": {
                           "id": "tw59vqu4u9dk7"
                         }
+                      },
+                      "is_slot": {
+                        "type": "boolean",
+                        "x-stoplight": {
+                          "id": "cb10djxkcwmag"
+                        }
                       }
-                    },
-                    "required": [
-                      "id",
-                      "code",
-                      "track",
-                      "term",
-                      "title",
-                      "practice",
-                      "lab",
-                      "credits",
-                      "ects",
-                      "is_active",
-                      "is_theoretical",
-                      "requisites",
-                      "references",
-                      "theory"
-                    ]
+                    }
                   }
                 }
-              },
-              "required": [
-                "term",
-                "items"
-              ]
+              }
             }
           },
           "references": {
@@ -17171,6 +17184,17 @@
                 "type": "array",
                 "items": {
                   "type": "object",
+                  "required": [
+                    "id",
+                    "curriculum_id",
+                    "course_code",
+                    "course_title",
+                    "equicode",
+                    "reference_code",
+                    "reference_title",
+                    "type",
+                    "is_active"
+                  ],
                   "properties": {
                     "id": {
                       "type": "integer"
@@ -17199,24 +17223,24 @@
                     "is_active": {
                       "type": "boolean"
                     }
-                  },
-                  "required": [
-                    "id",
-                    "curriculum_id",
-                    "course_code",
-                    "course_title",
-                    "equicode",
-                    "reference_code",
-                    "reference_title",
-                    "type",
-                    "is_active"
-                  ]
+                  }
                 }
               },
               "one_to_many": {
                 "type": "array",
                 "items": {
                   "type": "object",
+                  "required": [
+                    "id",
+                    "curriculum_id",
+                    "course_code",
+                    "course_title",
+                    "equicode",
+                    "reference_code",
+                    "reference_title",
+                    "type",
+                    "is_active"
+                  ],
                   "properties": {
                     "id": {
                       "type": "integer"
@@ -17245,24 +17269,24 @@
                     "is_active": {
                       "type": "boolean"
                     }
-                  },
-                  "required": [
-                    "id",
-                    "curriculum_id",
-                    "course_code",
-                    "course_title",
-                    "equicode",
-                    "reference_code",
-                    "reference_title",
-                    "type",
-                    "is_active"
-                  ]
+                  }
                 }
               },
               "many_to_one": {
                 "type": "array",
                 "items": {
                   "type": "object",
+                  "required": [
+                    "id",
+                    "curriculum_id",
+                    "course_code",
+                    "course_title",
+                    "equicode",
+                    "reference_code",
+                    "reference_title",
+                    "type",
+                    "is_active"
+                  ],
                   "properties": {
                     "id": {
                       "type": "integer"
@@ -17291,18 +17315,7 @@
                     "is_active": {
                       "type": "boolean"
                     }
-                  },
-                  "required": [
-                    "id",
-                    "curriculum_id",
-                    "course_code",
-                    "course_title",
-                    "equicode",
-                    "reference_code",
-                    "reference_title",
-                    "type",
-                    "is_active"
-                  ]
+                  }
                 }
               }
             }
@@ -17320,6 +17333,22 @@
                 "type": "array",
                 "items": {
                   "type": "object",
+                  "required": [
+                    "id",
+                    "code",
+                    "track",
+                    "term",
+                    "title",
+                    "practice",
+                    "lab",
+                    "credits",
+                    "ects",
+                    "type",
+                    "elective",
+                    "is_active",
+                    "requisites",
+                    "theory"
+                  ],
                   "properties": {
                     "id": {
                       "type": "integer"
@@ -17361,6 +17390,16 @@
                       "type": "array",
                       "items": {
                         "type": "object",
+                        "required": [
+                          "id",
+                          "course_code",
+                          "year",
+                          "type",
+                          "expr",
+                          "cr_enabled",
+                          "program_code",
+                          "track"
+                        ],
                         "properties": {
                           "id": {
                             "type": "integer"
@@ -17386,17 +17425,7 @@
                           "track": {
                             "type": "string"
                           }
-                        },
-                        "required": [
-                          "id",
-                          "course_code",
-                          "year",
-                          "type",
-                          "expr",
-                          "cr_enabled",
-                          "program_code",
-                          "track"
-                        ]
+                        }
                       }
                     },
                     "theory": {
@@ -17405,7 +17434,13 @@
                         "id": "yjvivmidbrp5u"
                       }
                     }
-                  },
+                  }
+                }
+              },
+              "non_area": {
+                "type": "array",
+                "items": {
+                  "type": "object",
                   "required": [
                     "id",
                     "code",
@@ -17421,13 +17456,7 @@
                     "is_active",
                     "requisites",
                     "theory"
-                  ]
-                }
-              },
-              "non_area": {
-                "type": "array",
-                "items": {
-                  "type": "object",
+                  ],
                   "properties": {
                     "id": {
                       "type": "integer"
@@ -17469,6 +17498,16 @@
                       "type": "array",
                       "items": {
                         "type": "object",
+                        "required": [
+                          "id",
+                          "course_code",
+                          "year",
+                          "type",
+                          "expr",
+                          "cr_enabled",
+                          "program_code",
+                          "track"
+                        ],
                         "properties": {
                           "id": {
                             "type": "integer"
@@ -17494,17 +17533,7 @@
                           "track": {
                             "type": "string"
                           }
-                        },
-                        "required": [
-                          "id",
-                          "course_code",
-                          "year",
-                          "type",
-                          "expr",
-                          "cr_enabled",
-                          "program_code",
-                          "track"
-                        ]
+                        }
                       }
                     },
                     "theory": {
@@ -17513,7 +17542,13 @@
                         "id": "pbr9ik4yyhia3"
                       }
                     }
-                  },
+                  }
+                }
+              },
+              "non_theoretical": {
+                "type": "array",
+                "items": {
+                  "type": "object",
                   "required": [
                     "id",
                     "code",
@@ -17529,13 +17564,7 @@
                     "is_active",
                     "requisites",
                     "theory"
-                  ]
-                }
-              },
-              "non_theoretical": {
-                "type": "array",
-                "items": {
-                  "type": "object",
+                  ],
                   "properties": {
                     "id": {
                       "type": "integer"
@@ -17577,6 +17606,16 @@
                       "type": "array",
                       "items": {
                         "type": "object",
+                        "required": [
+                          "id",
+                          "course_code",
+                          "year",
+                          "type",
+                          "expr",
+                          "cr_enabled",
+                          "program_code",
+                          "track"
+                        ],
                         "properties": {
                           "id": {
                             "type": "integer"
@@ -17602,17 +17641,7 @@
                           "track": {
                             "type": "string"
                           }
-                        },
-                        "required": [
-                          "id",
-                          "course_code",
-                          "year",
-                          "type",
-                          "expr",
-                          "cr_enabled",
-                          "program_code",
-                          "track"
-                        ]
+                        }
                       }
                     },
                     "theory": {
@@ -17621,7 +17650,13 @@
                         "id": "nauvtyj69t0hl"
                       }
                     }
-                  },
+                  }
+                }
+              },
+              "requisite_courses": {
+                "type": "array",
+                "items": {
+                  "type": "object",
                   "required": [
                     "id",
                     "code",
@@ -17637,13 +17672,7 @@
                     "is_active",
                     "requisites",
                     "theory"
-                  ]
-                }
-              },
-              "requisite_courses": {
-                "type": "array",
-                "items": {
-                  "type": "object",
+                  ],
                   "properties": {
                     "id": {
                       "type": "integer"
@@ -17685,6 +17714,16 @@
                       "type": "array",
                       "items": {
                         "type": "object",
+                        "required": [
+                          "id",
+                          "course_code",
+                          "year",
+                          "type",
+                          "expr",
+                          "cr_enabled",
+                          "program_code",
+                          "track"
+                        ],
                         "properties": {
                           "id": {
                             "type": "integer"
@@ -17710,17 +17749,7 @@
                           "track": {
                             "type": "string"
                           }
-                        },
-                        "required": [
-                          "id",
-                          "course_code",
-                          "year",
-                          "type",
-                          "expr",
-                          "cr_enabled",
-                          "program_code",
-                          "track"
-                        ]
+                        }
                       }
                     },
                     "theory": {
@@ -17729,34 +17758,12 @@
                         "id": "z08gabqcoweah"
                       }
                     }
-                  },
-                  "required": [
-                    "id",
-                    "code",
-                    "track",
-                    "term",
-                    "title",
-                    "practice",
-                    "lab",
-                    "credits",
-                    "ects",
-                    "type",
-                    "elective",
-                    "is_active",
-                    "requisites",
-                    "theory"
-                  ]
+                  }
                 }
               }
             }
           }
-        },
-        "required": [
-          "information",
-          "groups",
-          "references",
-          "electives"
-        ]
+        }
       },
       "ProfileAddressesGetResponse": {
         "type": "object",
