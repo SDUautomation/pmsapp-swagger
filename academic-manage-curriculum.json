@@ -2145,7 +2145,7 @@
           }
         }
       },
-      "AcademicManageCurriculumGetWorkingCurriculum": {
+      "AcademicManageCurriculumGetWorkingCurriculumResponse": {
         "type": "array",
         "x-stoplight": {
           "id": "0a1acbad32ac2"
