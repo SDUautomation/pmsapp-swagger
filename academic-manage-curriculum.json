@@ -2133,6 +2133,40 @@
             "is_active": true
           }
         }
+      },
+      "AcademicManageCurriculumPostReferenceRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "curriculum_ids": [
+              1
+            ],
+            "equicodes": [
+              "20174856"
+            ],
+            "apply_all_years": true
+          }
+        },
+        "required": [
+          "apply_all_years"
+        ],
+        "properties": {
+          "curriculum_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "equicodes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "apply_all_years": {
+            "type": "boolean"
+          }
+        }
       }
     }
   }
