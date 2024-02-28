@@ -1966,25 +1966,23 @@
                 "title": "Fundamentals of Programming"
               }
             ],
-            "track": {
-              "id": 76891,
-              "code": "TRACK0",
-              "title": "Main Track",
-              "program": [
-                {
+            "track": [
+              {
+                "id": 76891,
+                "code": "TRACK0",
+                "title": "Main Track",
+                "program": {
                   "code": "10207",
                   "year": 2023,
                   "type": "Degree Program",
-                  "department": [
-                    {
-                      "id": 10207,
-                      "code": "DEP_ECO_BUS",
-                      "title": "Department of Economics and Business"
-                    }
-                  ]
+                  "department": {
+                    "id": 10207,
+                    "code": "DEP_ECO_BUS",
+                    "title": "Department of Economics and Business"
+                  }
                 }
-              ]
-            },
+              }
+            ],
             "info": {
               "already_exists_years": [
                 2019,
@@ -2023,80 +2021,59 @@
             }
           },
           "track": {
-            "type": "object",
-            "required": [
-              "id",
-              "code",
-              "title",
-              "program"
-            ],
-            "properties": {
-              "id": {
-                "type": "integer"
-              },
-              "code": {
-                "type": "string"
-              },
-              "title": {
-                "type": "string"
-              },
-              "program": {
-                "type": "object",
-                "x-stoplight": {
-                  "id": "6lhn3a3ene5cd"
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "code",
+                "title",
+                "program"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
                 },
-                "required": [
-                  "code",
-                  "year",
-                  "type",
-                  "department"
-                ],
-                "properties": {
-                  "code": {
-                    "type": "string",
-                    "x-stoplight": {
-                      "id": "odxrjtk67xujm"
-                    }
-                  },
-                  "year": {
-                    "type": "integer",
-                    "x-stoplight": {
-                      "id": "wp7uxwvkh1a0g"
-                    }
-                  },
-                  "type": {
-                    "type": "string",
-                    "x-stoplight": {
-                      "id": "qm28eowgcode3"
-                    }
-                  },
-                  "department": {
-                    "type": "object",
-                    "x-stoplight": {
-                      "id": "j7oy31ykmcjqj"
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "program": {
+                  "type": "object",
+                  "required": [
+                    "code",
+                    "year",
+                    "type",
+                    "department"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string"
                     },
-                    "required": [
-                      "id",
-                      "code",
-                      "title"
-                    ],
-                    "properties": {
-                      "id": {
-                        "type": "integer",
-                        "x-stoplight": {
-                          "id": "do9a2ivauz89u"
-                        }
-                      },
-                      "code": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "a49flghg2kje7"
-                        }
-                      },
-                      "title": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "ys73tt4xvlumf"
+                    "year": {
+                      "type": "integer"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "department": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "code",
+                        "title"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "code": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
                         }
                       }
                     }
