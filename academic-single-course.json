@@ -2035,7 +2035,6 @@
             "student_name",
             "section",
             "type",
-            "attend",
             "lesson_date",
             "lesson_time",
             "lesson_id",
