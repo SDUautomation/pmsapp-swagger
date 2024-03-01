@@ -16386,6 +16386,12 @@
                 },
                 "title": {
                   "type": "string"
+                },
+                "is_visible": {
+                  "type": "boolean",
+                  "x-stoplight": {
+                    "id": "b2ztwhwpjboa4"
+                  }
                 }
               }
             }
