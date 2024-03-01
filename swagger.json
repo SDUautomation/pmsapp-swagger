@@ -22443,7 +22443,8 @@
               "required": [
                 "section_id",
                 "section",
-                "bell_curve_enabled"
+                "bell_curve_enabled",
+                "last_moodle_sync_date"
               ],
               "properties": {
                 "section_id": {
@@ -22456,6 +22457,12 @@
                   "type": "boolean",
                   "x-stoplight": {
                     "id": "l6m1uqc7x923i"
+                  }
+                },
+                "last_moodle_sync_date": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "2ckv56msaspc5"
                   }
                 }
               }
@@ -22542,7 +22549,8 @@
                 "assessment_id",
                 "assessment_type",
                 "assessment_title",
-                "is_open"
+                "is_open",
+                "assessment_topic"
               ],
               "properties": {
                 "section_id": {
@@ -22559,6 +22567,12 @@
                 },
                 "is_open": {
                   "type": "boolean"
+                },
+                "assessment_topic": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "t3hoamxp2fu6a"
+                  }
                 }
               }
             }
