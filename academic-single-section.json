@@ -12,8 +12,235 @@
       "url": "http://localhost:3000"
     }
   ],
-  "paths": {},
+  "paths": {
+    "/1.0.0/academic/courses/grades/exam-reports": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicCoursesGradesExamReportsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-courses-grades-exam-reports",
+        "x-stoplight": {
+          "id": "8r5h1f9oweqc2"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicCoursesGradesExamReportsGetRequest"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "components": {
-    "schemas": {}
+    "schemas": {
+      "AcademicCoursesGradesExamReportsGetRequest": {
+        "title": "AcademicCoursesGradesExamReportsGetRequest",
+        "x-stoplight": {
+          "id": "amy8vpbd5mx1q"
+        },
+        "type": "object",
+        "required": [
+          "section_id"
+        ],
+        "properties": {
+          "section_id": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "579k2eko8bgse"
+            }
+          }
+        }
+      },
+      "AcademicCoursesGradesExamReportsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "base_info": {
+                "course_section": "CSS 112.01 - Физика 1 / Physics 1 (3 | 5)",
+                "year_term": "2023 | 2",
+                "department": "Компьютерлік ғылымдар кафедрасы / Department of Computer Sciences",
+                "faculty": "Инженер және жаратылыстану ғылымдары факультеті / Faculty of Engineering and Natural Sciences"
+              },
+              "signatures": {
+                "instructor": "Kymbat Baigissova",
+                "head_of_department": "Zhanar Mukash, Doctor PhD",
+                "dean_of_faculty": "Ramis Akhmedov, Doctor PhD"
+              },
+              "grade_statistics": [
+                {
+                  "letter": "B+",
+                  "range": "70 - 74",
+                  "percent": 31.82
+                }
+              ],
+              "students": [
+                {
+                  "student_id": "200103356",
+                  "surname_name": "Batyrov Aibolat",
+                  "percent": 90,
+                  "letter": "A",
+                  "traditional": "In progress",
+                  "speciality": "6B04105 EN",
+                  "grades": [
+                    {
+                      "assessment_id": 61609,
+                      "assessment_code": "FIN",
+                      "grade": 83
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "base_info",
+            "signatures",
+            "grade_statistics",
+            "students"
+          ],
+          "properties": {
+            "base_info": {
+              "type": "object",
+              "required": [
+                "course_section",
+                "year_term",
+                "department",
+                "faculty"
+              ],
+              "properties": {
+                "course_section": {
+                  "type": "string"
+                },
+                "year_term": {
+                  "type": "string"
+                },
+                "department": {
+                  "type": "string"
+                },
+                "faculty": {
+                  "type": "string"
+                }
+              }
+            },
+            "signatures": {
+              "type": "object",
+              "required": [
+                "instructor",
+                "head_of_department",
+                "dean_of_faculty"
+              ],
+              "properties": {
+                "instructor": {
+                  "type": "string"
+                },
+                "head_of_department": {
+                  "type": "string"
+                },
+                "dean_of_faculty": {
+                  "type": "string"
+                }
+              }
+            },
+            "grade_statistics": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "letter",
+                  "range",
+                  "percent"
+                ],
+                "properties": {
+                  "letter": {
+                    "type": "string"
+                  },
+                  "range": {
+                    "type": "string"
+                  },
+                  "percent": {
+                    "type": "number"
+                  }
+                }
+              }
+            },
+            "students": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "student_id",
+                  "surname_name",
+                  "percent",
+                  "letter",
+                  "traditional",
+                  "speciality",
+                  "grades"
+                ],
+                "properties": {
+                  "student_id": {
+                    "type": "string"
+                  },
+                  "surname_name": {
+                    "type": "string"
+                  },
+                  "percent": {
+                    "type": "integer"
+                  },
+                  "letter": {
+                    "type": "string"
+                  },
+                  "traditional": {
+                    "type": "string"
+                  },
+                  "speciality": {
+                    "type": "string"
+                  },
+                  "grades": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "assessment_id",
+                        "assessment_code",
+                        "grade"
+                      ],
+                      "properties": {
+                        "assessment_id": {
+                          "type": "integer"
+                        },
+                        "assessment_code": {
+                          "type": "string"
+                        },
+                        "grade": {
+                          "type": "integer"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
