@@ -3377,6 +3377,184 @@
             }
           }
         }
+      },
+      "ScheduleManagementSectionProgramHoursGetRequest": {
+        "title": "ScheduleManagementSectionProgramHoursGetRequest",
+        "x-stoplight": {
+          "id": "jdootxcpywqm3"
+        },
+        "type": "object",
+        "properties": {
+          "section": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "do5ipj4gj0x5x"
+            }
+          },
+          "program": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "a66s4c3mi9fvm"
+            }
+          },
+          "room_id": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "1er6hjnbsdprk"
+            }
+          }
+        }
+      },
+      "ScheduleManagementSectionProgramHoursGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 1,
+            "title": "Monday",
+            "title_short": "Mo",
+            "hours": [
+              {
+                "id": 40,
+                "start_time": "16:00",
+                "end_time": "16:50",
+                "sections": [
+                  {
+                    "id": 46446,
+                    "schedule_id": 47161,
+                    "code": "MCM 104",
+                    "year": 2022,
+                    "term": 2,
+                    "section": "03",
+                    "title": "Algorithms and programming 1",
+                    "room_id": 30,
+                    "another_room": true,
+                    "same_room": false,
+                    "another_section": true,
+                    "same_section": false,
+                    "teacher": {
+                      "id": 10926,
+                      "full_name": "Bakhtiyor Meraliyev"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "title_short",
+          "hours"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "title_short": {
+            "type": "string"
+          },
+          "hours": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "start_time",
+                "end_time",
+                "sections"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "start_time": {
+                  "type": "string"
+                },
+                "end_time": {
+                  "type": "string"
+                },
+                "sections": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "schedule_id",
+                      "code",
+                      "year",
+                      "term",
+                      "section",
+                      "title",
+                      "room_id",
+                      "another_room",
+                      "same_room",
+                      "another_section",
+                      "same_section",
+                      "teacher"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "schedule_id": {
+                        "type": "integer"
+                      },
+                      "code": {
+                        "type": "string"
+                      },
+                      "year": {
+                        "type": "integer"
+                      },
+                      "term": {
+                        "type": "integer"
+                      },
+                      "section": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "room_id": {
+                        "type": "integer"
+                      },
+                      "another_room": {
+                        "type": "boolean"
+                      },
+                      "same_room": {
+                        "type": "boolean"
+                      },
+                      "another_section": {
+                        "type": "boolean"
+                      },
+                      "same_section": {
+                        "type": "boolean"
+                      },
+                      "teacher": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "full_name"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "full_name": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
