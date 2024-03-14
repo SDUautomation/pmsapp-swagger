@@ -1962,7 +1962,7 @@
               "type": "integer"
             },
             "sections": {
-              "type": "integer"
+              "type": "string"
             }
           }
         }
