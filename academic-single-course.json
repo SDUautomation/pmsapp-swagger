@@ -952,7 +952,8 @@
           "buildings",
           "schedule",
           "students",
-          "course"
+          "course",
+          "filling_indicator"
         ],
         "properties": {
           "absence_limit": {
@@ -1281,6 +1282,13 @@
             "x-stoplight": {
               "id": "asslmfu2iscor"
             },
+            "required": [
+              "total_hours",
+              "conducted_hours",
+              "filled",
+              "percentage_from_total_hours",
+              "percentage_from_conducted_hours"
+            ],
             "properties": {
               "total_hours": {
                 "type": "number",
