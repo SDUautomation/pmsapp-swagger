@@ -424,6 +424,41 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/courses/attendances/by-course/qr": {
+      "parameters": [],
+      "post": {
+        "summary": "Your POST endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleCourseAttendanceQrPutResponse"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Default"
+          }
+        },
+        "operationId": "post-1.0.0-academic-courses-attendances-by-course-qr",
+        "x-stoplight": {
+          "id": "9586yug2gnt33"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleCourseAttendanceQrPutRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -2127,6 +2162,40 @@
             "grade": {
               "type": "string"
             }
+          }
+        }
+      },
+      "AcademicSingleCourseAttendanceQrPutRequest": {
+        "type": "object",
+        "properties": {
+          "schedule_id": {
+            "type": "integer"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "schedule_id": 26254759
+          }
+        }
+      },
+      "AcademicSingleCourseAttendanceQrPutResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "key": "1nv92y0t392t#y0bbb34$bviuwb",
+            "time": "Captcha"
+          }
+        },
+        "required": [
+          "key",
+          "time"
+        ],
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
           }
         }
       }
