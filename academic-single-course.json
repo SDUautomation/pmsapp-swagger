@@ -1275,6 +1275,44 @@
                 }
               }
             }
+          },
+          "filling_indicator": {
+            "type": "object",
+            "x-stoplight": {
+              "id": "asslmfu2iscor"
+            },
+            "properties": {
+              "total_hours": {
+                "type": "number",
+                "x-stoplight": {
+                  "id": "qp3b59nljzo7m"
+                }
+              },
+              "conducted_hours": {
+                "type": "number",
+                "x-stoplight": {
+                  "id": "qtz4yhtdhuvnn"
+                }
+              },
+              "filled": {
+                "type": "number",
+                "x-stoplight": {
+                  "id": "6pin1rbsfxhh9"
+                }
+              },
+              "percentage_from_total_hours": {
+                "type": "number",
+                "x-stoplight": {
+                  "id": "8uo81y2c5l0fu"
+                }
+              },
+              "percentage_from_conducted_hours": {
+                "type": "number",
+                "x-stoplight": {
+                  "id": "t9rgi5w21jmtc"
+                }
+              }
+            }
           }
         }
       },
