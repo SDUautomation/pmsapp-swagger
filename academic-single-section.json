@@ -329,7 +329,7 @@
                 "student_id",
                 "surname_name",
                 "exam_permission",
-                "speciality",
+                "specialty",
                 "grades"
               ],
               "properties": {
@@ -342,8 +342,11 @@
                 "exam_permission": {
                   "type": "string"
                 },
-                "speciality": {
-                  "type": "string"
+                "specialty": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "sgdikb5pvacyh"
+                  }
                 },
                 "grades": {
                   "type": "array",
