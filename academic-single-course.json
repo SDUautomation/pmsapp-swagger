@@ -446,7 +446,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AcademicSingleCourseAttendanceQrPutResponse"
+                  "$ref": "#/components/schemas/AcademicSingleCourseAttendanceQrPostResponse"
                 }
               }
             }
@@ -460,7 +460,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AcademicSingleCourseAttendanceQrPutRequest"
+                "$ref": "#/components/schemas/AcademicSingleCourseAttendanceQrPostRequest"
               }
             }
           }
@@ -2172,8 +2172,11 @@
           }
         }
       },
-      "AcademicSingleCourseAttendanceQrPutRequest": {
+      "AcademicSingleCourseAttendanceQrPostRequest": {
         "type": "object",
+        "x-stoplight": {
+          "id": "6e70ab8923ef7"
+        },
         "properties": {
           "schedule_id": {
             "type": "integer"
@@ -2185,8 +2188,11 @@
           }
         }
       },
-      "AcademicSingleCourseAttendanceQrPutResponse": {
+      "AcademicSingleCourseAttendanceQrPostResponse": {
         "type": "object",
+        "x-stoplight": {
+          "id": "692741ff73bff"
+        },
         "x-examples": {
           "Example 1": {
             "key": "1nv92y0t392t#y0bbb34$bviuwb",
