@@ -442,7 +442,14 @@
             }
           },
           "default": {
-            "description": "Default"
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleCourseAttendanceQrPutResponse"
+                }
+              }
+            }
           }
         },
         "operationId": "post-1.0.0-academic-courses-attendances-by-course-qr",
