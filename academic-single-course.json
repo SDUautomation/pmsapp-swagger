@@ -2208,7 +2208,27 @@
             "type": "string"
           },
           "time": {
-            "type": "string"
+            "type": "object",
+            "properties": {
+              "ct": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "nrvg5owdovrin"
+                }
+              },
+              "iv": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "adsuyx640u50v"
+                }
+              },
+              "s": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "z9s182it63avo"
+                }
+              }
+            }
           }
         }
       }
