@@ -3560,6 +3560,27 @@
             }
           }
         }
+      },
+      "ScheduleManagementSectionProgramHourPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "room_id": 10,
+            "hour_id": 362
+          }
+        },
+        "required": [
+          "room_id",
+          "hour_id"
+        ],
+        "properties": {
+          "room_id": {
+            "type": "integer"
+          },
+          "hour_id": {
+            "type": "integer"
+          }
+        }
       }
     }
   }
