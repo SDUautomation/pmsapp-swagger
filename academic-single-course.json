@@ -436,16 +436,6 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AcademicSingleCourseAttendanceQrPutResponse"
-                }
-              }
-            }
-          },
-          "default": {
-            "description": "Default",
-            "content": {
-              "application/json": {
-                "schema": {
                   "$ref": "#/components/schemas/AcademicSingleCourseAttendanceQrPostResponse"
                 }
               }
