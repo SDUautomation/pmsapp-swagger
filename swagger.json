@@ -15375,51 +15375,11 @@
           "Example 1": {
             "user_type": "P",
             "reader_group": 1,
-            "username": "aibolat.batyrov",
+            "user_id": 200103201,
             "department_code": "DEP_INF_SYS",
             "from_date": "2023-06-19",
             "due_date": "2023-06-20",
             "mailer": true
-          }
-        },
-        "properties": {
-          "user_type": {
-            "type": "string",
-            "description": "S - Student, P - Employee",
-            "enum": [
-              "S",
-              "P"
-            ]
-          },
-          "reader_group": {
-            "description": "1 - Tourniquet, 3 - TechnoPark, 4 - Server Room, 5 - Dorm Boys, 6 - Dorm Girls, 7 - Meeting Room",
-            "type": "integer",
-            "enum": [
-              "1",
-              "3",
-              "4",
-              "5",
-              "6",
-              "7"
-            ]
-          },
-          "username": {
-            "type": "string",
-            "nullable": true
-          },
-          "department_code": {
-            "type": "string",
-            "nullable": true
-          },
-          "from_date": {
-            "type": "string"
-          },
-          "due_date": {
-            "type": "string",
-            "nullable": true
-          },
-          "mailer": {
-            "type": "boolean"
           }
         },
         "required": [
@@ -15427,12 +15387,34 @@
           "reader_group",
           "from_date"
         ],
-        "title": ""
+        "properties": {
+          "user_type": {
+            "type": "string"
+          },
+          "reader_group": {
+            "type": "integer"
+          },
+          "user_id": {
+            "type": "integer"
+          },
+          "department_code": {
+            "type": "string"
+          },
+          "from_date": {
+            "type": "string"
+          },
+          "due_date": {
+            "type": "string"
+          },
+          "mailer": {
+            "type": "boolean"
+          }
+        }
       },
       "AdministrativeGateEntryResponse": {
         "type": "array",
         "x-examples": {
-          "sample": [
+          "Example 1": [
             {
               "full_name": "Aibolat Batyrov",
               "user_token": "10939",
@@ -15453,6 +15435,22 @@
         },
         "items": {
           "type": "object",
+          "required": [
+            "full_name",
+            "user_token",
+            "access_id_in",
+            "access_id_out",
+            "card_number",
+            "work_time",
+            "day_of_week",
+            "access_date_in",
+            "access_date_out",
+            "access_time_in",
+            "access_time_out",
+            "reader_type_in",
+            "reader_type_out",
+            "week_day_title"
+          ],
           "properties": {
             "full_name": {
               "type": "string"
@@ -15496,25 +15494,8 @@
             "week_day_title": {
               "type": "string"
             }
-          },
-          "required": [
-            "full_name",
-            "user_token",
-            "access_id_in",
-            "access_id_out",
-            "card_number",
-            "work_time",
-            "day_of_week",
-            "access_date_in",
-            "access_date_out",
-            "access_time_in",
-            "access_time_out",
-            "reader_type_in",
-            "reader_type_out",
-            "week_day_title"
-          ]
-        },
-        "description": ""
+          }
+        }
       },
       "EmptyResponse": {
         "title": "EmptyResponse",
@@ -16386,6 +16367,12 @@
                 },
                 "title": {
                   "type": "string"
+                },
+                "is_visible": {
+                  "type": "boolean",
+                  "x-stoplight": {
+                    "id": "b2ztwhwpjboa4"
+                  }
                 }
               }
             }
@@ -22449,7 +22436,9 @@
               "type": "object",
               "required": [
                 "section_id",
-                "section"
+                "section",
+                "bell_curve_enabled",
+                "last_moodle_sync_date"
               ],
               "properties": {
                 "section_id": {
@@ -22457,6 +22446,18 @@
                 },
                 "section": {
                   "type": "string"
+                },
+                "bell_curve_enabled": {
+                  "type": "boolean",
+                  "x-stoplight": {
+                    "id": "l6m1uqc7x923i"
+                  }
+                },
+                "last_moodle_sync_date": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "2ckv56msaspc5"
+                  }
                 }
               }
             }
@@ -22543,7 +22544,7 @@
                 "assessment_type",
                 "assessment_title",
                 "is_open",
-                "graded"
+                "assessment_topic"
               ],
               "properties": {
                 "section_id": {
@@ -22561,10 +22562,10 @@
                 "is_open": {
                   "type": "boolean"
                 },
-                "graded": {
-                  "type": "boolean",
+                "assessment_topic": {
+                  "type": "string",
                   "x-stoplight": {
-                    "id": "608nm63u69lru"
+                    "id": "t3hoamxp2fu6a"
                   }
                 }
               }
@@ -22760,8 +22761,7 @@
         },
         "required": [
           "my_year_terms",
-          "consent_year_terms",
-          "is_bell_curve_selection_period"
+          "consent_year_terms"
         ],
         "properties": {
           "my_year_terms": {
@@ -22771,7 +22771,8 @@
               "required": [
                 "id",
                 "year",
-                "term"
+                "term",
+                "bell_curve_is_active"
               ],
               "properties": {
                 "id": {
@@ -22782,6 +22783,12 @@
                 },
                 "term": {
                   "type": "integer"
+                },
+                "bell_curve_is_active": {
+                  "type": "boolean",
+                  "x-stoplight": {
+                    "id": "gvqafasdxq8ie"
+                  }
                 }
               }
             }
@@ -22806,12 +22813,6 @@
                   "type": "integer"
                 }
               }
-            }
-          },
-          "is_bell_curve_selection_period": {
-            "type": "boolean",
-            "x-stoplight": {
-              "id": "68prdjn60cmkx"
             }
           }
         }

@@ -425,6 +425,26 @@
         }
       }
     },
+    "/1.0.0/integration/moodle/grades": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-1.0.0-integration-moodle-grades",
+        "x-stoplight": {
+          "id": "s2umwxgwkx8sg"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleCourseIntegrationWithMoodleRequest"
+              }
+            }
+          }
+        }
+      }
+    },
     "/1.0.0/academic/courses/attendances/by-course/qr": {
       "parameters": [],
       "post": {
@@ -2158,6 +2178,52 @@
             },
             "grade": {
               "type": "string"
+            }
+          }
+        }
+      },
+      "AcademicSingleCourseIntegrationWithMoodleRequest": {
+        "title": "AcademicSingleCourseIntegrationWithMoodleRequest",
+        "x-stoplight": {
+          "id": "5fqhsigvz5d3i"
+        },
+        "type": "object",
+        "required": [
+          "term",
+          "year",
+          "section",
+          "section_id",
+          "course_code"
+        ],
+        "properties": {
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "hoiext7p4yl6a"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "m1b0mae5kekze"
+            }
+          },
+          "section": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "eyiwxe5lq9yf2"
+            }
+          },
+          "section_id": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "b6jcms7um0dla"
+            }
+          },
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "efmyafxzm7g81"
             }
           }
         }
