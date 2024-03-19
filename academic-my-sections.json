@@ -112,7 +112,8 @@
             "practice",
             "credits",
             "ects",
-            "bell_curve_enabled"
+            "bell_curve_enabled",
+            "last_moodle_sync_date"
           ],
           "properties": {
             "id": {
@@ -159,6 +160,18 @@
             },
             "bell_curve_enabled": {
               "type": "boolean"
+            },
+            "section_moodle_id": {
+              "type": "integer",
+              "x-stoplight": {
+                "id": "8ffi4tsrg697k"
+              }
+            },
+            "last_moodle_sync_date": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "zw7guo7w1djfy"
+              }
             }
           }
         }
