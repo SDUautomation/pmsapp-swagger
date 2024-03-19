@@ -3581,6 +3581,173 @@
             "type": "integer"
           }
         }
+      },
+      "ScheduleManagementSectionProgramGetTeachingHoursRequest": {
+        "title": "ScheduleManagementSectionProgramGetTeachingHoursRequest",
+        "x-stoplight": {
+          "id": "cpbdmuwjspe6y"
+        },
+        "type": "object",
+        "properties": {
+          "section": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "j4vje66qp8uti"
+            }
+          },
+          "program": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "e5z4vg6jbi6i2"
+            }
+          }
+        }
+      },
+      "ScheduleManagementSectionProgramGetTeachingHoursResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1327990,
+              "weekly_schedule_id": 95913,
+              "program_id": 30326,
+              "start_date": "2023-01-25",
+              "start_time": "15:00",
+              "end_date": "2023-01-25",
+              "end_time": "15:50",
+              "changed_start_date": "2023-01-25",
+              "changed_start_time": "15:00",
+              "changed_end_date": "2023-01-25",
+              "changed_end_time": "15:50",
+              "room": {
+                "id": 43,
+                "building": "LAW",
+                "room": "D101",
+                "description": "LAW 101",
+                "type": {
+                  "id": 1,
+                  "title": "Classroom",
+                  "code": "CLASS"
+                }
+              },
+              "building": {
+                "key": "MAIN",
+                "title": "Main building"
+              }
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "weekly_schedule_id",
+            "program_id",
+            "start_date",
+            "start_time",
+            "end_date",
+            "end_time",
+            "changed_start_date",
+            "changed_start_time",
+            "changed_end_date",
+            "changed_end_time",
+            "room",
+            "building"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "weekly_schedule_id": {
+              "type": "integer"
+            },
+            "program_id": {
+              "type": "integer"
+            },
+            "start_date": {
+              "type": "string"
+            },
+            "start_time": {
+              "type": "string"
+            },
+            "end_date": {
+              "type": "string"
+            },
+            "end_time": {
+              "type": "string"
+            },
+            "changed_start_date": {
+              "type": "string"
+            },
+            "changed_start_time": {
+              "type": "string"
+            },
+            "changed_end_date": {
+              "type": "string"
+            },
+            "changed_end_time": {
+              "type": "string"
+            },
+            "room": {
+              "type": "object",
+              "required": [
+                "id",
+                "building",
+                "room",
+                "description",
+                "type"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "building": {
+                  "type": "string"
+                },
+                "room": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title",
+                    "code"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "building": {
+              "type": "object",
+              "required": [
+                "key",
+                "title"
+              ],
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
