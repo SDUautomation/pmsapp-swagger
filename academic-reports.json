@@ -157,14 +157,6 @@
           "name": "report",
           "in": "path",
           "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "report",
-          "in": "path",
-          "required": true
         }
       ],
       "post": {
