@@ -1,0 +1,532 @@
+{
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "5izbye0i7aaq6"
+  },
+  "info": {
+    "title": "academic-reports",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/1.0.0/academic/information/reports/categories": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicReportsCategoriesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-information-reports-categories",
+        "x-stoplight": {
+          "id": "dv4r88y9jadee"
+        }
+      }
+    },
+    "/1.0.0/academic/information/reports": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicReportsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-information-reports",
+        "x-stoplight": {
+          "id": "z6hrmjd29w61v"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicReportsGetRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/information/reports/{report}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "report",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicReportGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-information-reports-report",
+        "x-stoplight": {
+          "id": "pj53m6hil0jt3"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicReportGetRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/information/reports/{report}/execute": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "report",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "post": {
+        "summary": "Your POST endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicReportsExecutePostResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "post-1.0.0-academic-information-reports-report-execute",
+        "x-stoplight": {
+          "id": "nqle3z3ebr5bf"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicReportsExecutePostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/information/reports/{report}/export": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "report",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "post": {
+        "summary": "Your POST endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "post-1.0.0-academic-information-reports-report-export",
+        "x-stoplight": {
+          "id": "wpjegjan0egs8"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicReportsExportPostRequest"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AcademicReportsCategoriesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 3,
+              "title": "GPA Ranking"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "title"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "AcademicReportsGetRequest": {
+        "title": "AcademicReportsGetRequest",
+        "x-stoplight": {
+          "id": "db2ka0wli8jkq"
+        },
+        "type": "object",
+        "required": [
+          "category_id"
+        ],
+        "properties": {
+          "category_id": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "0w8h29wvp3xzy"
+            }
+          }
+        }
+      },
+      "AcademicReportsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 3,
+              "title": "GPA Ranking by Faculties",
+              "description": "Get GPA Rankings by Faculties"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "title",
+            "description"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "AcademicReportGetRequest": {
+        "title": "AcademicReportGetRequest",
+        "x-stoplight": {
+          "id": "x438bs3o9b1zl"
+        },
+        "type": "object",
+        "required": [
+          "report"
+        ],
+        "properties": {
+          "report": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "xzphrcb7rbnqt"
+            }
+          }
+        }
+      },
+      "AcademicReportGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 3,
+            "title": "GPA Ranking by Faculties",
+            "description": "Get GPA Rankings by Faculties",
+            "default_fields": [
+              "name"
+            ],
+            "additional_fields": [
+              "name"
+            ],
+            "parameters": [
+              {
+                "id": 3,
+                "title": "GPA Ranking by Faculties",
+                "type": "number",
+                "select_type": "checkBox",
+                "values": [
+                  {
+                    "id": "F_ENG",
+                    "title": "Faculty of Engineering and Natural Sciences"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "description",
+          "default_fields",
+          "additional_fields",
+          "parameters"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "default_fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "additional_fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "parameters": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title",
+                "type",
+                "select_type",
+                "values"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "select_type": {
+                  "type": "string"
+                },
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "title"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "AcademicReportsExecutePostRequest": {
+        "title": "AcademicReportsExecutePostRequest",
+        "x-stoplight": {
+          "id": "3tbwqlgmsucx4"
+        },
+        "type": "object",
+        "required": [
+          "report"
+        ],
+        "properties": {
+          "report": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "j5ltawyxwyym2"
+            }
+          }
+        }
+      },
+      "AcademicReportsExecutePostResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "fields": [
+              "CLASS"
+            ],
+            "parameters": [
+              {
+                "id": 135,
+                "values": [
+                  {
+                    "id": "F_ENG"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "fields",
+          "parameters"
+        ],
+        "properties": {
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "parameters": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "values"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "AcademicReportsExportPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "fields": [
+              "CLASS"
+            ],
+            "parameters": [
+              {
+                "id": 135,
+                "values": [
+                  {
+                    "id": "F_ENG"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "fields",
+          "parameters",
+          "report"
+        ],
+        "properties": {
+          "fields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "parameters": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "values"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "values": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "report": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "qxetanmfmnyl3"
+            }
+          }
+        }
+      }
+    }
+  }
+}
