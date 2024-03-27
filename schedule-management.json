@@ -3748,6 +3748,23 @@
             }
           }
         }
+      },
+      "ScheduleManagementProgramApplyPostRequest": {
+        "type": "object",
+        "properties": {
+          "top": {
+            "type": "integer"
+          },
+          "bottom": {
+            "type": "integer"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "top": 1,
+            "bottom": 1
+          }
+        }
       }
     }
   }
