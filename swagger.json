@@ -4350,7 +4350,7 @@
               "last_login_date": "2024-01-31 12:26:08",
               "is_reliable": true,
               "degree_title": "Master",
-              "photo": "",
+              "photo": "data:image/png;base64,...",
               "department": "Faculty of Engineering and Natural Sciences",
               "position": "Chief Specialist"
             },
@@ -4363,6 +4363,16 @@
                 "status": 1,
                 "username": "farukh.mashurov",
                 "full_name": "Farukh Mashurov"
+              }
+            ],
+            "events": [
+              {
+                "title": "Сourse and Program Management",
+                "start_date": "2023-10-30",
+                "start_time": "00:00:00",
+                "end_date": "2023-11-03",
+                "end_time": "23:59:00",
+                "is_open": false
               }
             ],
             "permissions": {
@@ -4383,7 +4393,16 @@
                   "is_open": false
                 }
               ],
-              "assessment": [],
+              "assessment": [
+                {
+                  "course_code": "CSS 101",
+                  "section": "01",
+                  "title": "MT1",
+                  "start_date": "2023-06-14 18:22:00",
+                  "end_date": "2023-06-14 18:22:00",
+                  "is_open": true
+                }
+              ],
               "module": [
                 {
                   "id": 42,
@@ -4398,6 +4417,7 @@
         "required": [
           "information",
           "messages",
+          "events",
           "permissions"
         ],
         "properties": {
@@ -4488,15 +4508,6 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": [
-                "id",
-                "title",
-                "content",
-                "create_date",
-                "status",
-                "username",
-                "full_name"
-              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -4518,6 +4529,32 @@
                 },
                 "full_name": {
                   "type": "string"
+                }
+              }
+            }
+          },
+          "events": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "start_time": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "end_time": {
+                  "type": "string"
+                },
+                "is_open": {
+                  "type": "boolean"
                 }
               }
             }
@@ -4595,7 +4632,35 @@
               "assessment": {
                 "type": "array",
                 "items": {
-                  "type": "object"
+                  "type": "object",
+                  "required": [
+                    "course_code",
+                    "section",
+                    "title",
+                    "start_date",
+                    "end_date",
+                    "is_open"
+                  ],
+                  "properties": {
+                    "course_code": {
+                      "type": "string"
+                    },
+                    "section": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "start_date": {
+                      "type": "string"
+                    },
+                    "end_date": {
+                      "type": "string"
+                    },
+                    "is_open": {
+                      "type": "boolean"
+                    }
+                  }
                 }
               },
               "module": {
