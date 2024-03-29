@@ -4689,6 +4689,7 @@
                       "type": "string"
                     },
                     "module_name": {
+                      "type": "string",
                       "nullable": true
                     },
                     "code": {
