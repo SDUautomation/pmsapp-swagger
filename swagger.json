@@ -4537,6 +4537,14 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "title",
+                "start_date",
+                "start_time",
+                "end_date",
+                "end_time",
+                "is_open"
+              ],
               "properties": {
                 "title": {
                   "type": "string"
