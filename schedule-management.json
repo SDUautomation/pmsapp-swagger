@@ -3721,6 +3721,27 @@
             "bottom": 1
           }
         }
+      },
+      "ScheduleManagementDiscardAppliedProgramRequestParams": {
+        "title": "ScheduleManagementProgramDiscardApplyParamsPostRequest",
+        "x-stoplight": {
+          "id": "smi1zxzna35yk"
+        },
+        "type": "object",
+        "properties": {
+          "section": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "yorg7pdm3odjm"
+            }
+          },
+          "program": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "ll73djyc1so87"
+            }
+          }
+        }
       }
     }
   }
