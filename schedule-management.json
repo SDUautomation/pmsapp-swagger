@@ -3092,97 +3092,6 @@
       },
       "ScheduleManagement1Section1ProgramGetResponse": {
         "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer"
-          },
-          "title": {
-            "type": "string"
-          },
-          "start_date": {
-            "type": "string"
-          },
-          "end_date": {
-            "type": "string"
-          },
-          "is_main": {
-            "type": "boolean"
-          },
-          "schedules": {
-            "type": "object",
-            "properties": {
-              "termly": {
-                "type": "integer"
-              },
-              "weekly": {
-                "type": "integer"
-              }
-            },
-            "required": [
-              "termly",
-              "weekly"
-            ]
-          },
-          "has_schedules": {
-            "type": "boolean"
-          },
-          "rooms": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "building": {
-                  "type": "string"
-                },
-                "room": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "title": {
-                      "type": "string"
-                    },
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "title",
-                    "code"
-                  ]
-                }
-              },
-              "required": [
-                "id",
-                "building",
-                "room",
-                "description",
-                "type"
-              ]
-            }
-          }
-        },
-        "required": [
-          "id",
-          "title",
-          "start_date",
-          "end_date",
-          "is_main",
-          "schedules",
-          "has_schedules",
-          "rooms"
-        ],
         "x-examples": {
           "Example 1": {
             "id": 30326,
@@ -3212,6 +3121,104 @@
         },
         "x-stoplight": {
           "id": "3eb73edrr8d4t"
+        },
+        "required": [
+          "id",
+          "title",
+          "start_date",
+          "end_date",
+          "is_main",
+          "is_applied",
+          "schedules",
+          "has_schedules",
+          "rooms"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "start_date": {
+            "type": "string"
+          },
+          "end_date": {
+            "type": "string"
+          },
+          "is_main": {
+            "type": "boolean"
+          },
+          "is_applied": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "jek6id6ohmxah"
+            }
+          },
+          "schedules": {
+            "type": "object",
+            "required": [
+              "termly",
+              "weekly"
+            ],
+            "properties": {
+              "termly": {
+                "type": "integer"
+              },
+              "weekly": {
+                "type": "integer"
+              }
+            }
+          },
+          "has_schedules": {
+            "type": "boolean"
+          },
+          "rooms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "building",
+                "room",
+                "description",
+                "type"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "building": {
+                  "type": "string"
+                },
+                "room": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title",
+                    "code"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "ScheduleManagement1Section1ProgramPutRequest": {
