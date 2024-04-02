@@ -3723,7 +3723,7 @@
         }
       },
       "ScheduleManagementDiscardAppliedProgramRequestParams": {
-        "title": "ScheduleManagementProgramDiscardApplyParamsPostRequest",
+        "title": "ScheduleManagementDiscardAppliedProgramRequestParams",
         "x-stoplight": {
           "id": "smi1zxzna35yk"
         },
