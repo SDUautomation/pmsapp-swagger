@@ -183,28 +183,84 @@
     "schemas": {
       "AcademicReportsCategoriesGetResponse": {
         "type": "array",
-        "x-examples": {
-          "Example 1": [
-            {
-              "id": 3,
-              "title": "GPA Ranking"
-            }
-          ]
-        },
         "items": {
           "type": "object",
-          "required": [
-            "id",
-            "title"
-          ],
           "properties": {
             "id": {
               "type": "integer"
             },
             "title": {
               "type": "string"
+            },
+            "reports": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "report_id": {
+                    "type": "integer"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "children": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "reports": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "report_id": {
+                          "type": "integer"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
+        },
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 3,
+              "title": "GPA Ranking",
+              "reports": [
+                {
+                  "report_id": 3,
+                  "title": "GPA Ranking by Faculties"
+                }
+              ],
+              "children": [
+                {
+                  "id": 3,
+                  "title": "GPA Ranking",
+                  "reports": [
+                    {
+                      "report_id": 3,
+                      "title": "GPA Ranking by Faculties"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       },
       "AcademicReportsGetRequest": {
@@ -381,24 +437,6 @@
         }
       },
       "AcademicReportsExecutePostRequest": {
-        "title": "AcademicReportsExecutePostRequest",
-        "x-stoplight": {
-          "id": "3tbwqlgmsucx4"
-        },
-        "type": "object",
-        "required": [
-          "report"
-        ],
-        "properties": {
-          "report": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "j5ltawyxwyym2"
-            }
-          }
-        }
-      },
-      "AcademicReportsExecutePostResponse": {
         "type": "object",
         "x-examples": {
           "Example 1": {
@@ -417,10 +455,6 @@
             ]
           }
         },
-        "required": [
-          "fields",
-          "parameters"
-        ],
         "properties": {
           "fields": {
             "type": "array",
@@ -432,10 +466,6 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": [
-                "id",
-                "values"
-              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -444,9 +474,6 @@
                   "type": "array",
                   "items": {
                     "type": "object",
-                    "required": [
-                      "id"
-                    ],
                     "properties": {
                       "id": {
                         "type": "string"
@@ -456,7 +483,35 @@
                 }
               }
             }
+          },
+          "report": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "o9dutmllo4qwh"
+            }
           }
+        }
+      },
+      "AcademicReportsExecutePostResponse": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "field1": {
+              "type": "string"
+            },
+            "field2": {
+              "type": "string"
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": [
+            {
+              "field1": "value1",
+              "field2": "value2"
+            }
+          ]
         }
       },
       "AcademicReportsExportPostRequest": {
