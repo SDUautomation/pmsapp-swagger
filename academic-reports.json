@@ -183,59 +183,6 @@
     "schemas": {
       "AcademicReportsCategoriesGetResponse": {
         "type": "array",
-        "items": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "integer"
-            },
-            "title": {
-              "type": "string"
-            },
-            "reports": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "report_id": {
-                    "type": "integer"
-                  },
-                  "title": {
-                    "type": "string"
-                  }
-                }
-              }
-            },
-            "children": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "properties": {
-                  "id": {
-                    "type": "integer"
-                  },
-                  "title": {
-                    "type": "string"
-                  },
-                  "reports": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "report_id": {
-                          "type": "integer"
-                        },
-                        "title": {
-                          "type": "string"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
         "x-examples": {
           "Example 1": [
             {
@@ -261,6 +208,78 @@
               ]
             }
           ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "title",
+            "reports",
+            "children"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "reports": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "report_id",
+                  "title"
+                ],
+                "properties": {
+                  "report_id": {
+                    "type": "integer"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "children": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "title",
+                  "reports"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "reports": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "report_id",
+                        "title"
+                      ],
+                      "properties": {
+                        "report_id": {
+                          "type": "integer"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "AcademicReportsGetRequest": {
@@ -455,6 +474,11 @@
             ]
           }
         },
+        "required": [
+          "fields",
+          "parameters",
+          "report"
+        ],
         "properties": {
           "fields": {
             "type": "array",
@@ -466,6 +490,10 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "values"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -474,6 +502,9 @@
                   "type": "array",
                   "items": {
                     "type": "object",
+                    "required": [
+                      "id"
+                    ],
                     "properties": {
                       "id": {
                         "type": "string"
@@ -494,8 +525,20 @@
       },
       "AcademicReportsExecutePostResponse": {
         "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "field1": "value1",
+              "field2": "value2"
+            }
+          ]
+        },
         "items": {
           "type": "object",
+          "required": [
+            "field1",
+            "field2"
+          ],
           "properties": {
             "field1": {
               "type": "string"
@@ -504,14 +547,6 @@
               "type": "string"
             }
           }
-        },
-        "x-examples": {
-          "Example 1": [
-            {
-              "field1": "value1",
-              "field2": "value2"
-            }
-          ]
         }
       },
       "AcademicReportsExportPostRequest": {
