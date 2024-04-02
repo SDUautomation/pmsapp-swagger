@@ -15728,6 +15728,14 @@
             ]
           }
         },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "employees"
+        ],
         "properties": {
           "total": {
             "type": "integer"
@@ -15748,6 +15756,16 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "name",
+                "surname",
+                "staff",
+                "staff_status",
+                "outer_email",
+                "inner_phone",
+                "department_positions",
+                "id"
+              ],
               "properties": {
                 "name": {
                   "type": "string"
@@ -15771,6 +15789,10 @@
                   "type": "array",
                   "items": {
                     "type": "object",
+                    "required": [
+                      "title",
+                      "is_main"
+                    ],
                     "properties": {
                       "title": {
                         "type": "string"
@@ -15778,34 +15800,19 @@
                       "is_main": {
                         "type": "boolean"
                       }
-                    },
-                    "required": [
-                      "title",
-                      "is_main"
-                    ]
+                    }
+                  }
+                },
+                "id": {
+                  "type": "number",
+                  "x-stoplight": {
+                    "id": "o41ms62au31x6"
                   }
                 }
-              },
-              "required": [
-                "name",
-                "surname",
-                "staff",
-                "staff_status",
-                "outer_email",
-                "inner_phone",
-                "department_positions"
-              ]
+              }
             }
           }
-        },
-        "required": [
-          "total",
-          "from",
-          "per_page",
-          "current_page",
-          "last_page",
-          "employees"
-        ]
+        }
       },
       "AdministrativeResourceResponse": {
         "type": "object",
