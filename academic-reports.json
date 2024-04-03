@@ -243,59 +243,7 @@
               }
             },
             "children": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "required": [
-                  "id",
-                  "title",
-                  "reports"
-                ],
-                "properties": {
-                  "id": {
-                    "type": "integer"
-                  },
-                  "title": {
-                    "type": "string"
-                  },
-                  "reports": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "required": [
-                        "report_id",
-                        "title"
-                      ],
-                      "properties": {
-                        "report_id": {
-                          "type": "integer"
-                        },
-                        "title": {
-                          "type": "string"
-                        },
-                        "id": {
-                          "type": "integer",
-                          "x-stoplight": {
-                            "id": "an7myvt0nwgvj"
-                          }
-                        }
-                      }
-                    }
-                  },
-                  "report_id": {
-                    "type": "integer",
-                    "x-stoplight": {
-                      "id": "iosgdsnb88hgx"
-                    }
-                  }
-                }
-              }
-            },
-            "report_id": {
-              "type": "integer",
-              "x-stoplight": {
-                "id": "hb0ssgl3cvww3"
-              }
+              "$ref": "#/components/schemas/AcademicReportsExecutePostRequest"
             }
           }
         }
