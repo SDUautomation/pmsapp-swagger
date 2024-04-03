@@ -243,7 +243,41 @@
               }
             },
             "children": {
-              "$ref": "#/components/schemas/AcademicReportsExecutePostRequest"
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "title",
+                  "reports"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "reports": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "report_id",
+                        "title"
+                      ],
+                      "properties": {
+                        "report_id": {
+                          "type": "integer"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
