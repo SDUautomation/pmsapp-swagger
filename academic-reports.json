@@ -272,11 +272,29 @@
                         },
                         "title": {
                           "type": "string"
+                        },
+                        "id": {
+                          "type": "integer",
+                          "x-stoplight": {
+                            "id": "an7myvt0nwgvj"
+                          }
                         }
                       }
                     }
+                  },
+                  "report_id": {
+                    "type": "integer",
+                    "x-stoplight": {
+                      "id": "iosgdsnb88hgx"
+                    }
                   }
                 }
+              }
+            },
+            "report_id": {
+              "type": "integer",
+              "x-stoplight": {
+                "id": "hb0ssgl3cvww3"
               }
             }
           }
