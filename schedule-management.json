@@ -2475,6 +2475,16 @@
       "ScheduleManagementSectionsGetRequest": {
         "type": "object",
         "title": "ScheduleManagementSectionsGetRequest",
+        "x-stoplight": {
+          "id": "0yx9xfv54s8tj"
+        },
+        "required": [
+          "program_code",
+          "year",
+          "term",
+          "offset",
+          "per_page"
+        ],
         "properties": {
           "program_code": {
             "type": "string"
@@ -2490,17 +2500,19 @@
           },
           "per_page": {
             "type": "integer"
+          },
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "kwfhp9j7020vp"
+            }
+          },
+          "section": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "kpih38ewlwdq3"
+            }
           }
-        },
-        "required": [
-          "program_code",
-          "year",
-          "term",
-          "offset",
-          "per_page"
-        ],
-        "x-stoplight": {
-          "id": "0yx9xfv54s8tj"
         }
       },
       "ScheduleManagementSectionsGetResponse": {
