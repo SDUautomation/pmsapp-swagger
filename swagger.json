@@ -4452,6 +4452,12 @@
             }
           }
         },
+        "required": [
+          "information",
+          "messages",
+          "events",
+          "permissions"
+        ],
         "properties": {
           "information": {
             "type": "object",
@@ -4546,6 +4552,15 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title",
+                "content",
+                "create_date",
+                "status",
+                "username",
+                "full_name"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -4568,22 +4583,21 @@
                 "full_name": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "title",
-                "content",
-                "create_date",
-                "status",
-                "username",
-                "full_name"
-              ]
+              }
             }
           },
           "events": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "title",
+                "start_date",
+                "start_time",
+                "end_date",
+                "end_time",
+                "is_open"
+              ],
               "properties": {
                 "title": {
                   "type": "string"
@@ -4603,15 +4617,7 @@
                 "is_open": {
                   "type": "boolean"
                 }
-              },
-              "required": [
-                "title",
-                "start_date",
-                "start_time",
-                "end_date",
-                "end_time",
-                "is_open"
-              ]
+              }
             }
           },
           "permissions": {
@@ -4626,6 +4632,21 @@
                 "type": "array",
                 "items": {
                   "type": "object",
+                  "required": [
+                    "title",
+                    "key",
+                    "start_date",
+                    "start_time",
+                    "end_date",
+                    "end_time",
+                    "is_blocking",
+                    "employee_id",
+                    "program_code",
+                    "department_code",
+                    "class",
+                    "education_level",
+                    "is_open"
+                  ],
                   "properties": {
                     "title": {
                       "type": "string"
@@ -4666,28 +4687,21 @@
                     "is_open": {
                       "type": "boolean"
                     }
-                  },
-                  "required": [
-                    "title",
-                    "key",
-                    "start_date",
-                    "start_time",
-                    "end_date",
-                    "end_time",
-                    "is_blocking",
-                    "employee_id",
-                    "program_code",
-                    "department_code",
-                    "class",
-                    "education_level",
-                    "is_open"
-                  ]
+                  }
                 }
               },
               "assessment": {
                 "type": "array",
                 "items": {
                   "type": "object",
+                  "required": [
+                    "course_code",
+                    "section",
+                    "title",
+                    "start_date",
+                    "end_date",
+                    "is_open"
+                  ],
                   "properties": {
                     "course_code": {
                       "type": "string"
@@ -4707,24 +4721,59 @@
                     "is_open": {
                       "type": "boolean"
                     }
-                  },
-                  "required": [
-                    "course_code"
-                  ]
+                  }
                 }
               },
               "module": {
-                "type": "string"
+                "type": "array",
+                "items": {
+                  "x-stoplight": {
+                    "id": "sx9xiq27knnlx"
+                  },
+                  "type": "object",
+                  "minProperties": 0,
+                  "required": [
+                    "id",
+                    "code",
+                    "name"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer",
+                      "x-stoplight": {
+                        "id": "vnc78z662zrkf"
+                      }
+                    },
+                    "code": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "3nje84e8h48g6"
+                      }
+                    },
+                    "module_name": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "4o9d3dj7fl3wf"
+                      }
+                    },
+                    "name": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "47irzffsbq3bu"
+                      }
+                    },
+                    "": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "cutyoefn9s4l2"
+                      }
+                    }
+                  }
+                }
               }
             }
           }
-        },
-        "required": [
-          "information",
-          "messages",
-          "events",
-          "permissions"
-        ]
+        }
       },
       "ResetPasswordResponse": {
         "title": "ResetPasswordResponse",
