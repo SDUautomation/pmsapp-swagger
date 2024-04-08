@@ -2475,6 +2475,16 @@
       "ScheduleManagementSectionsGetRequest": {
         "type": "object",
         "title": "ScheduleManagementSectionsGetRequest",
+        "x-stoplight": {
+          "id": "0yx9xfv54s8tj"
+        },
+        "required": [
+          "program_code",
+          "year",
+          "term",
+          "offset",
+          "per_page"
+        ],
         "properties": {
           "program_code": {
             "type": "string"
@@ -2490,21 +2500,90 @@
           },
           "per_page": {
             "type": "integer"
+          },
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "kwfhp9j7020vp"
+            }
+          },
+          "section": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "kpih38ewlwdq3"
+            }
           }
-        },
-        "required": [
-          "program_code",
-          "year",
-          "term",
-          "offset",
-          "per_page"
-        ],
-        "x-stoplight": {
-          "id": "0yx9xfv54s8tj"
         }
       },
       "ScheduleManagementSectionsGetResponse": {
         "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 1051,
+            "from": 1,
+            "per_page": 10,
+            "current_page": 1,
+            "last_page": 106,
+            "sections": [
+              {
+                "id": 51916,
+                "year": 2023,
+                "term": 1,
+                "section": "01",
+                "comment": null,
+                "hours": 15,
+                "requested_departments": [
+                  "DEP_MATH"
+                ],
+                "schedules": {
+                  "applied": 15,
+                  "weekly": 1
+                },
+                "quotas": {
+                  "opened": 1,
+                  "requested": 1,
+                  "reserved": 0
+                },
+                "course": {
+                  "code": "INF 328",
+                  "title": "3D modeling",
+                  "theory": 1,
+                  "practice": 2,
+                  "lab": 0,
+                  "type": {
+                    "key": "N",
+                    "title": "Normal"
+                  },
+                  "language": {
+                    "code": "EN",
+                    "title": "English"
+                  },
+                  "department": {
+                    "id": 1223,
+                    "code": "DEP_COMP_SCI",
+                    "title": "Department of Computer Sciences"
+                  }
+                },
+                "type": {
+                  "key": "N",
+                  "title": "Theory"
+                },
+                "teacher": {
+                  "id": 11333,
+                  "full_name": "Aiganym Soltiyeva"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "sections"
+        ],
         "properties": {
           "total": {
             "type": "integer"
@@ -2525,6 +2604,20 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "year",
+                "term",
+                "section",
+                "comment",
+                "hours",
+                "requested_departments",
+                "schedules",
+                "quotas",
+                "course",
+                "type",
+                "teacher"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -2539,12 +2632,12 @@
                   "type": "string"
                 },
                 "comment": {
-                  "type": "string"
+                  "nullable": true
                 },
                 "hours": {
                   "type": "integer"
                 },
-                "departments_codes": {
+                "requested_departments": {
                   "type": "array",
                   "items": {
                     "type": "string"
@@ -2553,17 +2646,13 @@
                 "schedules": {
                   "type": "object",
                   "properties": {
-                    "termly": {
+                    "applied": {
                       "type": "integer"
                     },
                     "weekly": {
                       "type": "integer"
                     }
-                  },
-                  "required": [
-                    "termly",
-                    "weekly"
-                  ]
+                  }
                 },
                 "quotas": {
                   "type": "object",
@@ -2577,12 +2666,7 @@
                     "reserved": {
                       "type": "integer"
                     }
-                  },
-                  "required": [
-                    "opened",
-                    "requested",
-                    "reserved"
-                  ]
+                  }
                 },
                 "course": {
                   "type": "object",
@@ -2611,11 +2695,7 @@
                         "title": {
                           "type": "string"
                         }
-                      },
-                      "required": [
-                        "key",
-                        "title"
-                      ]
+                      }
                     },
                     "language": {
                       "type": "object",
@@ -2626,11 +2706,7 @@
                         "title": {
                           "type": "string"
                         }
-                      },
-                      "required": [
-                        "code",
-                        "title"
-                      ]
+                      }
                     },
                     "department": {
                       "type": "object",
@@ -2644,24 +2720,9 @@
                         "title": {
                           "type": "string"
                         }
-                      },
-                      "required": [
-                        "id",
-                        "code",
-                        "title"
-                      ]
+                      }
                     }
-                  },
-                  "required": [
-                    "code",
-                    "title",
-                    "theory",
-                    "practice",
-                    "lab",
-                    "type",
-                    "language",
-                    "department"
-                  ]
+                  }
                 },
                 "type": {
                   "type": "object",
@@ -2672,14 +2733,14 @@
                     "title": {
                       "type": "string"
                     }
-                  },
-                  "required": [
-                    "key",
-                    "title"
-                  ]
+                  }
                 },
                 "teacher": {
                   "type": "object",
+                  "required": [
+                    "id",
+                    "full_name"
+                  ],
                   "properties": {
                     "id": {
                       "type": "integer"
@@ -2687,99 +2748,11 @@
                     "full_name": {
                       "type": "string"
                     }
-                  },
-                  "required": [
-                    "id",
-                    "full_name"
-                  ]
-                }
-              },
-              "required": [
-                "id",
-                "year",
-                "term",
-                "section",
-                "comment",
-                "hours",
-                "departments_codes",
-                "schedules",
-                "quotas",
-                "course",
-                "type",
-                "teacher"
-              ]
-            }
-          }
-        },
-        "required": [
-          "total",
-          "from",
-          "per_page",
-          "current_page",
-          "last_page",
-          "sections"
-        ],
-        "x-examples": {
-          "Example 1": {
-            "total": 20,
-            "from": 1,
-            "per_page": 10,
-            "current_page": 1,
-            "last_page": 2,
-            "sections": [
-              {
-                "id": 51177,
-                "year": 2022,
-                "term": 1,
-                "section": "30",
-                "comment": "15 топ Экономика",
-                "hours": 30,
-                "departments_codes": [
-                  "DEP_ECO_BUS"
-                ],
-                "schedules": {
-                  "termly": 0,
-                  "weekly": 0
-                },
-                "quotas": {
-                  "opened": 1,
-                  "requested": 0,
-                  "reserved": 0
-                },
-                "course": {
-                  "code": "ECO 315",
-                  "title": "Introduction to Python",
-                  "theory": 1,
-                  "practice": 2,
-                  "lab": 0,
-                  "type": {
-                    "key": "N",
-                    "title": "Normal"
-                  },
-                  "language": {
-                    "code": "EN",
-                    "title": "English"
-                  },
-                  "department": {
-                    "id": 1,
-                    "code": "DEP_HUMANITIES",
-                    "title": "Department of Humanities"
                   }
-                },
-                "type": {
-                  "key": "N",
-                  "title": "Theory"
-                },
-                "teacher": {
-                  "id": 10926,
-                  "full_name": "Bakhtiyor Meraliyev"
                 }
               }
-            ]
+            }
           }
-        },
-        "x-stoplight": {
-          "id": "pmbe7mcujfgm1"
         }
       },
       "ScheduleManagementSingleSectionGetResponse": {
@@ -3131,97 +3104,6 @@
       },
       "ScheduleManagement1Section1ProgramGetResponse": {
         "type": "object",
-        "properties": {
-          "id": {
-            "type": "integer"
-          },
-          "title": {
-            "type": "string"
-          },
-          "start_date": {
-            "type": "string"
-          },
-          "end_date": {
-            "type": "string"
-          },
-          "is_main": {
-            "type": "boolean"
-          },
-          "schedules": {
-            "type": "object",
-            "properties": {
-              "termly": {
-                "type": "integer"
-              },
-              "weekly": {
-                "type": "integer"
-              }
-            },
-            "required": [
-              "termly",
-              "weekly"
-            ]
-          },
-          "has_schedules": {
-            "type": "boolean"
-          },
-          "rooms": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "building": {
-                  "type": "string"
-                },
-                "room": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "title": {
-                      "type": "string"
-                    },
-                    "code": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "title",
-                    "code"
-                  ]
-                }
-              },
-              "required": [
-                "id",
-                "building",
-                "room",
-                "description",
-                "type"
-              ]
-            }
-          }
-        },
-        "required": [
-          "id",
-          "title",
-          "start_date",
-          "end_date",
-          "is_main",
-          "schedules",
-          "has_schedules",
-          "rooms"
-        ],
         "x-examples": {
           "Example 1": {
             "id": 30326,
@@ -3251,6 +3133,104 @@
         },
         "x-stoplight": {
           "id": "3eb73edrr8d4t"
+        },
+        "required": [
+          "id",
+          "title",
+          "start_date",
+          "end_date",
+          "is_main",
+          "is_applied",
+          "schedules",
+          "has_schedules",
+          "rooms"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "start_date": {
+            "type": "string"
+          },
+          "end_date": {
+            "type": "string"
+          },
+          "is_main": {
+            "type": "boolean"
+          },
+          "is_applied": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "jek6id6ohmxah"
+            }
+          },
+          "schedules": {
+            "type": "object",
+            "required": [
+              "termly",
+              "weekly"
+            ],
+            "properties": {
+              "termly": {
+                "type": "integer"
+              },
+              "weekly": {
+                "type": "integer"
+              }
+            }
+          },
+          "has_schedules": {
+            "type": "boolean"
+          },
+          "rooms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "building",
+                "room",
+                "description",
+                "type"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "building": {
+                  "type": "string"
+                },
+                "room": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title",
+                    "code"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       },
       "ScheduleManagement1Section1ProgramPutRequest": {
@@ -3280,6 +3260,512 @@
         },
         "x-stoplight": {
           "id": "bezsneokwiwt0"
+        }
+      },
+      "ScheduleManagementSectionsResourcesResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "buildings": [
+              {
+                "key": "COL",
+                "title": "Almaty - SDCL",
+                "rooms": [
+                  {
+                    "id": 43,
+                    "building": "LAW",
+                    "room": "D101",
+                    "description": "LAW 101",
+                    "type": {
+                      "id": 1,
+                      "title": "Classroom",
+                      "code": "CLASS"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "buildings"
+        ],
+        "properties": {
+          "buildings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "key",
+                "title",
+                "rooms"
+              ],
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "rooms": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "building",
+                      "room",
+                      "description",
+                      "type"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "building": {
+                        "type": "string"
+                      },
+                      "room": {
+                        "type": "string"
+                      },
+                      "description": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "title",
+                          "code"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "title": {
+                            "type": "string"
+                          },
+                          "code": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "ScheduleManagementSectionProgramHoursGetRequest": {
+        "title": "ScheduleManagementSectionProgramHoursGetRequest",
+        "x-stoplight": {
+          "id": "jdootxcpywqm3"
+        },
+        "type": "object",
+        "properties": {
+          "section": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "do5ipj4gj0x5x"
+            }
+          },
+          "program": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "a66s4c3mi9fvm"
+            }
+          },
+          "room_id": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "1er6hjnbsdprk"
+            }
+          }
+        }
+      },
+      "ScheduleManagementSectionProgramHoursGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1,
+              "title": "Monday",
+              "title_short": "Mo",
+              "hours": [
+                {
+                  "id": 40,
+                  "start_time": "16:00",
+                  "end_time": "16:50",
+                  "sections": [
+                    {
+                      "id": 46446,
+                      "schedule_id": 47161,
+                      "code": "MCM 104",
+                      "year": 2022,
+                      "term": 2,
+                      "section": "03",
+                      "title": "Algorithms and programming 1",
+                      "room_id": 30,
+                      "another_room": true,
+                      "same_room": false,
+                      "another_section": true,
+                      "same_section": false,
+                      "teacher": {
+                        "id": 10926,
+                        "full_name": "Bakhtiyor Meraliyev"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "title",
+            "title_short",
+            "hours"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "title_short": {
+              "type": "string"
+            },
+            "hours": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "start_time",
+                  "end_time",
+                  "sections"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "start_time": {
+                    "type": "string"
+                  },
+                  "end_time": {
+                    "type": "string"
+                  },
+                  "sections": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "schedule_id",
+                        "code",
+                        "year",
+                        "term",
+                        "section",
+                        "title",
+                        "room_id",
+                        "another_room",
+                        "same_room",
+                        "another_section",
+                        "same_section",
+                        "teacher"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "schedule_id": {
+                          "type": "integer"
+                        },
+                        "code": {
+                          "type": "string"
+                        },
+                        "year": {
+                          "type": "integer"
+                        },
+                        "term": {
+                          "type": "integer"
+                        },
+                        "section": {
+                          "type": "string"
+                        },
+                        "title": {
+                          "type": "string"
+                        },
+                        "room_id": {
+                          "type": "integer"
+                        },
+                        "another_room": {
+                          "type": "boolean"
+                        },
+                        "same_room": {
+                          "type": "boolean"
+                        },
+                        "another_section": {
+                          "type": "boolean"
+                        },
+                        "same_section": {
+                          "type": "boolean"
+                        },
+                        "teacher": {
+                          "type": "object",
+                          "required": [
+                            "id",
+                            "full_name"
+                          ],
+                          "properties": {
+                            "id": {
+                              "type": "integer"
+                            },
+                            "full_name": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "program_id": {
+                          "type": "number",
+                          "x-stoplight": {
+                            "id": "flpl047gofxpo"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "ScheduleManagementSectionProgramHourPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "room_id": 10,
+            "hour_id": 362
+          }
+        },
+        "required": [
+          "room_id",
+          "hour_id"
+        ],
+        "properties": {
+          "room_id": {
+            "type": "integer"
+          },
+          "hour_id": {
+            "type": "integer"
+          }
+        }
+      },
+      "ScheduleManagementSectionProgramGetTeachingHoursRequest": {
+        "title": "ScheduleManagementSectionProgramGetTeachingHoursRequest",
+        "x-stoplight": {
+          "id": "cpbdmuwjspe6y"
+        },
+        "type": "object",
+        "properties": {
+          "section": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "j4vje66qp8uti"
+            }
+          },
+          "program": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "e5z4vg6jbi6i2"
+            }
+          }
+        }
+      },
+      "ScheduleManagementSectionProgramGetTeachingHoursResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1489063,
+              "weekly_schedule_id": 107384,
+              "week_number": 1,
+              "program_id": 33522,
+              "start_date": "2023-09-05",
+              "start_time": "12:00",
+              "end_time": "12:50",
+              "changed_start_date": null,
+              "changed_start_time": null,
+              "changed_end_time": null,
+              "room": {
+                "id": 83,
+                "building": "ENG",
+                "room": "F101",
+                "description": "ENG 101",
+                "type": {
+                  "id": 1,
+                  "title": "Classroom",
+                  "code": "CLASS"
+                }
+              },
+              "building": {
+                "key": "ENG",
+                "title": "Main building - Engineering block"
+              }
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "weekly_schedule_id",
+            "week_number",
+            "program_id",
+            "start_date",
+            "start_time",
+            "end_time",
+            "changed_start_date",
+            "changed_start_time",
+            "changed_end_time",
+            "room",
+            "building"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "weekly_schedule_id": {
+              "type": "integer"
+            },
+            "week_number": {
+              "type": "integer"
+            },
+            "program_id": {
+              "type": "integer"
+            },
+            "start_date": {
+              "type": "string"
+            },
+            "start_time": {
+              "type": "string"
+            },
+            "end_time": {
+              "type": "string"
+            },
+            "changed_start_date": {
+              "nullable": true
+            },
+            "changed_start_time": {
+              "nullable": true
+            },
+            "changed_end_time": {
+              "nullable": true
+            },
+            "room": {
+              "type": "object",
+              "required": [
+                "id",
+                "building",
+                "room",
+                "description",
+                "type"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "building": {
+                  "type": "string"
+                },
+                "room": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title",
+                    "code"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "building": {
+              "type": "object",
+              "required": [
+                "key",
+                "title"
+              ],
+              "properties": {
+                "key": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "ScheduleManagementProgramApplyPostRequest": {
+        "type": "object",
+        "properties": {
+          "top": {
+            "type": "integer"
+          },
+          "bottom": {
+            "type": "integer"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "top": 1,
+            "bottom": 1
+          }
+        }
+      },
+      "ScheduleManagementDiscardAppliedProgramRequestParams": {
+        "title": "ScheduleManagementDiscardAppliedProgramRequestParams",
+        "x-stoplight": {
+          "id": "smi1zxzna35yk"
+        },
+        "type": "object",
+        "properties": {
+          "section": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "yorg7pdm3odjm"
+            }
+          },
+          "program": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "ll73djyc1so87"
+            }
+          }
         }
       }
     }
