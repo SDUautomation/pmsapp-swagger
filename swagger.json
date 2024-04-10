@@ -19371,6 +19371,12 @@
             "editor": 123142
           }
         },
+        "required": [
+          "year",
+          "per_page",
+          "offset",
+          "department_id"
+        ],
         "properties": {
           "year": {
             "type": "integer"
@@ -19395,14 +19401,14 @@
           },
           "editor": {
             "type": "integer"
+          },
+          "status": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "1xmiy9d49s484"
+            }
           }
-        },
-        "required": [
-          "year",
-          "per_page",
-          "offset",
-          "department_id"
-        ]
+        }
       },
       "AcademicInformationSyllabusesGetResponse": {
         "type": "object",
