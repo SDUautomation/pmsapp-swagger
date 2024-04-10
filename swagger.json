@@ -21656,7 +21656,8 @@
             "theory",
             "practice",
             "credits",
-            "ects"
+            "ects",
+            "syllabus"
           ],
           "properties": {
             "code": {
@@ -21691,6 +21692,23 @@
             },
             "ects": {
               "type": "integer"
+            },
+            "syllabus": {
+              "type": "object",
+              "x-stoplight": {
+                "id": "x5dup8pkeh5ri"
+              },
+              "required": [
+                "description"
+              ],
+              "properties": {
+                "description": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "29pjf8i6uhhmt"
+                  }
+                }
+              }
             }
           }
         }
