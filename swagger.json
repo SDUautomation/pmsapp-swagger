@@ -21656,8 +21656,7 @@
             "theory",
             "practice",
             "credits",
-            "ects",
-            "syllabus"
+            "ects"
           ],
           "properties": {
             "code": {
