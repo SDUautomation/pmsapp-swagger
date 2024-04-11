@@ -921,7 +921,7 @@
             ],
             "room_types": [
               {
-                "id": "2",
+                "id": 2,
                 "title": "Laboratory"
               }
             ],
@@ -936,13 +936,15 @@
                 "id": 1,
                 "day": "12 May",
                 "time": "13:00",
+                "qr_available": true,
                 "conductance": {
                   "conducted": false,
                   "description": "The journal was not filled."
                 },
                 "room": {
                   "id": 121,
-                  "title": "E117"
+                  "title": "E117",
+                  "building_id": "MAIN"
                 }
               }
             ],
@@ -993,6 +995,13 @@
                 "id": 10987,
                 "full_name": "Aibolat Batyrov"
               }
+            },
+            "filling_indicator": {
+              "total_hours": 90,
+              "conducted_hours": 78,
+              "filled": 42,
+              "percentage_from_total_hours": 47,
+              "percentage_from_conducted_hours": 54
             }
           }
         },
@@ -1057,7 +1066,7 @@
               ],
               "properties": {
                 "id": {
-                  "type": "string"
+                  "type": "integer"
                 },
                 "title": {
                   "type": "string"
@@ -1091,6 +1100,7 @@
                 "id",
                 "day",
                 "time",
+                "qr_available",
                 "conductance",
                 "room"
               ],
@@ -1103,6 +1113,9 @@
                 },
                 "time": {
                   "type": "string"
+                },
+                "qr_available": {
+                  "type": "boolean"
                 },
                 "conductance": {
                   "type": "object",
@@ -1134,10 +1147,7 @@
                       "type": "string"
                     },
                     "building_id": {
-                      "type": "string",
-                      "x-stoplight": {
-                        "id": "a4xr2uzll54l4"
-                      }
+                      "type": "string"
                     }
                   }
                 }
@@ -1331,9 +1341,6 @@
           },
           "filling_indicator": {
             "type": "object",
-            "x-stoplight": {
-              "id": "asslmfu2iscor"
-            },
             "required": [
               "total_hours",
               "conducted_hours",
@@ -1343,34 +1350,19 @@
             ],
             "properties": {
               "total_hours": {
-                "type": "number",
-                "x-stoplight": {
-                  "id": "qp3b59nljzo7m"
-                }
+                "type": "integer"
               },
               "conducted_hours": {
-                "type": "number",
-                "x-stoplight": {
-                  "id": "qtz4yhtdhuvnn"
-                }
+                "type": "integer"
               },
               "filled": {
-                "type": "number",
-                "x-stoplight": {
-                  "id": "6pin1rbsfxhh9"
-                }
+                "type": "integer"
               },
               "percentage_from_total_hours": {
-                "type": "number",
-                "x-stoplight": {
-                  "id": "8uo81y2c5l0fu"
-                }
+                "type": "integer"
               },
               "percentage_from_conducted_hours": {
-                "type": "number",
-                "x-stoplight": {
-                  "id": "t9rgi5w21jmtc"
-                }
+                "type": "integer"
               }
             }
           }
