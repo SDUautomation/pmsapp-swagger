@@ -4244,7 +4244,7 @@
           }
         },
         "required": [
-          "employee_id"
+          "employeeId"
         ],
         "properties": {
           "token": {
@@ -4274,7 +4274,7 @@
           "term": {
             "type": "integer"
           },
-          "employee_id": {
+          "employeeId": {
             "type": "integer",
             "x-stoplight": {
               "id": "k0659xjlxxjvb"
@@ -18621,6 +18621,12 @@
           "id": "g0asa026wqjrj"
         },
         "type": "object",
+        "required": [
+          "year",
+          "term",
+          "schedule_by",
+          "filter"
+        ],
         "properties": {
           "year": {
             "type": "integer",
@@ -18646,13 +18652,7 @@
               "id": "0kx5uwg4agd3i"
             }
           }
-        },
-        "required": [
-          "year",
-          "term",
-          "schedule_by",
-          "filter"
-        ]
+        }
       },
       "AcademicInformationScheduleResponse": {
         "type": "array",
