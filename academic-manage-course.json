@@ -920,38 +920,34 @@
               },
               "type": "object",
               "required": [
-                "section_key"
+                "section_key",
+                "title",
+                "weight",
+                "rate"
               ],
               "properties": {
                 "section_key": {
-                  "type": "object",
+                  "type": "string",
                   "x-stoplight": {
                     "id": "2lmwj4mh0ntnk"
-                  },
-                  "required": [
-                    "title",
-                    "weight",
-                    "rate"
-                  ],
-                  "properties": {
-                    "title": {
-                      "type": "string",
-                      "x-stoplight": {
-                        "id": "80csgjw9uyye0"
-                      }
-                    },
-                    "weight": {
-                      "type": "number",
-                      "x-stoplight": {
-                        "id": "1duotoiaer0e3"
-                      }
-                    },
-                    "rate": {
-                      "type": "number",
-                      "x-stoplight": {
-                        "id": "zfn8f3dldhhdq"
-                      }
-                    }
+                  }
+                },
+                "title": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "3u1kplltqp6ww"
+                  }
+                },
+                "weight": {
+                  "type": "number",
+                  "x-stoplight": {
+                    "id": "da16pv5y86fkz"
+                  }
+                },
+                "rate": {
+                  "type": "number",
+                  "x-stoplight": {
+                    "id": "nx0mbv7ugq82o"
                   }
                 }
               }
