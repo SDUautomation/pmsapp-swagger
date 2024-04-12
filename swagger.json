@@ -4243,6 +4243,9 @@
             "term": 1
           }
         },
+        "required": [
+          "employee_id"
+        ],
         "properties": {
           "token": {
             "type": "string"
@@ -4271,14 +4274,13 @@
           "term": {
             "type": "integer"
           },
-          "employeeId": {
+          "employee_id": {
             "type": "integer",
             "x-stoplight": {
               "id": "k0659xjlxxjvb"
             }
           }
-        },
-        "title": ""
+        }
       },
       "ForgotPasswordRequest": {
         "type": "object",
