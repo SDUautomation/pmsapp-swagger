@@ -707,6 +707,11 @@
             "offset": 124
           }
         },
+        "required": [
+          "per_page",
+          "offset",
+          "mode"
+        ],
         "properties": {
           "per_page": {
             "type": "integer"
@@ -725,13 +730,32 @@
             "x-stoplight": {
               "id": "uj0nqdzl080wm"
             }
+          },
+          "class": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "d24rzp1cezop1"
+            }
+          },
+          "program_code": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "89ttaqot979lu"
+            }
+          },
+          "order_by": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "v5qr39wzllie9"
+            }
+          },
+          "order_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ipplgzgl2d8jz"
+            }
           }
-        },
-        "required": [
-          "per_page",
-          "offset",
-          "mode"
-        ]
+        }
       },
       "AcademicAdvisoryMyStudentsGetResponse": {
         "type": "object",
