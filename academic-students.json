@@ -740,7 +740,8 @@
         },
         "required": [
           "per_page",
-          "offset"
+          "offset",
+          "mode"
         ],
         "properties": {
           "per_page": {
@@ -777,6 +778,12 @@
             "type": "string",
             "x-stoplight": {
               "id": "ipplgzgl2d8jz"
+            }
+          },
+          "mode": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "i2optu6zhb3ja"
             }
           }
         }
