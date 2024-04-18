@@ -22880,6 +22880,7 @@
             "surname",
             "photo",
             "speciality_name",
+            "speciality_code",
             "academic_level",
             "enrolled_sections"
           ],
@@ -22898,6 +22899,12 @@
             },
             "speciality_name": {
               "type": "string"
+            },
+            "speciality_code": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "50vzscioj8chn"
+              }
             },
             "academic_level": {
               "type": "string"
