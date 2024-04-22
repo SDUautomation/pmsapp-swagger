@@ -4244,7 +4244,7 @@
           }
         },
         "required": [
-          "employeeId"
+          "employee_id"
         ],
         "properties": {
           "token": {
@@ -4274,7 +4274,7 @@
           "term": {
             "type": "integer"
           },
-          "employeeId": {
+          "employee_id": {
             "type": "integer",
             "x-stoplight": {
               "id": "k0659xjlxxjvb"
@@ -18647,9 +18647,15 @@
             }
           },
           "filter": {
-            "type": "integer",
+            "type": "array",
             "x-stoplight": {
               "id": "0kx5uwg4agd3i"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "lwc32s0s4ka8b"
+              },
+              "type": "string"
             }
           }
         }
@@ -22880,6 +22886,7 @@
             "surname",
             "photo",
             "speciality_name",
+            "speciality_code",
             "academic_level",
             "enrolled_sections"
           ],
@@ -22898,6 +22905,12 @@
             },
             "speciality_name": {
               "type": "string"
+            },
+            "speciality_code": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "50vzscioj8chn"
+              }
             },
             "academic_level": {
               "type": "string"

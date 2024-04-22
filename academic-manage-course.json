@@ -327,6 +327,38 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/manage/courses/resources/departments": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageCourseResourceDepartmentsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-courses-resources-departments",
+        "x-stoplight": {
+          "id": "gq8yaae8d8ldr"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCourseResourceDepartmentsGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "parameters": []
     }
   },
   "components": {
@@ -1322,6 +1354,75 @@
         "required": [
           "id"
         ]
+      },
+      "AcademicManageCourseResourceDepartmentsGetRequest": {
+        "title": "AcademicManageCourseResourceDepartmentsGetRequest",
+        "x-stoplight": {
+          "id": "0u1hcr35edmjg"
+        },
+        "type": "object",
+        "required": [
+          "year"
+        ],
+        "properties": {
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "5zcklpy5z9e98"
+            }
+          }
+        }
+      },
+      "AcademicManageCourseResourceDepartmentsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1,
+              "parent_id": 1,
+              "code": "DEP_COMP_SCI",
+              "title": "Department of Computer Sciences",
+              "year": 2023,
+              "course_code_prefixes": [
+                "CSS"
+              ]
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "parent_id",
+            "code",
+            "title",
+            "year",
+            "course_code_prefixes"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "parent_id": {
+              "type": "integer"
+            },
+            "code": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "year": {
+              "type": "integer"
+            },
+            "course_code_prefixes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
       }
     }
   }
