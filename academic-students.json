@@ -154,6 +154,10 @@
             "offset": 12
           }
         },
+        "required": [
+          "per_page",
+          "offset"
+        ],
         "properties": {
           "speciality": {
             "type": "integer"
@@ -184,12 +188,20 @@
             "x-stoplight": {
               "id": "92dnffqbclnyn"
             }
+          },
+          "order_by": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "co3eze337nsot"
+            }
+          },
+          "order_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "6kcqv0ibbdiam"
+            }
           }
-        },
-        "required": [
-          "per_page",
-          "offset"
-        ]
+        }
       },
       "AcademicStudentsGetResponse": {
         "type": "object",
