@@ -147,7 +147,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AcademicStudentsMyResoursesGetResponse"
+                  "$ref": "#/components/schemas/AcademicStudentsMyResourcesGetResponse"
                 }
               }
             }
