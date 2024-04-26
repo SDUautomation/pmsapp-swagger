@@ -3840,8 +3840,11 @@
           }
         }
       },
-      "AcademicStudentsMyResoursesGetResponse": {
+      "AcademicStudentsMyResourcesGetResponse": {
         "type": "object",
+        "x-stoplight": {
+          "id": "09bd1f0e45bb4"
+        },
         "x-examples": {
           "Example 1": {
             "specialities": [
