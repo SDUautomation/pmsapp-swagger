@@ -136,6 +136,28 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/students/my/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicStudentsMyResoursesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-my-resources",
+        "x-stoplight": {
+          "id": "b9l37chmrqvht"
+        }
+      }
     }
   },
   "components": {
@@ -3814,6 +3836,62 @@
                   "type": "string"
                 }
               }
+            }
+          }
+        }
+      },
+      "AcademicStudentsMyResoursesGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "specialities": [
+              {
+                "code": "10103",
+                "year": 2020,
+                "title": "Information Systems",
+                "language": "English"
+              }
+            ],
+            "classes": [
+              1
+            ]
+          }
+        },
+        "required": [
+          "specialities",
+          "classes"
+        ],
+        "properties": {
+          "specialities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "code",
+                "year",
+                "title",
+                "language"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "classes": {
+            "type": "array",
+            "items": {
+              "type": "integer"
             }
           }
         }
