@@ -1,0 +1,519 @@
+{
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "cfju46z22xk8f"
+  },
+  "info": {
+    "title": "service-esign",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/1.0.0/service/manage/esigns": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceEsignGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-service-manage-esigns",
+        "x-stoplight": {
+          "id": "khxwlkwpegaq6"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceEsignGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default"
+          }
+        },
+        "operationId": "put-1.0.0-service-manage-esigns",
+        "x-stoplight": {
+          "id": "ofdvowfipsyiw"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceEsignPutRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/service/manage/esigns/{documentOrder}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "documentOrder",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-1.0.0-service-manage-esigns-documentOrder",
+        "x-stoplight": {
+          "id": "gskhzestczak5"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceEsignDocumentGetRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/service/manage/esign/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceEsignResourceGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-service-manage-esign-resources",
+        "x-stoplight": {
+          "id": "wwucl7t6pi38j"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceEsignResourceGetRequest"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ServiceEsignGetRequest": {
+        "title": "ServiceEsignRequest",
+        "x-stoplight": {
+          "id": "ctrqikco5cihr"
+        },
+        "type": "object",
+        "required": [
+          "per_page",
+          "offset",
+          "year",
+          "term"
+        ],
+        "properties": {
+          "per_page": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "z3q1nflw1teq7"
+            }
+          },
+          "offset": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "yf66awmdkgj1e"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "kbv20sqqxggov"
+            }
+          },
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "awtyty9r6sfwo"
+            }
+          },
+          "document_type": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "ufaljep344ldr"
+            }
+          },
+          "program_code": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "zy045hvnbt52q"
+            }
+          },
+          "student_id": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "wuz87ld1u12p7"
+            }
+          },
+          "student_name": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "j43h3af02qlnd"
+            }
+          },
+          "student_surname": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "wakxttjghci9j"
+            }
+          },
+          "student_entrance_year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "8o7v5ya6ekzec"
+            }
+          },
+          "with_signed": {
+            "type": "boolean",
+            "x-stoplight": {
+              "id": "fq0ae6tp6nxu0"
+            }
+          }
+        }
+      },
+      "ServiceEsignGetResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "0871182cd677b"
+        },
+        "x-examples": {
+          "Example 1": {
+            "total": 20,
+            "from": 1,
+            "per_page": 10,
+            "current_page": 1,
+            "last_page": 2,
+            "signature_documents": [
+              {
+                "id": 1,
+                "document_order_id": 1,
+                "student_id": "200103049",
+                "student_name": "Yenur",
+                "student_surname": "Shamshadin",
+                "student_class": 4,
+                "student_status": "Studying",
+                "program_code": "10103",
+                "program_title": "Computer Science",
+                "document_type_id": 13,
+                "document_type_title": "Transcript",
+                "document_path": "/200103049/200103049_13_18837.pdf",
+                "is_signed": false,
+                "signed_date": "2023-08-18 16:57:00"
+              }
+            ]
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "signature_documents"
+        ],
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "signature_documents": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "document_order_id",
+                "student_id",
+                "student_name",
+                "student_surname",
+                "student_class",
+                "student_status",
+                "program_code",
+                "program_title",
+                "document_type_id",
+                "document_type_title",
+                "document_path",
+                "is_signed",
+                "signed_date"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "document_order_id": {
+                  "type": "integer"
+                },
+                "student_id": {
+                  "type": "string"
+                },
+                "student_name": {
+                  "type": "string"
+                },
+                "student_surname": {
+                  "type": "string"
+                },
+                "student_class": {
+                  "type": "integer"
+                },
+                "student_status": {
+                  "type": "string"
+                },
+                "program_code": {
+                  "type": "string"
+                },
+                "program_title": {
+                  "type": "string"
+                },
+                "document_type_id": {
+                  "type": "integer"
+                },
+                "document_type_title": {
+                  "type": "string"
+                },
+                "document_path": {
+                  "type": "string"
+                },
+                "is_signed": {
+                  "type": "boolean"
+                },
+                "signed_date": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "ServiceEsignPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "document_order_ids": [
+              1
+            ],
+            "encoded_p12_file": "MIINwwIBAzCCDX0GCSqGSIb3DQEHAaCCDW4Egg1qMIAwg",
+            "captcha": {
+              "ct": "ct",
+              "iv": "iv",
+              "s": "s"
+            }
+          }
+        },
+        "required": [
+          "document_order_ids",
+          "encoded_p12_file",
+          "captcha"
+        ],
+        "properties": {
+          "document_order_ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "encoded_p12_file": {
+            "type": "string"
+          },
+          "captcha": {
+            "type": "object",
+            "required": [
+              "ct",
+              "iv",
+              "s"
+            ],
+            "properties": {
+              "ct": {
+                "type": "string"
+              },
+              "iv": {
+                "type": "string"
+              },
+              "s": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "ServiceEsignDocumentGetRequest": {
+        "title": "ServiceEsignDocumentGetRequest",
+        "x-stoplight": {
+          "id": "en0co845rm0iz"
+        },
+        "type": "object",
+        "required": [
+          "documentOrder"
+        ],
+        "properties": {
+          "documentOrder": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "z8p80jeyyu2q2"
+            }
+          }
+        }
+      },
+      "ServiceEsignResourceGetRequest": {
+        "title": "ServiceEsignResourceGetRequest",
+        "x-stoplight": {
+          "id": "ojw50u3bh4eqa"
+        },
+        "type": "object",
+        "properties": {
+          "modules": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "y6nze8xxwjfx4"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "xzvi6lfggtp58"
+              },
+              "type": "string"
+            }
+          }
+        }
+      },
+      "ServiceEsignResourceGetResponse": {
+        "type": "object",
+        "properties": {
+          "document_order_statuses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "year_terms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "document_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "entrance_years": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "year": {
+                  "type": "integer"
+                }
+              }
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "document_order_statuses": [
+              {
+                "id": 1,
+                "title": "Sent"
+              }
+            ],
+            "year_terms": [
+              {
+                "year": 2016,
+                "term": 1,
+                "title": "2016 - 2017 Fall"
+              }
+            ],
+            "document_types": [
+              {
+                "id": 1,
+                "title": "Information about studying place (University)"
+              }
+            ],
+            "entrance_years": [
+              {
+                "year": 2006
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}
