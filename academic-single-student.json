@@ -2387,9 +2387,7 @@
                         "required": [
                           "course_code",
                           "grade",
-                          "letter_grade",
-                          "status",
-                          "registration_date"
+                          "letter_grade"
                         ],
                         "properties": {
                           "course_code": {
@@ -2400,15 +2398,6 @@
                           },
                           "letter_grade": {
                             "type": "string"
-                          },
-                          "status": {
-                            "type": "integer"
-                          },
-                          "registration_date": {
-                            "type": "string",
-                            "x-stoplight": {
-                              "id": "nku8eujol7iol"
-                            }
                           }
                         }
                       }
@@ -2463,9 +2452,7 @@
                         "required": [
                           "course_code",
                           "grade",
-                          "letter_grade",
-                          "status",
-                          "registration_date"
+                          "letter_grade"
                         ],
                         "properties": {
                           "course_code": {
@@ -2476,15 +2463,6 @@
                           },
                           "letter_grade": {
                             "type": "string"
-                          },
-                          "status": {
-                            "type": "integer"
-                          },
-                          "registration_date": {
-                            "type": "string",
-                            "x-stoplight": {
-                              "id": "561dkom694ked"
-                            }
                           }
                         }
                       }
@@ -2539,9 +2517,7 @@
                         "required": [
                           "course_code",
                           "grade",
-                          "letter_grade",
-                          "status",
-                          "registration_date"
+                          "letter_grade"
                         ],
                         "properties": {
                           "course_code": {
@@ -2552,15 +2528,6 @@
                           },
                           "letter_grade": {
                             "type": "string"
-                          },
-                          "status": {
-                            "type": "integer"
-                          },
-                          "registration_date": {
-                            "type": "string",
-                            "x-stoplight": {
-                              "id": "bv83wzmvlpsat"
-                            }
                           }
                         }
                       }
@@ -2615,9 +2582,7 @@
                         "required": [
                           "course_code",
                           "grade",
-                          "letter_grade",
-                          "status",
-                          "registration_date"
+                          "letter_grade"
                         ],
                         "properties": {
                           "course_code": {
@@ -2628,15 +2593,6 @@
                           },
                           "letter_grade": {
                             "type": "string"
-                          },
-                          "status": {
-                            "type": "integer"
-                          },
-                          "registration_date": {
-                            "type": "string",
-                            "x-stoplight": {
-                              "id": "49eypwnwdg4nc"
-                            }
                           }
                         }
                       }
