@@ -13,158 +13,16 @@
     }
   ],
   "paths": {
-    "/1.0.0/administrative/rules-and-regulations/resources": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AdministrativeEditorRulesAndRegulationsResources"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-1.0.0-administrative-rules-and-regulations-resources",
-        "x-stoplight": {
-          "id": "60mt10fgqeqmb"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ResourceRequest"
-              }
-            }
-          }
-        },
-        "parameters": []
-      }
-    },
-    "/1.0.0/manage/rules-and-regulations/categories": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RarEditorCategoriesGetResponse"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-1.0.0-manage-rules-and-regulations-categories",
-        "x-stoplight": {
-          "id": "a1cakoikmug9c"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RarEditorCategoriesGetRequest"
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "summary": "",
-        "operationId": "post-1.0.0-manage-rules-and-regulations-categories",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EmptyResponse"
-                }
-              }
-            }
-          }
-        },
-        "x-stoplight": {
-          "id": "tl71wyca2djh2"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RarEditorCategoriesPostRequest"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/1.0.0/manage/rules-and-regulations/rules": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RarEditorRulesGetResponse"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-1.0.0-manage-rules-and-regulations-rules",
-        "x-stoplight": {
-          "id": "oph2krr041d3v"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RarEditorRulesGetRequest"
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "summary": "",
-        "operationId": "post-1.0.0-manage-rules-and-regulations-rules",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EmptyResponse"
-                }
-              }
-            }
-          }
-        },
-        "x-stoplight": {
-          "id": "k07rcvedcs4nh"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RarEditorRulesPostRequest"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/1.0.0/manage/rules-and-regulations/rules/{rule}/details": {
+    "/1.0.0/academic/information/rules/{rule}/attachments": {
       "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "rule",
+          "in": "path",
+          "required": true
+        },
         {
           "schema": {
             "type": "string"
@@ -174,171 +32,90 @@
           "required": true
         }
       ],
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RarEditorRulesPostDetailsGetResponse"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-1.0.0-manage-rules-and-regulations-rules-rule-details",
-        "x-stoplight": {
-          "id": "0qmg6ajtmopwk"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmptyResponse"
-              }
-            }
-          }
-        }
-      },
       "post": {
-        "summary": "",
-        "operationId": "post-1.0.0-manage-rules-and-regulations-rules-rule-details",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EmptyResponse"
-                }
-              }
-            }
-          }
-        },
-        "x-stoplight": {
-          "id": "90vdy5r0t3rfm"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RarEditorRulesPostDetailsPostRequest"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/1.0.0/manage/rules-and-regulations/rules/{rule}/attachments": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "rule",
-          "in": "path",
-          "required": true
-        }
-      ],
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/RarEditorRulesPostAttachmentsGetResponse"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-1.0.0-manage-rules-and-regulations-rules-rule-attachments",
-        "x-stoplight": {
-          "id": "0ki02fvfwkozi"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/EmptyResponse"
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "summary": "",
-        "operationId": "post-1.0.0-manage-rules-and-regulations-rules-rule-attachments",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EmptyResponse"
-                }
-              }
-            }
-          }
-        },
-        "x-stoplight": {
-          "id": "ibxi4swh8rdie"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RarEditorRulesPostAttachmentsPostRequest"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/1.0.0/manage/rules-and-regulations/resources": {
-      "get": {
-        "summary": "Your GET endpoint",
+        "summary": "Your POST endpoint",
         "tags": [],
         "responses": {
           "default": {
-            "description": "",
+            "description": "Default",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/RulesAndRegulationsManageResourcesGetResponse"
+                  "$ref": "#/components/schemas/RulesAndRegulationsAttachmentsPostResponse"
                 }
               }
             }
           }
         },
-        "operationId": "get-1.0.0-manage-rules-and-regulations-resources",
+        "operationId": "post-1.0.0-academic-information-rules-rule-attachments",
         "x-stoplight": {
-          "id": "t1hemjhcyuj7t"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/RulesAndRegulationsManageResourcesGetRequest"
-              }
-            }
-          }
+          "id": "bovndjifuhrbx"
         }
       }
     },
-    "/1.0.0/manage/rules-and-regulations/rules/{rule}/publish": {
+    "/1.0.0/academic/information/rules/{rule}/attachments/{attachment}": {
       "parameters": [
         {
           "schema": {
             "type": "string"
           },
           "name": "rule",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "attachment",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "rule",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "attachment",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "rule",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "attachment",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "rule",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "attachment",
           "in": "path",
           "required": true
         }
@@ -346,27 +123,123 @@
       "put": {
         "summary": "Your PUT endpoint",
         "tags": [],
-        "responses": {},
-        "operationId": "put-1.0.0-manage-rules-and-regulations-rule-publish",
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RulesAndRegulationsAttachmentsPutResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "put-1.0.0-academic-information-rules-rule-attachments-attachment",
         "x-stoplight": {
-          "id": "w8g24m0srh9f4"
+          "id": "7nv9vkpljhr79"
+        },
+        "requestBody": {
+          "content": {}
+        }
+      },
+      "delete": {
+        "summary": "Your DELETE endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "delete-1.0.0-academic-information-rules-rule-attachments-attachment",
+        "x-stoplight": {
+          "id": "fkglwsps9qhp7"
+        }
+      }
+    },
+    "/1.0.0/academic/information/rules/categories": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RulesAndRegulationsCategoriesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-information-rules-categories",
+        "x-stoplight": {
+          "id": "rmep6ud12mvu2"
+        }
+      }
+    },
+    "/1.0.0/academic/information/rules": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RulesAndRegulationsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-information-rules",
+        "x-stoplight": {
+          "id": "r5y5gh4lc8vmp"
         },
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/RarEditorRulesPublishPutRequest"
+                "$ref": "#/components/schemas/RulesAndRegulationsGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Your POST endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RulesAndRegulationsPostResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "post-1.0.0-academic-information-rules",
+        "x-stoplight": {
+          "id": "5f94dqt3s5f29"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RulesAndRegulationsPostRequest"
               }
             }
           }
         }
       }
     },
-    "/1.0.0/manage/rules-and-regulations/rules/{rule}": {
+    "/1.0.0/academic/information/rules/{rule}": {
       "parameters": [
         {
           "schema": {
-            "type": "string"
+            "type": "number"
           },
           "name": "rule",
           "in": "path",
@@ -377,1465 +250,460 @@
         "summary": "Your GET endpoint",
         "tags": [],
         "responses": {
-          "200": {
-            "description": "OK",
+          "default": {
+            "description": "Default",
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/RarEditorRulesSingleRuleGetResponse"
+                  "$ref": "#/components/schemas/SingleRuleGetResponse"
                 }
               }
             }
           }
         },
-        "operationId": "get-1.0.0-manage-rules-and-regulations-rules-rule",
+        "operationId": "get-1.0.0-academic-information-rules-rule",
         "x-stoplight": {
-          "id": "ivuuxm91qbtyx"
+          "id": "0byxpqxwzmdco"
+        }
+      },
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SingleRuleGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "put-1.0.0-academic-information-rules-rule",
+        "x-stoplight": {
+          "id": "igieuuem3uku5"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SingleRulePutRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Your DELETE endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "delete-1.0.0-academic-information-rules-rule",
+        "x-stoplight": {
+          "id": "rwzcu4q0fvgwk"
+        }
+      }
+    },
+    "/1.0.0/academic/information/rules/languages": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RulesAndRegulationsLanguagesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-information-rules-languages",
+        "x-stoplight": {
+          "id": "9r1f2zmnwwy7k"
         }
       }
     }
   },
   "components": {
     "schemas": {
-      "EmptyResponse": {
+      "RulesAndRegulationsAttachmentsPostResponse": {
         "type": "object",
         "x-examples": {
           "Example 1": {
-            "a": ""
+            "id": 1,
+            "url": "https://oldpms.sdu.edu.kz/common/download/competent_bachelor.pdf",
+            "language_name": "Kazakh"
+          }
+        },
+        "required": [
+          "id",
+          "url",
+          "language_name"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "url": {
+            "type": "string"
+          },
+          "language_name": {
+            "type": "string"
           }
         }
       },
-      "ResourceRequest": {
+      "RulesAndRegulationsAttachmentsPutResponse": {
         "type": "object",
         "x-examples": {
           "Example 1": {
-            "modules": [
-              "year-term"
-            ],
-            "limit": -1
+            "id": 1,
+            "url": "https://oldpms.sdu.edu.kz/common/download/competent_bachelor.pdf",
+            "language_name": "Kazakh"
           }
         },
+        "required": [
+          "id",
+          "url",
+          "language_name"
+        ],
         "properties": {
-          "modules": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "limit": {
+          "id": {
             "type": "integer"
-          }
-        },
-        "required": [
-          "modules"
-        ]
-      },
-      "AdministrativeEditorRulesAndRegulationsResources": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "languages": [
-              {
-                "id": 7748,
-                "uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295",
-                "short": "en",
-                "long": "en-EN"
-              }
-            ],
-            "categories": [
-              {
-                "id": 1024,
-                "uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295",
-                "title": "Guidlines",
-                "description": "Guidlines Description",
-                "language_uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295"
-              }
-            ]
-          }
-        },
-        "properties": {
-          "languages": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "short": {
-                  "type": "string"
-                },
-                "long": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "short",
-                "long"
-              ]
-            }
           },
-          "categories": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "language_uuid": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "title",
-                "description",
-                "language_uuid"
-              ]
-            }
-          }
-        },
-        "required": [
-          "languages",
-          "categories"
-        ]
-      },
-      "RarEditorCategoriesGetRequest": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "keyword": "",
-            "offset": 1,
-            "per_page": 15
-          }
-        },
-        "properties": {
-          "keyword": {
+          "url": {
             "type": "string"
           },
-          "offset": {
-            "type": "integer"
-          },
-          "per_page": {
-            "type": "integer"
+          "language_name": {
+            "type": "string"
           }
-        },
-        "required": [
-          "offset",
-          "per_page"
-        ]
+        }
       },
-      "RarEditorCategoriesGetResponse": {
+      "RulesAndRegulationsCategoriesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1,
+              "title": "Administrative"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "title"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "RulesAndRegulationsGetRequest": {
+        "title": "RulesAndRegulationsGetRequest",
+        "x-stoplight": {
+          "id": "k9rzgaizrfp7z"
+        },
+        "type": "object",
+        "required": [
+          "category_id"
+        ],
+        "properties": {
+          "keyword": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "l00g4ysg1pjfd"
+            }
+          },
+          "category_id": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "bsx4mk2o4byf6"
+            }
+          }
+        }
+      },
+      "RulesAndRegulationsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1,
+              "title": "Cду академиялық саясаты туралы ережесі"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "title"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "RulesAndRegulationsPostRequest": {
         "type": "object",
         "x-examples": {
           "Example 1": {
-            "total": 40,
-            "from": 1,
-            "per_page": 15,
-            "current_page": 2,
-            "last_page": 3,
-            "categories": [
+            "category_id": 1,
+            "title_en": "Regulations on the competence model of the graduate of the bachelor's program of SDU",
+            "title_ru": "Положение о компетентностной модели выпускника программы бакалавриата СДУ",
+            "title_kz": "СДУ бакалавриат бағдарламасы бойынша бітірушінің құзыреттілік моделі туралы ереже",
+            "description_en": "Regulations on the competence model of the graduate of the bachelor's program of SDU",
+            "description_ru": "Положение о компетентностной модели выпускника программы бакалавриата СДУ",
+            "description_kz": "Положение о компетентностной модели выпускника программы бакалавриата СДУ"
+          }
+        },
+        "required": [
+          "category_id",
+          "title_en",
+          "description_en"
+        ],
+        "properties": {
+          "category_id": {
+            "type": "integer"
+          },
+          "title_en": {
+            "type": "string"
+          },
+          "title_ru": {
+            "type": "string"
+          },
+          "title_kz": {
+            "type": "string"
+          },
+          "description_en": {
+            "type": "string"
+          },
+          "description_ru": {
+            "type": "string"
+          },
+          "description_kz": {
+            "type": "string"
+          }
+        }
+      },
+      "RulesAndRegulationsPostResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 1,
+            "title": "Cду академиялық саясаты туралы ережесі",
+            "description": "Cду академиялық саясаты туралы ережесі",
+            "category_title": "Academic",
+            "author_full_name": "Alimzhan Igenbayev",
+            "attachments": [
               {
-                "id": 7748,
-                "uuid": "7748-2r29-vj22-vnje",
-                "title": "Guidlines",
-                "description": "Guildlines",
-                "meta": "Meta",
-                "details": "Details",
-                "rules_count": 5,
-                "created_at": "27-06-2023 02:03:00",
-                "updated_at": "27-06-2023 02:03:00",
-                "language": {
-                  "id": 7748,
-                  "uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295",
-                  "short": "en",
-                  "long": "en-EN"
-                }
+                "id": 1,
+                "url": "https://oldpms.sdu.edu.kz/common/download/competent_bachelor.pdf",
+                "language_name": "Kazakh"
               }
             ]
           }
         },
-        "properties": {
-          "total": {
-            "type": "integer"
-          },
-          "from": {
-            "type": "integer"
-          },
-          "per_page": {
-            "type": "integer"
-          },
-          "current_page": {
-            "type": "integer"
-          },
-          "last_page": {
-            "type": "integer"
-          },
-          "categories": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "meta": {
-                  "type": "string"
-                },
-                "details": {
-                  "type": "string"
-                },
-                "rules_count": {
-                  "type": "integer"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
-                },
-                "language": {
-                  "type": "object",
-                  "required": [
-                    "id",
-                    "uuid",
-                    "short",
-                    "long"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "uuid": {
-                      "type": "string"
-                    },
-                    "short": {
-                      "type": "string"
-                    },
-                    "long": {
-                      "type": "string"
-                    }
-                  }
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "title",
-                "description",
-                "meta",
-                "details",
-                "rules_count",
-                "created_at",
-                "updated_at",
-                "language"
-              ]
-            }
-          }
-        },
         "required": [
-          "total",
-          "from",
-          "per_page",
-          "current_page",
-          "last_page",
-          "categories"
-        ]
-      },
-      "RarEditorCategoriesPostRequest": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "title": "Guides",
-            "description": "Description",
-            "meta": "Guidlines",
-            "details": "Details",
-            "language_uuid": "d22475c7-9800-4f8e-9da9-673015a0c6af"
-          }
-        },
+          "id",
+          "title",
+          "description",
+          "category_title",
+          "author_full_name",
+          "attachments"
+        ],
         "properties": {
+          "id": {
+            "type": "integer"
+          },
           "title": {
             "type": "string"
           },
           "description": {
             "type": "string"
           },
-          "meta": {
+          "category_title": {
             "type": "string"
           },
-          "details": {
+          "author_full_name": {
             "type": "string"
-          },
-          "language_uuid": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "title",
-          "description",
-          "language_uuid"
-        ]
-      },
-      "RarEditorRulesGetRequest": {
-        "type": "object",
-        "properties": {
-          "search": {
-            "type": "string"
-          },
-          "category": {
-            "type": "string"
-          },
-          "per_page": {
-            "type": "integer"
-          },
-          "offset": {
-            "type": "integer"
-          }
-        },
-        "x-examples": {
-          "Example 1": {
-            "search": "",
-            "category": "",
-            "per_page": 15,
-            "offset": 1
-          }
-        }
-      },
-      "RarEditorRulesGetResponse": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "total": 40,
-            "from": 1,
-            "per_page": 15,
-            "current_page": 2,
-            "last_page": 3,
-            "rules": [
-              {
-                "id": 2311,
-                "uuid": "7748-2r29-vj22-vnje",
-                "published": true,
-                "visible": true,
-                "created_at": "27-06-2023 02:03:00",
-                "updated_at": "27-06-2023 03:03:00",
-                "details": [
-                  {
-                    "id": 7748,
-                    "uuid": "7748-2r29-vj22-vnje",
-                    "title": "About Scientific Library",
-                    "content": "Ғылыми кітапхана дирекциясы (бұдан әрі - Кітапхана)...",
-                    "image": "base64 string format",
-                    "created_at": "27-06-2023 02:03:00",
-                    "updated_at": "27-06-2023 03:03:00",
-                    "language": {
-                      "id": 7748,
-                      "uuid": "7748-2r29-vj22-vnje",
-                      "short": "en",
-                      "long": "en-EN"
-                    }
-                  }
-                ],
-                "categories": [
-                  {
-                    "id": 7748,
-                    "uuid": "7748-2r29-vj22-vnje",
-                    "title": "Guidlines",
-                    "description": "Guildlines",
-                    "language": {
-                      "id": 7748,
-                      "uuid": "7748-2r29-vj22-vnje",
-                      "short": "en",
-                      "long": "en-EN"
-                    }
-                  }
-                ],
-                "attachments": [
-                  {
-                    "id": 7748,
-                    "uuid": "7748-2r29-vj22-vnje",
-                    "title": "About Scientific Library",
-                    "path": "pms.sdu.edu.kz/rules-and-regulations/attachments/about-scientific-library/ground-floor.jpg",
-                    "size": "1.6 MB",
-                    "language": {
-                      "id": 7748,
-                      "uuid": "7748-2r29-vj22-vnje",
-                      "short": "en",
-                      "long": "en-EN"
-                    }
-                  }
-                ]
-              }
-            ]
-          }
-        },
-        "properties": {
-          "total": {
-            "type": "integer"
-          },
-          "from": {
-            "type": "integer"
-          },
-          "per_page": {
-            "type": "integer"
-          },
-          "current_page": {
-            "type": "integer"
-          },
-          "last_page": {
-            "type": "integer"
-          },
-          "rules": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "published": {
-                  "type": "boolean"
-                },
-                "visible": {
-                  "type": "boolean"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
-                },
-                "details": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "uuid": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "content": {
-                        "type": "string"
-                      },
-                      "image": {
-                        "type": "string"
-                      },
-                      "created_at": {
-                        "type": "string"
-                      },
-                      "updated_at": {
-                        "type": "string"
-                      },
-                      "language": {
-                        "type": "object",
-                        "required": [
-                          "id",
-                          "uuid",
-                          "short",
-                          "long"
-                        ],
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "uuid": {
-                            "type": "string"
-                          },
-                          "short": {
-                            "type": "string"
-                          },
-                          "long": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "required": [
-                      "id",
-                      "uuid",
-                      "title",
-                      "content",
-                      "image",
-                      "created_at",
-                      "updated_at",
-                      "language"
-                    ]
-                  }
-                },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "uuid": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "description": {
-                        "type": "string"
-                      },
-                      "language": {
-                        "type": "object",
-                        "required": [
-                          "id",
-                          "uuid",
-                          "short",
-                          "long"
-                        ],
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "uuid": {
-                            "type": "string"
-                          },
-                          "short": {
-                            "type": "string"
-                          },
-                          "long": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "required": [
-                      "id",
-                      "uuid",
-                      "title",
-                      "description",
-                      "language"
-                    ]
-                  }
-                },
-                "attachments": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "uuid": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "path": {
-                        "type": "string"
-                      },
-                      "size": {
-                        "type": "string"
-                      },
-                      "language": {
-                        "type": "object",
-                        "required": [
-                          "id",
-                          "uuid",
-                          "short",
-                          "long"
-                        ],
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "uuid": {
-                            "type": "string"
-                          },
-                          "short": {
-                            "type": "string"
-                          },
-                          "long": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    },
-                    "required": [
-                      "id",
-                      "uuid",
-                      "title",
-                      "path",
-                      "size",
-                      "language"
-                    ]
-                  }
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "published",
-                "visible",
-                "created_at",
-                "updated_at",
-                "details",
-                "categories",
-                "attachments"
-              ]
-            }
-          }
-        },
-        "required": [
-          "total",
-          "from",
-          "per_page",
-          "current_page",
-          "last_page",
-          "rules"
-        ]
-      },
-      "RarEditorRulesPostRequest": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "categories": [
-              "fe3a9ca9-5b82-47f8-af1b-de496416c16d"
-            ]
-          }
-        },
-        "properties": {
-          "categories": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          }
-        },
-        "required": [
-          "categories"
-        ]
-      },
-      "RarEditorRulesPostDetailsGetResponse": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "id": 7748,
-            "uuid": "7748-2r29-vj22-vnje",
-            "title": "About Scientific Library",
-            "content": "Ғылыми кітапхана дирекциясы (бұдан әрі - Кітапхана)...",
-            "image": "Rules and Regulations/Linux/en-EN/9a39d795-721d-449b-8ada-7e7440836097.png",
-            "url": "https://drive.google.com/uc?id=1bE5iKqk_LKmrOFcUnwpBQF64tInGshpB&export=media",
-            "created_at": "27-06-2023 02:03:00",
-            "updated_at": "27-06-2023 03:03:00",
-            "language": {
-              "id": 7748,
-              "uuid": "7748-2r29-vj22-vnje",
-              "short": "en",
-              "long": "en-EN"
-            }
-          }
-        },
-        "properties": {
-          "id": {
-            "type": "integer"
-          },
-          "uuid": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "content": {
-            "type": "string"
-          },
-          "image": {
-            "type": "string"
-          },
-          "url": {
-            "type": "string"
-          },
-          "created_at": {
-            "type": "string"
-          },
-          "updated_at": {
-            "type": "string"
-          },
-          "language": {
-            "type": "object",
-            "required": [
-              "id",
-              "uuid",
-              "short",
-              "long"
-            ],
-            "properties": {
-              "id": {
-                "type": "integer"
-              },
-              "uuid": {
-                "type": "string"
-              },
-              "short": {
-                "type": "string"
-              },
-              "long": {
-                "type": "string"
-              }
-            }
-          }
-        },
-        "required": [
-          "id",
-          "uuid",
-          "title",
-          "content",
-          "image",
-          "url",
-          "created_at",
-          "updated_at",
-          "language"
-        ]
-      },
-      "RarEditorRulesPostDetailsPostRequest": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "title": "acsascasc",
-            "content ": "",
-            "language_uuid ": "",
-            "image": "string"
-          }
-        },
-        "properties": {
-          "title": {
-            "type": "string"
-          },
-          "content ": {
-            "type": "string"
-          },
-          "language_uuid ": {
-            "type": "string"
-          },
-          "image": {
-            "type": "object"
-          }
-        },
-        "required": [
-          "title",
-          "content ",
-          "language_uuid ",
-          "image"
-        ]
-      },
-      "RarEditorRulesPostAttachmentsGetResponse": {
-        "type": "array",
-        "x-examples": {
-          "Example 1": [
-            {
-              "id": 7748,
-              "uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295",
-              "title": "Guidlines",
-              "path": "Rules and Regulations/Linux/en-EN/9a39d795-721d-449b-8ada-7e7440836097.pdf",
-              "url": "https://drive.google.com/drive/u/1/folders/1wYvzzmxCXTBAgaVrJ5x-CdWYAIFOa3Rd",
-              "extension": "jpg",
-              "size": "32141",
-              "created_at": "27-06-2023 02:03:00",
-              "updated_at": "27-06-2023 02:03:00",
-              "language": {
-                "id": 7748,
-                "uuid": "7748-2r29-vj22-vnje",
-                "short": "en",
-                "long": "en-EN"
-              }
-            }
-          ]
-        },
-        "items": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "integer"
-            },
-            "uuid": {
-              "type": "string"
-            },
-            "title": {
-              "type": "string"
-            },
-            "path": {
-              "type": "string"
-            },
-            "url": {
-              "type": "string"
-            },
-            "extension": {
-              "type": "string"
-            },
-            "size": {
-              "type": "string"
-            },
-            "created_at": {
-              "type": "string"
-            },
-            "updated_at": {
-              "type": "string"
-            },
-            "language": {
-              "type": "object",
-              "required": [
-                "id",
-                "uuid",
-                "short",
-                "long"
-              ],
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "short": {
-                  "type": "string"
-                },
-                "long": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "required": [
-            "id",
-            "uuid",
-            "title",
-            "path",
-            "url",
-            "extension",
-            "size",
-            "created_at",
-            "updated_at",
-            "language"
-          ]
-        }
-      },
-      "RarEditorRulesPostAttachmentsPostRequest": {
-        "title": "RarEditorRulesPostAttachmentsPostRequest",
-        "x-stoplight": {
-          "id": "dv07u0gzyv46d"
-        },
-        "type": "object",
-        "properties": {
-          "title": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "rdgaj0v7na6xk"
-            }
-          },
-          "language_uuid": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "9ci0jkaqma7d8"
-            }
-          },
-          "file": {
-            "type": "object",
-            "x-stoplight": {
-              "id": "yj13kptlgddnf"
-            }
-          }
-        },
-        "required": [
-          "title",
-          "language_uuid",
-          "file"
-        ]
-      },
-      "RulesAndRegulationsManageResourcesGetResponse": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "languages": [
-              {
-                "id": 7748,
-                "uuid": "7748-2r29-vj22-vnje",
-                "short": "en",
-                "long": "en-EN"
-              }
-            ],
-            "categories": [
-              {
-                "id": 1024,
-                "uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295",
-                "title": "Guidlines",
-                "description": "Guidlines Description",
-                "language_uuid": "10fade0e-ab9b-4096-b369-4df9eb27f295"
-              }
-            ]
-          }
-        },
-        "properties": {
-          "languages": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "short": {
-                  "type": "string"
-                },
-                "long": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "short",
-                "long"
-              ]
-            }
-          },
-          "categories": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "language_uuid": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "title",
-                "description",
-                "language_uuid"
-              ]
-            }
-          }
-        },
-        "required": [
-          "languages",
-          "categories"
-        ]
-      },
-      "RulesAndRegulationsManageResourcesGetRequest": {
-        "title": "RulesAndRegulationsManageResourcesGetRequest",
-        "x-stoplight": {
-          "id": "rmgk92q6wxt3m"
-        },
-        "type": "object",
-        "properties": {
-          "modules": {
-            "type": "array",
-            "x-stoplight": {
-              "id": "sbntng8a71767"
-            },
-            "items": {
-              "x-stoplight": {
-                "id": "bfoamc80jzw0f"
-              },
-              "type": "string"
-            }
-          }
-        },
-        "required": [
-          "modules"
-        ]
-      },
-      "RarEditorRulesPublishPutRequest": {
-        "title": "RarEditorRulesPublishPutRequest",
-        "x-stoplight": {
-          "id": "8dwg790njdydp"
-        },
-        "type": "object",
-        "properties": {
-          "published": {
-            "type": "boolean",
-            "x-stoplight": {
-              "id": "23mih8xzx6kbf"
-            }
-          }
-        },
-        "required": [
-          "published"
-        ]
-      },
-      "RarEditorRulesSingleRuleGetResponse": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "id": 7748,
-            "uuid": "7748-2r29-vj22-vnje",
-            "published": true,
-            "visible": true,
-            "created_at": "27-06-2023 02:03:00",
-            "updated_at": "27-06-2023 02:03:00",
-            "details": [
-              {
-                "id": 7748,
-                "uuid": "7748-2r29-vj22-vnje",
-                "title": "About Scientific Library",
-                "content": "Ғылыми кітапхана дирекциясы (бұдан әрі - Кітапхана)...",
-                "image": "base64 string format",
-                "created_at": "27-06-2023 02:03:00",
-                "updated_at": "27-06-2023 03:03:00",
-                "language": {
-                  "id": 7748,
-                  "uuid": "7748-2r29-vj22-vnje",
-                  "short": "en",
-                  "long": "en-EN"
-                }
-              }
-            ],
-            "categories": [
-              {
-                "id": 7748,
-                "uuid": "7748-2r29-vj22-vnje",
-                "title": "Guidlines",
-                "description": "Guildlines",
-                "language": {
-                  "id": 7748,
-                  "uuid": "7748-2r29-vj22-vnje",
-                  "short": "en",
-                  "long": "en-EN"
-                }
-              }
-            ],
-            "contents": [
-              {
-                "id": 7748,
-                "uuid": "7748-2r29-vj22-vnje",
-                "title": "About Scientific Library",
-                "content": "Ғылыми кітапхана дирекциясы (бұдан әрі - Кітапхана)...",
-                "summary": "Берілген ереже Университеттің кітапхана қызметкерлері мен кітапхана...",
-                "has_summary": true,
-                "order": 3,
-                "created_at": "27-06-2023 02:03:00",
-                "updated_at": "27-06-2023 03:03:00",
-                "language": {
-                  "id": 7748,
-                  "uuid": "7748-2r29-vj22-vnje",
-                  "short": "en",
-                  "long": "en-EN"
-                }
-              }
-            ],
-            "attachments": [
-              {
-                "id": 7748,
-                "uuid": "7748-2r29-vj22-vnje",
-                "title": "About Scientific Library",
-                "path": "pms.sdu.edu.kz/rules-and-regulations/attachments/about-scientific-library/ground-floor.jpg",
-                "size": "1.6 MB",
-                "language": {
-                  "id": 7748,
-                  "uuid": "7748-2r29-vj22-vnje",
-                  "short": "en",
-                  "long": "en-EN"
-                }
-              }
-            ],
-            "versions": [
-              {
-                "id": 7748,
-                "uuid": "7748-2r29-vj22-vnje",
-                "section": "Detail",
-                "version": "1.0.2",
-                "old": "This version contains...",
-                "new": "New data",
-                "created_at": "27-06-2023 02:03:00",
-                "updated_at": "27-06-2023 03:03:00",
-                "language": {
-                  "id": 7748,
-                  "uuid": "7748-2r29-vj22-vnje",
-                  "short": "en",
-                  "long": "en-EN"
-                }
-              }
-            ]
-          }
-        },
-        "properties": {
-          "id": {
-            "type": "integer"
-          },
-          "uuid": {
-            "type": "string"
-          },
-          "published": {
-            "type": "boolean"
-          },
-          "visible": {
-            "type": "boolean"
-          },
-          "created_at": {
-            "type": "string"
-          },
-          "updated_at": {
-            "type": "string"
-          },
-          "details": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "image": {
-                  "type": "string"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
-                },
-                "language": {
-                  "type": "object",
-                  "required": [
-                    "id",
-                    "uuid",
-                    "short",
-                    "long"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "uuid": {
-                      "type": "string"
-                    },
-                    "short": {
-                      "type": "string"
-                    },
-                    "long": {
-                      "type": "string"
-                    }
-                  }
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "title",
-                "content",
-                "image",
-                "created_at",
-                "updated_at",
-                "language"
-              ]
-            }
-          },
-          "categories": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "language": {
-                  "type": "object",
-                  "required": [
-                    "id",
-                    "uuid",
-                    "short",
-                    "long"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "uuid": {
-                      "type": "string"
-                    },
-                    "short": {
-                      "type": "string"
-                    },
-                    "long": {
-                      "type": "string"
-                    }
-                  }
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "title",
-                "description",
-                "language"
-              ]
-            }
-          },
-          "contents": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "summary": {
-                  "type": "string"
-                },
-                "has_summary": {
-                  "type": "boolean"
-                },
-                "order": {
-                  "type": "integer"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
-                },
-                "language": {
-                  "type": "object",
-                  "required": [
-                    "id",
-                    "uuid",
-                    "short",
-                    "long"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "uuid": {
-                      "type": "string"
-                    },
-                    "short": {
-                      "type": "string"
-                    },
-                    "long": {
-                      "type": "string"
-                    }
-                  }
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "title",
-                "content",
-                "summary",
-                "has_summary",
-                "order",
-                "created_at",
-                "updated_at",
-                "language"
-              ]
-            }
           },
           "attachments": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "url",
+                "language_name"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
                 },
-                "uuid": {
+                "url": {
                   "type": "string"
                 },
-                "title": {
+                "language_name": {
                   "type": "string"
-                },
-                "path": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "string"
-                },
-                "language": {
-                  "type": "object",
-                  "required": [
-                    "id",
-                    "uuid",
-                    "short",
-                    "long"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "uuid": {
-                      "type": "string"
-                    },
-                    "short": {
-                      "type": "string"
-                    },
-                    "long": {
-                      "type": "string"
-                    }
-                  }
                 }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "title",
-                "path",
-                "size",
-                "language"
-              ]
+              }
             }
-          },
-          "versions": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "uuid": {
-                  "type": "string"
-                },
-                "section": {
-                  "type": "string"
-                },
-                "version": {
-                  "type": "string"
-                },
-                "old": {
-                  "type": "string"
-                },
-                "new": {
-                  "type": "string"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
-                },
-                "language": {
-                  "type": "object",
-                  "required": [
-                    "id",
-                    "uuid",
-                    "short",
-                    "long"
-                  ],
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "uuid": {
-                      "type": "string"
-                    },
-                    "short": {
-                      "type": "string"
-                    },
-                    "long": {
-                      "type": "string"
-                    }
-                  }
-                }
-              },
-              "required": [
-                "id",
-                "uuid",
-                "section",
-                "version",
-                "old",
-                "new",
-                "created_at",
-                "updated_at",
-                "language"
-              ]
-            }
+          }
+        }
+      },
+      "SingleRuleGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 1,
+            "title": "Cду академиялық саясаты туралы ережесі",
+            "description": "Cду академиялық саясаты туралы ережесі",
+            "category_title": "Academic",
+            "author_full_name": "Alimzhan Igenbayev",
+            "attachments": [
+              {
+                "id": 1,
+                "url": "https://oldpms.sdu.edu.kz/common/download/competent_bachelor.pdf",
+                "language_name": "Kazakh"
+              }
+            ]
           }
         },
         "required": [
           "id",
-          "uuid",
-          "published",
-          "visible",
-          "created_at",
-          "updated_at",
-          "details",
-          "categories",
-          "contents",
-          "attachments",
-          "versions"
-        ]
+          "title",
+          "description",
+          "category_title",
+          "author_full_name",
+          "attachments"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "category_title": {
+            "type": "string"
+          },
+          "author_full_name": {
+            "type": "string"
+          },
+          "attachments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "url",
+                "language_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "language_name": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "SingleRulePutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "category_id": 1,
+            "title_en": "Regulations on the competence model of the graduate of the bachelor's program of SDU",
+            "title_ru": "Положение о компетентностной модели выпускника программы бакалавриата СДУ",
+            "title_kz": "СДУ бакалавриат бағдарламасы бойынша бітірушінің құзыреттілік моделі туралы ереже",
+            "description_en": "Regulations on the competence model of the graduate of the bachelor's program of SDU",
+            "description_ru": "Положение о компетентностной модели выпускника программы бакалавриата СДУ",
+            "description_kz": "Положение о компетентностной модели выпускника программы бакалавриата СДУ"
+          }
+        },
+        "required": [
+          "category_id",
+          "title_en",
+          "description_en"
+        ],
+        "properties": {
+          "category_id": {
+            "type": "integer"
+          },
+          "title_en": {
+            "type": "string"
+          },
+          "title_ru": {
+            "type": "string"
+          },
+          "title_kz": {
+            "type": "string"
+          },
+          "description_en": {
+            "type": "string"
+          },
+          "description_ru": {
+            "type": "string"
+          },
+          "description_kz": {
+            "type": "string"
+          }
+        }
+      },
+      "RulesAndRegulationsLanguagesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1,
+              "short": "en",
+              "long": "English"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "short",
+            "long"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "short": {
+              "type": "string"
+            },
+            "long": {
+              "type": "string"
+            }
+          }
+        }
       }
     }
   }
