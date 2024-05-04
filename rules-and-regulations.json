@@ -22,14 +22,6 @@
           "name": "rule",
           "in": "path",
           "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "rule",
-          "in": "path",
-          "required": true
         }
       ],
       "post": {
@@ -55,54 +47,6 @@
     },
     "/1.0.0/academic/information/rules/{rule}/attachments/{attachment}": {
       "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "rule",
-          "in": "path",
-          "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "attachment",
-          "in": "path",
-          "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "rule",
-          "in": "path",
-          "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "attachment",
-          "in": "path",
-          "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "rule",
-          "in": "path",
-          "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "attachment",
-          "in": "path",
-          "required": true
-        },
         {
           "schema": {
             "type": "string"
