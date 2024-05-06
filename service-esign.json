@@ -96,7 +96,7 @@
         }
       }
     },
-    "/1.0.0/service/manage/esign/resources": {
+    "/1.0.0/service/manage/esigns/resources": {
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
@@ -125,7 +125,8 @@
             }
           }
         }
-      }
+      },
+      "parameters": []
     }
   },
   "components": {
@@ -452,6 +453,16 @@
               {
                 "year": 2006
               }
+            ],
+            "programs": [
+              {
+                "program_code": "10106",
+                "language": "Kazakh",
+                "speciality_code": "5B070300",
+                "title": "Information Systems",
+                "department_id": 894,
+                "terms": 8
+              }
             ]
           }
         },
@@ -459,7 +470,8 @@
           "document_order_statuses",
           "year_terms",
           "document_types",
-          "entrance_years"
+          "entrance_years",
+          "programs"
         ],
         "properties": {
           "document_order_statuses": {
@@ -529,6 +541,40 @@
               ],
               "properties": {
                 "year": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "programs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "program_code",
+                "language",
+                "speciality_code",
+                "title",
+                "department_id",
+                "terms"
+              ],
+              "properties": {
+                "program_code": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                },
+                "speciality_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "department_id": {
+                  "type": "integer"
+                },
+                "terms": {
                   "type": "integer"
                 }
               }
