@@ -441,6 +441,145 @@
           "id": "fbpcj3zbj8tp6"
         }
       }
+    },
+    "/1.0.0/academic/students/{student}/information/opinions/{opinion}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "opinion",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "opinion",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        },
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "opinion",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Advisor opinion is successfully returned",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleStudentopinionsGetOpinionResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-student-information-opinions-opinion",
+        "x-stoplight": {
+          "id": "51vhsmbhqmkmx"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleStudentopinionsGetOpinionRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Advisor opinion is successfully updated.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleStudentPutOpinionResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "put-1.0.0-academic-students-student-information-opinions-opinion",
+        "x-stoplight": {
+          "id": "h3edzx606ygv7"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleStudentPutOpinionRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Your DELETE endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Advisor opinion is successfully deleted",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleStudentDeleteOpinionResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "delete-1.0.0-academic-students-student-information-opinions-opinion",
+        "x-stoplight": {
+          "id": "eyqk9ceyyop5z"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleStudentDeleteOpinionRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -3318,6 +3457,125 @@
           "courses",
           "gpa"
         ]
+      },
+      "AcademicSingleStudentopinionsGetOpinionRequest": {
+        "title": "AcademicSingleStudentGetOpinionRequest",
+        "x-stoplight": {
+          "id": "gwahv9ehoue87"
+        },
+        "type": "object",
+        "required": [
+          "student",
+          "opinion"
+        ],
+        "properties": {
+          "student": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "oqaudsdlln0h6"
+            }
+          },
+          "opinion": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "2wijwgyj5xru9"
+            }
+          }
+        }
+      },
+      "AcademicSingleStudentopinionsGetOpinionResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 204,
+            "date": "Feb 9, 2023",
+            "advisor": "Ablay Omar",
+            "content": "За этот период обучения проявила способности и активность. Учится очень хорошо и имеет высокие результаты."
+          }
+        },
+        "required": [
+          "id",
+          "date",
+          "advisor",
+          "content"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "date": {
+            "type": "string"
+          },
+          "advisor": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "title": ""
+      },
+      "AcademicSingleStudentPutOpinionRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "content": "My opinion is ..."
+          }
+        },
+        "required": [
+          "content"
+        ],
+        "properties": {
+          "content": {
+            "type": "string"
+          }
+        },
+        "title": ""
+      },
+      "AcademicSingleStudentPutOpinionResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 204,
+            "date": "Feb 9, 2023",
+            "advisor": "Ablay Omar",
+            "content": "За этот период обучения проявила способности и активность. Учится очень хорошо и имеет высокие результаты."
+          }
+        },
+        "required": [
+          "id",
+          "date",
+          "advisor",
+          "content"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "date": {
+            "type": "string"
+          },
+          "advisor": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        }
+      },
+      "AcademicSingleStudentDeleteOpinionRequest": {
+        "title": "AcademicSingleStudentDeleteOpinionRequest",
+        "x-stoplight": {
+          "id": "8avsapapqwg55"
+        },
+        "type": "object"
+      },
+      "AcademicSingleStudentDeleteOpinionResponse": {
+        "title": "AcademicSingleStudentDeleteOpinionResponse",
+        "x-stoplight": {
+          "id": "z83eo058tis1h"
+        },
+        "type": "object"
       }
     }
   }
