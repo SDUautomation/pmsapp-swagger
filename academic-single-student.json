@@ -502,7 +502,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/AcademicSingleStudentopinionsGetOpinionResponse"
+                  "$ref": "#/components/schemas/AcademicSingleStudentGetOpinionResponse"
                 }
               }
             }
@@ -516,7 +516,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AcademicSingleStudentopinionsGetOpinionRequest"
+                "$ref": "#/components/schemas/AcademicSingleStudentGetOpinionResponse"
               }
             }
           }
@@ -3458,7 +3458,7 @@
           "gpa"
         ]
       },
-      "AcademicSingleStudentopinionsGetOpinionRequest": {
+      "AcademicSingleStudentGetOpinionRequest": {
         "title": "AcademicSingleStudentGetOpinionRequest",
         "x-stoplight": {
           "id": "gwahv9ehoue87"
@@ -3483,8 +3483,11 @@
           }
         }
       },
-      "AcademicSingleStudentopinionsGetOpinionResponse": {
+      "AcademicSingleStudentGetOpinionResponse": {
         "type": "object",
+        "x-stoplight": {
+          "id": "e7a4d1ee14ce2"
+        },
         "x-examples": {
           "Example 1": {
             "id": 204,
