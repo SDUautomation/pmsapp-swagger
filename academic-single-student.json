@@ -548,6 +548,47 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/students/{student}/information/opinions": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "student",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "201": {
+            "description": "Advisor opinion is successfully created.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleStudentPostOpinionResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-student-information-opinions",
+        "x-stoplight": {
+          "id": "h5bvxc1ptg5ph"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleStudentPostOpinionRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -3529,6 +3570,44 @@
           "id": "z83eo058tis1h"
         },
         "type": "object"
+      },
+      "AcademicSingleStudentPostOpinionResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "date": {
+            "type": "string"
+          },
+          "advisor": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "id": 204,
+            "date": "Feb 9, 2023",
+            "advisor": "Ablay Omar",
+            "content": "За этот период обучения проявила способности и активность. Учится очень хорошо и имеет высокие результаты."
+          }
+        }
+      },
+      "AcademicSingleStudentPostOpinionRequest": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "content": "My opinion is ..."
+          }
+        }
       }
     }
   }
