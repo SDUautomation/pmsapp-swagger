@@ -459,38 +459,6 @@
           "name": "opinion",
           "in": "path",
           "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "student",
-          "in": "path",
-          "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "opinion",
-          "in": "path",
-          "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "student",
-          "in": "path",
-          "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "opinion",
-          "in": "path",
-          "required": true
         }
       ],
       "get": {
