@@ -3463,25 +3463,7 @@
         "x-stoplight": {
           "id": "gwahv9ehoue87"
         },
-        "type": "object",
-        "required": [
-          "student",
-          "opinion"
-        ],
-        "properties": {
-          "student": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "oqaudsdlln0h6"
-            }
-          },
-          "opinion": {
-            "type": "number",
-            "x-stoplight": {
-              "id": "2wijwgyj5xru9"
-            }
-          }
-        }
+        "type": "object"
       },
       "AcademicSingleStudentGetOpinionResponse": {
         "type": "object",
