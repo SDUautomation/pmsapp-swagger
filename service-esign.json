@@ -205,7 +205,7 @@
             }
           },
           "with_signed": {
-            "type": "boolean",
+            "type": "number",
             "x-stoplight": {
               "id": "fq0ae6tp6nxu0"
             }
