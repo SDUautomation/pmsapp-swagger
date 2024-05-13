@@ -2306,6 +2306,81 @@
             ]
           }
         }
+      },
+      "AcademicManageCurriculumLearningOutcomeRequest": {
+        "type": "object",
+        "properties": {
+          "program_code": {
+            "type": "string"
+          },
+          "program_year": {
+            "type": "integer"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "program_code": "10103",
+            "program_year": 2023
+          }
+        },
+        "title": ""
+      },
+      "AcademicManageCurriculumLearningOutcomeResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "program_year": {
+            "type": "integer"
+          },
+          "program_code": {
+            "type": "string"
+          },
+          "program_title": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "track": {
+            "type": "string"
+          },
+          "education_level": {
+            "type": "string"
+          },
+          "program_type": {
+            "type": "string"
+          },
+          "extra_degree": {
+            "type": "string"
+          },
+          "outcome_en": {
+            "type": "string"
+          },
+          "outcome_ru": {
+            "type": "string"
+          },
+          "outcome_kz": {
+            "type": "string"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "id": 18,
+            "program_year": 2023,
+            "program_code": "10103",
+            "program_title": "Information Systems",
+            "language": "EN",
+            "track": "Main Track",
+            "education_level": "Bachelor",
+            "program_type": "Degree Program",
+            "extra_degree": "Double Diploma",
+            "outcome_en": "Outcome in english",
+            "outcome_ru": "Outcome in russian",
+            "outcome_kz": "Outcome in kazakh"
+          }
+        }
       }
     }
   }
