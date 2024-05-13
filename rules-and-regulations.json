@@ -382,7 +382,17 @@
           "Example 1": [
             {
               "id": 1,
-              "title": "Cду академиялық саясаты туралы ережесі"
+              "title": "Cду академиялық саясаты туралы ережесі",
+              "description": "Cду академиялық саясаты туралы ережесі",
+              "category_title": "Academic",
+              "author_full_name": "Alimzhan Igenbayev",
+              "attachments": [
+                {
+                  "id": 1,
+                  "url": "https://oldpms.sdu.edu.kz/common/download/competent_bachelor.pdf",
+                  "language_name": "Kazakh"
+                }
+              ]
             }
           ]
         },
@@ -390,7 +400,11 @@
           "type": "object",
           "required": [
             "id",
-            "title"
+            "title",
+            "description",
+            "category_title",
+            "author_full_name",
+            "attachments"
           ],
           "properties": {
             "id": {
@@ -398,6 +412,37 @@
             },
             "title": {
               "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "category_title": {
+              "type": "string"
+            },
+            "author_full_name": {
+              "type": "string"
+            },
+            "attachments": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "url",
+                  "language_name"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "url": {
+                    "type": "string"
+                  },
+                  "language_name": {
+                    "type": "string"
+                  }
+                }
+              }
             }
           }
         }
