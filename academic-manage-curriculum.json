@@ -2381,6 +2381,42 @@
             "outcome_kz": "Outcome in kazakh"
           }
         }
+      },
+      "AcademicManageCurriculumPutLearningOutcomeRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "program_code": "10103",
+            "program_year": 2023,
+            "outcome_en": "Outcome in english",
+            "outcome_ru": "Outcome in russian",
+            "outcome_kz": "Outcome in kazakh"
+          }
+        },
+        "required": [
+          "program_code",
+          "program_year",
+          "outcome_en",
+          "outcome_ru",
+          "outcome_kz"
+        ],
+        "properties": {
+          "program_code": {
+            "type": "string"
+          },
+          "program_year": {
+            "type": "integer"
+          },
+          "outcome_en": {
+            "type": "string"
+          },
+          "outcome_ru": {
+            "type": "string"
+          },
+          "outcome_kz": {
+            "type": "string"
+          }
+        }
       }
     }
   }
