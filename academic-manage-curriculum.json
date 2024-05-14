@@ -2327,6 +2327,36 @@
       },
       "AcademicManageCurriculumLearningOutcomeResponse": {
         "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 18,
+            "program_year": 2023,
+            "program_code": "10103",
+            "program_title": "Information Systems",
+            "language": "EN",
+            "track": "Main Track",
+            "education_level": "Bachelor",
+            "program_type": "Degree Program",
+            "extra_degree": "Double Diploma",
+            "outcome_en": "Outcome in english",
+            "outcome_ru": "Outcome in russian",
+            "outcome_kz": "Outcome in kazakh"
+          }
+        },
+        "required": [
+          "id",
+          "program_year",
+          "program_code",
+          "program_title",
+          "language",
+          "track",
+          "education_level",
+          "program_type",
+          "extra_degree",
+          "outcome_en",
+          "outcome_ru",
+          "outcome_kz"
+        ],
         "properties": {
           "id": {
             "type": "integer"
@@ -2363,22 +2393,6 @@
           },
           "outcome_kz": {
             "type": "string"
-          }
-        },
-        "x-examples": {
-          "Example 1": {
-            "id": 18,
-            "program_year": 2023,
-            "program_code": "10103",
-            "program_title": "Information Systems",
-            "language": "EN",
-            "track": "Main Track",
-            "education_level": "Bachelor",
-            "program_type": "Degree Program",
-            "extra_degree": "Double Diploma",
-            "outcome_en": "Outcome in english",
-            "outcome_ru": "Outcome in russian",
-            "outcome_kz": "Outcome in kazakh"
           }
         }
       },
