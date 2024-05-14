@@ -2396,8 +2396,11 @@
           }
         }
       },
-      "AcademicManageCurriculumPutLearningOutcomeRequest": {
+      "AcademicManageCurriculumPostLearningOutcomeRequest": {
         "type": "object",
+        "x-stoplight": {
+          "id": "495dabab7abc4"
+        },
         "x-examples": {
           "Example 1": {
             "program_code": "10103",
