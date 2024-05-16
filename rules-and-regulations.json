@@ -593,7 +593,7 @@
           "title_kz",
           "title_ru",
           "description_en",
-          "description_ ru",
+          "description_ru",
           "description_kz",
           "category_title",
           "author_full_name",
@@ -627,7 +627,7 @@
               "id": "9689dwte9etjt"
             }
           },
-          "description_ ru": {
+          "description_ru": {
             "type": "string",
             "x-stoplight": {
               "id": "yk2tqy1psjxj7"
