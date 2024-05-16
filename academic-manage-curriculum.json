@@ -2319,6 +2319,179 @@
               }
             }
           }
+        },
+        "x-examples": {
+          "Example 1": {
+            "prorector": {
+              "name": "...",
+              "surname": "..."
+            },
+            "educationalMethodicalDirector": {
+              "name": "...",
+              "surname": "..."
+            },
+            "programCode": "6B0000...",
+            "degree": {
+              "ru": "Магистр",
+              "en": "Master",
+              "kz": "Магистр"
+            },
+            "terms": [
+              {
+                "term": 1,
+                "courses": [
+                  {
+                    "type": "elective",
+                    "ps_course_code": "XXX XX9",
+                    "course_code": "CSS 105",
+                    "curriculum_type": "C",
+                    "curriculum_ids": "75346,76837,76842,76840",
+                    "curriculum_id": 58825,
+                    "curriculum_slot_id": 0,
+                    "title_kz": "Компьютер ғылымдарына арналған математика 2",
+                    "title_ru": "Математика для компьютерных наук 2",
+                    "title_en": "Mathematics for Computer Science 2",
+                    "credits": 3,
+                    "ects": 5,
+                    "theory": 1,
+                    "practice": 1,
+                    "laboratory": 0,
+                    "curriculum_slot_ects": 0,
+                    "term": 1
+                  }
+                ],
+                "total_ects": 22
+              }
+            ]
+          }
+        }
+      },
+      "AcademicManageCurriculumLearningOutcomeRequest": {
+        "type": "object",
+        "properties": {
+          "program_code": {
+            "type": "string"
+          },
+          "program_year": {
+            "type": "integer"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "program_code": "10103",
+            "program_year": 2023
+          }
+        },
+        "title": ""
+      },
+      "AcademicManageCurriculumLearningOutcomeResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 18,
+            "program_year": 2023,
+            "program_code": "10103",
+            "program_title": "Information Systems",
+            "language": "EN",
+            "track": "Main Track",
+            "education_level": "Bachelor",
+            "program_type": "Degree Program",
+            "extra_degree": "Double Diploma",
+            "outcome_en": "Outcome in english",
+            "outcome_ru": "Outcome in russian",
+            "outcome_kz": "Outcome in kazakh"
+          }
+        },
+        "required": [
+          "id",
+          "program_year",
+          "program_code",
+          "program_title",
+          "language",
+          "track",
+          "education_level",
+          "program_type",
+          "extra_degree",
+          "outcome_en",
+          "outcome_ru",
+          "outcome_kz"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "program_year": {
+            "type": "integer"
+          },
+          "program_code": {
+            "type": "string"
+          },
+          "program_title": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "track": {
+            "type": "string"
+          },
+          "education_level": {
+            "type": "string"
+          },
+          "program_type": {
+            "type": "string"
+          },
+          "extra_degree": {
+            "type": "string"
+          },
+          "outcome_en": {
+            "type": "string"
+          },
+          "outcome_ru": {
+            "type": "string"
+          },
+          "outcome_kz": {
+            "type": "string"
+          }
+        }
+      },
+      "AcademicManageCurriculumPostLearningOutcomeRequest": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "495dabab7abc4"
+        },
+        "x-examples": {
+          "Example 1": {
+            "program_code": "10103",
+            "program_year": 2023,
+            "outcome_en": "Outcome in english",
+            "outcome_ru": "Outcome in russian",
+            "outcome_kz": "Outcome in kazakh"
+          }
+        },
+        "required": [
+          "program_code",
+          "program_year",
+          "outcome_en",
+          "outcome_ru",
+          "outcome_kz"
+        ],
+        "properties": {
+          "program_code": {
+            "type": "string"
+          },
+          "program_year": {
+            "type": "integer"
+          },
+          "outcome_en": {
+            "type": "string"
+          },
+          "outcome_ru": {
+            "type": "string"
+          },
+          "outcome_kz": {
+            "type": "string"
+          }
         }
       }
     }
