@@ -429,7 +429,8 @@
                 "required": [
                   "id",
                   "url",
-                  "language_name"
+                  "language_name",
+                  "version"
                 ],
                 "properties": {
                   "id": {
@@ -440,6 +441,12 @@
                   },
                   "language_name": {
                     "type": "string"
+                  },
+                  "version": {
+                    "type": "string",
+                    "x-stoplight": {
+                      "id": "c1jbtnifi6d6c"
+                    }
                   }
                 }
               }
@@ -538,7 +545,8 @@
               "required": [
                 "id",
                 "url",
-                "language_name"
+                "language_name",
+                "version"
               ],
               "properties": {
                 "id": {
@@ -549,6 +557,12 @@
                 },
                 "language_name": {
                   "type": "string"
+                },
+                "version": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "wom2ljd6mwemo"
+                  }
                 }
               }
             }
@@ -575,8 +589,12 @@
         },
         "required": [
           "id",
-          "title",
-          "description",
+          "title_en",
+          "title_kz",
+          "title_ru",
+          "description_en",
+          "description_ ru",
+          "description_kz",
           "category_title",
           "author_full_name",
           "attachments"
@@ -585,11 +603,41 @@
           "id": {
             "type": "integer"
           },
-          "title": {
-            "type": "string"
+          "title_en": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "mv2r9aze4potq"
+            }
           },
-          "description": {
-            "type": "string"
+          "title_kz": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "p7u7d2o2m4vb6"
+            }
+          },
+          "title_ru": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "k6ex633ixox9g"
+            }
+          },
+          "description_en": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "9689dwte9etjt"
+            }
+          },
+          "description_ ru": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "yk2tqy1psjxj7"
+            }
+          },
+          "description_kz": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "582cfuzk71sn9"
+            }
           },
           "category_title": {
             "type": "string"
@@ -604,7 +652,8 @@
               "required": [
                 "id",
                 "url",
-                "language_name"
+                "language_name",
+                "version"
               ],
               "properties": {
                 "id": {
@@ -615,6 +664,12 @@
                 },
                 "language_name": {
                   "type": "string"
+                },
+                "version": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "g7f5xwxl9zxih"
+                  }
                 }
               }
             }
