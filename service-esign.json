@@ -209,6 +209,12 @@
             "x-stoplight": {
               "id": "fq0ae6tp6nxu0"
             }
+          },
+          "student_class": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "15ib0htlgh1ik"
+            }
           }
         }
       },
@@ -456,12 +462,21 @@
             ],
             "programs": [
               {
-                "program_code": "10106",
-                "language": "Kazakh",
-                "speciality_code": "5B070300",
-                "title": "Information Systems",
-                "department_id": 894,
+                "program_code": "10304",
+                "language": "EN",
+                "speciality_code": "5B020700",
+                "title": "Menegement",
+                "department_id": 1,
                 "terms": 8
+              }
+            ],
+            "departments": [
+              {
+                "id": 1,
+                "parent_id": 828,
+                "title": "Department of Humanities",
+                "code": "DEP_HUMANITIES",
+                "year": 2022
               }
             ]
           }
@@ -471,7 +486,8 @@
           "year_terms",
           "document_types",
           "entrance_years",
-          "programs"
+          "programs",
+          "departments"
         ],
         "properties": {
           "document_order_statuses": {
@@ -575,6 +591,36 @@
                   "type": "integer"
                 },
                 "terms": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "departments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "parent_id",
+                "title",
+                "code",
+                "year"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "parent_id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "year": {
                   "type": "integer"
                 }
               }
