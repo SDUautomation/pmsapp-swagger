@@ -137,7 +137,18 @@
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
-        "responses": {},
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceMessageBroadcastEmployeeGetResponse"
+                }
+              }
+            }
+          }
+        },
         "operationId": "get-1.0.0-service-message-broadcast-employee",
         "x-stoplight": {
           "id": "32fwropujpm98"
@@ -146,7 +157,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "type": "object",
+                "$ref": "#/components/schemas/ServiceMessageBroadcastEmployeeGetRequest",
                 "x-examples": {
                   "Example 1": {
                     "status": [
@@ -155,24 +166,6 @@
                     "stat": [
                       1
                     ]
-                  }
-                },
-                "required": [
-                  "status",
-                  "stat"
-                ],
-                "properties": {
-                  "status": {
-                    "type": "array",
-                    "items": {
-                      "type": "integer"
-                    }
-                  },
-                  "stat": {
-                    "type": "array",
-                    "items": {
-                      "type": "integer"
-                    }
                   }
                 }
               }
@@ -772,8 +765,11 @@
           }
         }
       },
-      "ServiceMessageBroadcastEmployeeRequest": {
+      "ServiceMessageBroadcastEmployeeGetRequest": {
         "type": "object",
+        "x-stoplight": {
+          "id": "73c49ac24441b"
+        },
         "x-examples": {
           "Example 1": {
             "status": [
@@ -803,8 +799,11 @@
           }
         }
       },
-      "ServiceMessageBroadcastEmployeeResponse": {
+      "ServiceMessageBroadcastEmployeeGetResponse": {
         "type": "array",
+        "x-stoplight": {
+          "id": "60bc1e5ea3ce6"
+        },
         "x-examples": {
           "Example 1": [
             {
