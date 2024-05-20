@@ -286,7 +286,8 @@
         "required": [
           "id",
           "url",
-          "language_name"
+          "language_name",
+          "version"
         ],
         "properties": {
           "id": {
@@ -297,6 +298,12 @@
           },
           "language_name": {
             "type": "string"
+          },
+          "version": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "w2y646k2w4eqk"
+            }
           }
         }
       },
@@ -312,7 +319,8 @@
         "required": [
           "id",
           "url",
-          "language_name"
+          "language_name",
+          "version"
         ],
         "properties": {
           "id": {
@@ -323,6 +331,12 @@
           },
           "language_name": {
             "type": "string"
+          },
+          "version": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ys3hzfmvqgvb6"
+            }
           }
         }
       },
