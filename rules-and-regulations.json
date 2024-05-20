@@ -501,23 +501,32 @@
         "x-examples": {
           "Example 1": {
             "id": 1,
-            "title": "Cду академиялық саясаты туралы ережесі",
-            "description": "Cду академиялық саясаты туралы ережесі",
+            "title_en": "ADMISSION RULES OF SDU",
+            "title_ru": "ПРАВИЛА ПРИЕМА ОБУЧАЮЩИХСЯ В СДУ",
+            "title_kz": "Cду академиялық саясаты туралы ережесі",
+            "description_en": "ADMISSION RULES OF SDU",
+            "description_ru": "ПРАВИЛА ПРИЕМА ОБУЧАЮЩИХСЯ В СДУ",
+            "description_kz": "Cду академиялық саясаты туралы ережесі",
             "category_title": "Academic",
             "author_full_name": "Alimzhan Igenbayev",
             "attachments": [
               {
                 "id": 1,
                 "url": "https://oldpms.sdu.edu.kz/common/download/competent_bachelor.pdf",
-                "language_name": "Kazakh"
+                "language_name": "kz",
+                "version": "2024"
               }
             ]
           }
         },
         "required": [
           "id",
-          "title",
-          "description",
+          "title_en",
+          "title_ru",
+          "title_kz",
+          "description_en",
+          "description_ru",
+          "description_kz",
           "category_title",
           "author_full_name",
           "attachments"
@@ -526,10 +535,22 @@
           "id": {
             "type": "integer"
           },
-          "title": {
+          "title_en": {
             "type": "string"
           },
-          "description": {
+          "title_ru": {
+            "type": "string"
+          },
+          "title_kz": {
+            "type": "string"
+          },
+          "description_en": {
+            "type": "string"
+          },
+          "description_ru": {
+            "type": "string"
+          },
+          "description_kz": {
             "type": "string"
           },
           "category_title": {
@@ -559,10 +580,7 @@
                   "type": "string"
                 },
                 "version": {
-                  "type": "string",
-                  "x-stoplight": {
-                    "id": "wom2ljd6mwemo"
-                  }
+                  "type": "string"
                 }
               }
             }
