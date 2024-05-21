@@ -96,7 +96,7 @@
         }
       }
     },
-    "/1.0.0/service/manage/esign/resources": {
+    "/1.0.0/service/manage/esigns/resources": {
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
@@ -125,7 +125,8 @@
             }
           }
         }
-      }
+      },
+      "parameters": []
     }
   },
   "components": {
@@ -204,9 +205,15 @@
             }
           },
           "with_signed": {
-            "type": "boolean",
+            "type": "number",
             "x-stoplight": {
               "id": "fq0ae6tp6nxu0"
+            }
+          },
+          "student_class": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "15ib0htlgh1ik"
             }
           }
         }
@@ -427,64 +434,6 @@
       },
       "ServiceEsignResourceGetResponse": {
         "type": "object",
-        "properties": {
-          "document_order_statuses": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "year_terms": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "year": {
-                  "type": "integer"
-                },
-                "term": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "document_types": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "entrance_years": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "year": {
-                  "type": "integer"
-                }
-              }
-            }
-          }
-        },
         "x-examples": {
           "Example 1": {
             "document_order_statuses": [
@@ -510,7 +459,172 @@
               {
                 "year": 2006
               }
+            ],
+            "programs": [
+              {
+                "program_code": "10304",
+                "language": "EN",
+                "speciality_code": "5B020700",
+                "title": "Menegement",
+                "department_id": 1,
+                "terms": 8
+              }
+            ],
+            "departments": [
+              {
+                "id": 1,
+                "parent_id": 828,
+                "title": "Department of Humanities",
+                "code": "DEP_HUMANITIES",
+                "year": 2022
+              }
             ]
+          }
+        },
+        "required": [
+          "document_order_statuses",
+          "year_terms",
+          "document_types",
+          "entrance_years",
+          "programs",
+          "departments"
+        ],
+        "properties": {
+          "document_order_statuses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "year_terms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "year",
+                "term",
+                "title"
+              ],
+              "properties": {
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "document_types": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "entrance_years": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "year"
+              ],
+              "properties": {
+                "year": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "programs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "program_code",
+                "language",
+                "speciality_code",
+                "title",
+                "department_id",
+                "terms"
+              ],
+              "properties": {
+                "program_code": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                },
+                "speciality_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "department_id": {
+                  "type": "integer"
+                },
+                "terms": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "departments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "parent_id",
+                "title",
+                "code",
+                "year"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "parent_id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              }
+            }
           }
         }
       }

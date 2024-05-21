@@ -54,7 +54,7 @@
             "description": "Course is successfully created."
           }
         },
-        "operationId": "get-1.0.0-academic-manage-curriculum-core",
+        "operationId": "post-1.0.0-academic-manage-curriculum-core",
         "x-stoplight": {
           "id": "bubn7gabod7gs"
         },
@@ -2146,780 +2146,351 @@
         }
       },
       "AcademicManageCurriculumGetWorkingCurriculumResponse": {
-        "type": "array",
-        "x-stoplight": {
-          "id": "0a1acbad32ac2"
-        },
+        "type": "object",
         "x-examples": {
-          "Example 1": [
-            {
-              "term": 2,
-              "courses": [
-                {
-                  "ps_course_code": null,
-                  "course_code": "ECO 110",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 75914,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Терендетілген MS Excel",
-                  "title_ru": "Продвинутый MS Excel",
-                  "title_en": "Advanced MS Excel",
-                  "credits": 2,
-                  "ects": 3,
-                  "theory": 1,
-                  "practice": 1,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 2
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "MAN 209",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 72347,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Менеджмент",
-                  "title_ru": "Менеджмент",
-                  "title_en": "Management",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 2
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "MDE 153",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 71905,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Әлеуметтік-саяси білім модулі  (Мәдениеттану)",
-                  "title_ru": "Модуль социально-политических знаний  (Культурология)",
-                  "title_en": "Module of Social and Political Knowledge  (Cultural Studies)",
-                  "credits": 1,
-                  "ects": 2,
-                  "theory": 1,
-                  "practice": 0,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 2
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "MDE 292",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 78153,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Дене шынықтыру 2 ",
-                  "title_ru": "Физическая культура 2",
-                  "title_en": "Physical Education 2 ",
-                  "credits": 1,
-                  "ects": 2,
-                  "theory": 0,
-                  "practice": 1,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 2
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "MDE 170",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 78070,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Community engagement and value based Society 2",
-                  "title_ru": "Community engagement and value based Society 2",
-                  "title_en": "Community engagement and value based Society 2",
-                  "credits": 1,
-                  "ects": 0,
-                  "theory": 0,
-                  "practice": 1,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 2
-                }
-              ],
-              "total_ects": 12
+          "Example 1": {
+            "prorector": {
+              "employee_id": 10002,
+              "name": "Daulet",
+              "surname": "Akberdiyev"
             },
-            {
-              "term": 1,
-              "courses": [
-                {
-                  "ps_course_code": null,
-                  "course_code": "CSS 105",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 79941,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Бағдарламалау негіздері",
-                  "title_ru": "Основы программирования",
-                  "title_en": "Fundamentals of Programming",
-                  "credits": 4,
-                  "ects": 5,
-                  "theory": 2,
-                  "practice": 0,
-                  "laboratory": 2,
-                  "curriculum_slot_ects": 0,
-                  "term": 1
-                },
-                {
-                  "ps_course_code": "CSS ZZZZ",
-                  "course_code": "MDE 233",
-                  "curriculum_type": "E",
-                  "curriculum_ids": "75393",
-                  "curriculum_id": 75393,
-                  "curriculum_slot_id": 7791,
-                  "title_kz": "Түрік тілі 1 (B1 деңгейі) (Драма клубы)",
-                  "title_ru": "Турецкий язык 1 (уровень B1) (Клуб Драма)",
-                  "title_en": "Turkish Language 1 (B1 level) (Drama club)",
-                  "credits": 2,
-                  "ects": 3,
-                  "theory": 0,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 5,
-                  "term": 1
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "MDE 291",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 78152,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Дене шынықтыру 1 ",
-                  "title_ru": "Физическая культура 1",
-                  "title_en": "Physical Education 1 ",
-                  "credits": 1,
-                  "ects": 2,
-                  "theory": 0,
-                  "practice": 1,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 1
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "ECO 113",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 75913,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Экономикалық теория",
-                  "title_ru": "Экономическая теория",
-                  "title_en": "Economic Theory",
-                  "credits": 3,
-                  "ects": 4,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 1
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "MDE 160",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 78069,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Community engagement and value based Society 1",
-                  "title_ru": "Community engagement and value based Society 1",
-                  "title_en": "Community engagement and value based Society 1",
-                  "credits": 1,
-                  "ects": 0,
-                  "theory": 0,
-                  "practice": 1,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 1
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "ECO 103",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 72215,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Экономикадағы математика",
-                  "title_ru": "Математика в экономике",
-                  "title_en": "Mathematics for Economics",
-                  "credits": 3,
-                  "ects": 4,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 1
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "MDE 173",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 72512,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Ақпараттық-коммуникациялық технологиялар (ағылшын тілінде)",
-                  "title_ru": "Информационно-коммуникационные технологии (на английском языке)",
-                  "title_en": "Information and Communication Technologies (in English)",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 1
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "MDE 152",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 70936,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Әлеуметтік-саяси білім модулі  (Әлеуметтану)",
-                  "title_ru": "Модуль социально-политических знаний  (Социология)",
-                  "title_en": "Module of Social and Political Knowledge  (Sociology)",
-                  "credits": 1,
-                  "ects": 2,
-                  "theory": 1,
-                  "practice": 0,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 1
-                }
-              ],
-              "total_ects": 25
+            "educational_methodical_director": {
+              "employee_id": 10002,
+              "name": "Daulet",
+              "surname": "Akberdiyev"
             },
-            {
-              "term": 4,
-              "courses": [
-                {
-                  "ps_course_code": null,
-                  "course_code": "ECO 212",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 56740,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Статистика - II",
-                  "title_ru": "Статистика - II",
-                  "title_en": "Statistics - II",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 4
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "MDE 172",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 58190,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Философия",
-                  "title_ru": "Философия",
-                  "title_en": "Philosophy",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 2,
-                  "practice": 1,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 4
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "ECO 198",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 57309,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Оқу-танымдық тәжірибе",
-                  "title_ru": "Учебно-ознакомительная практика",
-                  "title_en": "Educational practice",
-                  "credits": 1,
-                  "ects": 1,
-                  "theory": 0,
-                  "practice": 1,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 4
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "MDE 171",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 54409,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Қазақстан тарихы",
-                  "title_ru": "История Казахстана",
-                  "title_en": "History of Kazakhstan",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 2,
-                  "practice": 1,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 4
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "FIN 202",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 55221,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Қаржылық есеп",
-                  "title_ru": "Финансовый учет",
-                  "title_en": "Financial Accounting",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 4
-                }
-              ],
-              "total_ects": 21
+            "program_code": "6B000000",
+            "degree": {
+              "ru": "Bachelor",
+              "en": "Bachelor",
+              "kz": "Bachelor"
             },
-            {
-              "term": 3,
-              "courses": [
-                {
-                  "ps_course_code": null,
-                  "course_code": "ACC 207",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 56580,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Бухгалтерлік есеп негіздері ",
-                  "title_ru": "Основы бухгалтерского учета",
-                  "title_en": "Principles of Accounting",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 3
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "MDE 154",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 56356,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Әлеуметтік-саяси білім модулі (Психология)",
-                  "title_ru": "Модуль социально-политических знаний (Психология)",
-                  "title_en": "Module of Social and Political Knowledge  (Psychology)",
-                  "credits": 1,
-                  "ects": 2,
-                  "theory": 1,
-                  "practice": 0,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 3
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "MAR 201",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 56332,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Маркетинг негиздері",
-                  "title_ru": "Основа маркетинга",
-                  "title_en": "Principles of Marketing",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 3
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "MDE 151",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 56784,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Әлеуметтік-саяси білім модулі  (Саясаттану)",
-                  "title_ru": "Модуль социально-политических знаний (Политология)",
-                  "title_en": "Module of Social and Political Knowledge (Political Science)",
-                  "credits": 1,
-                  "ects": 2,
-                  "theory": 1,
-                  "practice": 0,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 3
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "ECO 203",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 55220,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Статистика - I ",
-                  "title_ru": "Статистика - I ",
-                  "title_en": "Statistics - I ",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 3
-                }
-              ],
-              "total_ects": 19
-            },
-            {
-              "term": 6,
-              "courses": [
-                {
-                  "ps_course_code": null,
-                  "course_code": "FIN 204",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 48562,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "ҚЕХС сәйкес бухгалтерлік есеп (ACCA)",
-                  "title_ru": "Учутность на основе МСФО (ACCA)",
-                  "title_en": "Accounting according to IFRS (ACCA)",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 6
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "FIN 306",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 49524,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Басқарушылық есеп (ACCA)",
-                  "title_ru": "Управленческий учет (ACCA)",
-                  "title_en": "Managerial Accounting (ACCA)",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 6
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "MAN 303",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 50713,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Зерттеу Әдістері",
-                  "title_ru": "Методы исследования",
-                  "title_en": "Research Methods",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 6
-                }
-              ],
-              "total_ects": 15
-            },
-            {
-              "term": 5,
-              "courses": [
-                {
-                  "ps_course_code": null,
-                  "course_code": "FIN 303",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 49182,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Қаржылық басқару негіздері",
-                  "title_ru": "Основы финансового менеджмента",
-                  "title_en": "Fundamentals of Financial Management",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 5
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "ACC 303",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 49184,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Салық (ACCA)",
-                  "title_ru": "Налоги (ACCA)",
-                  "title_en": "Taxation (ACCA)",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 5
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "FIN 307",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 50543,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Есеп қағаздарын жүргізү (ACCA)",
-                  "title_ru": "Ведение отчетности (ACCA)",
-                  "title_en": "Cost Accounting (ACCA)",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 5
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "ACC 302",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 51056,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Аудит (ACCA)",
-                  "title_ru": "Аудит (ACCA)",
-                  "title_en": "Audit and Assurance (ACCA)",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 5
-                }
-              ],
-              "total_ects": 20
-            },
-            {
-              "term": 8,
-              "courses": [
-                {
-                  "ps_course_code": null,
-                  "course_code": "ECO 398",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 41490,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Өндірістік тәжірибе",
-                  "title_ru": "Производственная практика",
-                  "title_en": "Internship",
-                  "credits": 4,
-                  "ects": 10,
-                  "theory": 0,
-                  "practice": 4,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 8
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "ECO 496",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 42027,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Өндірістік (диплом алды) тәжірибе",
-                  "title_ru": "Производственная (преддипломная) практика ",
-                  "title_en": "Internship (Pregraduational practice)",
-                  "credits": 2,
-                  "ects": 3,
-                  "theory": 0,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 8
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "ACC 206",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 41486,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Корпоративтік және бизнестік құқық (ACCA)",
-                  "title_ru": "Корпоративное и бизнес право (ACCA)",
-                  "title_en": "Corporate and Business Law (ACCA)",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 2,
-                  "practice": 1,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 8
-                }
-              ],
-              "total_ects": 18
-            },
-            {
-              "term": 7,
-              "courses": [
-                {
-                  "ps_course_code": null,
-                  "course_code": "FIN 405",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 40192,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Қаржыны басқару (ACCA)",
-                  "title_ru": "Финансовый менеджмент (ACCA)",
-                  "title_en": "Financial Management (ACCA)",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 7
-                },
-                {
-                  "ps_course_code": null,
-                  "course_code": "ACC 403",
-                  "curriculum_type": "C",
-                  "curriculum_ids": null,
-                  "curriculum_id": 40193,
-                  "curriculum_slot_id": 0,
-                  "title_kz": "Қаржылық анализ  (ACCA)",
-                  "title_ru": "Финансовый анализ  (ACCA)",
-                  "title_en": "Financial Statement Analysis (ACCA)",
-                  "credits": 3,
-                  "ects": 5,
-                  "theory": 1,
-                  "practice": 2,
-                  "laboratory": 0,
-                  "curriculum_slot_ects": 0,
-                  "term": 7
-                }
-              ],
-              "total_ects": 10
-            }
-          ]
-        },
-        "items": {
-          "type": "object",
-          "required": [
-            "term",
-            "courses",
-            "total_ects"
-          ],
-          "properties": {
-            "term": {
-              "type": "integer"
-            },
-            "courses": {
-              "type": "array",
-              "items": {
-                "type": "object",
-                "required": [
-                  "ps_course_code",
-                  "course_code",
-                  "curriculum_type",
-                  "curriculum_ids",
-                  "curriculum_id",
-                  "curriculum_slot_id",
-                  "title_kz",
-                  "title_ru",
-                  "title_en",
-                  "credits",
-                  "ects",
-                  "theory",
-                  "practice",
-                  "laboratory",
-                  "curriculum_slot_ects",
-                  "term"
-                ],
-                "properties": {
-                  "ps_course_code": {
-                    "type": "null"
-                  },
-                  "course_code": {
-                    "type": "string"
-                  },
-                  "curriculum_type": {
-                    "type": "string"
-                  },
-                  "curriculum_ids": {
-                    "type": "null"
-                  },
-                  "curriculum_id": {
-                    "type": "integer"
-                  },
-                  "curriculum_slot_id": {
-                    "type": "integer"
-                  },
-                  "title_kz": {
-                    "type": "string"
-                  },
-                  "title_ru": {
-                    "type": "string"
-                  },
-                  "title_en": {
-                    "type": "string"
-                  },
-                  "credits": {
-                    "type": "integer"
-                  },
-                  "ects": {
-                    "type": "integer"
-                  },
-                  "theory": {
-                    "type": "integer"
-                  },
-                  "practice": {
-                    "type": "integer"
-                  },
-                  "laboratory": {
-                    "type": "integer"
-                  },
-                  "curriculum_slot_ects": {
-                    "type": "integer"
-                  },
-                  "term": {
-                    "type": "integer"
+            "terms": [
+              {
+                "term": 1,
+                "courses": [
+                  {
+                    "id": 1,
+                    "type": "E",
+                    "course_code": "CSS 101",
+                    "title": "Physical Education 2",
+                    "credits": 2,
+                    "ects": 2,
+                    "theory": 2,
+                    "practice": 2,
+                    "lab": 2
                   }
+                ],
+                "total_ects": 22
+              }
+            ]
+          }
+        },
+        "required": [
+          "prorector",
+          "educational_methodical_director",
+          "program_code",
+          "degree",
+          "terms"
+        ],
+        "properties": {
+          "prorector": {
+            "type": "object",
+            "required": [
+              "employee_id",
+              "name",
+              "surname"
+            ],
+            "properties": {
+              "employee_id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "surname": {
+                "type": "string"
+              }
+            }
+          },
+          "educational_methodical_director": {
+            "type": "object",
+            "required": [
+              "employee_id",
+              "name",
+              "surname"
+            ],
+            "properties": {
+              "employee_id": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "surname": {
+                "type": "string"
+              }
+            }
+          },
+          "program_code": {
+            "type": "string"
+          },
+          "degree": {
+            "type": "object",
+            "required": [
+              "ru",
+              "en",
+              "kz"
+            ],
+            "properties": {
+              "ru": {
+                "type": "string"
+              },
+              "en": {
+                "type": "string"
+              },
+              "kz": {
+                "type": "string"
+              }
+            }
+          },
+          "terms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "term",
+                "courses",
+                "total_ects"
+              ],
+              "properties": {
+                "term": {
+                  "type": "integer"
+                },
+                "courses": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "type",
+                      "course_code",
+                      "title",
+                      "credits",
+                      "ects",
+                      "theory",
+                      "practice",
+                      "lab"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "type": {
+                        "type": "string"
+                      },
+                      "course_code": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "credits": {
+                        "type": "integer"
+                      },
+                      "ects": {
+                        "type": "integer"
+                      },
+                      "theory": {
+                        "type": "integer"
+                      },
+                      "practice": {
+                        "type": "integer"
+                      },
+                      "lab": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                },
+                "total_ects": {
+                  "type": "integer"
                 }
               }
-            },
-            "total_ects": {
-              "type": "integer"
             }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "prorector": {
+              "name": "...",
+              "surname": "..."
+            },
+            "educationalMethodicalDirector": {
+              "name": "...",
+              "surname": "..."
+            },
+            "programCode": "6B0000...",
+            "degree": {
+              "ru": "Магистр",
+              "en": "Master",
+              "kz": "Магистр"
+            },
+            "terms": [
+              {
+                "term": 1,
+                "courses": [
+                  {
+                    "type": "elective",
+                    "ps_course_code": "XXX XX9",
+                    "course_code": "CSS 105",
+                    "curriculum_type": "C",
+                    "curriculum_ids": "75346,76837,76842,76840",
+                    "curriculum_id": 58825,
+                    "curriculum_slot_id": 0,
+                    "title_kz": "Компьютер ғылымдарына арналған математика 2",
+                    "title_ru": "Математика для компьютерных наук 2",
+                    "title_en": "Mathematics for Computer Science 2",
+                    "credits": 3,
+                    "ects": 5,
+                    "theory": 1,
+                    "practice": 1,
+                    "laboratory": 0,
+                    "curriculum_slot_ects": 0,
+                    "term": 1
+                  }
+                ],
+                "total_ects": 22
+              }
+            ]
+          }
+        }
+      },
+      "AcademicManageCurriculumLearningOutcomeRequest": {
+        "type": "object",
+        "properties": {
+          "program_code": {
+            "type": "string"
+          },
+          "program_year": {
+            "type": "integer"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "program_code": "10103",
+            "program_year": 2023
+          }
+        },
+        "title": ""
+      },
+      "AcademicManageCurriculumLearningOutcomeResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 18,
+            "program_year": 2023,
+            "program_code": "10103",
+            "program_title": "Information Systems",
+            "language": "EN",
+            "track": "Main Track",
+            "education_level": "Bachelor",
+            "program_type": "Degree Program",
+            "extra_degree": "Double Diploma",
+            "outcome_en": "Outcome in english",
+            "outcome_ru": "Outcome in russian",
+            "outcome_kz": "Outcome in kazakh"
+          }
+        },
+        "required": [
+          "id",
+          "program_year",
+          "program_code",
+          "program_title",
+          "language",
+          "track",
+          "education_level",
+          "program_type",
+          "extra_degree",
+          "outcome_en",
+          "outcome_ru",
+          "outcome_kz"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "program_year": {
+            "type": "integer"
+          },
+          "program_code": {
+            "type": "string"
+          },
+          "program_title": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          },
+          "track": {
+            "type": "string"
+          },
+          "education_level": {
+            "type": "string"
+          },
+          "program_type": {
+            "type": "string"
+          },
+          "extra_degree": {
+            "type": "string"
+          },
+          "outcome_en": {
+            "type": "string"
+          },
+          "outcome_ru": {
+            "type": "string"
+          },
+          "outcome_kz": {
+            "type": "string"
+          }
+        }
+      },
+      "AcademicManageCurriculumPostLearningOutcomeRequest": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "495dabab7abc4"
+        },
+        "x-examples": {
+          "Example 1": {
+            "program_code": "10103",
+            "program_year": 2023,
+            "outcome_en": "Outcome in english",
+            "outcome_ru": "Outcome in russian",
+            "outcome_kz": "Outcome in kazakh"
+          }
+        },
+        "required": [
+          "program_code",
+          "program_year",
+          "outcome_en",
+          "outcome_ru",
+          "outcome_kz"
+        ],
+        "properties": {
+          "program_code": {
+            "type": "string"
+          },
+          "program_year": {
+            "type": "integer"
+          },
+          "outcome_en": {
+            "type": "string"
+          },
+          "outcome_ru": {
+            "type": "string"
+          },
+          "outcome_kz": {
+            "type": "string"
           }
         }
       }
