@@ -4216,63 +4216,72 @@
         "x-examples": {
           "Example 1": {
             "information": {
-              "id": 10559,
+              "id": 1,
               "language": "en",
-              "status": 2,
-              "name": "Aliya",
-              "surname": "Adilbayeva",
-              "name_native": "Алия",
-              "surname_native": "Адильбаева",
-              "username": "aliya.adilbayeva",
+              "status": 1,
+              "name": "Arsentiy",
+              "surname": "Zhunussov",
+              "name_native": "Arsentiy",
+              "surname_native": "Zhunussov",
+              "username": "arsentiy.zhunussov",
               "wage_rate": 1,
-              "email": "aliya.adilbayeva@sdu.edu.kz",
-              "birth_date": "1980-01-29",
-              "last_ip": "10.24.85.181",
-              "last_device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-              "last_login_date": "2024-01-31 12:26:08",
+              "email": "arsentiy.zhunussov@sdu.edu.kz",
+              "birth_date": "2023-06-14",
+              "last_ip": "127.0.0.1",
+              "last_device": "Mozilla/5.0 ...",
+              "last_login_date": "2023-06-14 17:43:00",
               "is_reliable": true,
-              "degree_title": "Master",
-              "photo": "data:image/png;base64,...",
-              "department": "Faculty of Engineering and Natural Sciences",
-              "position": "Chief Specialist"
+              "degree_title": "Bachelor",
+              "photo": "base64_encoded_string",
+              "department": "Automation Department",
+              "position": "Back-end Developer"
             },
             "messages": [
               {
-                "id": 206,
-                "title": "Продажа квартиры в Жк Карлығаш ",
-                "content": "<p><span style=\"text-decoration: underline;\">https://krisha.kz/a/show/689799881</span></p>\r\n<p> </p>\r\n<p><span style=\"text-decoration: underline;\">Обращаться по номеру</span> 87079088586</p>",
-                "create_date": "2023-12-18 16:28:22",
+                "id": 1,
+                "title": "Title",
+                "content": "Content",
+                "create_date": "2023-06-14 17:50:00",
                 "status": 1,
-                "username": "farukh.mashurov",
-                "full_name": "Farukh Mashurov"
+                "username": "arsentiy.zhunussov",
+                "full_name": "Arsentiy Zhunussov"
               }
             ],
             "events": [
               {
-                "title": "Сourse and Program Management",
-                "start_date": "2023-10-30",
-                "start_time": "00:00:00",
-                "end_date": "2023-11-03",
-                "end_time": "23:59:00",
-                "is_open": false
+                "title": "Title",
+                "start_date": "2023-06-14",
+                "start_time": "17:56:00",
+                "end_date": "2023-06-14",
+                "end_time": "17:56:00",
+                "is_open": true
+              }
+            ],
+            "new_inbox_messages": [
+              {
+                "message_id": 111,
+                "from_employee": "Daulet Akberdiyev",
+                "subject": "Subject",
+                "content": "Content",
+                "receive_date": "2024-05-17 11:14:50"
               }
             ],
             "permissions": {
               "individual": [
                 {
-                  "title": "Section Management (Send requests)",
-                  "key": "SMAN_SEND_REQUESTS",
-                  "start_date": "2024-01-10",
-                  "start_time": "00:00:00",
-                  "end_date": "2024-02-11",
-                  "end_time": "00:00:00",
+                  "title": "Title",
+                  "key": "key",
+                  "start_date": "2023-06-14",
+                  "start_time": "17:59:00",
+                  "end_date": "2023-06-14",
+                  "end_time": "17:59:00",
                   "is_blocking": false,
-                  "employee_id": "10559",
-                  "program_code": null,
-                  "department_code": null,
-                  "class": null,
-                  "education_level": null,
-                  "is_open": false
+                  "emp_id": 1,
+                  "prog_code": "code",
+                  "dep_code": "DEP_CODE",
+                  "class": 1,
+                  "edu_level": "Medium",
+                  "is_open": true
                 }
               ],
               "assessment": [
@@ -4285,12 +4294,25 @@
                   "is_open": true
                 }
               ],
-              "module": [
+              "modules": [
                 {
-                  "id": 42,
-                  "name": "Academic Operations",
-                  "module_name": null,
-                  "code": "show_academic_operations"
+                  "id": 12,
+                  "parent_id": 2,
+                  "code": "show_sections",
+                  "name": "Section Management",
+                  "module_name": "progman",
+                  "type": {
+                    "id": 7,
+                    "title": "Module"
+                  },
+                  "accessible_period": [
+                    {
+                      "is_active": true,
+                      "exception_for_employee": true,
+                      "start_date": "2024-04-14 00:00:00",
+                      "end_date": "2024-05-15 00:00:00"
+                    }
+                  ]
                 }
               ]
             }
@@ -4300,6 +4322,7 @@
           "information",
           "messages",
           "events",
+          "new_inbox_messages",
           "permissions"
         ],
         "properties": {
@@ -4458,12 +4481,42 @@
               }
             }
           },
+          "new_inbox_messages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "message_id",
+                "from_employee",
+                "subject",
+                "content",
+                "receive_date"
+              ],
+              "properties": {
+                "message_id": {
+                  "type": "integer"
+                },
+                "from_employee": {
+                  "type": "string"
+                },
+                "subject": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "receive_date": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "permissions": {
             "type": "object",
             "required": [
               "individual",
               "assessment",
-              "module"
+              "modules"
             ],
             "properties": {
               "individual": {
@@ -4478,11 +4531,11 @@
                     "end_date",
                     "end_time",
                     "is_blocking",
-                    "employee_id",
-                    "program_code",
-                    "department_code",
+                    "emp_id",
+                    "prog_code",
+                    "dep_code",
                     "class",
-                    "education_level",
+                    "edu_level",
                     "is_open"
                   ],
                   "properties": {
@@ -4507,20 +4560,20 @@
                     "is_blocking": {
                       "type": "boolean"
                     },
-                    "employee_id": {
+                    "emp_id": {
+                      "type": "integer"
+                    },
+                    "prog_code": {
                       "type": "string"
                     },
-                    "program_code": {
-                      "nullable": true
-                    },
-                    "department_code": {
-                      "nullable": true
+                    "dep_code": {
+                      "type": "string"
                     },
                     "class": {
-                      "nullable": true
+                      "type": "integer"
                     },
-                    "education_level": {
-                      "nullable": true
+                    "edu_level": {
+                      "type": "string"
                     },
                     "is_open": {
                       "type": "boolean"
@@ -4562,29 +4615,75 @@
                   }
                 }
               },
-              "module": {
+              "modules": {
                 "type": "array",
                 "items": {
                   "type": "object",
                   "required": [
                     "id",
+                    "parent_id",
+                    "code",
                     "name",
                     "module_name",
-                    "code"
+                    "type",
+                    "accessible_period"
                   ],
                   "properties": {
                     "id": {
                       "type": "integer"
                     },
+                    "parent_id": {
+                      "type": "integer"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
                     "name": {
                       "type": "string"
                     },
                     "module_name": {
-                      "type": "string",
-                      "nullable": true
-                    },
-                    "code": {
                       "type": "string"
+                    },
+                    "type": {
+                      "type": "object",
+                      "required": [
+                        "id",
+                        "title"
+                      ],
+                      "properties": {
+                        "id": {
+                          "type": "integer"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "accessible_period": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "is_active",
+                          "exception_for_employee",
+                          "start_date",
+                          "end_date"
+                        ],
+                        "properties": {
+                          "is_active": {
+                            "type": "boolean"
+                          },
+                          "exception_for_employee": {
+                            "type": "boolean"
+                          },
+                          "start_date": {
+                            "type": "string"
+                          },
+                          "end_date": {
+                            "type": "string"
+                          }
+                        }
+                      }
                     }
                   }
                 }
