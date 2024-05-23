@@ -84,7 +84,14 @@
           "id": "7nv9vkpljhr79"
         },
         "requestBody": {
-          "content": {}
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
         }
       },
       "delete": {
