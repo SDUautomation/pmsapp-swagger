@@ -12061,7 +12061,109 @@
           "rules_and_regulations": {
             "type": "array",
             "items": {
-              "type": "string"
+              "type": "object",
+              "required": [
+                "uuid",
+                "attachments"
+              ],
+              "properties": {
+                "uuid": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "ykdag9yn7nr3f"
+                  }
+                },
+                "details": {
+                  "type": "array",
+                  "x-stoplight": {
+                    "id": "uqpta4uxod3xj"
+                  },
+                  "items": {
+                    "x-stoplight": {
+                      "id": "94ari5jnk20qn"
+                    },
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "t7foay9bb2g1u"
+                        }
+                      },
+                      "content": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "6evdp4jle0hi5"
+                        }
+                      }
+                    }
+                  }
+                },
+                "categories": {
+                  "type": "array",
+                  "x-stoplight": {
+                    "id": "neyyhtyt8qhao"
+                  },
+                  "items": {
+                    "x-stoplight": {
+                      "id": "h7qc5vjehwtln"
+                    },
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "crmchia3e1oqt"
+                        }
+                      }
+                    }
+                  }
+                },
+                "attachments": {
+                  "type": "array",
+                  "x-stoplight": {
+                    "id": "wn7q6zi1ynxyd"
+                  },
+                  "items": {
+                    "x-stoplight": {
+                      "id": "7dkmv57455522"
+                    },
+                    "type": "object",
+                    "required": [
+                      "title",
+                      "language",
+                      "size",
+                      "path"
+                    ],
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "af380vo6zz0vo"
+                        }
+                      },
+                      "language": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "jncn43f8168f0"
+                        }
+                      },
+                      "size": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "0gfs5jgga43ox"
+                        }
+                      },
+                      "path": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "cstruxhc0yzzo"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "syllabus_statistics": {
