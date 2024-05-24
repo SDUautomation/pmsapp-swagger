@@ -14770,6 +14770,12 @@
                       "x-stoplight": {
                         "id": "yjvivmidbrp5u"
                       }
+                    },
+                    "_isSelected": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "ojjkzz5jilygv"
+                      }
                     }
                   }
                 }
@@ -14877,6 +14883,12 @@
                       "type": "number",
                       "x-stoplight": {
                         "id": "pbr9ik4yyhia3"
+                      }
+                    },
+                    "_isSelected": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "1u4iku92qppfp"
                       }
                     }
                   }
@@ -14986,6 +14998,12 @@
                       "x-stoplight": {
                         "id": "nauvtyj69t0hl"
                       }
+                    },
+                    "_isSelected": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "0u7fmcen3pq84"
+                      }
                     }
                   }
                 }
@@ -15093,6 +15111,12 @@
                       "type": "number",
                       "x-stoplight": {
                         "id": "z08gabqcoweah"
+                      }
+                    },
+                    "_isSelected": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "8ctg3ns4dfali"
                       }
                     }
                   }
