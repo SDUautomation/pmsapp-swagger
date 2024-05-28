@@ -4138,6 +4138,59 @@
           }
         }
       }
+    },
+    "/1.0.0/administrative/staffs/workload": {
+      "get": {
+        "summary": "GetStaffsWorkload",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Workload of teachers are successfully returned.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeStaffsWorkloadResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-staffs-workload",
+        "x-stoplight": {
+          "id": "h16spwybxz7r1"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeStaffsWorkloadRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/administrative/staffs/workload/resources": {
+      "get": {
+        "summary": "GetStaffsWorkloadResources",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Staff List Workload resources are successfully returned.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeStaffsWorkloadResourcesResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-staffs-workload-resources",
+        "x-stoplight": {
+          "id": "g91qy7pnafqsi"
+        }
+      }
     }
   },
   "components": {
@@ -23031,6 +23084,190 @@
         "properties": {
           "message": {
             "type": "string"
+          }
+        }
+      },
+      "AdministrativeStaffsWorkloadRequest": {
+        "title": "AdministrativeStaffsWorkloadRequest",
+        "x-stoplight": {
+          "id": "c8q31l3ux2742"
+        },
+        "type": "object",
+        "required": [
+          "year",
+          "term",
+          "department_code"
+        ],
+        "properties": {
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "wfjcpvofassxv"
+            }
+          },
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "i9b9u7i0dhfcd"
+            }
+          },
+          "department_code": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "wghsdp44khfp8"
+            }
+          }
+        }
+      },
+      "AdministrativeStaffsWorkloadResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "employee_id": 1232,
+              "employee_name": "Ualikhan Sadyk",
+              "ects": 5,
+              "theory": 1,
+              "practice": 1,
+              "lab": 1,
+              "credits": 3,
+              "course_code": "CSS 101",
+              "type": "P",
+              "week_number": 12,
+              "course_title": "Computer Vision",
+              "section": "01",
+              "hour_number": 15,
+              "student_count": 20,
+              "thesis_count": 1
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "employee_id",
+            "employee_name",
+            "ects",
+            "theory",
+            "practice",
+            "lab",
+            "credits",
+            "course_code",
+            "type",
+            "week_number",
+            "course_title",
+            "section",
+            "hour_number",
+            "student_count",
+            "thesis_count"
+          ],
+          "properties": {
+            "employee_id": {
+              "type": "integer"
+            },
+            "employee_name": {
+              "type": "string"
+            },
+            "ects": {
+              "type": "integer"
+            },
+            "theory": {
+              "type": "integer"
+            },
+            "practice": {
+              "type": "integer"
+            },
+            "lab": {
+              "type": "integer"
+            },
+            "credits": {
+              "type": "integer"
+            },
+            "course_code": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "week_number": {
+              "type": "integer"
+            },
+            "course_title": {
+              "type": "string"
+            },
+            "section": {
+              "type": "string"
+            },
+            "hour_number": {
+              "type": "integer"
+            },
+            "student_count": {
+              "type": "integer"
+            },
+            "thesis_count": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "AdministrativeStaffsWorkloadResourcesResponse": {
+        "type": "object",
+        "properties": {
+          "year_terms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "departments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "department_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "faculty": {
+                  "type": "string"
+                },
+                "faculty_code": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "year_terms": [
+              {
+                "year": 2020,
+                "term": 1,
+                "title": "2023 - 1"
+              }
+            ],
+            "departments": [
+              {
+                "department_code": "DEP_LANG_EDU",
+                "title": "Department of Language Education",
+                "faculty": "Faculty of education and humanities",
+                "faculty_code": "F_PHIL"
+              }
+            ]
           }
         }
       }
