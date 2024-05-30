@@ -373,6 +373,135 @@
           }
         }
       }
+    },
+    "/1.0.0/service/manage/announcements": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceManageAnnouncementsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-service-manage-announcements",
+        "x-stoplight": {
+          "id": "tc2i80ajgp28i"
+        }
+      },
+      "post": {
+        "summary": "Your POST endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "post-1.0.0-service-manage-announcements",
+        "x-stoplight": {
+          "id": "px9avbl5gmi4p"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceManageAnnouncementsPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/service/manage/announcements/{announcement}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "announcement",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceManageSingleAnnouncementGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-service-manage-announcements-announcement",
+        "x-stoplight": {
+          "id": "c8bihk4qy2y52"
+        }
+      },
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "put-1.0.0-service-manage-announcements-announcement",
+        "x-stoplight": {
+          "id": "kj6wdg5fqyqgf"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceManageAnnouncementsPostRequest"
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "summary": "Your DELETE endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "delete-1.0.0-service-manage-announcements-announcement",
+        "x-stoplight": {
+          "id": "kg619mxuykotq"
+        }
+      }
+    },
+    "/1.0.0/service/manage/announcements/{announcement}/publish": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "announcement",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "put-1.0.0-service-manage-announcements-announcement-publish",
+        "x-stoplight": {
+          "id": "seok731b3hnnw"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceManageSingleAnnouncementPublishRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1456,6 +1585,195 @@
               },
               "type": "string"
             }
+          }
+        }
+      },
+      "ServiceManageAnnouncementsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1,
+              "title": "Сourse and Teaching Evaluation survey is open!",
+              "content": "The purpose of this survey is to carry out institutional research, improve the quality of the proposed course and teaching methodology.",
+              "status": true,
+              "start_date": "23-06-2023 00:00:00",
+              "end_date": "23-06-2023 00:00:00"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "title",
+            "content",
+            "status",
+            "start_date",
+            "end_date"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "content": {
+              "type": "string"
+            },
+            "status": {
+              "type": "boolean"
+            },
+            "start_date": {
+              "type": "string"
+            },
+            "end_date": {
+              "type": "string"
+            }
+          }
+        }
+      },
+      "ServiceManageAnnouncementsPostRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "title_en": "Сourse and Teaching Evaluation survey is open!",
+            "title_ru": "Открыт опрос по оценке курса и преподавания!",
+            "title_kz": "Пән және оқытушының оқыту әдістемесін бағалау ашылды!",
+            "content_en": "The purpose of this survey is to carry out institutional research, improve the quality of the proposed course and teaching methodology.",
+            "content_ru": "Целью данного опроса является осуществление институциональных исследований, повышение качества предлагаемого курса и методики преподавания.",
+            "content_kz": "Бұл сауалнама институционалдық зерттеулер жасау, ұсынылып отырған пән мен оқытушының оқыту әдістемесінің сапасын арттыру мақсатында жіберіліп отыр.",
+            "targets": [
+              1
+            ],
+            "start_date": "23-06-2023",
+            "end_date": "23-06-2023"
+          }
+        },
+        "required": [
+          "content_en",
+          "targets",
+          "start_date",
+          "end_date"
+        ],
+        "properties": {
+          "title_en": {
+            "type": "string"
+          },
+          "title_ru": {
+            "type": "string"
+          },
+          "title_kz": {
+            "type": "string"
+          },
+          "content_en": {
+            "type": "string"
+          },
+          "content_ru": {
+            "type": "string"
+          },
+          "content_kz": {
+            "type": "string"
+          },
+          "targets": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "start_date": {
+            "type": "string"
+          },
+          "end_date": {
+            "type": "string"
+          }
+        }
+      },
+      "ServiceManageSingleAnnouncementGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "id": 1,
+            "title_en": "Сourse and Teaching Evaluation survey is open!",
+            "title_ru": "Открыт опрос по оценке курса и преподавания!",
+            "title_kz": "Пән және оқытушының оқыту әдістемесін бағалау ашылды!",
+            "content_en": "The purpose of this survey is to carry out institutional research, improve the quality of the proposed course and teaching methodology.",
+            "content_ru": "Целью данного опроса является осуществление институциональных исследований, повышение качества предлагаемого курса и методики преподавания.",
+            "content_kz": "Бұл сауалнама институционалдық зерттеулер жасау, ұсынылып отырған пән мен оқытушының оқыту әдістемесінің сапасын арттыру мақсатында жіберіліп отыр.",
+            "targets": [
+              1
+            ],
+            "status": true,
+            "start_date": "23-06-2023 00:00:00",
+            "end_date": "23-06-2023 00:00:00"
+          }
+        },
+        "required": [
+          "id",
+          "title_en",
+          "title_ru",
+          "title_kz",
+          "content_en",
+          "content_ru",
+          "content_kz",
+          "targets",
+          "status",
+          "start_date",
+          "end_date"
+        ],
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "title_en": {
+            "type": "string"
+          },
+          "title_ru": {
+            "type": "string"
+          },
+          "title_kz": {
+            "type": "string"
+          },
+          "content_en": {
+            "type": "string"
+          },
+          "content_ru": {
+            "type": "string"
+          },
+          "content_kz": {
+            "type": "string"
+          },
+          "targets": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "status": {
+            "type": "boolean"
+          },
+          "start_date": {
+            "type": "string"
+          },
+          "end_date": {
+            "type": "string"
+          }
+        }
+      },
+      "ServiceManageSingleAnnouncementPublishRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "status": false
+          }
+        },
+        "required": [
+          "status"
+        ],
+        "properties": {
+          "status": {
+            "type": "boolean"
           }
         }
       }
