@@ -502,6 +502,28 @@
           }
         }
       }
+    },
+    "/1.0.0/service/manage/announcments/resource": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceManageAnnouncementsResourcesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-service-manage-announcments-resource",
+        "x-stoplight": {
+          "id": "zacatt213ky4e"
+        }
+      }
     }
   },
   "components": {
@@ -1774,6 +1796,44 @@
         "properties": {
           "status": {
             "type": "boolean"
+          }
+        }
+      },
+      "ServiceManageAnnouncementsResourcesGetResponse": {
+        "title": "ServiceManageAnnouncementsResourcesGetResponse",
+        "x-stoplight": {
+          "id": "0f1rpvm0bk06i"
+        },
+        "type": "array",
+        "items": {
+          "x-stoplight": {
+            "id": "ok54omcdp07xd"
+          },
+          "type": "object",
+          "required": [
+            "id",
+            "title",
+            "description"
+          ],
+          "properties": {
+            "id": {
+              "type": "number",
+              "x-stoplight": {
+                "id": "odpzbhnss5ugp"
+              }
+            },
+            "title": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "890lxfcqdih3n"
+              }
+            },
+            "description": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "k0h450zzroymh"
+              }
+            }
           }
         }
       }
