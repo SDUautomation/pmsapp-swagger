@@ -23212,45 +23212,6 @@
       },
       "AdministrativeStaffsWorkloadResourcesResponse": {
         "type": "object",
-        "properties": {
-          "year_terms": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "year": {
-                  "type": "integer"
-                },
-                "term": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "departments": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "department_code": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "faculty": {
-                  "type": "string"
-                },
-                "faculty_code": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
         "x-examples": {
           "Example 1": {
             "year_terms": [
@@ -23268,6 +23229,60 @@
                 "faculty_code": "F_PHIL"
               }
             ]
+          }
+        },
+        "required": [
+          "year_terms",
+          "departments"
+        ],
+        "properties": {
+          "year_terms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "year",
+                "term",
+                "title"
+              ],
+              "properties": {
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "departments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "department_code",
+                "title",
+                "faculty",
+                "faculty_code"
+              ],
+              "properties": {
+                "department_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "faculty": {
+                  "type": "string"
+                },
+                "faculty_code": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       }
