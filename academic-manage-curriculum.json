@@ -1328,7 +1328,6 @@
           "is_active",
           "term",
           "track_code",
-          "elective_type",
           "ids"
         ],
         "properties": {
