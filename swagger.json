@@ -12580,57 +12580,9 @@
       },
       "ProfileOverviewResponse": {
         "type": "object",
-        "x-examples": {
-          "sample": {
-            "cv": {
-              "progress": 67,
-              "filled": [
-                "string"
-              ],
-              "empty": [
-                "string"
-              ]
-            },
-            "personal": {
-              "name": "Zhandos",
-              "surname": "Saparbayev",
-              "username": "zhandos",
-              "name_native": "Zhandos",
-              "surname_native": "Saparbayev",
-              "patronymic_native": "Yerzhanuly",
-              "birth_date": "05-03-2003",
-              "country": "Kazakhstan",
-              "gender": "Male",
-              "degree": "Bachelor",
-              "last_log_date": "14-07-2023 11:27",
-              "last_log_ip": "11.123.12.15",
-              "inner_phone": "87788829586",
-              "mail": "saparbayevzh03@gmail.com",
-              "positions": [
-                {
-                  "title": "Assistant Professor",
-                  "is_main": false
-                }
-              ]
-            },
-            "logs": [
-              {
-                "id": 421,
-                "title": "Contact has updated",
-                "created_at": "2023-07-12 06:21:58",
-                "updated_at": "2023-07-12 06:21:58"
-              }
-            ]
-          }
-        },
         "properties": {
           "cv": {
             "type": "object",
-            "required": [
-              "progress",
-              "filled",
-              "empty"
-            ],
             "properties": {
               "progress": {
                 "type": "integer"
@@ -12651,23 +12603,6 @@
           },
           "personal": {
             "type": "object",
-            "required": [
-              "name",
-              "surname",
-              "username",
-              "name_native",
-              "surname_native",
-              "patronymic_native",
-              "birth_date",
-              "country",
-              "gender",
-              "degree",
-              "last_log_date",
-              "last_log_ip",
-              "inner_phone",
-              "mail",
-              "positions"
-            ],
             "properties": {
               "name": {
                 "type": "string"
@@ -12722,11 +12657,7 @@
                     "is_main": {
                       "type": "boolean"
                     }
-                  },
-                  "required": [
-                    "title",
-                    "is_main"
-                  ]
+                  }
                 }
               }
             }
@@ -12748,22 +12679,709 @@
                 "updated_at": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "projects": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "sponsor": {
+                  "type": "string"
+                },
+                "position": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "project_link": {
+                  "type": "string"
+                },
+                "is_ongoing": {
+                  "type": "boolean"
+                },
+                "start_month": {
+                  "type": "integer"
+                },
+                "start_year": {
+                  "type": "integer"
+                },
+                "end_month": {
+                  "type": "integer"
+                },
+                "end_year": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "address": {
+            "type": "object",
+            "properties": {
+              "country": {
+                "type": "integer"
               },
-              "required": [
-                "id",
-                "title",
-                "created_at",
-                "updated_at"
-              ]
+              "province": {
+                "type": "integer"
+              },
+              "region": {
+                "type": "integer"
+              },
+              "city": {
+                "type": "integer"
+              },
+              "address_line": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              }
+            }
+          },
+          "biography": {
+            "type": "object",
+            "properties": {
+              "biography": {
+                "type": "string"
+              }
+            }
+          },
+          "certificates": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "organization_id": {
+                  "type": "integer"
+                },
+                "certified_date": {
+                  "type": "string"
+                },
+                "credential_id": {
+                  "type": "string"
+                },
+                "credential_url": {
+                  "type": "string"
+                },
+                "expired_date": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "children": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "surname": {
+                  "type": "string"
+                },
+                "gender": {
+                  "type": "integer"
+                },
+                "birthdate": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "contacts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "contact": {
+                  "type": "string"
+                },
+                "type_id": {
+                  "type": "integer"
+                },
+                "show_status": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "education": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "level_id": {
+                  "type": "string"
+                },
+                "university": {
+                  "type": "string"
+                },
+                "faculty": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "string"
+                },
+                "speciality": {
+                  "type": "string"
+                },
+                "cipher": {
+                  "type": "string"
+                },
+                "registration_no": {
+                  "type": "string"
+                },
+                "diploma_no": {
+                  "type": "string"
+                },
+                "start_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                },
+                "is_ongoing": {
+                  "type": "boolean"
+                },
+                "is_honor": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "articles": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "journal_id": {
+                  "type": "integer"
+                },
+                "degree": {
+                  "type": "integer"
+                },
+                "series": {
+                  "type": "string"
+                },
+                "authors": {
+                  "type": "string"
+                },
+                "pages": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "integer"
+                },
+                "published_month": {
+                  "type": "integer"
+                },
+                "published_year": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "books": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "publisher": {
+                  "type": "string"
+                },
+                "book_type": {
+                  "type": "integer"
+                },
+                "authors": {
+                  "type": "string"
+                },
+                "pages": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "integer"
+                },
+                "published_month": {
+                  "type": "integer"
+                },
+                "published_year": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "conducted_courses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "level": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "conferences": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "conference_id": {
+                  "type": "integer"
+                },
+                "authors": {
+                  "type": "string"
+                },
+                "pages": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "country": {
+                  "type": "integer"
+                },
+                "published_month": {
+                  "type": "integer"
+                },
+                "published_year": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "organizations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "organization": {
+                  "type": "string"
+                },
+                "is_ongoing": {
+                  "type": "boolean"
+                },
+                "membership_date": {
+                  "type": "string"
+                },
+                "end_date": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "supervisions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "student": {
+                  "type": "string"
+                },
+                "level_id": {
+                  "type": "string"
+                },
+                "university": {
+                  "type": "string"
+                },
+                "topic": {
+                  "type": "string"
+                },
+                "is_ongoing": {
+                  "type": "boolean"
+                },
+                "start_year": {
+                  "type": "integer"
+                },
+                "defense_year": {
+                  "type": "integer"
+                },
+                "student_status": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "experiences": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "company_id": {
+                  "type": "integer"
+                },
+                "start_month": {
+                  "type": "integer"
+                },
+                "start_year": {
+                  "type": "integer"
+                },
+                "end_month": {
+                  "type": "integer"
+                },
+                "end_year": {
+                  "type": "integer"
+                },
+                "country_id": {
+                  "type": "integer"
+                },
+                "city_id": {
+                  "type": "integer"
+                },
+                "employment_type": {
+                  "type": "integer"
+                },
+                "location_id": {
+                  "type": "integer"
+                },
+                "is_current_position": {
+                  "type": "boolean"
+                },
+                "industry": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "skills": {
+            "type": "object",
+            "properties": {
+              "hard_skills": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "skill": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "interests": {
+                "type": "object",
+                "properties": {
+                  "interest": {
+                    "type": "string"
+                  }
+                }
+              },
+              "languages": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "language_code": {
+                      "type": "string"
+                    },
+                    "level_id": {
+                      "type": "string"
+                    },
+                    "is_native": {
+                      "type": "boolean"
+                    }
+                  }
+                }
+              }
             }
           }
         },
-        "required": [
-          "cv",
-          "personal",
-          "logs"
-        ],
-        "title": ""
+        "x-examples": {
+          "Example 1": {
+            "cv": {
+              "progress": 67,
+              "filled": [
+                "string"
+              ],
+              "empty": [
+                "string"
+              ]
+            },
+            "personal": {
+              "name": "Zhandos",
+              "surname": "Saparbayev",
+              "username": "zhandos",
+              "name_native": "Zhandos",
+              "surname_native": "Saparbayev",
+              "patronymic_native": "Yerzhanuly",
+              "birth_date": "05-03-2003",
+              "country": "Kazakhstan",
+              "gender": "Male",
+              "degree": "Bachelor",
+              "last_log_date": "14-07-2023 11:27",
+              "last_log_ip": "11.123.12.15",
+              "inner_phone": "87788829586",
+              "mail": "saparbayevzh03@gmail.com",
+              "positions": [
+                {
+                  "title": "Assistant Professor",
+                  "is_main": false
+                }
+              ]
+            },
+            "logs": [
+              {
+                "id": 421,
+                "title": "Contact has updated",
+                "created_at": "2023-07-12 06:21:58",
+                "updated_at": "2023-07-12 06:21:58"
+              }
+            ],
+            "projects": [
+              {
+                "id": 62,
+                "title": "SDU portal for teacher",
+                "sponsor": "Zhandos Saparbayev",
+                "position": "Backend",
+                "description": "PMS helps for teachers",
+                "project_link": "link/for/project",
+                "is_ongoing": true,
+                "start_month": 7,
+                "start_year": 2023,
+                "end_month": 7,
+                "end_year": 2024
+              }
+            ],
+            "address": {
+              "country": 627,
+              "province": 825,
+              "region": 875,
+              "city": 3,
+              "address_line": "Кетпен, М.Жалилов,  Үй:23",
+              "type": "Current address"
+            },
+            "biography": {
+              "biography": "BIOGRAPHY I, Kuanyshbayeva Asem Boranbaevna, a citizen of the Republic of Kazakhstan, February 17, 1977."
+            },
+            "certificates": [
+              {
+                "id": 596,
+                "title": "Certificate of attendance and best presentation of poster  The 1st NFFA (NanoscienceFoundries and Fine Analysis",
+                "organization_id": 4116,
+                "certified_date": "2016-08-01",
+                "credential_id": "123",
+                "credential_url": "creadential/url",
+                "expired_date": "2024-08-01"
+              }
+            ],
+            "children": [
+              {
+                "id": 111,
+                "name": "Zhandos",
+                "surname": "Saparbayev",
+                "gender": 1,
+                "birthdate": "2003-02-05"
+              }
+            ],
+            "contacts": [
+              {
+                "id": 13985,
+                "contact": "saparbayevzh03@gmail.com",
+                "type_id": 5,
+                "show_status": false
+              }
+            ],
+            "education": [
+              {
+                "id": 1222,
+                "level_id": "M",
+                "university": "SDU",
+                "faculty": "Business school",
+                "country": "Kazakhstan",
+                "speciality": "IS",
+                "cipher": "6N0503",
+                "registration_no": "№258",
+                "diploma_no": "№0018897",
+                "start_date": "2020-09-01",
+                "end_date": "2024-09-01",
+                "is_ongoing": true,
+                "is_honor": false
+              }
+            ],
+            "articles": [
+              {
+                "id": 1,
+                "title": "Article Title",
+                "journal_id": 1,
+                "degree": 1,
+                "series": "Journalism",
+                "authors": "A. Author, B. AnotherAuthor",
+                "pages": "15",
+                "url": "https://example.com",
+                "country": 1,
+                "published_month": 5,
+                "published_year": 2023
+              }
+            ],
+            "books": [
+              {
+                "id": 979,
+                "title": "Harry Potter",
+                "publisher": "Bloomsbury",
+                "book_type": 2,
+                "authors": "J. K. Rowling",
+                "pages": "223",
+                "url": "https://edu.e-history.kz/kz/publications/view/510",
+                "country": 19,
+                "published_month": 10,
+                "published_year": 2005
+              }
+            ],
+            "conducted_courses": [
+              {
+                "id": 497,
+                "title": "Phisics",
+                "level": "B"
+              }
+            ],
+            "conferences": [
+              {
+                "id": 676,
+                "title": "Leadership Profile of Lawyer Candidates in  Kazakhstan",
+                "conference_id": 3042,
+                "authors": "Zhandos Saparbayev",
+                "pages": "145",
+                "url": "URL/for/conference",
+                "country": 681,
+                "published_month": 8,
+                "published_year": 2023
+              }
+            ],
+            "organizations": [
+              {
+                "id": 80,
+                "organization": "Zhandos's organization",
+                "is_ongoing": true,
+                "membership_date": "2023-07-06",
+                "end_date": "2024-07-06"
+              }
+            ],
+            "supervisions": [
+              {
+                "id": 6460,
+                "student": "Zhandos Saparbayev",
+                "level_id": "B",
+                "university": "SDU",
+                "topic": "How can we solve any problems easely?",
+                "is_ongoing": true,
+                "start_year": 2023,
+                "defense_year": 2024,
+                "student_status": "Studying"
+              }
+            ],
+            "experiences": [
+              {
+                "id": 484,
+                "title": "Part time Assistant",
+                "company_id": 4137,
+                "start_month": 7,
+                "start_year": 2023,
+                "end_month": 7,
+                "end_year": 2024,
+                "country_id": 830,
+                "city_id": 830,
+                "employment_type": 2,
+                "location_id": 2,
+                "is_current_position": true,
+                "industry": "SDU",
+                "description": "Helping for team with project."
+              }
+            ],
+            "skills": {
+              "hard_skills": [
+                {
+                  "id": 28,
+                  "skill": "Word, Excel, Internet"
+                }
+              ],
+              "interests": {
+                "interest": "Hiking"
+              },
+              "languages": [
+                {
+                  "id": 141,
+                  "language_code": "KZ",
+                  "level_id": "6",
+                  "is_native": true
+                }
+              ]
+            }
+          }
+        }
       },
       "AdministrativeGateEntryRequest": {
         "type": "object",
