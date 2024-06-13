@@ -24109,6 +24109,38 @@
             }
           }
         }
+      },
+      "ProfileOverviewRequest": {
+        "title": "ProfileOverviewRequest",
+        "x-stoplight": {
+          "id": "xczwiauonggl3"
+        },
+        "type": "object",
+        "required": [
+          "address_type",
+          "article_type",
+          "conference_type"
+        ],
+        "properties": {
+          "address_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "kkc39u0z0gl7f"
+            }
+          },
+          "article_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "gfawfp7gzktnf"
+            }
+          },
+          "conference_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "8i36j6zve79hk"
+            }
+          }
+        }
       }
     },
     "securitySchemes": {}
