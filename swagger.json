@@ -24117,6 +24117,7 @@
         },
         "type": "object",
         "required": [
+          "address_type",
           "article_type",
           "conference_type"
         ],
