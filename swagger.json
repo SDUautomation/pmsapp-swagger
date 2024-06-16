@@ -522,38 +522,6 @@
         "operationId": "get-1.0.0-release-changelog"
       }
     },
-    "/1.0.0/administrative/rules-and-regulations/{uuid}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "uuid",
-          "in": "path",
-          "required": true
-        }
-      ],
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AdministrativeRulesAndRegulationSingleResponse"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-1.0.0-administrative-rules-and-regulations-uuid",
-        "x-stoplight": {
-          "id": "1gf2i3rnc4gef"
-        }
-      }
-    },
     "/1.0.1/administrative/system-calendar": {
       "get": {
         "summary": "Your GET endpoint",
@@ -579,37 +547,6 @@
             "application/json": {
               "schema": {
                 "$ref": "#/components/schemas/AdministrativeSystemCalendarRequest"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/1.0.0/administrative/rules-and-regulations": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/AdministrativeRulesAndRegulationsResponse"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-1.0.0-administrative-rules-and-regulations",
-        "x-stoplight": {
-          "id": "o3pdrttot6r5a"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/AdministrativeRulesAndRegulationsRequest"
               }
             }
           }
@@ -4079,6 +4016,59 @@
               }
             }
           }
+        }
+      }
+    },
+    "/1.0.0/administrative/staffs/workload": {
+      "get": {
+        "summary": "GetStaffsWorkload",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Workload of teachers are successfully returned.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeStaffsWorkloadResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-staffs-workload",
+        "x-stoplight": {
+          "id": "h16spwybxz7r1"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AdministrativeStaffsWorkloadRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/administrative/staffs/workload/resources": {
+      "get": {
+        "summary": "GetStaffsWorkloadResources",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "Staff List Workload resources are successfully returned.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AdministrativeStaffsWorkloadResourcesResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-administrative-staffs-workload-resources",
+        "x-stoplight": {
+          "id": "g91qy7pnafqsi"
         }
       }
     }
@@ -11822,2173 +11812,120 @@
           "Example 1": {
             "greetings": [
               {
-                "name": "Sapar",
-                "surname": "Zhumyrbayev",
-                "birth_date": "Sun, Jul 17"
-              },
-              {
-                "name": "Shyngys",
-                "surname": "Beisembiyev",
-                "birth_date": "Mon, Jul 17"
-              },
-              {
-                "name": "Lyailya",
-                "surname": "Rakhmetova",
-                "birth_date": "Sun, Jul 17"
-              },
-              {
-                "name": "Guncham",
-                "surname": "Nurakhunova",
-                "birth_date": "Tue, Jul 18"
-              },
-              {
-                "name": "Kamila",
-                "surname": "Orynbekova",
-                "birth_date": "Thu, Jul 18"
-              },
-              {
-                "name": "Gulnara",
-                "surname": "Akhmetsadykova",
-                "birth_date": "Sun, Jul 18"
-              },
-              {
-                "name": "Aizada",
-                "surname": "Nuriddenova",
-                "birth_date": "Tue, Jul 18"
-              },
-              {
-                "name": "Dulat",
-                "surname": "Makhmutzhanov",
-                "birth_date": "Wed, Jul 18"
-              },
-              {
-                "name": "Ali",
-                "surname": "Ozgezici",
-                "birth_date": "Fri, Jul 19"
-              },
-              {
-                "name": "Sara",
-                "surname": "Ibraimova",
-                "birth_date": "Tue, Jul 20"
-              },
-              {
-                "name": "Talgat",
-                "surname": "Zhussupov",
-                "birth_date": "Sun, Jul 20"
-              },
-              {
-                "name": "Altynay",
-                "surname": "Omirzakova",
-                "birth_date": "Wed, Jul 21"
-              },
-              {
-                "name": "Aisha",
-                "surname": "Aitmakhan",
-                "birth_date": "Wed, Jul 21"
-              },
-              {
-                "name": "Alpay",
-                "surname": "Akyol",
-                "birth_date": "Wed, Jul 21"
-              },
-              {
-                "name": "Kairat",
-                "surname": "Moldashev",
-                "birth_date": "Tue, Jul 21"
-              },
-              {
-                "name": "Olga",
-                "surname": "Nessipbayeva",
-                "birth_date": "Thu, Jul 21"
-              },
-              {
-                "name": "Chingis",
-                "surname": "Aitzhanov",
-                "birth_date": "Mon, Jul 22"
-              },
-              {
-                "name": "Bakhitkhan",
-                "surname": "Ishankulov",
-                "birth_date": "Sat, Jul 22"
-              },
-              {
-                "name": "Gulmira",
-                "surname": "Biteshova",
-                "birth_date": "Tue, Jul 23"
-              },
-              {
-                "name": "Meruyert",
-                "surname": "Smagulova",
-                "birth_date": "Sat, Jul 23"
-              },
-              {
-                "name": "Tamasha",
-                "surname": "Adilbekova",
-                "birth_date": "Sun, Jul 23"
-              },
-              {
-                "name": "Nurbek",
-                "surname": "Sagyndyk",
-                "birth_date": "Fri, Jul 23"
-              },
-              {
-                "name": "Aigerim",
-                "surname": "Kaskyrbekova",
-                "birth_date": "Mon, Jul 23"
-              },
-              {
-                "name": "Dina",
-                "surname": "Abdramanova",
-                "birth_date": "Mon, Jul 23"
+                "name": "Aibolat",
+                "surname": "Batyrov",
+                "birth_date": ""
               }
             ],
             "schedules": [
               {
-                "week_day": 1,
-                "title": "Computer networks 1",
-                "start_time": "15:00",
-                "end_time": "15:50",
-                "room": "E117"
-              },
-              {
-                "week_day": 5,
-                "title": "Computer networks 1",
-                "start_time": "11:00",
-                "end_time": "11:50",
-                "room": "F108"
-              },
-              {
-                "week_day": 5,
-                "title": "Computer networks 1",
+                "week_day": 3,
+                "title": "Mobile Programming",
                 "start_time": "12:00",
                 "end_time": "12:50",
-                "room": "F108"
-              },
-              {
-                "week_day": 1,
-                "title": "Computer networks 1",
-                "start_time": "17:00",
-                "end_time": "17:50",
-                "room": "D116"
-              },
-              {
-                "week_day": 4,
-                "title": "Computer networks 1",
-                "start_time": "11:00",
-                "end_time": "11:50",
-                "room": "F107"
-              },
-              {
-                "week_day": 4,
-                "title": "Computer networks 1",
-                "start_time": "12:00",
-                "end_time": "12:50",
-                "room": "F107"
-              },
-              {
-                "week_day": 5,
-                "title": "RedHat - System Administration (I + II)",
-                "start_time": "09:00",
-                "end_time": "09:50",
-                "room": "G107"
-              },
-              {
-                "week_day": 1,
-                "title": "RedHat - System Administration (I + II)",
-                "start_time": "09:00",
-                "end_time": "09:50",
-                "room": "D217"
-              },
-              {
-                "week_day": 5,
-                "title": "RedHat - System Administration (I + II)",
-                "start_time": "10:00",
-                "end_time": "10:50",
-                "room": "G107"
-              },
-              {
-                "week_day": 2,
-                "title": "Computer networks 1",
-                "start_time": "09:00",
-                "end_time": "09:50",
-                "room": "F107"
-              },
-              {
-                "week_day": 2,
-                "title": "Computer networks 1",
-                "start_time": "10:00",
-                "end_time": "10:50",
-                "room": "F107"
-              },
-              {
-                "week_day": 1,
-                "title": "Computer networks 1",
-                "start_time": "11:00",
-                "end_time": "11:50",
-                "room": "D116"
-              },
-              {
-                "week_day": 3,
-                "title": "Computer networks 1",
-                "start_time": "17:00",
-                "end_time": "17:50",
-                "room": "F108"
-              },
-              {
-                "week_day": 3,
-                "title": "Computer networks 1",
-                "start_time": "16:00",
-                "end_time": "16:50",
-                "room": "F108"
+                "room": "G108"
               }
             ],
             "courses": [
               {
-                "section_id": 46637,
-                "code": "INF 313",
-                "title": "Computer networks 1",
-                "section": "03",
-                "type": "N",
-                "credits": 3
-              },
-              {
-                "section_id": 46640,
-                "code": "INF 313",
-                "title": "Computer networks 1",
-                "section": "06",
-                "type": "P",
-                "credits": 3
-              },
-              {
-                "section_id": 46636,
-                "code": "INF 313",
-                "title": "Computer networks 1",
+                "section_id": 2443,
+                "code": "CSS 216",
+                "title": "Mobile Programming",
                 "section": "02",
                 "type": "N",
-                "credits": 3
-              },
-              {
-                "section_id": 47338,
-                "code": "CSS 375",
-                "title": "RedHat - System Administration (I + II)",
-                "section": "01",
-                "type": "N",
-                "credits": 3
-              },
-              {
-                "section_id": 47339,
-                "code": "CSS 375",
-                "title": "RedHat - System Administration (I + II)",
-                "section": "02",
-                "type": "P",
-                "credits": 3
-              },
-              {
-                "section_id": 46639,
-                "code": "INF 313",
-                "title": "Computer networks 1",
-                "section": "05",
-                "type": "P",
-                "credits": 3
-              },
-              {
-                "section_id": 46635,
-                "code": "INF 313",
-                "title": "Computer networks 1",
-                "section": "01",
-                "type": "N",
-                "credits": 3
-              },
-              {
-                "section_id": 46638,
-                "code": "INF 313",
-                "title": "Computer networks 1",
-                "section": "04",
-                "type": "P",
-                "credits": 3
-              },
-              {
-                "section_id": 46641,
-                "code": "INF 313",
-                "title": "Computer networks 1",
-                "section": "07",
-                "type": "P",
-                "credits": 3
+                "credits": 5
               }
             ],
             "attendances": [
               {
-                "title": "Computer networks 1",
-                "code": "INF 313",
-                "week_day": 1,
-                "start_time": "15:00",
-                "attendance_chart": [
-                  {
-                    "course_date": "2023-05-01 15:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-24 15:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-17 15:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-10 15:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-03 15:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 103,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-27 15:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 103,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-08 15:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-13 15:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 103,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-06 15:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 103,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-27 15:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 104,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-20 15:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 104,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-13 15:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 104,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-06 15:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 104,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-30 15:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 104,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-23 15:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 107,
-                    "permitted": 0
-                  }
-                ]
-              },
-              {
-                "title": "Computer networks 1",
-                "code": "INF 313",
-                "week_day": 5,
-                "start_time": "11:00",
-                "attendance_chart": [
-                  {
-                    "course_date": "2023-05-12 11:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-05 11:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-28 11:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-21 11:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-14 11:00:00",
-                    "conducted": 1,
-                    "absent": 12,
-                    "attended": 13,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-07 11:00:00",
-                    "conducted": 1,
-                    "absent": 9,
-                    "attended": 16,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-31 11:00:00",
-                    "conducted": 1,
-                    "absent": 7,
-                    "attended": 18,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-17 11:00:00",
-                    "conducted": 1,
-                    "absent": 8,
-                    "attended": 17,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-10 11:00:00",
-                    "conducted": 1,
-                    "absent": 9,
-                    "attended": 16,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-03 11:00:00",
-                    "conducted": 1,
-                    "absent": 5,
-                    "attended": 20,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-24 11:00:00",
-                    "conducted": 1,
-                    "absent": 8,
-                    "attended": 17,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-17 11:00:00",
-                    "conducted": 1,
-                    "absent": 16,
-                    "attended": 9,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-27 11:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 25,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-03 11:00:00",
-                    "conducted": 1,
-                    "absent": 2,
-                    "attended": 23,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-10 11:00:00",
-                    "conducted": 1,
-                    "absent": 3,
-                    "attended": 22,
-                    "permitted": 0
-                  }
-                ]
-              },
-              {
-                "title": "Computer networks 1",
-                "code": "INF 313",
-                "week_day": 5,
+                "title": "Mobile Programming",
+                "code": "CSS 216",
+                "week_day": 3,
                 "start_time": "12:00",
                 "attendance_chart": [
                   {
-                    "course_date": "2023-05-12 12:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-05 12:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-28 12:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-21 12:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-14 12:00:00",
+                    "course_date": "2023-07-04 12:00:00",
                     "conducted": 1,
                     "absent": 12,
-                    "attended": 13,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-07 12:00:00",
-                    "conducted": 1,
-                    "absent": 9,
-                    "attended": 16,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-31 12:00:00",
-                    "conducted": 1,
-                    "absent": 7,
-                    "attended": 18,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-17 12:00:00",
-                    "conducted": 1,
-                    "absent": 8,
-                    "attended": 17,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-10 12:00:00",
-                    "conducted": 1,
-                    "absent": 9,
-                    "attended": 16,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-03 12:00:00",
-                    "conducted": 1,
-                    "absent": 5,
-                    "attended": 20,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-24 12:00:00",
-                    "conducted": 1,
-                    "absent": 8,
-                    "attended": 17,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-17 12:00:00",
-                    "conducted": 1,
-                    "absent": 16,
-                    "attended": 9,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-10 12:00:00",
-                    "conducted": 1,
-                    "absent": 3,
-                    "attended": 22,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-03 12:00:00",
-                    "conducted": 1,
-                    "absent": 2,
                     "attended": 23,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-27 12:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 25,
-                    "permitted": 0
-                  }
-                ]
-              },
-              {
-                "title": "RedHat - System Administration (I + II)",
-                "code": "CSS 375",
-                "week_day": 5,
-                "start_time": "09:00",
-                "attendance_chart": [
-                  {
-                    "course_date": "2023-04-28 09:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-05 09:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-21 09:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-14 09:00:00",
-                    "conducted": 1,
-                    "absent": 10,
-                    "attended": 12,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-07 09:00:00",
-                    "conducted": 1,
-                    "absent": 7,
-                    "attended": 15,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-31 09:00:00",
-                    "conducted": 1,
-                    "absent": 8,
-                    "attended": 14,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-12 09:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-17 09:00:00",
-                    "conducted": 1,
-                    "absent": 8,
-                    "attended": 14,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-10 09:00:00",
-                    "conducted": 1,
-                    "absent": 4,
-                    "attended": 18,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-03 09:00:00",
-                    "conducted": 1,
-                    "absent": 8,
-                    "attended": 14,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-24 09:00:00",
-                    "conducted": 1,
-                    "absent": 2,
-                    "attended": 20,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-17 09:00:00",
-                    "conducted": 1,
-                    "absent": 6,
-                    "attended": 16,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-10 09:00:00",
-                    "conducted": 1,
-                    "absent": 6,
-                    "attended": 16,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-03 09:00:00",
-                    "conducted": 1,
-                    "absent": 7,
-                    "attended": 15,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-27 09:00:00",
-                    "conducted": 1,
-                    "absent": 1,
-                    "attended": 22,
-                    "permitted": 0
-                  }
-                ]
-              },
-              {
-                "title": "RedHat - System Administration (I + II)",
-                "code": "CSS 375",
-                "week_day": 5,
-                "start_time": "10:00",
-                "attendance_chart": [
-                  {
-                    "course_date": "2023-05-05 10:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-28 10:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-21 10:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-14 10:00:00",
-                    "conducted": 1,
-                    "absent": 10,
-                    "attended": 12,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-07 10:00:00",
-                    "conducted": 1,
-                    "absent": 7,
-                    "attended": 15,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-31 10:00:00",
-                    "conducted": 1,
-                    "absent": 8,
-                    "attended": 14,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-12 10:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-17 10:00:00",
-                    "conducted": 1,
-                    "absent": 8,
-                    "attended": 14,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-10 10:00:00",
-                    "conducted": 1,
-                    "absent": 4,
-                    "attended": 18,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-03 10:00:00",
-                    "conducted": 1,
-                    "absent": 8,
-                    "attended": 14,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-24 10:00:00",
-                    "conducted": 1,
-                    "absent": 2,
-                    "attended": 20,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-17 10:00:00",
-                    "conducted": 1,
-                    "absent": 6,
-                    "attended": 16,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-10 10:00:00",
-                    "conducted": 1,
-                    "absent": 6,
-                    "attended": 16,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-03 10:00:00",
-                    "conducted": 1,
-                    "absent": 7,
-                    "attended": 15,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-27 10:00:00",
-                    "conducted": 1,
-                    "absent": 1,
-                    "attended": 22,
-                    "permitted": 0
-                  }
-                ]
-              },
-              {
-                "title": "Computer networks 1",
-                "code": "INF 313",
-                "week_day": 1,
-                "start_time": "17:00",
-                "attendance_chart": [
-                  {
-                    "course_date": "2023-04-17 17:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-01 17:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-24 17:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-10 17:00:00",
-                    "conducted": 1,
-                    "absent": 69,
-                    "attended": 28,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-03 17:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 97,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-27 17:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 97,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-08 17:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-13 17:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 97,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-06 17:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 97,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-27 17:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 98,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-20 17:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 98,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-13 17:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 98,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-06 17:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 98,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-30 17:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 98,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-23 17:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 99,
-                    "permitted": 0
-                  }
-                ]
-              },
-              {
-                "title": "Computer networks 1",
-                "code": "INF 313",
-                "week_day": 2,
-                "start_time": "09:00",
-                "attendance_chart": [
-                  {
-                    "course_date": "2023-05-02 09:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-09 09:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-25 09:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-18 09:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-11 09:00:00",
-                    "conducted": 1,
-                    "absent": 12,
-                    "attended": 12,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-04 09:00:00",
-                    "conducted": 1,
-                    "absent": 17,
-                    "attended": 7,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-28 09:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 24,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-14 09:00:00",
-                    "conducted": 1,
-                    "absent": 9,
-                    "attended": 15,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-07 09:00:00",
-                    "conducted": 1,
-                    "absent": 12,
-                    "attended": 12,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-28 09:00:00",
-                    "conducted": 1,
-                    "absent": 11,
-                    "attended": 13,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-21 09:00:00",
-                    "conducted": 1,
-                    "absent": 9,
-                    "attended": 15,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-14 09:00:00",
-                    "conducted": 1,
-                    "absent": 3,
-                    "attended": 21,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-07 09:00:00",
-                    "conducted": 1,
-                    "absent": 6,
-                    "attended": 18,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-31 09:00:00",
-                    "conducted": 1,
-                    "absent": 4,
-                    "attended": 19,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-24 09:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 24,
-                    "permitted": 0
-                  }
-                ]
-              },
-              {
-                "title": "Computer networks 1",
-                "code": "INF 313",
-                "week_day": 2,
-                "start_time": "10:00",
-                "attendance_chart": [
-                  {
-                    "course_date": "2023-05-09 10:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-02 10:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-25 10:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-18 10:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-11 10:00:00",
-                    "conducted": 1,
-                    "absent": 12,
-                    "attended": 12,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-04 10:00:00",
-                    "conducted": 1,
-                    "absent": 17,
-                    "attended": 7,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-28 10:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 24,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-14 10:00:00",
-                    "conducted": 1,
-                    "absent": 9,
-                    "attended": 15,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-07 10:00:00",
-                    "conducted": 1,
-                    "absent": 12,
-                    "attended": 12,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-28 10:00:00",
-                    "conducted": 1,
-                    "absent": 11,
-                    "attended": 13,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-21 10:00:00",
-                    "conducted": 1,
-                    "absent": 9,
-                    "attended": 15,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-14 10:00:00",
-                    "conducted": 1,
-                    "absent": 3,
-                    "attended": 21,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-07 10:00:00",
-                    "conducted": 1,
-                    "absent": 6,
-                    "attended": 18,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-31 10:00:00",
-                    "conducted": 1,
-                    "absent": 4,
-                    "attended": 19,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-24 10:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 24,
-                    "permitted": 0
-                  }
-                ]
-              },
-              {
-                "title": "Computer networks 1",
-                "code": "INF 313",
-                "week_day": 4,
-                "start_time": "11:00",
-                "attendance_chart": [
-                  {
-                    "course_date": "2023-05-11 11:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-04 11:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-27 11:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-20 11:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-13 11:00:00",
-                    "conducted": 1,
-                    "absent": 11,
-                    "attended": 16,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-06 11:00:00",
-                    "conducted": 1,
-                    "absent": 15,
-                    "attended": 12,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-30 11:00:00",
-                    "conducted": 1,
-                    "absent": 9,
-                    "attended": 18,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-16 11:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 27,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-09 11:00:00",
-                    "conducted": 1,
-                    "absent": 10,
-                    "attended": 17,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-02 11:00:00",
-                    "conducted": 1,
-                    "absent": 9,
-                    "attended": 19,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-23 11:00:00",
-                    "conducted": 1,
-                    "absent": 10,
-                    "attended": 18,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-16 11:00:00",
-                    "conducted": 1,
-                    "absent": 7,
-                    "attended": 21,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-09 11:00:00",
-                    "conducted": 1,
-                    "absent": 6,
-                    "attended": 22,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-02 11:00:00",
-                    "conducted": 1,
-                    "absent": 5,
-                    "attended": 23,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-26 11:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 28,
-                    "permitted": 0
-                  }
-                ]
-              },
-              {
-                "title": "Computer networks 1",
-                "code": "INF 313",
-                "week_day": 4,
-                "start_time": "12:00",
-                "attendance_chart": [
-                  {
-                    "course_date": "2023-04-27 12:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-04 12:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-20 12:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-13 12:00:00",
-                    "conducted": 1,
-                    "absent": 11,
-                    "attended": 16,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-06 12:00:00",
-                    "conducted": 1,
-                    "absent": 15,
-                    "attended": 12,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-30 12:00:00",
-                    "conducted": 1,
-                    "absent": 9,
-                    "attended": 18,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-16 12:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 27,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-09 12:00:00",
-                    "conducted": 1,
-                    "absent": 10,
-                    "attended": 17,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-02 12:00:00",
-                    "conducted": 1,
-                    "absent": 9,
-                    "attended": 19,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-23 12:00:00",
-                    "conducted": 1,
-                    "absent": 10,
-                    "attended": 18,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-16 12:00:00",
-                    "conducted": 1,
-                    "absent": 7,
-                    "attended": 21,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-09 12:00:00",
-                    "conducted": 1,
-                    "absent": 6,
-                    "attended": 22,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-02 12:00:00",
-                    "conducted": 1,
-                    "absent": 5,
-                    "attended": 23,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-26 12:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 28,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-11 12:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  }
-                ]
-              },
-              {
-                "title": "Computer networks 1",
-                "code": "INF 313",
-                "week_day": 1,
-                "start_time": "11:00",
-                "attendance_chart": [
-                  {
-                    "course_date": "2023-04-10 11:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-01 11:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-24 11:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-17 11:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-03 11:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 96,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-27 11:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 96,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-08 11:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-13 11:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 96,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-06 11:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 96,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-27 11:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 98,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-20 11:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 98,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-13 11:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 98,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-06 11:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 98,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-30 11:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 98,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-23 11:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 100,
-                    "permitted": 0
-                  }
-                ]
-              },
-              {
-                "title": "RedHat - System Administration (I + II)",
-                "code": "CSS 375",
-                "week_day": 1,
-                "start_time": "09:00",
-                "attendance_chart": [
-                  {
-                    "course_date": "2023-05-01 09:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-24 09:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-17 09:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-10 09:00:00",
-                    "conducted": 1,
-                    "absent": 33,
-                    "attended": 16,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-03 09:00:00",
-                    "conducted": 1,
-                    "absent": 25,
-                    "attended": 24,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-27 09:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 49,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-08 09:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-13 09:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 49,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-06 09:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 49,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-27 09:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 49,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-20 09:00:00",
-                    "conducted": 1,
-                    "absent": 11,
-                    "attended": 37,
-                    "permitted": 1
-                  },
-                  {
-                    "course_date": "2023-02-13 09:00:00",
-                    "conducted": 1,
-                    "absent": 20,
-                    "attended": 28,
-                    "permitted": 1
-                  },
-                  {
-                    "course_date": "2023-02-06 09:00:00",
-                    "conducted": 1,
-                    "absent": 14,
-                    "attended": 36,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-30 09:00:00",
-                    "conducted": 1,
-                    "absent": 8,
-                    "attended": 43,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-23 09:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 44,
-                    "permitted": 0
-                  }
-                ]
-              },
-              {
-                "title": "Computer networks 1",
-                "code": "INF 313",
-                "week_day": 3,
-                "start_time": "16:00",
-                "attendance_chart": [
-                  {
-                    "course_date": "2023-04-19 16:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-03 16:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-26 16:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-12 16:00:00",
-                    "conducted": 1,
-                    "absent": 11,
-                    "attended": 16,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-05 16:00:00",
-                    "conducted": 1,
-                    "absent": 7,
-                    "attended": 20,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-29 16:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 27,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-10 16:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-15 16:00:00",
-                    "conducted": 1,
-                    "absent": 13,
-                    "attended": 14,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-08 16:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-01 16:00:00",
-                    "conducted": 1,
-                    "absent": 9,
-                    "attended": 18,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-22 16:00:00",
-                    "conducted": 1,
-                    "absent": 14,
-                    "attended": 12,
-                    "permitted": 1
-                  },
-                  {
-                    "course_date": "2023-02-15 16:00:00",
-                    "conducted": 1,
-                    "absent": 7,
-                    "attended": 20,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-08 16:00:00",
-                    "conducted": 1,
-                    "absent": 6,
-                    "attended": 21,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-01 16:00:00",
-                    "conducted": 1,
-                    "absent": 2,
-                    "attended": 25,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-25 16:00:00",
-                    "conducted": 1,
-                    "absent": 1,
-                    "attended": 26,
-                    "permitted": 0
-                  }
-                ]
-              },
-              {
-                "title": "Computer networks 1",
-                "code": "INF 313",
-                "week_day": 3,
-                "start_time": "17:00",
-                "attendance_chart": [
-                  {
-                    "course_date": "2023-05-03 17:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-26 17:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-19 17:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-12 17:00:00",
-                    "conducted": 1,
-                    "absent": 11,
-                    "attended": 16,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-04-05 17:00:00",
-                    "conducted": 1,
-                    "absent": 7,
-                    "attended": 20,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-29 17:00:00",
-                    "conducted": 1,
-                    "absent": 0,
-                    "attended": 27,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-05-10 17:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-15 17:00:00",
-                    "conducted": 1,
-                    "absent": 13,
-                    "attended": 14,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-08 17:00:00",
-                    "conducted": null,
-                    "absent": 0,
-                    "attended": 0,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-03-01 17:00:00",
-                    "conducted": 1,
-                    "absent": 9,
-                    "attended": 18,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-22 17:00:00",
-                    "conducted": 1,
-                    "absent": 14,
-                    "attended": 12,
-                    "permitted": 1
-                  },
-                  {
-                    "course_date": "2023-02-15 17:00:00",
-                    "conducted": 1,
-                    "absent": 7,
-                    "attended": 20,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-08 17:00:00",
-                    "conducted": 1,
-                    "absent": 6,
-                    "attended": 21,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-02-01 17:00:00",
-                    "conducted": 1,
-                    "absent": 2,
-                    "attended": 25,
-                    "permitted": 0
-                  },
-                  {
-                    "course_date": "2023-01-25 17:00:00",
-                    "conducted": 1,
-                    "absent": 1,
-                    "attended": 26,
-                    "permitted": 0
+                    "permitted": 3
                   }
                 ]
               }
             ],
             "faculty_statistics": [
               {
-                "title": "SDU Business school",
-                "programs": 30,
-                "courses": 532,
-                "students": 972,
-                "employee": 84
-              },
-              {
-                "title": "Faculty of education and humanities",
-                "programs": 45,
-                "courses": 2187,
-                "students": 2500,
-                "employee": 198
-              },
-              {
-                "title": "Faculty of Law and Social Sciences",
-                "programs": 42,
-                "courses": 1177,
-                "students": 779,
-                "employee": 82
-              },
-              {
                 "title": "Faculty of Engineering and Natural Sciences",
-                "programs": 23,
-                "courses": 916,
-                "students": 3328,
-                "employee": 208
+                "programs": 12,
+                "courses": 2345,
+                "students": 2120,
+                "employee": 176
               }
             ],
             "rules_and_regulations": [
-              {
-                "uuid": "565309fd-6596-47ca-bea6-ec523bf96056",
-                "details": [
-                  {
-                    "uuid": "165309fd-6596-47ca-bea6-ec523bf96056",
-                    "title": "О’Кей, Боб! 1200 регистраций и первые продажи: месяц после анонса моего сервиса на vc",
-                    "content": "За месяц после анонса моего бота-планировщика с веб-интерфейсом на vc мы получили больше 1200 регистраций и первые оплаты.\nВ этой статье расскажу, что еще произошло с OK, Bob! за это время и в конце покажу киллер-фичу, с которой участникам встречи получится договориться о времени за полминуты, а не за полчаса.",
-                    "image": "https://hips.hearstapps.com/hmg-prod/images/golden-retriever-royalty-free-image-506756303-1560962726.jpg?crop=1.00xw:0.756xh;0,0.0756xh&resize=1200:*",
-                    "language_uuid": "50adce1e-2e97-465a-bec1-9f0485b7f4c8",
-                    "language": "en-EN",
-                    "created_at": "2023-04-28 10:14:25",
-                    "updated_at": "2023-04-28 10:14:26"
-                  }
-                ],
-                "categories": [
-                  {
-                    "uuid": "271dd7ac-12cd-400c-9d01-2a47cef8eac4",
-                    "title": "RCAT 2",
-                    "description": "second category ",
-                    "language_uuid": "466a9446-829c-49bc-ae83-08d1b21e2c9e",
-                    "language": "ru-RU"
-                  }
-                ],
-                "attachments": [
-                  {
-                    "uuid": "765309fd-6596-47ca-bea6-ec523bf96056",
-                    "title": "attach",
-                    "path": "attachments/attach.txt",
-                    "extension": "txt",
-                    "size": "28",
-                    "language_uuid": "50adce1e-2e97-465a-bec1-9f0485b7f4c8",
-                    "language": "en-EN"
-                  }
-                ]
-              },
-              {
-                "uuid": "ef537ef4-7f1b-470a-ad6e-a92497eddaf3",
-                "details": [
-                  {
-                    "uuid": "adebd249-8e0a-4e67-9874-5fdefafda979",
-                    "title": "Sample Title",
-                    "content": "This is a sample content.",
-                    "image": "some image",
-                    "language_uuid": "50adce1e-2e97-465a-bec1-9f0485b7f4c8",
-                    "language": "en-EN",
-                    "created_at": "2023-05-04 04:25:27",
-                    "updated_at": "2023-05-04 04:25:27"
-                  }
-                ],
-                "categories": [],
-                "attachments": []
-              },
-              {
-                "uuid": "565309fd-6596-47ca-bea6-ec523bf96057",
-                "details": [],
-                "categories": [],
-                "attachments": []
-              }
+              "string"
             ],
             "syllabus_statistics": [
               {
-                "department_code": "10002",
-                "title": "Vice-Rector for Academic Affairs",
-                "status": 0,
-                "status_title": "NOT APPLIED",
-                "courses": 2
-              },
-              {
-                "department_code": "10002",
-                "title": "Vice-Rector for Academic Affairs",
-                "status": 3,
-                "status_title": "DECLINED",
-                "courses": 28
-              },
-              {
-                "department_code": "10002",
-                "title": "Vice-Rector for Academic Affairs",
-                "status": 4,
-                "status_title": "CONFIRMED",
-                "courses": 111
-              },
-              {
-                "department_code": "10002",
-                "title": "Vice-Rector for Academic Affairs",
-                "status": null,
-                "status_title": null,
-                "courses": 145
-              },
-              {
-                "department_code": "F_ECO",
-                "title": "SDU Business school",
-                "status": 0,
-                "status_title": "NOT APPLIED",
-                "courses": 1
-              },
-              {
-                "department_code": "F_ECO",
-                "title": "SDU Business school",
+                "department_code": "DEP_COMP_SCI",
+                "title": "Department of Computer Sciences",
                 "status": 1,
-                "status_title": "APPLIED",
-                "courses": 4
-              },
-              {
-                "department_code": "F_ECO",
-                "title": "SDU Business school",
-                "status": 2,
-                "status_title": "ACCEPTED",
-                "courses": 3
-              },
-              {
-                "department_code": "F_ECO",
-                "title": "SDU Business school",
-                "status": 3,
-                "status_title": "DECLINED",
-                "courses": 10
-              },
-              {
-                "department_code": "F_ECO",
-                "title": "SDU Business school",
-                "status": 4,
-                "status_title": "CONFIRMED",
-                "courses": 71
-              },
-              {
-                "department_code": "F_ECO",
-                "title": "SDU Business school",
-                "status": null,
-                "status_title": null,
-                "courses": 432
-              },
-              {
-                "department_code": "F_ENG",
-                "title": "Faculty of Engineering and Natural Sciences",
-                "status": 0,
-                "status_title": "NOT APPLIED",
-                "courses": 2
-              },
-              {
-                "department_code": "F_ENG",
-                "title": "Faculty of Engineering and Natural Sciences",
-                "status": 1,
-                "status_title": "APPLIED",
+                "status_title": "Accepted",
                 "courses": 12
-              },
-              {
-                "department_code": "F_ENG",
-                "title": "Faculty of Engineering and Natural Sciences",
-                "status": 3,
-                "status_title": "DECLINED",
-                "courses": 5
-              },
-              {
-                "department_code": "F_ENG",
-                "title": "Faculty of Engineering and Natural Sciences",
-                "status": 4,
-                "status_title": "CONFIRMED",
-                "courses": 149
-              },
-              {
-                "department_code": "F_ENG",
-                "title": "Faculty of Engineering and Natural Sciences",
-                "status": null,
-                "status_title": null,
-                "courses": 753
-              },
-              {
-                "department_code": "F_LAW",
-                "title": "Faculty of Law and Social Sciences",
-                "status": 0,
-                "status_title": "NOT APPLIED",
-                "courses": 2
-              },
-              {
-                "department_code": "F_LAW",
-                "title": "Faculty of Law and Social Sciences",
-                "status": 1,
-                "status_title": "APPLIED",
-                "courses": 11
-              },
-              {
-                "department_code": "F_LAW",
-                "title": "Faculty of Law and Social Sciences",
-                "status": 3,
-                "status_title": "DECLINED",
-                "courses": 10
-              },
-              {
-                "department_code": "F_LAW",
-                "title": "Faculty of Law and Social Sciences",
-                "status": 4,
-                "status_title": "CONFIRMED",
-                "courses": 140
-              },
-              {
-                "department_code": "F_LAW",
-                "title": "Faculty of Law and Social Sciences",
-                "status": null,
-                "status_title": null,
-                "courses": 1071
-              },
-              {
-                "department_code": "F_PHIL",
-                "title": "Faculty of education and humanities",
-                "status": 0,
-                "status_title": "NOT APPLIED",
-                "courses": 6
-              },
-              {
-                "department_code": "F_PHIL",
-                "title": "Faculty of education and humanities",
-                "status": 1,
-                "status_title": "APPLIED",
-                "courses": 15
-              },
-              {
-                "department_code": "F_PHIL",
-                "title": "Faculty of education and humanities",
-                "status": 2,
-                "status_title": "ACCEPTED",
-                "courses": 4
-              },
-              {
-                "department_code": "F_PHIL",
-                "title": "Faculty of education and humanities",
-                "status": 3,
-                "status_title": "DECLINED",
-                "courses": 8
-              },
-              {
-                "department_code": "F_PHIL",
-                "title": "Faculty of education and humanities",
-                "status": 4,
-                "status_title": "CONFIRMED",
-                "courses": 234
-              },
-              {
-                "department_code": "F_PHIL",
-                "title": "Faculty of education and humanities",
-                "status": null,
-                "status_title": null,
-                "courses": 1929
-              },
-              {
-                "department_code": "VR_F",
-                "title": "Vice-Rector for Finance",
-                "status": null,
-                "status_title": null,
-                "courses": 1
               }
             ],
-            "moodle_activities": []
+            "moodle_activities": [
+              "string"
+            ],
+            "posts": [
+              {
+                "id": 987,
+                "username": "arailym.mardemkhanova",
+                "user_full_name": "Araylim Mardemkhanova",
+                "user_photo": "base64 string format",
+                "title": "Продам MagSafe",
+                "content": "Продам MagSafe 2023 года выпуска",
+                "status": 1,
+                "view_count": 12,
+                "last_op_date": "26-06-2023 16:45:00",
+                "last_op_emp_id": 11082,
+                "created_at": "26-06-2023 16:45:00",
+                "comments": [
+                  {
+                    "id": 3222,
+                    "post_id": 987,
+                    "username": "aibolat.batyrov",
+                    "user_full_name": "Aibolat Batyrov",
+                    "user_photo": "base64 string format",
+                    "content": "Куплю MagSafe для iPhone",
+                    "created_at": "26-06-2023 18:49:00"
+                  }
+                ]
+              }
+            ]
           }
         },
+        "required": [
+          "greetings",
+          "schedules",
+          "courses",
+          "attendances",
+          "faculty_statistics",
+          "rules_and_regulations",
+          "syllabus_statistics",
+          "moodle_activities",
+          "posts"
+        ],
         "properties": {
           "greetings": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "name",
+                "surname",
+                "birth_date"
+              ],
               "properties": {
                 "name": {
                   "type": "string"
@@ -13999,18 +11936,20 @@
                 "birth_date": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "name",
-                "surname",
-                "birth_date"
-              ]
+              }
             }
           },
           "schedules": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "week_day",
+                "title",
+                "start_time",
+                "end_time",
+                "room"
+              ],
               "properties": {
                 "week_day": {
                   "type": "integer"
@@ -14027,20 +11966,21 @@
                 "room": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "week_day",
-                "title",
-                "start_time",
-                "end_time",
-                "room"
-              ]
+              }
             }
           },
           "courses": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "section_id",
+                "code",
+                "title",
+                "section",
+                "type",
+                "credits"
+              ],
               "properties": {
                 "section_id": {
                   "type": "integer"
@@ -14060,21 +12000,20 @@
                 "credits": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "section_id",
-                "code",
-                "title",
-                "section",
-                "type",
-                "credits"
-              ]
+              }
             }
           },
           "attendances": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "title",
+                "code",
+                "week_day",
+                "start_time",
+                "attendance_chart"
+              ],
               "properties": {
                 "title": {
                   "type": "string"
@@ -14092,13 +12031,19 @@
                   "type": "array",
                   "items": {
                     "type": "object",
+                    "required": [
+                      "course_date",
+                      "conducted",
+                      "absent",
+                      "attended",
+                      "permitted"
+                    ],
                     "properties": {
                       "course_date": {
                         "type": "string"
                       },
                       "conducted": {
-                        "type": "integer",
-                        "nullable": true
+                        "type": "integer"
                       },
                       "absent": {
                         "type": "integer"
@@ -14109,30 +12054,23 @@
                       "permitted": {
                         "type": "integer"
                       }
-                    },
-                    "required": [
-                      "course_date",
-                      "conducted",
-                      "absent",
-                      "attended",
-                      "permitted"
-                    ]
+                    }
                   }
                 }
-              },
-              "required": [
-                "title",
-                "code",
-                "week_day",
-                "start_time",
-                "attendance_chart"
-              ]
+              }
             }
           },
           "faculty_statistics": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "title",
+                "programs",
+                "courses",
+                "students",
+                "employee"
+              ],
               "properties": {
                 "title": {
                   "type": "string"
@@ -14149,147 +12087,128 @@
                 "employee": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "title",
-                "programs",
-                "courses",
-                "students",
-                "employee"
-              ]
+              }
             }
           },
           "rules_and_regulations": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "uuid",
+                "attachments"
+              ],
               "properties": {
                 "uuid": {
-                  "type": "string"
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "ykdag9yn7nr3f"
+                  }
                 },
                 "details": {
                   "type": "array",
+                  "x-stoplight": {
+                    "id": "uqpta4uxod3xj"
+                  },
                   "items": {
+                    "x-stoplight": {
+                      "id": "94ari5jnk20qn"
+                    },
                     "type": "object",
                     "properties": {
-                      "uuid": {
-                        "type": "string"
-                      },
                       "title": {
-                        "type": "string"
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "t7foay9bb2g1u"
+                        }
                       },
                       "content": {
-                        "type": "string"
-                      },
-                      "image": {
-                        "type": "string"
-                      },
-                      "language_uuid": {
-                        "type": "string"
-                      },
-                      "language": {
-                        "type": "string"
-                      },
-                      "created_at": {
-                        "type": "string"
-                      },
-                      "updated_at": {
-                        "type": "string"
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "6evdp4jle0hi5"
+                        }
                       }
-                    },
-                    "required": [
-                      "uuid",
-                      "title",
-                      "content",
-                      "image",
-                      "language_uuid",
-                      "language",
-                      "created_at",
-                      "updated_at"
-                    ]
+                    }
                   }
                 },
                 "categories": {
                   "type": "array",
+                  "x-stoplight": {
+                    "id": "neyyhtyt8qhao"
+                  },
                   "items": {
+                    "x-stoplight": {
+                      "id": "h7qc5vjehwtln"
+                    },
                     "type": "object",
                     "properties": {
-                      "uuid": {
-                        "type": "string"
-                      },
                       "title": {
-                        "type": "string"
-                      },
-                      "description": {
-                        "type": "string"
-                      },
-                      "language_uuid": {
-                        "type": "string"
-                      },
-                      "language": {
-                        "type": "string"
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "crmchia3e1oqt"
+                        }
                       }
-                    },
-                    "required": [
-                      "uuid",
-                      "title",
-                      "description",
-                      "language_uuid",
-                      "language"
-                    ]
+                    }
                   }
                 },
                 "attachments": {
                   "type": "array",
+                  "x-stoplight": {
+                    "id": "wn7q6zi1ynxyd"
+                  },
                   "items": {
+                    "x-stoplight": {
+                      "id": "7dkmv57455522"
+                    },
                     "type": "object",
+                    "required": [
+                      "title",
+                      "language",
+                      "size",
+                      "path"
+                    ],
                     "properties": {
-                      "uuid": {
-                        "type": "string"
-                      },
                       "title": {
-                        "type": "string"
-                      },
-                      "path": {
-                        "type": "string"
-                      },
-                      "extension": {
-                        "type": "string"
-                      },
-                      "size": {
-                        "type": "string"
-                      },
-                      "language_uuid": {
-                        "type": "string"
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "af380vo6zz0vo"
+                        }
                       },
                       "language": {
-                        "type": "string"
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "jncn43f8168f0"
+                        }
+                      },
+                      "size": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "0gfs5jgga43ox"
+                        }
+                      },
+                      "path": {
+                        "type": "string",
+                        "x-stoplight": {
+                          "id": "cstruxhc0yzzo"
+                        }
                       }
-                    },
-                    "required": [
-                      "uuid",
-                      "title",
-                      "path",
-                      "extension",
-                      "size",
-                      "language_uuid",
-                      "language"
-                    ]
+                    }
                   }
                 }
-              },
-              "required": [
-                "uuid",
-                "details",
-                "categories",
-                "attachments"
-              ]
+              }
             }
           },
           "syllabus_statistics": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "department_code",
+                "title",
+                "status",
+                "status_title",
+                "courses"
+              ],
               "properties": {
                 "department_code": {
                   "type": "string"
@@ -14298,319 +12217,117 @@
                   "type": "string"
                 },
                 "status": {
-                  "type": "integer",
-                  "nullable": true
+                  "type": "integer"
                 },
                 "status_title": {
-                  "type": "string",
-                  "nullable": true
+                  "type": "string"
                 },
                 "courses": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "department_code",
-                "title",
-                "status",
-                "status_title",
-                "courses"
-              ]
+              }
             }
           },
           "moodle_activities": {
             "type": "array",
             "items": {
-              "type": "object"
+              "type": "string"
             }
-          }
-        },
-        "required": [
-          "greetings",
-          "schedules",
-          "courses",
-          "attendances",
-          "faculty_statistics",
-          "rules_and_regulations",
-          "syllabus_statistics",
-          "moodle_activities"
-        ]
-      },
-      "AdministrativeRulesAndRegulationSingleResponse": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "uuid": "7748-2r29-vj22-vnje",
-            "details": [
-              {
-                "uuid": "7748-2r29-vj22-vnje",
-                "title": "About Scientific Library",
-                "content": "Ғылыми кітапхана дирекциясы (бұдан әрі - Кітапхана)...",
-                "image": "base64 string format",
-                "language_uuid": "8828-wvw1-vw23-9872",
-                "language": "English",
-                "created_at": "27-06-2023 02:03:00",
-                "updated_at": "27-06-2023 03:03:00"
-              }
-            ],
-            "categories": [
-              {
-                "uuid": "7748-2r29-vj22-vnje",
-                "title": "Guidlines",
-                "description": "Guildlines",
-                "language_uuid": "8828-wvw1-vw23-9872",
-                "language": "English"
-              }
-            ],
-            "contents": [
-              {
-                "uuid": "7748-2r29-vj22-vnje",
-                "title": "About Scientific Library",
-                "content": "Ғылыми кітапхана дирекциясы (бұдан әрі - Кітапхана)...",
-                "summary": "Берілген ереже Университеттің кітапхана қызметкерлері мен кітапхана...",
-                "has_summary": true,
-                "order": 3,
-                "language_uuid": "8828-wvw1-vw23-9872",
-                "language": "English",
-                "created_at": "27-06-2023 02:03:00",
-                "updated_at": "27-06-2023 03:03:00"
-              }
-            ],
-            "attachments": [
-              {
-                "uuid": "7748-2r29-vj22-vnje",
-                "title": "About Scientific Library",
-                "path": "pms.sdu.edu.kz/rules-and-regulations/attachments/about-scientific-library/ground-floor.jpg",
-                "size": "1.6 MB",
-                "language_uuid": "8828-wvw1-vw23-9872",
-                "language": "English"
-              }
-            ],
-            "versions": [
-              {
-                "uuid": "7748-2r29-vj22-vnje",
-                "version": "1.0.2",
-                "summary": "This version contains...",
-                "active": true,
-                "language_uuid": "8828-wvw1-vw23-9872",
-                "language": "English",
-                "created_at": "27-06-2023 02:03:00",
-                "updated_at": "27-06-2023 03:03:00"
-              }
-            ]
-          }
-        },
-        "properties": {
-          "uuid": {
-            "type": "string"
           },
-          "details": {
+          "posts": {
             "type": "array",
             "items": {
               "type": "object",
-              "properties": {
-                "uuid": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "image": {
-                  "type": "string"
-                },
-                "language_uuid": {
-                  "type": "string"
-                },
-                "language": {
-                  "type": "string"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
-                }
-              },
               "required": [
-                "uuid",
+                "id",
+                "username",
+                "user_full_name",
+                "user_photo",
                 "title",
                 "content",
-                "image",
-                "language_uuid",
-                "language",
+                "status",
+                "view_count",
+                "last_op_date",
+                "last_op_emp_id",
                 "created_at",
-                "updated_at"
-              ]
-            }
-          },
-          "categories": {
-            "type": "array",
-            "items": {
-              "type": "object",
+                "comments"
+              ],
               "properties": {
-                "uuid": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "language_uuid": {
-                  "type": "string"
-                },
-                "language": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "uuid",
-                "title",
-                "description",
-                "language_uuid",
-                "language"
-              ]
-            }
-          },
-          "contents": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "uuid": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "summary": {
-                  "type": "string"
-                },
-                "has_summary": {
-                  "type": "boolean"
-                },
-                "order": {
+                "id": {
                   "type": "integer"
                 },
-                "language_uuid": {
+                "username": {
                   "type": "string"
                 },
-                "language": {
+                "user_full_name": {
                   "type": "string"
                 },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "uuid",
-                "title",
-                "content",
-                "summary",
-                "has_summary",
-                "order",
-                "language_uuid",
-                "language",
-                "created_at",
-                "updated_at"
-              ]
-            }
-          },
-          "attachments": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "uuid": {
+                "user_photo": {
                   "type": "string"
                 },
                 "title": {
                   "type": "string"
                 },
-                "path": {
+                "content": {
                   "type": "string"
                 },
-                "size": {
+                "status": {
+                  "type": "integer"
+                },
+                "view_count": {
+                  "type": "integer"
+                },
+                "last_op_date": {
                   "type": "string"
                 },
-                "language_uuid": {
-                  "type": "string"
-                },
-                "language": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "uuid",
-                "title",
-                "path",
-                "size",
-                "language_uuid",
-                "language"
-              ]
-            }
-          },
-          "versions": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "uuid": {
-                  "type": "string"
-                },
-                "version": {
-                  "type": "string"
-                },
-                "summary": {
-                  "type": "string"
-                },
-                "active": {
-                  "type": "boolean"
-                },
-                "language_uuid": {
-                  "type": "string"
-                },
-                "language": {
-                  "type": "string"
+                "last_op_emp_id": {
+                  "type": "integer"
                 },
                 "created_at": {
                   "type": "string"
                 },
-                "updated_at": {
-                  "type": "string"
+                "comments": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "post_id",
+                      "username",
+                      "user_full_name",
+                      "user_photo",
+                      "content",
+                      "created_at"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "post_id": {
+                        "type": "integer"
+                      },
+                      "username": {
+                        "type": "string"
+                      },
+                      "user_full_name": {
+                        "type": "string"
+                      },
+                      "user_photo": {
+                        "type": "string"
+                      },
+                      "content": {
+                        "type": "string"
+                      },
+                      "created_at": {
+                        "type": "string"
+                      }
+                    }
+                  }
                 }
-              },
-              "required": [
-                "uuid",
-                "version",
-                "summary",
-                "active",
-                "language_uuid",
-                "language",
-                "created_at",
-                "updated_at"
-              ]
+              }
             }
           }
-        },
-        "required": [
-          "uuid",
-          "details",
-          "categories",
-          "contents",
-          "attachments",
-          "versions"
-        ]
+        }
       },
       "AdministrativeSystemCalendarRequest": {
         "title": "AdministrativeSystemCalendarRequest",
@@ -14839,314 +12556,6 @@
           "course_permissions"
         ],
         "description": ""
-      },
-      "AdministrativeRulesAndRegulationsResponse": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "total": 3,
-            "from": 1,
-            "per_page": 10,
-            "current_page": 1,
-            "last_page": 1,
-            "documents": [
-              {
-                "uuid": "565309fd-6596-47ca-bea6-ec523bf96056",
-                "details": [
-                  {
-                    "uuid": "b13c9bfc-b76e-33e0-aa7d-48e78a3fa89f",
-                    "title": "Nostrum minima consequatur dicta enim nostrum mollitia fugit.",
-                    "content": "Veritatis aliquam esse et qui sunt.",
-                    "image": "https://via.placeholder.com/640x480.png/00aa99?text=quia",
-                    "language_uuid": "466a9446-829c-49bc-ae83-08d1b21e2c9e",
-                    "language": "ru-RU",
-                    "created_at": "2023-08-04 11:24:50",
-                    "updated_at": "2023-08-04 11:24:50"
-                  },
-                  {
-                    "uuid": "f3ffcec4-4657-3799-8550-3b4f36d646cf",
-                    "title": "Temporibus sed illum sit accusamus laborum dolor animi deleniti.",
-                    "content": "Amet quam qui quam odit placeat.",
-                    "image": "https://via.placeholder.com/640x480.png/00aa11?text=quisquam",
-                    "language_uuid": "234c4e5f-0b59-4659-ba07-0a990cd50541",
-                    "language": "kz-KZ",
-                    "created_at": "2023-08-04 11:24:57",
-                    "updated_at": "2023-08-04 11:24:57"
-                  },
-                  {
-                    "uuid": "c5ea1ece-0472-38d8-9ca2-8922d0c32b53",
-                    "title": "Dolores et ipsam architecto quod itaque dolor excepturi.",
-                    "content": "Tenetur doloremque sequi sed qui sed voluptatum deserunt.",
-                    "image": "https://via.placeholder.com/640x480.png/007788?text=temporibus",
-                    "language_uuid": "50adce1e-2e97-465a-bec1-9f0485b7f4c8",
-                    "language": "en-EN",
-                    "created_at": "2023-08-04 11:25:02",
-                    "updated_at": "2023-08-04 11:25:02"
-                  }
-                ],
-                "categories": [
-                  {
-                    "uuid": "e1121369-28af-3f55-82dc-7584aec3aba7",
-                    "title": "Perspiciatis quas quod magnam sunt voluptatem.",
-                    "description": "Corrupti recusandae quas quas animi quis.",
-                    "language_uuid": "466a9446-829c-49bc-ae83-08d1b21e2c9e",
-                    "language": "ru-RU"
-                  },
-                  {
-                    "uuid": "f4ca3af2-5771-3038-adeb-b842a1ebff27",
-                    "title": "Itaque ut eligendi qui accusamus.",
-                    "description": "Sed aut aspernatur amet iusto.",
-                    "language_uuid": "50adce1e-2e97-465a-bec1-9f0485b7f4c8",
-                    "language": "en-EN"
-                  },
-                  {
-                    "uuid": "7deae10a-c2ec-3756-a523-ac9b8362324e",
-                    "title": "Autem aut quis occaecati ut consectetur dicta.",
-                    "description": "Est sint magni ipsum numquam cum itaque laudantium dignissimos.",
-                    "language_uuid": "234c4e5f-0b59-4659-ba07-0a990cd50541",
-                    "language": "kz-KZ"
-                  }
-                ],
-                "attachments": [
-                  {
-                    "uuid": "7ca87e98-491d-3b2e-8932-a557b6dab7b2",
-                    "title": "repudiandae",
-                    "path": "/tmp/faker3lrMBg",
-                    "extension": "ustar",
-                    "size": "59",
-                    "language_uuid": "234c4e5f-0b59-4659-ba07-0a990cd50541",
-                    "language": "kz-KZ"
-                  },
-                  {
-                    "uuid": "c1ae9878-e734-3295-b2b8-8c72d7f19ed7",
-                    "title": "id",
-                    "path": "/tmp/faker2CItjR",
-                    "extension": "svd",
-                    "size": "70",
-                    "language_uuid": "50adce1e-2e97-465a-bec1-9f0485b7f4c8",
-                    "language": "en-EN"
-                  },
-                  {
-                    "uuid": "1788a6a6-fa52-318c-8088-0add743a63a1",
-                    "title": "et",
-                    "path": "/tmp/fakere6KEBZ",
-                    "extension": "dir",
-                    "size": "45",
-                    "language_uuid": "466a9446-829c-49bc-ae83-08d1b21e2c9e",
-                    "language": "ru-RU"
-                  }
-                ],
-                "created_at": "2023-04-27 02:28:14",
-                "updated_at": "2023-05-19 05:34:01"
-              },
-              {
-                "uuid": "ef537ef4-7f1b-470a-ad6e-a92497eddaf3",
-                "details": [],
-                "categories": [],
-                "attachments": [],
-                "created_at": "2023-05-04 04:25:27",
-                "updated_at": "2023-05-04 04:25:27"
-              },
-              {
-                "uuid": "565309fd-6596-47ca-bea6-ec523bf96057",
-                "details": [],
-                "categories": [],
-                "attachments": [],
-                "created_at": "2023-05-03 16:05:00",
-                "updated_at": "2023-05-03 16:05:02"
-              }
-            ]
-          }
-        },
-        "properties": {
-          "total": {
-            "type": "integer"
-          },
-          "from": {
-            "type": "integer"
-          },
-          "per_page": {
-            "type": "integer"
-          },
-          "current_page": {
-            "type": "integer"
-          },
-          "last_page": {
-            "type": "integer"
-          },
-          "documents": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "uuid": {
-                  "type": "string"
-                },
-                "details": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "uuid": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "content": {
-                        "type": "string"
-                      },
-                      "image": {
-                        "type": "string"
-                      },
-                      "language_uuid": {
-                        "type": "string"
-                      },
-                      "language": {
-                        "type": "string"
-                      },
-                      "created_at": {
-                        "type": "string"
-                      },
-                      "updated_at": {
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "uuid",
-                      "title",
-                      "content",
-                      "image",
-                      "language_uuid",
-                      "language",
-                      "created_at",
-                      "updated_at"
-                    ]
-                  }
-                },
-                "categories": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "uuid": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "description": {
-                        "type": "string"
-                      },
-                      "language_uuid": {
-                        "type": "string"
-                      },
-                      "language": {
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "uuid",
-                      "title",
-                      "description",
-                      "language_uuid",
-                      "language"
-                    ]
-                  }
-                },
-                "attachments": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "uuid": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "path": {
-                        "type": "string"
-                      },
-                      "extension": {
-                        "type": "string"
-                      },
-                      "size": {
-                        "type": "string"
-                      },
-                      "language_uuid": {
-                        "type": "string"
-                      },
-                      "language": {
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "uuid",
-                      "title",
-                      "path",
-                      "extension",
-                      "size",
-                      "language_uuid",
-                      "language"
-                    ]
-                  }
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "updated_at": {
-                  "type": "string"
-                }
-              },
-              "required": [
-                "uuid",
-                "details",
-                "categories",
-                "attachments",
-                "created_at",
-                "updated_at"
-              ]
-            }
-          }
-        },
-        "required": [
-          "total",
-          "from",
-          "per_page",
-          "current_page",
-          "last_page",
-          "documents"
-        ]
-      },
-      "AdministrativeRulesAndRegulationsRequest": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "per_page": 1241,
-            "offset": 12412,
-            "search": "asdasfadsgfa",
-            "category": "adfblslabdl"
-          }
-        },
-        "properties": {
-          "per_page": {
-            "type": "integer"
-          },
-          "offset": {
-            "type": "integer"
-          },
-          "search": {
-            "type": "string"
-          },
-          "category": {
-            "type": "string"
-          }
-        },
-        "required": [
-          "per_page",
-          "offset"
-        ]
       },
       "ProfileOverviewResponse": {
         "type": "object",
@@ -17393,6 +14802,12 @@
                       "x-stoplight": {
                         "id": "yjvivmidbrp5u"
                       }
+                    },
+                    "_isSelected": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "ojjkzz5jilygv"
+                      }
                     }
                   }
                 }
@@ -17500,6 +14915,12 @@
                       "type": "number",
                       "x-stoplight": {
                         "id": "pbr9ik4yyhia3"
+                      }
+                    },
+                    "_isSelected": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "1u4iku92qppfp"
                       }
                     }
                   }
@@ -17609,6 +15030,12 @@
                       "x-stoplight": {
                         "id": "nauvtyj69t0hl"
                       }
+                    },
+                    "_isSelected": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "0u7fmcen3pq84"
+                      }
                     }
                   }
                 }
@@ -17716,6 +15143,12 @@
                       "type": "number",
                       "x-stoplight": {
                         "id": "z08gabqcoweah"
+                      }
+                    },
+                    "_isSelected": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "8ctg3ns4dfali"
                       }
                     }
                   }
@@ -25023,6 +22456,205 @@
         "properties": {
           "message": {
             "type": "string"
+          }
+        }
+      },
+      "AdministrativeStaffsWorkloadRequest": {
+        "title": "AdministrativeStaffsWorkloadRequest",
+        "x-stoplight": {
+          "id": "c8q31l3ux2742"
+        },
+        "type": "object",
+        "required": [
+          "year",
+          "term",
+          "department_code"
+        ],
+        "properties": {
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "wfjcpvofassxv"
+            }
+          },
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "i9b9u7i0dhfcd"
+            }
+          },
+          "department_code": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "wghsdp44khfp8"
+            }
+          }
+        }
+      },
+      "AdministrativeStaffsWorkloadResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "employee_id": 1232,
+              "employee_name": "Ualikhan Sadyk",
+              "ects": 5,
+              "theory": 1,
+              "practice": 1,
+              "lab": 1,
+              "credits": 3,
+              "course_code": "CSS 101",
+              "type": "P",
+              "week_number": 12,
+              "course_title": "Computer Vision",
+              "section": "01",
+              "hour_number": 15,
+              "student_count": 20,
+              "thesis_count": 1
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "employee_id",
+            "employee_name",
+            "ects",
+            "theory",
+            "practice",
+            "lab",
+            "credits",
+            "course_code",
+            "type",
+            "week_number",
+            "course_title",
+            "section",
+            "hour_number",
+            "student_count",
+            "thesis_count"
+          ],
+          "properties": {
+            "employee_id": {
+              "type": "integer"
+            },
+            "employee_name": {
+              "type": "string"
+            },
+            "ects": {
+              "type": "integer"
+            },
+            "theory": {
+              "type": "integer"
+            },
+            "practice": {
+              "type": "integer"
+            },
+            "lab": {
+              "type": "integer"
+            },
+            "credits": {
+              "type": "integer"
+            },
+            "course_code": {
+              "type": "string"
+            },
+            "type": {
+              "type": "string"
+            },
+            "week_number": {
+              "type": "integer"
+            },
+            "course_title": {
+              "type": "string"
+            },
+            "section": {
+              "type": "string"
+            },
+            "hour_number": {
+              "type": "integer"
+            },
+            "student_count": {
+              "type": "integer"
+            },
+            "thesis_count": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "AdministrativeStaffsWorkloadResourcesResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "year_terms": [
+              {
+                "year": 2020,
+                "term": 1,
+                "title": "2023 - 1"
+              }
+            ],
+            "departments": [
+              {
+                "department_code": "DEP_LANG_EDU",
+                "title": "Department of Language Education",
+                "faculty": "Faculty of education and humanities",
+                "faculty_code": "F_PHIL"
+              }
+            ]
+          }
+        },
+        "required": [
+          "year_terms",
+          "departments"
+        ],
+        "properties": {
+          "year_terms": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "year",
+                "term",
+                "title"
+              ],
+              "properties": {
+                "year": {
+                  "type": "integer"
+                },
+                "term": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "departments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "department_code",
+                "title",
+                "faculty",
+                "faculty_code"
+              ],
+              "properties": {
+                "department_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "faculty": {
+                  "type": "string"
+                },
+                "faculty_code": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       }

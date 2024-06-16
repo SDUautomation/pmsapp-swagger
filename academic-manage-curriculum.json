@@ -2159,7 +2159,16 @@
               "name": "Daulet",
               "surname": "Akberdiyev"
             },
-            "program_code": "6B000000",
+            "program": {
+              "code": "6B06102",
+              "title_kz": "Компьютерлік ғылымдар",
+              "title_ru": "Компьютерлік ғылымдар",
+              "title_en": "Компьютерлік ғылымдар"
+            },
+            "years_period": {
+              "start": 2022,
+              "end": 2026
+            },
             "degree": {
               "ru": "Bachelor",
               "en": "Bachelor",
@@ -2189,7 +2198,8 @@
         "required": [
           "prorector",
           "educational_methodical_director",
-          "program_code",
+          "program",
+          "years_period",
           "degree",
           "terms"
         ],
@@ -2232,8 +2242,43 @@
               }
             }
           },
-          "program_code": {
-            "type": "string"
+          "program": {
+            "type": "object",
+            "required": [
+              "code",
+              "title_kz",
+              "title_ru",
+              "title_en"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "title_kz": {
+                "type": "string"
+              },
+              "title_ru": {
+                "type": "string"
+              },
+              "title_en": {
+                "type": "string"
+              }
+            }
+          },
+          "years_period": {
+            "type": "object",
+            "required": [
+              "start",
+              "end"
+            ],
+            "properties": {
+              "start": {
+                "type": "integer"
+              },
+              "end": {
+                "type": "integer"
+              }
+            }
           },
           "degree": {
             "type": "object",
@@ -2318,51 +2363,6 @@
                 }
               }
             }
-          }
-        },
-        "x-examples": {
-          "Example 1": {
-            "prorector": {
-              "name": "...",
-              "surname": "..."
-            },
-            "educationalMethodicalDirector": {
-              "name": "...",
-              "surname": "..."
-            },
-            "programCode": "6B0000...",
-            "degree": {
-              "ru": "Магистр",
-              "en": "Master",
-              "kz": "Магистр"
-            },
-            "terms": [
-              {
-                "term": 1,
-                "courses": [
-                  {
-                    "type": "elective",
-                    "ps_course_code": "XXX XX9",
-                    "course_code": "CSS 105",
-                    "curriculum_type": "C",
-                    "curriculum_ids": "75346,76837,76842,76840",
-                    "curriculum_id": 58825,
-                    "curriculum_slot_id": 0,
-                    "title_kz": "Компьютер ғылымдарына арналған математика 2",
-                    "title_ru": "Математика для компьютерных наук 2",
-                    "title_en": "Mathematics for Computer Science 2",
-                    "credits": 3,
-                    "ects": 5,
-                    "theory": 1,
-                    "practice": 1,
-                    "laboratory": 0,
-                    "curriculum_slot_ects": 0,
-                    "term": 1
-                  }
-                ],
-                "total_ects": 22
-              }
-            ]
           }
         }
       },
