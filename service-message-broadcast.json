@@ -196,15 +196,17 @@
                 ]
               }
             ],
-            "programs": [
+            "department_programs": [
               {
-                "department_code": "DEP_COMP_SCI",
-                "list": [
+                "department_code": "DEP_PED",
+                "department_title": "Faculty of education and humanities",
+                "programs": [
                   {
                     "program_code": "10107",
                     "program_title": "Computer Science",
                     "education_language": "EN",
-                    "education_level": "B"
+                    "education_level": "B",
+                    "classes_count": "4"
                   }
                 ]
               }
@@ -235,7 +237,7 @@
         },
         "required": [
           "courses",
-          "programs",
+          "department_programs",
           "types",
           "from",
           "status",
@@ -291,19 +293,23 @@
               }
             }
           },
-          "programs": {
+          "department_programs": {
             "type": "array",
             "items": {
               "type": "object",
               "required": [
                 "department_code",
-                "list"
+                "department_title",
+                "programs"
               ],
               "properties": {
                 "department_code": {
                   "type": "string"
                 },
-                "list": {
+                "department_title": {
+                  "type": "string"
+                },
+                "programs": {
                   "type": "array",
                   "items": {
                     "type": "object",
@@ -311,7 +317,8 @@
                       "program_code",
                       "program_title",
                       "education_language",
-                      "education_level"
+                      "education_level",
+                      "classes_count"
                     ],
                     "properties": {
                       "program_code": {
@@ -324,6 +331,9 @@
                         "type": "string"
                       },
                       "education_level": {
+                        "type": "string"
+                      },
+                      "classes_count": {
                         "type": "string"
                       }
                     }
