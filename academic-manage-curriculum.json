@@ -1309,6 +1309,51 @@
           }
         }
       },
+      "AcademicManageCurriculumCorePutBulkRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "type": "C",
+            "is_active": true,
+            "term": 8,
+            "track_code": "TRACK0",
+            "elective_type": "AE",
+            "ids": [
+              54984
+            ]
+          }
+        },
+        "required": [
+          "type",
+          "is_active",
+          "term",
+          "track_code",
+          "ids"
+        ],
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "is_active": {
+            "type": "boolean"
+          },
+          "term": {
+            "type": "integer"
+          },
+          "track_code": {
+            "type": "string"
+          },
+          "elective_type": {
+            "type": "string"
+          },
+          "ids": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
+      },
       "AcademicManageCurriculumElectiveGetRequest": {
         "title": "AcademicManageCurriculumElectiveGetRequest",
         "x-stoplight": {
