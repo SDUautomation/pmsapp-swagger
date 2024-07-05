@@ -777,64 +777,48 @@
       },
       "ServiceMessageBroadcastEmployeeGetRequest": {
         "type": "object",
-        "x-stoplight": {
-          "id": "73c49ac24441b"
-        },
         "x-examples": {
           "Example 1": {
-            "status": [
-              1
-            ],
-            "stat": [
-              1
+            "departments": [
+              "10051"
             ]
           }
         },
         "required": [
-          "status",
-          "stat"
+          "departments"
         ],
         "properties": {
-          "status": {
+          "departments": {
             "type": "array",
             "items": {
-              "type": "integer"
-            }
-          },
-          "stat": {
-            "type": "array",
-            "items": {
-              "type": "integer"
+              "type": "string"
             }
           }
         }
       },
       "ServiceMessageBroadcastEmployeeGetResponse": {
         "type": "array",
-        "x-stoplight": {
-          "id": "60bc1e5ea3ce6"
-        },
         "x-examples": {
           "Example 1": [
             {
-              "employee_id": 10002,
+              "username": "elvin.naghiyev",
               "full_name": "Elvin Naghiyev",
               "specialty": "Director",
-              "status": 1
+              "department_code": "10051"
             }
           ]
         },
         "items": {
           "type": "object",
           "required": [
-            "employee_id",
+            "username",
             "full_name",
             "specialty",
-            "status"
+            "department_code"
           ],
           "properties": {
-            "employee_id": {
-              "type": "integer"
+            "username": {
+              "type": "string"
             },
             "full_name": {
               "type": "string"
@@ -842,8 +826,8 @@
             "specialty": {
               "type": "string"
             },
-            "status": {
-              "type": "integer"
+            "department_code": {
+              "type": "string"
             }
           }
         }
