@@ -874,7 +874,8 @@
             "username",
             "full_name",
             "specialty",
-            "department_code"
+            "department_code",
+            "department_title"
           ],
           "properties": {
             "username": {
@@ -888,6 +889,12 @@
             },
             "department_code": {
               "type": "string"
+            },
+            "department_title": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "hnknfx9q5vfet"
+              }
             }
           }
         }
