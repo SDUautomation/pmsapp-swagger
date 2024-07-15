@@ -12229,6 +12229,7 @@
                 "status",
                 "view_count",
                 "last_op_date",
+                "last_op_emp_id",
                 "created_at",
                 "comments"
               ],
