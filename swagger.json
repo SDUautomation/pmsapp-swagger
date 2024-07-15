@@ -11961,7 +11961,6 @@
               "type": "object",
               "required": [
                 "name",
-                "surname",
                 "birth_date"
               ],
               "properties": {
