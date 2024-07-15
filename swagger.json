@@ -11884,7 +11884,21 @@
               }
             ],
             "rules_and_regulations": [
-              "string"
+              {
+                "id": 1,
+                "title": "Cду академиялық саясаты туралы ережесі",
+                "description": "Cду академиялық саясаты туралы ережесі",
+                "category_title": "Academic",
+                "author_full_name": "Aibolat Batyrov",
+                "attachments": [
+                  {
+                    "id": 1,
+                    "url": "https://oldpms.sdu.edu.kz/common/download/competent_bachelor.pdf",
+                    "language_name": "kz",
+                    "version": "2024"
+                  }
+                ]
+              }
             ],
             "syllabus_statistics": [
               {
@@ -11894,9 +11908,6 @@
                 "status_title": "Accepted",
                 "courses": 12
               }
-            ],
-            "moodle_activities": [
-              "string"
             ],
             "posts": [
               {
@@ -11923,6 +11934,12 @@
                   }
                 ]
               }
+            ],
+            "reports": [
+              {
+                "report_id": 3,
+                "title": "GPA Ranking by Faculties"
+              }
             ]
           }
         },
@@ -11934,8 +11951,8 @@
           "faculty_statistics",
           "rules_and_regulations",
           "syllabus_statistics",
-          "moodle_activities",
-          "posts"
+          "posts",
+          "reports"
         ],
         "properties": {
           "greetings": {
@@ -12116,102 +12133,51 @@
             "items": {
               "type": "object",
               "required": [
-                "uuid",
+                "id",
+                "title",
+                "description",
+                "category_title",
+                "author_full_name",
                 "attachments"
               ],
               "properties": {
-                "uuid": {
-                  "type": "string",
-                  "x-stoplight": {
-                    "id": "ykdag9yn7nr3f"
-                  }
+                "id": {
+                  "type": "integer"
                 },
-                "details": {
-                  "type": "array",
-                  "x-stoplight": {
-                    "id": "uqpta4uxod3xj"
-                  },
-                  "items": {
-                    "x-stoplight": {
-                      "id": "94ari5jnk20qn"
-                    },
-                    "type": "object",
-                    "properties": {
-                      "title": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "t7foay9bb2g1u"
-                        }
-                      },
-                      "content": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "6evdp4jle0hi5"
-                        }
-                      }
-                    }
-                  }
+                "title": {
+                  "type": "string"
                 },
-                "categories": {
-                  "type": "array",
-                  "x-stoplight": {
-                    "id": "neyyhtyt8qhao"
-                  },
-                  "items": {
-                    "x-stoplight": {
-                      "id": "h7qc5vjehwtln"
-                    },
-                    "type": "object",
-                    "properties": {
-                      "title": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "crmchia3e1oqt"
-                        }
-                      }
-                    }
-                  }
+                "description": {
+                  "type": "string"
+                },
+                "category_title": {
+                  "type": "string"
+                },
+                "author_full_name": {
+                  "type": "string"
                 },
                 "attachments": {
                   "type": "array",
-                  "x-stoplight": {
-                    "id": "wn7q6zi1ynxyd"
-                  },
                   "items": {
-                    "x-stoplight": {
-                      "id": "7dkmv57455522"
-                    },
                     "type": "object",
                     "required": [
-                      "title",
-                      "language",
-                      "size",
-                      "path"
+                      "id",
+                      "url",
+                      "language_name",
+                      "version"
                     ],
                     "properties": {
-                      "title": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "af380vo6zz0vo"
-                        }
+                      "id": {
+                        "type": "integer"
                       },
-                      "language": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "jncn43f8168f0"
-                        }
+                      "url": {
+                        "type": "string"
                       },
-                      "size": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "0gfs5jgga43ox"
-                        }
+                      "language_name": {
+                        "type": "string"
                       },
-                      "path": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "cstruxhc0yzzo"
-                        }
+                      "version": {
+                        "type": "string"
                       }
                     }
                   }
@@ -12249,12 +12215,6 @@
               }
             }
           },
-          "moodle_activities": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
           "posts": {
             "type": "array",
             "items": {
@@ -12269,6 +12229,7 @@
                 "status",
                 "view_count",
                 "last_op_date",
+                "last_op_emp_id",
                 "created_at",
                 "comments"
               ],
@@ -12343,6 +12304,24 @@
                       }
                     }
                   }
+                }
+              }
+            }
+          },
+          "reports": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "report_id",
+                "title"
+              ],
+              "properties": {
+                "report_id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
                 }
               }
             }
