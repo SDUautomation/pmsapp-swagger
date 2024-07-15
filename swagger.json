@@ -11829,6 +11829,290 @@
       },
       "DashboardWidgetsResponse": {
         "type": "object",
+        "properties": {
+          "greetings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "surname": {
+                  "type": "string"
+                },
+                "birth_date": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "schedules": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "week_day": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "start_time": {
+                  "type": "string"
+                },
+                "end_time": {
+                  "type": "string"
+                },
+                "room": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "courses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "section_id": {
+                  "type": "integer"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "section": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "credits": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "attendances": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "week_day": {
+                  "type": "integer"
+                },
+                "start_time": {
+                  "type": "string"
+                },
+                "attendance_chart": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "course_date": {
+                        "type": "string"
+                      },
+                      "conducted": {
+                        "type": "integer"
+                      },
+                      "absent": {
+                        "type": "integer"
+                      },
+                      "attended": {
+                        "type": "integer"
+                      },
+                      "permitted": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "faculty_statistics": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string"
+                },
+                "programs": {
+                  "type": "integer"
+                },
+                "courses": {
+                  "type": "integer"
+                },
+                "students": {
+                  "type": "integer"
+                },
+                "employee": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "rules_and_regulations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "category_title": {
+                  "type": "string"
+                },
+                "author_full_name": {
+                  "type": "string"
+                },
+                "attachments": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "url": {
+                        "type": "string"
+                      },
+                      "language_name": {
+                        "type": "string"
+                      },
+                      "version": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "syllabus_statistics": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "department_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "integer"
+                },
+                "status_title": {
+                  "type": "string"
+                },
+                "courses": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "posts": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "username": {
+                  "type": "string"
+                },
+                "user_full_name": {
+                  "type": "string"
+                },
+                "user_photo": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "content": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "integer"
+                },
+                "view_count": {
+                  "type": "integer"
+                },
+                "last_op_date": {
+                  "type": "string"
+                },
+                "last_op_emp_id": {
+                  "type": "integer"
+                },
+                "created_at": {
+                  "type": "string"
+                },
+                "comments": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "post_id": {
+                        "type": "integer"
+                      },
+                      "username": {
+                        "type": "string"
+                      },
+                      "user_full_name": {
+                        "type": "string"
+                      },
+                      "user_photo": {
+                        "type": "string"
+                      },
+                      "content": {
+                        "type": "string"
+                      },
+                      "created_at": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "reports": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "report_id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
         "x-examples": {
           "Example 1": {
             "greetings": [
@@ -11884,7 +12168,21 @@
               }
             ],
             "rules_and_regulations": [
-              "string"
+              {
+                "id": 1,
+                "title": "Cду академиялық саясаты туралы ережесі",
+                "description": "Cду академиялық саясаты туралы ережесі",
+                "category_title": "Academic",
+                "author_full_name": "Aibolat Batyrov",
+                "attachments": [
+                  {
+                    "id": 1,
+                    "url": "https://oldpms.sdu.edu.kz/common/download/competent_bachelor.pdf",
+                    "language_name": "kz",
+                    "version": "2024"
+                  }
+                ]
+              }
             ],
             "syllabus_statistics": [
               {
@@ -11894,9 +12192,6 @@
                 "status_title": "Accepted",
                 "courses": 12
               }
-            ],
-            "moodle_activities": [
-              "string"
             ],
             "posts": [
               {
@@ -11923,430 +12218,13 @@
                   }
                 ]
               }
+            ],
+            "reports": [
+              {
+                "report_id": 3,
+                "title": "GPA Ranking by Faculties"
+              }
             ]
-          }
-        },
-        "required": [
-          "greetings",
-          "schedules",
-          "courses",
-          "attendances",
-          "faculty_statistics",
-          "rules_and_regulations",
-          "syllabus_statistics",
-          "moodle_activities",
-          "posts"
-        ],
-        "properties": {
-          "greetings": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "name",
-                "surname",
-                "birth_date"
-              ],
-              "properties": {
-                "name": {
-                  "type": "string"
-                },
-                "surname": {
-                  "type": "string"
-                },
-                "birth_date": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "schedules": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "week_day",
-                "title",
-                "start_time",
-                "end_time",
-                "room"
-              ],
-              "properties": {
-                "week_day": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "start_time": {
-                  "type": "string"
-                },
-                "end_time": {
-                  "type": "string"
-                },
-                "room": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "courses": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "section_id",
-                "code",
-                "title",
-                "section",
-                "type",
-                "credits"
-              ],
-              "properties": {
-                "section_id": {
-                  "type": "integer"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "section": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "credits": {
-                  "type": "integer"
-                }
-              }
-            }
-          },
-          "attendances": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "title",
-                "code",
-                "week_day",
-                "start_time",
-                "attendance_chart"
-              ],
-              "properties": {
-                "title": {
-                  "type": "string"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "week_day": {
-                  "type": "integer"
-                },
-                "start_time": {
-                  "type": "string"
-                },
-                "attendance_chart": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "course_date",
-                      "conducted",
-                      "absent",
-                      "attended",
-                      "permitted"
-                    ],
-                    "properties": {
-                      "course_date": {
-                        "type": "string"
-                      },
-                      "conducted": {
-                        "type": "integer"
-                      },
-                      "absent": {
-                        "type": "integer"
-                      },
-                      "attended": {
-                        "type": "integer"
-                      },
-                      "permitted": {
-                        "type": "integer"
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "faculty_statistics": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "title",
-                "programs",
-                "courses",
-                "students",
-                "employee"
-              ],
-              "properties": {
-                "title": {
-                  "type": "string"
-                },
-                "programs": {
-                  "type": "integer"
-                },
-                "courses": {
-                  "type": "integer"
-                },
-                "students": {
-                  "type": "integer"
-                },
-                "employee": {
-                  "type": "integer"
-                }
-              }
-            }
-          },
-          "rules_and_regulations": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "uuid",
-                "attachments"
-              ],
-              "properties": {
-                "uuid": {
-                  "type": "string",
-                  "x-stoplight": {
-                    "id": "ykdag9yn7nr3f"
-                  }
-                },
-                "details": {
-                  "type": "array",
-                  "x-stoplight": {
-                    "id": "uqpta4uxod3xj"
-                  },
-                  "items": {
-                    "x-stoplight": {
-                      "id": "94ari5jnk20qn"
-                    },
-                    "type": "object",
-                    "properties": {
-                      "title": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "t7foay9bb2g1u"
-                        }
-                      },
-                      "content": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "6evdp4jle0hi5"
-                        }
-                      }
-                    }
-                  }
-                },
-                "categories": {
-                  "type": "array",
-                  "x-stoplight": {
-                    "id": "neyyhtyt8qhao"
-                  },
-                  "items": {
-                    "x-stoplight": {
-                      "id": "h7qc5vjehwtln"
-                    },
-                    "type": "object",
-                    "properties": {
-                      "title": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "crmchia3e1oqt"
-                        }
-                      }
-                    }
-                  }
-                },
-                "attachments": {
-                  "type": "array",
-                  "x-stoplight": {
-                    "id": "wn7q6zi1ynxyd"
-                  },
-                  "items": {
-                    "x-stoplight": {
-                      "id": "7dkmv57455522"
-                    },
-                    "type": "object",
-                    "required": [
-                      "title",
-                      "language",
-                      "size",
-                      "path"
-                    ],
-                    "properties": {
-                      "title": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "af380vo6zz0vo"
-                        }
-                      },
-                      "language": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "jncn43f8168f0"
-                        }
-                      },
-                      "size": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "0gfs5jgga43ox"
-                        }
-                      },
-                      "path": {
-                        "type": "string",
-                        "x-stoplight": {
-                          "id": "cstruxhc0yzzo"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "syllabus_statistics": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "department_code",
-                "title",
-                "status",
-                "status_title",
-                "courses"
-              ],
-              "properties": {
-                "department_code": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "status": {
-                  "type": "integer"
-                },
-                "status_title": {
-                  "type": "string"
-                },
-                "courses": {
-                  "type": "integer"
-                }
-              }
-            }
-          },
-          "moodle_activities": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "posts": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "username",
-                "user_full_name",
-                "user_photo",
-                "title",
-                "content",
-                "status",
-                "view_count",
-                "last_op_date",
-                "last_op_emp_id",
-                "created_at",
-                "comments"
-              ],
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "username": {
-                  "type": "string"
-                },
-                "user_full_name": {
-                  "type": "string"
-                },
-                "user_photo": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "status": {
-                  "type": "integer"
-                },
-                "view_count": {
-                  "type": "integer"
-                },
-                "last_op_date": {
-                  "type": "string"
-                },
-                "last_op_emp_id": {
-                  "type": "integer"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "comments": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "id",
-                      "post_id",
-                      "username",
-                      "user_full_name",
-                      "user_photo",
-                      "content",
-                      "created_at"
-                    ],
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "post_id": {
-                        "type": "integer"
-                      },
-                      "username": {
-                        "type": "string"
-                      },
-                      "user_full_name": {
-                        "type": "string"
-                      },
-                      "user_photo": {
-                        "type": "string"
-                      },
-                      "content": {
-                        "type": "string"
-                      },
-                      "created_at": {
-                        "type": "string"
-                      }
-                    }
-                  }
-                }
-              }
-            }
           }
         }
       },
