@@ -16128,6 +16128,14 @@
             ]
           }
         },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "posts"
+        ],
         "properties": {
           "total": {
             "type": "integer"
@@ -16148,6 +16156,20 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "username",
+                "user_full_name",
+                "user_photo",
+                "title",
+                "content",
+                "status",
+                "last_op_date",
+                "last_op_emp_id",
+                "created_at",
+                "comments",
+                "views"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -16170,9 +16192,6 @@
                 "status": {
                   "type": "integer"
                 },
-                "view_count": {
-                  "type": "integer"
-                },
                 "last_op_date": {
                   "type": "string"
                 },
@@ -16186,6 +16205,15 @@
                   "type": "array",
                   "items": {
                     "type": "object",
+                    "required": [
+                      "id",
+                      "post_id",
+                      "username",
+                      "user_full_name",
+                      "user_photo",
+                      "content",
+                      "created_at"
+                    ],
                     "properties": {
                       "id": {
                         "type": "integer"
@@ -16208,45 +16236,19 @@
                       "created_at": {
                         "type": "string"
                       }
-                    },
-                    "required": [
-                      "id",
-                      "post_id",
-                      "username",
-                      "user_full_name",
-                      "user_photo",
-                      "content",
-                      "created_at"
-                    ]
+                    }
+                  }
+                },
+                "views": {
+                  "type": "integer",
+                  "x-stoplight": {
+                    "id": "5apwlk30iwpys"
                   }
                 }
-              },
-              "required": [
-                "id",
-                "username",
-                "user_full_name",
-                "user_photo",
-                "title",
-                "content",
-                "status",
-                "view_count",
-                "last_op_date",
-                "last_op_emp_id",
-                "created_at",
-                "comments"
-              ]
+              }
             }
           }
-        },
-        "required": [
-          "total",
-          "from",
-          "per_page",
-          "current_page",
-          "last_page",
-          "posts"
-        ],
-        "title": ""
+        }
       },
       "AdministrativeMessageBoardPostsPostRequest": {
         "type": "object",
