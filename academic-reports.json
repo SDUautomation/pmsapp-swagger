@@ -116,14 +116,6 @@
           "name": "report",
           "in": "path",
           "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "report",
-          "in": "path",
-          "required": true
         }
       ],
       "post": {
@@ -165,14 +157,6 @@
           "name": "report",
           "in": "path",
           "required": true
-        },
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "report",
-          "in": "path",
-          "required": true
         }
       ],
       "post": {
@@ -203,7 +187,25 @@
           "Example 1": [
             {
               "id": 3,
-              "title": "GPA Ranking"
+              "title": "GPA Ranking",
+              "reports": [
+                {
+                  "report_id": 3,
+                  "title": "GPA Ranking by Faculties"
+                }
+              ],
+              "children": [
+                {
+                  "id": 3,
+                  "title": "GPA Ranking",
+                  "reports": [
+                    {
+                      "report_id": 3,
+                      "title": "GPA Ranking by Faculties"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -211,7 +213,9 @@
           "type": "object",
           "required": [
             "id",
-            "title"
+            "title",
+            "reports",
+            "children"
           ],
           "properties": {
             "id": {
@@ -219,6 +223,61 @@
             },
             "title": {
               "type": "string"
+            },
+            "reports": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "report_id",
+                  "title"
+                ],
+                "properties": {
+                  "report_id": {
+                    "type": "integer"
+                  },
+                  "title": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "children": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "id",
+                  "title",
+                  "reports"
+                ],
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "title": {
+                    "type": "string"
+                  },
+                  "reports": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "report_id",
+                        "title"
+                      ],
+                      "properties": {
+                        "report_id": {
+                          "type": "integer"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -397,24 +456,6 @@
         }
       },
       "AcademicReportsExecutePostRequest": {
-        "title": "AcademicReportsExecutePostRequest",
-        "x-stoplight": {
-          "id": "3tbwqlgmsucx4"
-        },
-        "type": "object",
-        "required": [
-          "report"
-        ],
-        "properties": {
-          "report": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "j5ltawyxwyym2"
-            }
-          }
-        }
-      },
-      "AcademicReportsExecutePostResponse": {
         "type": "object",
         "x-examples": {
           "Example 1": {
@@ -435,7 +476,8 @@
         },
         "required": [
           "fields",
-          "parameters"
+          "parameters",
+          "report"
         ],
         "properties": {
           "fields": {
@@ -471,6 +513,38 @@
                   }
                 }
               }
+            }
+          },
+          "report": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "o9dutmllo4qwh"
+            }
+          }
+        }
+      },
+      "AcademicReportsExecutePostResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "field1": "value1",
+              "field2": "value2"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "field1",
+            "field2"
+          ],
+          "properties": {
+            "field1": {
+              "type": "string"
+            },
+            "field2": {
+              "type": "string"
             }
           }
         }

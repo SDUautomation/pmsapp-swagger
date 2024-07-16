@@ -327,6 +327,38 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/manage/courses/resources/departments": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicManageCourseResourceDepartmentsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-courses-resources-departments",
+        "x-stoplight": {
+          "id": "gq8yaae8d8ldr"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicManageCourseResourceDepartmentsGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "parameters": []
     }
   },
   "components": {
@@ -767,6 +799,16 @@
             ]
           }
         },
+        "required": [
+          "terms",
+          "languages",
+          "types",
+          "grading_types",
+          "requisite_types",
+          "consent_statuses",
+          "course_prefixes",
+          "section_types"
+        ],
         "properties": {
           "terms": {
             "type": "array",
@@ -775,6 +817,9 @@
                 "id": "y2f8g1vzr70y8"
               },
               "type": "object",
+              "required": [
+                "term"
+              ],
               "properties": {
                 "term": {
                   "type": "number",
@@ -782,16 +827,17 @@
                     "id": "nqvxfhe6kxxb4"
                   }
                 }
-              },
-              "required": [
-                "term"
-              ]
+              }
             }
           },
           "languages": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "code",
+                "title"
+              ],
               "properties": {
                 "code": {
                   "type": "string"
@@ -799,17 +845,17 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "code",
-                "title"
-              ]
+              }
             }
           },
           "types": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "key",
+                "title"
+              ],
               "properties": {
                 "key": {
                   "type": "string"
@@ -817,17 +863,17 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "key",
-                "title"
-              ]
+              }
             }
           },
           "grading_types": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "key",
+                "title"
+              ],
               "properties": {
                 "key": {
                   "type": "string"
@@ -835,17 +881,17 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "key",
-                "title"
-              ]
+              }
             }
           },
           "requisite_types": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "key",
+                "title"
+              ],
               "properties": {
                 "key": {
                   "type": "string"
@@ -853,17 +899,17 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "key",
-                "title"
-              ]
+              }
             }
           },
           "consent_statuses": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -871,11 +917,7 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "title"
-              ]
+              }
             }
           },
           "course_prefixes": {
@@ -885,6 +927,10 @@
               "x-stoplight": {
                 "id": "welent58rge7j"
               },
+              "required": [
+                "id",
+                "course_prefix"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -892,23 +938,54 @@
                 "course_prefix": {
                   "type": "string"
                 }
+              }
+            }
+          },
+          "section_types": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "ncdjvt221rqb9"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "9zbb91w41ouns"
               },
+              "type": "object",
               "required": [
-                "id",
-                "course_prefix"
-              ]
+                "section_key",
+                "title",
+                "weight",
+                "rate"
+              ],
+              "properties": {
+                "section_key": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "2lmwj4mh0ntnk"
+                  }
+                },
+                "title": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "3u1kplltqp6ww"
+                  }
+                },
+                "weight": {
+                  "type": "number",
+                  "x-stoplight": {
+                    "id": "da16pv5y86fkz"
+                  }
+                },
+                "rate": {
+                  "type": "number",
+                  "x-stoplight": {
+                    "id": "nx0mbv7ugq82o"
+                  }
+                }
+              }
             }
           }
-        },
-        "required": [
-          "terms",
-          "languages",
-          "types",
-          "grading_types",
-          "requisite_types",
-          "consent_statuses",
-          "course_prefixes"
-        ]
+        }
       },
       "AcademicManageCourseDescriptionPostRequest": {
         "type": "object",
@@ -1277,6 +1354,75 @@
         "required": [
           "id"
         ]
+      },
+      "AcademicManageCourseResourceDepartmentsGetRequest": {
+        "title": "AcademicManageCourseResourceDepartmentsGetRequest",
+        "x-stoplight": {
+          "id": "0u1hcr35edmjg"
+        },
+        "type": "object",
+        "required": [
+          "year"
+        ],
+        "properties": {
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "5zcklpy5z9e98"
+            }
+          }
+        }
+      },
+      "AcademicManageCourseResourceDepartmentsGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": 1,
+              "parent_id": 1,
+              "code": "DEP_COMP_SCI",
+              "title": "Department of Computer Sciences",
+              "year": 2023,
+              "course_code_prefixes": [
+                "CSS"
+              ]
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "parent_id",
+            "code",
+            "title",
+            "year",
+            "course_code_prefixes"
+          ],
+          "properties": {
+            "id": {
+              "type": "integer"
+            },
+            "parent_id": {
+              "type": "integer"
+            },
+            "code": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "year": {
+              "type": "integer"
+            },
+            "course_code_prefixes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
       }
     }
   }

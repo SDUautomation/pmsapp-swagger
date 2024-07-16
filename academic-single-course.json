@@ -425,6 +425,38 @@
         }
       }
     },
+    "/1.0.0/academic/courses/attendances/by-course/qr": {
+      "parameters": [],
+      "post": {
+        "summary": "Your POST endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicSingleCourseAttendanceQrPostResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "post-1.0.0-academic-courses-attendances-by-course-qr",
+        "x-stoplight": {
+          "id": "9586yug2gnt33"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicSingleCourseAttendanceQrPostRequest"
+              }
+            }
+          }
+        }
+      }
+    },
     "/1.0.0/integration/moodle/grades": {
       "get": {
         "summary": "Your GET endpoint",
@@ -889,7 +921,7 @@
             ],
             "room_types": [
               {
-                "id": "2",
+                "id": 2,
                 "title": "Laboratory"
               }
             ],
@@ -904,13 +936,15 @@
                 "id": 1,
                 "day": "12 May",
                 "time": "13:00",
+                "qr_available": true,
                 "conductance": {
                   "conducted": false,
                   "description": "The journal was not filled."
                 },
                 "room": {
                   "id": 121,
-                  "title": "E117"
+                  "title": "E117",
+                  "building_id": "MAIN"
                 }
               }
             ],
@@ -961,6 +995,13 @@
                 "id": 10987,
                 "full_name": "Aibolat Batyrov"
               }
+            },
+            "filling_indicator": {
+              "total_hours": 90,
+              "conducted_hours": 78,
+              "filled": 42,
+              "percentage_from_total_hours": 47,
+              "percentage_from_conducted_hours": 54
             }
           }
         },
@@ -972,7 +1013,8 @@
           "buildings",
           "schedule",
           "students",
-          "course"
+          "course",
+          "filling_indicator"
         ],
         "properties": {
           "absence_limit": {
@@ -1024,7 +1066,7 @@
               ],
               "properties": {
                 "id": {
-                  "type": "string"
+                  "type": "integer"
                 },
                 "title": {
                   "type": "string"
@@ -1058,6 +1100,7 @@
                 "id",
                 "day",
                 "time",
+                "qr_available",
                 "conductance",
                 "room"
               ],
@@ -1070,6 +1113,9 @@
                 },
                 "time": {
                   "type": "string"
+                },
+                "qr_available": {
+                  "type": "boolean"
                 },
                 "conductance": {
                   "type": "object",
@@ -1101,10 +1147,7 @@
                       "type": "string"
                     },
                     "building_id": {
-                      "type": "string",
-                      "x-stoplight": {
-                        "id": "a4xr2uzll54l4"
-                      }
+                      "type": "string"
                     }
                   }
                 }
@@ -1293,6 +1336,33 @@
                     "type": "string"
                   }
                 }
+              }
+            }
+          },
+          "filling_indicator": {
+            "type": "object",
+            "required": [
+              "total_hours",
+              "conducted_hours",
+              "filled",
+              "percentage_from_total_hours",
+              "percentage_from_conducted_hours"
+            ],
+            "properties": {
+              "total_hours": {
+                "type": "integer"
+              },
+              "conducted_hours": {
+                "type": "integer"
+              },
+              "filled": {
+                "type": "integer"
+              },
+              "percentage_from_total_hours": {
+                "type": "integer"
+              },
+              "percentage_from_conducted_hours": {
+                "type": "integer"
               }
             }
           }
@@ -1936,7 +2006,7 @@
               "type": "integer"
             },
             "sections": {
-              "type": "integer"
+              "type": "string"
             }
           }
         }
@@ -2101,6 +2171,46 @@
             "grade": {
               "type": "string"
             }
+          }
+        }
+      },
+      "AcademicSingleCourseAttendanceQrPostRequest": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "6e70ab8923ef7"
+        },
+        "properties": {
+          "schedule_id": {
+            "type": "integer"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "schedule_id": 26254759
+          }
+        }
+      },
+      "AcademicSingleCourseAttendanceQrPostResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "692741ff73bff"
+        },
+        "x-examples": {
+          "Example 1": {
+            "key": "1nv92y0t392t#y0bbb34$bviuwb",
+            "time": "Captcha"
+          }
+        },
+        "required": [
+          "key",
+          "time"
+        ],
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "time": {
+            "type": "string"
           }
         }
       },

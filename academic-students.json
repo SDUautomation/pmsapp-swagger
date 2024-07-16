@@ -105,6 +105,59 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/students/thesis-students": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicAdvisoryThesisStudentsGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-thesis-students",
+        "x-stoplight": {
+          "id": "sqwh86em0t1op"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AcademicAdvisoryThesisStudentsGetRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/students/my/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AcademicStudentsMyResourcesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-students-my-resources",
+        "x-stoplight": {
+          "id": "b9l37chmrqvht"
+        }
+      }
     }
   },
   "components": {
@@ -123,6 +176,10 @@
             "offset": 12
           }
         },
+        "required": [
+          "per_page",
+          "offset"
+        ],
         "properties": {
           "speciality": {
             "type": "integer"
@@ -153,12 +210,20 @@
             "x-stoplight": {
               "id": "92dnffqbclnyn"
             }
+          },
+          "order_by": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "co3eze337nsot"
+            }
+          },
+          "order_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "6kcqv0ibbdiam"
+            }
           }
-        },
-        "required": [
-          "per_page",
-          "offset"
-        ]
+        }
       },
       "AcademicStudentsGetResponse": {
         "type": "object",
@@ -707,6 +772,10 @@
             "offset": 124
           }
         },
+        "required": [
+          "per_page",
+          "offset"
+        ],
         "properties": {
           "per_page": {
             "type": "integer"
@@ -714,24 +783,37 @@
           "offset": {
             "type": "integer"
           },
-          "mode": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "7y7vrpx499o0w"
-            }
-          },
           "keyword": {
             "type": "string",
             "x-stoplight": {
               "id": "uj0nqdzl080wm"
             }
+          },
+          "class": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "d24rzp1cezop1"
+            }
+          },
+          "program_code": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "89ttaqot979lu"
+            }
+          },
+          "order_by": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "v5qr39wzllie9"
+            }
+          },
+          "order_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ipplgzgl2d8jz"
+            }
           }
-        },
-        "required": [
-          "per_page",
-          "offset",
-          "mode"
-        ]
+        }
       },
       "AcademicAdvisoryMyStudentsGetResponse": {
         "type": "object",
@@ -3634,6 +3716,188 @@
           "specialities",
           "student_statuses"
         ]
+      },
+      "AcademicAdvisoryThesisStudentsGetRequest": {
+        "title": "AcademicAdvisoryThesisStudentsGetRequest",
+        "x-stoplight": {
+          "id": "q2q7yu0je5qrv"
+        },
+        "type": "object",
+        "required": [
+          "per_page",
+          "offset"
+        ],
+        "properties": {
+          "per_page": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "msr33vj7xazmh"
+            }
+          },
+          "offset": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "oexn491vzqtd7"
+            }
+          },
+          "order_by": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "99nxwpfa1egm5"
+            }
+          },
+          "order_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "8435gs0u8bubi"
+            }
+          }
+        }
+      },
+      "AcademicAdvisoryThesisStudentsGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 20,
+            "from": 1,
+            "per_page": 10,
+            "current_page": 1,
+            "last_page": 2,
+            "students": [
+              {
+                "id": "200103049",
+                "name": "Yernur",
+                "surname": "Shamshadin",
+                "level": "Bachelor",
+                "status": "Active",
+                "thesis": "Development of application for improving modern methods of education.",
+                "photo": "data:image/png;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/..."
+              }
+            ]
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "students"
+        ],
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "name",
+                "surname",
+                "level",
+                "status",
+                "thesis",
+                "photo"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "surname": {
+                  "type": "string"
+                },
+                "level": {
+                  "type": "string"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "thesis": {
+                  "type": "string"
+                },
+                "photo": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      },
+      "AcademicStudentsMyResourcesGetResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "09bd1f0e45bb4"
+        },
+        "x-examples": {
+          "Example 1": {
+            "specialities": [
+              {
+                "code": "10103",
+                "year": 2020,
+                "title": "Information Systems",
+                "language": "English"
+              }
+            ],
+            "classes": [
+              1
+            ]
+          }
+        },
+        "required": [
+          "specialities",
+          "classes"
+        ],
+        "properties": {
+          "specialities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "code",
+                "year",
+                "title",
+                "language"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "classes": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
       }
     }
   }
