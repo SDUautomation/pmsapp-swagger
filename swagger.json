@@ -445,6 +445,29 @@
             }
           }
         }
+      },
+      "post": {
+        "summary": "PostWidgets",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "post-1.0.0-dashboard-widgets",
+        "x-stoplight": {
+          "id": "o0v0ouvcml371"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DashboardWidgetsPostRequest"
+              }
+            }
+          }
+        },
+        "description": "User widgets successfully managed."
       }
     },
     "/1.0.0/academic/resources": {
@@ -11831,116 +11854,152 @@
         "type": "object",
         "x-examples": {
           "Example 1": {
-            "greetings": [
-              {
-                "name": "Aibolat",
-                "surname": "Batyrov",
-                "birth_date": ""
-              }
-            ],
-            "schedules": [
-              {
-                "week_day": 3,
-                "title": "Mobile Programming",
-                "start_time": "12:00",
-                "end_time": "12:50",
-                "room": "G108"
-              }
-            ],
-            "courses": [
-              {
-                "section_id": 2443,
-                "code": "CSS 216",
-                "title": "Mobile Programming",
-                "section": "02",
-                "type": "N",
-                "credits": 5
-              }
-            ],
-            "attendances": [
-              {
-                "title": "Mobile Programming",
-                "code": "CSS 216",
-                "week_day": 3,
-                "start_time": "12:00",
-                "attendance_chart": [
-                  {
-                    "course_date": "2023-07-04 12:00:00",
-                    "conducted": 1,
-                    "absent": 12,
-                    "attended": 23,
-                    "permitted": 3
-                  }
-                ]
-              }
-            ],
-            "faculty_statistics": [
-              {
-                "title": "Faculty of Engineering and Natural Sciences",
-                "programs": 12,
-                "courses": 2345,
-                "students": 2120,
-                "employee": 176
-              }
-            ],
-            "rules_and_regulations": [
-              {
-                "id": 1,
-                "title": "Cду академиялық саясаты туралы ережесі",
-                "description": "Cду академиялық саясаты туралы ережесі",
-                "category_title": "Academic",
-                "author_full_name": "Aibolat Batyrov",
-                "attachments": [
-                  {
-                    "id": 1,
-                    "url": "https://oldpms.sdu.edu.kz/common/download/competent_bachelor.pdf",
-                    "language_name": "kz",
-                    "version": "2024"
-                  }
-                ]
-              }
-            ],
-            "syllabus_statistics": [
-              {
-                "department_code": "DEP_COMP_SCI",
-                "title": "Department of Computer Sciences",
-                "status": 1,
-                "status_title": "Accepted",
-                "courses": 12
-              }
-            ],
-            "posts": [
-              {
-                "id": 987,
-                "username": "arailym.mardemkhanova",
-                "user_full_name": "Araylim Mardemkhanova",
-                "user_photo": "base64 string format",
-                "title": "Продам MagSafe",
-                "content": "Продам MagSafe 2023 года выпуска",
-                "status": 1,
-                "view_count": 12,
-                "last_op_date": "26-06-2023 16:45:00",
-                "last_op_emp_id": 11082,
-                "created_at": "26-06-2023 16:45:00",
-                "comments": [
-                  {
-                    "id": 3222,
-                    "post_id": 987,
-                    "username": "aibolat.batyrov",
-                    "user_full_name": "Aibolat Batyrov",
-                    "user_photo": "base64 string format",
-                    "content": "Куплю MagSafe для iPhone",
-                    "created_at": "26-06-2023 18:49:00"
-                  }
-                ]
-              }
-            ],
-            "reports": [
-              {
-                "report_id": 3,
-                "title": "GPA Ranking by Faculties"
-              }
-            ]
+            "greetings": {
+              "id": 1,
+              "employee_save": true,
+              "data": [
+                {
+                  "name": "Aibolat",
+                  "surname": "Batyrov",
+                  "birth_date": ""
+                }
+              ]
+            },
+            "schedules": {
+              "id": 1,
+              "employee_save": true,
+              "data": [
+                {
+                  "week_day": 3,
+                  "title": "Mobile Programming",
+                  "start_time": "12:00",
+                  "end_time": "12:50",
+                  "room": "G108"
+                }
+              ]
+            },
+            "courses": {
+              "id": 1,
+              "employee_save": true,
+              "data": [
+                {
+                  "section_id": 2443,
+                  "code": "CSS 216",
+                  "title": "Mobile Programming",
+                  "section": "02",
+                  "type": "N",
+                  "credits": 5
+                }
+              ]
+            },
+            "attendances": {
+              "id": 1,
+              "employee_save": true,
+              "data": [
+                {
+                  "title": "Mobile Programming",
+                  "code": "CSS 216",
+                  "week_day": 3,
+                  "start_time": "12:00",
+                  "attendance_chart": [
+                    {
+                      "course_date": "2023-07-04 12:00:00",
+                      "conducted": 1,
+                      "absent": 12,
+                      "attended": 23,
+                      "permitted": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            "faculty_statistics": {
+              "id": 1,
+              "employee_save": true,
+              "data": [
+                {
+                  "title": "Faculty of Engineering and Natural Sciences",
+                  "programs": 12,
+                  "courses": 2345,
+                  "students": 2120,
+                  "employee": 176
+                }
+              ]
+            },
+            "rules_and_regulations": {
+              "id": 1,
+              "employee_save": true,
+              "data": [
+                {
+                  "id": 1,
+                  "title": "Cду академиялық саясаты туралы ережесі",
+                  "description": "Cду академиялық саясаты туралы ережесі",
+                  "category_title": "Academic",
+                  "author_full_name": "Aibolat Batyrov",
+                  "attachments": [
+                    {
+                      "id": 1,
+                      "url": "https://oldpms.sdu.edu.kz/common/download/competent_bachelor.pdf",
+                      "language_name": "kz",
+                      "version": "2024"
+                    }
+                  ]
+                }
+              ]
+            },
+            "syllabus_statistics": {
+              "id": 1,
+              "employee_save": true,
+              "data": [
+                {
+                  "department_code": "DEP_COMP_SCI",
+                  "title": "Department of Computer Sciences",
+                  "status": 1,
+                  "status_title": "Accepted",
+                  "courses": 12
+                }
+              ]
+            },
+            "posts": {
+              "id": 1,
+              "employee_save": true,
+              "data": [
+                {
+                  "id": 987,
+                  "username": "arailym.mardemkhanova",
+                  "user_full_name": "Araylim Mardemkhanova",
+                  "user_photo": "base64 string format",
+                  "title": "Продам MagSafe",
+                  "content": "Продам MagSafe 2023 года выпуска",
+                  "status": 1,
+                  "view_count": 12,
+                  "last_op_date": "26-06-2023 16:45:00",
+                  "last_op_emp_id": 11082,
+                  "created_at": "26-06-2023 16:45:00",
+                  "comments": [
+                    {
+                      "id": 3222,
+                      "post_id": 987,
+                      "username": "aibolat.batyrov",
+                      "user_full_name": "Aibolat Batyrov",
+                      "user_photo": "base64 string format",
+                      "content": "Куплю MagSafe для iPhone",
+                      "created_at": "26-06-2023 18:49:00"
+                    }
+                  ]
+                }
+              ]
+            },
+            "reports": {
+              "id": 1,
+              "employee_save": true,
+              "data": [
+                {
+                  "report_id": 3,
+                  "title": "GPA Ranking by Faculties"
+                }
+              ]
+            }
           }
         },
         "required": [
@@ -11956,141 +12015,205 @@
         ],
         "properties": {
           "greetings": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "name",
-                "surname",
-                "birth_date"
-              ],
-              "properties": {
-                "name": {
-                  "type": "string"
-                },
-                "surname": {
-                  "type": "string"
-                },
-                "birth_date": {
-                  "type": "string"
+            "type": "object",
+            "required": [
+              "id",
+              "employee_save",
+              "data"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "employee_save": {
+                "type": "boolean"
+              },
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "name",
+                    "surname",
+                    "birth_date"
+                  ],
+                  "properties": {
+                    "name": {
+                      "type": "string"
+                    },
+                    "surname": {
+                      "type": "string"
+                    },
+                    "birth_date": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
           },
           "schedules": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "week_day",
-                "title",
-                "start_time",
-                "end_time",
-                "room"
-              ],
-              "properties": {
-                "week_day": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "start_time": {
-                  "type": "string"
-                },
-                "end_time": {
-                  "type": "string"
-                },
-                "room": {
-                  "type": "string"
+            "type": "object",
+            "required": [
+              "id",
+              "employee_save",
+              "data"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "employee_save": {
+                "type": "boolean"
+              },
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "week_day",
+                    "title",
+                    "start_time",
+                    "end_time",
+                    "room"
+                  ],
+                  "properties": {
+                    "week_day": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "start_time": {
+                      "type": "string"
+                    },
+                    "end_time": {
+                      "type": "string"
+                    },
+                    "room": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
           },
           "courses": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "section_id",
-                "code",
-                "title",
-                "section",
-                "type",
-                "credits"
-              ],
-              "properties": {
-                "section_id": {
-                  "type": "integer"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "section": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "credits": {
-                  "type": "integer"
+            "type": "object",
+            "required": [
+              "id",
+              "employee_save",
+              "data"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "employee_save": {
+                "type": "boolean"
+              },
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "section_id",
+                    "code",
+                    "title",
+                    "section",
+                    "type",
+                    "credits"
+                  ],
+                  "properties": {
+                    "section_id": {
+                      "type": "integer"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "section": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "credits": {
+                      "type": "integer"
+                    }
+                  }
                 }
               }
             }
           },
           "attendances": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "title",
-                "code",
-                "week_day",
-                "start_time",
-                "attendance_chart"
-              ],
-              "properties": {
-                "title": {
-                  "type": "string"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "week_day": {
-                  "type": "integer"
-                },
-                "start_time": {
-                  "type": "string"
-                },
-                "attendance_chart": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "course_date",
-                      "conducted",
-                      "absent",
-                      "attended",
-                      "permitted"
-                    ],
-                    "properties": {
-                      "course_date": {
-                        "type": "string"
-                      },
-                      "conducted": {
-                        "type": "integer"
-                      },
-                      "absent": {
-                        "type": "integer"
-                      },
-                      "attended": {
-                        "type": "integer"
-                      },
-                      "permitted": {
-                        "type": "integer"
+            "type": "object",
+            "required": [
+              "id",
+              "employee_save",
+              "data"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "employee_save": {
+                "type": "boolean"
+              },
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "title",
+                    "code",
+                    "week_day",
+                    "start_time",
+                    "attendance_chart"
+                  ],
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "week_day": {
+                      "type": "integer"
+                    },
+                    "start_time": {
+                      "type": "string"
+                    },
+                    "attendance_chart": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "course_date",
+                          "conducted",
+                          "absent",
+                          "attended",
+                          "permitted"
+                        ],
+                        "properties": {
+                          "course_date": {
+                            "type": "string"
+                          },
+                          "conducted": {
+                            "type": "integer"
+                          },
+                          "absent": {
+                            "type": "integer"
+                          },
+                          "attended": {
+                            "type": "integer"
+                          },
+                          "permitted": {
+                            "type": "integer"
+                          }
+                        }
                       }
                     }
                   }
@@ -12099,85 +12222,117 @@
             }
           },
           "faculty_statistics": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "title",
-                "programs",
-                "courses",
-                "students",
-                "employee"
-              ],
-              "properties": {
-                "title": {
-                  "type": "string"
-                },
-                "programs": {
-                  "type": "integer"
-                },
-                "courses": {
-                  "type": "integer"
-                },
-                "students": {
-                  "type": "integer"
-                },
-                "employee": {
-                  "type": "integer"
+            "type": "object",
+            "required": [
+              "id",
+              "employee_save",
+              "data"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "employee_save": {
+                "type": "boolean"
+              },
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "title",
+                    "programs",
+                    "courses",
+                    "students",
+                    "employee"
+                  ],
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "programs": {
+                      "type": "integer"
+                    },
+                    "courses": {
+                      "type": "integer"
+                    },
+                    "students": {
+                      "type": "integer"
+                    },
+                    "employee": {
+                      "type": "integer"
+                    }
+                  }
                 }
               }
             }
           },
           "rules_and_regulations": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "title",
-                "description",
-                "category_title",
-                "author_full_name",
-                "attachments"
-              ],
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "category_title": {
-                  "type": "string"
-                },
-                "author_full_name": {
-                  "type": "string"
-                },
-                "attachments": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "id",
-                      "url",
-                      "language_name",
-                      "version"
-                    ],
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "url": {
-                        "type": "string"
-                      },
-                      "language_name": {
-                        "type": "string"
-                      },
-                      "version": {
-                        "type": "string"
+            "type": "object",
+            "required": [
+              "id",
+              "employee_save",
+              "data"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "employee_save": {
+                "type": "boolean"
+              },
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "title",
+                    "description",
+                    "category_title",
+                    "author_full_name",
+                    "attachments"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "category_title": {
+                      "type": "string"
+                    },
+                    "author_full_name": {
+                      "type": "string"
+                    },
+                    "attachments": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "url",
+                          "language_name",
+                          "version"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "url": {
+                            "type": "string"
+                          },
+                          "language_name": {
+                            "type": "string"
+                          },
+                          "version": {
+                            "type": "string"
+                          }
+                        }
                       }
                     }
                   }
@@ -12186,121 +12341,153 @@
             }
           },
           "syllabus_statistics": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "department_code",
-                "title",
-                "status",
-                "status_title",
-                "courses"
-              ],
-              "properties": {
-                "department_code": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "status": {
-                  "type": "integer"
-                },
-                "status_title": {
-                  "type": "string"
-                },
-                "courses": {
-                  "type": "integer"
+            "type": "object",
+            "required": [
+              "id",
+              "employee_save",
+              "data"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "employee_save": {
+                "type": "boolean"
+              },
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "department_code",
+                    "title",
+                    "status",
+                    "status_title",
+                    "courses"
+                  ],
+                  "properties": {
+                    "department_code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "status_title": {
+                      "type": "string"
+                    },
+                    "courses": {
+                      "type": "integer"
+                    }
+                  }
                 }
               }
             }
           },
           "posts": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "id",
-                "username",
-                "user_full_name",
-                "user_photo",
-                "title",
-                "content",
-                "status",
-                "view_count",
-                "last_op_date",
-                "last_op_emp_id",
-                "created_at",
-                "comments"
-              ],
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "username": {
-                  "type": "string"
-                },
-                "user_full_name": {
-                  "type": "string"
-                },
-                "user_photo": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "content": {
-                  "type": "string"
-                },
-                "status": {
-                  "type": "integer"
-                },
-                "view_count": {
-                  "type": "integer"
-                },
-                "last_op_date": {
-                  "type": "string"
-                },
-                "last_op_emp_id": {
-                  "type": "integer"
-                },
-                "created_at": {
-                  "type": "string"
-                },
-                "comments": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "required": [
-                      "id",
-                      "post_id",
-                      "username",
-                      "user_full_name",
-                      "user_photo",
-                      "content",
-                      "created_at"
-                    ],
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "post_id": {
-                        "type": "integer"
-                      },
-                      "username": {
-                        "type": "string"
-                      },
-                      "user_full_name": {
-                        "type": "string"
-                      },
-                      "user_photo": {
-                        "type": "string"
-                      },
-                      "content": {
-                        "type": "string"
-                      },
-                      "created_at": {
-                        "type": "string"
+            "type": "object",
+            "required": [
+              "id",
+              "employee_save",
+              "data"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "employee_save": {
+                "type": "boolean"
+              },
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "username",
+                    "user_full_name",
+                    "user_photo",
+                    "title",
+                    "content",
+                    "status",
+                    "view_count",
+                    "last_op_date",
+                    "last_op_emp_id",
+                    "created_at",
+                    "comments"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "username": {
+                      "type": "string"
+                    },
+                    "user_full_name": {
+                      "type": "string"
+                    },
+                    "user_photo": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "content": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer"
+                    },
+                    "view_count": {
+                      "type": "integer"
+                    },
+                    "last_op_date": {
+                      "type": "string"
+                    },
+                    "last_op_emp_id": {
+                      "type": "integer"
+                    },
+                    "created_at": {
+                      "type": "string"
+                    },
+                    "comments": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "post_id",
+                          "username",
+                          "user_full_name",
+                          "user_photo",
+                          "content",
+                          "created_at"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "post_id": {
+                            "type": "integer"
+                          },
+                          "username": {
+                            "type": "string"
+                          },
+                          "user_full_name": {
+                            "type": "string"
+                          },
+                          "user_photo": {
+                            "type": "string"
+                          },
+                          "content": {
+                            "type": "string"
+                          },
+                          "created_at": {
+                            "type": "string"
+                          }
+                        }
                       }
                     }
                   }
@@ -12309,19 +12496,35 @@
             }
           },
           "reports": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "required": [
-                "report_id",
-                "title"
-              ],
-              "properties": {
-                "report_id": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
+            "type": "object",
+            "required": [
+              "id",
+              "employee_save",
+              "data"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "employee_save": {
+                "type": "boolean"
+              },
+              "data": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "report_id",
+                    "title"
+                  ],
+                  "properties": {
+                    "report_id": {
+                      "type": "integer"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -24116,6 +24319,27 @@
             "type": "string",
             "x-stoplight": {
               "id": "8i36j6zve79hk"
+            }
+          }
+        }
+      },
+      "DashboardWidgetsPostRequest": {
+        "title": "DashboardWidgetsPostRequest",
+        "x-stoplight": {
+          "id": "yrniswfrnm77n"
+        },
+        "type": "object",
+        "properties": {
+          "widgets": {
+            "type": "array",
+            "x-stoplight": {
+              "id": "27cjvv7pja767"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "vim9zge66eg86"
+              },
+              "type": "integer"
             }
           }
         }
