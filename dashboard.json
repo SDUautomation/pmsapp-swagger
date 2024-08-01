@@ -1,0 +1,108 @@
+{
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "ch2j3f85gr3is"
+  },
+  "info": {
+    "title": "dashboard",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/1.0.0/dashboard/widgets/google/calendar": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DashboardWidgetsGoogleCalendarGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-dashboard-widgets-google-calendar",
+        "x-stoplight": {
+          "id": "nqvgmxhsh1f0p"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DashboardWidgetsGoogleCalendarGetRequest"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DashboardWidgetsGoogleCalendarGetRequest": {
+        "title": "DashboardWidgetsGoogleCalendarGetRequest",
+        "x-stoplight": {
+          "id": "89tf8kl0k596a"
+        },
+        "type": "object",
+        "properties": {
+          "refresh_token": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "bhzkd3ikgyf3z"
+            }
+          }
+        }
+      },
+      "DashboardWidgetsGoogleCalendarGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "title": "Product meeting",
+            "description": "Agenda",
+            "location": "B209",
+            "date": "2024-07-26",
+            "start_time": "11:30:00",
+            "end_time": "12:30:00"
+          }
+        },
+        "required": [
+          "title",
+          "description",
+          "location",
+          "date",
+          "start_time",
+          "end_time"
+        ],
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "location": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          },
+          "start_time": {
+            "type": "string"
+          },
+          "end_time": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
