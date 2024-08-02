@@ -64,8 +64,28 @@
       },
       "DashboardWidgetsGoogleCalendarGetResponse": {
         "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "title": "Product meeting",
+              "description": "Agenda",
+              "location": "B209",
+              "date": "2024-07-26",
+              "start_time": "11:30:00",
+              "end_time": "12:30:00"
+            }
+          ]
+        },
         "items": {
           "type": "object",
+          "required": [
+            "title",
+            "description",
+            "location",
+            "date",
+            "start_time",
+            "end_time"
+          ],
           "properties": {
             "title": {
               "type": "string"
@@ -86,18 +106,6 @@
               "type": "string"
             }
           }
-        },
-        "x-examples": {
-          "Example 1": [
-            {
-              "title": "Product meeting",
-              "description": "Agenda",
-              "location": "B209",
-              "date": "2024-07-26",
-              "start_time": "11:30:00",
-              "end_time": "12:30:00"
-            }
-          ]
         }
       }
     }
