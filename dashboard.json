@@ -13,7 +13,7 @@
     }
   ],
   "paths": {
-    "/1.0.0/dashboard/widgets/google/calendar": {
+    "/1.0.0/dashboard/widgets/google/calendar/tokens": {
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
@@ -42,6 +42,16 @@
             }
           }
         }
+      },
+      "parameters": [],
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "put-1.0.0-dashboard-widgets-google-calendar-tokens",
+        "x-stoplight": {
+          "id": "u6ps5czeniy4v"
+        }
       }
     }
   },
@@ -52,18 +62,10 @@
         "x-stoplight": {
           "id": "89tf8kl0k596a"
         },
-        "type": "object",
-        "properties": {
-          "refresh_token": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "bhzkd3ikgyf3z"
-            }
-          }
-        }
+        "type": "object"
       },
       "DashboardWidgetsGoogleCalendarGetResponse": {
-        "type": "array",
+        "type": "object",
         "x-examples": {
           "Example 1": [
             {
@@ -76,37 +78,39 @@
             }
           ]
         },
-        "items": {
-          "type": "object",
-          "required": [
-            "title",
-            "description",
-            "location",
-            "date",
-            "start_time",
-            "end_time"
-          ],
-          "properties": {
-            "title": {
-              "type": "string"
-            },
-            "description": {
-              "type": "string"
-            },
-            "location": {
-              "type": "string"
-            },
-            "date": {
-              "type": "string"
-            },
-            "start_time": {
-              "type": "string"
-            },
-            "end_time": {
-              "type": "string"
+        "properties": {
+          "access_token": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "rim38toiju9pm"
             }
           }
         }
+      },
+      "DashboardWidgetsGoogleCalendarPutRequest": {
+        "title": "DashboardWidgetsGoogleCalendarPutRequest",
+        "x-stoplight": {
+          "id": "fml9vdz8whpf8"
+        },
+        "type": "object",
+        "required": [
+          "refresh_token"
+        ],
+        "properties": {
+          "refresh_token": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "0ijg7zh79vyoo"
+            }
+          }
+        }
+      },
+      "DashboardWidgetsGoogleCalendarPutResponse": {
+        "title": "DashboardWidgetsGoogleCalendarPutResponse",
+        "x-stoplight": {
+          "id": "vb44kvxjisz7e"
+        },
+        "type": "object"
       }
     }
   }
