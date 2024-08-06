@@ -1,0 +1,117 @@
+{
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "ch2j3f85gr3is"
+  },
+  "info": {
+    "title": "dashboard",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/1.0.0/dashboard/widgets/google/calendar/tokens": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DashboardWidgetsGoogleCalendarGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-dashboard-widgets-google-calendar",
+        "x-stoplight": {
+          "id": "nqvgmxhsh1f0p"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DashboardWidgetsGoogleCalendarGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "parameters": [],
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "put-1.0.0-dashboard-widgets-google-calendar-tokens",
+        "x-stoplight": {
+          "id": "u6ps5czeniy4v"
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DashboardWidgetsGoogleCalendarGetRequest": {
+        "title": "DashboardWidgetsGoogleCalendarGetRequest",
+        "x-stoplight": {
+          "id": "89tf8kl0k596a"
+        },
+        "type": "object"
+      },
+      "DashboardWidgetsGoogleCalendarGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": [
+            {
+              "title": "Product meeting",
+              "description": "Agenda",
+              "location": "B209",
+              "date": "2024-07-26",
+              "start_time": "11:30:00",
+              "end_time": "12:30:00"
+            }
+          ]
+        },
+        "properties": {
+          "access_token": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "rim38toiju9pm"
+            }
+          }
+        }
+      },
+      "DashboardWidgetsGoogleCalendarPutRequest": {
+        "title": "DashboardWidgetsGoogleCalendarPutRequest",
+        "x-stoplight": {
+          "id": "fml9vdz8whpf8"
+        },
+        "type": "object",
+        "required": [
+          "refresh_token"
+        ],
+        "properties": {
+          "refresh_token": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "0ijg7zh79vyoo"
+            }
+          }
+        }
+      },
+      "DashboardWidgetsGoogleCalendarPutResponse": {
+        "title": "DashboardWidgetsGoogleCalendarPutResponse",
+        "x-stoplight": {
+          "id": "vb44kvxjisz7e"
+        },
+        "type": "object"
+      }
+    }
+  }
+}
