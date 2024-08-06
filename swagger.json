@@ -24329,17 +24329,14 @@
           "id": "yrniswfrnm77n"
         },
         "type": "object",
+        "required": [
+          "widget_id"
+        ],
         "properties": {
-          "widgets": {
-            "type": "array",
+          "widget_id": {
+            "type": "integer",
             "x-stoplight": {
               "id": "27cjvv7pja767"
-            },
-            "items": {
-              "x-stoplight": {
-                "id": "vim9zge66eg86"
-              },
-              "type": "integer"
             }
           }
         }
