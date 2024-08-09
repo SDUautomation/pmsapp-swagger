@@ -3767,6 +3767,57 @@
             }
           }
         }
+      },
+      "ScheduleManagementHoursRequest": {
+        "title": "ScheduleManagementHoursRequest",
+        "x-stoplight": {
+          "id": "x2tsn1kcqgbxh"
+        },
+        "type": "object",
+        "required": [
+          "year",
+          "term"
+        ],
+        "properties": {
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "co8q5jb3804j8"
+            }
+          },
+          "term": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "rsa5wxgmrqxx0"
+            }
+          }
+        }
+      },
+      "ScheduleManagementHoursResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "start_time": "08:30",
+              "end_time": "09:20"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "start_time",
+            "end_time"
+          ],
+          "properties": {
+            "start_time": {
+              "type": "string"
+            },
+            "end_time": {
+              "type": "string"
+            }
+          }
+        }
       }
     }
   }
