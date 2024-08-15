@@ -1,0 +1,279 @@
+{
+  "openapi": "3.1.0",
+  "x-stoplight": {
+    "id": "wf3awm83avwfn"
+  },
+  "info": {
+    "title": "service-esign",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "paths": {
+    "/1.0.0/service/manage/esigns": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceEsignGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-service-manage-esigns",
+        "x-stoplight": {
+          "id": "z05w4s0d0h5ag"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceEsignGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default"
+          }
+        },
+        "operationId": "put-1.0.0-service-manage-esigns",
+        "x-stoplight": {
+          "id": "kbtejl2fto6kh"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceEsignPutRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/service/manage/esigns/{documentOrder}": {
+      "parameters": [
+        {
+          "schema": {
+            "type": "string"
+          },
+          "name": "documentOrder",
+          "in": "path",
+          "required": true
+        }
+      ],
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-1.0.0-service-manage-esigns-documentOrder",
+        "x-stoplight": {
+          "id": "z5roeiut7ucfu"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceEsignDocumentGetRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/service/manage/esigns/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceEsignResourceGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-service-manage-esign-resources",
+        "x-stoplight": {
+          "id": "4s3hsr3xhj1l2"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ServiceEsignResourceGetRequest"
+              }
+            }
+          }
+        }
+      },
+      "parameters": []
+    }
+  },
+  "components": {
+    "schemas": {
+      "ServiceAdvisorAssignmentResourceGetRequest": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "26458553d6bfe"
+        },
+        "properties": {
+          "modules": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "modules": [
+              "programs",
+              "instructors",
+              "years",
+              "citizenship"
+            ]
+          }
+        },
+        "title": "ServiceAdvisorAssignmentResourceGetRequest",
+        "description": ""
+      },
+      "ServiceAdvisorAssignmentResourceGetResponse": {
+        "type": "object",
+        "properties": {
+          "programs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "prog_code": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                },
+                "cipher": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "period_count": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "advisors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "full_name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "years": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "year": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "citizenship": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "country_code": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "classes": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "programs": [
+              {
+                "prog_code": "98000",
+                "language": "EN",
+                "cipher": "6B01705",
+                "title": "Finance",
+                "period_count": 8
+              }
+            ],
+            "advisors": [
+              {
+                "id": 200103,
+                "full_name": "Zhandos Saparbayev"
+              }
+            ],
+            "years": [
+              {
+                "year": 2023
+              }
+            ],
+            "citizenship": [
+              {
+                "id": 1366,
+                "name": "KAZAKHSTAN",
+                "title": "Kazakhstan",
+                "country_code": "KZ"
+              }
+            ],
+            "classes": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        }
+      }
+    }
+  }
+}
