@@ -359,6 +359,39 @@
         }
       },
       "parameters": []
+    },
+    "/1.0.0/academic/manage/courses/requisites/resources": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/AcademicManageCourseRequisitesResourcesGetResponse"
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-courses-requisites-resources",
+        "x-stoplight": {
+          "id": "z7pcrtoe03pf7"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "$ref": "#/components/schemas/AcademicManageCourseRequisitesResourcesGetRequest"
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -1420,6 +1453,50 @@
               "items": {
                 "type": "string"
               }
+            }
+          }
+        }
+      },
+      "AcademicManageCourseRequisitesResourcesGetRequest": {
+        "title": "AcademicManageCourseRequisitesResources",
+        "x-stoplight": {
+          "id": "khji698nvsfsb"
+        },
+        "type": "object",
+        "required": [
+          "program_code"
+        ],
+        "properties": {
+          "program_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ufabjxzoq50j0"
+            }
+          }
+        }
+      },
+      "AcademicManageCourseRequisitesResourcesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "id": "TRACK0",
+              "title": "Main Track"
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "id",
+            "title"
+          ],
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
             }
           }
         }
