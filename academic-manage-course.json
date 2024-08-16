@@ -366,7 +366,15 @@
         "tags": [],
         "responses": {
           "default": {
-            "description": "Default"
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/AcademicManageCourseRequisitesResourcesGetResponse"
+                }
+              }
+            }
           }
         },
         "operationId": "get-1.0.0-academic-manage-courses-requisites-resources",
@@ -378,7 +386,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "properties": {}
+                "$ref": "#/components/schemas/AcademicManageCourseRequisitesResourcesGetRequest"
               }
             }
           }
