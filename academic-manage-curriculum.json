@@ -2227,12 +2227,15 @@
                     "id": 1,
                     "type": "E",
                     "course_code": "CSS 101",
+                    "elective_code": "XXX 1XX",
                     "title": "Physical Education 2",
                     "credits": 2,
                     "ects": 2,
                     "theory": 2,
                     "practice": 2,
-                    "lab": 2
+                    "lab": 2,
+                    "grading_type": "normal",
+                    "course_type": "Internship"
                   }
                 ],
                 "total_ects": 22
@@ -2365,12 +2368,15 @@
                       "id",
                       "type",
                       "course_code",
+                      "elective_code",
                       "title",
                       "credits",
                       "ects",
                       "theory",
                       "practice",
-                      "lab"
+                      "lab",
+                      "grading_type",
+                      "course_type"
                     ],
                     "properties": {
                       "id": {
@@ -2380,6 +2386,9 @@
                         "type": "string"
                       },
                       "course_code": {
+                        "type": "string"
+                      },
+                      "elective_code": {
                         "type": "string"
                       },
                       "title": {
@@ -2399,6 +2408,12 @@
                       },
                       "lab": {
                         "type": "integer"
+                      },
+                      "grading_type": {
+                        "type": "string"
+                      },
+                      "course_type": {
+                        "type": "string"
                       }
                     }
                   }
