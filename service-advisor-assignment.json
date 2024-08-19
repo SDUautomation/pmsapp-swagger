@@ -272,6 +272,152 @@
               4
             ]
           }
+        },
+        "description": "",
+        "title": ""
+      },
+      "ServiceAdvisorAssignmentStudentsGetRequest": {
+        "type": "object",
+        "properties": {
+          "per_page": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "student_id": {
+            "type": "integer"
+          },
+          "program_code": {
+            "type": "string"
+          },
+          "entrance_year": {
+            "type": "integer"
+          },
+          "class": {
+            "type": "integer"
+          },
+          "employee_id": {
+            "type": "integer"
+          },
+          "without_advisor": {
+            "type": "boolean"
+          },
+          "citizenship": {
+            "type": "string"
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "per_page": 15,
+            "offset": 40,
+            "student_id": 200103201,
+            "program_code": "10103",
+            "entrance_year": 2023,
+            "class": 4,
+            "employee_id": 11078,
+            "without_advisor": true,
+            "citizenship": "KZ"
+          }
+        }
+      },
+      "ServiceAdvisorAssignmentStudentsGetResponse": {
+        "type": "object",
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "full_name": {
+                  "type": "string"
+                },
+                "class": {
+                  "type": "integer"
+                },
+                "specialty": {
+                  "type": "object",
+                  "properties": {
+                    "program_code": {
+                      "type": "string"
+                    },
+                    "language": {
+                      "type": "string"
+                    },
+                    "speciality_code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "department_id": {
+                      "type": "integer"
+                    },
+                    "terms": {
+                      "type": "integer"
+                    }
+                  }
+                },
+                "advisor": {
+                  "type": "object",
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "full_name": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": {
+            "total": 40,
+            "from": 1,
+            "per_page": 15,
+            "current_page": 2,
+            "last_page": 3,
+            "students": [
+              {
+                "id": "200103201",
+                "full_name": "Zhandos Saparbayev",
+                "class": 4,
+                "specialty": {
+                  "program_code": "10103",
+                  "language": "English",
+                  "speciality_code": "6B06101",
+                  "title": "Information Systems",
+                  "department_id": 1051,
+                  "terms": 8
+                },
+                "advisor": {
+                  "id": 200103,
+                  "full_name": "Zhandos Saparbayev"
+                }
+              }
+            ]
+          }
         }
       }
     }
