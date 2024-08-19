@@ -4071,6 +4071,31 @@
           "id": "g91qy7pnafqsi"
         }
       }
+    },
+    "/1.0.0/administrative/staffs/inner-contacts": {
+      "put": {
+        "summary": "Your PUT endpoint",
+        "tags": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
+        "operationId": "put-1.0.0-administrative-staffs-inner-contacts",
+        "x-stoplight": {
+          "id": "r3eunxx2ybesh"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -23758,6 +23783,30 @@
             "x-stoplight": {
               "id": "8i36j6zve79hk"
             }
+          }
+        }
+      },
+      "AdministrativeStaffsInnerContactsPutRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "email": "some@email.com",
+            "inner_phone": "+7(777)777-77-77",
+            "employee_id": 11808
+          }
+        },
+        "required": [
+          "employee_id"
+        ],
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "inner_phone": {
+            "type": "string"
+          },
+          "employee_id": {
+            "type": "integer"
           }
         }
       }
