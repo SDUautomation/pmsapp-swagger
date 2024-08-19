@@ -4090,7 +4090,7 @@
             "application/json": {
               "schema": {
                 "type": "object",
-                "properties": {}
+                "$ref": "#/components/schemas/AdministrativeStaffsInnerContactsPutRequest"
               }
             }
           }
