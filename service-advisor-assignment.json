@@ -278,6 +278,23 @@
       },
       "ServiceAdvisorAssignmentStudentsGetRequest": {
         "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "per_page": 15,
+            "offset": 40,
+            "student_id": 200103201,
+            "program_code": "10103",
+            "entrance_year": 2023,
+            "class": 4,
+            "employee_id": 11078,
+            "without_advisor": true,
+            "citizenship": "KZ"
+          }
+        },
+        "required": [
+          "per_page",
+          "offset"
+        ],
         "properties": {
           "per_page": {
             "type": "integer"
@@ -306,91 +323,10 @@
           "citizenship": {
             "type": "string"
           }
-        },
-        "x-examples": {
-          "Example 1": {
-            "per_page": 15,
-            "offset": 40,
-            "student_id": 200103201,
-            "program_code": "10103",
-            "entrance_year": 2023,
-            "class": 4,
-            "employee_id": 11078,
-            "without_advisor": true,
-            "citizenship": "KZ"
-          }
         }
       },
       "ServiceAdvisorAssignmentStudentsGetResponse": {
         "type": "object",
-        "properties": {
-          "total": {
-            "type": "integer"
-          },
-          "from": {
-            "type": "integer"
-          },
-          "per_page": {
-            "type": "integer"
-          },
-          "current_page": {
-            "type": "integer"
-          },
-          "last_page": {
-            "type": "integer"
-          },
-          "students": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "full_name": {
-                  "type": "string"
-                },
-                "class": {
-                  "type": "integer"
-                },
-                "specialty": {
-                  "type": "object",
-                  "properties": {
-                    "program_code": {
-                      "type": "string"
-                    },
-                    "language": {
-                      "type": "string"
-                    },
-                    "speciality_code": {
-                      "type": "string"
-                    },
-                    "title": {
-                      "type": "string"
-                    },
-                    "department_id": {
-                      "type": "integer"
-                    },
-                    "terms": {
-                      "type": "integer"
-                    }
-                  }
-                },
-                "advisor": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "full_name": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          }
-        },
         "x-examples": {
           "Example 1": {
             "total": 40,
@@ -417,6 +353,101 @@
                 }
               }
             ]
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "students"
+        ],
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "full_name",
+                "class",
+                "specialty",
+                "advisor"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "full_name": {
+                  "type": "string"
+                },
+                "class": {
+                  "type": "integer"
+                },
+                "specialty": {
+                  "type": "object",
+                  "required": [
+                    "program_code",
+                    "language",
+                    "speciality_code",
+                    "title",
+                    "department_id",
+                    "terms"
+                  ],
+                  "properties": {
+                    "program_code": {
+                      "type": "string"
+                    },
+                    "language": {
+                      "type": "string"
+                    },
+                    "speciality_code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "department_id": {
+                      "type": "integer"
+                    },
+                    "terms": {
+                      "type": "integer"
+                    }
+                  }
+                },
+                "advisor": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "full_name"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "full_name": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
