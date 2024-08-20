@@ -2376,7 +2376,8 @@
                       "practice",
                       "lab",
                       "grading_type",
-                      "course_type"
+                      "course_type",
+                      "elective_id"
                     ],
                     "properties": {
                       "id": {
@@ -2414,6 +2415,12 @@
                       },
                       "course_type": {
                         "type": "string"
+                      },
+                      "elective_id": {
+                        "type": "integer",
+                        "x-stoplight": {
+                          "id": "69lq4e1fd25pr"
+                        }
                       }
                     }
                   }
