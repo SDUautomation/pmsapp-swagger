@@ -159,82 +159,6 @@
       },
       "ServiceAdvisorAssignmentResourceGetResponse": {
         "type": "object",
-        "properties": {
-          "programs": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "prog_code": {
-                  "type": "string"
-                },
-                "language": {
-                  "type": "string"
-                },
-                "cipher": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "period_count": {
-                  "type": "integer"
-                }
-              }
-            }
-          },
-          "advisors": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "full_name": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "years": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "year": {
-                  "type": "integer"
-                }
-              }
-            }
-          },
-          "citizenship": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "country_code": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "classes": {
-            "type": "array",
-            "items": {
-              "type": "integer"
-            }
-          }
-        },
         "x-examples": {
           "Example 1": {
             "programs": [
@@ -273,8 +197,109 @@
             ]
           }
         },
-        "description": "",
-        "title": ""
+        "required": [
+          "programs",
+          "advisors",
+          "years",
+          "citizenship",
+          "classes"
+        ],
+        "properties": {
+          "programs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "prog_code",
+                "language",
+                "cipher",
+                "title",
+                "period_count"
+              ],
+              "properties": {
+                "prog_code": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                },
+                "cipher": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "period_count": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "advisors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "full_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "full_name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "years": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "year"
+              ],
+              "properties": {
+                "year": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "citizenship": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "name",
+                "title",
+                "country_code"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "country_code": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "classes": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
       },
       "ServiceAdvisorAssignmentStudentsGetRequest": {
         "type": "object",
