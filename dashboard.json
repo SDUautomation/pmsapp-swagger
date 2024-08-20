@@ -99,7 +99,7 @@
           ]
         },
         "properties": {
-          "access_token": {
+          "refresh_token": {
             "type": "string",
             "x-stoplight": {
               "id": "rim38toiju9pm"
