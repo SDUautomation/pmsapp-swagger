@@ -405,7 +405,7 @@
         "required": [
           "code",
           "year",
-          "requisite_basd_type"
+          "requisite_based_type"
         ],
         "properties": {
           "code": {
@@ -432,7 +432,7 @@
               "id": "mnv9tnpgxo9p4"
             }
           },
-          "requisite_basd_type": {
+          "requisite_based_type": {
             "type": "string",
             "x-stoplight": {
               "id": "4mw4r03d5qo74"
