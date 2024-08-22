@@ -15446,6 +15446,12 @@
                         },
                         "total_credits": {
                           "type": "integer"
+                        },
+                        "id": {
+                          "type": "number",
+                          "x-stoplight": {
+                            "id": "nnerfifax7i7l"
+                          }
                         }
                       }
                     }
@@ -16279,7 +16285,8 @@
               }
             }
           }
-        }
+        },
+        "description": ""
       },
       "ProfileAddressesGetResponse": {
         "type": "object",
