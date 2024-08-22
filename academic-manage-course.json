@@ -1084,7 +1084,8 @@
         "required": [
           "course_code",
           "year",
-          "requisite_type"
+          "requisite_type",
+          "requisite_based_type"
         ],
         "properties": {
           "course_code": {
@@ -1115,6 +1116,12 @@
             "type": "string",
             "x-stoplight": {
               "id": "ktne82wpzkwzl"
+            }
+          },
+          "requisite_based_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "3lkegrn06iv92"
             }
           }
         }
