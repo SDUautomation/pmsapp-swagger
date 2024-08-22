@@ -402,6 +402,11 @@
           "id": "mx6rkk8fk2i4f"
         },
         "type": "object",
+        "required": [
+          "code",
+          "year",
+          "requisite_basd_type"
+        ],
         "properties": {
           "code": {
             "type": "string",
@@ -414,12 +419,26 @@
             "x-stoplight": {
               "id": "gv9s2kc28ftuu"
             }
+          },
+          "track": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ohbtfrm2cqidm"
+            }
+          },
+          "program_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "mnv9tnpgxo9p4"
+            }
+          },
+          "requisite_basd_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "4mw4r03d5qo74"
+            }
           }
-        },
-        "required": [
-          "code",
-          "year"
-        ]
+        }
       },
       "AcademicManageCourseSearchResponse": {
         "type": "array",
@@ -1085,6 +1104,18 @@
             "x-stoplight": {
               "id": "9twx01ntuahru"
             }
+          },
+          "program_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "d6x1flbqcoczx"
+            }
+          },
+          "track": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "ktne82wpzkwzl"
+            }
           }
         }
       },
@@ -1099,12 +1130,14 @@
             "consent_status": "Not Applicable",
             "expression": "A+B",
             "requisite": "CSS 101 and CSS 107",
+            "track": "TRACK0",
             "additional_info": [
               {
                 "program_code": 10010,
                 "speciality": "Computer Science",
                 "requsite_expression": "CSS 101 and CSS 102",
-                "consent_status": "Not Aplicable"
+                "consent_status": "Not Aplicable",
+                "track": "TRACK0"
               }
             ]
           }
@@ -1116,7 +1149,9 @@
           "cr_enabled",
           "consent_status",
           "expression",
-          "requisite"
+          "requisite",
+          "track",
+          "additional_info"
         ],
         "properties": {
           "id": {
@@ -1140,6 +1175,9 @@
           "requisite": {
             "type": "string"
           },
+          "track": {
+            "type": "string"
+          },
           "additional_info": {
             "type": "array",
             "items": {
@@ -1148,7 +1186,8 @@
                 "program_code",
                 "speciality",
                 "requsite_expression",
-                "consent_status"
+                "consent_status",
+                "track"
               ],
               "properties": {
                 "program_code": {
@@ -1161,6 +1200,9 @@
                   "type": "string"
                 },
                 "consent_status": {
+                  "type": "string"
+                },
+                "track": {
                   "type": "string"
                 }
               }
