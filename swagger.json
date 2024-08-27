@@ -4531,7 +4531,7 @@
             "required": [
               "individual",
               "assessment",
-              "modules"
+              "module"
             ],
             "properties": {
               "individual": {
@@ -4630,18 +4630,20 @@
                   }
                 }
               },
-              "modules": {
+              "module": {
                 "type": "array",
                 "items": {
                   "type": "object",
+                  "x-stoplight": {
+                    "id": "0krsqw5zpa2to"
+                  },
                   "required": [
                     "id",
                     "parent_id",
                     "code",
                     "name",
                     "module_name",
-                    "type",
-                    "accessible_period"
+                    "type"
                   ],
                   "properties": {
                     "id": {
@@ -4674,30 +4676,10 @@
                         }
                       }
                     },
-                    "accessible_period": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "required": [
-                          "is_active",
-                          "exception_for_employee",
-                          "start_date",
-                          "end_date"
-                        ],
-                        "properties": {
-                          "is_active": {
-                            "type": "boolean"
-                          },
-                          "exception_for_employee": {
-                            "type": "boolean"
-                          },
-                          "start_date": {
-                            "type": "string"
-                          },
-                          "end_date": {
-                            "type": "string"
-                          }
-                        }
+                    "is_active": {
+                      "type": "boolean",
+                      "x-stoplight": {
+                        "id": "n45ij0dvt6xtg"
                       }
                     }
                   }
