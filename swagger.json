@@ -17682,9 +17682,6 @@
       },
       "AcademicManageSyllabusGetResponse": {
         "type": "object",
-        "x-stoplight": {
-          "id": "0728d64221673"
-        },
         "x-examples": {
           "Example 1": {
             "overview": {
@@ -17718,6 +17715,7 @@
             "delivery_types": [
               {
                 "id": 1,
+                "title": "On campus",
                 "value": true
               }
             ],
@@ -17729,15 +17727,11 @@
             },
             "instructors": [
               {
+                "id": 10001,
                 "full_name": "Arsentiy Zhunussov",
                 "degree": "Bachelor",
-                "contacts": [
-                  {
-                    "type": "E-mail",
-                    "contact": "arsentiy.zhunussov@sdu.edu.kz",
-                    "note": "note"
-                  }
-                ]
+                "email": "arsentiy.zhunussov@sdu.edu.kz",
+                "moodle_link": "https://moodle.sdu.edu.kz/mod/assign/view.php?id=14832"
               }
             ],
             "academic_skills": [
@@ -17784,6 +17778,7 @@
                 "type": "Required",
                 "authors": "Arsentiy Zhunussov, Aibolat Batyrov",
                 "title": "Programming Book",
+                "publisher": "Palgrave",
                 "publish_year": 2023,
                 "isbn": "978-0-230-36337-3",
                 "website": "example.com"
@@ -17811,9 +17806,36 @@
                 "id": 1,
                 "title": "Policy"
               }
+            ],
+            "confirms": [
+              {
+                "id": 10001,
+                "status": "CONFIRMED",
+                "authority": "Ainur Abdrazakova, Doctor PhD",
+                "last_modified": "24 Jan 2024",
+                "reject_message": "Mode of delivery is invalid.",
+                "language": "EN",
+                "is_last": false
+              }
             ]
           }
         },
+        "required": [
+          "overview",
+          "delivery_types",
+          "description",
+          "instructors",
+          "academic_skills",
+          "subject_skills",
+          "weekly_plan",
+          "learning_outcomes",
+          "teaching_methods",
+          "readings",
+          "assessments",
+          "activities",
+          "policies",
+          "confirms"
+        ],
         "properties": {
           "overview": {
             "type": "object",
@@ -17868,12 +17890,10 @@
                 "type": "string"
               },
               "period_code": {
-                "type": "string",
-                "nullable": true
+                "type": "string"
               },
               "term": {
-                "type": "integer",
-                "nullable": true
+                "type": "integer"
               },
               "theory": {
                 "type": "integer"
@@ -17894,8 +17914,7 @@
                 "type": "integer"
               },
               "status": {
-                "type": "integer",
-                "nullable": true
+                "type": "integer"
               },
               "language_title": {
                 "type": "string"
@@ -17910,8 +17929,7 @@
                 "type": "string"
               },
               "employee_id": {
-                "type": "integer",
-                "nullable": true
+                "type": "integer"
               },
               "open_date": {
                 "type": "string"
@@ -17926,8 +17944,7 @@
                 "type": "string"
               },
               "local_code": {
-                "type": "string",
-                "nullable": true
+                "type": "string"
               }
             }
           },
@@ -17935,18 +17952,22 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title",
+                "value"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
                 },
+                "title": {
+                  "type": "string"
+                },
                 "value": {
                   "type": "boolean"
                 }
-              },
-              "required": [
-                "id",
-                "value"
-              ]
+              }
             }
           },
           "description": {
@@ -17959,20 +17980,16 @@
             ],
             "properties": {
               "objective": {
-                "type": "string",
-                "nullable": true
+                "type": "string"
               },
               "content": {
-                "type": "string",
-                "nullable": true
+                "type": "string"
               },
               "components": {
-                "type": "string",
-                "nullable": true
+                "type": "string"
               },
               "work_placement": {
-                "type": "string",
-                "nullable": true
+                "type": "string"
               }
             }
           },
@@ -17980,104 +17997,87 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "full_name",
+                "degree",
+                "email",
+                "moodle_link"
+              ],
               "properties": {
                 "id": {
-                  "type": "integer",
-                  "x-stoplight": {
-                    "id": "5jwgpy2cbkwy0"
-                  }
+                  "type": "integer"
                 },
                 "full_name": {
                   "type": "string"
                 },
                 "degree": {
-                  "type": "string",
-                  "nullable": true
+                  "type": "string"
                 },
-                "contacts": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "type": {
-                        "type": "string",
-                        "nullable": true
-                      },
-                      "contact": {
-                        "type": "string",
-                        "nullable": true
-                      },
-                      "note": {
-                        "type": "string",
-                        "nullable": true
-                      }
-                    },
-                    "required": [
-                      "type",
-                      "contact",
-                      "note"
-                    ]
-                  }
+                "email": {
+                  "type": "string"
+                },
+                "moodle_link": {
+                  "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "full_name",
-                "degree",
-                "contacts"
-              ]
+              }
             }
           },
           "academic_skills": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title",
+                "count"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
                 },
                 "title": {
-                  "type": "string",
-                  "nullable": true
+                  "type": "string"
                 },
                 "count": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "id",
-                "title",
-                "count"
-              ]
+              }
             }
           },
           "subject_skills": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title",
+                "count"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
                 },
                 "title": {
-                  "type": "string",
-                  "nullable": true
+                  "type": "string"
                 },
                 "count": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "id",
-                "title",
-                "count"
-              ]
+              }
             }
           },
           "weekly_plan": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "week_no",
+                "subject",
+                "activity",
+                "count"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -18086,219 +18086,220 @@
                   "type": "integer"
                 },
                 "subject": {
-                  "type": "string",
-                  "nullable": true
+                  "type": "string"
                 },
                 "activity": {
-                  "type": "string",
-                  "nullable": true
+                  "type": "string"
                 },
                 "count": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "id",
-                "week_no",
-                "subject",
-                "activity",
-                "count"
-              ]
+              }
             }
           },
           "learning_outcomes": {
             "type": "array",
             "items": {
               "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "outcome": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "subject": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "action": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "count": {
-                  "type": "integer"
-                }
-              },
               "required": [
                 "id",
                 "outcome",
                 "subject",
                 "action",
                 "count"
-              ]
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "outcome": {
+                  "type": "string"
+                },
+                "subject": {
+                  "type": "string"
+                },
+                "action": {
+                  "type": "string"
+                },
+                "count": {
+                  "type": "integer"
+                }
+              }
             }
           },
           "teaching_methods": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
               "properties": {
-                "title": {
-                  "type": "string"
-                },
                 "id": {
                   "type": "integer"
+                },
+                "title": {
+                  "type": "string"
                 }
-              },
-              "required": [
-                "title",
-                "id"
-              ]
+              }
             }
           },
           "readings": {
             "type": "array",
             "items": {
               "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "type": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "authors": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "title": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "publish_year": {
-                  "type": "integer",
-                  "nullable": true
-                },
-                "isbn": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "website": {
-                  "type": "string",
-                  "nullable": true
-                }
-              },
               "required": [
                 "id",
                 "type",
                 "authors",
                 "title",
+                "publisher",
                 "publish_year",
                 "isbn",
                 "website"
-              ]
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "authors": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "publisher": {
+                  "type": "string"
+                },
+                "publish_year": {
+                  "type": "integer"
+                },
+                "isbn": {
+                  "type": "string"
+                },
+                "website": {
+                  "type": "string"
+                }
+              }
             }
           },
           "assessments": {
             "type": "array",
             "items": {
               "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "quantity": {
-                  "type": "integer",
-                  "nullable": true
-                },
-                "percentage": {
-                  "type": "integer",
-                  "nullable": true
-                },
-                "description": {
-                  "type": "string",
-                  "nullable": true
-                }
-              },
               "required": [
                 "id",
                 "title",
                 "quantity",
                 "percentage",
                 "description"
-              ]
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "integer"
+                },
+                "percentage": {
+                  "type": "integer"
+                },
+                "description": {
+                  "type": "string"
+                }
+              }
             }
           },
           "activities": {
             "type": "array",
             "items": {
               "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string",
-                  "nullable": true
-                },
-                "quantity": {
-                  "type": "integer",
-                  "nullable": true
-                },
-                "hour": {
-                  "type": "integer",
-                  "nullable": true
-                }
-              },
               "required": [
                 "id",
                 "title",
                 "quantity",
                 "hour"
-              ]
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "quantity": {
+                  "type": "integer"
+                },
+                "hour": {
+                  "type": "integer"
+                }
+              }
             }
           },
           "policies": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
                 },
                 "title": {
-                  "type": "string",
-                  "nullable": true
+                  "type": "string"
                 }
-              },
+              }
+            }
+          },
+          "confirms": {
+            "type": "array",
+            "items": {
+              "type": "object",
               "required": [
                 "id",
-                "title"
-              ]
+                "status",
+                "authority",
+                "last_modified",
+                "reject_message",
+                "language",
+                "is_last"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "status": {
+                  "type": "string"
+                },
+                "authority": {
+                  "type": "string"
+                },
+                "last_modified": {
+                  "type": "string"
+                },
+                "reject_message": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                },
+                "is_last": {
+                  "type": "boolean"
+                }
+              }
             }
           }
-        },
-        "required": [
-          "overview",
-          "delivery_types",
-          "description",
-          "instructors",
-          "academic_skills",
-          "subject_skills",
-          "weekly_plan",
-          "learning_outcomes",
-          "teaching_methods",
-          "readings",
-          "assessments",
-          "activities",
-          "policies"
-        ]
+        }
       },
       "AcademicManageSyllabusResourcesResponse": {
         "type": "object",
