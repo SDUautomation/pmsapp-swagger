@@ -358,6 +358,35 @@
             }
           }
         }
+      },
+      "ServiceAdvisorAssignmentAssginStudentsToAdvisorRequest": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "7de33cf5fed31"
+        },
+        "x-examples": {
+          "Example 1": {
+            "students_list": [
+              "200103201"
+            ],
+            "advisor_id": "10002"
+          }
+        },
+        "required": [
+          "students_list",
+          "advisor_id"
+        ],
+        "properties": {
+          "students_list": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "advisor_id": {
+            "type": "string"
+          }
+        }
       }
     }
   }
