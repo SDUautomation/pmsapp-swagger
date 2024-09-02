@@ -77,21 +77,23 @@
         "x-examples": {
           "Example 1": [
             {
-              "id": 15425,
-              "code": "CSS 101",
-              "section": "01",
-              "type": "N",
+              "id": 55968,
+              "code": "CSS 112",
+              "section": "16",
+              "type": "P",
               "language": "English",
-              "title_kz": "Introduction to Programming",
-              "title_ru": "Introduction to Programming",
-              "title_en": "Introduction to Programming",
-              "department_code": "DEP_HUMANITIES",
-              "department_title": "Department of Humanities",
+              "title_kz": "Физика 1",
+              "title_ru": "Физика 1",
+              "title_en": "Physics 1",
               "theory": 1,
               "practice": 1,
-              "credits": 1,
-              "ects": 1,
-              "bell_curve_enabled": false
+              "lab": 2,
+              "credits": 3,
+              "ects": 5,
+              "bell_curve_enabled": false,
+              "last_moodle_sync_date": null,
+              "section_moodle_id": 5157,
+              "students_count": 0
             }
           ]
         },
@@ -106,14 +108,15 @@
             "title_kz",
             "title_ru",
             "title_en",
-            "department_code",
-            "department_title",
             "theory",
             "practice",
+            "lab",
             "credits",
             "ects",
             "bell_curve_enabled",
-            "last_moodle_sync_date"
+            "last_moodle_sync_date",
+            "section_moodle_id",
+            "students_count"
           ],
           "properties": {
             "id": {
@@ -140,16 +143,13 @@
             "title_en": {
               "type": "string"
             },
-            "department_code": {
-              "type": "string"
-            },
-            "department_title": {
-              "type": "string"
-            },
             "theory": {
               "type": "integer"
             },
             "practice": {
+              "type": "integer"
+            },
+            "lab": {
               "type": "integer"
             },
             "credits": {
@@ -161,17 +161,17 @@
             "bell_curve_enabled": {
               "type": "boolean"
             },
-            "section_moodle_id": {
-              "type": "integer",
-              "x-stoplight": {
-                "id": "8ffi4tsrg697k"
-              }
-            },
             "last_moodle_sync_date": {
-              "type": "string",
-              "x-stoplight": {
-                "id": "zw7guo7w1djfy"
-              }
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "section_moodle_id": {
+              "type": "integer"
+            },
+            "students_count": {
+              "type": "integer"
             }
           }
         }
