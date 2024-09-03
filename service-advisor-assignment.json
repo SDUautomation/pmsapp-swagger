@@ -202,7 +202,9 @@
         },
         "required": [
           "per_page",
-          "offset"
+          "offset",
+          "year",
+          "term"
         ],
         "properties": {
           "per_page": {
@@ -231,6 +233,18 @@
           },
           "citizenship": {
             "type": "string"
+          },
+          "year": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "ddaet7amhbpx0"
+            }
+          },
+          "term": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "c9ip2g9aejwpk"
+            }
           }
         }
       },
