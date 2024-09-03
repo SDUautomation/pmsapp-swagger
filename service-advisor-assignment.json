@@ -12,123 +12,7 @@
       "url": "http://localhost:3000"
     }
   ],
-  "paths": {
-    "/1.0.0/service/manage/esigns": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "default": {
-            "description": "Default",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServiceEsignGetResponse"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-1.0.0-service-manage-esigns",
-        "x-stoplight": {
-          "id": "z05w4s0d0h5ag"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ServiceEsignGetRequest"
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "summary": "Your PUT endpoint",
-        "tags": [],
-        "responses": {
-          "default": {
-            "description": "Default"
-          }
-        },
-        "operationId": "put-1.0.0-service-manage-esigns",
-        "x-stoplight": {
-          "id": "kbtejl2fto6kh"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ServiceEsignPutRequest"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/1.0.0/service/manage/esigns/{documentOrder}": {
-      "parameters": [
-        {
-          "schema": {
-            "type": "string"
-          },
-          "name": "documentOrder",
-          "in": "path",
-          "required": true
-        }
-      ],
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {},
-        "operationId": "get-1.0.0-service-manage-esigns-documentOrder",
-        "x-stoplight": {
-          "id": "z5roeiut7ucfu"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ServiceEsignDocumentGetRequest"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/1.0.0/service/manage/esigns/resources": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "default": {
-            "description": "Default",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/ServiceEsignResourceGetResponse"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-1.0.0-service-manage-esign-resources",
-        "x-stoplight": {
-          "id": "4s3hsr3xhj1l2"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/ServiceEsignResourceGetRequest"
-              }
-            }
-          }
-        }
-      },
-      "parameters": []
-    }
-  },
+  "paths": {},
   "components": {
     "schemas": {
       "ServiceAdvisorAssignmentResourceGetRequest": {
@@ -159,82 +43,6 @@
       },
       "ServiceAdvisorAssignmentResourceGetResponse": {
         "type": "object",
-        "properties": {
-          "programs": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "prog_code": {
-                  "type": "string"
-                },
-                "language": {
-                  "type": "string"
-                },
-                "cipher": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "period_count": {
-                  "type": "integer"
-                }
-              }
-            }
-          },
-          "advisors": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "full_name": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "years": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "year": {
-                  "type": "integer"
-                }
-              }
-            }
-          },
-          "citizenship": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "country_code": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "classes": {
-            "type": "array",
-            "items": {
-              "type": "integer"
-            }
-          }
-        },
         "x-examples": {
           "Example 1": {
             "programs": [
@@ -271,6 +79,312 @@
               3,
               4
             ]
+          }
+        },
+        "required": [
+          "programs",
+          "advisors",
+          "years",
+          "citizenship",
+          "classes"
+        ],
+        "properties": {
+          "programs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "prog_code",
+                "language",
+                "cipher",
+                "title",
+                "period_count"
+              ],
+              "properties": {
+                "prog_code": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                },
+                "cipher": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "period_count": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "advisors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "full_name"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "full_name": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "years": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "year"
+              ],
+              "properties": {
+                "year": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "citizenship": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "name",
+                "title",
+                "country_code"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "country_code": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "classes": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "ServiceAdvisorAssignmentStudentsGetRequest": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "per_page": 15,
+            "offset": 40,
+            "student_id": 200103201,
+            "program_code": "10103",
+            "entrance_year": 2023,
+            "class": 4,
+            "employee_id": 11078,
+            "without_advisor": true,
+            "citizenship": "KZ"
+          }
+        },
+        "required": [
+          "per_page",
+          "offset"
+        ],
+        "properties": {
+          "per_page": {
+            "type": "integer"
+          },
+          "offset": {
+            "type": "integer"
+          },
+          "student_id": {
+            "type": "integer"
+          },
+          "program_code": {
+            "type": "string"
+          },
+          "entrance_year": {
+            "type": "integer"
+          },
+          "class": {
+            "type": "integer"
+          },
+          "employee_id": {
+            "type": "integer"
+          },
+          "without_advisor": {
+            "type": "boolean"
+          },
+          "citizenship": {
+            "type": "string"
+          }
+        }
+      },
+      "ServiceAdvisorAssignmentStudentsGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "total": 40,
+            "from": 1,
+            "per_page": 15,
+            "current_page": 2,
+            "last_page": 3,
+            "students": [
+              {
+                "id": "200103201",
+                "full_name": "Zhandos Saparbayev",
+                "class": 4,
+                "specialty": {
+                  "program_code": "10103",
+                  "language": "English",
+                  "speciality_code": "6B06101",
+                  "title": "Information Systems",
+                  "department_id": 1051,
+                  "terms": 8
+                },
+                "advisor": {
+                  "id": 200103,
+                  "full_name": "Zhandos Saparbayev"
+                }
+              }
+            ]
+          }
+        },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "students"
+        ],
+        "properties": {
+          "total": {
+            "type": "integer"
+          },
+          "from": {
+            "type": "integer"
+          },
+          "per_page": {
+            "type": "integer"
+          },
+          "current_page": {
+            "type": "integer"
+          },
+          "last_page": {
+            "type": "integer"
+          },
+          "students": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "full_name",
+                "class",
+                "specialty"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "full_name": {
+                  "type": "string"
+                },
+                "class": {
+                  "type": "integer"
+                },
+                "specialty": {
+                  "type": "object",
+                  "required": [
+                    "program_code",
+                    "language",
+                    "speciality_code",
+                    "title",
+                    "department_id",
+                    "terms"
+                  ],
+                  "properties": {
+                    "program_code": {
+                      "type": "string"
+                    },
+                    "language": {
+                      "type": "string"
+                    },
+                    "speciality_code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    },
+                    "department_id": {
+                      "type": "integer"
+                    },
+                    "terms": {
+                      "type": "integer"
+                    }
+                  }
+                },
+                "advisor": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "full_name"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "full_name": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "ServiceAdvisorAssignmentAssginStudentsToAdvisorRequest": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "7de33cf5fed31"
+        },
+        "x-examples": {
+          "Example 1": {
+            "students_list": [
+              "200103201"
+            ],
+            "advisor_id": "10002"
+          }
+        },
+        "required": [
+          "students_list",
+          "advisor_id"
+        ],
+        "properties": {
+          "students_list": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "advisor_id": {
+            "type": "string"
           }
         }
       }
