@@ -17341,60 +17341,47 @@
           "Example 1": {
             "total": 2,
             "from": 1,
-            "per_page": 100,
+            "per_page": 10,
             "current_page": 1,
-            "last_page": 1,
+            "last_page": 2,
             "syllabuses": [
               {
                 "course": {
-                  "editor_id": 11339,
-                  "editor_name": "Maxat Baitugulov",
-                  "code": "INF 345",
-                  "title": "Fundamentals of DevOps",
+                  "editor_id": 10001,
+                  "editor_name": "Arsentiy Zhunussov",
+                  "code": "CSS 101",
+                  "title": "Algorithms and Programming",
                   "theory": 3,
-                  "practice": 3,
-                  "lab": 3,
-                  "credits": 3,
+                  "practice": 1,
+                  "lab": 2,
+                  "credits": 6,
                   "ects": 5,
                   "titles": [
-                    "Fundamentals of DevOps",
-                    "DevOps негіздері",
-                    "Основы DevOps"
+                    "Algorithms and Programming"
                   ],
-                  "department_id": 973,
-                  "department_name": "Department of Computer Sciences"
-                },
-                "year": 2022,
-                "term": null,
-                "status": 4,
-                "language": "EN"
-              },
-              {
-                "course": {
-                  "editor_id": 10980,
-                  "editor_name": "Nauryzbay Sapargali",
-                  "code": "CSS 105",
-                  "title": "Fundamentals of Programming",
-                  "theory": 4,
-                  "practice": 4,
-                  "lab": 4,
-                  "ects": 5,
-                  "titles": [
-                    "Fundamentals of Programming",
-                    "Бағдарламалау негіздері",
-                    "Основы программирования"
-                  ],
-                  "department_id": 973,
-                  "department_name": "Department of Computer Sciences"
+                  "department_id": 1,
+                  "department_name": "Computer Science"
                 },
                 "year": 2022,
                 "term": 1,
-                "status": 4,
-                "language": "EN"
+                "language": "EN",
+                "status": {
+                  "status_for_english": 0,
+                  "status_for_kazakh": 1,
+                  "status_for_russian": 0
+                }
               }
             ]
           }
         },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "syllabuses"
+        ],
         "properties": {
           "total": {
             "type": "integer"
@@ -17415,6 +17402,13 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "course",
+                "year",
+                "term",
+                "language",
+                "status"
+              ],
               "properties": {
                 "course": {
                   "type": "object",
@@ -17424,9 +17418,9 @@
                     "code",
                     "title",
                     "theory",
-                    "credits",
                     "practice",
                     "lab",
+                    "credits",
                     "ects",
                     "titles",
                     "department_id",
@@ -17448,16 +17442,13 @@
                     "theory": {
                       "type": "integer"
                     },
-                    "credits": {
-                      "type": "integer",
-                      "x-stoplight": {
-                        "id": "2fd3wrazm7ovp"
-                      }
-                    },
                     "practice": {
                       "type": "integer"
                     },
                     "lab": {
+                      "type": "integer"
+                    },
+                    "credits": {
                       "type": "integer"
                     },
                     "ects": {
@@ -17481,34 +17472,34 @@
                   "type": "integer"
                 },
                 "term": {
-                  "type": "integer",
-                  "nullable": true
-                },
-                "status": {
                   "type": "integer"
                 },
                 "language": {
                   "type": "string"
+                },
+                "status": {
+                  "type": "object",
+                  "required": [
+                    "status_for_english",
+                    "status_for_kazakh",
+                    "status_for_russian"
+                  ],
+                  "properties": {
+                    "status_for_english": {
+                      "type": "integer"
+                    },
+                    "status_for_kazakh": {
+                      "type": "integer"
+                    },
+                    "status_for_russian": {
+                      "type": "integer"
+                    }
+                  }
                 }
-              },
-              "required": [
-                "course",
-                "year",
-                "term",
-                "status",
-                "language"
-              ]
+              }
             }
           }
-        },
-        "required": [
-          "total",
-          "from",
-          "per_page",
-          "current_page",
-          "last_page",
-          "syllabuses"
-        ]
+        }
       },
       "ProfileBiographyGetResponse": {
         "type": "object",
