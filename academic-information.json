@@ -234,6 +234,14 @@
             ]
           }
         },
+        "required": [
+          "total",
+          "from",
+          "per_page",
+          "current_page",
+          "last_page",
+          "sections"
+        ],
         "properties": {
           "total": {
             "type": "integer"
@@ -254,6 +262,15 @@
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "course_code",
+                "course_title",
+                "section",
+                "teacher",
+                "pending_requests_count",
+                "accepted_requests_count",
+                "rejected_requests_count"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -279,28 +296,10 @@
                 "rejected_requests_count": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "id",
-                "course_code",
-                "course_title",
-                "section",
-                "teacher",
-                "pending_requests_count",
-                "accepted_requests_count",
-                "rejected_requests_count"
-              ]
+              }
             }
           }
-        },
-        "required": [
-          "total",
-          "from",
-          "per_page",
-          "current_page",
-          "last_page",
-          "sections"
-        ]
+        }
       },
       "AcademicInformationConsentRequestGetRequest": {
         "type": "object",
