@@ -1379,59 +1379,6 @@
       },
       "AcademicStudentsResourceResponse": {
         "type": "object",
-        "properties": {
-          "specialities": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "program_code": {
-                  "type": "string"
-                },
-                "language_code": {
-                  "type": "string"
-                },
-                "speciality_code": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "terms": {
-                  "type": "integer"
-                },
-                "department": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "integer"
-                    },
-                    "code": {
-                      "type": "string"
-                    },
-                    "title": {
-                      "type": "string"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "student_statuses": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        },
         "x-examples": {
           "Example 1": {
             "specialities": [
@@ -1454,6 +1401,80 @@
                 "title": "Studying"
               }
             ]
+          }
+        },
+        "required": [
+          "specialities",
+          "student_statuses"
+        ],
+        "properties": {
+          "specialities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "program_code",
+                "language_code",
+                "speciality_code",
+                "title",
+                "terms",
+                "department"
+              ],
+              "properties": {
+                "program_code": {
+                  "type": "string"
+                },
+                "language_code": {
+                  "type": "string"
+                },
+                "speciality_code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "terms": {
+                  "type": "integer"
+                },
+                "department": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "code",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "student_statuses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            }
           }
         }
       },
