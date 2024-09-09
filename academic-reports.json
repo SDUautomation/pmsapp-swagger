@@ -219,7 +219,7 @@
           ],
           "properties": {
             "id": {
-              "type": "integer"
+              "type": "string"
             },
             "title": {
               "type": "string"
@@ -253,7 +253,7 @@
                 ],
                 "properties": {
                   "id": {
-                    "type": "integer"
+                    "type": "string"
                   },
                   "title": {
                     "type": "string"
