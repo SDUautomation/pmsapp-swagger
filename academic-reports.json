@@ -219,7 +219,7 @@
           ],
           "properties": {
             "id": {
-              "type": "string"
+              "type": "integer"
             },
             "title": {
               "type": "string"
@@ -280,8 +280,7 @@
               }
             }
           }
-        },
-        "title": ""
+        }
       },
       "AcademicReportsGetRequest": {
         "title": "AcademicReportsGetRequest",
