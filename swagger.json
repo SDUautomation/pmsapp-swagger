@@ -4124,22 +4124,27 @@
       "SignInResponse": {
         "type": "object",
         "x-examples": {
-          "sample": {
-            "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI4NDEiLCJqdGkiOiIyODRkZWMzMDJiNWY0ZjUzNmEzZTZkMzQ2NDQxYzExNTE0OTA1MDdkNmZlOTliZTMwZjVlZjhkMmE4ZjlkYTBkZTdiMDcwZGI3YTEyZjlkZCIsImlhdCI6MTY5MDY0MTczOS45Nzk0MTEsIm5iZiI6MTY5MDY0MTczOS45Nzk0MTUsImV4cCI6MTcwNjUzOTMzOS45NzE2MDgsInN1YiI6IjEwODY3Iiwic2NvcGVzIjpbXX0.CSbIfh-lQ_sGthmD92p4yOwUq2E2Uc4BvB-U4DeCQipS4SwV32NndwKPaOr58AGmNO4oyKg88y8N3yowYvxl0VcA8HjDZfPB0y6nr9l107Pv6KE6OAk5zL1-1iVIXgW91984bY_LR8aWPsWOjYrpfsS5KEhOj8d9qOUdrNFja-eye4TucWfRpJkqapCEaWc2YPcC0AhPAvhSlhJK9Ndx4_5L0hdelFyAVxylpfIXjMzcbbWuNXoTIhR694VAXkcnDeZqHGcFtZyq9N4UVLOKbOiP_mHxYPXvKP2zJQJO8YwQ0X6uiPwqj9c1Y7xDL1sZcaqxYbOiuHyv_v3NTHBDc7q0c9sll59cq1oy5C46qCE-AXXK0cZoXeSfO0-V8Td3BOwmGcNGPc5bvvARoM_Q23DMdxPfAOVRBOUKqqiqxtX8b0kETZJ_cBdcHA9caVewsdsoMpwsP5fnZ1x0DPASl1SNzWOCBCiTjZGH-6CZegdKWoPsohyLns0OTlFkcdgHGkQsSPuBQQce6G2UMevG5_8yXFwkJ3xmKC1b7GO60sAAhXB8PU57EDUSDfnzeo6veP8sCJG-rb015P_4OsdmUVsvAuVRsDHY5WtvDa16wzv2Rq0aBFpuq4GUhXrVezOU9HL9wmZfHJy3kYy1K52HYJzCTV8ysgDdh8N0xF2hf7E",
+          "Example 1": {
+            "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9",
             "token_type": "Bearer",
-            "expires_in": 1690684940,
+            "expires_in": 1685246223,
             "log": 1,
-            "access": "eyJpdiI6Ilh3ZDJkWlZ3a0FqTklaWEphdnBPdnc9PSIsInZhbHVlIjoiZ0VxLzVtZzRTbEIyYUtFSEpUa29aVVk5dWZEdGg1Nk1YRHBjbEJiMlIvWT0iLCJtYWMiOiJhODYzNmViMDRjNmY2MmIxMWQzNmFhMjFjNTUzZjVkZWQwZWIwNGI0M2QyOTI4ZGYwMmVjZWY4ZTJhNDlmM2IxIiwidGFnIjoiIn0=",
+            "access": "eyJpdiI6ImxlUDk5dXNxNXNIZ2t3SW9rcFp6VW",
             "roles": [
-              "teacher",
-              "administrator"
+              "teacher"
             ],
-            "year": 2023,
-            "term": 1
+            "year": 2022,
+            "term": 2,
+            "employee_id": 10001,
+            "verified_status": {
+              "id": 3,
+              "title": "You have successfully signed in with initial password. You need to set own password."
+            }
           }
         },
         "required": [
-          "employee_id"
+          "employee_id",
+          "verified_status"
         ],
         "properties": {
           "token": {
@@ -4170,9 +4175,21 @@
             "type": "integer"
           },
           "employee_id": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "k0659xjlxxjvb"
+            "type": "integer"
+          },
+          "verified_status": {
+            "type": "object",
+            "required": [
+              "id",
+              "title"
+            ],
+            "properties": {
+              "id": {
+                "type": "integer"
+              },
+              "title": {
+                "type": "string"
+              }
             }
           }
         }
