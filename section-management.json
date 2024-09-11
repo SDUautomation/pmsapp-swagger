@@ -1484,45 +1484,20 @@
             "track": "asfasf"
           }
         },
+        "required": [
+          "department_code",
+          "year",
+          "term"
+        ],
         "properties": {
-          "request_by": {
-            "type": "string"
-          },
-          "program_code": {
-            "type": "string"
-          },
-          "year": {
-            "type": "integer"
-          },
-          "period_number": {
-            "type": "integer"
-          },
-          "course_code": {
-            "type": "integer"
-          },
-          "title": {
-            "type": "string"
-          },
-          "track": {
-            "type": "string"
-          },
-          "course_type": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "pbwvttaneqtld"
-            }
-          },
-          "program_year": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "ww4yegvvipwma"
-            }
-          },
           "department_code": {
             "type": "string",
             "x-stoplight": {
-              "id": "disj0c0c5lymt"
+              "id": "58fygz6sje0yx"
             }
+          },
+          "year": {
+            "type": "integer"
           },
           "term": {
             "type": "integer",
@@ -1530,10 +1505,7 @@
               "id": "9u0fnwapv5g0h"
             }
           }
-        },
-        "required": [
-          "request_by"
-        ]
+        }
       },
       "SectionManagementRequestCourseGetResponse": {
         "type": "array",
