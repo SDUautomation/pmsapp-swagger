@@ -1537,8 +1537,42 @@
       },
       "SectionManagementRequestCourseGetResponse": {
         "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "code": "CSS 216",
+              "title": "Mobile Programming",
+              "year": 2022,
+              "equicode": "2001010232",
+              "theory": 3,
+              "credits": "(2 + 1 + 0)",
+              "term": 1,
+              "ects": 5,
+              "quota_sum": 84,
+              "met_count": 25,
+              "reject_count": 2,
+              "new_count": 5,
+              "reserved_count": 3
+            }
+          ]
+        },
         "items": {
           "type": "object",
+          "required": [
+            "code",
+            "title",
+            "year",
+            "equicode",
+            "theory",
+            "credits",
+            "term",
+            "ects",
+            "quota_sum",
+            "met_count",
+            "reject_count",
+            "new_count",
+            "reserved_count"
+          ],
           "properties": {
             "code": {
               "type": "string"
@@ -1580,25 +1614,6 @@
               "type": "integer"
             }
           }
-        },
-        "x-examples": {
-          "Example 1": [
-            {
-              "code": "CSS 216",
-              "title": "Mobile Programming",
-              "year": 2022,
-              "equicode": "2001010232",
-              "theory": 3,
-              "credits": "(2 + 1 + 0)",
-              "term": 1,
-              "ects": 5,
-              "quota_sum": 84,
-              "met_count": 25,
-              "reject_count": 2,
-              "new_count": 5,
-              "reserved_count": 3
-            }
-          ]
         }
       },
       "SectionManagementRequestPostRequest": {
