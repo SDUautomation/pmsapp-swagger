@@ -732,10 +732,43 @@
       "get": {
         "summary": "Your GET endpoint",
         "tags": [],
-        "responses": {},
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/SectionManagementRequestCoursesGetResponse"
+                }
+              }
+            }
+          }
+        },
         "operationId": "get-1.0.0-academic-manage-sections-courses-new-request-courses",
         "x-stoplight": {
           "id": "whm2ly07dog2l"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "$ref": "#/components/schemas/SectionManagementRequestCoursesGetRequest"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/sections/courses/new-request-elective": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-1.0.0-academic-manage-sections-courses-new-request-elective",
+        "x-stoplight": {
+          "id": "g177lop6gzhii"
         },
         "requestBody": {
           "content": {
@@ -2942,94 +2975,167 @@
         }
       },
       "SectionManagementRequestCoursesGetResponse": {
-        "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "muf_id": 12314,
-            "track": "Main Track",
-            "course_code": "CSS 101",
-            "equicode": 123123,
-            "title": "Pedagogical dimensions",
-            "theory": 1,
-            "practice": 1,
-            "lab": 1,
-            "ects": 5,
-            "period_number": 2,
-            "reference_type": "N",
-            "reference_code": "CSS 102",
-            "reference_title": "Pedagogical dimensions 2",
-            "reference_theory": 2,
-            "reference_practice": 2,
-            "reference_lab": 1
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "muf_id": {
+              "type": "integer"
+            },
+            "track": {
+              "type": "string"
+            },
+            "course_code": {
+              "type": "string"
+            },
+            "equicode": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "theory": {
+              "type": "integer"
+            },
+            "practice": {
+              "type": "integer"
+            },
+            "lab": {
+              "type": "integer"
+            },
+            "ects": {
+              "type": "integer"
+            },
+            "period_number": {
+              "type": "integer"
+            },
+            "reference_type": {
+              "type": "string"
+            },
+            "reference_code": {
+              "type": "string"
+            },
+            "reference_title": {
+              "type": "string"
+            },
+            "reference_theory": {
+              "type": "integer"
+            },
+            "reference_practice": {
+              "type": "integer"
+            },
+            "reference_lab": {
+              "type": "integer"
+            }
           }
         },
+        "x-examples": {
+          "Example 1": [
+            {
+              "muf_id": 12314,
+              "track": "Main Track",
+              "course_code": "CSS 101",
+              "equicode": 123123,
+              "title": "Pedagogical dimensions",
+              "theory": 1,
+              "practice": 1,
+              "lab": 1,
+              "ects": 5,
+              "period_number": 2,
+              "reference_type": "N",
+              "reference_code": "CSS 102",
+              "reference_title": "Pedagogical dimensions 2",
+              "reference_theory": 2,
+              "reference_practice": 2,
+              "reference_lab": 1
+            }
+          ]
+        }
+      },
+      "SectionManagementRequestElectiveGetRequest": {
+        "title": "SectionManagementRequestElectiveGetRequest",
+        "x-stoplight": {
+          "id": "v4yuk0ugdx92i"
+        },
+        "type": "object",
         "required": [
-          "muf_id",
-          "track",
-          "course_code",
-          "equicode",
-          "title",
-          "theory",
-          "practice",
-          "lab",
-          "ects",
-          "period_number",
-          "reference_type",
-          "reference_code",
-          "reference_title",
-          "reference_theory",
-          "reference_practice",
-          "reference_lab"
+          "program_code",
+          "program_year",
+          "period_number"
         ],
         "properties": {
-          "muf_id": {
-            "type": "integer"
+          "program_code": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "vwpm8gcmi8yjj"
+            }
           },
-          "track": {
-            "type": "string"
-          },
-          "course_code": {
-            "type": "string"
-          },
-          "equicode": {
-            "type": "integer"
-          },
-          "title": {
-            "type": "string"
-          },
-          "theory": {
-            "type": "integer"
-          },
-          "practice": {
-            "type": "integer"
-          },
-          "lab": {
-            "type": "integer"
-          },
-          "ects": {
-            "type": "integer"
+          "program_year": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "sgvokhuk7m6gb"
+            }
           },
           "period_number": {
-            "type": "integer"
-          },
-          "reference_type": {
-            "type": "string"
-          },
-          "reference_code": {
-            "type": "string"
-          },
-          "reference_title": {
-            "type": "string"
-          },
-          "reference_theory": {
-            "type": "integer"
-          },
-          "reference_practice": {
-            "type": "integer"
-          },
-          "reference_lab": {
-            "type": "integer"
+            "type": "integer",
+            "x-stoplight": {
+              "id": "n9hppxqqiq9h5"
+            }
           }
+        }
+      },
+      "SectionManagementRequestElectiveGetResponse": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "muf_id": {
+              "type": "integer"
+            },
+            "course_code": {
+              "type": "string"
+            },
+            "equicode": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "term": {
+              "type": "integer"
+            },
+            "theory": {
+              "type": "integer"
+            },
+            "practice": {
+              "type": "integer"
+            },
+            "lab": {
+              "type": "integer"
+            },
+            "ects": {
+              "type": "integer"
+            },
+            "type": {
+              "type": "string"
+            }
+          }
+        },
+        "x-examples": {
+          "Example 1": [
+            {
+              "muf_id": 12314,
+              "course_code": "CSS 101",
+              "equicode": 123123,
+              "title": "Pedagogical dimensions",
+              "term": 2,
+              "theory": 1,
+              "practice": 1,
+              "lab": 1,
+              "ects": 5,
+              "type": "AE"
+            }
+          ]
         }
       }
     }
