@@ -2976,8 +2976,48 @@
       },
       "SectionManagementRequestCoursesGetResponse": {
         "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "muf_id": 12314,
+              "track": "Main Track",
+              "course_code": "CSS 101",
+              "equicode": 123123,
+              "title": "Pedagogical dimensions",
+              "theory": 1,
+              "practice": 1,
+              "lab": 1,
+              "ects": 5,
+              "period_number": 2,
+              "reference_type": "N",
+              "reference_code": "CSS 102",
+              "reference_title": "Pedagogical dimensions 2",
+              "reference_theory": 2,
+              "reference_practice": 2,
+              "reference_lab": 1
+            }
+          ]
+        },
         "items": {
           "type": "object",
+          "required": [
+            "muf_id",
+            "track",
+            "course_code",
+            "equicode",
+            "title",
+            "theory",
+            "practice",
+            "lab",
+            "ects",
+            "period_number",
+            "reference_type",
+            "reference_code",
+            "reference_title",
+            "reference_theory",
+            "reference_practice",
+            "reference_lab"
+          ],
           "properties": {
             "muf_id": {
               "type": "integer"
@@ -3028,28 +3068,6 @@
               "type": "integer"
             }
           }
-        },
-        "x-examples": {
-          "Example 1": [
-            {
-              "muf_id": 12314,
-              "track": "Main Track",
-              "course_code": "CSS 101",
-              "equicode": 123123,
-              "title": "Pedagogical dimensions",
-              "theory": 1,
-              "practice": 1,
-              "lab": 1,
-              "ects": 5,
-              "period_number": 2,
-              "reference_type": "N",
-              "reference_code": "CSS 102",
-              "reference_title": "Pedagogical dimensions 2",
-              "reference_theory": 2,
-              "reference_practice": 2,
-              "reference_lab": 1
-            }
-          ]
         }
       },
       "SectionManagementRequestElectiveGetRequest": {
@@ -3086,8 +3104,36 @@
       },
       "SectionManagementRequestElectiveGetResponse": {
         "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "muf_id": 12314,
+              "course_code": "CSS 101",
+              "equicode": 123123,
+              "title": "Pedagogical dimensions",
+              "term": 2,
+              "theory": 1,
+              "practice": 1,
+              "lab": 1,
+              "ects": 5,
+              "type": "AE"
+            }
+          ]
+        },
         "items": {
           "type": "object",
+          "required": [
+            "muf_id",
+            "course_code",
+            "equicode",
+            "title",
+            "term",
+            "theory",
+            "practice",
+            "lab",
+            "ects",
+            "type"
+          ],
           "properties": {
             "muf_id": {
               "type": "integer"
@@ -3120,22 +3166,6 @@
               "type": "string"
             }
           }
-        },
-        "x-examples": {
-          "Example 1": [
-            {
-              "muf_id": 12314,
-              "course_code": "CSS 101",
-              "equicode": 123123,
-              "title": "Pedagogical dimensions",
-              "term": 2,
-              "theory": 1,
-              "practice": 1,
-              "lab": 1,
-              "ects": 5,
-              "type": "AE"
-            }
-          ]
         }
       }
     }
