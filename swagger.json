@@ -12662,7 +12662,7 @@
       "AdministrativeSystemCalendarResponse": {
         "type": "object",
         "x-examples": {
-          "simple": {
+          "Example 1": {
             "individual_permissions": [
               {
                 "title": "Pre-final grade",
@@ -12673,7 +12673,7 @@
                 "status": true,
                 "key": "EW",
                 "entry_year": 2020,
-                "permitted": true,
+                "permitted": "`Daulet Akberdiyev` or `2024` or `1` or `Management in healthcare | 11222`",
                 "employee": "Kurmangazy Kongratbayev",
                 "program": "Computer Science",
                 "department": "Department of Computer Science",
@@ -12705,11 +12705,32 @@
             ]
           }
         },
+        "required": [
+          "individual_permissions",
+          "events",
+          "course_permissions"
+        ],
         "properties": {
           "individual_permissions": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "title",
+                "start_date",
+                "end_date",
+                "year",
+                "term",
+                "status",
+                "key",
+                "entry_year",
+                "permitted",
+                "employee",
+                "program",
+                "department",
+                "education_level",
+                "class"
+              ],
               "properties": {
                 "title": {
                   "type": "string"
@@ -12736,7 +12757,7 @@
                   "type": "integer"
                 },
                 "permitted": {
-                  "type": "boolean"
+                  "type": "string"
                 },
                 "employee": {
                   "type": "string"
@@ -12753,29 +12774,21 @@
                 "class": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "title",
-                "start_date",
-                "end_date",
-                "year",
-                "term",
-                "status",
-                "key",
-                "entry_year",
-                "permitted",
-                "employee",
-                "program",
-                "department",
-                "education_level",
-                "class"
-              ]
+              }
             }
           },
           "events": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "title",
+                "start_date",
+                "end_date",
+                "year",
+                "term",
+                "status"
+              ],
               "properties": {
                 "title": {
                   "type": "string"
@@ -12795,21 +12808,23 @@
                 "status": {
                   "type": "boolean"
                 }
-              },
-              "required": [
-                "title",
-                "start_date",
-                "end_date",
-                "year",
-                "term",
-                "status"
-              ]
+              }
             }
           },
           "course_permissions": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "course_code",
+                "section",
+                "assessment",
+                "start_date",
+                "end_date",
+                "year",
+                "term",
+                "status"
+              ],
               "properties": {
                 "course_code": {
                   "type": "string"
@@ -12835,26 +12850,10 @@
                 "status": {
                   "type": "boolean"
                 }
-              },
-              "required": [
-                "course_code",
-                "section",
-                "assessment",
-                "start_date",
-                "end_date",
-                "year",
-                "term",
-                "status"
-              ]
+              }
             }
           }
-        },
-        "required": [
-          "individual_permissions",
-          "events",
-          "course_permissions"
-        ],
-        "description": ""
+        }
       },
       "ProfileOverviewResponse": {
         "type": "object",
