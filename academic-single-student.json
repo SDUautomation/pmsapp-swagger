@@ -1065,11 +1065,21 @@
             }
           }
         },
+        "required": [
+          "course_statuses",
+          "year_terms",
+          "program_tracks",
+          "information"
+        ],
         "properties": {
           "course_statuses": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "status",
+                "title"
+              ],
               "properties": {
                 "status": {
                   "type": "integer"
@@ -1077,17 +1087,17 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "status",
-                "title"
-              ]
+              }
             }
           },
           "year_terms": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "year",
+                "term"
+              ],
               "properties": {
                 "year": {
                   "type": "integer"
@@ -1095,11 +1105,7 @@
                 "term": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "year",
-                "term"
-              ]
+              }
             }
           },
           "program_tracks": {
@@ -1109,6 +1115,11 @@
               "x-stoplight": {
                 "id": "tiyi0ovd4w7jr"
               },
+              "required": [
+                "track",
+                "title",
+                "id"
+              ],
               "properties": {
                 "track": {
                   "type": "string"
@@ -1122,12 +1133,7 @@
                     "id": "rn5rcumhofkqi"
                   }
                 }
-              },
-              "required": [
-                "track",
-                "title",
-                "id"
-              ]
+              }
             }
           },
           "information": {
@@ -1146,7 +1152,9 @@
               "entrance_year",
               "photo",
               "department",
-              "last_action"
+              "last_action",
+              "debt",
+              "currency"
             ],
             "properties": {
               "id": {
@@ -1190,16 +1198,22 @@
               },
               "last_action": {
                 "type": "string"
+              },
+              "debt": {
+                "type": "integer",
+                "x-stoplight": {
+                  "id": "n2glxiwzb33tv"
+                }
+              },
+              "currency": {
+                "type": "string",
+                "x-stoplight": {
+                  "id": "05m7wcc8glo46"
+                }
               }
             }
           }
-        },
-        "required": [
-          "course_statuses",
-          "year_terms",
-          "program_tracks",
-          "information"
-        ]
+        }
       },
       "AcademicSingleStudentScheduleRequest": {
         "title": "AcademicSingleStudentScheduleRequest",
