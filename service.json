@@ -547,11 +547,14 @@
             ],
             "departments": [
               {
-                "program_code": "98000",
-                "language": "EN",
-                "cipher": "6B01705",
-                "title": "Finance",
-                "period_count": 8
+                "department_id": 1402,
+                "parent_id": 1396,
+                "title": "Faculty of education and humanities",
+                "department_code": "F_PHIL",
+                "type": "F",
+                "children": [
+                  "string"
+                ]
               }
             ],
             "years": [
@@ -561,11 +564,22 @@
             ]
           }
         },
+        "required": [
+          "language_levels",
+          "languages",
+          "departments",
+          "years"
+        ],
         "properties": {
           "language_levels": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title",
+                "code"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -576,18 +590,17 @@
                 "code": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "title",
-                "code"
-              ]
+              }
             }
           },
           "languages": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "language"
+              ],
               "properties": {
                 "id": {
                   "type": "string"
@@ -595,69 +608,61 @@
                 "language": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "language"
-              ]
+              }
             }
           },
           "departments": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "department_id",
+                "parent_id",
+                "title",
+                "department_code",
+                "type",
+                "children"
+              ],
               "properties": {
-                "program_code": {
-                  "type": "string"
+                "department_id": {
+                  "type": "integer"
                 },
-                "language": {
-                  "type": "string"
-                },
-                "cipher": {
-                  "type": "string"
+                "parent_id": {
+                  "type": "integer"
                 },
                 "title": {
                   "type": "string"
                 },
-                "period_count": {
-                  "type": "integer"
+                "department_code": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "children": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
-              },
-              "required": [
-                "program_code",
-                "language",
-                "cipher",
-                "title",
-                "period_count"
-              ]
+              }
             }
           },
           "years": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "year"
+              ],
               "properties": {
                 "year": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "year"
-              ]
+              }
             }
           }
-        },
-        "required": [
-          "language_levels",
-          "languages",
-          "departments",
-          "years"
-        ],
-        "x-stoplight": {
-          "id": "9r8odw170c61h"
-        },
-        "title": "",
-        "x-internal": false
+        }
       },
       "ServiceManageLocksGetRequest": {
         "type": "object",
