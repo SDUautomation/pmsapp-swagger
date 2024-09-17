@@ -1233,8 +1233,8 @@
         "type": "object",
         "required": [
           "language_code",
-          "program_code",
           "department_code",
+          "entrance_year",
           "per_page",
           "offset"
         ],
@@ -1251,13 +1251,13 @@
               "id": "lpo72dhjb9hs2"
             }
           },
-          "program_code": {
+          "department_code": {
             "type": "string",
             "x-stoplight": {
               "id": "rgp6psj25hxcv"
             }
           },
-          "department_code": {
+          "entrance_year": {
             "type": "integer",
             "x-stoplight": {
               "id": "ln4789ipvbmtf"
