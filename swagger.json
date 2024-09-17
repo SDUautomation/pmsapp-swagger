@@ -17720,6 +17720,22 @@
               "grading": "normal",
               "local_code": "1"
             },
+            "requisites": [
+              {
+                "program_code": "10103",
+                "educational_program": "Information Systems",
+                "course_title": "CSS 518 - RedHat - System Administration (I + II)",
+                "type": "Pre - Requisite",
+                "consent_status": "Not applicable"
+              }
+            ],
+            "available_programs": [
+              {
+                "program_code": "10103",
+                "program_title": "Information Systems",
+                "degree": "Master"
+              }
+            ],
             "delivery_types": [
               {
                 "id": 1,
@@ -17830,6 +17846,8 @@
         },
         "required": [
           "overview",
+          "requisites",
+          "available_programs",
           "delivery_types",
           "description",
           "instructors",
@@ -17953,6 +17971,58 @@
               },
               "local_code": {
                 "type": "string"
+              }
+            }
+          },
+          "requisites": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "program_code",
+                "educational_program",
+                "course_title",
+                "type",
+                "consent_status"
+              ],
+              "properties": {
+                "program_code": {
+                  "type": "string"
+                },
+                "educational_program": {
+                  "type": "string"
+                },
+                "course_title": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "consent_status": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "available_programs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "program_code",
+                "program_title",
+                "degree"
+              ],
+              "properties": {
+                "program_code": {
+                  "type": "string"
+                },
+                "program_title": {
+                  "type": "string"
+                },
+                "degree": {
+                  "type": "string"
+                }
               }
             }
           },
