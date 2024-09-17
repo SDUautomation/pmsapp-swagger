@@ -727,60 +727,6 @@
           }
         }
       }
-    },
-    "/1.0.0/academic/manage/sections/courses/new-request-courses": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {
-          "default": {
-            "description": "Default",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "$ref": "#/components/schemas/SectionManagementRequestCoursesGetResponse"
-                }
-              }
-            }
-          }
-        },
-        "operationId": "get-1.0.0-academic-manage-sections-courses-new-request-courses",
-        "x-stoplight": {
-          "id": "whm2ly07dog2l"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "$ref": "#/components/schemas/SectionManagementRequestCoursesGetRequest"
-              }
-            }
-          }
-        }
-      }
-    },
-    "/1.0.0/academic/manage/sections/courses/new-request-elective": {
-      "get": {
-        "summary": "Your GET endpoint",
-        "tags": [],
-        "responses": {},
-        "operationId": "get-1.0.0-academic-manage-sections-courses-new-request-elective",
-        "x-stoplight": {
-          "id": "g177lop6gzhii"
-        },
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "type": "object",
-                "properties": {}
-              }
-            }
-          }
-        }
-      }
     }
   },
   "components": {
@@ -1538,20 +1484,45 @@
             "track": "asfasf"
           }
         },
-        "required": [
-          "department_code",
-          "year",
-          "term"
-        ],
         "properties": {
-          "department_code": {
-            "type": "string",
-            "x-stoplight": {
-              "id": "58fygz6sje0yx"
-            }
+          "request_by": {
+            "type": "string"
+          },
+          "program_code": {
+            "type": "string"
           },
           "year": {
             "type": "integer"
+          },
+          "period_number": {
+            "type": "integer"
+          },
+          "course_code": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "track": {
+            "type": "string"
+          },
+          "course_type": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "pbwvttaneqtld"
+            }
+          },
+          "program_year": {
+            "type": "integer",
+            "x-stoplight": {
+              "id": "ww4yegvvipwma"
+            }
+          },
+          "department_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "disj0c0c5lymt"
+            }
           },
           "term": {
             "type": "integer",
@@ -1559,87 +1530,434 @@
               "id": "9u0fnwapv5g0h"
             }
           }
-        }
+        },
+        "required": [
+          "request_by"
+        ]
       },
       "SectionManagementRequestCourseGetResponse": {
         "type": "array",
         "x-examples": {
           "Example 1": [
             {
-              "code": "CSS 216",
-              "title": "Mobile Programming",
+              "code": "CSS 507",
               "year": 2022,
-              "equicode": "2001010232",
-              "theory": 3,
-              "credits": "(2 + 1 + 0)",
+              "title": "Data Сollection, Wrangling, Analysis and Visualization",
+              "equicode": 20185448,
               "term": 1,
+              "id": 2,
+              "theory": 2,
+              "practice": "(1 + 0)",
               "ects": 5,
-              "quota_sum": 84,
-              "met_count": 25,
-              "reject_count": 2,
-              "new_count": 5,
-              "reserved_count": 3
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": {
+                "id": "TRACK0",
+                "title": "Main Track"
+              },
+              "course_type": {
+                "id": "E",
+                "title": "Elective"
+              },
+              "elective_type": {
+                "id": "AE",
+                "title": "Area elective"
+              },
+              "offers": [
+                {
+                  "id": 121234,
+                  "note": "Can open section for IS, CS students",
+                  "date": "2020-08-05 15:41:51",
+                  "author": {
+                    "id": 10559,
+                    "full_name": "Mukhtar Bimurat"
+                  }
+                }
+              ],
+              "references": [
+                {
+                  "type": "N",
+                  "courses": [
+                    {
+                      "code": "INF 138",
+                      "year": 2022,
+                      "title": "Mathematics for Information Systems 2"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "code": "MAT 505",
+              "year": 2022,
+              "title": "Quantitative finance",
+              "equicode": 20196592,
+              "term": null,
+              "theory": 2,
+              "practice": "(1 + 0)",
+              "ects": 5,
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": null,
+              "course_type": {
+                "id": "C",
+                "title": "Core"
+              },
+              "elective_type": null,
+              "offers": [],
+              "references": []
+            },
+            {
+              "code": "MAT 506",
+              "year": 2022,
+              "title": "Financial markets and securities",
+              "equicode": 20196593,
+              "term": null,
+              "theory": 2,
+              "practice": "(1 + 0)",
+              "ects": 5,
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": null,
+              "course_type": {
+                "id": "C",
+                "title": "Core"
+              },
+              "elective_type": null,
+              "offers": [],
+              "references": []
+            },
+            {
+              "code": "MAT 508",
+              "year": 2022,
+              "title": "Fixed assets",
+              "equicode": 20196594,
+              "term": null,
+              "theory": 2,
+              "practice": "(1 + 0)",
+              "ects": 5,
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": null,
+              "course_type": {
+                "id": "E",
+                "title": "Elective"
+              },
+              "elective_type": {
+                "id": "AE",
+                "title": "Area elective"
+              },
+              "offers": [],
+              "references": []
+            },
+            {
+              "code": "MAT 513",
+              "year": 2022,
+              "title": "Applied mathematical programming",
+              "equicode": 20185485,
+              "term": 2,
+              "theory": 2,
+              "practice": "(1 + 0)",
+              "ects": 5,
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": null,
+              "course_type": {
+                "id": "C",
+                "title": "Core"
+              },
+              "elective_type": null,
+              "offers": [],
+              "references": []
+            },
+            {
+              "code": "MAT 515",
+              "year": 2022,
+              "title": "Partial differential equations and its applications",
+              "equicode": 20185487,
+              "term": null,
+              "theory": 2,
+              "practice": "(1 + 0)",
+              "ects": 5,
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": null,
+              "course_type": {
+                "id": "C",
+                "title": "Core"
+              },
+              "elective_type": null,
+              "offers": [],
+              "references": []
+            },
+            {
+              "code": "MAT 524",
+              "year": 2022,
+              "title": "Neural networks",
+              "equicode": 20175091,
+              "term": 2,
+              "theory": 2,
+              "practice": "(0 + 1)",
+              "ects": 5,
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": null,
+              "course_type": {
+                "id": "E",
+                "title": "Elective"
+              },
+              "elective_type": {
+                "id": "AE",
+                "title": "Area elective"
+              },
+              "offers": [],
+              "references": []
+            },
+            {
+              "code": "MAT 674",
+              "year": 2022,
+              "title": "Research work for the Master's Degree including an internship and a Master's Thesis 2",
+              "equicode": 20196373,
+              "term": 2,
+              "theory": 0,
+              "practice": "(3 + 0)",
+              "ects": 5,
+              "program": {
+                "code": "11111",
+                "year": 2022,
+                "title": "Financial Mathematics"
+              },
+              "track": null,
+              "course_type": {
+                "id": "C",
+                "title": "Core"
+              },
+              "elective_type": null,
+              "offers": [],
+              "references": []
             }
           ]
         },
         "items": {
           "type": "object",
-          "required": [
-            "code",
-            "title",
-            "year",
-            "equicode",
-            "theory",
-            "credits",
-            "term",
-            "ects",
-            "quota_sum",
-            "met_count",
-            "reject_count",
-            "new_count",
-            "reserved_count"
-          ],
           "properties": {
-            "code": {
-              "type": "string"
+            "id": {
+              "type": "integer",
+              "x-stoplight": {
+                "id": "yhnhh2hx2oirv"
+              }
             },
-            "title": {
+            "code": {
               "type": "string"
             },
             "year": {
               "type": "integer"
             },
+            "title": {
+              "type": "string"
+            },
             "equicode": {
-              "type": "string"
-            },
-            "theory": {
               "type": "integer"
-            },
-            "credits": {
-              "type": "string"
             },
             "term": {
               "type": "integer"
             },
+            "theory": {
+              "type": "integer"
+            },
+            "practice": {
+              "type": "string"
+            },
             "ects": {
               "type": "integer"
             },
-            "quota_sum": {
-              "type": "integer"
+            "credits": {
+              "type": "string",
+              "x-stoplight": {
+                "id": "uwpwlgdm5zl5l"
+              }
             },
-            "met_count": {
-              "type": "integer"
+            "program": {
+              "type": "object",
+              "required": [
+                "code",
+                "year",
+                "title"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
             },
-            "reject_count": {
-              "type": "integer"
+            "track": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "nullable": true,
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
             },
-            "new_count": {
-              "type": "integer"
+            "course_type": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
             },
-            "reserved_count": {
-              "type": "integer"
+            "elective_type": {
+              "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
+              "nullable": true,
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                }
+              }
+            },
+            "offers": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "integer"
+                  },
+                  "note": {
+                    "type": "string"
+                  },
+                  "date": {
+                    "type": "string"
+                  },
+                  "author": {
+                    "type": "object",
+                    "required": [
+                      "full_name",
+                      "id"
+                    ],
+                    "properties": {
+                      "full_name": {
+                        "type": "string"
+                      },
+                      "id": {
+                        "type": "integer"
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "id",
+                  "note",
+                  "date",
+                  "author"
+                ]
+              }
+            },
+            "references": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "type": {
+                    "type": "string"
+                  },
+                  "courses": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "code": {
+                          "type": "string"
+                        },
+                        "year": {
+                          "type": "integer"
+                        },
+                        "title": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "code",
+                        "year",
+                        "title"
+                      ]
+                    }
+                  }
+                },
+                "required": [
+                  "type",
+                  "courses"
+                ]
+              }
             }
-          }
+          },
+          "required": [
+            "id",
+            "code",
+            "year",
+            "title",
+            "equicode",
+            "term",
+            "theory",
+            "practice",
+            "ects",
+            "credits",
+            "program",
+            "track",
+            "course_type",
+            "elective_type",
+            "offers",
+            "references"
+          ]
         }
       },
       "SectionManagementRequestPostRequest": {
@@ -2931,239 +3249,6 @@
             },
             "author": {
               "nullable": true
-            }
-          }
-        }
-      },
-      "SectionManagementRequestCoursesGetRequest": {
-        "title": "SectionManagementRequestCoursesGetRequest",
-        "x-stoplight": {
-          "id": "gd3fbi4jw9tev"
-        },
-        "type": "object",
-        "required": [
-          "program_code",
-          "program_year",
-          "period_number",
-          "year"
-        ],
-        "properties": {
-          "program_code": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "ya7tb3g6hqpea"
-            }
-          },
-          "program_year": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "y85yrxdvkcdyz"
-            }
-          },
-          "period_number": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "5aed82wky9wq3"
-            }
-          },
-          "year": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "m33c7re8wa70r"
-            }
-          }
-        }
-      },
-      "SectionManagementRequestCoursesGetResponse": {
-        "type": "array",
-        "x-examples": {
-          "Example 1": [
-            {
-              "muf_id": 12314,
-              "track": "Main Track",
-              "course_code": "CSS 101",
-              "equicode": 123123,
-              "title": "Pedagogical dimensions",
-              "theory": 1,
-              "practice": 1,
-              "lab": 1,
-              "ects": 5,
-              "period_number": 2,
-              "reference_type": "N",
-              "reference_code": "CSS 102",
-              "reference_title": "Pedagogical dimensions 2",
-              "reference_theory": 2,
-              "reference_practice": 2,
-              "reference_lab": 1
-            }
-          ]
-        },
-        "items": {
-          "type": "object",
-          "required": [
-            "muf_id",
-            "track",
-            "course_code",
-            "equicode",
-            "title",
-            "theory",
-            "practice",
-            "lab",
-            "ects",
-            "period_number",
-            "reference_type",
-            "reference_code",
-            "reference_title",
-            "reference_theory",
-            "reference_practice",
-            "reference_lab"
-          ],
-          "properties": {
-            "muf_id": {
-              "type": "integer"
-            },
-            "track": {
-              "type": "string"
-            },
-            "course_code": {
-              "type": "string"
-            },
-            "equicode": {
-              "type": "integer"
-            },
-            "title": {
-              "type": "string"
-            },
-            "theory": {
-              "type": "integer"
-            },
-            "practice": {
-              "type": "integer"
-            },
-            "lab": {
-              "type": "integer"
-            },
-            "ects": {
-              "type": "integer"
-            },
-            "period_number": {
-              "type": "integer"
-            },
-            "reference_type": {
-              "type": "string"
-            },
-            "reference_code": {
-              "type": "string"
-            },
-            "reference_title": {
-              "type": "string"
-            },
-            "reference_theory": {
-              "type": "integer"
-            },
-            "reference_practice": {
-              "type": "integer"
-            },
-            "reference_lab": {
-              "type": "integer"
-            }
-          }
-        }
-      },
-      "SectionManagementRequestElectiveGetRequest": {
-        "title": "SectionManagementRequestElectiveGetRequest",
-        "x-stoplight": {
-          "id": "v4yuk0ugdx92i"
-        },
-        "type": "object",
-        "required": [
-          "program_code",
-          "program_year",
-          "period_number"
-        ],
-        "properties": {
-          "program_code": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "vwpm8gcmi8yjj"
-            }
-          },
-          "program_year": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "sgvokhuk7m6gb"
-            }
-          },
-          "period_number": {
-            "type": "integer",
-            "x-stoplight": {
-              "id": "n9hppxqqiq9h5"
-            }
-          }
-        }
-      },
-      "SectionManagementRequestElectiveGetResponse": {
-        "type": "array",
-        "x-examples": {
-          "Example 1": [
-            {
-              "muf_id": 12314,
-              "course_code": "CSS 101",
-              "equicode": 123123,
-              "title": "Pedagogical dimensions",
-              "term": 2,
-              "theory": 1,
-              "practice": 1,
-              "lab": 1,
-              "ects": 5,
-              "type": "AE"
-            }
-          ]
-        },
-        "items": {
-          "type": "object",
-          "required": [
-            "muf_id",
-            "course_code",
-            "equicode",
-            "title",
-            "term",
-            "theory",
-            "practice",
-            "lab",
-            "ects",
-            "type"
-          ],
-          "properties": {
-            "muf_id": {
-              "type": "integer"
-            },
-            "course_code": {
-              "type": "string"
-            },
-            "equicode": {
-              "type": "integer"
-            },
-            "title": {
-              "type": "string"
-            },
-            "term": {
-              "type": "integer"
-            },
-            "theory": {
-              "type": "integer"
-            },
-            "practice": {
-              "type": "integer"
-            },
-            "lab": {
-              "type": "integer"
-            },
-            "ects": {
-              "type": "integer"
-            },
-            "type": {
-              "type": "string"
             }
           }
         }
