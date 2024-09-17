@@ -23675,7 +23675,7 @@
             }
           },
           "department_code": {
-            "type": "number",
+            "type": "string",
             "x-stoplight": {
               "id": "wghsdp44khfp8"
             }
