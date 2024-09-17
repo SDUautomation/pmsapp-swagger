@@ -1008,7 +1008,7 @@
         "type": "object",
         "required": [
           "language_code",
-          "program_code",
+          "department_code",
           "entrance_year",
           "per_page",
           "offset"
@@ -1026,7 +1026,7 @@
               "id": "xph6z5rt0oalz"
             }
           },
-          "program_code": {
+          "department_code": {
             "type": "string",
             "x-stoplight": {
               "id": "idkzv6v7wwtus"
