@@ -530,79 +530,6 @@
     "schemas": {
       "ServiceManageLanguagesResourcesResponse": {
         "type": "object",
-        "properties": {
-          "language_levels": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "code": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "languages": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "language": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "departments": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "department_id": {
-                  "type": "integer"
-                },
-                "parent_id": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "department_code": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "children": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
-            }
-          },
-          "years": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "year": {
-                  "type": "integer"
-                }
-              }
-            }
-          }
-        },
         "x-examples": {
           "Example 1": {
             "language_levels": [
@@ -635,6 +562,105 @@
                 "year": 2023
               }
             ]
+          }
+        },
+        "required": [
+          "language_levels",
+          "languages",
+          "departments",
+          "years"
+        ],
+        "properties": {
+          "language_levels": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title",
+                "code"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "languages": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "language"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "language": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "departments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "department_id",
+                "parent_id",
+                "title",
+                "department_code",
+                "type",
+                "children"
+              ],
+              "properties": {
+                "department_id": {
+                  "type": "integer"
+                },
+                "parent_id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "department_code": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "children": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "years": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "year"
+              ],
+              "properties": {
+                "year": {
+                  "type": "integer"
+                }
+              }
+            }
           }
         }
       },
