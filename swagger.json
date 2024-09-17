@@ -10159,6 +10159,15 @@
         },
         "items": {
           "type": "object",
+          "required": [
+            "id",
+            "title",
+            "year",
+            "code",
+            "course_prefixes",
+            "responsible_persons",
+            "is_editor"
+          ],
           "properties": {
             "id": {
               "type": "integer"
@@ -10183,16 +10192,14 @@
               "items": {
                 "type": "string"
               }
+            },
+            "is_editor": {
+              "type": "boolean",
+              "x-stoplight": {
+                "id": "va3m8l104jbm3"
+              }
             }
-          },
-          "required": [
-            "id",
-            "title",
-            "year",
-            "code",
-            "course_prefixes",
-            "responsible_persons"
-          ]
+          }
         }
       },
       "AcademicManageCurriculumProgramsRequest": {
