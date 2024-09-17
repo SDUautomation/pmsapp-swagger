@@ -504,11 +504,15 @@
             "specialities": [
               {
                 "program_code": "10103",
-                "language": "English",
+                "language_code": "EN",
                 "speciality_code": "6B06101",
                 "title": "Information Systems",
-                "department_id": 1051,
-                "terms": 8
+                "terms": 8,
+                "department": {
+                  "id": 1,
+                  "code": "DEP_HUMANITIES",
+                  "title": "Department of Humanities"
+                }
               }
             ],
             "buildings": [
@@ -527,6 +531,13 @@
                 ]
               }
             ],
+            "couses": [
+              {
+                "code": "CSS 216",
+                "title": "Mobile Programming",
+                "year": 2022
+              }
+            ],
             "departments": [
               {
                 "id": 1,
@@ -542,6 +553,7 @@
           "instructors",
           "specialities",
           "buildings",
+          "couses",
           "departments"
         ],
         "properties": {
@@ -577,17 +589,17 @@
               "type": "object",
               "required": [
                 "program_code",
-                "language",
+                "language_code",
                 "speciality_code",
                 "title",
-                "department_id",
-                "terms"
+                "terms",
+                "department"
               ],
               "properties": {
                 "program_code": {
                   "type": "string"
                 },
-                "language": {
+                "language_code": {
                   "type": "string"
                 },
                 "speciality_code": {
@@ -596,11 +608,27 @@
                 "title": {
                   "type": "string"
                 },
-                "department_id": {
-                  "type": "integer"
-                },
                 "terms": {
                   "type": "integer"
+                },
+                "department": {
+                  "type": "object",
+                  "required": [
+                    "id",
+                    "code",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "integer"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "title": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }
@@ -658,6 +686,28 @@
               }
             }
           },
+          "couses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "code",
+                "title",
+                "year"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
           "departments": {
             "type": "array",
             "items": {
@@ -688,8 +738,7 @@
               }
             }
           }
-        },
-        "title": ""
+        }
       }
     }
   }
