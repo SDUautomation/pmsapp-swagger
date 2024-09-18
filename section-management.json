@@ -1508,78 +1508,83 @@
         }
       },
       "SectionManagementRequestCourseGetResponse": {
-        "type": "object",
+        "type": "array",
         "x-examples": {
-          "Example 1": {
-            "code": "CSS 216",
-            "title": "Mobile Programming",
-            "year": 2022,
-            "equicode": "2001010232",
-            "theory": 3,
-            "credits": "(2 + 1 + 0)",
-            "term": 1,
-            "ects": 5,
-            "quota_sum": 84,
-            "met_count": 25,
-            "reject_count": 2,
-            "new_count": 5,
-            "reserved_count": 3
-          }
+          "Example 1": [
+            {
+              "code": "CSS 216",
+              "title": "Mobile Programming",
+              "year": 2022,
+              "equicode": "2001010232",
+              "theory": 3,
+              "credits": "(2 + 1 + 0)",
+              "term": 1,
+              "ects": 5,
+              "quota_sum": 84,
+              "met_count": 25,
+              "reject_count": 2,
+              "new_count": 5,
+              "reserved_count": 3
+            }
+          ]
         },
-        "required": [
-          "code",
-          "title",
-          "year",
-          "equicode",
-          "theory",
-          "credits",
-          "term",
-          "ects",
-          "quota_sum",
-          "met_count",
-          "reject_count",
-          "new_count",
-          "reserved_count"
-        ],
-        "properties": {
-          "code": {
-            "type": "string"
-          },
-          "title": {
-            "type": "string"
-          },
-          "year": {
-            "type": "integer"
-          },
-          "equicode": {
-            "type": "string"
-          },
-          "theory": {
-            "type": "integer"
-          },
-          "credits": {
-            "type": "string"
-          },
-          "term": {
-            "type": "integer"
-          },
-          "ects": {
-            "type": "integer"
-          },
-          "quota_sum": {
-            "type": "integer"
-          },
-          "met_count": {
-            "type": "integer"
-          },
-          "reject_count": {
-            "type": "integer"
-          },
-          "new_count": {
-            "type": "integer"
-          },
-          "reserved_count": {
-            "type": "integer"
+        "items": {
+          "type": "object",
+          "required": [
+            "code",
+            "title",
+            "year",
+            "equicode",
+            "theory",
+            "credits",
+            "term",
+            "ects",
+            "quota_sum",
+            "met_count",
+            "reject_count",
+            "new_count",
+            "reserved_count"
+          ],
+          "properties": {
+            "code": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "year": {
+              "type": "integer"
+            },
+            "equicode": {
+              "type": "string"
+            },
+            "theory": {
+              "type": "integer"
+            },
+            "credits": {
+              "type": "string"
+            },
+            "term": {
+              "type": "integer"
+            },
+            "ects": {
+              "type": "integer"
+            },
+            "quota_sum": {
+              "type": "integer"
+            },
+            "met_count": {
+              "type": "integer"
+            },
+            "reject_count": {
+              "type": "integer"
+            },
+            "new_count": {
+              "type": "integer"
+            },
+            "reserved_count": {
+              "type": "integer"
+            }
           }
         }
       },
