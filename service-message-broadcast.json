@@ -873,7 +873,7 @@
           "required": [
             "username",
             "full_name",
-            "specialty",
+            "speciality",
             "department_code",
             "department_title"
           ],
@@ -884,7 +884,7 @@
             "full_name": {
               "type": "string"
             },
-            "specialty": {
+            "speciality": {
               "type": "string",
               "x-stoplight": {
                 "id": "imbrc6uue42r3"
