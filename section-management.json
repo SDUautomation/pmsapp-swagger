@@ -727,6 +727,17 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/manage/sections/received/requests": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-1.0.0-academic-manage-sections-received-requests",
+        "x-stoplight": {
+          "id": "xy36ig370h3dx"
+        }
+      }
     }
   },
   "components": {
@@ -3250,6 +3261,100 @@
             "author": {
               "nullable": true
             }
+          }
+        }
+      },
+      "SectionManagementSectionReceivedRequestsGetRequest": {
+        "title": "SectionManagementSectionReceivedRequestsGetRequest",
+        "x-stoplight": {
+          "id": "yh62glzdrppoc"
+        },
+        "type": "object",
+        "required": [
+          "course_code"
+        ],
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "0wll3y0mmt8xl"
+            }
+          }
+        }
+      },
+      "SectionManagementSectionReceivedRequestsGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "request_id": 123123,
+            "program_code": "10020",
+            "course_code": "CSS 101",
+            "action_date": "2022-06-07 15:00:09",
+            "teachers": "N: Daulet Akberdiyev",
+            "met_quota": 10,
+            "quota": 20,
+            "status": 3,
+            "note": "Some note",
+            "request_date": "2022-06-07 15:00:09",
+            "education_language": "EN",
+            "department_title": "Computer Science",
+            "level": "B"
+          }
+        },
+        "required": [
+          "request_id",
+          "program_code",
+          "course_code",
+          "action_date",
+          "teachers",
+          "met_quota",
+          "quota",
+          "status",
+          "note",
+          "request_date",
+          "education_language",
+          "department_title",
+          "level"
+        ],
+        "properties": {
+          "request_id": {
+            "type": "integer"
+          },
+          "program_code": {
+            "type": "string"
+          },
+          "course_code": {
+            "type": "string"
+          },
+          "action_date": {
+            "type": "string"
+          },
+          "teachers": {
+            "type": "string"
+          },
+          "met_quota": {
+            "type": "integer"
+          },
+          "quota": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "integer"
+          },
+          "note": {
+            "type": "string"
+          },
+          "request_date": {
+            "type": "string"
+          },
+          "education_language": {
+            "type": "string"
+          },
+          "department_title": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
           }
         }
       }
