@@ -3264,7 +3264,7 @@
           }
         }
       },
-      "SectionManagementSectionReceivedRequestsGetRequest": {
+      "SectionManagementReceivedRequestsGetRequest": {
         "title": "SectionManagementSectionReceivedRequestsGetRequest",
         "x-stoplight": {
           "id": "yh62glzdrppoc"
@@ -3282,8 +3282,11 @@
           }
         }
       },
-      "SectionManagementSectionReceivedRequestsGetResponse": {
+      "SectionManagementReceivedRequestsGetResponse": {
         "type": "object",
+        "x-stoplight": {
+          "id": "a8fd3f58b5cb0"
+        },
         "x-examples": {
           "Example 1": {
             "request_id": 123123,
@@ -3356,7 +3359,8 @@
           "level": {
             "type": "string"
           }
-        }
+        },
+        "title": ""
       }
     }
   }
