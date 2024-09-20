@@ -11833,7 +11833,7 @@
           "Example 1": {
             "greetings": {
               "id": 1,
-              "employee_save": true,
+              "is_active": true,
               "data": [
                 {
                   "name": "Aibolat",
@@ -11844,7 +11844,7 @@
             },
             "schedules": {
               "id": 1,
-              "employee_save": true,
+              "is_active": true,
               "data": [
                 {
                   "week_day": 3,
@@ -11857,7 +11857,7 @@
             },
             "courses": {
               "id": 1,
-              "employee_save": true,
+              "is_active": true,
               "data": [
                 {
                   "section_id": 2443,
@@ -11871,11 +11871,13 @@
             },
             "attendances": {
               "id": 1,
-              "employee_save": true,
+              "is_active": true,
               "data": [
                 {
                   "title": "Mobile Programming",
                   "code": "CSS 216",
+                  "section": "01",
+                  "section_type": "N",
                   "week_day": 3,
                   "start_time": "12:00",
                   "attendance_chart": [
@@ -11892,7 +11894,7 @@
             },
             "faculty_statistics": {
               "id": 1,
-              "employee_save": true,
+              "is_active": true,
               "data": [
                 {
                   "title": "Faculty of Engineering and Natural Sciences",
@@ -11905,7 +11907,7 @@
             },
             "rules_and_regulations": {
               "id": 1,
-              "employee_save": true,
+              "is_active": true,
               "data": [
                 {
                   "id": 1,
@@ -11926,7 +11928,7 @@
             },
             "syllabus_statistics": {
               "id": 1,
-              "employee_save": true,
+              "is_active": true,
               "data": [
                 {
                   "department_code": "DEP_COMP_SCI",
@@ -11939,7 +11941,7 @@
             },
             "posts": {
               "id": 1,
-              "employee_save": true,
+              "is_active": true,
               "data": [
                 {
                   "id": 987,
@@ -11969,7 +11971,7 @@
             },
             "reports": {
               "id": 1,
-              "employee_save": true,
+              "is_active": true,
               "data": [
                 {
                   "report_id": 3,
@@ -11979,7 +11981,7 @@
             },
             "quick_links": {
               "id": 1,
-              "employee_save": true,
+              "is_active": true,
               "data": [
                 {
                   "name": "Aibolat",
@@ -11990,7 +11992,7 @@
             },
             "student_search": {
               "id": 1,
-              "employee_save": true,
+              "is_active": true,
               "data": [
                 {
                   "name": "Aibolat",
@@ -12027,10 +12029,7 @@
                 "type": "integer"
               },
               "is_active": {
-                "type": "boolean",
-                "x-stoplight": {
-                  "id": "h6q6wfbhq7vvv"
-                }
+                "type": "boolean"
               },
               "data": {
                 "type": "array",
@@ -12068,10 +12067,7 @@
                 "type": "integer"
               },
               "is_active": {
-                "type": "boolean",
-                "x-stoplight": {
-                  "id": "92jxsa2jb8kov"
-                }
+                "type": "boolean"
               },
               "data": {
                 "type": "array",
@@ -12117,10 +12113,7 @@
                 "type": "integer"
               },
               "is_active": {
-                "type": "boolean",
-                "x-stoplight": {
-                  "id": "uyidsumf9yqbn"
-                }
+                "type": "boolean"
               },
               "data": {
                 "type": "array",
@@ -12162,14 +12155,14 @@
             "type": "object",
             "required": [
               "id",
-              "employee_save",
+              "is_active",
               "data"
             ],
             "properties": {
               "id": {
                 "type": "integer"
               },
-              "employee_save": {
+              "is_active": {
                 "type": "boolean"
               },
               "data": {
@@ -12179,6 +12172,8 @@
                   "required": [
                     "title",
                     "code",
+                    "section",
+                    "section_type",
                     "week_day",
                     "start_time",
                     "attendance_chart"
@@ -12188,6 +12183,12 @@
                       "type": "string"
                     },
                     "code": {
+                      "type": "string"
+                    },
+                    "section": {
+                      "type": "string"
+                    },
+                    "section_type": {
                       "type": "string"
                     },
                     "week_day": {
@@ -12243,10 +12244,7 @@
                 "type": "integer"
               },
               "is_active": {
-                "type": "boolean",
-                "x-stoplight": {
-                  "id": "8t4b7fb3c8gat"
-                }
+                "type": "boolean"
               },
               "data": {
                 "type": "array",
@@ -12292,10 +12290,7 @@
                 "type": "integer"
               },
               "is_active": {
-                "type": "boolean",
-                "x-stoplight": {
-                  "id": "7grr86a651fde"
-                }
+                "type": "boolean"
               },
               "data": {
                 "type": "array",
@@ -12368,10 +12363,7 @@
                 "type": "integer"
               },
               "is_active": {
-                "type": "boolean",
-                "x-stoplight": {
-                  "id": "c67w8vgomvhnv"
-                }
+                "type": "boolean"
               },
               "data": {
                 "type": "array",
@@ -12409,14 +12401,14 @@
             "type": "object",
             "required": [
               "id",
-              "employee_save",
+              "is_active",
               "data"
             ],
             "properties": {
               "id": {
                 "type": "integer"
               },
-              "employee_save": {
+              "is_active": {
                 "type": "boolean"
               },
               "data": {
@@ -12526,10 +12518,7 @@
                 "type": "integer"
               },
               "is_active": {
-                "type": "boolean",
-                "x-stoplight": {
-                  "id": "4eh2yesl9rp1f"
-                }
+                "type": "boolean"
               },
               "data": {
                 "type": "array",
@@ -12563,10 +12552,7 @@
                 "type": "integer"
               },
               "is_active": {
-                "type": "boolean",
-                "x-stoplight": {
-                  "id": "i521b4ozxswl6"
-                }
+                "type": "boolean"
               },
               "data": {
                 "type": "array",
@@ -12604,10 +12590,7 @@
                 "type": "integer"
               },
               "is_active": {
-                "type": "boolean",
-                "x-stoplight": {
-                  "id": "iz6n3bju5pks1"
-                }
+                "type": "boolean"
               },
               "data": {
                 "type": "array",
