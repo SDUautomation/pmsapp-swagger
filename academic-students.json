@@ -1400,12 +1400,19 @@
                 "id": 1,
                 "title": "Studying"
               }
+            ],
+            "classes": [
+              1,
+              2,
+              3,
+              4
             ]
           }
         },
         "required": [
           "specialities",
-          "student_statuses"
+          "student_statuses",
+          "classes"
         ],
         "properties": {
           "specialities": {
@@ -1474,6 +1481,12 @@
                   "type": "string"
                 }
               }
+            }
+          },
+          "classes": {
+            "type": "array",
+            "items": {
+              "type": "integer"
             }
           }
         }
