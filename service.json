@@ -1068,7 +1068,8 @@
               "id": "f4q8xrmbmj56t"
             }
           }
-        }
+        },
+        "description": ""
       },
       "ServiceManageLanguagesApplicantsBulkPutRequest": {
         "type": "object",
