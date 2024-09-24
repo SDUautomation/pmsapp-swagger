@@ -491,70 +491,11 @@
       },
       "AcademicInformationSchedulesResourcesRespose": {
         "type": "object",
-        "x-examples": {
-          "Example 1": {
-            "instructors": [
-              {
-                "id": 200103,
-                "full_name": "Zhandos Saparbayev",
-                "department_id": 1271,
-                "parent_id": 1278
-              }
-            ],
-            "specialities": [
-              {
-                "program_code": "10103",
-                "language": "English",
-                "speciality_code": "6B06101",
-                "title": "Information Systems",
-                "department_id": 1051,
-                "terms": 8
-              }
-            ],
-            "buildings": [
-              {
-                "id": 12831,
-                "title": "E107",
-                "rooms": [
-                  {
-                    "id": 12831,
-                    "title": "E107",
-                    "type": {
-                      "id": 2,
-                      "title": "Laboratory"
-                    }
-                  }
-                ]
-              }
-            ],
-            "departments": [
-              {
-                "id": 1,
-                "parent_id": 828,
-                "title": "Department of Humanities",
-                "code": "DEP_HUMANITIES",
-                "year": 2022
-              }
-            ]
-          }
-        },
-        "required": [
-          "instructors",
-          "specialities",
-          "buildings",
-          "departments"
-        ],
         "properties": {
           "instructors": {
             "type": "array",
             "items": {
               "type": "object",
-              "required": [
-                "id",
-                "full_name",
-                "department_id",
-                "parent_id"
-              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -575,32 +516,58 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": [
-                "program_code",
-                "language",
-                "speciality_code",
-                "title",
-                "department_id",
-                "terms"
-              ],
               "properties": {
-                "program_code": {
-                  "type": "string"
+                "id": {
+                  "type": "integer"
                 },
-                "language": {
-                  "type": "string"
-                },
-                "speciality_code": {
+                "code": {
                   "type": "string"
                 },
                 "title": {
                   "type": "string"
                 },
-                "department_id": {
-                  "type": "integer"
+                "type": {
+                  "type": "string"
                 },
-                "terms": {
-                  "type": "integer"
+                "children": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "code": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "programs": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "program_code": {
+                              "type": "string"
+                            },
+                            "language_code": {
+                              "type": "string"
+                            },
+                            "speciality_code": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "terms": {
+                              "type": "integer"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
                 }
               }
             }
@@ -609,11 +576,6 @@
             "type": "array",
             "items": {
               "type": "object",
-              "required": [
-                "id",
-                "title",
-                "rooms"
-              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -625,11 +587,6 @@
                   "type": "array",
                   "items": {
                     "type": "object",
-                    "required": [
-                      "id",
-                      "title",
-                      "type"
-                    ],
                     "properties": {
                       "id": {
                         "type": "integer"
@@ -639,10 +596,6 @@
                       },
                       "type": {
                         "type": "object",
-                        "required": [
-                          "id",
-                          "title"
-                        ],
                         "properties": {
                           "id": {
                             "type": "integer"
@@ -658,17 +611,27 @@
               }
             }
           },
+          "couses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
           "departments": {
             "type": "array",
             "items": {
               "type": "object",
-              "required": [
-                "id",
-                "parent_id",
-                "title",
-                "code",
-                "year"
-              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -689,7 +652,74 @@
             }
           }
         },
-        "title": ""
+        "x-examples": {
+          "Example 1": {
+            "instructors": [
+              {
+                "id": 200103,
+                "full_name": "Zhandos Saparbayev",
+                "department_id": 1271,
+                "parent_id": 1278
+              }
+            ],
+            "specialities": [
+              {
+                "id": 1409,
+                "code": "F_ENG",
+                "title": "Faculty of Engineering and Natural Sciences",
+                "type": "Faculty",
+                "children": [
+                  {
+                    "id": "1364",
+                    "code": "DEP_COMP_SCI",
+                    "title": "Department of Computer Sciences",
+                    "programs": [
+                      {
+                        "program_code": "10103",
+                        "language_code": "EN",
+                        "speciality_code": "6B06101",
+                        "title": "Information Systems",
+                        "terms": 8
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "buildings": [
+              {
+                "id": 12831,
+                "title": "E107",
+                "rooms": [
+                  {
+                    "id": 12831,
+                    "title": "E107",
+                    "type": {
+                      "id": 2,
+                      "title": "Laboratory"
+                    }
+                  }
+                ]
+              }
+            ],
+            "couses": [
+              {
+                "code": "CSS 216",
+                "title": "Mobile Programming",
+                "year": 2022
+              }
+            ],
+            "departments": [
+              {
+                "id": 1,
+                "parent_id": 828,
+                "title": "Department of Humanities",
+                "code": "DEP_HUMANITIES",
+                "year": 2022
+              }
+            ]
+          }
+        }
       }
     }
   }
