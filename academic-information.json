@@ -491,167 +491,6 @@
       },
       "AcademicInformationSchedulesResourcesRespose": {
         "type": "object",
-        "properties": {
-          "instructors": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "full_name": {
-                  "type": "string"
-                },
-                "department_id": {
-                  "type": "integer"
-                },
-                "parent_id": {
-                  "type": "integer"
-                }
-              }
-            }
-          },
-          "specialities": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "type": {
-                  "type": "string"
-                },
-                "children": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "string"
-                      },
-                      "code": {
-                        "type": "string"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "programs": {
-                        "type": "array",
-                        "items": {
-                          "type": "object",
-                          "properties": {
-                            "program_code": {
-                              "type": "string"
-                            },
-                            "language_code": {
-                              "type": "string"
-                            },
-                            "speciality_code": {
-                              "type": "string"
-                            },
-                            "title": {
-                              "type": "string"
-                            },
-                            "terms": {
-                              "type": "integer"
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "buildings": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "rooms": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "id": {
-                        "type": "integer"
-                      },
-                      "title": {
-                        "type": "string"
-                      },
-                      "type": {
-                        "type": "object",
-                        "properties": {
-                          "id": {
-                            "type": "integer"
-                          },
-                          "title": {
-                            "type": "string"
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "couses": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "code": {
-                  "type": "string"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "year": {
-                  "type": "integer"
-                }
-              }
-            }
-          },
-          "departments": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "integer"
-                },
-                "parent_id": {
-                  "type": "integer"
-                },
-                "title": {
-                  "type": "string"
-                },
-                "code": {
-                  "type": "string"
-                },
-                "year": {
-                  "type": "integer"
-                }
-              }
-            }
-          }
-        },
         "x-examples": {
           "Example 1": {
             "instructors": [
@@ -718,6 +557,226 @@
                 "year": 2022
               }
             ]
+          }
+        },
+        "required": [
+          "instructors",
+          "specialities",
+          "buildings",
+          "couses",
+          "departments"
+        ],
+        "properties": {
+          "instructors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "full_name",
+                "department_id",
+                "parent_id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "full_name": {
+                  "type": "string"
+                },
+                "department_id": {
+                  "type": "integer"
+                },
+                "parent_id": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "specialities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "code",
+                "title",
+                "type",
+                "children"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "children": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "code",
+                      "title",
+                      "programs"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "code": {
+                        "type": "string"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "programs": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "required": [
+                            "program_code",
+                            "language_code",
+                            "speciality_code",
+                            "title",
+                            "terms"
+                          ],
+                          "properties": {
+                            "program_code": {
+                              "type": "string"
+                            },
+                            "language_code": {
+                              "type": "string"
+                            },
+                            "speciality_code": {
+                              "type": "string"
+                            },
+                            "title": {
+                              "type": "string"
+                            },
+                            "terms": {
+                              "type": "integer"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "buildings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "title",
+                "rooms"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "rooms": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "id",
+                      "title",
+                      "type"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "title": {
+                        "type": "string"
+                      },
+                      "type": {
+                        "type": "object",
+                        "required": [
+                          "id",
+                          "title"
+                        ],
+                        "properties": {
+                          "id": {
+                            "type": "integer"
+                          },
+                          "title": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "couses": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "code",
+                "title",
+                "year"
+              ],
+              "properties": {
+                "code": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              }
+            }
+          },
+          "departments": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "parent_id",
+                "title",
+                "code",
+                "year"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer"
+                },
+                "parent_id": {
+                  "type": "integer"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "year": {
+                  "type": "integer"
+                }
+              }
+            }
           }
         }
       }
