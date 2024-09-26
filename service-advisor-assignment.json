@@ -98,7 +98,8 @@
                 "language",
                 "cipher",
                 "title",
-                "period_count"
+                "period_count",
+                "department"
               ],
               "properties": {
                 "prog_code": {
@@ -115,6 +116,37 @@
                 },
                 "period_count": {
                   "type": "integer"
+                },
+                "department": {
+                  "type": "object",
+                  "x-stoplight": {
+                    "id": "cwxalb7fm3k6j"
+                  },
+                  "required": [
+                    "id",
+                    "code",
+                    "title"
+                  ],
+                  "properties": {
+                    "id": {
+                      "type": "number",
+                      "x-stoplight": {
+                        "id": "fme50gkoa1wbs"
+                      }
+                    },
+                    "code": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "x4wiu76ptvfrs"
+                      }
+                    },
+                    "title": {
+                      "type": "string",
+                      "x-stoplight": {
+                        "id": "gq8ca469wlbqf"
+                      }
+                    }
+                  }
                 }
               }
             }
