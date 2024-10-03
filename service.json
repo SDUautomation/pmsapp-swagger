@@ -1506,7 +1506,6 @@
           }
         },
         "required": [
-          "departments",
           "specialities",
           "requestedBy"
         ],
