@@ -1480,9 +1480,14 @@
           "Example 1": {
             "departments": [
               {
-                "code": "DEP_COMP_SCI",
-                "year": 2020,
-                "title": "Department of Computer Science"
+                "department_id": 1402,
+                "parent_id": 1396,
+                "title": "Faculty of education and humanities",
+                "department_code": "F_PHIL",
+                "type": "F",
+                "children": [
+                  "string"
+                ]
               }
             ],
             "specialities": [
@@ -1500,33 +1505,58 @@
             ]
           }
         },
+        "required": [
+          "departments",
+          "specialities",
+          "requestedBy"
+        ],
         "properties": {
           "departments": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "department_id",
+                "parent_id",
+                "title",
+                "department_code",
+                "type",
+                "children"
+              ],
               "properties": {
-                "code": {
-                  "type": "string"
+                "department_id": {
+                  "type": "integer"
                 },
-                "year": {
+                "parent_id": {
                   "type": "integer"
                 },
                 "title": {
                   "type": "string"
+                },
+                "department_code": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "children": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
                 }
-              },
-              "required": [
-                "code",
-                "year",
-                "title"
-              ]
+              }
             }
           },
           "specialities": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "code",
+                "year",
+                "title"
+              ],
               "properties": {
                 "code": {
                   "type": "string"
@@ -1537,18 +1567,17 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "code",
-                "year",
-                "title"
-              ]
+              }
             }
           },
           "requestedBy": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "code",
+                "title"
+              ],
               "properties": {
                 "code": {
                   "type": "string"
@@ -1556,19 +1585,10 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "code",
-                "title"
-              ]
+              }
             }
           }
-        },
-        "required": [
-          "departments",
-          "specialities",
-          "requestedBy"
-        ]
+        }
       },
       "ServiceManageLanguagesResourceRequest": {
         "title": "ServiceManageLanguagesResourceRequest",
