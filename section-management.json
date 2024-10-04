@@ -727,6 +727,83 @@
           }
         }
       }
+    },
+    "/1.0.0/academic/manage/sections/received/requests": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {},
+        "operationId": "get-1.0.0-academic-manage-sections-received-requests",
+        "x-stoplight": {
+          "id": "xy36ig370h3dx"
+        }
+      }
+    },
+    "/1.0.0/academic/manage/sections/courses/new-request-courses": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-sections-courses-new-request-courses",
+        "x-stoplight": {
+          "id": "9s08h8tnnj6n9"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/1.0.0/academic/manage/sections/courses/new-request-elective": {
+      "get": {
+        "summary": "Your GET endpoint",
+        "tags": [],
+        "responses": {
+          "default": {
+            "description": "Default",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {}
+                }
+              }
+            }
+          }
+        },
+        "operationId": "get-1.0.0-academic-manage-sections-courses-new-request-elective",
+        "x-stoplight": {
+          "id": "y5rfp29lg93a9"
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
+      }
     }
   },
   "components": {
@@ -3250,6 +3327,382 @@
             "author": {
               "nullable": true
             }
+          }
+        }
+      },
+      "SectionManagementReceivedRequestsGetRequest": {
+        "title": "SectionManagementSectionReceivedRequestsGetRequest",
+        "x-stoplight": {
+          "id": "yh62glzdrppoc"
+        },
+        "type": "object",
+        "required": [
+          "course_code"
+        ],
+        "properties": {
+          "course_code": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "0wll3y0mmt8xl"
+            }
+          }
+        }
+      },
+      "SectionManagementReceivedRequestsGetResponse": {
+        "type": "object",
+        "x-stoplight": {
+          "id": "a8fd3f58b5cb0"
+        },
+        "x-examples": {
+          "Example 1": {
+            "request_id": 123123,
+            "program_code": "10020",
+            "course_code": "CSS 101",
+            "action_date": "2022-06-07 15:00:09",
+            "teachers": "N: Daulet Akberdiyev",
+            "met_quota": 10,
+            "quota": 20,
+            "status": 3,
+            "note": "Some note",
+            "request_date": "2022-06-07 15:00:09",
+            "education_language": "EN",
+            "department_title": "Computer Science",
+            "level": "B"
+          }
+        },
+        "required": [
+          "request_id",
+          "program_code",
+          "course_code",
+          "action_date",
+          "teachers",
+          "met_quota",
+          "quota",
+          "status",
+          "note",
+          "request_date",
+          "education_language",
+          "department_title",
+          "level"
+        ],
+        "properties": {
+          "request_id": {
+            "type": "integer"
+          },
+          "program_code": {
+            "type": "string"
+          },
+          "course_code": {
+            "type": "string"
+          },
+          "action_date": {
+            "type": "string"
+          },
+          "teachers": {
+            "type": "string"
+          },
+          "met_quota": {
+            "type": "integer"
+          },
+          "quota": {
+            "type": "integer"
+          },
+          "status": {
+            "type": "integer"
+          },
+          "note": {
+            "type": "string"
+          },
+          "request_date": {
+            "type": "string"
+          },
+          "education_language": {
+            "type": "string"
+          },
+          "department_title": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          }
+        },
+        "title": ""
+      },
+      "SectionManagementRequestCoursesGetRequest": {
+        "title": "SectionManagementRequestCoursesGetRequest",
+        "x-stoplight": {
+          "id": "kw8qjq6g03fo4"
+        },
+        "type": "object",
+        "required": [
+          "program_code",
+          "program_year",
+          "period_number",
+          "year"
+        ],
+        "properties": {
+          "program_code": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "nctlot220d4xu"
+            }
+          },
+          "program_year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "8ljizga0knexv"
+            }
+          },
+          "period_number": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "pspyvkjacisvb"
+            }
+          },
+          "year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "wk0mp191iurwd"
+            }
+          }
+        }
+      },
+      "SectionManagementRequestCoursesGetResponse": {
+        "type": "array",
+        "x-examples": {
+          "Example 1": [
+            {
+              "muf_id": 12314,
+              "track": "Main Track",
+              "course_code": "CSS 101",
+              "equicode": 123123,
+              "title": "Pedagogical dimensions",
+              "theory": 1,
+              "practice": 1,
+              "lab": 1,
+              "ects": 5,
+              "period_number": 2,
+              "quota_count": 222,
+              "section_request_id": 30003,
+              "reference_type": "N",
+              "reference_code": "CSS 102",
+              "reference_title": "Pedagogical dimensions 2",
+              "reference_theory": 2,
+              "reference_practice": 2,
+              "reference_lab": 1
+            }
+          ]
+        },
+        "items": {
+          "type": "object",
+          "required": [
+            "muf_id",
+            "track",
+            "course_code",
+            "equicode",
+            "title",
+            "theory",
+            "practice",
+            "lab",
+            "ects",
+            "period_number",
+            "quota_count",
+            "section_request_id",
+            "reference_type",
+            "reference_code",
+            "reference_title",
+            "reference_theory",
+            "reference_practice",
+            "reference_lab"
+          ],
+          "properties": {
+            "muf_id": {
+              "type": "integer"
+            },
+            "track": {
+              "type": "string"
+            },
+            "course_code": {
+              "type": "string"
+            },
+            "equicode": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "theory": {
+              "type": "integer"
+            },
+            "practice": {
+              "type": "integer"
+            },
+            "lab": {
+              "type": "integer"
+            },
+            "ects": {
+              "type": "integer"
+            },
+            "period_number": {
+              "type": "integer"
+            },
+            "quota_count": {
+              "type": "integer"
+            },
+            "section_request_id": {
+              "type": "integer"
+            },
+            "reference_type": {
+              "type": "string"
+            },
+            "reference_code": {
+              "type": "string"
+            },
+            "reference_title": {
+              "type": "string"
+            },
+            "reference_theory": {
+              "type": "integer"
+            },
+            "reference_practice": {
+              "type": "integer"
+            },
+            "reference_lab": {
+              "type": "integer"
+            }
+          }
+        }
+      },
+      "SectionManagementRequestElectiveGetRequest": {
+        "title": "SectionManagementRequestElectiveGetRequest",
+        "x-stoplight": {
+          "id": "wkbr0gcltnfum"
+        },
+        "type": "object",
+        "required": [
+          "program_code",
+          "program_year",
+          "period_number"
+        ],
+        "properties": {
+          "program_code": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "8c628qgo0ovs1"
+            }
+          },
+          "program_year": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "xt3g2u21n4xgu"
+            }
+          },
+          "period_number": {
+            "type": "number",
+            "x-stoplight": {
+              "id": "qeefzuuph2t2s"
+            }
+          }
+        }
+      },
+      "SectionManagementRequestElectiveGetResponse": {
+        "type": "object",
+        "x-examples": {
+          "Example 1": {
+            "muf_id": 12314,
+            "track": "Main Track",
+            "course_code": "CSS 101",
+            "equicode": 123123,
+            "title": "Pedagogical dimensions",
+            "theory": 1,
+            "practice": 1,
+            "lab": 1,
+            "ects": 5,
+            "period_number": 2,
+            "quota_count": 222,
+            "section_request_id": 30003,
+            "reference_type": "N",
+            "reference_code": "CSS 102",
+            "reference_title": "Pedagogical dimensions 2",
+            "reference_theory": 2,
+            "reference_practice": 2,
+            "reference_lab": 1
+          }
+        },
+        "required": [
+          "muf_id",
+          "track",
+          "course_code",
+          "equicode",
+          "title",
+          "theory",
+          "practice",
+          "lab",
+          "ects",
+          "period_number",
+          "quota_count",
+          "section_request_id",
+          "reference_type",
+          "reference_code",
+          "reference_title",
+          "reference_theory",
+          "reference_practice",
+          "reference_lab"
+        ],
+        "properties": {
+          "muf_id": {
+            "type": "integer"
+          },
+          "track": {
+            "type": "string"
+          },
+          "course_code": {
+            "type": "string"
+          },
+          "equicode": {
+            "type": "integer"
+          },
+          "title": {
+            "type": "string"
+          },
+          "theory": {
+            "type": "integer"
+          },
+          "practice": {
+            "type": "integer"
+          },
+          "lab": {
+            "type": "integer"
+          },
+          "ects": {
+            "type": "integer"
+          },
+          "period_number": {
+            "type": "integer"
+          },
+          "quota_count": {
+            "type": "integer"
+          },
+          "section_request_id": {
+            "type": "integer"
+          },
+          "reference_type": {
+            "type": "string"
+          },
+          "reference_code": {
+            "type": "string"
+          },
+          "reference_title": {
+            "type": "string"
+          },
+          "reference_theory": {
+            "type": "integer"
+          },
+          "reference_practice": {
+            "type": "integer"
+          },
+          "reference_lab": {
+            "type": "integer"
           }
         }
       }
