@@ -941,11 +941,34 @@
             ]
           }
         },
+        "required": [
+          "programs",
+          "departments",
+          "request_statuses",
+          "attendance_types",
+          "payment_methods",
+          "section_types",
+          "implementation_modes",
+          "instructors",
+          "delivery_modes"
+        ],
         "properties": {
           "programs": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "code",
+                "active_year",
+                "title",
+                "cipher",
+                "terms_count",
+                "years",
+                "language",
+                "education_level",
+                "department",
+                "faculty"
+              ],
               "properties": {
                 "code": {
                   "type": "string"
@@ -1076,25 +1099,23 @@
                     }
                   }
                 }
-              },
-              "required": [
-                "code",
-                "active_year",
-                "title",
-                "cipher",
-                "terms_count",
-                "years",
-                "language",
-                "education_level",
-                "department",
-                "faculty"
-              ]
+              }
             }
           },
           "departments": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "code",
+                "year",
+                "title",
+                "new_count",
+                "met_count",
+                "reserved_count",
+                "rejected_count"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -1120,23 +1141,17 @@
                 "rejected_count": {
                   "type": "integer"
                 }
-              },
-              "required": [
-                "id",
-                "code",
-                "year",
-                "title",
-                "new_count",
-                "met_count",
-                "reserved_count",
-                "rejected_count"
-              ]
+              }
             }
           },
           "request_statuses": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "title"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -1144,17 +1159,17 @@
                 "title": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "title"
-              ]
+              }
             }
           },
           "attendance_types": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "type"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -1162,17 +1177,17 @@
                 "type": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "type"
-              ]
+              }
             }
           },
           "payment_methods": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "method"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -1180,17 +1195,17 @@
                 "method": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "method"
-              ]
+              }
             }
           },
           "section_types": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "type"
+              ],
               "properties": {
                 "id": {
                   "type": "string"
@@ -1198,17 +1213,17 @@
                 "type": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "type"
-              ]
+              }
             }
           },
           "implementation_modes": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "mode"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -1216,17 +1231,18 @@
                 "mode": {
                   "type": "string"
                 }
-              },
-              "required": [
-                "id",
-                "mode"
-              ]
+              }
             }
           },
           "instructors": {
             "type": "array",
             "items": {
               "type": "object",
+              "required": [
+                "id",
+                "full_name",
+                "state"
+              ],
               "properties": {
                 "id": {
                   "type": "integer"
@@ -1249,25 +1265,42 @@
                     }
                   }
                 }
+              }
+            }
+          },
+          "delivery_modes": {
+            "type": [
+              "array"
+            ],
+            "x-stoplight": {
+              "id": "shfpm1catnewb"
+            },
+            "items": {
+              "x-stoplight": {
+                "id": "gfcu1ybmjoihw"
               },
+              "type": "object",
               "required": [
                 "id",
-                "full_name",
-                "state"
-              ]
+                "mode"
+              ],
+              "properties": {
+                "id": {
+                  "type": "integer",
+                  "x-stoplight": {
+                    "id": "pm89wnhfgvqej"
+                  }
+                },
+                "mode": {
+                  "type": "string",
+                  "x-stoplight": {
+                    "id": "xav49wpyzw3y4"
+                  }
+                }
+              }
             }
           }
-        },
-        "required": [
-          "programs",
-          "departments",
-          "request_statuses",
-          "attendance_types",
-          "payment_methods",
-          "section_types",
-          "implementation_modes",
-          "instructors"
-        ]
+        }
       },
       "SectionManagementRequestGetRequest": {
         "title": "SectionManagementRequestGetRequest",
