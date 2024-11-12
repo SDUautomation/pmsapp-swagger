@@ -360,7 +360,7 @@
         "required": [
           "document_order_ids",
           "encoded_p12_file",
-          "captcha"
+          "password"
         ],
         "properties": {
           "document_order_ids": {
@@ -372,23 +372,10 @@
           "encoded_p12_file": {
             "type": "string"
           },
-          "captcha": {
-            "type": "object",
-            "required": [
-              "ct",
-              "iv",
-              "s"
-            ],
-            "properties": {
-              "ct": {
-                "type": "string"
-              },
-              "iv": {
-                "type": "string"
-              },
-              "s": {
-                "type": "string"
-              }
+          "password": {
+            "type": "string",
+            "x-stoplight": {
+              "id": "y7aeeso84ae4p"
             }
           }
         }
